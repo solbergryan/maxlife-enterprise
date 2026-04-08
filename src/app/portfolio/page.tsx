@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 const deals = [
   {
-    title: "AutoZone — 801 S Goldenrod Rd",
-    location: "Orlando, FL 32822",
+    title: "AutoZone — Goldenrod Road",
+    location: "Orlando, FL",
     type: "NNN Investment",
     tenant: "AutoZone",
     leaseType: "Triple Net (NNN)",
@@ -25,13 +25,13 @@ const deals = [
     ],
   },
   {
-    title: "Walgreens — 14400 Narcoossee Rd",
-    location: "Orlando, FL 32832 (Lake Nona)",
+    title: "Walgreens — Lake Nona",
+    location: "Orlando, FL",
     type: "NNN Investment",
     tenant: "Walgreens",
     leaseType: "Absolute NNN",
     status: "SOLD",
-    image: null,
+    image: "/portfolio/walgreens-1.jpg",
     highlights: [
       "Walgreens — national credit tenant",
       "11+ year initial lease term",
@@ -40,13 +40,13 @@ const deals = [
     ],
   },
   {
-    title: "CVS Pharmacy — 255 S State Rd 7",
-    location: "Margate, FL 33068",
+    title: "CVS Pharmacy — Margate",
+    location: "Margate, FL",
     type: "NNN Investment",
     tenant: "CVS",
     leaseType: "Absolute NNN",
     status: "SOLD",
-    image: null,
+    image: "/portfolio/cvs-1.jpg",
     highlights: [
       "CVS Pharmacy — investment grade tenant",
       "11,169 SF freestanding building",
@@ -55,13 +55,13 @@ const deals = [
     ],
   },
   {
-    title: "Dollar Tree — 550 W 1st St",
-    location: "Sanford, FL 32771",
+    title: "Dollar Tree — Sanford",
+    location: "Sanford, FL",
     type: "NNN Investment",
     tenant: "Dollar Tree",
     leaseType: "Double Net (NN)",
     status: "SOLD",
-    image: null,
+    image: "/portfolio/dollartree-1.jpg",
     highlights: [
       "Dollar Tree — national credit tenant",
       "10-year lease term",
