@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { getActiveDeals } from "@/data/deals";
+import { listings } from "@/data/listings";
 import { caseStudies } from "@/data/case-studies";
 import { markets } from "@/data/markets";
-import DealCard from "@/components/DealCard";
+import ListingCard from "@/components/ListingCard";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 
 export default function HomePage() {
-  const activeDeals = getActiveDeals();
+  const featuredListings = listings.filter((l) => l.featured).slice(0, 3);
   const featuredStudy = caseStudies[0];
 
   return (
@@ -70,8 +70,8 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {activeDeals.slice(0, 3).map((deal) => (
-            <DealCard key={deal.id} deal={deal} />
+          {featuredListings.map((listing, i) => (
+            <ListingCard key={`home-featured-${i}`} listing={listing} />
           ))}
         </div>
         <div className="sm:hidden mt-6 text-center">

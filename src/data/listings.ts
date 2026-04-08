@@ -25,6 +25,7 @@ export interface Listing {
   opportunityZone: boolean;
   listingBroker?: string;
   listingBrokerage?: string;
+  featured?: boolean;
 }
 
 export const listings: Listing[] = listingsData as Listing[];

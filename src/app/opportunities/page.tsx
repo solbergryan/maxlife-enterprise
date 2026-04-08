@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { deals } from "@/data/deals";
 import { listings } from "@/data/listings";
-import DealFilter from "@/components/DealFilter";
+import ListingCard from "@/components/ListingCard";
 import ListingGrid from "@/components/ListingGrid";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 import CTABanner from "@/components/CTABanner";
@@ -13,6 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function OpportunitiesPage() {
+  const featured = listings.filter((l) => l.featured);
+  const allListings = listings;
+
   return (
     <>
       {/* Header */}
@@ -33,18 +35,24 @@ export default function OpportunitiesPage() {
         </div>
       </section>
 
-      {/* Our Featured Deals */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-        <h2 className="text-2xl font-bold text-white mb-2">
-          Featured Opportunities
-        </h2>
-        <p className="text-gray-500 mb-6">
-          Properties sourced and represented by MaxLife Enterprise
-        </p>
-        <DealFilter deals={deals} />
-      </section>
+      {/* Featured Picks */}
+      {featured.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+          <h2 className="text-2xl font-bold text-white mb-2">
+            Featured Opportunities
+          </h2>
+          <p className="text-gray-500 mb-6">
+            Hand-picked investment properties with strong fundamentals
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featured.map((listing, i) => (
+              <ListingCard key={`featured-${i}`} listing={listing} />
+            ))}
+          </div>
+        </section>
+      )}
 
-      {/* Market Listings from Crexi */}
+      {/* All Market Listings */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-border">
         <h2 className="text-2xl font-bold text-white mb-2">
           Central Florida Market Listings
@@ -53,7 +61,7 @@ export default function OpportunitiesPage() {
           Active commercial properties across Orange, Seminole, Osceola, Lake,
           Polk, and Brevard counties
         </p>
-        <ListingGrid listings={listings} />
+        <ListingGrid listings={allListings} />
 
         {/* Broker Compliance Disclaimer */}
         <div className="mt-10 bg-dark-card border border-dark-border rounded-lg p-4">
