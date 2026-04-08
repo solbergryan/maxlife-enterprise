@@ -110,6 +110,29 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      {/* Service Area Map */}
+      <section className="bg-dark-card/50 border-t border-dark-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-2xl font-bold text-white mb-2 text-center">
+            Our <span className="text-gold">Service Area</span>
+          </h2>
+          <p className="text-gray-400 text-center mb-8 max-w-lg mx-auto">
+            Serving the greater Orlando and Melbourne metro areas — and everywhere in between.
+          </p>
+          <div className="rounded-xl overflow-hidden border border-dark-border">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d450000!2d-81.0!3d28.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              width="100%"
+              height="400"
+              style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="MaxLife Development Service Area - Central Florida"
+            />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

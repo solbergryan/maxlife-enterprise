@@ -203,6 +203,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            What Our <span className="text-gold">Clients</span> Say
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            We let our work speak for itself — but our clients have a few words too.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              quote:
+                "Ryan handled our NNN acquisition from start to finish. His market knowledge and negotiation skills saved us over $50K on the deal. Couldn't recommend him more.",
+              name: "David M.",
+              role: "NNN Investor, Orlando",
+            },
+            {
+              quote:
+                "We needed someone who understood both the land entitlement process and the commercial side. Ryan delivered on both — our site is now fully entitled and under development.",
+              name: "Sarah K.",
+              role: "Developer, Brevard County",
+            },
+            {
+              quote:
+                "Professional, responsive, and honest. Ryan helped us sell our retail property quickly and at a price we were happy with. He made the whole process easy.",
+              name: "Mark & Lisa T.",
+              role: "Property Owners, Melbourne",
+            },
+          ].map((testimonial) => (
+            <div
+              key={testimonial.name}
+              className="bg-dark-card border border-dark-border rounded-xl p-6 flex flex-col"
+            >
+              <svg className="w-8 h-8 text-gold/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <p className="text-gray-300 text-sm leading-relaxed flex-1 mb-4">
+                &ldquo;{testimonial.quote}&rdquo;
+              </p>
+              <div className="border-t border-dark-border pt-4">
+                <p className="text-white font-medium text-sm">{testimonial.name}</p>
+                <p className="text-gray-500 text-xs">{testimonial.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Market Snapshot */}
+      <section className="bg-dark-card/50 border-y border-dark-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Central Florida <span className="text-gold">Market Snapshot</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Key metrics driving the Central Florida commercial real estate market.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { value: "5.5–7%", label: "NNN Cap Rate Range", detail: "National credit tenants" },
+              { value: "$15–40", label: "Retail Lease PSF", detail: "Class A & B locations" },
+              { value: "$30K–150K", label: "Land Per Acre", detail: "Entitled commercial sites" },
+              { value: "2,000+", label: "People/Day", detail: "Moving to Florida" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-dark border border-dark-border rounded-xl p-6 text-center"
+              >
+                <div className="text-2xl font-bold text-gold mb-1">{stat.value}</div>
+                <div className="text-white text-sm font-medium">{stat.label}</div>
+                <div className="text-gray-500 text-xs mt-1">{stat.detail}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h2 className="text-3xl font-bold text-white mb-4">

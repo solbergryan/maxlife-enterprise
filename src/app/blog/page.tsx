@@ -9,6 +9,33 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "1031-exchange-guide",
+    title: "1031 Exchanges: How to Defer Taxes on Commercial Real Estate",
+    excerpt:
+      "A practical guide to using Section 1031 to defer capital gains taxes — key timelines, rules, why NNN properties are ideal replacement assets, and common mistakes to avoid.",
+    category: "Investment Strategy",
+    date: "April 2026",
+    readTime: "5 min read",
+  },
+  {
+    slug: "cap-rates-explained",
+    title: "Understanding Cap Rates: What Every CRE Investor Should Know",
+    excerpt:
+      "How to calculate capitalization rates, what makes a \"good\" cap rate, cap rate vs. cash-on-cash return, and where Central Florida cap rates sit across property types.",
+    category: "Commercial Real Estate",
+    date: "April 2026",
+    readTime: "4 min read",
+  },
+  {
+    slug: "due-diligence-checklist",
+    title: "The Complete Due Diligence Checklist for Commercial Property Buyers",
+    excerpt:
+      "A step-by-step guide covering physical inspection, environmental assessment, title review, lease analysis, zoning verification, and closing preparation.",
+    category: "Buyer's Guide",
+    date: "April 2026",
+    readTime: "6 min read",
+  },
+  {
     slug: "what-is-nnn-lease",
     title: "What Is a Triple Net (NNN) Lease? A Guide for Investors",
     excerpt:

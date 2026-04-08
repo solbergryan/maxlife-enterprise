@@ -24,6 +24,51 @@ const deals = [
       "Orlando metro market",
     ],
   },
+  {
+    title: "Walgreens — 14400 Narcoossee Rd",
+    location: "Orlando, FL 32832 (Lake Nona)",
+    type: "NNN Investment",
+    tenant: "Walgreens",
+    leaseType: "Absolute NNN",
+    status: "SOLD",
+    image: null,
+    highlights: [
+      "Walgreens — national credit tenant",
+      "11+ year initial lease term",
+      "Drive-thru equipped location",
+      "Lake Nona growth corridor",
+    ],
+  },
+  {
+    title: "CVS Pharmacy — 255 S State Rd 7",
+    location: "Margate, FL 33068",
+    type: "NNN Investment",
+    tenant: "CVS",
+    leaseType: "Absolute NNN",
+    status: "SOLD",
+    image: null,
+    highlights: [
+      "CVS Pharmacy — investment grade tenant",
+      "11,169 SF freestanding building",
+      "0.92-acre parcel",
+      "Miami MSA market",
+    ],
+  },
+  {
+    title: "Dollar Tree — 550 W 1st St",
+    location: "Sanford, FL 32771",
+    type: "NNN Investment",
+    tenant: "Dollar Tree",
+    leaseType: "Double Net (NN)",
+    status: "SOLD",
+    image: null,
+    highlights: [
+      "Dollar Tree — national credit tenant",
+      "10-year lease term",
+      "Seminole County location",
+      "Central Florida market",
+    ],
+  },
 ];
 
 export default function PortfolioPage() {
@@ -57,13 +102,24 @@ export default function PortfolioPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Image */}
                 <div className="relative h-64 lg:h-auto lg:min-h-[400px]">
-                  <Image
-                    src={deal.image}
-                    alt={deal.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
+                  {deal.image ? (
+                    <Image
+                      src={deal.image}
+                      alt={deal.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-dark-card flex items-center justify-center">
+                      <div className="text-center">
+                        <svg className="w-16 h-16 text-gold/20 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <span className="text-gold/30 text-sm font-medium">{deal.tenant}</span>
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute top-4 left-4">
                     <span className="bg-gold text-dark font-bold text-xs uppercase tracking-wider px-3 py-1.5 rounded-md">
                       {deal.status}
@@ -130,8 +186,41 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* Current Inventory */}
+      <section className="bg-dark-card/50 border-y border-dark-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Looking for <span className="text-gold">Available Properties</span>?
+          </h2>
+          <p className="text-gray-400 mb-4 max-w-lg mx-auto">
+            We maintain an active pipeline of NNN properties, land parcels, and
+            commercial listings — many of which are off-market. Contact us for
+            current inventory.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Link
+              href="/contact"
+              className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-3.5 rounded-lg transition-colors"
+            >
+              Request Current Inventory
+            </Link>
+            <a
+              href="tel:3215862121"
+              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-8 py-3.5 rounded-lg transition-colors"
+            >
+              Call (321) 586-2121
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Want Your Property Featured Here?
