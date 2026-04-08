@@ -212,6 +212,19 @@ export default async function DealDetailPage({
                 >
                   Call (321) 586-2121
                 </a>
+                {deal.crexiUrl && (
+                  <a
+                    href={deal.crexiUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full border border-dark-border text-gray-400 hover:text-gold hover:border-gold/30 font-medium py-3 rounded-lg transition-colors text-center text-sm"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    View on Crexi
+                  </a>
+                )}
               </div>
             </div>
           </div>

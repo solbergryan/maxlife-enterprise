@@ -18,6 +18,7 @@ export interface Deal {
   upsidePotential?: string;
   image?: string;
   description: string;
+  crexiUrl?: string;
 }
 
 export const deals: Deal[] = [
