@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { deals } from "@/data/deals";
+import { listings } from "@/data/listings";
 import DealFilter from "@/components/DealFilter";
+import ListingGrid from "@/components/ListingGrid";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "Commercial Real Estate Opportunities | Central Florida | MaxLife Enterprise",
   description:
-    "Browse active commercial real estate investment opportunities across Central Florida and the Space Coast. NNN, retail, multifamily, land, and commercial properties.",
+    "Browse 1,000+ commercial real estate investment opportunities across Central Florida and the Space Coast. NNN, retail, office, industrial, multifamily, and land.",
 };
 
 export default function OpportunitiesPage() {
@@ -24,16 +26,47 @@ export default function OpportunitiesPage() {
             <span className="text-gold">Opportunities</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            Active and recent commercial real estate deals across Central
-            Florida and the Space Coast. Filter by status, property type, or
-            county.
+            Browse 1,000+ active commercial real estate listings across Central
+            Florida and the Space Coast. Filter by property type, county, or
+            search by name.
           </p>
         </div>
       </section>
 
-      {/* Deals Grid with Filters */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Our Featured Deals */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <h2 className="text-2xl font-bold text-white mb-2">
+          Featured Opportunities
+        </h2>
+        <p className="text-gray-500 mb-6">
+          Properties sourced and represented by MaxLife Enterprise
+        </p>
         <DealFilter deals={deals} />
+      </section>
+
+      {/* Market Listings from Crexi */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-border">
+        <h2 className="text-2xl font-bold text-white mb-2">
+          Central Florida Market Listings
+        </h2>
+        <p className="text-gray-500 mb-8">
+          Active commercial properties across Orange, Seminole, Osceola, Lake,
+          Polk, and Brevard counties
+        </p>
+        <ListingGrid listings={listings} />
+
+        {/* Broker Compliance Disclaimer */}
+        <div className="mt-10 bg-dark-card border border-dark-border rounded-lg p-4">
+          <p className="text-gray-500 text-xs leading-relaxed">
+            The listings above are sourced from Crexi and may be listed by
+            third-party brokers. Listing information is deemed reliable but not
+            guaranteed. Each listing links to its original Crexi page where full
+            broker and brokerage details are available. MaxLife Enterprise is not
+            the listing broker for third-party listings unless otherwise noted.
+            Contact us or visit the original listing for complete broker
+            information, terms, and conditions. FL Broker License #3354351.
+          </p>
+        </div>
       </section>
 
       {/* Off-Market Signup */}
