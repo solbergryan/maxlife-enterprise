@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,8 +34,15 @@ export default function AboutPage() {
           {/* Photo / Headshot placeholder */}
           <div className="lg:col-span-1">
             <div className="bg-dark-card border border-dark-border rounded-xl p-8 text-center sticky top-24">
-              <div className="w-32 h-32 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl font-bold text-gold">RS</span>
+              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
+                <Image
+                  src="/ryan-solberg.jpg"
+                  alt="Ryan Solberg - Founder of MaxLife Development"
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
               <h3 className="text-white text-xl font-semibold">
                 Ryan Solberg
@@ -151,6 +159,15 @@ export default function AboutPage() {
           <Link
             href="/contact"
             className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
+semibold px-10 py-4 rounded-lg transition-colors"
           >
             Get in Touch
           </Link>
