@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Portfolio | MaxLife Enterprise",
+  title: "Portfolio | MaxLife Development",
   description:
-    "Featured deals and closed transactions by MaxLife Enterprise. NNN properties, land deals, and commercial real estate in Central Florida.",
+    "Featured deals and closed transactions by MaxLife Development. NNN properties, land deals, and commercial real estate in Central Florida.",
 };
 
 const deals = [

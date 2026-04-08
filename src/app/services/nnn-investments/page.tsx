@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "NNN Investment Properties | MaxLife Enterprise",
+  title: "NNN Investment Properties | MaxLife Development",
   description:
-    "Triple net (NNN) investment property brokerage in Central Florida. Passive income, creditworthy tenants, long-term leases. Buy or sell NNN properties with MaxLife Enterprise.",
+    "Triple net (NNN) investment property brokerage in Central Florida. Passive income, creditworthy tenants, long-term leases. Buy or sell NNN properties with MaxLife Development.",
 };
 
 export default function NNNInvestmentsPage() {

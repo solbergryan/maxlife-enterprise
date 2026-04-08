@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-gold font-bold text-xl">MaxLife</span>
-              <span className="text-white font-light text-xl">Enterprise</span>
+              <span className="text-white font-light text-xl">Development</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-3">
               Commercial real estate brokerage, NNN investments, land
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-dark-border mt-8 pt-8 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} MaxLife Enterprise. All rights
+          &copy; {new Date().getFullYear()} MaxLife Development. All rights
           reserved.
         </div>
       </div>

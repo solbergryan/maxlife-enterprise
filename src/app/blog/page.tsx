@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Market Insights | MaxLife Enterprise",
+  title: "Market Insights | MaxLife Development",
   description:
-    "Market insights, investment guides, and real estate analysis from MaxLife Enterprise. NNN investing, land development, and Central Florida market trends.",
+    "Market insights, investment guides, and real estate analysis from MaxLife Development. NNN investing, land development, and Central Florida market trends.",
 };
 
 const articles = [

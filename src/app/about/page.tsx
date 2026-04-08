@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | MaxLife Enterprise",
+  title: "About | MaxLife Development",
   description:
-    "Learn about MaxLife Enterprise — our mission, philosophy, and the experience behind our multi-service approach.",
+    "Learn about MaxLife Development — our mission, philosophy, and the experience behind our multi-service approach.",
 };
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             The Story Behind{" "}
-            <span className="text-gold">MaxLife Enterprise</span>
+            <span className="text-gold">MaxLife Development</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
             Built on real-world experience across multiple industries. One
@@ -66,7 +66,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-gray-400 leading-relaxed mb-4">
-                MaxLife Enterprise was founded on a simple idea: you shouldn&apos;t
+                MaxLife Development was founded on a simple idea: you shouldn&apos;t
                 need a dozen different contacts to get things done. Whether you
                 need to close a real estate deal, fix a property issue, or
                 coordinate a complex project, one phone call should be enough.
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 What Sets Us Apart
               </h2>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Most companies specialize in one thing. MaxLife Enterprise
+                Most companies specialize in one thing. MaxLife Development
                 specializes in solving problems — whatever shape they take. Our
                 founder brings hands-on experience across real estate, engineering,
                 construction, and property services. That cross-disciplinary
@@ -145,7 +145,7 @@ export default function AboutPage() {
             Let&apos;s Work Together
           </h2>
           <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-            Ready to see what MaxLife Enterprise can do for you? Get in touch —
+            Ready to see what MaxLife Development can do for you? Get in touch —
             we&apos;d love to hear about your project.
           </p>
           <Link

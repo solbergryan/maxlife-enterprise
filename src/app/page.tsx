@@ -81,7 +81,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl">
             <p className="text-gold font-medium text-sm tracking-widest uppercase mb-4">
-              MaxLife Enterprise
+              MaxLife Development
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               One Call.{" "}
@@ -157,7 +157,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">
                 Why Choose{" "}
-                <span className="text-gold">MaxLife Enterprise</span>?
+                <span className="text-gold">MaxLife Development</span>?
               </h2>
               <ul className="space-y-4">
                 {[
@@ -193,7 +193,7 @@ export default function Home() {
             <div className="bg-dark border border-dark-border rounded-xl p-8 text-center">
               <div className="text-6xl font-bold text-gold mb-2">ML</div>
               <div className="text-white text-xl font-light mb-4">
-                MaxLife Enterprise
+                MaxLife Development
               </div>
               <p className="text-gray-400 text-sm">
                 Built on integrity. Driven by excellence.

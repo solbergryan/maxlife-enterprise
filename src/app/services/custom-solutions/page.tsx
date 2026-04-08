@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Custom Solutions | MaxLife Enterprise",
+  title: "Custom Solutions | MaxLife Development",
   description:
     "Unique project? We've got you covered. Property management, renovation coordination, vendor management, emergency services, and more in Central Florida.",
 };

@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MaxLife Enterprise | One Call. Every Solution.",
+  title: "MaxLife Development | One Call. Every Solution.",
   description:
-    "Professional services spanning commercial real estate, residential brokerage, handyman, engineering, cleaning, and more. MaxLife Enterprise — your one-stop solution.",
+    "Professional services spanning commercial real estate, residential brokerage, handyman, engineering, cleaning, and more. MaxLife Development — your one-stop solution.",
 };
 
 export default function RootLayout({

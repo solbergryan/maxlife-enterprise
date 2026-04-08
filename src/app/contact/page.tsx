@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | MaxLife Enterprise",
+  title: "Contact | MaxLife Development",
   description:
-    "Get in touch with MaxLife Enterprise. Request a quote, ask questions, or schedule a consultation.",
+    "Get in touch with MaxLife Development. Request a quote, ask questions, or schedule a consultation.",
 };
 
 export default function ContactPage() {
