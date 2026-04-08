@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #d4a843;
+  --color-gold-dark: #b8912e;
+  --color-gold-light: #e8c36a;
+  --color-dark: #0a0a0a;
+  --color-dark-card: #1a1a1a;
+  --color-dark-border: #2a2a2a;
+  --color-dark-hover: #252525;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: #f5f5f5;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+}
