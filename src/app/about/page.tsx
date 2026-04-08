@@ -167,12 +167,3 @@ export default function AboutPage() {
     </>
   );
 }
-semibold px-10 py-4 rounded-lg transition-colors"
-          >
-            Get in Touch
-          </Link>
-        </div>
-      </section>
-    </>
-  );
-}
