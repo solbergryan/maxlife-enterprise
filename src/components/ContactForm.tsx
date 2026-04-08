@@ -20,7 +20,7 @@ export default function ContactForm() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:info@maxlifeenterprise.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:Ryan@MaxLifeRealty.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -35,7 +35,7 @@ export default function ContactForm() {
         <h3 className="text-white text-xl font-semibold mb-2">Thank You!</h3>
         <p className="text-gray-400">
           Your email client should have opened. If not, please email us directly
-          at info@maxlifeenterprise.com
+          at Ryan@MaxLifeRealty.com
         </p>
         <button
           onClick={() => setSubmitted(false)}
