@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    slug: "commercial-real-estate",
     title: "Commercial Real Estate Brokerage",
     description:
       "Full-service commercial real estate representation for buyers, sellers, landlords, and tenants. We handle office spaces, retail locations, industrial properties, and investment opportunities.",
@@ -26,6 +27,7 @@ const services = [
     ),
   },
   {
+    slug: "residential-real-estate",
     title: "Residential Real Estate Brokerage",
     description:
       "Whether you're buying your first home, selling a property, or building an investment portfolio, we provide hands-on guidance through every step of the transaction.",
@@ -43,6 +45,7 @@ const services = [
     ),
   },
   {
+    slug: "handyman",
     title: "Handyman Services",
     description:
       "Reliable, skilled, and efficient. From minor repairs to major renovations, we handle the full spectrum of home and commercial maintenance tasks.",
@@ -61,6 +64,7 @@ const services = [
     ),
   },
   {
+    slug: "engineering",
     title: "Engineering Services",
     description:
       "Technical expertise for complex challenges. We bring engineering discipline to every project — from structural assessments to system design and implementation.",
@@ -78,6 +82,7 @@ const services = [
     ),
   },
   {
+    slug: "cleaning",
     title: "Cleaning Services",
     description:
       "Professional cleaning for homes, offices, and commercial spaces. We deliver spotless results with attention to detail and environmentally conscious practices.",
@@ -95,6 +100,7 @@ const services = [
     ),
   },
   {
+    slug: "custom-solutions",
     title: "Custom Solutions",
     description:
       "Have a project that doesn't fit neatly into one category? That's our specialty. We bring the same professionalism and problem-solving to any challenge you throw our way.",
@@ -153,12 +159,20 @@ export default function ServicesPage() {
                 <p className="text-gray-400 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <Link
-                  href="/contact"
-                  className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors"
-                >
-                  Request This Service
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-6 py-2.5 rounded-lg text-sm transition-colors"
+                  >
+                    Request This Service
+                  </Link>
+                </div>
               </div>
               <div className="lg:w-80 shrink-0">
                 <h3 className="text-gold text-sm font-semibold uppercase tracking-wider mb-3">
