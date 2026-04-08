@@ -11,17 +11,38 @@ export default function ContactForm() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `MaxLife Development Inquiry - ${formData.service || "General"}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:Ryan@MaxLifeRealty.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("https://formspree.io/f/xdapjean", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          _subject: `MaxLife Inquiry — ${formData.service || "General"}`,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -32,10 +53,9 @@ export default function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-white text-xl font-semibold mb-2">Thank You!</h3>
+        <h3 className="text-white text-xl font-semibold mb-2">Message Sent!</h3>
         <p className="text-gray-400">
-          Your email client should have opened. If not, please email us directly
-          at Ryan@MaxLifeRealty.com
+          We&apos;ve received your message and will get back to you shortly.
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -129,11 +149,16 @@ export default function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="text-red-400 text-sm">{error}</p>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-gold hover:bg-gold-dark text-dark font-semibold py-3 rounded-lg transition-colors text-sm"
+        disabled={loading}
+        className="w-full bg-gold hover:bg-gold-dark text-dark font-semibold py-3 rounded-lg transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
   );

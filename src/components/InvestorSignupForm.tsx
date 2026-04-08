@@ -28,6 +28,8 @@ export default function InvestorSignupForm() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   function toggleInterest(type: string) {
     setForm((prev) => ({
@@ -38,18 +40,36 @@ export default function InvestorSignupForm() {
     }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    const subject = encodeURIComponent(
-      `Off-Market Deal Access Request — ${form.name}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || "Not provided"}\nInvestment Range: ${form.investmentRange || "Not specified"}\nProperty Interests: ${form.interests.length > 0 ? form.interests.join(", ") : "Not specified"}\n\nMessage:\n${form.message || "No additional message."}`
-    );
+    try {
+      const res = await fetch("https://formspree.io/f/xdapjean", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone || "Not provided",
+          investmentRange: form.investmentRange || "Not specified",
+          propertyInterests: form.interests.length > 0 ? form.interests.join(", ") : "Not specified",
+          message: form.message || "No additional message.",
+          _subject: `Off-Market Deal Access Request — ${form.name}`,
+        }),
+      });
 
-    window.location.href = `mailto:Ryan@MaxLifeRealty.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   const inputClass =
@@ -67,11 +87,8 @@ export default function InvestorSignupForm() {
           You&apos;re on the List
         </h3>
         <p className="text-gray-400 mb-4">
-          Your email client should have opened with your information. If it
-          didn&apos;t, email us directly at{" "}
-          <a href="mailto:Ryan@MaxLifeRealty.com" className="text-gold hover:underline">
-            Ryan@MaxLifeRealty.com
-          </a>
+          We&apos;ve received your information and will be in touch with
+          off-market opportunities that match your criteria.
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -154,11 +171,16 @@ export default function InvestorSignupForm() {
         className={inputClass}
       />
 
+      {error && (
+        <p className="text-red-400 text-sm">{error}</p>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-gold hover:bg-gold-dark text-dark font-semibold py-3 rounded-lg transition-colors"
+        disabled={loading}
+        className="w-full bg-gold hover:bg-gold-dark text-dark font-semibold py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Get Off-Market Deal Access
+        {loading ? "Submitting..." : "Get Off-Market Deal Access"}
       </button>
     </form>
   );
