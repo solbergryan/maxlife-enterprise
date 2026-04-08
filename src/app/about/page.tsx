@@ -3,9 +3,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | MaxLife Enterprise",
+  title: "About Ryan Solberg | MaxLife Enterprise",
   description:
-    "Learn about MaxLife Enterprise — our mission, philosophy, and the experience behind our multi-service approach.",
+    "Ryan Solberg is a Florida-based Commercial Real Estate Professional specializing in sales, leasing, and investment properties throughout Central Florida and the Space Coast.",
 };
 
 export default function AboutPage() {
@@ -15,15 +15,14 @@ export default function AboutPage() {
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
-            About Us
+            About
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            The Story Behind{" "}
-            <span className="text-gold">MaxLife Enterprise</span>
+            Meet <span className="text-gold">Ryan Solberg</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            Built on real-world experience across multiple industries. One
-            person, one vision, unlimited capability.
+            Commercial Real Estate Professional &amp; Regional Administrator
+            serving Central Florida and the Space Coast.
           </p>
         </div>
       </section>
@@ -31,15 +30,15 @@ export default function AboutPage() {
       {/* Main Content */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Photo / Headshot placeholder */}
+          {/* Sidebar Card */}
           <div className="lg:col-span-1">
             <div className="bg-dark-card border border-dark-border rounded-xl p-8 text-center sticky top-24">
-              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
+              <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-5 ring-2 ring-gold/30">
                 <Image
                   src="/ryan-solberg.jpg"
-                  alt="Ryan Solberg - Founder of MaxLife Development"
-                  width={128}
-                  height={128}
+                  alt="Ryan Solberg — Commercial Real Estate Professional"
+                  width={144}
+                  height={144}
                   className="w-full h-full object-cover"
                   priority
                 />
@@ -47,17 +46,19 @@ export default function AboutPage() {
               <h3 className="text-white text-xl font-semibold">
                 Ryan Solberg
               </h3>
-              <p className="text-gold text-sm mt-1">Founder & Operator</p>
+              <p className="text-gold text-sm mt-1">
+                Founder &amp; Commercial Real Estate Broker
+              </p>
               <div className="border-t border-dark-border mt-6 pt-6 space-y-3 text-sm text-gray-400">
                 <div className="flex items-center gap-2 justify-center">
-                  <svg className="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  Central Florida — Orlando & Melbourne Areas
+                  Orlando &amp; Space Coast, FL
                 </div>
                 <div className="flex items-center gap-2 justify-center">
-                  <svg className="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   Licensed FL Broker
@@ -66,49 +67,75 @@ export default function AboutPage() {
                   License #3354351
                 </div>
               </div>
+
+              {/* Service Area */}
+              <div className="border-t border-dark-border mt-6 pt-6">
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Service Areas</p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {["Orange", "Seminole", "Osceola", "Lake", "Polk", "Brevard"].map(
+                    (county) => (
+                      <span
+                        key={county}
+                        className="text-xs bg-dark-hover border border-dark-border rounded-full px-3 py-1 text-gray-400"
+                      >
+                        {county} County
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Bio & Philosophy */}
-          <div className="lg:col-span-2 space-y-8">
+          {/* Bio Content */}
+          <div className="lg:col-span-2 space-y-10">
+            {/* Intro */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Commercial Real Estate Professional
+              </h2>
               <p className="text-gray-400 leading-relaxed mb-4">
-                MaxLife Enterprise was founded on a simple idea: you shouldn&apos;t
-                need a dozen different contacts to get things done. Whether you
-                need to close a real estate deal, fix a property issue, or
-                coordinate a complex project, one phone call should be enough.
+                Ryan Solberg is a Florida-based Commercial Real Estate
+                Professional and Regional Administrator specializing in
+                commercial real estate sales, leasing, and investment properties
+                throughout Central Florida and the Space Coast. Based in the
+                Orlando area, Ryan focuses on helping investors, business owners,
+                and developers identify, acquire, and maximize high-performing
+                commercial real estate assets.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                We bring a breadth of skills and licensing that most companies
-                can&apos;t match — commercial and residential real estate brokerage,
-                hands-on handyman work, engineering expertise, professional
-                cleaning, and more. It&apos;s not about doing everything at once.
-                It&apos;s about having the range to handle whatever comes your way.
+                His expertise spans a wide range of commercial property types,
+                including retail shopping centers, office buildings, industrial
+                properties, multifamily investments, mixed-use developments, and
+                land for development. He works closely with clients to analyze
+                market trends, evaluate income-producing opportunities, and
+                structure deals that align with both short-term cash flow goals
+                and long-term investment strategies.
               </p>
             </div>
 
+            {/* Specialties Grid */}
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">
-                Our Philosophy
+                Areas of Expertise
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   {
-                    title: "Integrity First",
-                    desc: "We do what we say and say what we do. No shortcuts, no surprises.",
+                    title: "Investment Analysis",
+                    desc: "Data-driven approach to evaluating income-producing opportunities, uncovering off-market deals, and maximizing property value through strategic acquisition and disposition.",
                   },
                   {
-                    title: "Results Over Promises",
-                    desc: "Talk is cheap. We let our work speak for itself — and it speaks volumes.",
+                    title: "Deal Structuring",
+                    desc: "Expert negotiation of favorable terms aligned with client goals — from contract negotiation and underwriting to closing.",
                   },
                   {
-                    title: "Adapt & Deliver",
-                    desc: "Every project is different. We tailor our approach to fit the situation, not the other way around.",
+                    title: "Operations & Leadership",
+                    desc: "As a Regional Administrator, Ryan oversees operations, improves transaction efficiency, and implements scalable systems that enhance the client experience.",
                   },
                   {
-                    title: "Long-Term Relationships",
-                    desc: "We're not chasing one-time transactions. We build partnerships that last.",
+                    title: "Digital Marketing & Outreach",
+                    desc: "High-converting listing campaigns, investor-focused marketing, SEO, and targeted outreach to maximize exposure and attract qualified buyers and tenants.",
                   },
                 ].map((item) => (
                   <div
@@ -124,22 +151,65 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Approach */}
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">
-                What Sets Us Apart
+                A Results-Oriented Approach
               </h2>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Most companies specialize in one thing. MaxLife Enterprise
-                specializes in solving problems — whatever shape they take. Our
-                founder brings hands-on experience across real estate, engineering,
-                construction, and property services. That cross-disciplinary
-                background means we see connections others miss and deliver
-                solutions others can&apos;t.
+                With a strong foundation in real estate operations and financial
+                analysis, Ryan brings a data-driven, results-oriented approach to
+                every transaction. He is known for helping clients uncover
+                off-market commercial real estate opportunities, negotiate
+                favorable terms, and increase property value through strategic
+                acquisition and disposition strategies. His ability to combine
+                in-depth local market knowledge with advanced deal analysis makes
+                him a valuable partner for both new and experienced commercial
+                real estate investors.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                When you work with MaxLife, you&apos;re not getting a middleman.
-                You&apos;re getting a professional who understands your project from
-                every angle and has the skills to execute.
+                Ryan stays ahead of market trends, population growth patterns,
+                and development activity across Central Florida and Brevard
+                County, giving his clients a competitive advantage in identifying
+                emerging opportunities. Whether assisting with acquisitions,
+                dispositions, leasing, or portfolio expansion, Ryan is committed
+                to delivering measurable results and long-term value.
+              </p>
+            </div>
+
+            {/* Property Types */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Property Types
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {[
+                  "Retail & Shopping Centers",
+                  "Office Buildings",
+                  "Industrial Properties",
+                  "Multifamily Investments",
+                  "Mixed-Use Developments",
+                  "Land for Development",
+                ].map((type) => (
+                  <div
+                    key={type}
+                    className="bg-dark-card border border-dark-border rounded-lg px-4 py-3 text-center"
+                  >
+                    <p className="text-gray-300 text-sm">{type}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mission */}
+            <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Our Mission
+              </h2>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                To help clients build and scale wealth through commercial real
+                estate by providing expert guidance, strategic insight, and
+                consistent results in every transaction.
               </p>
             </div>
           </div>
@@ -153,8 +223,8 @@ export default function AboutPage() {
             Let&apos;s Work Together
           </h2>
           <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-            Ready to see what MaxLife Enterprise can do for you? Get in touch —
-            we&apos;d love to hear about your project.
+            Ready to discuss your next commercial real estate opportunity? Get in
+            touch — Ryan would love to hear about your goals.
           </p>
           <Link
             href="/contact"

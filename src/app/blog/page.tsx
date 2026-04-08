@@ -9,6 +9,24 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "orlando-commercial-real-estate-trends-2026",
+    title: "Orlando Commercial Real Estate Market Trends 2026",
+    excerpt:
+      "Key trends, investment opportunities, and market outlook for commercial real estate investors in the Orlando metro area heading into 2026.",
+    category: "Market Report",
+    date: "April 2026",
+    readTime: "8 min read",
+  },
+  {
+    slug: "brevard-county-investment-property-outlook",
+    title: "Brevard County Investment Property Outlook",
+    excerpt:
+      "Why Florida's Space Coast is emerging as one of the state's most compelling commercial real estate markets for investors.",
+    category: "Market Report",
+    date: "April 2026",
+    readTime: "7 min read",
+  },
+  {
     slug: "what-is-nnn-lease",
     title: "What Is a Triple Net (NNN) Lease? A Guide for Investors",
     excerpt:

@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MaxLife Enterprise | One Call. Every Solution.",
+  title: "Orlando Commercial Real Estate | NNN Investments | MaxLife Enterprise",
   description:
-    "Professional services spanning commercial real estate, residential brokerage, handyman, engineering, cleaning, and more. MaxLife Enterprise — your one-stop solution.",
+    "Commercial real estate brokerage, NNN investments, and development opportunities across Central Florida and the Space Coast. Expert guidance for investors, business owners, and developers.",
 };
 
 export default function RootLayout({
