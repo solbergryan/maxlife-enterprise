@@ -27,6 +27,24 @@ const services = [
     ),
   },
   {
+    slug: "commercial-development",
+    title: "Commercial Development",
+    description:
+      "NNN build-to-suit development across Florida. Ground-up construction of single-tenant net lease properties — from site selection through disposition.",
+    features: [
+      "NNN build-to-suit development",
+      "Six-phase development cycle",
+      "Tenant procurement & lease negotiation",
+      "Construction management (GMP)",
+      "Disposition to 1031 exchange buyers",
+    ],
+    icon: (
+      <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+  },
+  {
     slug: "nnn-investments",
     title: "NNN Investment Properties",
     description:

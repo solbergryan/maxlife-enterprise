@@ -31,6 +31,7 @@ export default function Footer() {
                 { href: "/services/land-development", label: "Land Development" },
                 { href: "/portfolio", label: "Portfolio" },
                 { href: "/blog", label: "Market Insights" },
+                { href: "/resources", label: "Resources" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
