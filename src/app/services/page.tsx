@@ -81,6 +81,24 @@ const services = [
     ),
   },
   {
+    slug: "commercial-financing",
+    title: "Commercial Financing",
+    description:
+      "Commercial mortgage origination for acquisitions, refinances, construction, and NNN investment loans. Access to banks, CMBS, SBA, and bridge lenders.",
+    features: [
+      "Conventional commercial loans",
+      "SBA 504 & 7a programs",
+      "CMBS & bridge financing",
+      "NNN investment loans",
+      "Construction & development loans",
+    ],
+    icon: (
+      <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+  {
     slug: "residential-real-estate",
     title: "Residential Real Estate",
     description:

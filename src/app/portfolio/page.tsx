@@ -97,7 +97,7 @@ export default function PortfolioPage() {
           {deals.map((deal) => (
             <div
               key={deal.title}
-              className="bg-dark-card border border-dark-border rounded-xl overflow-hidden"
+              className="bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Image */}

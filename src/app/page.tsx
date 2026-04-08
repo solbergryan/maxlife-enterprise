@@ -4,6 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 const services = [
   {
     title: "Commercial Real Estate",
+    href: "/services/commercial-real-estate",
     description:
       "Full-service brokerage for office, retail, industrial, and NNN investment properties. Acquisitions, dispositions, and lease negotiations.",
     icon: (
@@ -14,6 +15,7 @@ const services = [
   },
   {
     title: "NNN Investments",
+    href: "/services/nnn-investments",
     description:
       "Passive income through triple net lease properties. National credit tenants, long-term leases, and predictable cash flow.",
     icon: (
@@ -24,6 +26,7 @@ const services = [
   },
   {
     title: "Land Development",
+    href: "/services/land-development",
     description:
       "Raw land acquisitions, entitlements, zoning, site planning, and development consulting across Central Florida.",
     icon: (
@@ -34,6 +37,7 @@ const services = [
   },
   {
     title: "Residential Real Estate",
+    href: "/services/residential-real-estate",
     description:
       "Buying, selling, or investing in homes. Personalized service from listing to closing across Orlando and Melbourne.",
     icon: (
@@ -44,6 +48,7 @@ const services = [
   },
   {
     title: "Property Services",
+    href: "/services/property-services",
     description:
       "Maintenance, cleaning, and engineering for investors and property owners. One call for repairs, cleans, and technical work.",
     icon: (
@@ -55,6 +60,7 @@ const services = [
   },
   {
     title: "Custom Solutions",
+    href: "/services/custom-solutions",
     description:
       "Unique projects, property management, renovation coordination, and emergency services. We tackle what others won't.",
     icon: (
@@ -66,10 +72,10 @@ const services = [
 ];
 
 const stats = [
-  { value: "100+", label: "Projects Completed" },
-  { value: "6+", label: "Service Categories" },
-  { value: "24/7", label: "Availability" },
-  { value: "100%", label: "Client Satisfaction" },
+  { value: "100+", label: "Projects Completed", href: "/portfolio" },
+  { value: "6+", label: "Service Categories", href: "/services" },
+  { value: "24/7", label: "Availability", href: "/contact" },
+  { value: "100%", label: "Client Satisfaction", href: "/about" },
 ];
 
 export default function Home() {
@@ -90,7 +96,7 @@ export default function Home() {
             <p className="text-gray-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-2xl">
               Commercial real estate brokerage, NNN investment properties, land
               development, and full-service property solutions. MaxLife
-              Enterprise delivers results across Central Florida.
+              Development delivers results across Central Florida.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -115,10 +121,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-gold">{stat.value}</div>
-                <div className="text-gray-400 text-sm mt-1">{stat.label}</div>
-              </div>
+              <Link key={stat.label} href={stat.href} className="text-center group block">
+                <div className="text-3xl font-bold text-gold group-hover:text-gold-light transition-colors">{stat.value}</div>
+                <div className="text-gray-400 text-sm mt-1 group-hover:text-white transition-colors">{stat.label}</div>
+              </Link>
             ))}
           </div>
         </div>
@@ -190,15 +196,15 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="bg-dark border border-dark-border rounded-xl p-8 text-center">
-              <div className="text-6xl font-bold text-gold mb-2">ML</div>
-              <div className="text-white text-xl font-light mb-4">
+            <Link href="/about" className="bg-dark border border-dark-border rounded-xl p-8 text-center block group hover:border-gold/30 transition-colors">
+              <div className="text-6xl font-bold text-gold mb-2 group-hover:text-gold-light transition-colors">ML</div>
+              <div className="text-white text-xl font-light mb-4 group-hover:text-gold transition-colors">
                 MaxLife Development
               </div>
               <p className="text-gray-400 text-sm">
                 Built on integrity. Driven by excellence.
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -266,19 +272,20 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { value: "5.5–7%", label: "NNN Cap Rate Range", detail: "National credit tenants" },
-              { value: "$15–40", label: "Retail Lease PSF", detail: "Class A & B locations" },
-              { value: "$30K–150K", label: "Land Per Acre", detail: "Entitled commercial sites" },
-              { value: "2,000+", label: "People/Day", detail: "Moving to Florida" },
+              { value: "5.5–7%", label: "NNN Cap Rate Range", detail: "National credit tenants", href: "/blog/cap-rates-explained" },
+              { value: "$15–40", label: "Retail Lease PSF", detail: "Class A & B locations", href: "/services/commercial-real-estate" },
+              { value: "$30K–150K", label: "Land Per Acre", detail: "Entitled commercial sites", href: "/blog/central-florida-land-development" },
+              { value: "2,000+", label: "People/Day", detail: "Moving to Florida", href: "/services/commercial-development" },
             ].map((stat) => (
-              <div
+              <Link
                 key={stat.label}
-                className="bg-dark border border-dark-border rounded-xl p-6 text-center"
+                href={stat.href}
+                className="bg-dark border border-dark-border rounded-xl p-6 text-center group hover:border-gold/30 transition-colors block"
               >
-                <div className="text-2xl font-bold text-gold mb-1">{stat.value}</div>
-                <div className="text-white text-sm font-medium">{stat.label}</div>
+                <div className="text-2xl font-bold text-gold mb-1 group-hover:text-gold-light transition-colors">{stat.value}</div>
+                <div className="text-white text-sm font-medium group-hover:text-gold transition-colors">{stat.label}</div>
                 <div className="text-gray-500 text-xs mt-1">{stat.detail}</div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
