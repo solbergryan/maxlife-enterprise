@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Understanding Cap Rates: What Every CRE Investor Should Know | MaxLife Development",
+  title: "Understanding Cap Rates: What Every CRE Investor Should Know",
   description:
     "Learn what capitalization rates are, how to calculate them, what makes a good cap rate, and how Central Florida cap rates compare across property types.",
 };
@@ -10,6 +11,11 @@ export const metadata: Metadata = {
 export default function CapRatesArticle() {
   return (
     <>
+      <ArticleJsonLd
+        title="Understanding Cap Rates: What Every CRE Investor Should Know"
+        description="Learn what capitalization rates are, how to calculate them, what makes a good cap rate, and how Central Florida cap rates compare across property types."
+        url="/blog/cap-rates-explained"
+      />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

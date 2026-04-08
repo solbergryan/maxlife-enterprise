@@ -73,17 +73,18 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-gray-400 leading-relaxed mb-4">
-                MaxLife Development was founded on a simple idea: you shouldn&apos;t
-                need a dozen different contacts to get things done. Whether you
-                need to close a real estate deal, fix a property issue, or
-                coordinate a complex project, one phone call should be enough.
+                MaxLife Development was founded to be a full-service commercial
+                real estate partner for investors, developers, and property owners
+                across Florida. Whether you&apos;re acquiring NNN properties,
+                developing build-to-suit projects, or navigating a complex
+                commercial transaction, one call should be enough.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                We bring a breadth of skills and licensing that most companies
-                can&apos;t match — commercial and residential real estate brokerage,
-                hands-on handyman work, engineering expertise, professional
-                cleaning, and more. It&apos;s not about doing everything at once.
-                It&apos;s about having the range to handle whatever comes your way.
+                We bring a breadth of expertise that most brokerages can&apos;t
+                match — NNN investment brokerage, ground-up commercial development,
+                land entitlements, commercial financing, and residential real estate.
+                It&apos;s about having the range and market knowledge to handle
+                whatever your investment goals require.
               </p>
             </div>
 
@@ -128,17 +129,18 @@ export default function AboutPage() {
                 What Sets Us Apart
               </h2>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Most companies specialize in one thing. MaxLife Development
-                specializes in solving problems — whatever shape they take. Our
-                founder brings hands-on experience across real estate, engineering,
-                construction, and property services. That cross-disciplinary
-                background means we see connections others miss and deliver
-                solutions others can&apos;t.
+              Most brokerages focus on one niche. MaxLife Development operates
+                across the full commercial real estate lifecycle — from sourcing
+                land and securing tenants to financing construction and selling
+                stabilized assets. Our founder brings hands-on experience in NNN
+                investments, commercial development, and capital markets. That
+                vertically integrated approach means better deals, faster
+                execution, and fewer middlemen.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                When you work with MaxLife, you&apos;re not getting a middleman.
-                You&apos;re getting a professional who understands your project from
-                every angle and has the skills to execute.
+                When you work with MaxLife, you&apos;re getting a licensed Florida
+                broker and mortgage loan originator who understands every angle of
+                a commercial deal — from the pro forma to the closing table.
               </p>
             </div>
           </div>

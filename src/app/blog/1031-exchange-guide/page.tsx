@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "1031 Exchanges: How to Defer Taxes on Commercial Real Estate | MaxLife Development",
+  title: "1031 Exchanges: How to Defer Taxes on Commercial Real Estate",
   description:
     "Learn how 1031 exchanges work, key timelines and rules, why NNN properties are ideal replacement properties, and common mistakes to avoid.",
 };
@@ -10,6 +11,11 @@ export const metadata: Metadata = {
 export default function ExchangeGuideArticle() {
   return (
     <>
+      <ArticleJsonLd
+        title="1031 Exchanges: How to Defer Taxes on Commercial Real Estate"
+        description="Learn how 1031 exchanges work, key timelines and rules, why NNN properties are ideal replacement properties, and common mistakes to avoid."
+        url="/blog/1031-exchange-guide"
+      />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

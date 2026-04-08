@@ -105,7 +105,7 @@ export default function PortfolioPage() {
                   {deal.image ? (
                     <Image
                       src={deal.image}
-                      alt={deal.title}
+                      alt={`${deal.tenant} NNN investment property in ${deal.location} - ${deal.leaseType} lease`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"

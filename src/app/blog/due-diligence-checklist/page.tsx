@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "The Complete Due Diligence Checklist for Commercial Property Buyers | MaxLife Development",
+  title: "The Complete Due Diligence Checklist for Commercial Property Buyers",
   description:
     "A step-by-step due diligence checklist for commercial real estate buyers covering physical inspection, environmental, title, lease review, zoning, and closing prep.",
 };
@@ -10,6 +11,11 @@ export const metadata: Metadata = {
 export default function DueDiligenceArticle() {
   return (
     <>
+      <ArticleJsonLd
+        title="The Complete Due Diligence Checklist for Commercial Property Buyers"
+        description="A step-by-step due diligence checklist for commercial real estate buyers covering physical inspection, environmental, title, lease review, zoning, and closing prep."
+        url="/blog/due-diligence-checklist"
+      />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

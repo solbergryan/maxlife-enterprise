@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Why Central Florida Is Hot for Land Development | MaxLife Development",
+  title: "Why Central Florida Is Hot for Land Development",
   description:
     "Central Florida land development trends: population growth, infrastructure investment, and rising demand across the Orlando and Space Coast corridors.",
 };
@@ -10,6 +11,11 @@ export const metadata: Metadata = {
 export default function CentralFloridaLandArticle() {
   return (
     <>
+      <ArticleJsonLd
+        title="Why Central Florida Is Hot for Land Development"
+        description="Central Florida land development trends: population growth, infrastructure investment, and rising demand across the Orlando and Space Coast corridors."
+        url="/blog/central-florida-land-development"
+      />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

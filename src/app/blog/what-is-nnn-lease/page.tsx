@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "What Is a Triple Net (NNN) Lease? | MaxLife Development",
+  title: "What Is a Triple Net (NNN) Lease?",
   description:
     "A comprehensive guide to triple net lease investments. Learn how NNN leases work, their benefits and risks, and why investors love them for passive income.",
 };
@@ -10,6 +11,11 @@ export const metadata: Metadata = {
 export default function NNNLeaseArticle() {
   return (
     <>
+      <ArticleJsonLd
+        title="What Is a Triple Net (NNN) Lease?"
+        description="A comprehensive guide to triple net lease investments. Learn how NNN leases work, their benefits and risks, and why investors love them for passive income."
+        url="/blog/what-is-nnn-lease"
+      />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
