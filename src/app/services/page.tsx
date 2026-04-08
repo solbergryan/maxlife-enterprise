@@ -4,20 +4,20 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | MaxLife Enterprise",
   description:
-    "Explore our full range of services: commercial real estate, residential brokerage, handyman, engineering, cleaning, and more.",
+    "Commercial real estate, NNN investments, land brokerage & development, residential real estate, property services, and custom solutions in Central Florida.",
 };
 
 const services = [
   {
     slug: "commercial-real-estate",
-    title: "Commercial Real Estate Brokerage",
+    title: "Commercial Real Estate",
     description:
-      "Full-service commercial real estate representation for buyers, sellers, landlords, and tenants. We handle office spaces, retail locations, industrial properties, and investment opportunities.",
+      "Full-service commercial brokerage for acquisitions, dispositions, and lease negotiations. Office, retail, industrial, and NNN investment properties.",
     features: [
       "Property acquisitions & dispositions",
       "Lease negotiations",
       "Market analysis & valuations",
-      "Investment consulting",
+      "NNN property brokerage",
       "Tenant & landlord representation",
     ],
     icon: (
@@ -27,16 +27,52 @@ const services = [
     ),
   },
   {
-    slug: "residential-real-estate",
-    title: "Residential Real Estate Brokerage",
+    slug: "nnn-investments",
+    title: "NNN Investment Properties",
     description:
-      "Whether you're buying your first home, selling a property, or building an investment portfolio, we provide hands-on guidance through every step of the transaction.",
+      "Build passive income through triple net lease investments. We help investors acquire and sell NNN properties backed by national credit tenants.",
+    features: [
+      "NNN property acquisitions & sales",
+      "Cap rate & NOI analysis",
+      "Tenant credit evaluation",
+      "1031 exchange guidance",
+      "Portfolio strategy",
+    ],
+    icon: (
+      <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    slug: "land-development",
+    title: "Land Brokerage & Development",
+    description:
+      "From raw land acquisitions to entitled, development-ready sites. Zoning, entitlements, site planning, and development consulting across Central Florida.",
+    features: [
+      "Raw land acquisitions & dispositions",
+      "Entitlements & rezoning",
+      "Site planning & due diligence",
+      "Development consulting",
+      "Buyer & tenant sourcing",
+    ],
+    icon: (
+      <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+      </svg>
+    ),
+  },
+  {
+    slug: "residential-real-estate",
+    title: "Residential Real Estate",
+    description:
+      "Buying, selling, or investing in homes. Personalized service from listing to closing across the Orlando and Melbourne markets.",
     features: [
       "Home buying & selling",
       "Comparative market analysis",
       "First-time buyer guidance",
       "Investment property sourcing",
-      "Negotiation & closing support",
+      "Relocation assistance",
     ],
     icon: (
       <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,16 +81,16 @@ const services = [
     ),
   },
   {
-    slug: "handyman",
-    title: "Handyman Services",
+    slug: "property-services",
+    title: "Property Services",
     description:
-      "Reliable, skilled, and efficient. From minor repairs to major renovations, we handle the full spectrum of home and commercial maintenance tasks.",
+      "Comprehensive maintenance, cleaning, and engineering services for investors, landlords, and homeowners. One call covers it all.",
     features: [
-      "Plumbing repairs & installations",
-      "Electrical work",
-      "Drywall & painting",
-      "Fixture installations",
-      "General repairs & maintenance",
+      "Maintenance & handyman repairs",
+      "Professional cleaning",
+      "Engineering & technical consulting",
+      "Post-construction cleanup",
+      "Property preparation",
     ],
     icon: (
       <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,46 +100,10 @@ const services = [
     ),
   },
   {
-    slug: "engineering",
-    title: "Engineering Services",
-    description:
-      "Technical expertise for complex challenges. We bring engineering discipline to every project — from structural assessments to system design and implementation.",
-    features: [
-      "Structural assessments",
-      "System design & optimization",
-      "Project management",
-      "Technical consulting",
-      "Problem diagnosis & resolution",
-    ],
-    icon: (
-      <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-      </svg>
-    ),
-  },
-  {
-    slug: "cleaning",
-    title: "Cleaning Services",
-    description:
-      "Professional cleaning for homes, offices, and commercial spaces. We deliver spotless results with attention to detail and environmentally conscious practices.",
-    features: [
-      "Deep cleaning",
-      "Move-in / move-out cleaning",
-      "Office & commercial cleaning",
-      "Recurring maintenance cleaning",
-      "Post-construction cleanup",
-    ],
-    icon: (
-      <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
-  },
-  {
     slug: "custom-solutions",
     title: "Custom Solutions",
     description:
-      "Have a project that doesn't fit neatly into one category? That's our specialty. We bring the same professionalism and problem-solving to any challenge you throw our way.",
+      "Unique projects, property management, renovation coordination, vendor management, and emergency services. We tackle what others won't.",
     features: [
       "Property management",
       "Renovation coordination",
@@ -129,12 +129,13 @@ export default function ServicesPage() {
             Our Services
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Everything You Need. <span className="text-gold">One Company.</span>
+            Real Estate. Development.{" "}
+            <span className="text-gold">Full Service.</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            MaxLife Enterprise offers a comprehensive suite of professional
-            services. Each one is backed by real expertise and a commitment to
-            getting it done right.
+            From NNN investment properties and land development to residential
+            brokerage and property services — MaxLife Enterprise delivers
+            results across the full spectrum of real estate.
           </p>
         </div>
       </section>

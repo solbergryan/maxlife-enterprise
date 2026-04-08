@@ -5,7 +5,7 @@ const services = [
   {
     title: "Commercial Real Estate",
     description:
-      "Expert brokerage for office, retail, industrial, and investment properties. From acquisitions to dispositions, we close deals.",
+      "Full-service brokerage for office, retail, industrial, and NNN investment properties. Acquisitions, dispositions, and lease negotiations.",
     icon: (
       <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -13,9 +13,29 @@ const services = [
     ),
   },
   {
+    title: "NNN Investments",
+    description:
+      "Passive income through triple net lease properties. National credit tenants, long-term leases, and predictable cash flow.",
+    icon: (
+      <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Land Development",
+    description:
+      "Raw land acquisitions, entitlements, zoning, site planning, and development consulting across Central Florida.",
+    icon: (
+      <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+      </svg>
+    ),
+  },
+  {
     title: "Residential Real Estate",
     description:
-      "Buying, selling, or investing in homes. Personalized service that makes the process smooth from listing to closing.",
+      "Buying, selling, or investing in homes. Personalized service from listing to closing across Orlando and Melbourne.",
     icon: (
       <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -23,9 +43,9 @@ const services = [
     ),
   },
   {
-    title: "Handyman Services",
+    title: "Property Services",
     description:
-      "Reliable repairs, installations, and maintenance. No job too small — plumbing, electrical, drywall, and everything in between.",
+      "Maintenance, cleaning, and engineering for investors and property owners. One call for repairs, cleans, and technical work.",
     icon: (
       <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -34,29 +54,9 @@ const services = [
     ),
   },
   {
-    title: "Engineering",
-    description:
-      "Technical problem-solving and project management. Structural assessments, system design, and hands-on engineering expertise.",
-    icon: (
-      <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Cleaning Services",
-    description:
-      "Professional cleaning for residential and commercial properties. Deep cleans, move-in/out, and recurring maintenance.",
-    icon: (
-      <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
-  },
-  {
     title: "Custom Solutions",
     description:
-      "Have a unique project? We tackle challenges others won't. Tell us what you need and we'll make it happen.",
+      "Unique projects, property management, renovation coordination, and emergency services. We tackle what others won't.",
     icon: (
       <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
@@ -88,9 +88,9 @@ export default function Home() {
               <span className="text-gold">Every Solution.</span>
             </h1>
             <p className="text-gray-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-2xl">
-              From commercial real estate deals to home repairs, engineering
-              challenges to spotless cleans — MaxLife Enterprise delivers
-              professional results across every service line.
+              Commercial real estate brokerage, NNN investment properties, land
+              development, and full-service property solutions. MaxLife
+              Enterprise delivers results across Central Florida.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

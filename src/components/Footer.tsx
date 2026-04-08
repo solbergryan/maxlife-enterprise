@@ -11,9 +11,13 @@ export default function Footer() {
               <span className="text-gold font-bold text-xl">MaxLife</span>
               <span className="text-white font-light text-xl">Enterprise</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              One Call. Every Solution. Professional services spanning real
-              estate, engineering, handyman work, cleaning, and more.
+            <p className="text-gray-400 text-sm leading-relaxed mb-3">
+              Commercial real estate brokerage, NNN investments, land
+              development, and full-service property solutions in Central
+              Florida.
+            </p>
+            <p className="text-gray-500 text-xs">
+              FL Real Estate Broker License #3354351
             </p>
           </div>
 
@@ -22,9 +26,11 @@ export default function Footer() {
             <h3 className="text-gold font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                { href: "/", label: "Home" },
                 { href: "/services", label: "Services" },
-                { href: "/about", label: "About" },
+                { href: "/services/nnn-investments", label: "NNN Investments" },
+                { href: "/services/land-development", label: "Land Development" },
+                { href: "/portfolio", label: "Portfolio" },
+                { href: "/blog", label: "Market Insights" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>

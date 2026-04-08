@@ -12,7 +12,7 @@ export default function CommercialRealEstatePage() {
     <ServicePageLayout
       title="Commercial Real Estate Brokerage"
       subtitle="Real Estate Services"
-      description="Full-service commercial real estate representation for buyers, sellers, landlords, and tenants across the Orlando and Melbourne metro areas. We handle office spaces, retail locations, industrial properties, and investment opportunities with a results-driven approach."
+      description="Full-service commercial real estate representation for buyers, sellers, landlords, and tenants across the Orlando and Melbourne metro areas. We specialize in NNN investment properties, office, retail, and industrial spaces — delivering results-driven brokerage with deep Central Florida market knowledge."
       icon={
         <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
