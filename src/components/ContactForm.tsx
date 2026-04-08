@@ -11,9 +11,22 @@ export default function ContactForm() {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [honeypot, setHoneypot] = useState("");
+  const [lastSubmit, setLastSubmit] = useState(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Honeypot check — bots fill hidden fields
+    if (honeypot) return;
+
+    // Rate limit — 30 seconds between submissions
+    const now = Date.now();
+    if (now - lastSubmit < 30000) {
+      setStatus("error");
+      return;
+    }
+    setLastSubmit(now);
     setStatus("sending");
 
     try {
@@ -27,6 +40,7 @@ export default function ContactForm() {
           service: formData.service,
           message: formData.message,
           _subject: `MaxLife Development Inquiry - ${formData.service || "General"}`,
+          _gotcha: honeypot,
         }),
       });
 
@@ -150,6 +164,17 @@ export default function ContactForm() {
           placeholder="Tell us about your project or how we can help..."
         />
       </div>
+
+      {/* Honeypot — hidden from humans, bots fill it */}
+      <input
+        type="text"
+        name="_gotcha"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        style={{ display: "none" }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
 
       <button
         type="submit"
