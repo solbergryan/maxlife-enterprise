@@ -85,13 +85,24 @@ export default function ListingMap({ listings }: ListingMapProps) {
         zoomControl: true,
       });
 
+      // Satellite imagery from Esri
       L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
         {
           attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            '&copy; Esri, Maxar, Earthstar Geographics',
           maxZoom: 19,
         }
+      ).addTo(map);
+
+      // Road/label overlay on top of satellite
+      L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}",
+        { maxZoom: 19, pane: "overlayPane" }
+      ).addTo(map);
+      L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+        { maxZoom: 19, pane: "overlayPane" }
       ).addTo(map);
 
       // @ts-expect-error - markerClusterGroup is added by the plugin
@@ -162,7 +173,7 @@ export default function ListingMap({ listings }: ListingMapProps) {
   return (
     <div className="relative">
       {/* Legend */}
-      <div className="absolute top-3 right-3 z-[1000] bg-dark-card/90 backdrop-blur-sm border border-dark-border rounded-lg p-3">
+      <div className="absolute top-3 right-3 z-[1000] bg-dark-card/95 backdrop-blur-md border border-dark-border rounded-lg p-3 shadow-lg">
         <p className="text-xs text-gray-400 font-medium mb-2">Property Types</p>
         <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
           {Object.entries(TYPE_COLORS).map(([type, color]) => (
