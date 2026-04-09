@@ -26,6 +26,8 @@ export interface Listing {
   listingBroker?: string;
   listingBrokerage?: string;
   featured?: boolean;
+  lat?: number | null;
+  lng?: number | null;
 }
 
 export const listings: Listing[] = listingsData as Listing[];
