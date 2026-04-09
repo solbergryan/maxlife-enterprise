@@ -172,6 +172,33 @@ function TrafficLight({ status }: { status: "pass" | "watch" | "fail" }) {
   );
 }
 
+// ── Input Field Component (must be outside main component to preserve focus) ──
+const INPUT_CLASS = "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors text-sm";
+const LABEL_CLASS = "text-gray-400 text-xs uppercase tracking-wider mb-1 block";
+
+function InputField({ label, value, onChange, placeholder, step, prefix, suffix }: {
+  label: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string; step?: string; prefix?: string; suffix?: string;
+}) {
+  return (
+    <div>
+      <label className={LABEL_CLASS}>{label}</label>
+      <div className="relative">
+        {prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">{prefix}</span>}
+        <input
+          type="number"
+          step={step || "any"}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          className={`${INPUT_CLASS} ${prefix ? "pl-7" : ""} ${suffix ? "pr-8" : ""}`}
+        />
+        {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">{suffix}</span>}
+      </div>
+    </div>
+  );
+}
+
 // ── Main Component ─────────────────────────────────────────────────
 export default function DealAnalyzer() {
   const [inputs, setInputs] = useState<Inputs>(DEFAULT_INPUTS);
@@ -342,31 +369,7 @@ export default function DealAnalyzer() {
     return { exitCaps, growths, grid };
   }, [analysis]);
 
-  // ── Input component ──────────────────────────────────────────────
-  const inputClass = "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors text-sm";
-  const labelClass = "text-gray-400 text-xs uppercase tracking-wider mb-1 block";
-
-  function InputField({ label, field, placeholder, step, prefix, suffix }: {
-    label: string; field: keyof Inputs; placeholder?: string; step?: string; prefix?: string; suffix?: string;
-  }) {
-    return (
-      <div>
-        <label className={labelClass}>{label}</label>
-        <div className="relative">
-          {prefix && <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">{prefix}</span>}
-          <input
-            type="number"
-            step={step || "any"}
-            placeholder={placeholder}
-            value={inputs[field]}
-            onChange={set(field)}
-            className={`${inputClass} ${prefix ? "pl-7" : ""} ${suffix ? "pr-8" : ""}`}
-          />
-          {suffix && <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">{suffix}</span>}
-        </div>
-      </div>
-    );
-  }
+  // ── Input helpers ─────────────────────────────────────────────────
 
   return (
     <div className="space-y-8">
@@ -400,20 +403,20 @@ export default function DealAnalyzer() {
         <div className="bg-dark-card border border-dark-border rounded-xl p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Property &amp; Revenue</h3>
           <div className="space-y-4">
-            <InputField label="Purchase Price" field="purchasePrice" placeholder="1,000,000" prefix="$" />
-            <InputField label="Building SF" field="buildingSF" placeholder="7,000" />
+            <InputField label="Purchase Price" value={inputs.purchasePrice} onChange={set("purchasePrice")} placeholder="1,000,000" prefix="$" />
+            <InputField label="Building SF" value={inputs.buildingSF} onChange={set("buildingSF")} placeholder="7,000" />
             {inputs.assetType === "NNN" ? (
-              <InputField label="Annual Rent (NNN)" field="annualRent" placeholder="60,000" prefix="$" />
+              <InputField label="Annual Rent (NNN)" value={inputs.annualRent} onChange={set("annualRent")} placeholder="60,000" prefix="$" />
             ) : (
               <>
                 {inputs.assetType === "Multifamily" && (
-                  <InputField label="Number of Units" field="units" placeholder="10" />
+                  <InputField label="Number of Units" value={inputs.units} onChange={set("units")} placeholder="10" />
                 )}
-                <InputField label="Monthly Rent / Unit" field="monthlyRentPerUnit" placeholder="1,500" prefix="$" />
+                <InputField label="Monthly Rent / Unit" value={inputs.monthlyRentPerUnit} onChange={set("monthlyRentPerUnit")} placeholder="1,500" prefix="$" />
               </>
             )}
-            <InputField label="Annual Rent Growth" field="rentGrowth" placeholder="2.0" suffix="%" />
-            <InputField label="Vacancy Rate" field="vacancyRate" placeholder={inputs.assetType === "NNN" ? "0" : "5"} suffix="%" />
+            <InputField label="Annual Rent Growth" value={inputs.rentGrowth} onChange={set("rentGrowth")} placeholder="2.0" suffix="%" />
+            <InputField label="Vacancy Rate" value={inputs.vacancyRate} onChange={set("vacancyRate")} placeholder={inputs.assetType === "NNN" ? "0" : "5"} suffix="%" />
           </div>
         </div>
 
@@ -423,17 +426,17 @@ export default function DealAnalyzer() {
             <h3 className="text-white text-lg font-semibold mb-4">Operating Expenses</h3>
             <div className="space-y-4">
               <div>
-                <label className={labelClass}>Expense Method</label>
+                <label className={LABEL_CLASS}>Expense Method</label>
                 <p className="text-gray-500 text-xs mb-3">Enter an expense ratio OR individual line items below</p>
               </div>
-              <InputField label="Expense Ratio (% of EGI)" field="opexRatio" placeholder="40" suffix="%" />
+              <InputField label="Expense Ratio (% of EGI)" value={inputs.opexRatio} onChange={set("opexRatio")} placeholder="40" suffix="%" />
               <div className="border-t border-dark-border pt-3 mt-3">
                 <p className="text-gray-500 text-xs mb-3 uppercase tracking-wider">Or Line Items</p>
               </div>
-              <InputField label="Property Taxes" field="propertyTaxes" placeholder="4,800" prefix="$" />
-              <InputField label="Insurance" field="insurance" placeholder="1,800" prefix="$" />
-              <InputField label="Repairs & Maintenance" field="repairs" placeholder="2,400" prefix="$" />
-              <InputField label="Management Fee" field="mgmtPct" placeholder="8" suffix="%" />
+              <InputField label="Property Taxes" value={inputs.propertyTaxes} onChange={set("propertyTaxes")} placeholder="4,800" prefix="$" />
+              <InputField label="Insurance" value={inputs.insurance} onChange={set("insurance")} placeholder="1,800" prefix="$" />
+              <InputField label="Repairs & Maintenance" value={inputs.repairs} onChange={set("repairs")} placeholder="2,400" prefix="$" />
+              <InputField label="Management Fee" value={inputs.mgmtPct} onChange={set("mgmtPct")} placeholder="8" suffix="%" />
             </div>
           </div>
         ) : null}
@@ -442,11 +445,11 @@ export default function DealAnalyzer() {
         <div className="bg-dark-card border border-dark-border rounded-xl p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Financing</h3>
           <div className="space-y-4">
-            <InputField label="Down Payment" field="downPaymentPct" placeholder="25" suffix="%" />
-            <InputField label="Interest Rate" field="interestRate" placeholder="6.75" suffix="%" step="0.125" />
-            <InputField label="Amortization" field="amortization" placeholder="30" suffix="yrs" />
-            <InputField label="Closing Costs" field="closingCosts" placeholder="15,000" prefix="$" />
-            <InputField label="Loan Origination Fee" field="loanOrigFee" placeholder="1.0" suffix="%" />
+            <InputField label="Down Payment" value={inputs.downPaymentPct} onChange={set("downPaymentPct")} placeholder="25" suffix="%" />
+            <InputField label="Interest Rate" value={inputs.interestRate} onChange={set("interestRate")} placeholder="6.75" suffix="%" step="0.125" />
+            <InputField label="Amortization" value={inputs.amortization} onChange={set("amortization")} placeholder="30" suffix="yrs" />
+            <InputField label="Closing Costs" value={inputs.closingCosts} onChange={set("closingCosts")} placeholder="15,000" prefix="$" />
+            <InputField label="Loan Origination Fee" value={inputs.loanOrigFee} onChange={set("loanOrigFee")} placeholder="1.0" suffix="%" />
           </div>
         </div>
 
@@ -454,11 +457,11 @@ export default function DealAnalyzer() {
         <div className="bg-dark-card border border-dark-border rounded-xl p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Hold Period &amp; Exit</h3>
           <div className="space-y-4">
-            <InputField label="Hold Period" field="holdPeriod" placeholder="10" suffix="yrs" />
+            <InputField label="Hold Period" value={inputs.holdPeriod} onChange={set("holdPeriod")} placeholder="10" suffix="yrs" />
 
             {/* Exit Cap Spread — improved UX */}
             <div>
-              <label className={labelClass}>Exit Market Outlook</label>
+              <label className={LABEL_CLASS}>Exit Market Outlook</label>
               <p className="text-gray-500 text-xs mb-3">
                 When you sell, will the market be hotter, the same, or cooler than today?
                 This determines your exit cap rate and sale price.
@@ -495,7 +498,7 @@ export default function DealAnalyzer() {
                     placeholder="0.50"
                     value={inputs.exitCapSpread}
                     onChange={set("exitCapSpread")}
-                    className={`${inputClass} pr-8`}
+                    className={`${INPUT_CLASS} pr-8`}
                   />
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">%</span>
                 </div>
