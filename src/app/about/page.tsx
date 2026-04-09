@@ -11,13 +11,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://maxlifeenterprise.com",
+      item: "https://maxlifedevelopment.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "About",
-      item: "https://maxlifeenterprise.com/about",
+      item: "https://maxlifedevelopment.com/about",
     },
   ],
 };

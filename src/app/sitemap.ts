@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { markets } from "@/data/markets";
 import { deals } from "@/data/deals";
 
-const BASE_URL = "https://maxlifeenterprise.com";
+const BASE_URL = "https://maxlifedevelopment.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

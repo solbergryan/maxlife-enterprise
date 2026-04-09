@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://maxlifeenterprise.com/sitemap.xml",
+    sitemap: "https://maxlifedevelopment.com/sitemap.xml",
   };
 }

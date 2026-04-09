@@ -8,7 +8,7 @@ import JsonLd from "@/components/JsonLd";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://maxlifeenterprise.com"),
+  metadataBase: new URL("https://maxlifedevelopment.com"),
   title: {
     template: "%s | MaxLife Enterprise",
     default:
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "commercial development orlando",
     "orlando CRE broker",
   ],
-  authors: [{ name: "Ryan Solberg", url: "https://maxlifeenterprise.com/about" }],
+  authors: [{ name: "Ryan Solberg", url: "https://maxlifedevelopment.com/about" }],
   creator: "MaxLife Enterprise",
   openGraph: {
     type: "website",
@@ -63,8 +63,8 @@ const organizationSchema = {
   "@type": "RealEstateAgent",
   name: "MaxLife Enterprise",
   alternateName: "MaxLife Realty LLC",
-  url: "https://maxlifeenterprise.com",
-  logo: "https://maxlifeenterprise.com/logo.png",
+  url: "https://maxlifedevelopment.com",
+  logo: "https://maxlifedevelopment.com/logo.png",
   description:
     "Commercial real estate brokerage, NNN investments, and development services across Central Florida and the Space Coast.",
   telephone: "(321) 586-2121",
@@ -93,7 +93,7 @@ const organizationSchema = {
     "@type": "Person",
     name: "Ryan Solberg",
     jobTitle: "Broker",
-    url: "https://maxlifeenterprise.com/about",
+    url: "https://maxlifedevelopment.com/about",
   },
   sameAs: ["https://www.linkedin.com/in/ryansolberg"],
   priceRange: "$$$$",
@@ -138,7 +138,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "MaxLife Enterprise",
-  url: "https://maxlifeenterprise.com",
+  url: "https://maxlifedevelopment.com",
 };
 
 export default function RootLayout({
