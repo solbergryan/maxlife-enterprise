@@ -2,9 +2,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Commercial Development Services | Central Florida | MaxLife Enterprise",
+  title: "Commercial Development Services Orlando FL",
   description:
-    "Full-service commercial development consulting in Central Florida. Site selection, land acquisition, highest and best use analysis, entitlements, and investor partnerships.",
+    "Find expert commercial development services in Orlando. Central Florida land development, site selection, entitlements & investor partnerships by MaxLife.",
+  openGraph: {
+    title: "Orlando Commercial Development & Land Development Services",
+    description:
+      "Full-service commercial development consulting in Central Florida. Site selection, land acquisition, entitlements, and investor partnerships.",
+  },
 };
 
 export default function DevelopmentServicesPage() {

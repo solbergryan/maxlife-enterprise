@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Brevard County Investment Property Outlook | MaxLife Enterprise",
@@ -7,9 +8,21 @@ export const metadata: Metadata = {
     "Investment property outlook for Brevard County and Florida's Space Coast. Market trends, growth drivers, and commercial real estate opportunities in Melbourne, Palm Bay, and Titusville.",
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Brevard County Investment Property Outlook",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  datePublished: "2026-04-01",
+  description:
+    "Investment property outlook for Brevard County and Florida's Space Coast. Market trends, growth drivers, and commercial real estate opportunities in Melbourne, Palm Bay, and Titusville.",
+};
+
 export default function BrevardOutlook() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Back link */}
         <Link
@@ -212,6 +225,25 @@ export default function BrevardOutlook() {
               look beyond Orlando and South Florida, the Space Coast is one of
               the most compelling opportunities in the state.
             </p>
+          </section>
+
+          {/* Related Reading */}
+          <section className="mt-12 border-t border-dark-border pt-8">
+            <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/blog/orlando-commercial-real-estate-trends-2026" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Trends 2026</h3>
+                <p className="text-gray-500 text-xs">Comprehensive market analysis covering cap rates, submarkets, and investment strategies across the Orlando metro.</p>
+              </Link>
+              <Link href="/markets/brevard-county-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Brevard County Market Overview</h3>
+                <p className="text-gray-500 text-xs">Detailed market stats, property types, and investment fundamentals for the Space Coast commercial real estate market.</p>
+              </Link>
+              <Link href="/opportunities" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Current Investment Opportunities</h3>
+                <p className="text-gray-500 text-xs">Browse available commercial real estate deals across Central Florida and the Space Coast.</p>
+              </Link>
+            </div>
           </section>
 
           {/* CTA */}

@@ -4,9 +4,14 @@ import { caseStudies } from "@/data/case-studies";
 import CaseStudyCard from "@/components/CaseStudyCard";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Commercial Real Estate Deals | MaxLife Enterprise",
+  title: "Orlando CRE Case Studies & Success Stories",
   description:
-    "Real commercial real estate deal case studies across Central Florida. See how we help investors acquire, reposition, and maximize commercial property value.",
+    "Browse Orlando commercial real estate success stories and Central Florida CRE case studies. See real deal results from acquisitions and NNN investments.",
+  openGraph: {
+    title: "Commercial Real Estate Case Studies | Orlando & Central Florida",
+    description:
+      "Real CRE deal case studies across Central Florida. See how MaxLife Enterprise helps investors acquire and maximize commercial property value.",
+  },
 };
 
 export default function CaseStudiesPage() {

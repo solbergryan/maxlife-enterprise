@@ -4,11 +4,36 @@ import ListingCard from "@/components/ListingCard";
 import ListingGrid from "@/components/ListingGrid";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 import CTABanner from "@/components/CTABanner";
+import JsonLd from "@/components/JsonLd";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://maxlifeenterprise.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Opportunities",
+      item: "https://maxlifeenterprise.com/opportunities",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: "Commercial Real Estate Opportunities | Central Florida | MaxLife Enterprise",
+  title: "Commercial Property for Sale Orlando FL",
   description:
-    "Browse 1,000+ commercial real estate investment opportunities across Central Florida and the Space Coast. NNN, retail, office, industrial, multifamily, and land.",
+    "Browse Orlando commercial real estate listings and central Florida investment properties for sale. Find NNN, retail, office, industrial & multifamily deals.",
+  openGraph: {
+    title: "Orlando Commercial Real Estate Listings | Properties for Sale",
+    description:
+      "Browse 1,000+ commercial properties for sale across Orlando and Central Florida. NNN, retail, office, industrial, and multifamily opportunities.",
+  },
 };
 
 export default function OpportunitiesPage() {
@@ -17,6 +42,7 @@ export default function OpportunitiesPage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

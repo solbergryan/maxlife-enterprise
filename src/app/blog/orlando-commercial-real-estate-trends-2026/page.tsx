@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Orlando Commercial Real Estate Market Trends 2026 | MaxLife Enterprise",
@@ -7,9 +8,21 @@ export const metadata: Metadata = {
     "In-depth analysis of the Orlando commercial real estate market in 2026. Trends, cap rates, investment strategies, and opportunity areas across retail, industrial, multifamily, NNN, tourism corridors, and high-growth submarkets throughout Central Florida.",
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Orlando Commercial Real Estate Market Trends 2026",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  datePublished: "2026-04-01",
+  description:
+    "In-depth analysis of the Orlando commercial real estate market in 2026. Trends, cap rates, investment strategies, and opportunity areas across retail, industrial, multifamily, NNN, tourism corridors, and high-growth submarkets throughout Central Florida.",
+};
+
 export default function OrlandoTrends2026() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Back link */}
         <Link
@@ -1037,6 +1050,25 @@ export default function OrlandoTrends2026() {
               relationships and local knowledge are the competitive advantages
               that separate successful Orlando investors from the rest.
             </p>
+          </section>
+
+          {/* ──────────── RELATED READING ──────────── */}
+          <section className="mt-12 border-t border-dark-border pt-8">
+            <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/blog/orlando-entertainment-district-investment-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Entertainment District Investment Guide</h3>
+                <p className="text-gray-500 text-xs">Deep dive into Disney, Universal, and I-Drive corridor investment opportunities for commercial real estate investors.</p>
+              </Link>
+              <Link href="/blog/brevard-county-investment-property-outlook" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Brevard County Investment Property Outlook</h3>
+                <p className="text-gray-500 text-xs">Why Florida&apos;s Space Coast is emerging as one of the state&apos;s most compelling commercial real estate markets.</p>
+              </Link>
+              <Link href="/markets/orlando-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Market</h3>
+                <p className="text-gray-500 text-xs">Explore investment properties, market stats, and opportunities across Orange County and the Orlando metro.</p>
+              </Link>
+            </div>
           </section>
 
           {/* ──────────── FINAL CTA ──────────── */}

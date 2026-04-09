@@ -3,9 +3,14 @@ import type { Metadata } from "next";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 
 export const metadata: Metadata = {
-  title: "Off-Market Commercial Deals | Central Florida | MaxLife Enterprise",
+  title: "Off-Market Commercial Real Estate Orlando",
   description:
-    "Get exclusive access to off-market commercial real estate deals in Central Florida and the Space Coast. NNN, retail, multifamily, and development opportunities.",
+    "Get access to off-market commercial real estate deals in Orlando and Central Florida. Exclusive NNN, retail & multifamily investment property opportunities.",
+  openGraph: {
+    title: "Off-Market Orlando Investment Property Deals",
+    description:
+      "Join our investor network for exclusive off-market commercial real estate opportunities across Orlando and the Space Coast.",
+  },
 };
 
 export default function InvestorAccessPage() {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title:
@@ -8,9 +9,22 @@ export const metadata: Metadata = {
     "Comprehensive commercial real estate investment guide for Orlando's entertainment and theme park corridor. Covers Epic Universe impact, Disney expansion, I-Drive corridor, hospitality investment, and strategies for the tourism-driven CRE market.",
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline:
+    "Orlando's Entertainment District: A CRE Investment Guide for the Disney, Universal & I-Drive Corridor",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  datePublished: "2026-04-01",
+  description:
+    "Comprehensive commercial real estate investment guide for Orlando's entertainment and theme park corridor. Covers Epic Universe impact, Disney expansion, I-Drive corridor, hospitality investment, and strategies for the tourism-driven CRE market.",
+};
+
 export default function OrlandoEntertainmentDistrictGuide() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Back link */}
         <Link
@@ -986,6 +1000,24 @@ export default function OrlandoEntertainmentDistrictGuide() {
               owners, and can source opportunities before they hit the open
               market. That&apos;s what we do.
             </p>
+          </section>
+          {/* ──────────── RELATED READING ──────────── */}
+          <section className="mt-12 border-t border-dark-border pt-8">
+            <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/blog/orlando-commercial-real-estate-trends-2026" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Trends 2026</h3>
+                <p className="text-gray-500 text-xs">Comprehensive market analysis covering cap rates, submarkets, and investment strategies across the Orlando metro.</p>
+              </Link>
+              <Link href="/opportunities" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Browse Entertainment Corridor Properties</h3>
+                <p className="text-gray-500 text-xs">View current commercial real estate opportunities including NNN, retail, and hospitality assets near Orlando&apos;s theme parks.</p>
+              </Link>
+              <Link href="/markets/orlando-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Market</h3>
+                <p className="text-gray-500 text-xs">Market stats, property types, and investment fundamentals for the Orlando metro and Orange County.</p>
+              </Link>
+            </div>
           </section>
         </div>
       </article>

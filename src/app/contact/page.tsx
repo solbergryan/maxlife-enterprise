@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | MaxLife Enterprise",
+  title: "Contact Orlando Commercial Real Estate Broker",
   description:
-    "Get in touch with MaxLife Enterprise. Request a quote, ask questions, or schedule a consultation.",
+    "Get a free CRE consultation with MaxLife Enterprise. Contact our Orlando commercial real estate broker to discuss investments, acquisitions & development.",
+  openGraph: {
+    title: "Contact MaxLife Enterprise | Orlando CRE Broker",
+    description:
+      "Schedule a consultation with Ryan Solberg. Commercial real estate broker serving Orlando and Central Florida investors.",
+  },
 };
 
 export default function ContactPage() {

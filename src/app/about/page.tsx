@@ -1,16 +1,42 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://maxlifeenterprise.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About",
+      item: "https://maxlifeenterprise.com/about",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: "About Ryan Solberg | MaxLife Enterprise",
+  title: "Orlando Commercial Real Estate Broker | Ryan Solberg",
   description:
-    "Ryan Solberg is a Florida-based Commercial Real Estate Professional specializing in sales, leasing, and investment properties throughout Central Florida and the Space Coast.",
+    "Meet Ryan Solberg, Orlando commercial real estate broker specializing in CRE sales, NNN investments & development across Central Florida and the Space Coast.",
+  openGraph: {
+    title: "Ryan Solberg — Orlando Commercial Real Estate Broker",
+    description:
+      "Central Florida CRE agent specializing in investment properties, NNN deals, and commercial development. Licensed FL broker serving 6 counties.",
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

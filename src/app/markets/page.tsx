@@ -1,16 +1,42 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { markets } from "@/data/markets";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Commercial Real Estate Markets | Central Florida | MaxLife Enterprise",
+  title: "Central Florida Commercial Real Estate Markets",
   description:
-    "Explore commercial real estate markets across Central Florida including Orlando, Brevard County, Lake County, and the broader Central Florida region.",
+    "Discover Orlando real estate market analysis and Central Florida commercial real estate trends. Explore data for Orange, Brevard, Seminole & 6 counties.",
+  openGraph: {
+    title: "Central Florida CRE Market Analysis | Orlando & Space Coast",
+    description:
+      "In-depth commercial real estate market intelligence across Orlando, Brevard County, and Central Florida. Data-driven insights for CRE investors.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://maxlifeenterprise.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Markets",
+      item: "https://maxlifeenterprise.com/markets",
+    },
+  ],
 };
 
 export default function MarketsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

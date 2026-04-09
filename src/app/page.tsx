@@ -255,6 +255,99 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Market Insights */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-2xl font-bold text-white">Market Insights</h2>
+            <p className="text-gray-500 mt-1">
+              Research and analysis for commercial real estate investors
+            </p>
+          </div>
+          <Link
+            href="/blog"
+            className="hidden sm:inline-block text-gold hover:underline text-sm font-medium"
+          >
+            View All Insights &rarr;
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Link
+            href="/blog/orlando-commercial-real-estate-trends-2026"
+            className="group bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+          >
+            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
+              Market Report
+            </span>
+            <h3 className="text-white font-semibold group-hover:text-gold transition-colors mt-3 mb-1">
+              Orlando Commercial Real Estate Trends 2026
+            </h3>
+            <p className="text-gray-500 text-sm">
+              Cap rates, submarkets, investment strategies, and market outlook
+              for Central Florida.
+            </p>
+          </Link>
+          <Link
+            href="/blog/orlando-entertainment-district-investment-guide"
+            className="group bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+          >
+            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
+              Investment Guide
+            </span>
+            <h3 className="text-white font-semibold group-hover:text-gold transition-colors mt-3 mb-1">
+              Entertainment District Investment Guide
+            </h3>
+            <p className="text-gray-500 text-sm">
+              Disney, Universal, and I-Drive corridor CRE investment
+              opportunities.
+            </p>
+          </Link>
+          <Link
+            href="/blog/brevard-county-investment-property-outlook"
+            className="group bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+          >
+            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
+              Market Report
+            </span>
+            <h3 className="text-white font-semibold group-hover:text-gold transition-colors mt-3 mb-1">
+              Brevard County Investment Outlook
+            </h3>
+            <p className="text-gray-500 text-sm">
+              Space Coast growth drivers and commercial real estate
+              opportunities.
+            </p>
+          </Link>
+        </div>
+        <div className="sm:hidden mt-6 text-center">
+          <Link href="/blog" className="text-gold hover:underline text-sm font-medium">
+            View All Insights &rarr;
+          </Link>
+        </div>
+      </section>
+
+      {/* About & Trust */}
+      <section className="bg-dark-card/50 border-y border-dark-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Local Expertise. Investor-First Approach.
+            </h2>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              MaxLife Enterprise specializes in commercial real estate across
+              Central Florida and the Space Coast. We combine deep local market
+              knowledge with disciplined underwriting to help investors find,
+              acquire, and maximize high-performing assets.
+            </p>
+            <Link
+              href="/about"
+              className="inline-block border border-gold/30 text-gold hover:bg-gold/10 font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              Learn About Our Team
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="bg-dark-card/50 border-t border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">

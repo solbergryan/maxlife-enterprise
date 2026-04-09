@@ -126,6 +126,59 @@ export default function MarketPageLayout({ market }: { market: Market }) {
         </div>
       </section>
 
+      {/* Market Insights */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-2xl font-bold text-white mb-2">
+          Market Insights
+        </h2>
+        <p className="text-gray-500 mb-6">
+          Research and analysis for commercial real estate investors
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Link
+            href="/blog/orlando-commercial-real-estate-trends-2026"
+            className="group bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors"
+          >
+            <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+              Orlando Commercial Real Estate Trends 2026
+            </h3>
+            <p className="text-gray-500 text-xs">
+              Cap rates, submarkets, and investment strategies across the Orlando metro.
+            </p>
+          </Link>
+          <Link
+            href="/blog/orlando-entertainment-district-investment-guide"
+            className="group bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors"
+          >
+            <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+              Entertainment District Investment Guide
+            </h3>
+            <p className="text-gray-500 text-xs">
+              Disney, Universal, and I-Drive corridor opportunities for CRE investors.
+            </p>
+          </Link>
+          <Link
+            href="/blog/brevard-county-investment-property-outlook"
+            className="group bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors"
+          >
+            <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+              Brevard County Investment Outlook
+            </h3>
+            <p className="text-gray-500 text-xs">
+              Space Coast growth drivers and commercial real estate opportunity areas.
+            </p>
+          </Link>
+        </div>
+        <div className="mt-4 text-center">
+          <Link
+            href="/blog"
+            className="text-gold hover:underline text-sm font-medium"
+          >
+            View All Insights &rarr;
+          </Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-dark-card/50 border-t border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">

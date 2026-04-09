@@ -5,9 +5,14 @@ import { getSoldDeals } from "@/data/deals";
 import DealCard from "@/components/DealCard";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Closed Deals | MaxLife Enterprise",
+  title: "Orlando Commercial Real Estate Portfolio",
   description:
-    "Featured deals and closed transactions by MaxLife Enterprise. NNN properties, land deals, and commercial real estate in Central Florida.",
+    "Browse our Central Florida CRE transaction portfolio. Featured closed deals including NNN properties, land acquisitions & commercial real estate investments.",
+  openGraph: {
+    title: "Closed CRE Deals | Orlando & Central Florida Portfolio",
+    description:
+      "Featured commercial real estate transactions by MaxLife Enterprise. NNN properties, land deals, and investment properties across Central Florida.",
+  },
 };
 
 const featuredDeal = {

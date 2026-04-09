@@ -1,10 +1,35 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Market Insights | MaxLife Enterprise",
+  title: "Orlando Commercial Real Estate Market Insights",
   description:
-    "Market insights, investment guides, and real estate analysis from MaxLife Enterprise. NNN investing, land development, and Central Florida market trends.",
+    "Discover Orlando commercial real estate market insights and Central Florida CRE news. Guides on NNN investing, cap rates, land development & market trends.",
+  openGraph: {
+    title: "Central Florida CRE Blog | Market Insights & Investment Guides",
+    description:
+      "Market analysis, investment guides, and expert perspectives on Orlando commercial real estate, NNN investing, and Central Florida development trends.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://maxlifeenterprise.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Market Insights",
+      item: "https://maxlifeenterprise.com/blog",
+    },
+  ],
 };
 
 const articles = [
@@ -61,6 +86,7 @@ const articles = [
 export default function BlogPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

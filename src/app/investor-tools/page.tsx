@@ -3,9 +3,14 @@ import type { Metadata } from "next";
 import ROICalculator from "@/components/ROICalculator";
 
 export const metadata: Metadata = {
-  title: "Investor Tools | ROI Calculator | Cap Rate Guide | MaxLife Enterprise",
+  title: "CRE ROI Calculator & Cap Rate Guide Orlando",
   description:
-    "Free commercial real estate investor tools. ROI calculator, cap rate explainer, and deal evaluation guide for Central Florida investment properties.",
+    "Free commercial real estate ROI calculator and cap rate guide for Orlando investors. Evaluate deals, compare returns & analyze Central Florida properties.",
+  openGraph: {
+    title: "Commercial Real Estate ROI Calculator | Orlando Cap Rate Guide",
+    description:
+      "Free CRE investor tools: ROI calculator, cap rate explainer, and deal evaluation checklist for Central Florida investment properties.",
+  },
 };
 
 export default function InvestorToolsPage() {
