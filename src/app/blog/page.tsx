@@ -12,10 +12,22 @@ const articles = [
     slug: "orlando-commercial-real-estate-trends-2026",
     title: "Orlando Commercial Real Estate Market Trends 2026",
     excerpt:
-      "Key trends, investment opportunities, and market outlook for commercial real estate investors in the Orlando metro area heading into 2026.",
+      "Comprehensive analysis of the Orlando CRE market — cap rates, sector outlooks, the Disney & Universal entertainment corridor, Lake Nona, infrastructure, migration trends, and investment strategies for 2026.",
     category: "Market Report",
     date: "April 2026",
-    readTime: "8 min read",
+    readTime: "15 min read",
+    featured: true,
+  },
+  {
+    slug: "orlando-entertainment-district-investment-guide",
+    title:
+      "Orlando's Entertainment District: A CRE Investment Guide for the Disney, Universal & I-Drive Corridor",
+    excerpt:
+      "The definitive guide to investing in Orlando's tourism and entertainment corridor. Epic Universe, Walt Disney World expansion, I-Drive, US-192, hospitality, and retail investment strategies.",
+    category: "Market Report",
+    date: "April 2026",
+    readTime: "12 min read",
+    featured: true,
   },
   {
     slug: "brevard-county-investment-property-outlook",
