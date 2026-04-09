@@ -1,16 +1,37 @@
-import { Listing, formatPrice } from "@/data/listings";
+import { Listing, formatPrice, getListingImage } from "@/data/listings";
+import Image from "next/image";
 
 export default function ListingCard({ listing }: { listing: Listing }) {
+  const imageUrl = getListingImage(listing.crexiUrl);
+
   return (
-    <div className="bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors">
-      {/* Header */}
-      <div className="px-5 pt-5 flex items-center justify-between">
-        <span className="text-xs font-medium px-2.5 py-1 rounded-full border bg-green-500/20 text-green-400 border-green-500/30">
-          {listing.status}
-        </span>
-        <span className="text-xs text-gray-500 uppercase tracking-wider">
-          {listing.type}
-        </span>
+    <div className="bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors group">
+      {/* Image */}
+      <div className="relative h-44 bg-dark-surface overflow-hidden">
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            alt={listing.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-dark-surface">
+            <svg className="w-12 h-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 7.5h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+        )}
+        {/* Status & Type overlay */}
+        <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+          <span className="text-xs font-medium px-2.5 py-1 rounded-full border bg-green-500/20 text-green-400 border-green-500/30 backdrop-blur-sm">
+            {listing.status}
+          </span>
+          <span className="text-xs text-white/80 uppercase tracking-wider bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full">
+            {listing.type}
+          </span>
+        </div>
       </div>
 
       {/* Content */}

@@ -30,6 +30,16 @@ export interface Listing {
 
 export const listings: Listing[] = listingsData as Listing[];
 
+export function getPropertyId(crexiUrl: string): string | null {
+  const m = crexiUrl.match(/\/properties\/(\d+)\//);
+  return m ? m[1] : null;
+}
+
+export function getListingImage(crexiUrl: string): string | null {
+  const id = getPropertyId(crexiUrl);
+  return id ? `/listings/${id}.jpg` : null;
+}
+
 export function formatPrice(price: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
