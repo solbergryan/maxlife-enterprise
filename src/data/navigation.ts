@@ -17,6 +17,7 @@ export const mainNav: NavLink[] = [
       { label: "Central Florida", href: "/markets/central-florida-investment-properties" },
     ],
   },
+  { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "Services", href: "/services" },
   { label: "Insights", href: "/blog" },
   { label: "About", href: "/about" },
@@ -25,6 +26,7 @@ export const mainNav: NavLink[] = [
 export const footerInvestorLinks: NavLink[] = [
   { label: "Current Opportunities", href: "/opportunities" },
   { label: "Off-Market Access", href: "/investor-access" },
+  { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "Investor Tools", href: "/investor-tools" },
   { label: "Case Studies", href: "/case-studies" },
 ];
