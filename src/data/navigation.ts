@@ -18,6 +18,7 @@ export const mainNav: NavLink[] = [
     ],
   },
   { label: "Deal Analyzer", href: "/deal-analyzer" },
+  { label: "Net Sheets", href: "/net-sheets" },
   { label: "Services", href: "/services" },
   { label: "Insights", href: "/blog" },
   { label: "About", href: "/about" },
@@ -29,6 +30,7 @@ export const footerInvestorLinks: NavLink[] = [
   { label: "1031 Exchange", href: "/1031-exchange-florida" },
   { label: "NNN Properties", href: "/nnn-properties-florida" },
   { label: "Deal Analyzer", href: "/deal-analyzer" },
+  { label: "Net Sheet Calculator", href: "/net-sheets" },
   { label: "Land for Development", href: "/central-florida-land-for-development" },
 ];
 

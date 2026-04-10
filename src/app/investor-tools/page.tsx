@@ -190,12 +190,18 @@ export default function InvestorToolsPage() {
             We provide detailed underwriting and investment analysis for
             commercial properties across Central Florida.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <Link
               href="/contact"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               Request Property Analysis
+            </Link>
+            <Link
+              href="/net-sheets"
+              className="inline-block border border-gold/30 text-gold hover:bg-gold/10 font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              Net Sheet Calculator
             </Link>
             <Link
               href="/opportunities"
