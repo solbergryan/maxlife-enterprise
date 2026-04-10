@@ -3,20 +3,26 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Orlando Commercial Real Estate Market Trends 2026 | MaxLife Enterprise",
+  title: "Orlando Commercial Real Estate Market Report 2026 | MaxLife Enterprise",
   description:
-    "In-depth analysis of the Orlando commercial real estate market in 2026. Trends, cap rates, investment strategies, and opportunity areas across retail, industrial, multifamily, NNN, tourism corridors, and high-growth submarkets throughout Central Florida.",
+    "Orlando commercial real estate market report for 2026 — cap rates, submarkets, office, retail, industrial, multifamily, NNN, tourism corridors, and investment strategies across Central Florida.",
+  alternates: { canonical: "/blog/orlando-commercial-real-estate-trends-2026" },
 };
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Orlando Commercial Real Estate Market Trends 2026",
+  headline: "Orlando Commercial Real Estate Market Report 2026",
   author: { "@type": "Person", name: "Ryan Solberg" },
   publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
   datePublished: "2026-04-01",
+  dateModified: "2026-04-10",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://maxlifedevelopment.com/blog/orlando-commercial-real-estate-trends-2026",
+  },
   description:
-    "In-depth analysis of the Orlando commercial real estate market in 2026. Trends, cap rates, investment strategies, and opportunity areas across retail, industrial, multifamily, NNN, tourism corridors, and high-growth submarkets throughout Central Florida.",
+    "Orlando commercial real estate market report for 2026 — cap rates, submarkets, office, retail, industrial, multifamily, NNN, tourism corridors, and investment strategies across Central Florida.",
 };
 
 export default function OrlandoTrends2026() {
@@ -1056,13 +1062,25 @@ export default function OrlandoTrends2026() {
           <section className="mt-12 border-t border-dark-border pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/office-space-for-lease-orlando" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Office Space for Lease in Orlando</h3>
+                <p className="text-gray-500 text-xs">Class A, B, and flex office space across Downtown, Lake Nona, Maitland, Winter Park, and Sand Lake.</p>
+              </Link>
+              <Link href="/retail-space-for-rent-orlando" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Retail Space for Rent in Orlando</h3>
+                <p className="text-gray-500 text-xs">Endcap, inline, and anchored retail space across I-Drive, Sand Lake, Winter Park, and Lake Nona.</p>
+              </Link>
+              <Link href="/industrial-property-central-florida" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Industrial Property for Sale in Central Florida</h3>
+                <p className="text-gray-500 text-xs">Warehouse, flex, distribution, and manufacturing across the I-4 corridor and Space Coast.</p>
+              </Link>
+              <Link href="/build-to-suit-orlando" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Build-to-Suit Development in Orlando</h3>
+                <p className="text-gray-500 text-xs">Site selection, entitlements, and turnkey construction for retail, QSR, medical, and industrial users.</p>
+              </Link>
               <Link href="/blog/orlando-entertainment-district-investment-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Entertainment District Investment Guide</h3>
                 <p className="text-gray-500 text-xs">Deep dive into Disney, Universal, and I-Drive corridor investment opportunities for commercial real estate investors.</p>
-              </Link>
-              <Link href="/blog/brevard-county-investment-property-outlook" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
-                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Brevard County Investment Property Outlook</h3>
-                <p className="text-gray-500 text-xs">Why Florida&apos;s Space Coast is emerging as one of the state&apos;s most compelling commercial real estate markets.</p>
               </Link>
               <Link href="/markets/orlando-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Market</h3>

@@ -1,15 +1,42 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "How to Buy Commercial Property in Orlando | MaxLife",
+  title: "How to Buy Commercial Property in Orlando: Complete Guide | MaxLife",
   description:
-    "Step-by-step guide to buying commercial property in Orlando. Due diligence, financing, market selection, and closing process for CRE investors.",
+    "Complete guide to buying commercial property for sale in Orlando. Market selection, underwriting, due diligence, financing, and closing for Central Florida CRE investors.",
+  alternates: { canonical: "/blog/how-to-buy-commercial-property-orlando" },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Buy Commercial Property in Orlando: A Complete Guide",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: {
+    "@type": "Organization",
+    name: "MaxLife Enterprise",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://maxlifedevelopment.com/logo.png",
+    },
+  },
+  datePublished: "2026-04-02",
+  dateModified: "2026-04-10",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id":
+      "https://maxlifedevelopment.com/blog/how-to-buy-commercial-property-orlando",
+  },
+  description:
+    "Complete guide to buying commercial property for sale in Orlando. Market selection, underwriting, due diligence, financing, and closing for Central Florida CRE investors.",
 };
 
 export default function HowToBuyCommercialPropertyOrlando() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -30,12 +57,12 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <span className="text-gray-500 text-xs">18 min read</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            How to Buy Commercial Property in Orlando
+            How to Buy Commercial Property in Orlando: A Complete Guide
           </h1>
           <p className="text-gray-400 text-lg">
-            A step-by-step guide for investors navigating the Orlando commercial
-            real estate market -- from defining your criteria to closing and
-            managing your new asset.
+            A step-by-step guide to finding commercial property for sale in
+            Orlando — from defining your criteria and sourcing deals through
+            due diligence, financing, closing, and post-close asset management.
           </p>
         </div>
       </section>
@@ -539,6 +566,61 @@ export default function HowToBuyCommercialPropertyOrlando() {
               <li><strong className="text-white">Post-Closing:</strong> Tenant introductions, property management transition, business plan execution</li>
             </ul>
           </div>
+
+          {/* Related Reading */}
+          <section className="mt-12 border-t border-dark-border pt-8">
+            <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link
+                href="/orlando-commercial-real-estate-deals"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Off-Market Commercial Deals in Orlando
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Get access to investment-grade commercial property for sale
+                  in Orlando before it hits the public market.
+                </p>
+              </Link>
+              <Link
+                href="/nnn-properties-florida"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  NNN Properties in Florida
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Single-tenant triple-net investment properties across Orlando
+                  and Central Florida.
+                </p>
+              </Link>
+              <Link
+                href="/industrial-property-central-florida"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Industrial Property for Sale in Central Florida
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Warehouse, flex, distribution, and manufacturing buildings
+                  across the I-4 corridor and Space Coast.
+                </p>
+              </Link>
+              <Link
+                href="/1031-exchange-florida"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  1031 Exchange Replacement Properties
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Qualified 1031 exchange replacement properties across Orlando
+                  and Central Florida.
+                </p>
+              </Link>
+            </div>
+          </section>
 
           {/* CTA */}
           <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
