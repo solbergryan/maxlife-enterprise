@@ -3,13 +3,13 @@ import Link from "next/link";
 import SellerNetSheet from "@/components/SellerNetSheet";
 
 export const metadata: Metadata = {
-  title: "Seller Net Sheet Calculator Florida | Net Proceeds Estimate | MaxLife Realty",
+  title: "Orlando Seller Net Sheet Calculator | Orange, Brevard, Lake & More | MaxLife Realty",
   description:
-    "Free Seller Net Sheet calculator for Florida / Brevard County. Estimate commission, title fees, doc stamps, and mortgage payoff. Download a branded PDF.",
+    "Free Seller Net Sheet for Orlando / Orange County (default) plus Brevard, Lake, Seminole, Osceola, Volusia, and Polk. Estimate commission, title fees, doc stamps, and mortgage payoff. Branded PDF export.",
   openGraph: {
-    title: "Florida Seller Net Sheet Calculator | MaxLife Realty",
+    title: "Florida Seller Net Sheet Calculator — Multi-County | MaxLife Realty",
     description:
-      "Instant net proceeds estimate with Florida promulgated title rates, doc stamps, and reissue rate toggle. Branded PDF export included.",
+      "Instant net proceeds estimate with Florida promulgated title rates, doc stamps, and per-county defaults. Branded PDF export included.",
   },
 };
 
@@ -28,8 +28,10 @@ export default function SellerNetSheetPage() {
             Seller <span className="text-gold">Net Sheet</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            Estimate your net proceeds at closing with Florida / Brevard County
-            rates. Generate a branded PDF for your clients in one click.
+            Estimate net proceeds at closing with Florida rates for any
+            supported county — Orange (Orlando, default), Brevard, Lake,
+            Seminole, Osceola, Volusia, or Polk. Generate a branded PDF in one
+            click.
           </p>
         </div>
       </section>
@@ -61,8 +63,11 @@ export default function SellerNetSheetPage() {
               <p>
                 Documentary stamp tax on the deed is charged at $0.70 per $100
                 of the sales price (paid by the seller in most Florida
-                counties). Brevard County default line items for closing fee,
-                lien search, and estoppel fee are pre-filled.
+                counties). Use the <span className="text-gold">County</span> selector
+                at the top of the form to switch between Orange, Brevard,
+                Lake, Seminole, Osceola, Volusia, or Polk — each county
+                pre-fills its own effective property tax rate, closing fee,
+                and lien search defaults.
               </p>
               <p className="text-xs text-gray-500 pt-2">
                 All figures are estimates. Actual closing costs vary based on

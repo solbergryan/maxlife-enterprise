@@ -55,6 +55,136 @@ export const PAID_BY_OPTIONS = [
 export type PaidBy = "seller" | "buyer" | "split";
 export type BuyerLoanType = "conventional" | "fha" | "va" | "allCash" | "usda";
 
+// ─── Counties ───
+// Florida doc stamp, intangible tax, and promulgated title insurance rates
+// are statewide — the primary differences between counties are effective
+// property tax millage and local line-item norms (closing fees, lien
+// searches). Recording fees are statutory. Orange County is the default.
+export type County =
+  | "orange"
+  | "brevard"
+  | "lake"
+  | "seminole"
+  | "osceola"
+  | "volusia"
+  | "polk";
+
+export interface CountyConfig {
+  value: County;
+  label: string;           // short label, e.g. "Orange County"
+  fullLabel: string;       // full PDF/header label
+  defaultTaxRatePct: number; // effective annual property tax rate estimate
+  sellerClosingFee: number;
+  sellerLienSearch: number;
+  sellerEstoppelFee: number;
+  sellerRecordingFee: number;
+  buyerRecordingDeed: number;
+  buyerRecordingMortgage: number;
+  buyerClosingFee: number;
+}
+
+// Effective property-tax rates below are averages for owner-occupied
+// residential with no homestead — rough defaults the user can override.
+export const COUNTIES: readonly CountyConfig[] = [
+  {
+    value: "orange",
+    label: "Orange County",
+    fullLabel: "Orange County, FL (Orlando)",
+    defaultTaxRatePct: 1.03,
+    sellerClosingFee: 450,
+    sellerLienSearch: 175,
+    sellerEstoppelFee: 350,
+    sellerRecordingFee: 18.5,
+    buyerRecordingDeed: 250,
+    buyerRecordingMortgage: 19,
+    buyerClosingFee: 250,
+  },
+  {
+    value: "brevard",
+    label: "Brevard County",
+    fullLabel: "Brevard County, FL (Space Coast)",
+    defaultTaxRatePct: 0.86,
+    sellerClosingFee: 450,
+    sellerLienSearch: 125,
+    sellerEstoppelFee: 350,
+    sellerRecordingFee: 18.5,
+    buyerRecordingDeed: 250,
+    buyerRecordingMortgage: 19,
+    buyerClosingFee: 225,
+  },
+  {
+    value: "lake",
+    label: "Lake County",
+    fullLabel: "Lake County, FL",
+    defaultTaxRatePct: 0.94,
+    sellerClosingFee: 450,
+    sellerLienSearch: 150,
+    sellerEstoppelFee: 350,
+    sellerRecordingFee: 18.5,
+    buyerRecordingDeed: 250,
+    buyerRecordingMortgage: 19,
+    buyerClosingFee: 250,
+  },
+  {
+    value: "seminole",
+    label: "Seminole County",
+    fullLabel: "Seminole County, FL",
+    defaultTaxRatePct: 0.94,
+    sellerClosingFee: 450,
+    sellerLienSearch: 150,
+    sellerEstoppelFee: 350,
+    sellerRecordingFee: 18.5,
+    buyerRecordingDeed: 250,
+    buyerRecordingMortgage: 19,
+    buyerClosingFee: 250,
+  },
+  {
+    value: "osceola",
+    label: "Osceola County",
+    fullLabel: "Osceola County, FL (Kissimmee)",
+    defaultTaxRatePct: 1.09,
+    sellerClosingFee: 450,
+    sellerLienSearch: 175,
+    sellerEstoppelFee: 350,
+    sellerRecordingFee: 18.5,
+    buyerRecordingDeed: 250,
+    buyerRecordingMortgage: 19,
+    buyerClosingFee: 250,
+  },
+  {
+    value: "volusia",
+    label: "Volusia County",
+    fullLabel: "Volusia County, FL (Daytona)",
+    defaultTaxRatePct: 0.99,
+    sellerClosingFee: 450,
+    sellerLienSearch: 150,
+    sellerEstoppelFee: 350,
+    sellerRecordingFee: 18.5,
+    buyerRecordingDeed: 250,
+    buyerRecordingMortgage: 19,
+    buyerClosingFee: 250,
+  },
+  {
+    value: "polk",
+    label: "Polk County",
+    fullLabel: "Polk County, FL (Lakeland)",
+    defaultTaxRatePct: 0.90,
+    sellerClosingFee: 450,
+    sellerLienSearch: 150,
+    sellerEstoppelFee: 350,
+    sellerRecordingFee: 18.5,
+    buyerRecordingDeed: 250,
+    buyerRecordingMortgage: 19,
+    buyerClosingFee: 250,
+  },
+] as const;
+
+export const DEFAULT_COUNTY: County = "orange";
+
+export function getCountyConfig(c: County): CountyConfig {
+  return COUNTIES.find((x) => x.value === c) || COUNTIES[0];
+}
+
 interface BuyerDefault {
   prepaid: { monthsInsurance: number; monthsTaxes: number; daysInterest: number };
   titleFees: { closingFee: number; taxServiceFee: number; floodCert: number; titleEndorsement81: number };
@@ -126,6 +256,7 @@ export interface SellerCalcInput {
   reTaxIsPct: boolean;
   loanBalance: number;
   reissueRate: boolean;
+  county?: County;
 }
 
 export interface SellerCalcResult {
@@ -153,6 +284,8 @@ export interface SellerCalcResult {
 export function calcSeller(i: SellerCalcInput): SellerCalcResult | null {
   if (i.salesPrice <= 0) return null;
 
+  const county = getCountyConfig(i.county ?? DEFAULT_COUNTY);
+
   const sellerCommission = i.salesPrice * (i.sellerBrokerFee / 100);
   const buyerCommission = i.salesPrice * (i.buyerBrokerFee / 100);
   const buyerCommSellerPays =
@@ -163,11 +296,13 @@ export function calcSeller(i: SellerCalcInput): SellerCalcResult | null {
   let titlePremium = calcOwnerTitlePremium(i.salesPrice);
   if (i.reissueRate) titlePremium *= 0.70;
   const searchFee = calcTitleSearchFee(i.salesPrice);
-  const { closingFee, lienSearch, estoppelFee } = SELLER_DEFAULTS.titleFees;
+  const closingFee = county.sellerClosingFee;
+  const lienSearch = county.sellerLienSearch;
+  const estoppelFee = county.sellerEstoppelFee;
   const totalTitleFees = titlePremium + searchFee + closingFee + lienSearch + estoppelFee;
 
   const docStampAmount = Math.ceil(i.salesPrice / 100) * FL_DOC_STAMP_DEED;
-  const recordingFee = SELLER_DEFAULTS.otherFees.recordingFee;
+  const recordingFee = county.sellerRecordingFee;
   const totalOtherFees = docStampAmount + recordingFee;
 
   const annualTax = i.reTaxIsPct ? i.salesPrice * (i.reTax / 100) : i.reTax;
@@ -201,6 +336,7 @@ export interface BuyerCalcInput {
   reTax: number;
   reTaxIsPct: boolean;
   hoaMonthly: number;
+  county?: County;
 }
 
 export interface BuyerCalcResult {
@@ -241,7 +377,18 @@ export interface BuyerCalcResult {
 
 export function calcBuyer(i: BuyerCalcInput): BuyerCalcResult | null {
   if (i.homePrice <= 0) return null;
-  const cc = BUYER_DEFAULTS[i.loanType] || BUYER_DEFAULTS.conventional;
+  const county = getCountyConfig(i.county ?? DEFAULT_COUNTY);
+  // Apply per-county overrides on top of the loan-type defaults so the
+  // buyer's closing fee and recording fees reflect local norms.
+  const base = BUYER_DEFAULTS[i.loanType] || BUYER_DEFAULTS.conventional;
+  const cc: BuyerDefault = {
+    ...base,
+    titleFees: { ...base.titleFees, closingFee: county.buyerClosingFee },
+    otherFees: {
+      recordingDeed: county.buyerRecordingDeed,
+      recordingMortgage: base.otherFees.recordingMortgage > 0 ? county.buyerRecordingMortgage : 0,
+    },
+  };
 
   const downDollar = i.downPmtIsPct ? i.homePrice * (i.downPmt / 100) : i.downPmt;
   const loanAmount = Math.max(i.homePrice - downDollar, 0);

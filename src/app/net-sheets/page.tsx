@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Net Sheet Calculator — Seller Net Sheet & Buyer Estimate | MaxLife Realty",
+  title: "Florida Net Sheet Calculator — Orange, Brevard, Lake & More | MaxLife Realty",
   description:
-    "Free Florida closing cost calculators. Estimate seller net proceeds or buyer cash-to-close with Brevard County rates. Download a branded PDF report.",
+    "Free Florida closing cost calculators with county-specific rates for Orange, Brevard, Lake, Seminole, Osceola, Volusia, and Polk. Estimate seller net proceeds or buyer cash-to-close and download a branded PDF.",
   openGraph: {
-    title: "Florida Net Sheet Calculator | MaxLife Realty",
+    title: "Florida Net Sheet Calculator — Multi-County | MaxLife Realty",
     description:
-      "Instant Seller Net Sheet and Buyer Estimate for Florida / Brevard County transactions. Branded PDF export included.",
+      "Instant Seller Net Sheet and Buyer Estimate for Orlando / Central Florida and the Space Coast. Orange County is the default; pick any supported county. Branded PDF export included.",
   },
 };
 
@@ -25,9 +25,10 @@ export default function NetSheetsHubPage() {
             Net Sheet <span className="text-gold">Calculator</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            Instant Florida closing cost estimates for sellers and buyers.
-            Brevard County rates applied, with a branded PDF you can share with
-            clients in one click.
+            Instant Florida closing cost estimates for sellers and buyers —
+            with county-specific defaults for Orange (Orlando), Brevard (Space
+            Coast), Lake, Seminole, Osceola, Volusia, and Polk. Branded PDF
+            export in one click.
           </p>
         </div>
       </section>
@@ -118,6 +119,10 @@ export default function NetSheetsHubPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
+                title: "Multi-County Support",
+                body: "Orange (default), Brevard, Lake, Seminole, Osceola, Volusia, and Polk — each with their own millage and fee defaults.",
+              },
+              {
                 title: "Florida Promulgated Rates",
                 body: "Title insurance calculated at $5.75/$1K on the first $100K and $5.00/$1K above.",
               },
@@ -132,10 +137,6 @@ export default function NetSheetsHubPage() {
               {
                 title: "Branded PDF Export",
                 body: "Generate a MaxLife Realty branded PDF with client name, address, and a clean breakdown.",
-              },
-              {
-                title: "Live Calculation",
-                body: "Results update instantly as you change inputs. Hit COMPUTE to lock your estimate.",
               },
               {
                 title: "Detailed Breakdown",

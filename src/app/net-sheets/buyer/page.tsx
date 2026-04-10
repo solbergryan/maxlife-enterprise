@@ -3,13 +3,13 @@ import Link from "next/link";
 import BuyerEstimate from "@/components/BuyerEstimate";
 
 export const metadata: Metadata = {
-  title: "Buyer Closing Cost Estimate Florida | Cash-to-Close Calculator | MaxLife Realty",
+  title: "Orlando Buyer Closing Cost Estimate | Orange, Brevard, Lake & More | MaxLife Realty",
   description:
-    "Free Buyer Estimate calculator for Florida / Brevard County. See monthly PITI, cash to close, prepaids, title, lender, and doc stamps. Branded PDF export.",
+    "Free Buyer Estimate for Orlando / Orange County (default) plus Brevard, Lake, Seminole, Osceola, Volusia, and Polk. Cash to close, PITI, prepaids, title, lender, and doc stamps. Branded PDF.",
   openGraph: {
-    title: "Florida Buyer Closing Cost Estimate | MaxLife Realty",
+    title: "Florida Buyer Closing Cost Estimate — Multi-County | MaxLife Realty",
     description:
-      "Instant buyer cash-to-close and monthly payment estimate with full line-item breakdown. Supports Conventional, FHA, VA, USDA, All-Cash.",
+      "Instant buyer cash-to-close and monthly payment estimate with per-county defaults. Supports Conventional, FHA, VA, USDA, and All-Cash.",
   },
 };
 
@@ -28,9 +28,10 @@ export default function BuyerEstimatePage() {
             Buyer <span className="text-gold">Estimate</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            Calculate your cash to close and monthly payment with Florida /
-            Brevard County closing costs. Supports all major loan types with a
-            branded PDF export.
+            Calculate cash to close and monthly payment with Florida closing
+            costs for any supported county — Orange (Orlando, default),
+            Brevard, Lake, Seminole, Osceola, Volusia, or Polk. Supports all
+            major loan types with a branded PDF export.
           </p>
         </div>
       </section>

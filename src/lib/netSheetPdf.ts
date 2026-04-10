@@ -3,7 +3,16 @@
 // Canvas-based, zero external deps. Opens a print
 // window the user can Save as PDF.
 // ═══════════════════════════════════════════════════
-import { fmt, LOAN_TYPES, type SellerCalcResult, type BuyerCalcResult, type PaidBy } from "./netSheetCalc";
+import {
+  fmt,
+  LOAN_TYPES,
+  getCountyConfig,
+  DEFAULT_COUNTY,
+  type SellerCalcResult,
+  type BuyerCalcResult,
+  type PaidBy,
+  type County,
+} from "./netSheetCalc";
 
 // Brand colors
 const NAVY = "#0a1a3a";
@@ -19,6 +28,7 @@ interface SellerPdfInputs {
   buyerBrokerFee: number;
   buyerBrokerPaidBy: PaidBy;
   reissueRate: boolean;
+  county?: County;
   propertyAddress?: string;
   clientName?: string;
 }
@@ -28,6 +38,7 @@ interface BuyerPdfInputs {
   downPmtIsPct: boolean;
   interestRate: number;
   termYears: number;
+  county?: County;
   propertyAddress?: string;
   clientName?: string;
 }
@@ -89,7 +100,7 @@ function drawBrandedHeader(ctx: CanvasRenderingContext2D, W: number, title: stri
   ctx.textAlign = "left";
 }
 
-function drawFooter(ctx: CanvasRenderingContext2D, W: number, H: number) {
+function drawFooter(ctx: CanvasRenderingContext2D, W: number, H: number, countyLabel: string) {
   // Gold hairline
   ctx.fillStyle = GOLD;
   ctx.fillRect(40, H - 55, W - 80, 1);
@@ -104,7 +115,7 @@ function drawFooter(ctx: CanvasRenderingContext2D, W: number, H: number) {
   ctx.fillStyle = "#9aa0ab";
   ctx.font = "8px Arial, Helvetica, sans-serif";
   ctx.fillText(
-    "This is an estimate only. Actual figures may vary. Brevard County, FL rates applied.",
+    `This is an estimate only. Actual figures may vary. ${countyLabel} rates applied.`,
     W / 2,
     H - 27
   );
@@ -153,7 +164,8 @@ export function generateSellerPDF(
   const LM = 50;
   const COL_R = W - 50;
 
-  drawBrandedHeader(ctx, W, "SELLER NET SHEET", "Brevard County, FL");
+  const countyLabel = getCountyConfig(inputs.county ?? DEFAULT_COUNTY).fullLabel;
+  drawBrandedHeader(ctx, W, "SELLER NET SHEET", countyLabel);
 
   let y = 110;
 
@@ -318,7 +330,7 @@ export function generateSellerPDF(
   ctx.fillText(fmt(calc.netAtClose), COL_R - 8, y + 40);
   ctx.textAlign = "left";
 
-  drawFooter(ctx, W, H);
+  drawFooter(ctx, W, H, countyLabel);
 
   const imgData = canvas.toDataURL("image/png", 1.0);
   openPrintWindow(imgData, "MaxLife Realty — Seller Net Sheet");
@@ -347,7 +359,8 @@ export function generateBuyerPDF(
   const LM = 50;
   const COL_R = W - 50;
 
-  drawBrandedHeader(ctx, W, "BUYER ESTIMATE", "Brevard County, FL");
+  const countyLabel = getCountyConfig(inputs.county ?? DEFAULT_COUNTY).fullLabel;
+  drawBrandedHeader(ctx, W, "BUYER ESTIMATE", countyLabel);
 
   let y = 110;
 
@@ -491,7 +504,7 @@ export function generateBuyerPDF(
   ctx.fillText(fmt(calc.bringToClose), COL_R - 8, y + 24);
   ctx.textAlign = "left";
 
-  drawFooter(ctx, W, H);
+  drawFooter(ctx, W, H, countyLabel);
 
   const imgData = canvas.toDataURL("image/png", 1.0);
   openPrintWindow(imgData, "MaxLife Realty — Buyer Estimate");

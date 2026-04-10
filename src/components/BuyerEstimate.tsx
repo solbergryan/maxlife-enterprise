@@ -5,7 +5,11 @@ import {
   calcBuyer,
   fmt,
   BUYER_LOAN_TYPES,
+  COUNTIES,
+  DEFAULT_COUNTY,
+  getCountyConfig,
   type BuyerLoanType,
+  type County,
 } from "@/lib/netSheetCalc";
 import { generateBuyerPDF } from "@/lib/netSheetPdf";
 
@@ -203,7 +207,12 @@ function DetailSection({
   );
 }
 
-export default function BuyerEstimate() {
+export default function BuyerEstimate({
+  initialCounty = DEFAULT_COUNTY,
+}: {
+  initialCounty?: County;
+} = {}) {
+  const [county, setCounty] = useState<County>(initialCounty);
   const [loanType, setLoanType] = useState<BuyerLoanType>("conventional");
   const [homePrice, setHomePrice] = useState(0);
   const [downPmt, setDownPmt] = useState(10);
@@ -216,13 +225,23 @@ export default function BuyerEstimate() {
   const [sellerConcessionIsPct, setSellerConcessionIsPct] = useState(true);
   const [hazardIns, setHazardIns] = useState(1.5);
   const [hazardInsIsPct, setHazardInsIsPct] = useState(true);
-  const [reTax, setReTax] = useState(1);
+  const [reTax, setReTax] = useState(getCountyConfig(initialCounty).defaultTaxRatePct);
   const [reTaxIsPct, setReTaxIsPct] = useState(true);
+  const [reTaxEdited, setReTaxEdited] = useState(false);
   const [hoaMonthly, setHoaMonthly] = useState(0);
   const [clientName, setClientName] = useState("");
   const [propertyAddress, setPropertyAddress] = useState("");
   const [showDetail, setShowDetail] = useState(false);
   const [computed, setComputed] = useState(false);
+
+  const handleCountyChange = (c: County) => {
+    setCounty(c);
+    setComputed(false);
+    if (!reTaxEdited) {
+      setReTax(getCountyConfig(c).defaultTaxRatePct);
+      setReTaxIsPct(true);
+    }
+  };
 
   const calc = useMemo(() => {
     if (homePrice <= 0) return null;
@@ -242,6 +261,7 @@ export default function BuyerEstimate() {
       reTax,
       reTaxIsPct,
       hoaMonthly,
+      county,
     });
   }, [
     homePrice,
@@ -259,6 +279,7 @@ export default function BuyerEstimate() {
     buyerBrokerIsPct,
     sellerConcession,
     sellerConcessionIsPct,
+    county,
   ]);
 
   const handleCompute = () => setComputed(true);
@@ -270,6 +291,7 @@ export default function BuyerEstimate() {
       downPmtIsPct,
       interestRate,
       termYears,
+      county,
       clientName: clientName || undefined,
       propertyAddress: propertyAddress || undefined,
     });
@@ -281,6 +303,7 @@ export default function BuyerEstimate() {
     downPmtIsPct,
     interestRate,
     termYears,
+    county,
     clientName,
     propertyAddress,
   ]);
@@ -294,7 +317,24 @@ export default function BuyerEstimate() {
       <div className="lg:w-96 flex-shrink-0">
         <div className="bg-dark-card border border-dark-border rounded-2xl p-6">
           <h2 className="text-xl font-bold text-white mb-1">Buyer Estimate</h2>
-          <p className="text-xs text-gray-500 mb-5">Brevard County, FL closing estimate</p>
+          <p className="text-xs text-gray-500 mb-5">
+            {getCountyConfig(county).fullLabel} closing estimate
+          </p>
+
+          <div className="mb-4">
+            <label className={labelCls}>County</label>
+            <select
+              className="w-full bg-dark border border-dark-border rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
+              value={county}
+              onChange={(e) => handleCountyChange(e.target.value as County)}
+            >
+              {COUNTIES.map((c) => (
+                <option key={c.value} value={c.value}>
+                  {c.label}
+                </option>
+              ))}
+            </select>
+          </div>
 
           <CurrencyInput
             label="Home Price"
@@ -405,9 +445,13 @@ export default function BuyerEstimate() {
             isPct={reTaxIsPct}
             onValueChange={(v) => {
               setReTax(v);
+              setReTaxEdited(true);
               setComputed(false);
             }}
-            onModeChange={setReTaxIsPct}
+            onModeChange={(p) => {
+              setReTaxIsPct(p);
+              setReTaxEdited(true);
+            }}
           />
           <CurrencyInput
             label="HOA (Monthly)"
