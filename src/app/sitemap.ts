@@ -125,6 +125,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    // Landing pages
+    {
+      url: `${BASE_URL}/orlando-commercial-real-estate-deals`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/1031-exchange-florida`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/nnn-properties-florida`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/central-florida-land-for-development`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   // Blog articles
@@ -141,6 +166,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-to-buy-commercial-property-orlando",
     "orlando-cap-rates-investor-guide",
     "1031-exchange-orlando-guide",
+    "lake-county-commercial-real-estate-guide",
+    "how-to-evaluate-commercial-real-estate-deal",
+    "medical-office-investing-central-florida",
+    "why-invest-commercial-real-estate-florida",
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({

@@ -146,6 +146,45 @@ const articles = [
     date: "April 2026",
     readTime: "9 min read",
   },
+  {
+    slug: "lake-county-commercial-real-estate-guide",
+    title:
+      "Lake County FL Commercial Real Estate: The Growth Corridor Investors Are Missing",
+    excerpt:
+      "Wellness Way corridor, turnpike expansion, Clermont and Minneola growth — why Lake County is Central Florida's most undervalued CRE market.",
+    category: "Market Report",
+    date: "April 2026",
+    readTime: "14 min read",
+  },
+  {
+    slug: "how-to-evaluate-commercial-real-estate-deal",
+    title: "How to Evaluate a Commercial Real Estate Deal",
+    excerpt:
+      "The metrics that actually matter: cap rate, NOI, cash-on-cash, DSCR, tenant credit, and lease analysis. A framework for evaluating any CRE investment.",
+    category: "Investor Education",
+    date: "April 2026",
+    readTime: "14 min read",
+    featured: true,
+  },
+  {
+    slug: "medical-office-investing-central-florida",
+    title: "Medical Office Investing in Central Florida",
+    excerpt:
+      "Aging demographics, healthcare expansion, and tenant stability make medical office one of CRE's most resilient asset classes. Here's how to invest in Central Florida.",
+    category: "Investment Guide",
+    date: "April 2026",
+    readTime: "14 min read",
+  },
+  {
+    slug: "why-invest-commercial-real-estate-florida",
+    title: "Why Out-of-State Investors Choose Florida CRE",
+    excerpt:
+      "No state income tax, population growth, and strong fundamentals — why investors from California, New York, and New Jersey are building portfolios in Central Florida.",
+    category: "Investor Education",
+    date: "April 2026",
+    readTime: "14 min read",
+    featured: true,
+  },
 ];
 
 export default function BlogPage() {

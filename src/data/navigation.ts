@@ -25,10 +25,11 @@ export const mainNav: NavLink[] = [
 
 export const footerInvestorLinks: NavLink[] = [
   { label: "Current Opportunities", href: "/opportunities" },
-  { label: "Off-Market Access", href: "/investor-access" },
+  { label: "Off-Market Deals", href: "/orlando-commercial-real-estate-deals" },
+  { label: "1031 Exchange", href: "/1031-exchange-florida" },
+  { label: "NNN Properties", href: "/nnn-properties-florida" },
   { label: "Deal Analyzer", href: "/deal-analyzer" },
-  { label: "Investor Tools", href: "/investor-tools" },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Land for Development", href: "/central-florida-land-for-development" },
 ];
 
 export const footerServiceLinks: NavLink[] = [
