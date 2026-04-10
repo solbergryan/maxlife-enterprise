@@ -194,6 +194,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "how-to-evaluate-commercial-real-estate-deal",
     "medical-office-investing-central-florida",
     "why-invest-commercial-real-estate-florida",
+    "office-space-for-lease-orlando-guide",
+    "build-to-suit-vs-existing-commercial-orlando",
+    "central-florida-commercial-real-estate-submarkets",
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({

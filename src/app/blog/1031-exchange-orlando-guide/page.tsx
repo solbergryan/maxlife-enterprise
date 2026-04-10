@@ -1,15 +1,41 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "1031 Exchange in Orlando | CRE Investor Guide",
+  title: "1031 Exchange Rules for Florida Investors | MaxLife",
   description:
-    "Guide to 1031 exchanges for Orlando commercial real estate investors. Timelines, rules, replacement property strategies, and how to execute in Central Florida.",
+    "1031 exchange rules for Florida investors — 45-day identification, 180-day close, like-kind rules, and how to source qualified replacement property in Orlando.",
+  alternates: { canonical: "/blog/1031-exchange-orlando-guide" },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "1031 Exchange Rules for Florida Investors",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: {
+    "@type": "Organization",
+    name: "MaxLife Enterprise",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://maxlifedevelopment.com/logo.png",
+    },
+  },
+  datePublished: "2026-04-05",
+  dateModified: "2026-04-10",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://maxlifedevelopment.com/blog/1031-exchange-orlando-guide",
+  },
+  description:
+    "1031 exchange rules for Florida investors — 45-day identification, 180-day close, like-kind rules, and how to source qualified replacement property in Orlando.",
 };
 
 export default function ExchangeOrlandoGuide() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -30,12 +56,12 @@ export default function ExchangeOrlandoGuide() {
             <span className="text-gray-500 text-xs">9 min read</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            1031 Exchange Guide for Orlando CRE Investors
+            1031 Exchange Rules for Florida Investors
           </h1>
           <p className="text-gray-400 text-lg">
-            How to use a 1031 exchange to defer capital gains taxes when selling
-            and reinvesting in Orlando commercial real estate -- rules,
-            timelines, strategies, and pitfalls to avoid.
+            1031 exchange rules, timelines, and replacement property strategy
+            for Florida investors reinvesting capital gains into Orlando and
+            Central Florida commercial real estate.
           </p>
         </div>
       </section>
@@ -517,6 +543,61 @@ export default function ExchangeOrlandoGuide() {
               to stress-test any replacement property before committing your
               exchange capital.
             </p>
+          </section>
+
+          {/* Related Reading */}
+          <section className="mt-12 border-t border-dark-border pt-8">
+            <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link
+                href="/1031-exchange-florida"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  1031 Exchange Replacement Properties
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Qualified 1031 exchange replacement properties across Orlando
+                  and Central Florida.
+                </p>
+              </Link>
+              <Link
+                href="/nnn-properties-florida"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  NNN Properties in Florida
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Single-tenant triple-net leases — the most common 1031
+                  replacement asset class.
+                </p>
+              </Link>
+              <Link
+                href="/services/nnn-investments"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Investment Property &amp; NNN Services
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Sourcing and underwriting investment property and 1031
+                  replacement opportunities in Orlando.
+                </p>
+              </Link>
+              <Link
+                href="/orlando-commercial-real-estate-deals"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Off-Market Commercial Deals in Orlando
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Early access to income-producing commercial properties for
+                  1031 identification.
+                </p>
+              </Link>
+            </div>
           </section>
 
           {/* CTA */}

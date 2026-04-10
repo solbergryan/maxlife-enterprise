@@ -1,15 +1,42 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Orlando Industrial Real Estate Guide | MaxLife",
+  title: "Industrial Property in Central Florida: Investor's Guide | MaxLife",
   description:
-    "Guide to Orlando industrial real estate. Warehouse, logistics, flex space, and distribution properties across Orange, Seminole, and Osceola counties.",
+    "Investor's guide to industrial property for sale in Central Florida. Warehouse, flex, distribution, and manufacturing across Orlando, the I-4 corridor, and the Space Coast.",
+  alternates: { canonical: "/blog/orlando-industrial-real-estate-guide" },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Industrial Property in Central Florida: An Investor's Guide",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: {
+    "@type": "Organization",
+    name: "MaxLife Enterprise",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://maxlifedevelopment.com/logo.png",
+    },
+  },
+  datePublished: "2026-04-04",
+  dateModified: "2026-04-10",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id":
+      "https://maxlifedevelopment.com/blog/orlando-industrial-real-estate-guide",
+  },
+  description:
+    "Investor's guide to industrial property for sale in Central Florida. Warehouse, flex, distribution, and manufacturing across Orlando, the I-4 corridor, and the Space Coast.",
 };
 
 export default function OrlandoIndustrialGuideArticle() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -30,12 +57,12 @@ export default function OrlandoIndustrialGuideArticle() {
             <span className="text-gray-500 text-xs">18 min read</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Orlando Industrial Real Estate: An Investor&apos;s Guide
+            Industrial Property in Central Florida: An Investor&apos;s Guide
           </h1>
           <p className="text-gray-400 text-lg">
-            A comprehensive look at Orlando&apos;s industrial real estate market
-            — warehouse, logistics, flex space, and distribution properties
-            across Central Florida&apos;s fastest-growing corridors.
+            A comprehensive look at industrial property for sale in Central
+            Florida — warehouse, flex, distribution, and manufacturing across
+            Orlando, the I-4 corridor, the Space Coast, and Polk County.
           </p>
         </div>
       </section>
@@ -539,6 +566,61 @@ export default function OrlandoIndustrialGuideArticle() {
               to understand the full transaction lifecycle from letter of intent
               through closing.
             </p>
+          </section>
+
+          {/* Related Reading */}
+          <section className="mt-12 border-t border-dark-border pt-8">
+            <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link
+                href="/industrial-property-central-florida"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Industrial Property for Sale in Central Florida
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Warehouse, flex, distribution, and manufacturing brokerage
+                  across the I-4 corridor and Space Coast.
+                </p>
+              </Link>
+              <Link
+                href="/build-to-suit-orlando"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Build-to-Suit Development in Orlando
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Custom industrial development and site selection for
+                  distribution, manufacturing, and flex users.
+                </p>
+              </Link>
+              <Link
+                href="/central-florida-land-for-development"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Land for Development in Central Florida
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Raw and entitled industrial land across Central Florida and
+                  the I-4 corridor.
+                </p>
+              </Link>
+              <Link
+                href="/orlando-commercial-real-estate-deals"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Off-Market Commercial Deals in Orlando
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Industrial and commercial opportunities sourced before they
+                  hit the public market.
+                </p>
+              </Link>
+            </div>
           </section>
 
           {/* CTA */}

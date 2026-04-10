@@ -83,9 +83,9 @@ const articles = [
   },
   {
     slug: "orlando-industrial-real-estate-guide",
-    title: "Orlando Industrial Real Estate: An Investor's Guide",
+    title: "Industrial Property in Central Florida: An Investor's Guide",
     excerpt:
-      "Warehouse, logistics, flex space, and distribution properties across Orange, Seminole, and Osceola counties. Submarkets, cap rates, and what to look for.",
+      "Warehouse, flex, distribution, and manufacturing property for sale across Central Florida — the I-4 corridor, Orlando, the Space Coast, and Polk County.",
     category: "Investment Guide",
     date: "April 2026",
     readTime: "10 min read",
@@ -101,9 +101,9 @@ const articles = [
   },
   {
     slug: "orlando-retail-commercial-real-estate",
-    title: "Orlando Retail Commercial Real Estate Guide",
+    title: "Best Orlando Submarkets for Retail Space for Rent",
     excerpt:
-      "Strip centers, outparcels, shopping centers, and single-tenant retail properties across Central Florida's highest-traffic corridors.",
+      "Where to find retail space for rent in Orlando — I-Drive, Sand Lake, Winter Park, Lake Nona, Millenia — plus investment guidance for strip centers and single-tenant net lease.",
     category: "Investment Guide",
     date: "April 2026",
     readTime: "9 min read",
@@ -119,9 +119,9 @@ const articles = [
   },
   {
     slug: "how-to-buy-commercial-property-orlando",
-    title: "How to Buy Commercial Property in Orlando",
+    title: "How to Buy Commercial Property in Orlando: A Complete Guide",
     excerpt:
-      "Step-by-step guide to buying commercial property in Orlando. Investment criteria, due diligence, financing, and the closing process.",
+      "A step-by-step guide to finding commercial property for sale in Orlando — market selection, underwriting, due diligence, financing, and closing.",
     category: "Buyer Guide",
     date: "April 2026",
     readTime: "12 min read",
@@ -139,9 +139,9 @@ const articles = [
   },
   {
     slug: "1031-exchange-orlando-guide",
-    title: "1031 Exchange Guide for Orlando CRE Investors",
+    title: "1031 Exchange Rules for Florida Investors",
     excerpt:
-      "Timelines, rules, replacement property strategies, and how to execute a tax-deferred 1031 exchange in Central Florida.",
+      "1031 exchange rules, timelines, and replacement property strategy for Florida investors reinvesting capital gains into Orlando commercial real estate.",
     category: "Tax & Strategy",
     date: "April 2026",
     readTime: "9 min read",
@@ -184,6 +184,33 @@ const articles = [
     date: "April 2026",
     readTime: "14 min read",
     featured: true,
+  },
+  {
+    slug: "office-space-for-lease-orlando-guide",
+    title: "Office Space for Lease in Orlando: A Tenant's Guide",
+    excerpt:
+      "How to find, compare, and negotiate office space for lease in Orlando — from Downtown and Lake Nona to Maitland, Winter Park, and the Sand Lake corridor.",
+    category: "Tenant Guide",
+    date: "April 2026",
+    readTime: "11 min read",
+  },
+  {
+    slug: "build-to-suit-vs-existing-commercial-orlando",
+    title: "Build-to-Suit vs Existing Commercial Property in Orlando",
+    excerpt:
+      "When does a build-to-suit Orlando project beat buying or leasing existing commercial property? Timeline, cost, customization, and risk compared.",
+    category: "Strategy Guide",
+    date: "April 2026",
+    readTime: "10 min read",
+  },
+  {
+    slug: "central-florida-commercial-real-estate-submarkets",
+    title: "Central Florida's Top Commercial Real Estate Submarkets",
+    excerpt:
+      "A tour of Central Florida commercial real estate submarkets — Orlando, Lake Nona, I-Drive, the Space Coast, Lake County, and Polk County — for investors, tenants, and developers.",
+    category: "Market Overview",
+    date: "April 2026",
+    readTime: "12 min read",
   },
 ];
 

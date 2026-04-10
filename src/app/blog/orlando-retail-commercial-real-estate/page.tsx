@@ -1,15 +1,42 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Orlando Retail Commercial Real Estate | MaxLife",
+  title: "Best Orlando Submarkets for Retail Space for Rent | MaxLife",
   description:
-    "Orlando retail commercial real estate opportunities. Strip centers, outparcels, shopping centers, and single-tenant retail properties across Central Florida.",
+    "Orlando's best submarkets for retail space for rent and investment. Strip centers, outparcels, anchored retail, and single-tenant net lease across Central Florida.",
+  alternates: { canonical: "/blog/orlando-retail-commercial-real-estate" },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Best Orlando Submarkets for Retail Space for Rent",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: {
+    "@type": "Organization",
+    name: "MaxLife Enterprise",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://maxlifedevelopment.com/logo.png",
+    },
+  },
+  datePublished: "2026-04-03",
+  dateModified: "2026-04-10",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id":
+      "https://maxlifedevelopment.com/blog/orlando-retail-commercial-real-estate",
+  },
+  description:
+    "Orlando's best submarkets for retail space for rent and investment. Strip centers, outparcels, anchored retail, and single-tenant net lease across Central Florida.",
 };
 
 export default function OrlandoRetailGuideArticle() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -30,12 +57,13 @@ export default function OrlandoRetailGuideArticle() {
             <span className="text-gray-500 text-xs">18 min read</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Orlando Retail Commercial Real Estate Guide
+            Best Orlando Submarkets for Retail Space for Rent
           </h1>
           <p className="text-gray-400 text-lg">
-            A guide to investing in Orlando retail properties — strip centers,
-            outparcels, shopping centers, and single-tenant net lease retail
-            across Central Florida&apos;s highest-traffic corridors.
+            Where to find retail space for rent in Orlando — from I-Drive and
+            Sand Lake to Winter Park, Lake Nona, and Millenia — plus investment
+            guidance for strip centers, outparcels, and single-tenant net lease
+            retail across Central Florida.
           </p>
         </div>
       </section>
@@ -540,6 +568,61 @@ export default function OrlandoRetailGuideArticle() {
               </Link>{" "}
               landscape.
             </p>
+          </section>
+
+          {/* Related Reading */}
+          <section className="mt-12 border-t border-dark-border pt-8">
+            <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link
+                href="/retail-space-for-rent-orlando"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Retail Space for Rent in Orlando
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Tenant representation for endcap, inline, freestanding, and
+                  anchored retail across Orlando&apos;s top submarkets.
+                </p>
+              </Link>
+              <Link
+                href="/orlando-commercial-real-estate-deals"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Off-Market Commercial Deals in Orlando
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Get early access to retail and investment-grade commercial
+                  properties before they hit the public market.
+                </p>
+              </Link>
+              <Link
+                href="/nnn-properties-florida"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  NNN Properties in Florida
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Single-tenant triple-net retail investments across Orlando
+                  and Central Florida.
+                </p>
+              </Link>
+              <Link
+                href="/build-to-suit-orlando"
+                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+              >
+                <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
+                  Build-to-Suit Development in Orlando
+                </h3>
+                <p className="text-gray-500 text-xs">
+                  Custom retail development for QSR, service retail, and
+                  franchise expansion across Orlando.
+                </p>
+              </Link>
+            </div>
           </section>
 
           {/* CTA */}
