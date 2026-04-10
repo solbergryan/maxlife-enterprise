@@ -27,13 +27,13 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Commercial Property for Sale Orlando FL | Syndicated Market Listings",
+  title: "Central Florida Commercial Property Directory | MaxLife Realty",
   description:
-    "Browse syndicated Orlando and Central Florida commercial real estate listings aggregated from third-party sources. NNN, retail, office, industrial, and multifamily deals. Attribution to the listing brokerage of record on every property.",
+    "Link-only directory of third-party commercial real estate listings across Orlando, Brevard, Lake, Seminole, Osceola, Volusia, and Polk counties. Click through to each source for pricing, photos, and the listing brokerage of record.",
   openGraph: {
-    title: "Orlando Commercial Real Estate Listings | Central Florida Market",
+    title: "Central Florida Commercial Property Directory | MaxLife Realty",
     description:
-      "Browse 1,000+ syndicated commercial properties across Orlando and Central Florida. Listings are marketed by their respective listing brokerages \u2014 MaxLife Realty is not the listing broker for third-party listings.",
+      "Address-only directory of third-party Central Florida commercial listings. MaxLife Realty is not the listing broker; click through to each listing source for full details.",
   },
 };
 
@@ -51,14 +51,15 @@ export default function OpportunitiesPage() {
             Investment Opportunities
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Central Florida Market{" "}
-            <span className="text-gold">Opportunities</span>
+            Central Florida Commercial{" "}
+            <span className="text-gold">Directory</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            Browse 1,000+ syndicated commercial real estate listings across
-            Central Florida and the Space Coast. Listings are marketed by
-            their respective listing brokerages and link to the original
-            listing source.
+            Address-only directory of third-party commercial properties
+            across Central Florida and the Space Coast. Each entry links to
+            the original listing source where pricing, photos, and the
+            listing brokerage of record are shown. MaxLife Realty is not the
+            listing broker for any entry in this directory.
           </p>
         </div>
       </section>
@@ -72,11 +73,11 @@ export default function OpportunitiesPage() {
       {featured.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
           <h2 className="text-2xl font-bold text-white mb-2">
-            Featured Market Listings
+            Featured Directory Entries
           </h2>
           <p className="text-gray-500 mb-6">
-            Third-party investment properties with strong fundamentals. See
-            each listing card for the listing brokerage of record.
+            Third-party properties of interest &mdash; click through to each
+            source for pricing, photos, and the listing brokerage of record.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.map((listing, i) => (
@@ -89,11 +90,12 @@ export default function OpportunitiesPage() {
       {/* All Market Listings */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-border">
         <h2 className="text-2xl font-bold text-white mb-2">
-          Central Florida Market Listings
+          Full Directory
         </h2>
         <p className="text-gray-500 mb-8">
-          Active commercial properties across Orange, Seminole, Osceola, Lake,
-          Polk, and Brevard counties
+          Address-only entries for third-party commercial properties across
+          Orange, Seminole, Osceola, Lake, Polk, Volusia, and Brevard
+          counties. Click any entry to view the original listing on Crexi.
         </p>
         <ListingGrid listings={allListings} />
 

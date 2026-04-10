@@ -22,17 +22,19 @@ const ListingMap = dynamic(() => import("./ListingMap"), {
 
 const PAGE_SIZE = 24;
 
+// Sort options intentionally limited to public-record fields.
+// Price / NOI / cap-rate sorts removed \u2014 those fields are not
+// displayed in the link-only directory view.
 const sortOptions = [
-  { label: "Newest", value: "newest" },
-  { label: "Price: Low to High", value: "price-asc" },
-  { label: "Price: High to Low", value: "price-desc" },
-  { label: "Cap Rate: High to Low", value: "cap-desc" },
+  { label: "County (A\u2013Z)", value: "county" },
+  { label: "City (A\u2013Z)", value: "city" },
+  { label: "Property Type", value: "type" },
 ] as const;
 
 export default function ListingGrid({ listings }: { listings: Listing[] }) {
   const [type, setType] = useState("All");
   const [county, setCounty] = useState("All");
-  const [sort, setSort] = useState("newest");
+  const [sort, setSort] = useState("county");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [view, setView] = useState<"grid" | "map">("grid");
@@ -43,24 +45,21 @@ export default function ListingGrid({ listings }: { listings: Listing[] }) {
     if (type !== "All") result = result.filter((l) => l.type === type);
     if (county !== "All") result = result.filter((l) => l.county === county);
     if (search.trim()) {
+      // Search limited to public-record location fields only.
       const q = search.toLowerCase();
       result = result.filter(
         (l) =>
-          l.name.toLowerCase().includes(q) ||
           l.city.toLowerCase().includes(q) ||
           l.address.toLowerCase().includes(q) ||
-          (l.tenant && l.tenant.toLowerCase().includes(q))
+          l.zip.toLowerCase().includes(q) ||
+          l.county.toLowerCase().includes(q)
       );
     }
 
     result = [...result].sort((a, b) => {
-      if (sort === "price-asc")
-        return (a.price ?? Infinity) - (b.price ?? Infinity);
-      if (sort === "price-desc")
-        return (b.price ?? 0) - (a.price ?? 0);
-      if (sort === "cap-desc")
-        return (b.capRate ?? 0) - (a.capRate ?? 0);
-      return (a.daysOnMarket ?? 999) - (b.daysOnMarket ?? 999);
+      if (sort === "city") return a.city.localeCompare(b.city);
+      if (sort === "type") return a.type.localeCompare(b.type);
+      return a.county.localeCompare(b.county);
     });
 
     return result;
@@ -86,7 +85,7 @@ export default function ListingGrid({ listings }: { listings: Listing[] }) {
       <div className="flex flex-wrap gap-3 mb-4">
         <input
           type="text"
-          placeholder="Search by name, city, address, or tenant..."
+          placeholder="Search by address, city, ZIP, or county..."
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);

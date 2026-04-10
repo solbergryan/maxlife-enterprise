@@ -37,18 +37,11 @@ export function getPropertyId(crexiUrl: string): string | null {
   return m ? m[1] : null;
 }
 
-export function getListingImage(crexiUrl: string): string | null {
-  const id = getPropertyId(crexiUrl);
-  return id ? `/listings/${id}.jpg` : null;
-}
-
-export function formatPrice(price: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(price);
-}
+// Note: getListingImage() and formatPrice() were removed when the
+// directory switched to link-only display (Option 2 of the compliance
+// rework). See git history if you need the implementations back for a
+// future IDX feed migration. Listing images in public/listings/*.jpg
+// are no longer referenced by any page.
 
 export const listingTypes = [
   "All",

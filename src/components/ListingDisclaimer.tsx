@@ -35,20 +35,21 @@ export default function ListingDisclaimer({
         </svg>
         <div className="leading-relaxed">
           <p className={compact ? "" : "font-semibold text-white mb-1"}>
-            Third-party listings disclosure
+            Third-party listings directory
           </p>
           <p>
-            Properties displayed on this page are syndicated from Crexi and
-            are marketed by their respective listing brokerages.{" "}
+            This page is a link-only directory of third-party commercial
+            property listings. Only minimal public-record location facts
+            (address, city, county, and property type) are shown here;
+            pricing, photography, marketing descriptions, tenant details,
+            and full property data are intentionally not reproduced.{" "}
             <span className="text-white font-semibold">
-              MaxLife Realty is not the listing broker for third-party
-              listings
+              MaxLife Realty is not the listing broker for any entry in
+              this directory
             </span>
-            . Each card links to its original source where full listing
-            brokerage details, terms, and conditions are available.
-            Information is deemed reliable but not guaranteed. Always verify
-            with the listing broker of record before acting on any
-            information shown here.
+            . Click through to the source on each card to view the listing
+            brokerage of record, pricing, full details, and conditions of
+            sale. Information is deemed reliable but not guaranteed.
           </p>
           {!compact && (
             <p className="text-gray-500 text-xs mt-2">

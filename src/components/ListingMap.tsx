@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Listing, formatPrice, getListingImage } from "@/data/listings";
+import { Listing } from "@/data/listings";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
@@ -22,27 +22,31 @@ function getTypeColor(type: string): string {
   return TYPE_COLORS[type] || "#6b7280";
 }
 
-function buildPopupHtml(listing: Listing): string {
-  const img = getListingImage(listing.crexiUrl);
-  const imgHtml = img
-    ? `<img src="${img}" alt="" style="width:100%;height:120px;object-fit:cover;border-radius:6px 6px 0 0;" loading="lazy"/>`
-    : "";
+// Link-only popup: address + type pill + source link. No marketing
+// data (price, cap rate, NOI, images, listing name) is rendered.
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
+function buildPopupHtml(listing: Listing): string {
+  const color = getTypeColor(listing.type);
   return `
-    <div style="width:260px;font-family:system-ui,sans-serif;background:#1a1a1a;border-radius:6px;overflow:hidden;">
-      ${imgHtml}
-      <div style="padding:10px;">
-        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px;line-height:1.3;">${listing.name}</div>
-        <div style="font-size:11px;color:#9ca3af;margin-bottom:8px;">${listing.city}, ${listing.state} ${listing.zip}</div>
-        <div style="display:flex;gap:12px;margin-bottom:8px;">
-          ${listing.price ? `<div><div style="font-size:10px;color:#9ca3af;text-transform:uppercase;">Price</div><div style="font-size:13px;color:#fff;font-weight:600;">${formatPrice(listing.price)}</div></div>` : ""}
-          ${listing.capRate ? `<div><div style="font-size:10px;color:#9ca3af;text-transform:uppercase;">Cap Rate</div><div style="font-size:13px;color:#EFBF04;font-weight:600;">${listing.capRate}%</div></div>` : ""}
+    <div style="width:250px;font-family:system-ui,sans-serif;background:#1a1a1a;border-radius:6px;overflow:hidden;">
+      <div style="padding:12px;">
+        <div style="display:flex;gap:6px;align-items:center;margin-bottom:8px;">
+          <span style="font-size:10px;padding:2px 8px;border-radius:12px;background:${color}22;color:${color};border:1px solid ${color}44;text-transform:uppercase;letter-spacing:0.5px;">${escapeHtml(listing.type)}</span>
+          <span style="font-size:10px;padding:2px 8px;border-radius:12px;background:#22c55e22;color:#4ade80;border:1px solid #22c55e44;text-transform:uppercase;letter-spacing:0.5px;">${escapeHtml(listing.status)}</span>
         </div>
-        <div style="display:flex;gap:6px;align-items:center;">
-          <span style="font-size:10px;padding:2px 8px;border-radius:12px;background:${getTypeColor(listing.type)}22;color:${getTypeColor(listing.type)};border:1px solid ${getTypeColor(listing.type)}44;">${listing.type}</span>
-          <span style="font-size:10px;padding:2px 8px;border-radius:12px;background:#22c55e22;color:#4ade80;border:1px solid #22c55e44;">${listing.status}</span>
-        </div>
-        <a href="${listing.crexiUrl}" target="_blank" rel="noopener noreferrer" style="display:block;margin-top:8px;text-align:center;padding:6px;background:#EFBF04;color:#0a0a0a;border-radius:4px;font-size:12px;font-weight:600;text-decoration:none;">View on Crexi</a>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:2px;line-height:1.3;">${escapeHtml(listing.address)}</div>
+        <div style="font-size:11px;color:#9ca3af;margin-bottom:4px;">${escapeHtml(listing.city)}, ${escapeHtml(listing.state)} ${escapeHtml(listing.zip)}</div>
+        ${listing.county && listing.county !== "Other" ? `<div style="font-size:10px;color:#6b7280;margin-bottom:10px;">${escapeHtml(listing.county)} County, FL</div>` : ""}
+        <div style="font-size:9px;color:#6b7280;margin-bottom:8px;line-height:1.3;">Third-party syndicated listing. MaxLife Realty is not the listing broker. See source for full details.</div>
+        <a href="${escapeHtml(listing.crexiUrl)}" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;padding:6px;background:#EFBF04;color:#0a0a0a;border-radius:4px;font-size:12px;font-weight:600;text-decoration:none;">View Full Listing</a>
       </div>
     </div>
   `;
