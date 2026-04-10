@@ -43,60 +43,98 @@ interface BuyerPdfInputs {
   clientName?: string;
 }
 
-// ─── Shared: Draw the MLR logo box (matches public/mlr-logo.svg) ───
+// ─── Shared: Draw the MLR logo "seal" (matches public/mlr-logo.svg) ───
+// Navy box with "MAX LIFE REALTY" repeated along each edge (top, bottom,
+// left rotated, right rotated), a thin white inner border frame, and a
+// large "MLR" mark with "TM" superscript in the center.
 function drawLogoBox(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number) {
   // Navy background
   ctx.fillStyle = NAVY;
   ctx.fillRect(x, y, w, h);
-  // Inner border
-  ctx.strokeStyle = "#ffffff";
-  ctx.lineWidth = 1.5;
-  ctx.strokeRect(x + 4, y + 4, w - 8, h - 8);
-  // "MLR" text
+
+  // Border seal text size scales with box width
+  const sealFontSize = Math.max(4.5, w * 0.055);
+  const sealMargin = Math.max(4, h * 0.08);
+
   ctx.fillStyle = "#ffffff";
-  ctx.font = "900 " + Math.floor(h * 0.62) + "px Arial, Helvetica, sans-serif";
+  ctx.font = `bold ${sealFontSize.toFixed(1)}px Arial, Helvetica, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
+
+  // Top edge: two repeats of "MAX LIFE REALTY"
+  ctx.fillText("MAX LIFE REALTY", x + w * 0.27, y + sealMargin);
+  ctx.fillText("MAX LIFE REALTY", x + w * 0.73, y + sealMargin);
+
+  // Bottom edge: two repeats
+  ctx.fillText("MAX LIFE REALTY", x + w * 0.27, y + h - sealMargin);
+  ctx.fillText("MAX LIFE REALTY", x + w * 0.73, y + h - sealMargin);
+
+  // Left edge (rotated -90°)
+  ctx.save();
+  ctx.translate(x + sealMargin, y + h / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText("MAX LIFE REALTY", 0, 0);
+  ctx.restore();
+
+  // Right edge (rotated +90°)
+  ctx.save();
+  ctx.translate(x + w - sealMargin, y + h / 2);
+  ctx.rotate(Math.PI / 2);
+  ctx.fillText("MAX LIFE REALTY", 0, 0);
+  ctx.restore();
+
+  // Inner border frame
+  const framePad = Math.max(6, h * 0.18);
+  ctx.strokeStyle = "#ffffff";
+  ctx.lineWidth = Math.max(1, h * 0.025);
+  ctx.strokeRect(x + framePad, y + framePad, w - framePad * 2, h - framePad * 2);
+
+  // Main "MLR" mark
+  ctx.fillStyle = "#ffffff";
+  ctx.font = `900 ${Math.floor(h * 0.58)}px Arial, Helvetica, sans-serif`;
   ctx.fillText("MLR", x + w / 2, y + h / 2 + h * 0.03);
-  // TM superscript
-  ctx.font = "bold " + Math.floor(h * 0.18) + "px Arial, Helvetica, sans-serif";
-  ctx.fillText("TM", x + w - w * 0.13, y + h * 0.32);
-  // Reset
+
+  // "TM" superscript anchored to the right of the MLR mark
+  ctx.font = `bold ${Math.floor(h * 0.15)}px Arial, Helvetica, sans-serif`;
+  ctx.fillText("TM", x + w * 0.87, y + h * 0.38);
+
+  // Reset context defaults
   ctx.textAlign = "left";
   ctx.textBaseline = "alphabetic";
 }
 
 // ─── Shared header across seller/buyer PDFs ───
 function drawBrandedHeader(ctx: CanvasRenderingContext2D, W: number, title: string, subtitle: string) {
-  // Navy header band
+  // Navy header band (taller to accommodate the seal logo)
+  const HEADER_H = 100;
   ctx.fillStyle = NAVY;
-  ctx.fillRect(0, 0, W, 84);
+  ctx.fillRect(0, 0, W, HEADER_H);
   // Gold accent bar
   ctx.fillStyle = GOLD;
-  ctx.fillRect(0, 84, W, 4);
+  ctx.fillRect(0, HEADER_H, W, 4);
 
-  // Logo
-  drawLogoBox(ctx, 40, 18, 100, 50);
+  // Logo seal — wider slot so the border "MAX LIFE REALTY" text is legible
+  drawLogoBox(ctx, 36, 14, 160, 72);
 
   // Company wordmark
   ctx.fillStyle = GOLD;
-  ctx.font = "bold 20px Arial, Helvetica, sans-serif";
-  ctx.fillText("MaxLife", 155, 44);
+  ctx.font = "bold 22px Arial, Helvetica, sans-serif";
+  ctx.fillText("MaxLife", 212, 48);
   ctx.fillStyle = "#ffffff";
-  ctx.font = "300 20px Arial, Helvetica, sans-serif";
-  ctx.fillText(" Realty", 235, 44);
+  ctx.font = "300 22px Arial, Helvetica, sans-serif";
+  ctx.fillText(" Realty", 298, 48);
   ctx.font = "10px Arial, Helvetica, sans-serif";
   ctx.fillStyle = "#c6d3e6";
-  ctx.fillText("Central Florida Commercial Real Estate", 155, 60);
+  ctx.fillText("Central Florida Commercial Real Estate", 212, 64);
 
   // Title
   ctx.textAlign = "right";
   ctx.fillStyle = "#ffffff";
   ctx.font = "bold 18px Arial, Helvetica, sans-serif";
-  ctx.fillText(title, W - 40, 42);
+  ctx.fillText(title, W - 40, 48);
   ctx.fillStyle = GOLD;
   ctx.font = "10px Arial, Helvetica, sans-serif";
-  ctx.fillText(subtitle, W - 40, 60);
+  ctx.fillText(subtitle, W - 40, 66);
   ctx.textAlign = "left";
 }
 
@@ -167,7 +205,7 @@ export function generateSellerPDF(
   const countyLabel = getCountyConfig(inputs.county ?? DEFAULT_COUNTY).fullLabel;
   drawBrandedHeader(ctx, W, "SELLER NET SHEET", countyLabel);
 
-  let y = 110;
+  let y = 126;
 
   // Meta row
   ctx.fillStyle = MUTED;
@@ -362,7 +400,7 @@ export function generateBuyerPDF(
   const countyLabel = getCountyConfig(inputs.county ?? DEFAULT_COUNTY).fullLabel;
   drawBrandedHeader(ctx, W, "BUYER ESTIMATE", countyLabel);
 
-  let y = 110;
+  let y = 126;
 
   ctx.fillStyle = MUTED;
   ctx.font = "10px Arial, Helvetica, sans-serif";
