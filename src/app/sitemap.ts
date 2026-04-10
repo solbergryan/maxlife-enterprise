@@ -197,6 +197,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "office-space-for-lease-orlando-guide",
     "build-to-suit-vs-existing-commercial-orlando",
     "central-florida-commercial-real-estate-submarkets",
+    "war-oil-prices-orlando-commercial-real-estate-spring-2026",
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({

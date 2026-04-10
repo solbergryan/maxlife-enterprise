@@ -212,6 +212,17 @@ const articles = [
     date: "April 2026",
     readTime: "12 min read",
   },
+  {
+    slug: "war-oil-prices-orlando-commercial-real-estate-spring-2026",
+    title:
+      "How War and Oil Prices May Affect Orlando Commercial Real Estate This Spring",
+    excerpt:
+      "How ongoing geopolitical conflict and oil price volatility could shape Orlando commercial real estate this spring — construction costs, cap rates, debt markets, tourism, and industrial demand.",
+    category: "Market Commentary",
+    date: "April 2026",
+    readTime: "9 min read",
+    featured: true,
+  },
 ];
 
 export default function BlogPage() {
