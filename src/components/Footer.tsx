@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <span className="text-gold font-bold text-xl">MaxLife</span>
-              <span className="text-white font-light text-xl">Enterprise</span>
+              <span className="text-white font-light text-xl">Realty</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-3">
               Commercial real estate brokerage, NNN investments, land
@@ -113,9 +113,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-dark-border mt-8 pt-8 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} MaxLife Enterprise. All rights
-          reserved.
+        <div className="border-t border-dark-border mt-8 pt-8 text-center text-gray-500 text-xs leading-relaxed space-y-2">
+          <p>
+            &copy; {new Date().getFullYear()} MaxLife Realty. All rights
+            reserved.
+          </p>
+          <p>
+            MaxLife Realty &middot; Florida Licensed Real Estate Brokerage
+            &middot; FL Broker License #3354351
+          </p>
+          <p className="max-w-3xl mx-auto text-gray-600">
+            Some property listings displayed on this site are syndicated from
+            third parties and are marketed by their respective listing
+            brokerages. MaxLife Realty is not the listing broker for
+            third-party listings. See the source linked on each listing for
+            the listing brokerage of record. Information is deemed reliable
+            but not guaranteed.
+          </p>
         </div>
       </div>
     </footer>

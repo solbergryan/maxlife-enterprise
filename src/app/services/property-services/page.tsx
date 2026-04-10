@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Property Services | MaxLife Enterprise",
+  title: "Property Services | MaxLife Realty",
   description:
     "Full-service property maintenance, cleaning, and engineering services in Orlando and Melbourne, FL. Handyman repairs, professional cleaning, and technical consulting.",
 };

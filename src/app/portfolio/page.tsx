@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Closed CRE Deals | Orlando & Central Florida Portfolio",
     description:
-      "Featured commercial real estate transactions by MaxLife Enterprise. NNN properties, land deals, and investment properties across Central Florida.",
+      "Featured commercial real estate transactions by MaxLife Realty. NNN properties, land deals, and investment properties across Central Florida.",
   },
 };
 

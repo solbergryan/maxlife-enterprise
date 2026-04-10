@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Commercial Real Estate Case Studies | Orlando & Central Florida",
     description:
-      "Real CRE deal case studies across Central Florida. See how MaxLife Enterprise helps investors acquire and maximize commercial property value.",
+      "Real CRE deal case studies across Central Florida. See how MaxLife Realty helps investors acquire and maximize commercial property value.",
   },
 };
 

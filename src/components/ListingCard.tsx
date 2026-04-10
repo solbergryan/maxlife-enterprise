@@ -111,16 +111,22 @@ export default function ListingCard({ listing }: { listing: Listing }) {
         )}
       </div>
 
-      {/* Footer — Crexi Link + Broker Attribution */}
-      <div className="px-5 pb-4 border-t border-dark-border pt-3 flex items-center justify-between">
-        <div className="text-xs text-gray-600">
-          {listing.listingBroker ? (
+      {/* Footer — Broker Attribution + Source Link */}
+      <div className="px-5 pb-4 border-t border-dark-border pt-3">
+        <div className="text-[11px] text-gray-500 leading-snug mb-2">
+          {listing.listingBrokerage ? (
             <span>
-              Listing by {listing.listingBroker}
-              {listing.listingBrokerage && `, ${listing.listingBrokerage}`}
+              Listed by{" "}
+              <span className="text-gray-300 font-medium">
+                {listing.listingBrokerage}
+              </span>
+              {listing.listingBroker && ` \u2014 ${listing.listingBroker}`}
             </span>
           ) : (
-            <span>Courtesy of Crexi</span>
+            <span>
+              Third-party listing syndicated via Crexi. MaxLife Realty is not
+              the listing broker. See source for listing brokerage of record.
+            </span>
           )}
         </div>
         <a
@@ -129,7 +135,7 @@ export default function ListingCard({ listing }: { listing: Listing }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-xs text-gold hover:text-gold-light transition-colors font-medium"
         >
-          View on Crexi
+          View Listing Source
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>

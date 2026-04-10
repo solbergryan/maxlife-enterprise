@@ -18,7 +18,7 @@ const articleSchema = {
   author: { "@type": "Person", name: "Ryan Solberg" },
   publisher: {
     "@type": "Organization",
-    name: "MaxLife Enterprise",
+    name: "MaxLife Realty",
     logo: {
       "@type": "ImageObject",
       url: "https://maxlifedevelopment.com/logo.png",
@@ -365,7 +365,7 @@ export default function CentralFloridaSubmarketsArticle() {
               Investing or Leasing Across Central Florida?
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise covers the full Central Florida region —
+              MaxLife Realty covers the full Central Florida region —
               Orlando, the Space Coast, Lake County, and Polk County. Tell
               us your strategy and we&apos;ll find the right submarket and
               the right property.

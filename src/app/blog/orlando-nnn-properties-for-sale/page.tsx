@@ -616,7 +616,7 @@ export default function OrlandoNNNPropertiesArticle() {
                 guide to buying commercial property in Orlando
               </Link>{" "}
               walks through the full acquisition process from initial screening
-              through due diligence and closing. MaxLife Enterprise&apos;s{" "}
+              through due diligence and closing. MaxLife Realty&apos;s{" "}
               <Link href="/services/nnn-investments" className="text-gold hover:underline">
                 NNN investment services
               </Link>{" "}
@@ -631,7 +631,7 @@ export default function OrlandoNNNPropertiesArticle() {
               Find Your Next NNN Investment
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise specializes in NNN property acquisitions and
+              MaxLife Realty specializes in NNN property acquisitions and
               dispositions across Central Florida. Whether you are a 1031
               exchange buyer or building a passive income portfolio, we can help
               you find the right property.

@@ -16,7 +16,7 @@ const articleSchema = {
   author: { "@type": "Person", name: "Ryan Solberg" },
   publisher: {
     "@type": "Organization",
-    name: "MaxLife Enterprise",
+    name: "MaxLife Realty",
     logo: {
       "@type": "ImageObject",
       url: "https://maxlifedevelopment.com/logo.png",

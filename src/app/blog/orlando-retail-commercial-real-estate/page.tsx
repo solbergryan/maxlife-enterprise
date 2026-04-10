@@ -16,7 +16,7 @@ const articleSchema = {
   author: { "@type": "Person", name: "Ryan Solberg" },
   publisher: {
     "@type": "Organization",
-    name: "MaxLife Enterprise",
+    name: "MaxLife Realty",
     logo: {
       "@type": "ImageObject",
       url: "https://maxlifedevelopment.com/logo.png",
@@ -631,7 +631,7 @@ export default function OrlandoRetailGuideArticle() {
               Explore Orlando Retail Investments
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise helps investors source, evaluate, and acquire
+              MaxLife Realty helps investors source, evaluate, and acquire
               retail properties across Central Florida. From NNN single-tenant
               assets to multi-tenant strip centers, we cover the full spectrum
               of retail investment opportunities.

@@ -6,10 +6,10 @@ import LeadCaptureForm from "@/components/LeadCaptureForm";
 export const metadata: Metadata = {
   title: "Build-to-Suit Orlando | Custom Commercial Development",
   description:
-    "Build-to-suit development in Orlando and Central Florida. Site selection, entitlements, and custom commercial construction from MaxLife Enterprise.",
+    "Build-to-suit development in Orlando and Central Florida. Site selection, entitlements, and custom commercial construction from MaxLife Realty.",
   alternates: { canonical: "/build-to-suit-orlando" },
   openGraph: {
-    title: "Build-to-Suit Orlando | MaxLife Enterprise",
+    title: "Build-to-Suit Orlando | MaxLife Realty",
     description:
       "Custom build-to-suit commercial development in Orlando and Central Florida. Site selection, entitlements, construction, and delivery for retail, QSR, medical, and industrial users.",
   },
@@ -97,7 +97,7 @@ export default function BuildToSuitOrlandoPage() {
           name: "Build-to-Suit Development — Orlando",
           provider: {
             "@type": "RealEstateAgent",
-            name: "MaxLife Enterprise",
+            name: "MaxLife Realty",
             url: "https://maxlifedevelopment.com",
           },
           areaServed: [
@@ -125,7 +125,7 @@ export default function BuildToSuitOrlandoPage() {
             across Central Florida
           </p>
           <p className="text-gray-400 max-w-3xl leading-relaxed">
-            MaxLife Enterprise delivers build-to-suit commercial development
+            MaxLife Realty delivers build-to-suit commercial development
             for retail, QSR, medical, office, and industrial users across
             Orlando and Central Florida. When the existing inventory
             doesn&apos;t fit, we find the site, manage the entitlement process,

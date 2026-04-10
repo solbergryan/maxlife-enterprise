@@ -16,7 +16,7 @@ const articleSchema = {
   author: { "@type": "Person", name: "Ryan Solberg" },
   publisher: {
     "@type": "Organization",
-    name: "MaxLife Enterprise",
+    name: "MaxLife Realty",
     logo: {
       "@type": "ImageObject",
       url: "https://maxlifedevelopment.com/logo.png",
@@ -606,7 +606,7 @@ export default function ExchangeOrlandoGuide() {
               Planning a 1031 Exchange in Orlando?
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise helps investors identify replacement
+              MaxLife Realty helps investors identify replacement
               properties, coordinate exchange timelines, and close with
               confidence across Central Florida.
             </p>

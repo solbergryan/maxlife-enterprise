@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "What Is a Triple Net (NNN) Lease? | MaxLife Enterprise",
+  title: "What Is a Triple Net (NNN) Lease? | MaxLife Realty",
   description:
     "A comprehensive guide to triple net lease investments. Learn how NNN leases work, their benefits and risks, and why investors love them for passive income.",
 };
@@ -221,7 +221,7 @@ export default function NNNLeaseArticle() {
               Interested in NNN Investing?
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise specializes in NNN property acquisitions and
+              MaxLife Realty specializes in NNN property acquisitions and
               dispositions across Central Florida. Let&apos;s find your next
               investment.
             </p>

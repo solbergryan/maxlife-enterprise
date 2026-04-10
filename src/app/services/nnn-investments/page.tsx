@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "NNN Investments & Investment Property Orlando | MaxLife",
   description:
-    "Investment property and NNN opportunities in Orlando and Central Florida. Triple-net leases, value-add, and 1031 exchange replacement properties from MaxLife Enterprise.",
+    "Investment property and NNN opportunities in Orlando and Central Florida. Triple-net leases, value-add, and 1031 exchange replacement properties from MaxLife Realty.",
   alternates: { canonical: "/services/nnn-investments" },
 };
 

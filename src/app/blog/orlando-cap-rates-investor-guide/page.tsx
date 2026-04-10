@@ -779,7 +779,7 @@ export default function OrlandoCapRatesGuide() {
               Analyze Orlando Cap Rates for Your Next Deal
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise provides cap rate analysis, deal underwriting,
+              MaxLife Realty provides cap rate analysis, deal underwriting,
               and acquisition support for commercial investors across Central
               Florida.
             </p>

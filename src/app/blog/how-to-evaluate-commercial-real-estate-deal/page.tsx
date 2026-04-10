@@ -29,7 +29,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "How to Evaluate a Commercial Real Estate Deal",
   author: { "@type": "Person", name: "Ryan Solberg" },
-  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty" },
   datePublished: "2026-04-01",
   description:
     "Learn how to evaluate commercial real estate deals using cap rate, NOI, DSCR, cash-on-cash return, and more. Complete CRE analysis framework for investors.",

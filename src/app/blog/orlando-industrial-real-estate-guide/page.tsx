@@ -16,7 +16,7 @@ const articleSchema = {
   author: { "@type": "Person", name: "Ryan Solberg" },
   publisher: {
     "@type": "Organization",
-    name: "MaxLife Enterprise",
+    name: "MaxLife Realty",
     logo: {
       "@type": "ImageObject",
       url: "https://maxlifedevelopment.com/logo.png",
@@ -629,7 +629,7 @@ export default function OrlandoIndustrialGuideArticle() {
               Explore Orlando Industrial Investments
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise helps investors identify, underwrite, and acquire
+              MaxLife Realty helps investors identify, underwrite, and acquire
               industrial properties across Central Florida. Whether you are
               targeting warehouse, flex, or distribution assets, we can help you
               find the right opportunity.

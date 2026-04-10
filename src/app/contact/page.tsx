@@ -5,10 +5,10 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Contact Orlando Commercial Real Estate Broker",
   description:
-    "Contact MaxLife Enterprise — Central Florida commercial realtors serving Orlando, the Space Coast, and Lake Nona. Free CRE consultations for investors, developers, and owners.",
+    "Contact MaxLife Realty — Central Florida commercial realtors serving Orlando, the Space Coast, and Lake Nona. Free CRE consultations for investors, developers, and owners.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact MaxLife Enterprise | Orlando CRE Broker",
+    title: "Contact MaxLife Realty | Orlando CRE Broker",
     description:
       "Schedule a consultation with Ryan Solberg. Commercial real estate broker serving Orlando and Central Florida investors.",
   },
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact MaxLife Enterprise",
+  name: "Contact MaxLife Realty",
   description:
-    "Contact Orlando commercial real estate broker Ryan Solberg and the MaxLife Enterprise team.",
+    "Contact Orlando commercial real estate broker Ryan Solberg and the MaxLife Realty team.",
   url: "https://maxlifedevelopment.com/contact",
   mainEntity: {
     "@type": ["RealEstateAgent", "LocalBusiness"],
-    name: "MaxLife Enterprise",
+    name: "MaxLife Realty",
     telephone: "(321) 586-2121",
     email: "Ryan@MaxLifeRealty.com",
     url: "https://maxlifedevelopment.com",
@@ -73,7 +73,7 @@ export default function ContactPage() {
             Commercial Realtors Serving Central Florida
           </h2>
           <p className="text-gray-400 max-w-3xl leading-relaxed">
-            MaxLife Enterprise is a full-service commercial real estate
+            MaxLife Realty is a full-service commercial real estate
             brokerage serving Orlando, the Space Coast, Lake Nona, and the
             surrounding Central Florida markets. Whether you&apos;re buying,
             selling, leasing, or developing commercial property, our team

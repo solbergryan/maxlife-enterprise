@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Orlando Commercial Real Estate Market Report 2026 | MaxLife Enterprise",
+  title: "Orlando Commercial Real Estate Market Report 2026 | MaxLife Realty",
   description:
     "Orlando commercial real estate market report for 2026 — cap rates, submarkets, office, retail, industrial, multifamily, NNN, tourism corridors, and investment strategies across Central Florida.",
   alternates: { canonical: "/blog/orlando-commercial-real-estate-trends-2026" },
@@ -14,7 +14,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Orlando Commercial Real Estate Market Report 2026",
   author: { "@type": "Person", name: "Ryan Solberg" },
-  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty" },
   datePublished: "2026-04-01",
   dateModified: "2026-04-10",
   mainEntityOfPage: {

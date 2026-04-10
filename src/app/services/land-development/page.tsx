@@ -15,7 +15,7 @@ export default function LandDevelopmentPage() {
     <ServicePageLayout
       title="Land for Development in Central Florida"
       subtitle="Land Brokerage & Development"
-      description="From raw land acquisitions to entitled, development-ready sites, MaxLife Enterprise helps investors, developers, and build-to-suit users find land for development across Central Florida — Orlando, the Space Coast, Lake County, and the I-4 corridor."
+      description="From raw land acquisitions to entitled, development-ready sites, MaxLife Realty helps investors, developers, and build-to-suit users find land for development across Central Florida — Orlando, the Space Coast, Lake County, and the I-4 corridor."
       icon={
         <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />

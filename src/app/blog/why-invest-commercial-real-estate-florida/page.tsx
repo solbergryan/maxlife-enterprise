@@ -29,7 +29,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Why Out-of-State Investors Choose Florida CRE",
   author: { "@type": "Person", name: "Ryan Solberg" },
-  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty" },
   datePublished: "2026-04-01",
   description:
     "Discover why investors from CA, NY, NJ, and IL are moving capital into Florida commercial real estate. Tax savings, migration trends, and market comparison data.",

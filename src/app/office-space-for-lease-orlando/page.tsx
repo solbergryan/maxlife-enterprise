@@ -4,12 +4,12 @@ import JsonLd from "@/components/JsonLd";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 export const metadata: Metadata = {
-  title: "Office Space for Lease in Orlando | MaxLife Enterprise",
+  title: "Office Space for Lease in Orlando | MaxLife Realty",
   description:
     "Find office space for lease in Orlando, Lake Nona, and Downtown Orlando. Class A, B, and flex office space from Central Florida's commercial real estate broker.",
   alternates: { canonical: "/office-space-for-lease-orlando" },
   openGraph: {
-    title: "Office Space for Lease in Orlando | MaxLife Enterprise",
+    title: "Office Space for Lease in Orlando | MaxLife Realty",
     description:
       "Class A, B, and flex office space for lease across Orlando, Lake Nona, Maitland, Winter Park, and Downtown Orlando.",
   },
@@ -90,7 +90,7 @@ const faqs = [
   },
   {
     q: "Do tenants pay a broker commission?",
-    a: "No. Tenant representation in Orlando commercial real estate is paid by the landlord out of the deal — so working with a tenant-rep broker like MaxLife Enterprise costs you nothing.",
+    a: "No. Tenant representation in Orlando commercial real estate is paid by the landlord out of the deal — so working with a tenant-rep broker like MaxLife Realty costs you nothing.",
   },
   {
     q: "How long does it take to find and lease office space?",
@@ -128,7 +128,7 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
           name: "Office Space for Lease in Orlando",
           provider: {
             "@type": "RealEstateAgent",
-            name: "MaxLife Enterprise",
+            name: "MaxLife Realty",
             url: "https://maxlifedevelopment.com",
           },
           areaServed: [
@@ -156,7 +156,7 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
             Downtown Orlando
           </p>
           <p className="text-gray-400 max-w-3xl leading-relaxed">
-            MaxLife Enterprise helps tenants find office space for lease in
+            MaxLife Realty helps tenants find office space for lease in
             Orlando and throughout Central Florida. From single-office users
             needing a few hundred square feet to growing companies taking a full
             floor, our tenant-rep team identifies the right buildings, tours

@@ -16,7 +16,7 @@ const articleSchema = {
   author: { "@type": "Person", name: "Ryan Solberg" },
   publisher: {
     "@type": "Organization",
-    name: "MaxLife Enterprise",
+    name: "MaxLife Realty",
     logo: {
       "@type": "ImageObject",
       url: "https://maxlifedevelopment.com/logo.png",
@@ -628,7 +628,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               Ready to Buy Commercial Property in Orlando?
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise helps investors find, analyze, and close
+              MaxLife Realty helps investors find, analyze, and close
               commercial real estate deals across Central Florida. Whether you
               are acquiring your first commercial property or expanding an
               existing portfolio, our team provides end-to-end advisory from

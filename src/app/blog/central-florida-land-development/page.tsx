@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Why Central Florida Is Hot for Land Development | MaxLife Enterprise",
+  title: "Why Central Florida Is Hot for Land Development | MaxLife Realty",
   description:
     "Central Florida land development trends: population growth, infrastructure investment, and rising demand across the Orlando and Space Coast corridors.",
 };
@@ -182,7 +182,7 @@ export default function CentralFloridaLandArticle() {
               Looking for Land in Central Florida?
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise brokers land deals across Orange, Brevard,
+              MaxLife Realty brokers land deals across Orange, Brevard,
               Seminole, and Osceola counties. Whether you&apos;re buying or
               selling, we know the market.
             </p>

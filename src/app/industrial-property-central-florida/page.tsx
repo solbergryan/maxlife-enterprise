@@ -6,7 +6,7 @@ import LeadCaptureForm from "@/components/LeadCaptureForm";
 export const metadata: Metadata = {
   title: "Industrial Property for Sale in Central Florida | MaxLife",
   description:
-    "Industrial property and warehouse for sale across Central Florida and the I-4 corridor. Flex, distribution, and manufacturing space from MaxLife Enterprise.",
+    "Industrial property and warehouse for sale across Central Florida and the I-4 corridor. Flex, distribution, and manufacturing space from MaxLife Realty.",
   alternates: { canonical: "/industrial-property-central-florida" },
   openGraph: {
     title: "Industrial Property for Sale in Central Florida | MaxLife",
@@ -118,7 +118,7 @@ export default function IndustrialPropertyCentralFloridaPage() {
           name: "Industrial Property Brokerage — Central Florida",
           provider: {
             "@type": "RealEstateAgent",
-            name: "MaxLife Enterprise",
+            name: "MaxLife Realty",
             url: "https://maxlifedevelopment.com",
           },
           areaServed: [
@@ -148,7 +148,7 @@ export default function IndustrialPropertyCentralFloridaPage() {
             across the I-4 corridor
           </p>
           <p className="text-gray-400 max-w-3xl leading-relaxed">
-            MaxLife Enterprise represents industrial buyers, sellers, and
+            MaxLife Realty represents industrial buyers, sellers, and
             investors across Central Florida — from Orlando and the airport
             submarkets to Apopka, Sanford, the Space Coast, and Polk County.
             We help users find the right building and help investors identify
@@ -263,7 +263,7 @@ export default function IndustrialPropertyCentralFloridaPage() {
           <p className="text-gray-400 max-w-3xl leading-relaxed mb-6">
             Whether you&apos;re an owner-user looking for a warehouse to buy,
             an investor searching for income-producing industrial, or a
-            developer sourcing land for a new build, MaxLife Enterprise brings
+            developer sourcing land for a new build, MaxLife Realty brings
             local market knowledge, disciplined underwriting, and a deep
             network of owners and developers across Central Florida.
           </p>

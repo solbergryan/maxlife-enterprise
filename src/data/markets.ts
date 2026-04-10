@@ -22,9 +22,9 @@ export const markets: Market[] = [
     slug: "orlando-commercial-real-estate",
     name: "Orlando",
     county: "Orange County",
-    metaTitle: "Orlando Commercial Real Estate Market | MaxLife Enterprise",
+    metaTitle: "Orlando Commercial Real Estate Market | MaxLife Realty",
     metaDescription:
-      "Orlando commercial real estate market overview — submarkets, cap rates, rent trends, and available listings from MaxLife Enterprise, Central Florida's commercial real estate broker.",
+      "Orlando commercial real estate market overview — submarkets, cap rates, rent trends, and available listings from MaxLife Realty, Central Florida's commercial real estate broker.",
     heroHeading: "Orlando Commercial Real Estate Market",
     heroSubheading:
       "Central Florida's fastest-growing CRE market. Retail, office, industrial, multifamily, and NNN investment properties across Orange County and the surrounding Orlando metro.",
@@ -227,7 +227,7 @@ export const markets: Market[] = [
     slug: "lake-nona-commercial-real-estate",
     name: "Lake Nona",
     county: "Orange County",
-    metaTitle: "Lake Nona Commercial Real Estate | MaxLife Enterprise",
+    metaTitle: "Lake Nona Commercial Real Estate | MaxLife Realty",
     metaDescription:
       "Explore commercial real estate investment opportunities in Lake Nona, FL. Medical City anchored healthcare economy, multifamily, logistics, and mixed-use properties in one of Orlando's fastest-growing submarkets.",
     heroHeading: "Lake Nona Commercial Real Estate",

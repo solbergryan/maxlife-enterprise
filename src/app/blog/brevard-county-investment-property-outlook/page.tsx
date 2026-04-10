@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Brevard County Investment Property Outlook | MaxLife Enterprise",
+  title: "Brevard County Investment Property Outlook | MaxLife Realty",
   description:
     "Investment property outlook for Brevard County and Florida's Space Coast. Market trends, growth drivers, and commercial real estate opportunities in Melbourne, Palm Bay, and Titusville.",
 };
@@ -13,7 +13,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Brevard County Investment Property Outlook",
   author: { "@type": "Person", name: "Ryan Solberg" },
-  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty" },
   datePublished: "2026-04-01",
   description:
     "Investment property outlook for Brevard County and Florida's Space Coast. Market trends, growth drivers, and commercial real estate opportunities in Melbourne, Palm Bay, and Titusville.",

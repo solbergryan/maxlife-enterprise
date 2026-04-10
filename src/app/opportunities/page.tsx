@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { listings } from "@/data/listings";
 import ListingCard from "@/components/ListingCard";
 import ListingGrid from "@/components/ListingGrid";
+import ListingDisclaimer from "@/components/ListingDisclaimer";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 import CTABanner from "@/components/CTABanner";
 import JsonLd from "@/components/JsonLd";
@@ -26,13 +27,13 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Commercial Property for Sale Orlando FL",
+  title: "Commercial Property for Sale Orlando FL | Syndicated Market Listings",
   description:
-    "Browse Orlando commercial real estate listings and central Florida investment properties for sale. Find NNN, retail, office, industrial & multifamily deals.",
+    "Browse syndicated Orlando and Central Florida commercial real estate listings aggregated from third-party sources. NNN, retail, office, industrial, and multifamily deals. Attribution to the listing brokerage of record on every property.",
   openGraph: {
-    title: "Orlando Commercial Real Estate Listings | Properties for Sale",
+    title: "Orlando Commercial Real Estate Listings | Central Florida Market",
     description:
-      "Browse 1,000+ commercial properties for sale across Orlando and Central Florida. NNN, retail, office, industrial, and multifamily opportunities.",
+      "Browse 1,000+ syndicated commercial properties across Orlando and Central Florida. Listings are marketed by their respective listing brokerages \u2014 MaxLife Realty is not the listing broker for third-party listings.",
   },
 };
 
@@ -50,25 +51,32 @@ export default function OpportunitiesPage() {
             Investment Opportunities
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Commercial Real Estate{" "}
+            Central Florida Market{" "}
             <span className="text-gold">Opportunities</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            Browse 1,000+ active commercial real estate listings across Central
-            Florida and the Space Coast. Filter by property type, county, or
-            search by name.
+            Browse 1,000+ syndicated commercial real estate listings across
+            Central Florida and the Space Coast. Listings are marketed by
+            their respective listing brokerages and link to the original
+            listing source.
           </p>
         </div>
       </section>
 
+      {/* Persistent top-of-page compliance banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <ListingDisclaimer />
+      </section>
+
       {/* Featured Picks */}
       {featured.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
           <h2 className="text-2xl font-bold text-white mb-2">
-            Featured Opportunities
+            Featured Market Listings
           </h2>
           <p className="text-gray-500 mb-6">
-            Hand-picked investment properties with strong fundamentals
+            Third-party investment properties with strong fundamentals. See
+            each listing card for the listing brokerage of record.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.map((listing, i) => (
@@ -89,17 +97,38 @@ export default function OpportunitiesPage() {
         </p>
         <ListingGrid listings={allListings} />
 
-        {/* Broker Compliance Disclaimer */}
-        <div className="mt-10 bg-dark-card border border-dark-border rounded-lg p-4">
-          <p className="text-gray-500 text-xs leading-relaxed">
-            The listings above are sourced from Crexi and may be listed by
-            third-party brokers. Listing information is deemed reliable but not
-            guaranteed. Each listing links to its original Crexi page where full
-            broker and brokerage details are available. MaxLife Enterprise is not
-            the listing broker for third-party listings unless otherwise noted.
-            Contact us or visit the original listing for complete broker
-            information, terms, and conditions. FL Broker License #3354351.
-          </p>
+        {/* Broker Compliance Disclaimer (full legal text) */}
+        <div className="mt-10 bg-dark-card border border-gold/20 rounded-lg p-5">
+          <h3 className="text-gold font-semibold text-sm mb-2">
+            Broker Attribution &amp; Disclaimer
+          </h3>
+          <div className="text-gray-500 text-xs leading-relaxed space-y-2">
+            <p>
+              All properties displayed above are syndicated third-party
+              listings sourced from Crexi and are marketed by their respective
+              listing brokerages.{" "}
+              <span className="text-gray-300 font-semibold">
+                MaxLife Realty is not the listing broker for any third-party
+                listing on this page.
+              </span>{" "}
+              Each listing card links directly to the original listing source
+              where the full listing brokerage of record, listing agent, terms,
+              conditions, and contact information are available.
+            </p>
+            <p>
+              Listing information, including price, square footage, cap rate,
+              NOI, tenant data, and property details, is deemed reliable but
+              is not guaranteed and may have changed since syndication. Buyers
+              and investors must verify all information directly with the
+              listing brokerage of record and conduct their own due diligence
+              before acting on any information shown here.
+            </p>
+            <p>
+              MaxLife Realty &middot; Florida Licensed Real Estate Brokerage
+              &middot; Ryan Solberg, Managing Broker &middot; FL Broker License
+              #3354351 &middot; Equal Housing Opportunity.
+            </p>
+          </div>
         </div>
       </section>
 

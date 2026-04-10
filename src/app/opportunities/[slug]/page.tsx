@@ -17,7 +17,7 @@ export async function generateMetadata({
   const deal = getDealBySlug(slug);
   if (!deal) return { title: "Deal Not Found" };
   return {
-    title: `${deal.title} | MaxLife Enterprise`,
+    title: `${deal.title} | MaxLife Realty`,
     description: deal.description,
   };
 }

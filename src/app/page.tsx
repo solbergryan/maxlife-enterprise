@@ -3,6 +3,7 @@ import { listings } from "@/data/listings";
 import { caseStudies } from "@/data/case-studies";
 import { markets } from "@/data/markets";
 import ListingCard from "@/components/ListingCard";
+import ListingDisclaimer from "@/components/ListingDisclaimer";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 
@@ -24,7 +25,7 @@ export default function HomePage() {
             <span className="text-gold">Broker &amp; Advisor</span>
           </h1>
           <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mb-10 leading-relaxed">
-            MaxLife Enterprise is a Central Florida commercial real estate
+            MaxLife Realty is a Central Florida commercial real estate
             brokerage specializing in commercial property sales, leasing, NNN
             investments, and land development across Orlando, the Space Coast,
             and Lake Nona.
@@ -54,13 +55,13 @@ export default function HomePage() {
 
       {/* Featured Active Deals */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-2xl font-bold text-white">
-              Current Opportunities
+              Featured Market Listings
             </h2>
             <p className="text-gray-500 mt-1">
-              Active commercial real estate investment opportunities
+              Syndicated third-party commercial real estate opportunities
             </p>
           </div>
           <Link
@@ -69,6 +70,9 @@ export default function HomePage() {
           >
             View All Deals &rarr;
           </Link>
+        </div>
+        <div className="mb-6">
+          <ListingDisclaimer />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredListings.map((listing, i) => (
@@ -334,7 +338,7 @@ export default function HomePage() {
               Local Expertise. Investor-First Approach.
             </h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              MaxLife Enterprise specializes in commercial real estate across
+              MaxLife Realty specializes in commercial real estate across
               Central Florida and the Space Coast. We combine deep local market
               knowledge with disciplined underwriting to help investors find,
               acquire, and maximize high-performing assets.

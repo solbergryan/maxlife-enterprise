@@ -496,7 +496,7 @@ export default function OrlandoMultifamilyGuideArticle() {
                 Orlando commercial real estate landscape
               </Link>{" "}
               to understand how multifamily fits within the full spectrum of
-              investment opportunities in the metro. MaxLife Enterprise works
+              investment opportunities in the metro. MaxLife Realty works
               with multifamily investors at every stage of the process, from
               market research and deal sourcing to underwriting support and
               transaction management.
@@ -509,7 +509,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               Ready to Invest in Orlando Multifamily?
             </h3>
             <p className="text-gray-400 mb-6">
-              MaxLife Enterprise specializes in multifamily investment
+              MaxLife Realty specializes in multifamily investment
               opportunities across Central Florida. Let us help you find,
               evaluate, and acquire your next apartment property.
             </p>

@@ -38,7 +38,7 @@ export default function Navbar() {
             <span className="text-gold font-bold text-xl tracking-tight">
               MaxLife
             </span>
-            <span className="text-white font-light text-xl">Enterprise</span>
+            <span className="text-white font-light text-xl">Realty</span>
           </Link>
 
           {/* Desktop nav */}

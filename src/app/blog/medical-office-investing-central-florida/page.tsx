@@ -29,7 +29,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Medical Office Investing in Central Florida",
   author: { "@type": "Person", name: "Ryan Solberg" },
-  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty" },
   datePublished: "2026-04-01",
   description:
     "Guide to medical office real estate investing in Central Florida. Covers Lake Nona, AdventHealth, lease structures, cap rates, and top submarkets for MOB investment.",

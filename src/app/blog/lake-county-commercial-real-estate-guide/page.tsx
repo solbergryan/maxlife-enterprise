@@ -4,7 +4,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title:
-    "Lake County FL Commercial Real Estate Guide | MaxLife Enterprise",
+    "Lake County FL Commercial Real Estate Guide | MaxLife Realty",
   description:
     "Discover why Lake County FL is Central Florida's next commercial real estate growth corridor. Clermont, Minneola, and Wellness Way development data for investors.",
   openGraph: {
@@ -30,7 +30,7 @@ const articleSchema = {
   headline:
     "Lake County FL Commercial Real Estate: The Growth Corridor Investors Are Missing",
   author: { "@type": "Person", name: "Ryan Solberg" },
-  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty" },
   datePublished: "2026-04-01",
   description:
     "Discover why Lake County FL is Central Florida's next commercial real estate growth corridor. Clermont, Minneola, and Wellness Way development data for investors.",

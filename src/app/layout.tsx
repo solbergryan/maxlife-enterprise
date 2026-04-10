@@ -12,9 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://maxlifedevelopment.com"),
   title: {
-    template: "%s | MaxLife Enterprise",
+    template: "%s | MaxLife Realty",
     default:
-      "Orlando Commercial Real Estate Broker | Central Florida CRE | MaxLife Enterprise",
+      "Orlando Commercial Real Estate Broker | Central Florida CRE | MaxLife Realty",
   },
   description:
     "Orlando commercial real estate broker specializing in commercial property sales, leasing, NNN investments, and land development across Central Florida. Office, retail, industrial, and mixed-use expertise.",
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
     "build-to-suit Orlando",
   ],
   authors: [{ name: "Ryan Solberg", url: "https://maxlifedevelopment.com/about" }],
-  creator: "MaxLife Enterprise",
+  creator: "MaxLife Realty",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "MaxLife Enterprise",
+    siteName: "MaxLife Realty",
     url: "https://maxlifedevelopment.com",
     title:
-      "Orlando Commercial Real Estate Broker | Central Florida CRE | MaxLife Enterprise",
+      "Orlando Commercial Real Estate Broker | Central Florida CRE | MaxLife Realty",
     description:
       "Central Florida's trusted commercial real estate brokerage. Sales, leasing, NNN investments, and land development across Orlando and the Space Coast.",
     images: [
@@ -50,14 +50,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MaxLife Enterprise — Orlando Commercial Real Estate",
+        alt: "MaxLife Realty — Orlando Commercial Real Estate",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Orlando Commercial Real Estate Broker | MaxLife Enterprise",
+      "Orlando Commercial Real Estate Broker | MaxLife Realty",
     description:
       "Sales, leasing, NNN investments, and land development across Central Florida.",
     images: ["/og-image.jpg"],
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["RealEstateAgent", "LocalBusiness"],
-  name: "MaxLife Enterprise",
+  name: "MaxLife Realty",
   alternateName: "MaxLife Realty LLC",
   url: "https://maxlifedevelopment.com",
   logo: "https://maxlifedevelopment.com/logo.png",
@@ -153,7 +153,7 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "MaxLife Enterprise",
+  name: "MaxLife Realty",
   url: "https://maxlifedevelopment.com",
 };
 

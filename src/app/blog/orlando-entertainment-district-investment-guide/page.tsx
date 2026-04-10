@@ -4,7 +4,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title:
-    "Orlando Entertainment District CRE Investment Guide: Disney, Universal & I-Drive Corridor | MaxLife Enterprise",
+    "Orlando Entertainment District CRE Investment Guide: Disney, Universal & I-Drive Corridor | MaxLife Realty",
   description:
     "Comprehensive commercial real estate investment guide for Orlando's entertainment and theme park corridor. Covers Epic Universe impact, Disney expansion, I-Drive corridor, hospitality investment, and strategies for the tourism-driven CRE market.",
 };
@@ -15,7 +15,7 @@ const articleSchema = {
   headline:
     "Orlando's Entertainment District: A CRE Investment Guide for the Disney, Universal & I-Drive Corridor",
   author: { "@type": "Person", name: "Ryan Solberg" },
-  publisher: { "@type": "Organization", name: "MaxLife Enterprise" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty" },
   datePublished: "2026-04-01",
   description:
     "Comprehensive commercial real estate investment guide for Orlando's entertainment and theme park corridor. Covers Epic Universe impact, Disney expansion, I-Drive corridor, hospitality investment, and strategies for the tourism-driven CRE market.",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Commercial Real Estate Brokerage | MaxLife Enterprise",
+  title: "Commercial Real Estate Brokerage | MaxLife Realty",
   description:
     "Full-service commercial real estate brokerage in Central Florida. Office, retail, industrial, and investment properties. Acquisitions, dispositions, and lease negotiations.",
 };

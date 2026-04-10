@@ -4,12 +4,12 @@ import JsonLd from "@/components/JsonLd";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 export const metadata: Metadata = {
-  title: "Retail Space for Rent in Orlando | MaxLife Enterprise",
+  title: "Retail Space for Rent in Orlando | MaxLife Realty",
   description:
     "Retail space for rent in Orlando's top submarkets. Endcap, inline, and anchored retail spaces from your Central Florida commercial real estate broker.",
   alternates: { canonical: "/retail-space-for-rent-orlando" },
   openGraph: {
-    title: "Retail Space for Rent in Orlando | MaxLife Enterprise",
+    title: "Retail Space for Rent in Orlando | MaxLife Realty",
     description:
       "Endcap, inline, freestanding, and anchored retail space for rent in Orlando, Lake Nona, I-Drive, Sand Lake, and Winter Park.",
   },
@@ -137,7 +137,7 @@ export default function RetailSpaceForRentOrlandoPage() {
           name: "Retail Space for Rent in Orlando",
           provider: {
             "@type": "RealEstateAgent",
-            name: "MaxLife Enterprise",
+            name: "MaxLife Realty",
             url: "https://maxlifedevelopment.com",
           },
           areaServed: [
@@ -165,7 +165,7 @@ export default function RetailSpaceForRentOrlandoPage() {
             Orlando&apos;s top submarkets
           </p>
           <p className="text-gray-400 max-w-3xl leading-relaxed">
-            MaxLife Enterprise represents retail tenants across Orlando and
+            MaxLife Realty represents retail tenants across Orlando and
             Central Florida — from local restaurants and service businesses to
             regional and national chains. We find the right space, negotiate
             favorable lease terms, and help you open on time and on budget.

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | MaxLife Enterprise",
+  title: "Services | MaxLife Realty",
   description:
     "Commercial real estate, NNN investments, land brokerage & development, residential real estate, property services, and custom solutions in Central Florida.",
 };
@@ -134,7 +134,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
             From NNN investment properties and land development to residential
-            brokerage and property services — MaxLife Enterprise delivers
+            brokerage and property services — MaxLife Realty delivers
             results across the full spectrum of real estate.
           </p>
         </div>
