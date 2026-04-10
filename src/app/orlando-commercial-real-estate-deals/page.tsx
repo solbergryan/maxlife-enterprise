@@ -211,6 +211,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
           <div className="mt-8">
             <a
               href="#get-deal-access"
+              data-track="hero-cta-deals-landing"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors"
             >
               Get Off-Market Deal Access

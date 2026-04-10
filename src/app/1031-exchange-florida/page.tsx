@@ -107,6 +107,7 @@ export default function ExchangeFlorida1031Page() {
           <div className="flex flex-wrap gap-4 mb-8">
             <Link
               href="/deal-analyzer"
+              data-track="hero-cta-1031-landing"
               className="bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors inline-block"
             >
               Analyze a Replacement Property

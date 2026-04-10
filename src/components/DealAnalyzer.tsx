@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { trackDealAnalyzerUse } from "@/lib/analytics";
 import {
   ResponsiveContainer, BarChart, Bar, AreaChart, Area,
   XAxis, YAxis, Tooltip, Legend, CartesianGrid,
@@ -207,6 +208,7 @@ function InputField({ label, value, onChange, placeholder, step, prefix, suffix 
 export default function DealAnalyzer() {
   const [inputs, setInputs] = useState<Inputs>(DEFAULT_INPUTS);
   const [showCashFlows, setShowCashFlows] = useState(false);
+  const hasTrackedRef = useRef(false);
 
   const set = (field: keyof Inputs) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setInputs(prev => ({ ...prev, [field]: e.target.value }));
@@ -359,6 +361,27 @@ export default function DealAnalyzer() {
     }
     return null;
   }, [inputs]);
+
+  // ── Analytics: fire deal_analyzer_use once per session after meaningful input ──
+  useEffect(() => {
+    if (hasTrackedRef.current) return;
+    if (!analysis) return;
+    // Only fire after the user has changed inputs from defaults
+    const hasChanged =
+      inputs.purchasePrice !== DEFAULT_INPUTS.purchasePrice ||
+      inputs.annualRent !== DEFAULT_INPUTS.annualRent ||
+      inputs.monthlyRentPerUnit !== DEFAULT_INPUTS.monthlyRentPerUnit;
+    if (!hasChanged) return;
+    const timer = setTimeout(() => {
+      hasTrackedRef.current = true;
+      trackDealAnalyzerUse({
+        asset_type: inputs.assetType,
+        purchase_price: Number(inputs.purchasePrice) || 0,
+        cap_rate: Math.round(analysis.entranceCap * 10000) / 100,
+      });
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [inputs, analysis]);
 
   // ── Sensitivity matrix ───────────────────────────────────────────
   const sensitivity = useMemo(() => {

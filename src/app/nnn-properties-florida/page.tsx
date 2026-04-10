@@ -148,6 +148,7 @@ export default function NNNPropertiesFloridaPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="#available-nnn"
+              data-track="hero-cta-nnn-landing"
               className="bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors inline-block"
             >
               See Available Properties

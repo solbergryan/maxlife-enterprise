@@ -209,6 +209,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="#inventory"
+              data-track="hero-cta-land-landing"
               className="bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors inline-block"
             >
               Get Land Inventory

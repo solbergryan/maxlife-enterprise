@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackFormSubmit } from "@/lib/analytics";
 
 const investmentRanges = [
   "$100K – $500K",
@@ -106,6 +107,13 @@ export default function LeadCaptureForm({
       });
 
       if (res.ok) {
+        trackFormSubmit({
+          form_type: source,
+          source_page:
+            typeof window !== "undefined" ? window.location.pathname : source,
+          investment_range: form.investmentRange || "Not specified",
+          timeline: form.timeline || "Not specified",
+        });
         setSubmitted(true);
       } else {
         setError(
