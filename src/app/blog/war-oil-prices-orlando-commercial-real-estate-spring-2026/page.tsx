@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import WarOilChartsSection from "./Charts";
 
 export const metadata: Metadata = {
   title:
@@ -304,6 +305,24 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               for a deeper submarket view.
             </p>
           </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4">
+              By the Numbers
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              The five channels above are qualitative — here&apos;s what
+              the same story looks like in charts. The data is illustrative
+              and directional: construction-cost exposure is based on
+              industry-level estimates, the sector sensitivity scores are
+              our own directional view for Orlando, and the cap rate
+              sensitivity chart is pure math on a hypothetical $5M NNN
+              deal. The purpose is to make the mechanism visible, not to
+              predict specific outcomes.
+            </p>
+          </section>
+
+          <WarOilChartsSection />
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">
