@@ -81,6 +81,71 @@ const articles = [
     date: "April 2026",
     readTime: "4 min read",
   },
+  {
+    slug: "orlando-industrial-real-estate-guide",
+    title: "Orlando Industrial Real Estate: An Investor's Guide",
+    excerpt:
+      "Warehouse, logistics, flex space, and distribution properties across Orange, Seminole, and Osceola counties. Submarkets, cap rates, and what to look for.",
+    category: "Investment Guide",
+    date: "April 2026",
+    readTime: "10 min read",
+  },
+  {
+    slug: "orlando-multifamily-investment-guide",
+    title: "Orlando Multifamily Investment Guide",
+    excerpt:
+      "Market data, cap rates, value-add strategies, and top submarkets for apartment investors in Central Florida's fastest-growing metro.",
+    category: "Investment Guide",
+    date: "April 2026",
+    readTime: "10 min read",
+  },
+  {
+    slug: "orlando-retail-commercial-real-estate",
+    title: "Orlando Retail Commercial Real Estate Guide",
+    excerpt:
+      "Strip centers, outparcels, shopping centers, and single-tenant retail properties across Central Florida's highest-traffic corridors.",
+    category: "Investment Guide",
+    date: "April 2026",
+    readTime: "9 min read",
+  },
+  {
+    slug: "orlando-nnn-properties-for-sale",
+    title: "Orlando NNN Properties for Sale: Investor Guide",
+    excerpt:
+      "Single-tenant triple net lease investments with national credit tenants across Central Florida. Tenant profiles, cap rates, and evaluation criteria.",
+    category: "NNN Investing",
+    date: "April 2026",
+    readTime: "8 min read",
+  },
+  {
+    slug: "how-to-buy-commercial-property-orlando",
+    title: "How to Buy Commercial Property in Orlando",
+    excerpt:
+      "Step-by-step guide to buying commercial property in Orlando. Investment criteria, due diligence, financing, and the closing process.",
+    category: "Buyer Guide",
+    date: "April 2026",
+    readTime: "12 min read",
+    featured: true,
+  },
+  {
+    slug: "orlando-cap-rates-investor-guide",
+    title: "Orlando Cap Rates: A Guide for CRE Investors",
+    excerpt:
+      "Current cap rates for Orlando commercial real estate by property type — NNN, retail, multifamily, industrial, and office. Trends and how to find value.",
+    category: "Market Analysis",
+    date: "April 2026",
+    readTime: "10 min read",
+    featured: true,
+  },
+  {
+    slug: "1031-exchange-orlando-guide",
+    title: "1031 Exchange Guide for Orlando CRE Investors",
+    excerpt:
+      "Timelines, rules, replacement property strategies, and how to execute a tax-deferred 1031 exchange in Central Florida.",
+    category: "Tax & Strategy",
+    date: "April 2026",
+    readTime: "9 min read",
+  },
 ];
 
 export default function BlogPage() {

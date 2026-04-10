@@ -605,8 +605,8 @@ export default function DealAnalyzer() {
                     <Tooltip
                       contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
                       labelStyle={{ color: "#9ca3af" }}
-                      formatter={(value: number) => [fmt(value), undefined]}
-                      labelFormatter={(label: string) => `Year ${label}`}
+                      formatter={(value) => [fmt(Number(value ?? 0)), undefined]}
+                      labelFormatter={(label) => `Year ${label}`}
                     />
                     <Legend wrapperStyle={{ fontSize: 11, color: "#9ca3af" }} />
                     <Bar dataKey="noi" name="NOI" fill="#EFBF04" radius={[2, 2, 0, 0]} />
@@ -630,8 +630,8 @@ export default function DealAnalyzer() {
                     <Tooltip
                       contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
                       labelStyle={{ color: "#9ca3af" }}
-                      formatter={(value: number) => [fmt(value), undefined]}
-                      labelFormatter={(label: string) => `Year ${label}`}
+                      formatter={(value) => [fmt(Number(value ?? 0)), undefined]}
+                      labelFormatter={(label) => `Year ${label}`}
                     />
                     <Legend wrapperStyle={{ fontSize: 11, color: "#9ca3af" }} />
                     <Area type="monotone" dataKey="paydown" name="Loan Paydown" stackId="1" fill="#3b82f6" fillOpacity={0.6} stroke="#3b82f6" />
@@ -655,8 +655,8 @@ export default function DealAnalyzer() {
                     <Tooltip
                       contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
                       labelStyle={{ color: "#9ca3af" }}
-                      formatter={(value: number) => [fmt(value), undefined]}
-                      labelFormatter={(label: string) => `Year ${label}`}
+                      formatter={(value) => [fmt(Number(value ?? 0)), undefined]}
+                      labelFormatter={(label) => `Year ${label}`}
                     />
                     <Bar dataKey="noi" name="NOI" fill="#EFBF04" radius={[4, 4, 0, 0]} />
                   </BarChart>
@@ -677,8 +677,8 @@ export default function DealAnalyzer() {
                     <Tooltip
                       contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
                       labelStyle={{ color: "#9ca3af" }}
-                      formatter={(value: number) => [fmt(value), undefined]}
-                      labelFormatter={(label: string) => `Year ${label}`}
+                      formatter={(value) => [fmt(Number(value ?? 0)), undefined]}
+                      labelFormatter={(label) => `Year ${label}`}
                     />
                     <Area type="monotone" dataKey="loanBal" name="Loan Balance" fill="#ef4444" fillOpacity={0.3} stroke="#ef4444" strokeWidth={2} />
                   </AreaChart>

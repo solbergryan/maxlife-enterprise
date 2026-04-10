@@ -134,6 +134,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "central-florida-land-development",
     "orlando-entertainment-district-investment-guide",
     "what-is-nnn-lease",
+    "orlando-industrial-real-estate-guide",
+    "orlando-multifamily-investment-guide",
+    "orlando-retail-commercial-real-estate",
+    "orlando-nnn-properties-for-sale",
+    "how-to-buy-commercial-property-orlando",
+    "orlando-cap-rates-investor-guide",
+    "1031-exchange-orlando-guide",
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
