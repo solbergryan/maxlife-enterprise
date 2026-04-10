@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 
 export default function LandDevelopmentPage() {
   return (
+    <>
     <ServicePageLayout
       title="Land for Development in Central Florida"
       subtitle="Land Brokerage & Development"
@@ -86,5 +88,33 @@ export default function LandDevelopmentPage() {
         "Full-service from raw land to finished product",
       ]}
     />
+    {/* Related */}
+    <section className="border-t border-dark-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 className="text-xl font-bold text-white mb-4">
+          Related: Build-to-Suit Development in Orlando
+        </h2>
+        <p className="text-gray-400 max-w-3xl leading-relaxed mb-4">
+          Already have a site or need one selected for a custom build? Our{" "}
+          <Link
+            href="/build-to-suit-orlando"
+            className="text-gold hover:underline"
+          >
+            build-to-suit Orlando
+          </Link>{" "}
+          service covers site selection, entitlements, and turnkey construction
+          for retail, QSR, medical, office, and industrial users across Central
+          Florida. We also source{" "}
+          <Link
+            href="/central-florida-land-for-development"
+            className="text-gold hover:underline"
+          >
+            land for development across Central Florida
+          </Link>{" "}
+          and entitled sites ready for vertical construction.
+        </p>
+      </div>
+    </section>
+    </>
   );
 }
