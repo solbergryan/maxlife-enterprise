@@ -1,6 +1,10 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import {
+  ResponsiveContainer, BarChart, Bar, AreaChart, Area,
+  XAxis, YAxis, Tooltip, Legend, CartesianGrid,
+} from "recharts";
 
 // ── Types ──────────────────────────────────────────────────────────
 type AssetType = "NNN" | "Multifamily" | "SFR";
@@ -264,7 +268,7 @@ export default function DealAnalyzer() {
 
     // Year-by-year projection
     const cashFlows: number[] = [-equity];
-    const yearlyData: { year: number; noi: number; ds: number; cf: number; cumCF: number }[] = [];
+    const yearlyData: { year: number; noi: number; ds: number; cf: number; cumCF: number; loanBal: number; equityBuildup: number; appreciation: number; paydown: number }[] = [];
     let totalNOI = 0, totalCF = 0, cumCF = 0;
 
     for (let yr = 1; yr <= holdYrs; yr++) {
@@ -273,7 +277,13 @@ export default function DealAnalyzer() {
       totalNOI += noiYr;
       totalCF += cfYr;
       cumCF += cfYr;
-      yearlyData.push({ year: yr, noi: noiYr, ds: annualDS, cf: cfYr, cumCF });
+      const loanBal = Math.max(0, calcLoanBalance(loanAmount, rateAnn, amortYrs, yr));
+      const paydown = loanAmount - loanBal;
+      const exitNOIYr = noi1 * Math.pow(1 + rentGrowth, yr);
+      const appreciatedValue = exitCap > 0 ? exitNOIYr / exitCap : price;
+      const appreciation = Math.max(0, appreciatedValue - price);
+      const equityBuildup = paydown + cumCF + appreciation;
+      yearlyData.push({ year: yr, noi: noiYr, ds: annualDS, cf: cfYr, cumCF, loanBal, equityBuildup, appreciation, paydown });
 
       if (yr < holdYrs) {
         cashFlows.push(cfYr);
@@ -578,6 +588,103 @@ export default function DealAnalyzer() {
                 <p className="text-gray-500 text-xs mt-1">{item.score.label}</p>
               </div>
             ))}
+          </div>
+
+          {/* Charts */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Cash Flow Chart */}
+            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <h4 className="text-white font-semibold mb-4">Cash Flow Analysis</h4>
+              <p className="text-gray-600 text-xs mb-4">NOI vs Debt Service vs Cash Flow by year</p>
+              <div className="h-72">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={analysis.yearlyData} margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#1e2d3d" />
+                    <XAxis dataKey="year" tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} />
+                    <YAxis tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}k`} />
+                    <Tooltip
+                      contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
+                      labelStyle={{ color: "#9ca3af" }}
+                      formatter={(value: number) => [fmt(value), undefined]}
+                      labelFormatter={(label: string) => `Year ${label}`}
+                    />
+                    <Legend wrapperStyle={{ fontSize: 11, color: "#9ca3af" }} />
+                    <Bar dataKey="noi" name="NOI" fill="#EFBF04" radius={[2, 2, 0, 0]} />
+                    <Bar dataKey="ds" name="Debt Service" fill="#6b7280" radius={[2, 2, 0, 0]} />
+                    <Bar dataKey="cf" name="Cash Flow" fill="#4ade80" radius={[2, 2, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            {/* Equity Build Chart */}
+            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <h4 className="text-white font-semibold mb-4">Equity Buildup</h4>
+              <p className="text-gray-600 text-xs mb-4">How your equity grows: loan paydown + cash flow + appreciation</p>
+              <div className="h-72">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={analysis.yearlyData} margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#1e2d3d" />
+                    <XAxis dataKey="year" tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} />
+                    <YAxis tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}k`} />
+                    <Tooltip
+                      contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
+                      labelStyle={{ color: "#9ca3af" }}
+                      formatter={(value: number) => [fmt(value), undefined]}
+                      labelFormatter={(label: string) => `Year ${label}`}
+                    />
+                    <Legend wrapperStyle={{ fontSize: 11, color: "#9ca3af" }} />
+                    <Area type="monotone" dataKey="paydown" name="Loan Paydown" stackId="1" fill="#3b82f6" fillOpacity={0.6} stroke="#3b82f6" />
+                    <Area type="monotone" dataKey="cumCF" name="Cumulative Cash Flow" stackId="1" fill="#4ade80" fillOpacity={0.6} stroke="#4ade80" />
+                    <Area type="monotone" dataKey="appreciation" name="Appreciation" stackId="1" fill="#EFBF04" fillOpacity={0.4} stroke="#EFBF04" />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            {/* Rent Schedule Chart */}
+            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <h4 className="text-white font-semibold mb-4">Rent Schedule</h4>
+              <p className="text-gray-600 text-xs mb-4">Annual NOI growth over hold period</p>
+              <div className="h-72">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={analysis.yearlyData} margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#1e2d3d" />
+                    <XAxis dataKey="year" tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} />
+                    <YAxis tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}k`} />
+                    <Tooltip
+                      contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
+                      labelStyle={{ color: "#9ca3af" }}
+                      formatter={(value: number) => [fmt(value), undefined]}
+                      labelFormatter={(label: string) => `Year ${label}`}
+                    />
+                    <Bar dataKey="noi" name="NOI" fill="#EFBF04" radius={[4, 4, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            {/* Loan Paydown Chart */}
+            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <h4 className="text-white font-semibold mb-4">Loan Paydown</h4>
+              <p className="text-gray-600 text-xs mb-4">Remaining loan balance over hold period</p>
+              <div className="h-72">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={analysis.yearlyData} margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#1e2d3d" />
+                    <XAxis dataKey="year" tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} />
+                    <YAxis tick={{ fill: "#9ca3af", fontSize: 11 }} tickLine={false} axisLine={{ stroke: "#1e2d3d" }} tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}k`} />
+                    <Tooltip
+                      contentStyle={{ backgroundColor: "#141414", border: "1px solid #1e2d3d", borderRadius: "8px", fontSize: 12 }}
+                      labelStyle={{ color: "#9ca3af" }}
+                      formatter={(value: number) => [fmt(value), undefined]}
+                      labelFormatter={(label: string) => `Year ${label}`}
+                    />
+                    <Area type="monotone" dataKey="loanBal" name="Loan Balance" fill="#ef4444" fillOpacity={0.3} stroke="#ef4444" strokeWidth={2} />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
           </div>
 
           {/* Key Metrics Summary */}
