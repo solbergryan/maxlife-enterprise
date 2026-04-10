@@ -22,12 +22,12 @@ export const markets: Market[] = [
     slug: "orlando-commercial-real-estate",
     name: "Orlando",
     county: "Orange County",
-    metaTitle: "Orlando Commercial Real Estate | Investment Properties | MaxLife Enterprise",
+    metaTitle: "Orlando Commercial Real Estate Market | MaxLife Enterprise",
     metaDescription:
-      "Find commercial real estate opportunities in Orlando, FL. Retail, office, industrial, multifamily, and NNN investment properties in Orange County. Expert brokerage and market analysis.",
-    heroHeading: "Orlando Commercial Real Estate",
+      "Orlando commercial real estate market overview — submarkets, cap rates, rent trends, and available listings from MaxLife Enterprise, Central Florida's commercial real estate broker.",
+    heroHeading: "Orlando Commercial Real Estate Market",
     heroSubheading:
-      "Investment opportunities in one of America's fastest-growing metros. Retail, office, industrial, multifamily, and NNN properties across Orange County.",
+      "Central Florida's fastest-growing CRE market. Retail, office, industrial, multifamily, and NNN investment properties across Orange County and the surrounding Orlando metro.",
     sections: [
       {
         heading: "Why Orlando Is a Top Commercial Real Estate Market",
@@ -43,6 +43,11 @@ export const markets: Market[] = [
         heading: "Orlando Commercial Real Estate Market Trends",
         content:
           "Several key trends are shaping the Orlando commercial real estate market heading into 2026. Cap rates across most asset classes have stabilized after the interest rate adjustments of recent years, creating more predictable pricing for buyers and sellers. Investors who can identify below-market assets with value-add potential are well-positioned to generate outsized returns.\n\nDevelopment activity remains robust, particularly in the southeastern Orange County corridor and along the I-4 growth spine. New residential communities are creating demand for supporting retail and commercial services, opening opportunities for land acquisition and development.\n\nThe NNN investment market in Orlando remains one of the strongest in Florida. National credit tenants including Dollar General, AutoZone, Walgreens, and Starbucks continue to expand their footprint in the region, providing a steady pipeline of single-tenant NNN investment opportunities with predictable returns and minimal management requirements.\n\nFor investors looking to enter or expand in the Orlando market, working with a broker who understands the local submarkets — from the tourism corridor to the medical district to the suburban growth areas — is essential to identifying the right opportunities and avoiding overpriced assets.",
+      },
+      {
+        heading: "Orlando Commercial Real Estate Submarkets",
+        content:
+          "The Orlando metro is made up of several distinct commercial real estate submarkets, each with its own tenant mix, pricing dynamics, and investment thesis. Understanding these submarkets is essential to identifying the right opportunity for your strategy.\n\nLake Nona & Medical City — Orlando's fastest-growing master-planned community, anchored by UCF Medical School, Nemours Children's Hospital, and the VA Medical Center. Demand is strongest for medical office, life sciences, and Class A multifamily.\n\nInternational Drive (I-Drive) — the tourism and entertainment corridor serving Universal, SeaWorld, and the Orange County Convention Center. Hospitality, retail, and experiential entertainment properties dominate this submarket.\n\nDowntown Orlando — the urban core with a mix of Class A and B office, adaptive reuse projects, and growing multifamily infill. Home to the CBD's major employers, courts, and financial institutions.\n\nMaitland & Winter Park — established suburban office and retail submarkets with strong demographics and high tenant retention. Preferred by professional services, legal, and medical tenants.\n\nSand Lake Road / Dr. Phillips — high-end retail, restaurant, and office demand driven by affluent residential neighborhoods and the proximity to the tourism corridor.\n\nI-4 Corridor / Sanford / Apopka — the industrial and logistics backbone of Central Florida, with warehouse, flex, and distribution space serving the entire state.",
       },
     ],
     propertyTypes: [

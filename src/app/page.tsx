@@ -20,13 +20,14 @@ export default function HomePage() {
             Central Florida &amp; Space Coast
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight">
-            Commercial Real Estate{" "}
-            <span className="text-gold">Investment Opportunities</span>
+            Orlando Commercial Real Estate{" "}
+            <span className="text-gold">Broker &amp; Advisor</span>
           </h1>
-          <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mb-10 leading-relaxed">
-            Helping investors, business owners, and developers identify, acquire,
-            and maximize high-performing commercial real estate assets across
-            Orlando, Brevard County, and Central Florida.
+          <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mb-10 leading-relaxed">
+            MaxLife Enterprise is a Central Florida commercial real estate
+            brokerage specializing in commercial property sales, leasing, NNN
+            investments, and land development across Orlando, the Space Coast,
+            and Lake Nona.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -202,42 +203,42 @@ export default function HomePage() {
       <section className="bg-dark-card/50 border-y border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-2">
-            Full-Service Commercial Real Estate
+            Commercial Real Estate Services in Orlando
           </h2>
           <p className="text-gray-500 mb-8">
-            From deal sourcing to closing — and everything in between
+            Sales, leasing, NNN investments, and land development across Central Florida
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
-                title: "Acquisitions & Dispositions",
-                desc: "Buy-side and sell-side representation for commercial properties across Central Florida.",
-                href: "/services/commercial-real-estate",
+                title: "Commercial Property for Sale",
+                desc: "Income-producing commercial property for sale across Orlando and Central Florida — retail, office, industrial, and mixed-use.",
+                href: "/orlando-commercial-real-estate-deals",
               },
               {
                 title: "NNN Investments",
                 desc: "Single-tenant NNN properties with national credit tenants. Passive income, predictable returns.",
-                href: "/services/nnn-investments",
+                href: "/nnn-properties-florida",
               },
               {
-                title: "Land & Development",
-                desc: "Site selection, land acquisition, entitlements, and development consulting.",
-                href: "/services/land-development",
+                title: "Land for Development",
+                desc: "Shovel-ready and raw land for development across Central Florida, including build-to-suit sites.",
+                href: "/central-florida-land-for-development",
+              },
+              {
+                title: "1031 Exchange Replacement",
+                desc: "1031 exchange replacement properties in Orlando and Central Florida — NNN, multi-tenant, and value-add opportunities.",
+                href: "/1031-exchange-florida",
               },
               {
                 title: "Development Services",
-                desc: "Full development lifecycle from site planning to investor partnerships.",
+                desc: "Full development lifecycle from site selection and entitlements through investor partnerships.",
                 href: "/services/development",
               },
               {
-                title: "Property Services",
-                desc: "Maintenance, repairs, cleaning, and engineering support for commercial properties.",
-                href: "/services/property-services",
-              },
-              {
-                title: "Residential Real Estate",
-                desc: "Home buying, selling, and investment property sourcing across Central Florida.",
-                href: "/services/residential-real-estate",
+                title: "Acquisitions & Dispositions",
+                desc: "Buy-side and sell-side representation for commercial properties across Orlando and the Space Coast.",
+                href: "/services/commercial-real-estate",
               },
             ].map((service) => (
               <Link

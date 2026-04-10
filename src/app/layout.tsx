@@ -14,30 +14,37 @@ export const metadata: Metadata = {
   title: {
     template: "%s | MaxLife Enterprise",
     default:
-      "Orlando Commercial Real Estate Broker | NNN Investments & Development | MaxLife Enterprise",
+      "Orlando Commercial Real Estate Broker | Central Florida CRE | MaxLife Enterprise",
   },
   description:
-    "Orlando commercial real estate broker specializing in NNN investments, acquisitions, and development across Central Florida & the Space Coast. Expert CRE guidance for investors and developers.",
+    "Orlando commercial real estate broker specializing in commercial property sales, leasing, NNN investments, and land development across Central Florida. Office, retail, industrial, and mixed-use expertise.",
   keywords: [
-    "commercial real estate orlando fl",
-    "orlando commercial real estate broker",
-    "NNN investments florida",
-    "central florida commercial property",
-    "orlando investment properties",
-    "space coast commercial real estate",
-    "commercial development orlando",
-    "orlando CRE broker",
+    "commercial real estate Orlando",
+    "Orlando commercial real estate broker",
+    "Central Florida commercial real estate",
+    "commercial property for sale Orlando",
+    "commercial realtors near me",
+    "investment property Orlando",
+    "NNN properties Orlando",
+    "office space for lease Orlando",
+    "retail space for rent Orlando",
+    "industrial property for sale Central Florida",
+    "land for development Central Florida",
+    "1031 exchange Orlando",
+    "build-to-suit Orlando",
   ],
   authors: [{ name: "Ryan Solberg", url: "https://maxlifedevelopment.com/about" }],
   creator: "MaxLife Enterprise",
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "MaxLife Enterprise",
+    url: "https://maxlifedevelopment.com",
     title:
-      "Orlando Commercial Real Estate Broker | NNN Investments & Development | MaxLife Enterprise",
+      "Orlando Commercial Real Estate Broker | Central Florida CRE | MaxLife Enterprise",
     description:
-      "Orlando commercial real estate broker specializing in NNN investments, acquisitions, and development across Central Florida & the Space Coast.",
+      "Central Florida's trusted commercial real estate brokerage. Sales, leasing, NNN investments, and land development across Orlando and the Space Coast.",
     images: [
       {
         url: "/og-image.jpg",
@@ -52,8 +59,13 @@ export const metadata: Metadata = {
     title:
       "Orlando Commercial Real Estate Broker | MaxLife Enterprise",
     description:
-      "NNN investments, acquisitions & development across Central Florida. Expert CRE guidance for investors and developers.",
+      "Sales, leasing, NNN investments, and land development across Central Florida.",
     images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   verification: {
     google: "xr0z972AwostYbn1sRWnuaTl01GP0HlQER__ndULi94",
@@ -62,13 +74,14 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
+  "@type": ["RealEstateAgent", "LocalBusiness"],
   name: "MaxLife Enterprise",
   alternateName: "MaxLife Realty LLC",
   url: "https://maxlifedevelopment.com",
   logo: "https://maxlifedevelopment.com/logo.png",
+  image: "https://maxlifedevelopment.com/og-image.jpg",
   description:
-    "Commercial real estate brokerage, NNN investments, and development services across Central Florida and the Space Coast.",
+    "Orlando commercial real estate broker specializing in commercial property sales, leasing, NNN investments, and land development across Central Florida and the Space Coast.",
   telephone: "(321) 586-2121",
   email: "Ryan@MaxLifeRealty.com",
   address: {
@@ -84,6 +97,7 @@ const organizationSchema = {
   },
   areaServed: [
     { "@type": "City", name: "Orlando" },
+    { "@type": "AdministrativeArea", name: "Central Florida" },
     { "@type": "County", name: "Orange County" },
     { "@type": "County", name: "Seminole County" },
     { "@type": "County", name: "Osceola County" },

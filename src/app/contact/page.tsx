@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Contact Orlando Commercial Real Estate Broker",
   description:
-    "Get a free CRE consultation with MaxLife Enterprise. Contact our Orlando commercial real estate broker to discuss investments, acquisitions & development.",
+    "Contact MaxLife Enterprise — Central Florida commercial realtors serving Orlando, the Space Coast, and Lake Nona. Free CRE consultations for investors, developers, and owners.",
+  alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact MaxLife Enterprise | Orlando CRE Broker",
     description:
@@ -12,9 +14,42 @@ export const metadata: Metadata = {
   },
 };
 
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact MaxLife Enterprise",
+  description:
+    "Contact Orlando commercial real estate broker Ryan Solberg and the MaxLife Enterprise team.",
+  url: "https://maxlifedevelopment.com/contact",
+  mainEntity: {
+    "@type": ["RealEstateAgent", "LocalBusiness"],
+    name: "MaxLife Enterprise",
+    telephone: "(321) 586-2121",
+    email: "Ryan@MaxLifeRealty.com",
+    url: "https://maxlifedevelopment.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Orlando",
+      addressRegion: "FL",
+      addressCountry: "US",
+    },
+    areaServed: [
+      { "@type": "City", name: "Orlando" },
+      { "@type": "AdministrativeArea", name: "Central Florida" },
+      { "@type": "County", name: "Orange County" },
+      { "@type": "County", name: "Brevard County" },
+      { "@type": "County", name: "Seminole County" },
+      { "@type": "County", name: "Lake County" },
+    ],
+    openingHours: "Mo-Fr 08:00-18:00",
+    priceRange: "$$$$",
+  },
+};
+
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={contactPageSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -27,6 +62,23 @@ export default function ContactPage() {
           <p className="text-gray-400 max-w-2xl text-lg">
             Have a project in mind? Need a quote? Just want to ask a question?
             We&apos;re here and ready to help.
+          </p>
+        </div>
+      </section>
+
+      {/* Intro / keyword H2 */}
+      <section className="border-b border-dark-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-2xl font-bold text-white mb-3">
+            Commercial Realtors Serving Central Florida
+          </h2>
+          <p className="text-gray-400 max-w-3xl leading-relaxed">
+            MaxLife Enterprise is a full-service commercial real estate
+            brokerage serving Orlando, the Space Coast, Lake Nona, and the
+            surrounding Central Florida markets. Whether you&apos;re buying,
+            selling, leasing, or developing commercial property, our team
+            combines local market knowledge with disciplined underwriting to
+            deliver results for investors, developers, and owners.
           </p>
         </div>
       </section>

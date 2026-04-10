@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "NNN Investment Properties | MaxLife Enterprise",
+  title: "NNN Investments & Investment Property Orlando | MaxLife",
   description:
-    "Triple net (NNN) investment property brokerage in Central Florida. Passive income, creditworthy tenants, long-term leases. Buy or sell NNN properties with MaxLife Enterprise.",
+    "Investment property and NNN opportunities in Orlando and Central Florida. Triple-net leases, value-add, and 1031 exchange replacement properties from MaxLife Enterprise.",
+  alternates: { canonical: "/services/nnn-investments" },
 };
 
 export default function NNNInvestmentsPage() {
@@ -34,12 +35,20 @@ export default function NNNInvestmentsPage() {
                 Investment Services
               </p>
               <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                NNN Investment Properties
+                Investment Property &amp; NNN Opportunities in Orlando
               </h1>
               <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
-                Build passive income through triple net lease investments. We
-                help investors acquire and dispose of NNN properties backed by
-                creditworthy national tenants across Central Florida and beyond.
+                Build passive income through triple net lease and value-add
+                investment property in Orlando and Central Florida. We help
+                investors acquire and dispose of NNN properties backed by
+                creditworthy national tenants, and we source{" "}
+                <Link
+                  href="/1031-exchange-florida"
+                  className="text-gold hover:underline"
+                >
+                  1031 exchange replacement properties
+                </Link>{" "}
+                for qualified buyers.
               </p>
             </div>
           </div>
