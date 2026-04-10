@@ -141,39 +141,278 @@ function drawBrandedHeader(ctx: CanvasRenderingContext2D, W: number, title: stri
 function drawFooter(ctx: CanvasRenderingContext2D, W: number, H: number, countyLabel: string) {
   // Gold hairline
   ctx.fillStyle = GOLD;
-  ctx.fillRect(40, H - 55, W - 80, 1);
-  ctx.fillStyle = "#666";
+  ctx.fillRect(40, H - 58, W - 80, 1);
+  ctx.fillStyle = "#444";
   ctx.font = "bold 9px Arial, Helvetica, sans-serif";
   ctx.textAlign = "center";
   ctx.fillText(
-    "MaxLife Realty | Ryan Solberg, Managing Broker | maxlifedevelopment.com",
+    "MaxLife Realty  |  Ryan Solberg, Managing Broker  |  FL Broker License #3354351",
     W / 2,
-    H - 40
+    H - 44
   );
-  ctx.fillStyle = "#9aa0ab";
+  ctx.fillStyle = "#666";
   ctx.font = "8px Arial, Helvetica, sans-serif";
   ctx.fillText(
-    `This is an estimate only. Actual figures may vary. ${countyLabel} rates applied.`,
+    "maxlifedevelopment.com  |  Ryan@MaxLifeRealty.com  |  (321) 586-2121",
     W / 2,
-    H - 27
+    H - 32
   );
-  ctx.fillText("Generated " + new Date().toLocaleString(), W / 2, H - 16);
+  ctx.fillStyle = "#9aa0ab";
+  ctx.font = "bold 8px Arial, Helvetica, sans-serif";
+  ctx.fillText(
+    `ESTIMATE ONLY \u2014 NOT A LOAN ESTIMATE OR CLOSING DISCLOSURE. ${countyLabel} defaults applied.`,
+    W / 2,
+    H - 20
+  );
+  ctx.font = "7.5px Arial, Helvetica, sans-serif";
+  ctx.fillText(
+    "See page 2 for full disclosures, disclaimers, and methodology. Generated " +
+      new Date().toLocaleString(),
+    W / 2,
+    H - 10
+  );
   ctx.textAlign = "left";
 }
 
-function openPrintWindow(imgData: string, title: string) {
+// ─── Page 1 "ESTIMATE ONLY" banner (compact single-line) ───
+function drawEstimateBanner(ctx: CanvasRenderingContext2D, W: number, y: number): number {
+  const LM = 40;
+  const bannerH = 18;
+  ctx.fillStyle = "#fef3c7"; // soft gold wash
+  ctx.fillRect(LM, y, W - LM * 2, bannerH);
+  ctx.strokeStyle = GOLD;
+  ctx.lineWidth = 1;
+  ctx.strokeRect(LM, y, W - LM * 2, bannerH);
+  // Gold vertical bar on the left
+  ctx.fillStyle = GOLD;
+  ctx.fillRect(LM, y, 4, bannerH);
+  // Single-line text
+  ctx.fillStyle = "#78350f";
+  ctx.font = "bold 9px Arial, Helvetica, sans-serif";
+  ctx.textAlign = "left";
+  ctx.fillText("ESTIMATE ONLY", LM + 12, y + 12);
+  ctx.fillStyle = "#92400e";
+  ctx.font = "8.5px Arial, Helvetica, sans-serif";
+  ctx.fillText(
+    "\u2014 Not a Loan Estimate or Closing Disclosure. See page 2 for full disclosures.",
+    LM + 85,
+    y + 12
+  );
+  return y + bannerH + 6;
+}
+
+// ─── PAGE 2: Full Legal Disclosures & Disclaimers ───
+function drawDisclosurePage(
+  H: number,
+  W: number,
+  pageTitle: string,
+  countyLabel: string
+): string {
+  const canvas = document.createElement("canvas");
+  canvas.width = W * 2;
+  canvas.height = H * 2;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return "";
+  ctx.scale(2, 2);
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, W, H);
+
+  drawBrandedHeader(ctx, W, "DISCLOSURES", `Page 2 of 2 — ${pageTitle}`);
+
+  const LM = 40;
+  const COL_R = W - 40;
+  const COL_W = COL_R - LM;
+  let y = 120;
+
+  // Big title
+  ctx.fillStyle = INK;
+  ctx.font = "bold 16px Arial, Helvetica, sans-serif";
+  ctx.fillText("Disclosures, Disclaimers & Methodology", LM, y);
+  ctx.fillStyle = GOLD;
+  ctx.fillRect(LM, y + 4, 60, 2);
+  y += 22;
+
+  // Word-wrap helper
+  const wrap = (text: string, maxW: number): string[] => {
+    const words = text.split(/\s+/);
+    const lines: string[] = [];
+    let line = "";
+    for (const word of words) {
+      const test = line ? line + " " + word : word;
+      if (ctx.measureText(test).width > maxW) {
+        if (line) lines.push(line);
+        line = word;
+      } else {
+        line = test;
+      }
+    }
+    if (line) lines.push(line);
+    return lines;
+  };
+
+  const section = (title: string) => {
+    y += 6;
+    ctx.fillStyle = NAVY;
+    ctx.font = "bold 10px Arial, Helvetica, sans-serif";
+    ctx.fillText(title.toUpperCase(), LM, y);
+    ctx.fillStyle = GOLD;
+    ctx.fillRect(LM, y + 3, ctx.measureText(title.toUpperCase()).width, 1);
+    y += 12;
+  };
+
+  const body = (text: string) => {
+    ctx.fillStyle = "#333";
+    ctx.font = "9px Arial, Helvetica, sans-serif";
+    const lines = wrap(text, COL_W);
+    for (const line of lines) {
+      ctx.fillText(line, LM, y);
+      y += 11;
+    }
+    y += 3;
+  };
+
+  const bullet = (text: string) => {
+    ctx.fillStyle = "#333";
+    ctx.font = "9px Arial, Helvetica, sans-serif";
+    const indent = 12;
+    const lines = wrap(text, COL_W - indent);
+    ctx.fillText("\u2022", LM + 2, y);
+    for (let i = 0; i < lines.length; i++) {
+      ctx.fillText(lines[i], LM + indent, y);
+      y += 11;
+    }
+    y += 1;
+  };
+
+  section("What this document is");
+  body(
+    "This is a closing cost estimate prepared by MaxLife Realty, a Florida licensed real estate brokerage (FL Broker License #3354351). It is provided for informational and illustrative purposes only and reflects default county norms, user inputs, and Florida statewide rates in effect on the preparation date shown on page 1."
+  );
+
+  section("What this document is NOT");
+  bullet(
+    "This is NOT a Loan Estimate or Closing Disclosure as defined under RESPA, TILA, or the CFPB TRID rules. Only your lender can issue an official Loan Estimate; only your closing agent can issue an official Closing Disclosure or ALTA settlement statement."
+  );
+  bullet(
+    "This is NOT legal, tax, financial, accounting, or investment advice, and does not establish an attorney-client, fiduciary, or agency relationship."
+  );
+  bullet(
+    "This is NOT an offer, contract, or commitment to buy, sell, finance, or insure real property, and creates no obligation on any party."
+  );
+
+  section("How figures are calculated");
+  bullet(
+    "Owner's title insurance is calculated using Florida promulgated rates: $5.75 per $1,000 on the first $100,000 and $5.00 per $1,000 above $100,000."
+  );
+  bullet(
+    "Loan title insurance uses the simultaneous issue (simo) rate when applicable."
+  );
+  bullet(
+    "The reissue rate discount (approximately 30% off the owner's title premium) is applied only when manually toggled on by the user."
+  );
+  bullet(
+    "Documentary stamp tax on the deed: $0.70 per $100 of sales price (statewide; Miami-Dade excluded)."
+  );
+  bullet(
+    "Documentary stamp tax on mortgage notes: $0.35 per $100 of loan amount."
+  );
+  bullet(
+    "Florida intangible tax on new mortgage: $0.20 per $100 of loan amount."
+  );
+  bullet(
+    "Property tax proration assumes approximately four (4) months of debit on the seller side; actual proration depends on contract terms and closing date."
+  );
+  bullet(
+    `County-specific line items (closing fee, lien search, estoppel fee, recording fees) are default estimates for ${countyLabel}; actual charges vary by title company, lender, and local office.`
+  );
+
+  section("Responsibility to verify");
+  body(
+    "Actual closing costs depend on the specific contract, chosen title company, lender, loan product, inspection results, homestead status, millage rates, inclusions, and negotiated terms between the parties. Buyers and sellers should consult their title company, lender, Florida-licensed real estate attorney, tax advisor, and CPA before relying on any figure shown in this document. MaxLife Realty makes no warranty, express or implied, as to the accuracy, completeness, currency, merchantability, or fitness for a particular purpose of any figure contained herein, and disclaims all liability arising from reliance on this estimate to the fullest extent permitted by law."
+  );
+
+  section("Brokerage relationship");
+  body(
+    "Under Florida Statutes § 475.278, real estate licensees in Florida are presumed to operate as transaction brokers unless a single-agent or no-brokerage relationship is established in writing. MaxLife Realty and its associates may act as a transaction broker or single-agent as established in a separate written agreement with the client. This document alone does not establish any brokerage relationship."
+  );
+
+  section("Rate changes");
+  body(
+    "Florida statutory rates, county recording fees, title insurance premiums, lender charges, and third-party fees are subject to change without notice. This estimate reflects the rates and county defaults known to MaxLife Realty as of the generation timestamp shown on page 1."
+  );
+
+  section("Fair housing");
+  body(
+    "MaxLife Realty is an Equal Housing Opportunity brokerage. We do not discriminate on the basis of race, color, religion, sex, handicap, familial status, national origin, or any other legally protected class."
+  );
+
+  // Prepared-by + signature block at the bottom
+  const blockY = H - 140;
+  ctx.strokeStyle = LINE;
+  ctx.lineWidth = 0.6;
+  ctx.beginPath();
+  ctx.moveTo(LM, blockY - 8);
+  ctx.lineTo(COL_R, blockY - 8);
+  ctx.stroke();
+
+  ctx.fillStyle = INK;
+  ctx.font = "bold 10px Arial, Helvetica, sans-serif";
+  ctx.fillText("Prepared by", LM, blockY + 4);
+  ctx.font = "9px Arial, Helvetica, sans-serif";
+  ctx.fillStyle = "#333";
+  ctx.fillText("Ryan Solberg, Managing Broker", LM, blockY + 18);
+  ctx.fillText("MaxLife Realty  |  FL Real Estate Broker License #3354351", LM, blockY + 30);
+  ctx.fillText("maxlifedevelopment.com  |  Ryan@MaxLifeRealty.com  |  (321) 586-2121", LM, blockY + 42);
+
+  // Client signature line (optional)
+  ctx.fillStyle = INK;
+  ctx.font = "bold 9px Arial, Helvetica, sans-serif";
+  ctx.fillText("Client acknowledgement (optional)", LM, blockY + 66);
+  ctx.strokeStyle = "#888";
+  ctx.lineWidth = 0.7;
+  ctx.beginPath();
+  ctx.moveTo(LM, blockY + 86);
+  ctx.lineTo(LM + 260, blockY + 86);
+  ctx.moveTo(LM + 290, blockY + 86);
+  ctx.lineTo(COL_R, blockY + 86);
+  ctx.stroke();
+  ctx.fillStyle = "#666";
+  ctx.font = "7px Arial, Helvetica, sans-serif";
+  ctx.fillText("Client signature", LM, blockY + 96);
+  ctx.fillText("Date", LM + 290, blockY + 96);
+
+  // Footer band
+  drawFooter(ctx, W, H, countyLabel);
+
+  return canvas.toDataURL("image/png", 1.0);
+}
+
+function openPrintWindow(pages: string[], title: string) {
   const printWin = window.open("", "_blank");
   if (!printWin) {
     alert("Please allow pop-ups to download the PDF.");
     return;
   }
+  const imgs = pages
+    .map(
+      (data, i) =>
+        `<img class="page" src="${data}" alt="${title} — page ${i + 1} of ${pages.length}"/>`
+    )
+    .join("");
   printWin.document.write(
     `<!DOCTYPE html><html><head><title>${title}</title>
-    <style>@page{size:letter;margin:0}body{margin:0;padding:0;display:flex;justify-content:center;background:#f0f0f0}
-    img{width:100%;max-width:612px;height:auto;box-shadow:0 4px 16px rgba(0,0,0,0.2)}
-    @media print{body{margin:0;background:#fff}img{width:100%;box-shadow:none;page-break-after:avoid}}</style>
-    </head><body><img src="${imgData}" alt="${title}"/>
-    <script>window.onload=function(){setTimeout(function(){window.print()},400)};<\/script>
+    <style>
+      @page{size:letter;margin:0}
+      body{margin:0;padding:0;background:#f0f0f0;display:flex;flex-direction:column;align-items:center;gap:16px;padding:16px}
+      .page{width:100%;max-width:612px;height:auto;box-shadow:0 4px 16px rgba(0,0,0,0.2);display:block}
+      @media print{
+        body{margin:0;padding:0;background:#fff;gap:0}
+        .page{width:100%;box-shadow:none;break-inside:avoid}
+        .page + .page{break-before:page;page-break-before:always}
+      }
+    </style>
+    </head><body>${imgs}
+    <script>window.onload=function(){setTimeout(function(){window.print()},500)};<\/script>
     </body></html>`
   );
   printWin.document.close();
@@ -203,9 +442,9 @@ export function generateSellerPDF(
   const COL_R = W - 50;
 
   const countyLabel = getCountyConfig(inputs.county ?? DEFAULT_COUNTY).fullLabel;
-  drawBrandedHeader(ctx, W, "SELLER NET SHEET", countyLabel);
+  drawBrandedHeader(ctx, W, "SELLER NET SHEET \u2014 ESTIMATE", `Page 1 of 2 — ${countyLabel}`);
 
-  let y = 126;
+  let y = drawEstimateBanner(ctx, W, 110);
 
   // Meta row
   ctx.fillStyle = MUTED;
@@ -370,8 +609,9 @@ export function generateSellerPDF(
 
   drawFooter(ctx, W, H, countyLabel);
 
-  const imgData = canvas.toDataURL("image/png", 1.0);
-  openPrintWindow(imgData, "MaxLife Realty — Seller Net Sheet");
+  const page1 = canvas.toDataURL("image/png", 1.0);
+  const page2 = drawDisclosurePage(H, W, "Seller Net Sheet", countyLabel);
+  openPrintWindow([page1, page2], "MaxLife Realty — Seller Net Sheet");
 }
 
 // ═══════════════════════════════════════════════════
@@ -398,9 +638,9 @@ export function generateBuyerPDF(
   const COL_R = W - 50;
 
   const countyLabel = getCountyConfig(inputs.county ?? DEFAULT_COUNTY).fullLabel;
-  drawBrandedHeader(ctx, W, "BUYER ESTIMATE", countyLabel);
+  drawBrandedHeader(ctx, W, "BUYER ESTIMATE", `Page 1 of 2 — ${countyLabel}`);
 
-  let y = 126;
+  let y = drawEstimateBanner(ctx, W, 110);
 
   ctx.fillStyle = MUTED;
   ctx.font = "10px Arial, Helvetica, sans-serif";
@@ -544,6 +784,7 @@ export function generateBuyerPDF(
 
   drawFooter(ctx, W, H, countyLabel);
 
-  const imgData = canvas.toDataURL("image/png", 1.0);
-  openPrintWindow(imgData, "MaxLife Realty — Buyer Estimate");
+  const page1 = canvas.toDataURL("image/png", 1.0);
+  const page2 = drawDisclosurePage(H, W, "Buyer Estimate", countyLabel);
+  openPrintWindow([page1, page2], "MaxLife Realty — Buyer Estimate");
 }

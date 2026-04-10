@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SellerNetSheet from "@/components/SellerNetSheet";
+import NetSheetDisclaimer from "@/components/NetSheetDisclaimer";
 
 export const metadata: Metadata = {
   title: "Orlando Seller Net Sheet Calculator | Orange, Brevard, Lake & More | MaxLife Realty",
@@ -36,7 +37,11 @@ export default function SellerNetSheetPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <NetSheetDisclaimer />
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <SellerNetSheet />
       </section>
 
