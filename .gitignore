@@ -18,3 +18,6 @@ npm-debug.log*
 
 # claude
 .claude/
+
+# local asset staging (source photos — copy into public/ to ship)
+Photos/
