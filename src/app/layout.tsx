@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -172,6 +174,8 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-16 min-h-screen">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
