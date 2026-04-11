@@ -6,6 +6,7 @@ import {
   ResponsiveContainer, BarChart, Bar, AreaChart, Area,
   XAxis, YAxis, Tooltip, Legend, CartesianGrid,
 } from "recharts";
+import EmailDealAnalyzerButton from "@/components/leads/EmailDealAnalyzerButton";
 
 // ── Types ──────────────────────────────────────────────────────────
 type AssetType = "NNN" | "Multifamily" | "SFR";
@@ -205,8 +206,12 @@ function InputField({ label, value, onChange, placeholder, step, prefix, suffix 
 }
 
 // ── Main Component ─────────────────────────────────────────────────
-export default function DealAnalyzer() {
-  const [inputs, setInputs] = useState<Inputs>(DEFAULT_INPUTS);
+interface DealAnalyzerProps {
+  initialInputs?: Partial<Inputs>;
+}
+
+export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) {
+  const [inputs, setInputs] = useState<Inputs>({ ...DEFAULT_INPUTS, ...initialInputs });
   const [showCashFlows, setShowCashFlows] = useState(false);
   const hasTrackedRef = useRef(false);
 
@@ -774,6 +779,27 @@ export default function DealAnalyzer() {
               </dl>
             </div>
           </div>
+
+          {/* Email lead magnet */}
+          <EmailDealAnalyzerButton
+            summary={analysis ? {
+              purchasePrice: analysis.price,
+              noi: analysis.noi1,
+              capRate: analysis.entranceCap,
+              cashOnCash: analysis.coc1,
+              irr: analysis.irr,
+              dscr: analysis.dscr,
+              equityMultiple: analysis.em,
+              dealScore: analysis.grade,
+            } : null}
+            inputs={{
+              assetType: inputs.assetType,
+              purchasePrice: inputs.purchasePrice,
+              holdPeriod: inputs.holdPeriod,
+              downPaymentPct: inputs.downPaymentPct,
+              interestRate: inputs.interestRate,
+            }}
+          />
 
           {/* Traffic Light Benchmarks */}
           <div className="bg-dark-card border border-dark-border rounded-xl p-6">

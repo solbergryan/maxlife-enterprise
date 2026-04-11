@@ -23,6 +23,7 @@ export interface CourseMeta {
   cireLevel?: string;      // e.g. "CIRE Level 1 — Financial Analysis"
   isSpecialty?: boolean;   // MaxLife specialty badge
   isContentComplete: boolean; // true if all lessons have full content
+  hasWorkbook?: boolean;      // true if a PDF workbook is available for email download
 }
 
 export interface LessonMeta {

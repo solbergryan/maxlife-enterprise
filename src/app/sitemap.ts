@@ -3,6 +3,10 @@ import { markets } from "@/data/markets";
 import { deals } from "@/data/deals";
 import { getAllCourses } from "@/lib/academy/content";
 import { getPublishedReports } from "@/data/marketReports";
+import { cities } from "@/data/seo/cities";
+import { getAllPropertyTypes } from "@/data/seo/propertyTypes";
+import { submarkets } from "@/data/seo/submarkets";
+import { getOutlookParams } from "@/data/seo/outlooks";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -171,6 +175,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/car-wash-properties-florida`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/central-florida-land-for-development`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -286,6 +296,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
+  // Programmatic SEO — property type × city pages
+  const propertyTypeCityPages: MetadataRoute.Sitemap = getAllPropertyTypes().flatMap((pt) =>
+    cities.map((city) => ({
+      url: `${BASE_URL}/${pt.slug}/${city.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    }))
+  );
+
+  // Programmatic SEO — cap rates by submarket
+  const capRatePages: MetadataRoute.Sitemap = submarkets.map((s) => ({
+    url: `${BASE_URL}/cap-rates/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  // Programmatic SEO — sector investment outlook reports
+  const outlookPages: MetadataRoute.Sitemap = getOutlookParams().map(({ sector, year }) => ({
+    url: `${BASE_URL}/investment-outlook/${sector}/${year}`,
+    lastModified: now,
+    changeFrequency: "yearly" as const,
+    priority: 0.8,
+  }));
+
+
   return [
     ...staticPages,
     ...blogPages,
@@ -293,5 +330,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...dealPages,
     ...academyPages,
     ...marketReportPages,
+    ...propertyTypeCityPages,
+    ...capRatePages,
+    ...outlookPages,
   ];
 }

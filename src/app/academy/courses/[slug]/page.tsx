@@ -5,6 +5,7 @@ import { getAllCourseParams, getAllCourses, getCourse } from "@/lib/academy/cont
 import { getUser, getCompletedLessons } from "@/lib/academy/progress";
 import { JsonLdScript } from "@/components/academy/JsonLdScript";
 import { buildCourseJsonLd, buildBreadcrumbJsonLd } from "@/lib/academy/seo";
+import LeadCaptureForm from "@/components/leads/LeadCaptureForm";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -163,6 +164,36 @@ export default async function CoursePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Workbook lead magnet */}
+      {course.hasWorkbook && (
+        <section className="border-b border-dark-border bg-dark py-12">
+          <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-6 text-center">
+              <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gold">
+                Free companion workbook
+              </div>
+              <h2 className="mb-2 text-2xl font-bold text-white sm:text-3xl">
+                Download the {course.title} Workbook
+              </h2>
+              <p className="text-gray-400">
+                Printable PDF with exercises, worksheets, and fill-in notes
+                designed to go alongside every lesson in this course.
+              </p>
+            </div>
+            <LeadCaptureForm
+              endpoint="/api/leads/workbook"
+              payload={{ courseSlug: course.slug }}
+              ctaLabel="Email me the workbook PDF"
+              successMessage="Your workbook is on the way."
+              theme="dark"
+            >
+              No spam. One email with the PDF, and occasionally new CRE
+              resources you can unsubscribe from any time.
+            </LeadCaptureForm>
+          </div>
+        </section>
+      )}
 
       {/* Outcomes */}
       <section className="border-b border-dark-border bg-dark-card py-14">
