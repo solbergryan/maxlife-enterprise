@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { markets } from "@/data/markets";
 import { deals } from "@/data/deals";
 import { getAllCourses } from "@/lib/academy/content";
+import { getPublishedReports } from "@/data/marketReports";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -75,6 +76,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/market-reports`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/portfolio`,
@@ -269,5 +276,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  return [...staticPages, ...blogPages, ...marketPages, ...dealPages, ...academyPages];
+  // Dynamic quarterly market report pages
+  const marketReportPages: MetadataRoute.Sitemap = getPublishedReports().map(
+    (r) => ({
+      url: `${BASE_URL}/market-reports/${r.slug}`,
+      lastModified: r.publishDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    })
+  );
+
+  return [
+    ...staticPages,
+    ...blogPages,
+    ...marketPages,
+    ...dealPages,
+    ...academyPages,
+    ...marketReportPages,
+  ];
 }

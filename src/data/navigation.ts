@@ -7,6 +7,7 @@ export interface NavLink {
 export const mainNav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "For Sellers", href: "/opportunities" },
+  { label: "Market Reports", href: "/market-reports" },
   {
     label: "Markets",
     href: "/markets",
@@ -21,7 +22,6 @@ export const mainNav: NavLink[] = [
   { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "Academy", href: "/academy" },
   { label: "Insights", href: "/blog" },
-  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
 ];
 
@@ -44,7 +44,8 @@ export const footerServiceLinks: NavLink[] = [
 ];
 
 export const footerResourceLinks: NavLink[] = [
-  { label: "Market Insights", href: "/blog" },
+  { label: "Quarterly Market Reports", href: "/market-reports" },
+  { label: "Market Insights (Blog)", href: "/blog" },
   { label: "Academy (Free CRE Courses)", href: "/academy" },
   { label: "Orlando Market", href: "/markets/orlando-commercial-real-estate" },
   { label: "Brevard County Market", href: "/markets/brevard-county-commercial-real-estate" },
