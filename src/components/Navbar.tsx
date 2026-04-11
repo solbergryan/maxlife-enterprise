@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { mainNav } from "@/data/navigation";
+import SearchBar from "@/components/SearchBar";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -42,7 +43,11 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden lg:flex items-center gap-5 lg:gap-6">
+            {/* Search — shown on large screens where there's room */}
+            <div className="w-56 xl:w-64">
+              <SearchBar />
+            </div>
             {mainNav.map((link) =>
               link.children ? (
                 <div key={link.href} className="relative" ref={dropdownRef}>
@@ -121,7 +126,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-gray-300 hover:text-gold transition-colors"
+            className="lg:hidden text-gray-300 hover:text-gold transition-colors"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,8 +142,11 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-dark border-t border-dark-border">
+        <div className="lg:hidden bg-dark border-t border-dark-border">
           <div className="px-4 py-3 space-y-1">
+            <div className="pb-3">
+              <SearchBar onSelect={() => setOpen(false)} />
+            </div>
             {mainNav.map((link) =>
               link.children ? (
                 <div key={link.href}>
