@@ -1,0 +1,188 @@
+---
+order: 2
+title: Discounted Cash Flow (DCF) — The Framework That Runs Institutional CRE
+description: The complete DCF framework for commercial real estate — how to build it, what goes in each line, and why institutional buyers use it instead of simple cap rates.
+durationMinutes: 14
+keywords:
+  - discounted cash flow real estate
+  - DCF commercial real estate
+  - cre valuation model
+  - 10 year hold pro forma
+  - institutional real estate valuation
+---
+
+The discounted cash flow model is the backbone of institutional commercial real estate. Every REIT, pension fund, private equity firm, and serious individual investor uses some version of it. If you learn to build one, you'll make better decisions than 90% of the investors you compete against.
+
+The good news: a DCF is much simpler than its reputation. It's just a spreadsheet that projects annual cash flows over a holding period, discounts them back to today, and tells you what the deal is worth.
+
+## What a DCF looks like
+
+Here's a simplified 5-year DCF for a stabilized commercial property:
+
+```
+                     Year 1    Year 2    Year 3    Year 4    Year 5
+Gross rental income  300,000   309,000   318,270   327,818   337,653
+Vacancy (5%)         (15,000)  (15,450)  (15,914)  (16,391)  (16,883)
+Other income          12,000    12,360    12,731    13,113    13,506
+Effective Gross      297,000   305,910   315,087   324,540   334,276
+
+Operating expenses   (95,000)  (97,850) (100,786) (103,809) (106,924)
+
+NOI                  202,000   208,060   214,301   220,731   227,352
+
+- Debt service      (150,000) (150,000) (150,000) (150,000) (150,000)
+= Cash flow           52,000    58,060    64,301    70,731    77,352
+
+Sale at Year 5:
+  Year 6 NOI                                                  234,173
+  Divided by exit cap (6%)                                  3,902,889
+  Less selling costs (3%)                                    (117,087)
+= Net sale proceeds                                          3,785,802
+Less loan payoff                                            (2,150,000)
+= Net to equity                                              1,635,802
+
+Total Year 5 cash flow                                       1,713,154
+```
+
+That's a DCF. Let's walk through each section.
+
+## Section 1: Gross rental income
+
+Start with the in-place rent from the rent roll, then project forward using your assumptions about rent growth.
+
+**Typical assumptions:**
+- Contract escalations from existing leases (a 3%/year escalation on a lease would be 3%)
+- Lease rollovers to market rent at expiration
+- Market rent growth (what rents are doing in the submarket)
+
+A well-built DCF projects each tenant's cash flow individually rather than applying a single portfolio growth rate. For this course we'll simplify and use portfolio-level growth, but in a real value-add deal you'll want tenant-by-tenant cash flows.
+
+## Section 2: Vacancy and credit loss
+
+Subtract a vacancy factor, typically 5-10% depending on asset class and submarket. In Year 1 this might reflect the current rent roll's physical vacancy. By Year 3 it should reflect stabilized vacancy (the number you think you'll maintain over time).
+
+Don't use 3% unless you really mean it. The broker's 3% is almost always too low.
+
+## Section 3: Other income
+
+CAM reimbursements (on NNN leases), parking, laundry, late fees, pet rent. Project modestly — grow roughly in line with base rent.
+
+## Section 4: Effective gross income (EGI)
+
+Just the sum: gross rent minus vacancy plus other income.
+
+## Section 5: Operating expenses
+
+All the operating expense categories from Course 3, projected forward. Usually you grow them at a rate slightly lower than rental income (2-3% per year for most categories, higher for insurance and taxes in Florida).
+
+Be realistic: don't model expenses as flat or growing slower than you'd realistically expect. This is the #1 DCF mistake.
+
+## Section 6: Net operating income (NOI)
+
+EGI minus operating expenses. This is the same NOI concept you learned in Course 2 — just projected across multiple years.
+
+## Section 7: Debt service
+
+The annual mortgage payment (principal + interest). Usually constant throughout the hold because commercial loans have fixed terms. Subtract this from NOI to get **cash flow before taxes**.
+
+Note: in a DCF, you typically don't include income taxes (those are handled separately in after-tax analysis). You also don't include depreciation — DCF is cash-based, not GAAP-based.
+
+## Section 8: Cash flow to equity
+
+NOI minus debt service. This is the cash that actually shows up in your pocket each year — the number you live on.
+
+## Section 9: The sale (also called "reversion" or "exit")
+
+This is where most novice DCFs go wrong, because the sale proceeds are usually 60-80% of your total return, and small mistakes in the exit assumption have huge impact.
+
+To project a sale:
+
+1. **Calculate the next year's NOI** (the buyer at year 5 will pay based on year 6 NOI, not year 5).
+2. **Divide by the exit cap rate** to get the gross sale price. The exit cap is usually 25-75 basis points higher than today's cap rate (assumes some cap rate expansion over the hold).
+3. **Subtract selling costs** — typically 3-5% of the sale price (broker commissions, title, legal, etc.).
+4. **Subtract the loan payoff** — the remaining principal on your mortgage at year 5.
+5. **What's left** is your net sale proceeds to equity.
+
+In our example:
+- Year 6 NOI (projected): $234,173
+- Exit cap rate: 6.0%
+- Gross sale price: $234,173 / 0.06 = $3,902,889
+- Selling costs (3%): -$117,087
+- Loan payoff: -$2,150,000
+- Net to equity: **$1,635,802**
+
+## Section 10: Total return
+
+Sum up all the annual cash flows AND the exit proceeds. Those are your total dollars. Then discount each back to today using your discount rate, and sum them up for the present value of the deal.
+
+That's the DCF.
+
+## A worked example: discounting back to present value
+
+Using our deal's cash flows:
+
+| Year | Cash flow | Discount factor (at 10%) | Present value |
+|---|---|---|---|
+| 1 | $52,000 | 1 / (1.10)^1 = 0.9091 | $47,273 |
+| 2 | $58,060 | 1 / (1.10)^2 = 0.8264 | $47,984 |
+| 3 | $64,301 | 1 / (1.10)^3 = 0.7513 | $48,311 |
+| 4 | $70,731 | 1 / (1.10)^4 = 0.6830 | $48,310 |
+| 5 | $77,352 + $1,635,802 = $1,713,154 | 1 / (1.10)^5 = 0.6209 | $1,063,698 |
+| **Total PV** | | | **$1,255,576** |
+
+So at a 10% discount rate, this deal's equity cash flows are worth **$1,255,576 today**.
+
+If your actual equity investment was $1,000,000 (down payment plus closing costs), then:
+
+- You paid $1,000,000
+- The expected cash flows are worth $1,255,576 today at a 10% required return
+- The NPV (net present value) is $1,255,576 − $1,000,000 = **$255,576**
+
+A positive NPV means the deal is worth more than you paid — you should do it. A negative NPV means you're overpaying for the cash flows. An NPV of zero means the deal exactly hits your required return.
+
+## Why institutional buyers prefer DCF to cap rate
+
+Three reasons:
+
+### 1. DCF handles growth
+Cap rate assumes NOI stays flat forever. DCF lets you model rising rents, contractual escalations, and value-add plays. For any deal with meaningful growth, cap rate understates value.
+
+### 2. DCF handles timing
+A deal with strong Year 1 cash flow and a weak exit is very different from a deal with a slow ramp and a big exit. Cap rate treats them the same. DCF doesn't.
+
+### 3. DCF tells you your actual return (IRR)
+Cap rate tells you an approximate yield. DCF, combined with IRR (next lesson), tells you the exact return on your money — including appreciation, principal paydown, and the exit.
+
+## When to use DCF vs. cap rate
+
+- **Simple stabilized deal with flat cash flows, 5-7 year hold:** Cap rate is fine. DCF gives the same answer.
+- **Value-add with lease-up, rent increases, or renovations:** Use DCF. Cap rate will lie to you.
+- **Development deal with no income for 18 months:** Must use DCF. Cap rate is meaningless.
+- **Comparing two deals with different cash flow profiles:** Must use DCF. They're not comparable on cap rate alone.
+
+## The rookie DCF mistakes
+
+### Mistake 1: Using optimistic growth assumptions
+Modeling 5% annual rent growth when the market grows at 2%. Your DCF output is garbage in, garbage out. Use market-realistic growth.
+
+### Mistake 2: Flat expense growth
+Growing revenue at 3% but expenses at 1%. This is a hidden 2% of "free" NOI growth that doesn't exist. Keep expense growth roughly matched to revenue growth.
+
+### Mistake 3: Aggressive exit cap
+Assuming you'll sell at the same cap rate you're buying at, or even lower. Over a 5-year hold, cap rates often rise (due to interest rate cycles). A cautious assumption is exit cap = going-in cap + 25-50 bps.
+
+### Mistake 4: No sensitivity analysis
+Building one DCF with point estimates and calling it done. A good DCF includes sensitivity tables — what happens if rent grows 1% instead of 3%? If exit cap is 7% instead of 6%? If vacancy runs 8% instead of 5%?
+
+You'll learn to build sensitivity tables in Course 5 (Building Pro Formas in Excel).
+
+## What to take away
+
+- DCF projects annual cash flows over a holding period and discounts them to today
+- The structure: NOI → cash flow → exit proceeds → discounted and summed
+- The exit is often 60-80% of total return — get it right
+- DCF handles growth, timing, and exit in ways cap rate can't
+- Use DCF for anything more complex than a flat stabilized deal
+- Avoid rookie mistakes: optimistic growth, flat expenses, aggressive exit cap, no sensitivity
+
+Next lesson: NPV and IRR — two sides of the same coin, and the pair that tells you whether a deal is actually worth doing.

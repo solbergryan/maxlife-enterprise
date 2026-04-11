@@ -1,0 +1,235 @@
+---
+order: 7
+title: Full Walkthrough — Comparing Two Deals with Everything You've Learned
+description: A complete side-by-side analysis of two realistic CRE deals using DCF, IRR, NPV, MIRR, equity multiple, and leverage — and picking the right one.
+durationMinutes: 18
+keywords:
+  - cre deal comparison
+  - commercial real estate financial analysis
+  - dcf comparison
+  - irr equity multiple
+  - how to pick a cre deal
+---
+
+You now have the full toolkit: time value of money, DCF, NPV, IRR, MIRR, equity multiple, unlevered vs. levered returns, and the capital stack. Time to put it all together on a realistic comparison.
+
+An investor has $600,000 to deploy. A broker shows them two deals. Which should they buy?
+
+## The two deals
+
+**Deal A: Stabilized NNN Retail**
+- Property: Freestanding Dollar General in Central Florida
+- Purchase price: $2,400,000
+- In-place NOI: $144,000 (6.0% cap rate)
+- Tenant: Dollar General (investment-grade, BBB S&P rating)
+- Lease: 12 years remaining, 10% rent bumps every 5 years
+- Rent escalation: flat during each 5-year period, step-ups at years 5 and 10
+- Operating expenses: absolute NNN (tenant pays everything including structure)
+- Typical exit cap: 6.25% at year 10 (slight expansion)
+
+**Deal B: Value-Add Multifamily**
+- Property: 24-unit Class C apartment building in Orlando
+- Purchase price: $3,000,000
+- In-place NOI: $180,000 (6.0% cap rate)
+- Current rents: $975/month average, below market
+- Market rents after renovation: $1,200/month average
+- Renovation budget: $240,000 ($10K per unit, 24 months to complete)
+- Stabilized NOI after reno: $240,000 (8.0% stabilized cap rate on purchase)
+- Typical exit cap: 5.75% at year 5 (lower than NNN due to stronger demand)
+
+Both deals require roughly $600,000 of common equity. Let's build the full financial comparison.
+
+## Step 1: Financing
+
+**Deal A financing:**
+- Senior loan: $1,800,000 (75% LTV)
+- Interest rate: 7.0%
+- Amortization: 25 years
+- Annual debt service: ~$153,000
+- DSCR: $144,000 / $153,000 = **0.94x** → FAILS lender minimum (1.25x)
+
+Problem — Deal A doesn't cash flow with conventional bank debt at current rates. Let's try SBA 504 (if owner-user) or a life insurance company loan at a lower rate, say 6.0%:
+
+- Senior loan: $1,680,000 (70% LTV) at 6.0%, 25-year am
+- Annual debt service: ~$130,000
+- DSCR: $144,000 / $130,000 = **1.11x** → still fails 1.25x minimum
+
+The deal can't support 70% leverage. Reduce to 60% LTV ($1,440,000) at 6%:
+
+- Annual debt service: ~$111,000
+- DSCR: $144,000 / $111,000 = **1.30x** ✓
+
+**Final Deal A structure:**
+- Purchase: $2,400,000
+- Loan: $1,440,000 (60% LTV)
+- Equity needed: $960,000 + ~$40,000 closing = **$1,000,000**
+
+Wait — we only have $600,000! Deal A needs $1M of equity at these rates. Either we partner up, or we skip Deal A.
+
+Let's assume we find a partner who puts up the remaining $400K, taking 40% of the common equity. Our $600K buys 60% of the deal.
+
+**Deal B financing:**
+- Senior loan: $2,250,000 (75% LTV)
+- Interest rate: 6.5% (agency debt, multifamily)
+- Amortization: 30 years
+- Annual debt service: ~$171,000
+- DSCR (stabilized NOI): $240,000 / $171,000 = **1.40x** ✓
+
+Plus we need to fund the $240K renovation budget. That can come from cash on hand or a bridge construction loan.
+
+**Final Deal B structure:**
+- Purchase: $3,000,000
+- Loan: $2,250,000 (75% LTV)
+- Renovation: $240,000 (from equity)
+- Equity needed: $750,000 + $240,000 + $35,000 closing = **$1,025,000**
+
+Also over budget. Partner up the same way — bring in a co-investor for $425,000, own 58% of the common equity.
+
+## Step 2: DCF — Deal A (Stabilized NNN)
+
+Here's the 10-year pro forma:
+
+```
+                     Year 1    Year 2    Year 3    Year 4    Year 5    Year 6    Year 7    Year 8    Year 9    Year 10
+NOI                 144,000   144,000   144,000   144,000   158,400   158,400   158,400   158,400   158,400   174,240
+  (10% bump at Y5 and Y10)
+Debt service       (111,000) (111,000) (111,000) (111,000) (111,000) (111,000) (111,000) (111,000) (111,000) (111,000)
+Cash flow to deal    33,000    33,000    33,000    33,000    47,400    47,400    47,400    47,400    47,400    63,240
+
+Sale at Year 10:
+  Year 11 NOI                                                                                                   174,240
+  Exit cap (6.25%)                                                                                            2,787,840
+  Selling costs (3%)                                                                                            (83,635)
+  Loan payoff (approx.)                                                                                      (1,080,000)
+  Net to equity                                                                                                1,624,205
+
+Total Year 10                                                                                                 1,687,445
+```
+
+Total cash returned to the deal: $33K × 4 + $47K × 5 + $63K + $1,624K = $132K + $235K + $63K + $1,624K = **$2,054,400**
+
+Your 60% share: $2,054,400 × 0.60 = **$1,232,640**
+Your equity: **$600,000**
+Your equity multiple: **2.05x**
+Your IRR (on annual cash distributions and exit): approximately **9.2%**
+
+## Step 3: DCF — Deal B (Value-Add Multifamily)
+
+This one has a different cash flow profile — heavy renovation costs in Year 1 and 2, low cash flow during stabilization, then strong stabilized cash flow after.
+
+```
+                    Year 1    Year 2    Year 3    Year 4    Year 5
+NOI (ramping)     180,000   196,000   224,000   240,000   240,000
+Reno CapEx       (120,000) (120,000)         0         0         0
+Debt service     (171,000) (171,000) (171,000) (171,000) (171,000)
+Cash flow       (111,000)  (95,000)   53,000    69,000    69,000
+
+Sale at Year 5:
+  Year 6 NOI                                                 245,000
+  Exit cap (5.75%)                                         4,260,870
+  Selling costs (3%)                                        (127,826)
+  Loan payoff                                            (2,070,000)
+  Net to equity                                            2,063,044
+
+Total Year 5 cash flow                                     2,132,044
+```
+
+Interesting — Deal B has **negative cash flow in years 1 and 2** because of the renovation draws. That means the investor needs to fund not just $1,025,000 up front but also the first-year operating shortfall of $111K + $95K = **$206K in capital calls**. Total cash out of the investor's pocket over the first two years: **$1,231,000**.
+
+That's above the $600K equity available even with a partner. In a real scenario, you'd fund the reno from a bridge loan or equity reserves, not from new capital calls. Let's assume the $240K reno budget was already included in the equity at close and re-run it cleanly:
+
+```
+                    Year 1    Year 2    Year 3    Year 4    Year 5
+NOI (ramping)     180,000   196,000   224,000   240,000   240,000
+Debt service     (171,000) (171,000) (171,000) (171,000) (171,000)
+Cash flow           9,000    25,000    53,000    69,000    69,000
+
+Sale at Year 5 (unchanged)                                2,063,044
+
+Total Year 5                                              2,132,044
+```
+
+Total cash returned: $9K + $25K + $53K + $69K + $69K + $2,063K = **$2,288,044**
+
+Your 58% share: $2,288,044 × 0.58 = **$1,327,066**
+Your equity: **$600,000**
+Your equity multiple: **2.21x**
+Your IRR: approximately **17.0%**
+
+## Step 4: Side-by-side comparison
+
+| Metric | Deal A (NNN) | Deal B (Value-Add) |
+|---|---|---|
+| Hold period | 10 years | 5 years |
+| Your equity | $600,000 | $600,000 |
+| Total cash returned | $1,232,640 | $1,327,066 |
+| **Equity multiple** | **2.05x** | **2.21x** |
+| **Levered IRR** | **9.2%** | **17.0%** |
+| MIRR (at 7% reinvest) | ~8.8% | ~13.5% |
+| Cash-on-cash Year 1 | 3.3% (on deal level) | 1.5% (on deal level) |
+| Risk profile | Low (credit tenant, long lease) | Medium-high (renovation execution, market rents) |
+| Workload | Minimal (zero management) | Heavy (renovation, leasing) |
+| Capital stuck | 10 years | 5 years |
+
+## Step 5: Which one do you pick?
+
+**On raw metrics:** Deal B wins across the board — higher IRR (17.0% vs. 9.2%), higher equity multiple (2.21x vs. 2.05x), shorter hold (5 years vs. 10).
+
+**On risk-adjusted basis:** Less clear. Deal A is essentially a bond — stable, predictable, zero management. Deal B is a real operating business — you have to execute renovations, lease up units, manage tenants, and hit your pro forma numbers. If you miss rent growth by 10% or construction runs 20% over budget, your IRR drops below Deal A's.
+
+**On capital efficiency:** Deal B wins. Your capital comes back in 5 years, letting you do another deal. Deal A locks up your money for 10 years.
+
+**On workload:** Deal A wins. NNN is passive; value-add is very active.
+
+**On financeability:** Deal B wins. NNN deals with current interest rates have trouble cash-flowing at high leverage. Multifamily has agency debt options that are more favorable.
+
+### The right answer depends on the investor
+
+**If you want passive income and have deep capital reserves:**
+- Deal A is better. The 9.2% IRR with minimal work is attractive.
+- You trade returns for simplicity and safety.
+
+**If you want maximum wealth growth and you have operational capacity:**
+- Deal B is better. The 17% IRR compounds faster, and you'll be ready for another deal in half the time.
+- You accept execution risk for upside.
+
+**If this is your first commercial deal:**
+- Deal A is more forgiving of mistakes.
+- Deal B's value-add execution is harder than it looks.
+
+**If you have a deep pipeline of similar value-add opportunities:**
+- Deal B wins decisively. You'll compound at 17% across multiple 5-year cycles instead of being locked into 9.2% for 10 years.
+
+## The real lesson: metrics serve you, not the other way around
+
+The same two deals could be "the right choice" or "the wrong choice" depending on the investor's goals, capital, and operational capacity. IRR doesn't tell you that. Equity multiple doesn't tell you that. The full toolkit from this course gives you the *information* you need; the decision is always situational.
+
+This is why institutional investors have long-form investment memos, risk committees, and portfolio construction frameworks. A single metric never decides a deal.
+
+## What sharp investors actually do
+
+When faced with a decision like this, experienced investors:
+
+1. **Build the DCF for each option** using their own realistic assumptions
+2. **Calculate all five metrics** — IRR, NPV, equity multiple, MIRR, and cash-on-cash
+3. **Build sensitivity tables** — what happens if rent growth is lower? Interest rates higher? Renovation over budget?
+4. **Assess risk-adjusted return** — not just the point estimate, but the downside case
+5. **Consider portfolio fit** — does this deal complement or concentrate my existing portfolio?
+6. **Consider opportunity cost** — what else could I do with this capital?
+7. **Decide** based on the full picture, not a single metric
+
+## You've finished Course 4
+
+You now have the full financial analysis toolkit:
+
+- ✓ Time value of money
+- ✓ Discounted cash flow modeling
+- ✓ NPV and IRR
+- ✓ MIRR (the honest IRR)
+- ✓ Equity multiple and levered/unlevered returns
+- ✓ The capital stack
+- ✓ Deal comparison methodology
+
+In Course 5, we'll take everything you've learned and build an actual Excel model from scratch — a complete institutional-quality pro forma template you can use on your own deals.
+
+Ready? [Continue to Course 5: Building CRE Pro Formas in Excel →](/academy/courses/05-building-cre-pro-formas-in-excel)

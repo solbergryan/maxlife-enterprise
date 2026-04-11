@@ -1,0 +1,151 @@
+---
+order: 4
+title: MIRR — The Honest Version of IRR
+description: Why IRR overstates returns on many real estate deals, how the modified internal rate of return fixes it, and when MIRR should drive your decision instead of IRR.
+durationMinutes: 11
+keywords:
+  - MIRR real estate
+  - modified internal rate of return
+  - IRR reinvestment assumption
+  - cre return metrics
+  - financial analysis
+---
+
+IRR has a hidden assumption that most investors don't realize: it assumes that **every dollar of interim cash flow can be reinvested at the same rate as the deal's IRR.**
+
+On a 22% IRR development deal, IRR assumes you can redeploy every interim distribution at 22% annual returns. That's almost never true in the real world. By the time you get a $200K distribution from one deal, you might not have another 22% deal ready to go — so you park the cash in a money market earning 4% until you find the next one. That 4% gap between "theoretical IRR" and "what you actually earn" compounds over time.
+
+**MIRR (Modified Internal Rate of Return)** fixes this. It lets you specify a separate, realistic reinvestment rate for interim cash flows. The result is a more honest annualized return number.
+
+## The two rates in MIRR
+
+MIRR uses two rates instead of one:
+
+1. **Finance rate** — the cost of any money you *pay out* during the deal (usually your borrowing cost, or your required return on new capital)
+2. **Reinvestment rate** — the rate at which you can redeploy interim cash flows you *receive* during the deal (usually lower than IRR)
+
+For most CRE investors, the reinvestment rate is something like 6-9% — reflecting what you can realistically earn on idle capital between deals.
+
+## The formula
+
+MIRR is calculated by:
+
+1. **Discounting all cash outflows** (negative cash flows) to today using the finance rate
+2. **Compounding all cash inflows** (positive cash flows) to the end of the holding period using the reinvestment rate
+3. **Finding the annualized return** that links the present value of outflows to the future value of inflows
+
+You don't do this by hand — Excel's `=MIRR()` function handles it:
+
+```
+=MIRR(cash_flow_range, finance_rate, reinvest_rate)
+```
+
+## A worked example
+
+Take a deal with these cash flows:
+
+| Year | Cash flow |
+|---|---|
+| 0 | -$500,000 |
+| 1 | $50,000 |
+| 2 | $60,000 |
+| 3 | $70,000 |
+| 4 | $80,000 |
+| 5 | $90,000 + $800,000 sale = $890,000 |
+
+**IRR calculation** (using `=IRR()`): approximately **21.4%**
+
+**MIRR calculation** using 8% finance rate and 7% reinvestment rate (`=MIRR(range, 0.08, 0.07)`): approximately **16.8%**
+
+The IRR says "you're earning 21.4% per year." The MIRR says "factoring in realistic reinvestment, you're actually earning about 16.8% per year." The honest number is about **4.6 percentage points lower** than IRR.
+
+Over a 5-year hold, that gap is substantial. A $500,000 investment at a true 21.4% annual return grows to $1.32M. At 16.8%, it grows to $1.09M. That's a **$230,000 difference** in ending wealth on the same cash flow stream — just because IRR was too optimistic about reinvestment.
+
+## Why the gap exists
+
+The gap between IRR and MIRR is larger when:
+
+1. **Interim cash flows are big relative to the exit** — deals that pay out a lot during the hold have more cash that needs reinvesting
+2. **The deal's IRR is high** — a 25% IRR has a bigger gap from a realistic 7% reinvestment rate than an 11% IRR does
+3. **The hold period is long** — more years of compounding mismatch
+
+The gap is smaller when:
+
+1. **Most of the return comes from the exit** (like a development deal with minimal interim income)
+2. **The IRR is modest** (8-12% deals — closer to what you'd realistically reinvest at)
+3. **Short hold periods** — less time for the reinvestment assumption to matter
+
+## When MIRR matters most
+
+MIRR matters more when comparing deals with **different cash flow profiles**. Consider:
+
+**Deal X: Heavy interim distributions**
+- Year 1-4: $70,000/year
+- Year 5: $50,000 + $700,000 exit
+- IRR: 18%
+- MIRR (at 7%): 13.2%
+- Gap: 4.8 points
+
+**Deal Y: Back-loaded exit**
+- Year 1-4: $15,000/year (minimal cash flow)
+- Year 5: $0 + $1,400,000 exit
+- IRR: 18%
+- MIRR (at 7%): 17.2%
+- Gap: 0.8 points
+
+Both deals report an 18% IRR. But when you factor in realistic reinvestment, Deal Y actually delivers closer to its IRR while Deal X significantly underperforms. **On an MIRR basis, Deal Y is substantially better** — even though the two deals look identical on IRR.
+
+This is exactly the kind of analysis institutional investors do, and why sophisticated buyers rarely rely on IRR alone.
+
+## Why private investors should use MIRR too
+
+You might think "I'm not a pension fund — do I really need MIRR?" Yes, for two reasons:
+
+### Reason 1: It stops you from overpaying
+A "17% IRR deal" might actually be a 12% MIRR deal. If you commit based on IRR, you're overpaying for returns that won't materialize. MIRR gives you a more honest baseline.
+
+### Reason 2: It helps you compare heterogeneous deals
+When you're evaluating a stabilized NNN against a value-add multifamily against a development, the cash flow profiles are completely different. IRR can make them look more similar (or more different) than they really are. MIRR evens the playing field.
+
+## Picking the right reinvestment rate
+
+What number should you use for the reinvestment rate?
+
+Reasonable choices:
+
+- **Your risk-free alternative rate** (treasury yields ≈ 4-4.5% in 2026) — most conservative
+- **A blended rate** of what you'd realistically earn on idle capital (5-7%) — most common
+- **Your weighted average cost of capital (WACC)** — used by institutional investors
+- **Your next-best deal's IRR** — if you have a deep pipeline of opportunities at similar returns
+
+For private investors, **6-8%** is a reasonable default. That reflects the reality that you'll sometimes find good deals quickly, sometimes park capital at bond rates, and on average earn maybe 7% on idle cash.
+
+## The MIRR discipline
+
+Here's a good habit: **for every deal you underwrite, calculate both IRR and MIRR.**
+
+If IRR is 15% and MIRR is 13%, the deal is probably about what it seems. If IRR is 25% and MIRR is 14%, you need to ask whether your interim cash flows are really as valuable as they look — or whether most of the "return" is just the reinvestment assumption doing work that won't materialize in real life.
+
+Sophisticated buyers use MIRR specifically to catch deals that look great on IRR but are hiding a large reinvestment gap.
+
+## When IRR is still the right metric
+
+MIRR isn't always better. Use IRR (not MIRR) when:
+
+- **You actually can redeploy cash at the same rate**, such as a sponsor running multiple similar deals on a rolling basis
+- **You're comparing deals with identical cash flow profiles**, where the reinvestment assumption affects both the same way
+- **The hold period is very short** (1-2 years), where reinvestment mismatch doesn't have time to compound
+- **Almost all the return is at the exit**, so there's little interim cash to reinvest
+
+For any back-of-envelope deal screen where you're just trying to see if a deal is worth deeper analysis, IRR is fine. For final decisions on comparable deals, check MIRR.
+
+## What to take away
+
+- IRR assumes you reinvest interim cash flows at the same rate as IRR — usually not realistic
+- MIRR uses a separate, realistic reinvestment rate, giving a more honest annualized return
+- Use Excel's `=MIRR(range, finance_rate, reinvest_rate)` to calculate it
+- A typical reinvestment rate for private CRE investors is 6-8%
+- The gap between IRR and MIRR is larger for deals with heavy interim cash flows and high IRRs
+- Sophisticated buyers always calculate both and use the gap as a sanity check
+
+Next lesson: equity multiple and the difference between levered and unlevered returns — the metrics that keep IRR honest on the other side.

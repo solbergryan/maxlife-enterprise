@@ -1,0 +1,181 @@
+---
+order: 3
+title: NPV and IRR — Two Sides of the Same Coin
+description: Net present value and internal rate of return explained — what each one really tells you, when to use each, and how they help you compare deals.
+durationMinutes: 13
+keywords:
+  - NPV real estate
+  - IRR commercial real estate
+  - net present value
+  - internal rate of return
+  - cre deal comparison
+---
+
+NPV and IRR are the two numbers every serious CRE analyst quotes. They look like different metrics but they're mathematically linked — two ways of asking the same question about the same cash flows. Once you see how they relate, you'll understand why institutional investors use both.
+
+## Net Present Value (NPV) — are you paying the right price?
+
+<Callout type="formula">
+NPV = (Sum of PV of future cash flows) − Initial investment
+</Callout>
+
+**What it tells you:** The dollar value the deal creates *above* your required rate of return.
+
+- **Positive NPV** → the deal's cash flows are worth more than what you're paying. You should do it (assuming your discount rate is reasonable).
+- **Zero NPV** → the deal exactly hits your required return. Neutral.
+- **Negative NPV** → you'd be overpaying for the cash flows. Walk away.
+
+**Example.** A deal requires $1,000,000 of equity. The expected cash flows (discounted back at your 10% required return) are worth $1,255,576 today.
+
+NPV = $1,255,576 − $1,000,000 = **$255,576**
+
+A positive NPV of $255,576 means the deal creates $255K of value above what you'd need to earn 10%. Good deal. Buy.
+
+### Why NPV is the "right" answer
+
+If you could only use one metric, NPV would be the correct one because it directly answers the question "does this deal make me richer?" — and in the right currency (dollars today).
+
+The complication: NPV depends entirely on the discount rate you pick. A deal with NPV of +$500K at a 10% discount rate might be −$200K at a 14% discount rate. So to use NPV you need to know what return you require.
+
+## Internal Rate of Return (IRR) — what return does the deal actually earn?
+
+<Callout type="formula">
+IRR is the discount rate at which NPV = 0
+</Callout>
+
+**What it tells you:** The annualized return the deal earns on your invested equity, accounting for the timing of every cash flow.
+
+Another way to think about it: IRR is the single discount rate that would make the present value of all your future cash flows exactly equal what you paid. If you bought the deal and held it as projected, this is the compound annual return you'd actually realize.
+
+**Example.** A deal requires $500,000 of equity and produces the following annual cash flows:
+
+| Year | Cash flow |
+|---|---|
+| 0 | -$500,000 (investment) |
+| 1 | $30,000 |
+| 2 | $35,000 |
+| 3 | $40,000 |
+| 4 | $45,000 |
+| 5 | $50,000 + $750,000 (sale) |
+
+You don't calculate IRR by hand — you use Excel's `=IRR()` or `=XIRR()` function. The answer for this cash flow stream is approximately **17.4%**.
+
+So this deal earns about 17.4% annualized on the $500,000 you put in, assuming the projections come true.
+
+### Why IRR is everyone's favorite
+
+IRR is intuitive — it's a single percentage that captures "how much did I earn per year on my money." Everyone understands what a 17% return means.
+
+It also lets you compare deals without having to agree on a discount rate. "This deal is a 14% IRR, that one is an 11% IRR" is a conversation anyone can follow.
+
+## The relationship between NPV and IRR
+
+Here's the insight: **IRR is the discount rate at which NPV equals zero**.
+
+That means:
+
+- If your discount rate is **below** the IRR → NPV is positive, deal is good.
+- If your discount rate is **above** the IRR → NPV is negative, deal is bad.
+- If your discount rate **equals** the IRR → NPV is zero, deal is neutral.
+
+This is why experienced buyers use both:
+
+- **Use IRR to compare deals** against each other and against market standards ("is this a 15% deal or a 10% deal?")
+- **Use NPV to decide whether to buy** a specific deal at a specific price ("is this deal worth more than what I'm paying?")
+
+## When IRR is a liar
+
+IRR has a known weakness: it assumes you can **reinvest interim cash flows at the same rate**.
+
+If your deal has an IRR of 20%, IRR implicitly assumes that every dollar of cash flow you receive during the hold gets reinvested at 20%. In practice, most investors can't redeploy capital at 20% instantly — they might earn 8% on a money market in the meantime, then redeploy later at 12%.
+
+This means **IRR is systematically too high for deals with large interim cash flows**. MIRR (Modified IRR, coming in Lesson 4) fixes this problem by letting you specify a separate reinvestment rate.
+
+For now, just remember: a 25% IRR deal doesn't actually make you 25% per year — it makes you something less than that, depending on what you do with the cash along the way. Pair IRR with equity multiple (coming in Lesson 5) for a reality check.
+
+## The other IRR pitfall: multiple answers
+
+In rare cases, a cash flow stream can have multiple IRRs. This happens when cash flows switch signs more than once — for example, a development deal where you invest, receive some income, invest more for expansion, then sell.
+
+When this happens, Excel's `=IRR()` may return the wrong answer or a mathematically valid but meaningless one. The fix: use `=XIRR()` (which handles irregular dates properly) and sanity-check against NPV.
+
+## Typical IRR targets by deal type
+
+Different deal types warrant different IRR targets. Here's a 2026 industry benchmark:
+
+| Deal type | IRR target | Risk profile |
+|---|---|---|
+| Core (stabilized, investment-grade, low leverage) | 6-9% | Low |
+| Core-plus (stabilized with minor value-add) | 9-12% | Low-medium |
+| Value-add (renovation, lease-up) | 12-18% | Medium |
+| Opportunistic (distress, repositioning) | 18-25% | High |
+| Ground-up development | 20-30% | Very high |
+
+An IRR of 11% is mediocre for a value-add deal but excellent for a core deal. Context is everything.
+
+## How to actually calculate IRR
+
+In Excel or Google Sheets:
+
+```
+=IRR(cash_flow_range)
+```
+
+for evenly spaced annual cash flows, or
+
+```
+=XIRR(cash_flow_range, date_range)
+```
+
+for irregular cash flows (more common in real deals).
+
+**Important:** the cash flow range must start with your investment as a negative number (Year 0: −$500,000) and include every subsequent cash flow in order, ending with the exit.
+
+## Worked example: comparing two deals
+
+Two deals, same $500K equity required:
+
+**Deal A: Stabilized NNN**
+- Year 1-10: $50,000 annual cash flow
+- Year 10 exit: $700,000 net
+- IRR: approximately 11.5%
+- Equity multiple: 2.4x
+
+**Deal B: Value-add multifamily**
+- Year 1: $10,000 (low due to renovations)
+- Year 2: $30,000 (partial stabilization)
+- Year 3: $60,000 (stabilized)
+- Year 4: $65,000
+- Year 5 exit: $1,200,000 net
+- IRR: approximately 17.5%
+- Equity multiple: 2.7x
+
+Both deals roughly double your money. But Deal B does it faster (5 years vs. 10) and with higher IRR. On a pure IRR comparison, Deal B wins.
+
+**But wait** — Deal A runs 10 years and returns a total equity multiple of 2.4x. Deal B runs 5 years and returns 2.7x. **If you could re-deploy Deal B's capital at 15% for the next 5 years, you'd end up with more total wealth.** But if re-deploying is hard (rare good deals, high transaction costs), Deal A might actually outperform Deal B over a full 10-year window.
+
+This is exactly why you need both IRR and equity multiple. Neither one alone tells the full story. (More in Lesson 5.)
+
+## The one decision rule
+
+If you're deciding whether to buy a specific deal at a specific price:
+
+**Calculate NPV at your required discount rate. If NPV > 0, the deal exceeds your required return. Buy. If NPV < 0, walk.**
+
+If you're comparing two deals:
+
+**Calculate IRR for each and compare against industry targets for that asset class and risk profile. Also compare equity multiples to confirm the IRR isn't masking timing weirdness.**
+
+These two rules will get you 90% of the way there on any CRE investment decision.
+
+## What to take away
+
+- NPV answers "does this deal make me richer?" in dollars today
+- IRR answers "what return does this deal earn me?" as a single percentage
+- The two metrics are linked: IRR is the discount rate where NPV = 0
+- NPV depends on your required return; IRR is independent of it
+- Use NPV to decide whether to buy; use IRR to compare deals
+- IRR overstates returns on deals with large interim cash flows — MIRR fixes this
+- Typical IRR targets: 6-9% core, 12-18% value-add, 20%+ development
+
+Next lesson: MIRR — the honest version of IRR that doesn't lie about reinvestment.
