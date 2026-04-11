@@ -29,7 +29,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contact"
+              href="/opportunities#request-valuation"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
               Request a Seller Valuation

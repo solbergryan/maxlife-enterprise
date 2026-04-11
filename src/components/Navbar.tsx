@@ -111,7 +111,7 @@ export default function Navbar() {
               )
             )}
             <Link
-              href="/contact"
+              href="/opportunities#request-valuation"
               className="bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm transition-colors"
             >
               Request Valuation
@@ -203,7 +203,7 @@ export default function Navbar() {
             )}
             <div className="pt-2">
               <Link
-                href="/contact"
+                href="/opportunities#request-valuation"
                 onClick={() => setOpen(false)}
                 className="block bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm text-center transition-colors"
               >

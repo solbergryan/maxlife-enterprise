@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
+import SellerValuationForm from "@/components/SellerValuationForm";
 import CTABanner from "@/components/CTABanner";
 import JsonLd from "@/components/JsonLd";
 
@@ -60,7 +61,7 @@ export default function OpportunitiesPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link
-              href="/contact"
+              href="#request-valuation"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-6 py-3 rounded-lg transition-colors text-center"
             >
               Request a Seller Valuation
@@ -200,15 +201,37 @@ export default function OpportunitiesPage() {
               ))}
             </div>
             <div className="mt-10">
-              <Link
-                href="/contact"
+              <a
+                href="#request-valuation"
                 className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-3 rounded-lg transition-colors"
               >
                 Request a Valuation Call
-              </Link>
+              </a>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Seller Valuation Form */}
+      <section
+        id="request-valuation"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24"
+      >
+        <div className="mb-8">
+          <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
+            Request a Valuation
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Tell us about your property
+          </h2>
+          <p className="text-gray-400 text-lg leading-relaxed">
+            The more you share, the sharper the number we can give you on
+            the call. Only the basics are required &mdash; fill in what you
+            have and Ryan will follow up within one business day to
+            schedule a no-obligation valuation call.
+          </p>
+        </div>
+        <SellerValuationForm />
       </section>
 
       {/* Buyer side — investor signup (secondary) */}
