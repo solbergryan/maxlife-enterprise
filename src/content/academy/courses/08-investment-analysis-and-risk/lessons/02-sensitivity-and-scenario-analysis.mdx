@@ -1,0 +1,214 @@
+---
+order: 2
+title: Sensitivity and Scenario Analysis
+description: How to formally test the robustness of a CRE pro forma — single-variable sensitivity, multi-variable matrices, and the discipline of treating the base case as one of many possible outcomes.
+durationMinutes: 11
+keywords:
+  - cre sensitivity analysis
+  - scenario analysis real estate
+  - pro forma stress test
+  - base case upside downside
+  - real estate risk modeling
+---
+
+A base-case pro forma is one possible future. The actual future will be different — sometimes a little, sometimes a lot. Sensitivity analysis is the discipline of figuring out HOW different, in WHICH variables, and what that means for the deal's returns.
+
+We touched on sensitivity in Course 5, Lesson 6. This lesson goes deeper: not just *how* to build sensitivity tables, but *how* to interpret them and use them to make better decisions.
+
+## The core question
+
+Sensitivity analysis answers a single question: **how confident am I in the base case, and how much can I afford to be wrong?**
+
+A deal with a base-case 15% IRR isn't useful information by itself. The same 15% IRR can mean:
+
+- "Returns are 14-16% under almost any reasonable assumption" → robust, fund it
+- "Returns are 8-22% across the realistic range" → fragile, depends on getting lucky
+- "Returns swing from −5% to +35% across the realistic range" → speculative, treat accordingly
+
+Same headline number. Three completely different deals.
+
+Sensitivity analysis is what reveals the difference. Without it, you're just looking at one point estimate.
+
+## Single-variable sensitivity (the basic form)
+
+The simplest sensitivity analysis sweeps one input across a range of values and shows how the output changes. We covered the Excel mechanics (Data Tables) in Course 5.
+
+The key inputs to sensitize:
+
+1. **Exit cap rate** — almost always the biggest single driver
+2. **Year-1 NOI** — both rent and expenses
+3. **Rent growth rate**
+4. **Vacancy rate**
+5. **Operating expense growth**
+6. **Interest rate** (if rate sensitivity is meaningful)
+7. **Hold period**
+
+For each, sweep ±15-25% around your base case and see how IRR moves. Record the extremes.
+
+### A useful chart format
+
+```
+Variable swept    Low value    Base    High value    IRR range
+Exit cap rate       5.00%      6.00%      7.00%       4.5%-12.8%   (8.3% range)
+Y1 NOI            -10%        Base       +10%         9.5%-13.5%   (4.0% range)
+Rent growth        1.5%       3.0%       4.5%         8.5%-13.0%   (4.5% range)
+Vacancy            8.5%       6.5%       4.5%         9.0%-12.5%   (3.5% range)
+OpEx growth        4.5%       3.0%       1.5%        10.0%-12.0%   (2.0% range)
+Interest rate      8.0%       7.0%       6.0%         9.0%-12.5%   (3.5% range)
+```
+
+The "IRR range" column tells you which inputs matter most. In this example:
+- Exit cap rate drives an 8.3% point swing → biggest driver
+- Rent growth, vacancy, and interest rate are each 3-5% point drivers → secondary
+- Year-1 NOI matters but less than expected
+- OpEx growth matters least
+
+This ranking is immediately useful: it tells you where to spend your due diligence energy. If exit cap is the dominant driver, you should be obsessed with the exit cap assumption — pull recent comps, talk to brokers about future trends, run multiple exit scenarios. Don't waste time arguing about whether OpEx growth is 2.8% or 3.2%.
+
+## Multi-variable sensitivity (the matrix)
+
+A two-variable matrix captures interactions between inputs. The classic combinations:
+
+### Exit cap × rent growth
+
+Most common matrix. Shows how returns change as the two biggest drivers move together.
+
+```
+                    Rent growth
+Exit cap     1%      2%      3%      4%      5%
+   5.00%   11.5%   13.0%   14.6%   16.2%   17.8%
+   5.50%   10.0%   11.5%   13.1%   14.7%   16.3%
+   6.00%    8.6%   10.1%   11.7%   13.3%   14.9%
+   6.50%    7.2%    8.7%   10.3%   11.9%   13.5%
+   7.00%    5.9%    7.4%    9.0%   10.6%   12.2%
+```
+
+Reading this: base case is 6% exit cap, 3% growth → 11.7% IRR. Realistic downside (6.5% exit, 2% growth) → 8.7%. Realistic upside (5.5% exit, 4% growth) → 14.7%. Range of 8.7% to 14.7% — that's the deal's actual return profile.
+
+Color-code with conditional formatting (red for <5%, yellow for 5-10%, green for 10-15%, dark green for 15%+) and the matrix tells the story at a glance.
+
+### Other useful matrices
+
+- **Interest rate × LTV** — debt structure scenarios
+- **Vacancy × rent growth** — operational scenarios
+- **Year-1 NOI × Exit cap** — entry vs. exit pricing
+- **Construction cost × lease-up time** — for development deals
+- **Hold period × exit cap** — when to exit
+
+Pick the two variables most relevant to the specific deal you're underwriting. Don't run all of them by default — you'll drown in data.
+
+## Scenario analysis (named cases)
+
+Sensitivity is mechanical — sweep inputs across ranges. **Scenario analysis** is narrative — define a few specific stories and run the model for each.
+
+The standard three scenarios:
+
+### Base case
+Your best guess. Most-likely values for every input. This is what you'd present to a partner if asked "what do you expect?"
+
+### Upside case (P25 — better than expected)
+What happens if things go better than you expect, but not unrealistically so:
+- Rent growth at the higher end of your range
+- Vacancy lower
+- Exit cap rate compresses (favorable)
+- OpEx growth modest
+
+This isn't "what if everything goes perfectly?" It's "what if the market cooperates and execution is solid?"
+
+### Downside case (P75 — worse than expected)
+What happens if things go against you, but not catastrophically:
+- Rent growth at the lower end of your range
+- Vacancy higher
+- Exit cap rate expands (unfavorable)
+- OpEx growth elevated (insurance, taxes)
+
+This isn't "what if the world ends?" It's "what if the market is mediocre and we hit normal headwinds?"
+
+Each scenario produces a complete pro forma and outputs (IRR, equity multiple, NPV, DSCR). Present them together:
+
+```
+Metric               Downside    Base    Upside
+Levered IRR             6.2%   12.5%    18.0%
+Equity multiple         1.30x  1.80x    2.30x
+NPV at 10%            -$85K   $145K    $410K
+Year-1 DSCR             1.05    1.20     1.35
+Probability (subjective) 30%    50%      20%
+```
+
+The probability column is subjective but useful — it forces you to think about likelihood, not just possibility.
+
+### Probability-weighted IRR
+
+Multiply each scenario's IRR by its probability and sum:
+
+```
+0.30 × 6.2% + 0.50 × 12.5% + 0.20 × 18.0%
+= 1.86% + 6.25% + 3.60%
+= 11.71%
+```
+
+The probability-weighted IRR is closer to your true expected return than the single base case. In this example, the base case (12.5%) overstates the probability-weighted return (11.7%) by ~1 point. Multiply that across many deals over a career and the difference is enormous.
+
+## A fourth scenario: stress / disaster
+
+Beyond the standard three, run a fourth scenario for serious deals: the **stress case**. This isn't "downside" — it's "what if multiple things go wrong simultaneously?"
+
+Example stress assumptions:
+- Rent growth zero or negative
+- Vacancy 200 bps higher than base
+- Exit cap rate 100 bps higher than base
+- OpEx growth at insurance-driven 6%
+- Interest rate at refinance is 100 bps higher
+- 6 months of additional re-leasing at sale
+
+If the deal still survives the stress case (positive equity, no DSCR breach, IRR above zero), it's a robust deal. If the stress case wipes out equity, you have a fragile deal that depends on multiple things going right.
+
+The stress case isn't your base case. It's a "catastrophe insurance" check — making sure you can survive if you're wrong on multiple dimensions at once.
+
+## Sensitivity reveals your assumptions
+
+A useful side effect of sensitivity analysis: it forces you to be honest about your assumptions.
+
+Try this exercise. For your base-case pro forma, ask yourself for each input:
+1. What number am I using?
+2. Why? (What's the source — appraisal? broker? guess?)
+3. What's the range of plausible values?
+4. Where in that range did I land — toward optimistic, neutral, or conservative?
+
+Most beginners realize when they do this honestly that 60-80% of their inputs are toward the optimistic end of plausible. That's not maliciousness — it's the natural human bias toward outcomes you want to be true.
+
+Sensitivity analysis catches this bias by showing what happens if your "neutral" inputs turn out to be slightly less than you guessed.
+
+## When sensitivity is misleading
+
+A few caveats:
+
+### 1. Correlated variables
+Sensitivity treats each variable independently. In reality, many inputs are correlated:
+- High vacancy and slow rent growth tend to happen together
+- Rising interest rates and rising cap rates tend to happen together
+- Insurance increases and rising property taxes can correlate
+
+If you run a multi-variable sensitivity that treats these as independent, you'll understate the true risk. Build in some correlation when constructing scenarios.
+
+### 2. Tail events
+Sensitivity ranges typically span the "normal" range — say, ±20% on each input. Real-world tail events (a major recession, a tenant bankruptcy, a hurricane) live outside that range. Running sensitivity at ±20% tells you nothing about a 50% scenario.
+
+For tail events, do scenario analysis instead — narrative cases that explicitly model the catastrophe.
+
+### 3. Optimism creep
+Sensitivity ranges are themselves chosen by the modeler. If you use ranges that are too narrow ("we'll sensitize cap rate from 5.5% to 6.5%"), you're hiding the real downside risk. Force yourself to use wider ranges than feel comfortable.
+
+A good test: if your downside case has IRR within 3 points of your base case, your downside case isn't pessimistic enough. Stretch it.
+
+## What to take away
+
+- Sensitivity analysis answers: how confident am I in the base case?
+- Sweep each key input ±15-25% around base case to find the biggest drivers
+- Multi-variable matrices show interactions between two variables
+- Scenario analysis defines named cases (base, upside, downside) with full pro formas
+- Probability-weighted IRR is closer to true expected return than the single base case
+- Always run a stress case for downside protection
+- Watch for correlated inputs and tail events that escape simple sensitivity
+
+Next lesson: building the three-scenario pro forma — turning sensitivity discipline into a structured comparison you can present to a partner or lender.

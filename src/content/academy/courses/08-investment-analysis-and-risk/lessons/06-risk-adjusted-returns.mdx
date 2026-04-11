@@ -1,0 +1,251 @@
+---
+order: 6
+title: Risk-Adjusted Returns and Probability of Loss
+description: How to compare CRE deals on a risk-adjusted basis using probability of loss, return distributions, and the institutional concept of risk premium — moving beyond raw IRR to make smarter investment decisions.
+durationMinutes: 11
+keywords:
+  - risk adjusted returns cre
+  - probability of loss real estate
+  - cre risk premium
+  - sharpe ratio real estate
+  - cre return comparison
+---
+
+A 15% IRR isn't a 15% IRR isn't a 15% IRR. The same headline number can come from a deal with almost no downside or a deal where you're flipping coins. Risk-adjusted thinking is the discipline of comparing deals fairly — and noticing when a "high-return" deal is actually being mispriced for the risk it carries.
+
+This lesson covers the conceptual tools institutional investors use to compare risk and return, and how to apply them to your own deal analysis without needing a quant background.
+
+## The core problem with raw IRR
+
+Raw IRR tells you "if everything goes as projected, here's the return." It says nothing about:
+
+- How likely the projection is to actually happen
+- How bad the downside is if it doesn't
+- How the deal compares to a less risky alternative
+
+If you're choosing between two deals:
+
+- Deal A: 12% projected IRR, very tight range (10-14% in any reasonable scenario)
+- Deal B: 18% projected IRR, very wide range (-5% to +35% across scenarios)
+
+Naive comparison says Deal B wins by 6 points. Risk-adjusted comparison says it depends — and probably Deal A wins for most investors, because the certainty is worth more than the extra 6 points of expected return.
+
+The trick is making this intuition quantitative.
+
+## Risk premium — the foundation
+
+**Risk premium** is the extra return demanded for taking risk above a "risk-free" baseline.
+
+- Risk-free rate (10-year Treasury): roughly 4-5% in 2025
+- Stabilized credit-tenant NNN deal: 6-7% IRR → risk premium of 1.5-2.5%
+- Stabilized multifamily: 8-10% IRR → risk premium of 4-5%
+- Value-add multifamily: 13-15% IRR → risk premium of 9-11%
+- Development: 18-22% IRR → risk premium of 14-17%
+
+The risk premium tells you what you're being paid for taking risk. If the risk premium is too small for the risk, you're being underpaid — pass.
+
+### The "is this fairly priced?" check
+
+Before committing to a deal, ask: **does the IRR justify the risk relative to a less risky alternative?**
+
+- If a value-add multifamily deal is projecting 11% IRR (only 6 points above the risk-free rate), but the same money in stabilized multifamily gets you 9% with much less execution risk → the value-add deal is mispriced. Walk.
+- If a development deal is projecting 14% (only 9 points above risk-free) when normal development risk premium is 14-17% → mispriced. Walk.
+- If a stabilized NNN deal is projecting 9% (5 points above risk-free) when normal risk premium is 1.5-2.5% → either there's hidden risk you're missing or the deal is genuinely mispriced in your favor. Investigate.
+
+The risk premium framework forces you to compare deals against opportunity cost, not just against zero.
+
+## Probability of loss
+
+For risk-aware investors, the most important question isn't "what return will I get?" — it's **"what's the chance I lose money?"**
+
+Probability of loss is exactly what it sounds like: the percent likelihood that the deal returns less than your original equity check. Not less than your target IRR — less than your equity check. Negative IRR.
+
+Estimating probability of loss is partly subjective, but the three-scenario model gives you a starting point:
+
+| Scenario | Outcome | Probability |
+|---|---|---|
+| Downside | IRR 4%, equity multiple 1.15x → return capital plus small gain | 25% |
+| Base | IRR 13%, equity multiple 2.10x → strong return | 50% |
+| Upside | IRR 19%, equity multiple 2.85x → great return | 25% |
+| **Stress** | IRR -3%, equity multiple 0.85x → lose 15% of equity | 10% |
+
+Your "probability of loss" is the probability of the stress (or worse) scenario — say, 10% in this example.
+
+Different deal types have different baseline probabilities of loss:
+
+| Deal type | Approximate probability of loss |
+|---|---|
+| Stabilized credit NNN, low leverage | 1-3% |
+| Stabilized multifamily, moderate leverage | 5-10% |
+| Value-add multifamily | 10-20% |
+| Development | 15-30% |
+| Speculative land | 30-50% |
+| Distressed / opportunistic | 25-40% |
+
+If you're buying value-add multifamily, accept that roughly 1 in 7-10 of those deals will lose money. That's not failure — that's the asset class. The question is whether the winners pay enough to compensate for the losers.
+
+### The portfolio implication
+
+If your probability of loss on any single value-add deal is 15%, you need to do enough deals to let the law of large numbers work. One deal is a coin flip with a tilt; ten deals across cycles is a real return distribution.
+
+This is why institutional value-add funds make 20-40 deals per fund. They know individual deals will fail; they're betting on the average across the portfolio.
+
+For an individual investor making 1-3 deals at a time, you don't get this diversification. So you need to be either MORE conservative on individual deal risk OR build the portfolio gradually.
+
+## The Sharpe-ratio analog
+
+Wall Street uses the Sharpe ratio to measure risk-adjusted returns:
+
+**Sharpe ratio = (Return − Risk-free rate) ÷ Standard deviation of returns**
+
+For CRE, you don't typically have enough data points to compute a true standard deviation, but you can use the range from your three-scenario model as a proxy:
+
+**Adapted Sharpe-style metric = (Base IRR − Risk-free rate) ÷ (Base IRR − Downside IRR)**
+
+This tells you how many "downsides" of risk you're taking per point of return above risk-free.
+
+### Example
+
+Deal A: Base IRR 12%, Downside IRR 9%, Risk-free 4.5%
+- (12% − 4.5%) / (12% − 9%) = 7.5 / 3 = **2.5**
+
+Deal B: Base IRR 18%, Downside IRR -5%, Risk-free 4.5%
+- (18% − 4.5%) / (18% − (-5%)) = 13.5 / 23 = **0.59**
+
+Deal A has a much higher risk-adjusted score (2.5 vs 0.59) even though Deal B has a much higher base IRR. The math captures what intuition was telling you: Deal A is the better risk-adjusted bet.
+
+This metric isn't a true Sharpe ratio, but it gives you a quick way to rank-order deals on a risk-adjusted basis.
+
+## Building a return distribution
+
+Beyond three scenarios, sophisticated investors model a full return distribution — every plausible IRR weighted by its probability.
+
+You don't need Monte Carlo simulation tools to do this for individual deals. A simplified approach:
+
+1. List 5-7 scenarios (deeper than just downside/base/upside)
+2. Assign each a probability that sums to 100%
+3. Calculate the IRR for each
+4. Multiply each IRR by its probability and sum
+
+```
+Scenario              IRR     Probability    Weighted IRR
+Disaster             -8%        5%           -0.40%
+Stress                3%       10%            0.30%
+Downside              7%       20%            1.40%
+Base                 13%       40%            5.20%
+Upside               17%       20%            3.40%
+Blue sky             22%        5%            1.10%
+                     ----     ----           ------
+Probability-weighted              100%       11.00%
+```
+
+Two things to notice:
+
+1. **The probability-weighted IRR (11%) is below the base case (13%)** — by 2 points. This is the gap between your projected return and your honest expected return.
+2. **The disaster scenario contributes negatively** — even with only 5% probability, a -8% return drags the average down. Tail events matter even when their probability is small.
+
+For comparing deals, the probability-weighted IRR is the right number to use, not the base case alone.
+
+## The discipline of pricing risk in
+
+When two deals look similar on base IRR, the risk-adjusted view often reveals which is actually better. Some practical examples:
+
+### Example 1: Two retail deals
+
+**Deal X**: Anchored grocery, 95% leased, AAA-credit anchor with 12 years remaining lease term. Base IRR 11%.
+
+**Deal Y**: Older strip center, 85% leased, mixed local tenants, no anchor. Base IRR 13%.
+
+Naive view: Deal Y wins by 2 points.
+
+Risk-adjusted view: Deal X has lower probability of loss (~3% vs ~15%), tighter return range, less re-leasing risk, more lender appetite (so better financing). The 2-point spread between them is too narrow to compensate for the risk gap. **Deal X wins on a risk-adjusted basis** despite the lower base IRR.
+
+### Example 2: Multifamily with different leverage
+
+**Deal P**: 65% LTV, base IRR 12%, downside IRR 8%
+**Deal Q**: 80% LTV, base IRR 16%, downside IRR 1%
+
+Naive view: Deal Q wins by 4 points.
+
+Risk-adjusted view: Deal P has DSCR cushion above 1.40 in all scenarios. Deal Q has DSCR of 1.05 in downside (covenant breach territory) and could lose property in stress. The 4-point spread doesn't compensate for the risk of zero return in the bad case. **Deal P is the better risk-adjusted choice** unless you have an extremely strong base case conviction.
+
+### Example 3: Same return, different deal structures
+
+**Deal M**: Single-tenant industrial, 10-year NNN to S&P-rated tenant. Base IRR 9%.
+**Deal N**: Self-storage development, 24-month build, 18-month lease-up. Base IRR 9%.
+
+Same headline return. Massively different risk profile. Deal M has near-zero execution risk and modest downside. Deal N has construction risk, lease-up risk, supply risk, and refinance risk.
+
+**At identical 9% returns, Deal M wins overwhelmingly.** Why would anyone take the development risk for the same return? They wouldn't — which means Deal N is mispriced. Either pass on Deal N or don't buy Deal M at the price quoted.
+
+## Using risk-adjusted thinking to negotiate
+
+A practical application: when a seller's pro forma shows a 15% IRR but your stress-tested probability-weighted IRR is 10%, you have negotiating ammunition.
+
+"At your asking price, the probability-weighted return doesn't justify the risk profile. To make this a fair risk-adjusted return, the price would need to come down 8% to bring the projected IRR to 17% — which would put the probability-weighted return at 12%, the threshold we need given the risk."
+
+That's a defensible negotiating position, and far stronger than "your price is too high."
+
+## When risk-adjusted thinking breaks down
+
+A few honest caveats:
+
+### 1. Probabilities are subjective
+Your "25% probability" of upside is a guess. Different investors will assign different probabilities to the same scenarios, and there's no way to prove who's right ahead of time. Use probability as a discipline for thinking, not as a precision tool.
+
+### 2. Tail events are underestimated
+Black-swan events (financial crises, pandemics, regional collapses) are nearly impossible to assign accurate probabilities to. Risk-adjusted models tend to assign 1-2% probabilities to disasters that, looking back, happen more often than that.
+
+### 3. Correlations across deals matter
+If you own 5 deals in the same submarket and the submarket collapses, all 5 fail at once. The "diversification" you thought you had didn't exist. True diversification requires deals across different markets, asset types, and risk profiles.
+
+### 4. Financing dynamics dominate at extremes
+A deal with manageable risk in normal markets becomes a disaster if you can't refinance. Risk-adjusted models often underweight refinance risk relative to operating risk, even though refinance is what kills most distressed deals.
+
+### 5. Behavioral mistakes
+Even with perfect math, investors panic-sell at bottoms and over-buy at tops. The risk-adjusted model assumes rational holding through cycles. Your actual behavior may differ.
+
+## A simple risk-adjusted scorecard
+
+For each deal you analyze, fill in this scorecard before signing the LOI:
+
+```
+Deal: ____________________
+Asset class: ______________
+Leverage: ____% LTV
+
+Base IRR:                   ____%
+Downside IRR:               ____%
+Stress IRR:                 ____%
+Probability-weighted IRR:   ____%
+
+Risk-free rate:             ____%
+Risk premium (base):        ____%
+Typical risk premium:       ____% to ____%
+Premium adequate?           Y / N
+
+Probability of loss:        ____%
+Probability of upside:      ____%
+
+Adapted Sharpe metric:      ____
+
+Lender DSCR (base):         ____
+Lender DSCR (stress):       ____
+Survives lender stress?     Y / N
+
+VERDICT:                    Pass / Negotiate / Buy
+```
+
+Run every deal through this. After 20-30 deals, you'll have a feel for what good and bad risk-adjusted profiles look like — and your gut will start matching what the math says.
+
+## What to take away
+
+- Raw IRR is misleading; risk-adjusted IRR is the honest comparison
+- Risk premium is the extra return you demand above the risk-free rate; it should match the risk
+- Probability of loss is more important than projected return for deal selection
+- Probability-weighted IRR is closer to your true expected return than the base case
+- Use a Sharpe-style metric to rank-order deals on a risk-adjusted basis
+- Most beginners pay too little attention to tail events and refinance risk
+- A risk-adjusted scorecard institutionalizes the discipline of fair comparison
+
+Next lesson: knowing when to walk — the red flags and deal-killers that should make you pass on a deal regardless of how good the headline numbers look.

@@ -1,0 +1,295 @@
+---
+order: 4
+title: Building the Three-Scenario Pro Forma
+description: How to structure a downside / base / upside pro forma in Excel — input toggles, scenario tables, and the discipline of presenting all three to investors so the conversation is about probabilities, not predictions.
+durationMinutes: 12
+keywords:
+  - three scenario pro forma
+  - downside base upside cre
+  - cre scenario analysis
+  - real estate investment scenarios
+  - cre underwriting
+---
+
+A single base case is one possible future. A three-scenario pro forma is an honest acknowledgement that you don't know which future will happen — but you've thought through several. This is the difference between a beginner pitch deck and an institutional one.
+
+This lesson shows how to build the three-scenario pro forma in Excel and how to use it in conversations with investors, lenders, and partners.
+
+## Why three scenarios beat one
+
+Most pro formas are single-base-case models. They look precise: "Year 5 NOI is $312,847." But that precision is fake — there's no way you actually know NOI to four significant digits five years out. You guessed inputs, the model multiplied them, and the output came out looking authoritative.
+
+A three-scenario model does the opposite. Instead of one number, it gives you:
+
+- **Downside**: $245K
+- **Base**: $313K
+- **Upside**: $385K
+
+And it forces you to attach probabilities. Now the conversation isn't "the IRR is 14%" — it's "the IRR is 14% in our base case, but the realistic range is 8-19% and we think there's about a 25% chance we end up below 10%."
+
+That second framing is far more useful for actual decision-making. It also makes you look like a serious investor, not a hopeful spreadsheet jockey.
+
+## The structural choice — toggles vs. side-by-side
+
+There are two ways to build a three-scenario model in Excel:
+
+### Approach 1: Scenario toggle (single model, switchable inputs)
+
+Build one pro forma. Add a "Scenario" cell at the top with a dropdown (Downside / Base / Upside). Use INDEX or CHOOSE formulas so every assumption pulls from the appropriate column based on the toggle.
+
+```
+Scenario:  [Base ▾]
+
+Assumptions table:
+                        Downside    Base    Upside
+Rent growth %             1.0%      3.0%    4.5%
+Vacancy %                 8.0%      6.0%    5.0%
+OpEx growth %             4.0%      3.0%    2.0%
+Exit cap rate %           7.0%      6.0%    5.5%
+Lease-up months            12         9       6
+```
+
+In the pro forma cells, instead of hardcoding "3.0%" for rent growth, use:
+```
+=INDEX(AssumptionsTable[Rent growth %], MATCH($Scenario, ScenarioList, 0))
+```
+
+Now when you flip the toggle to "Upside," every cell that references rent growth recalculates instantly. Your IRR, DSCR, and equity multiple all update.
+
+**Pros**: One model to maintain. Logic is in one place. Easy to make changes. Smaller file size.
+
+**Cons**: Can only see one scenario at a time. To compare, you have to print/save snapshots or copy outputs to a summary tab.
+
+### Approach 2: Three side-by-side columns
+
+Build three full pro formas in three columns (or three tabs) with hardcoded different inputs. Compare outputs at the bottom of the same tab.
+
+**Pros**: All three scenarios visible at once. Easy to compare line by line. Easy to spot why one differs from another.
+
+**Cons**: Three places to maintain. If you change a formula, you have to change it three times. Easier to introduce inconsistencies.
+
+### Which to use
+
+For working models during underwriting → **toggle approach** (faster to iterate).
+
+For final investor presentations → **side-by-side approach** (clearer at a glance).
+
+Many institutional shops build with the toggle approach during analysis and then export the three scenarios into a static summary tab for the final memo.
+
+## What to vary (and what to hold constant)
+
+Not every input should change between scenarios. Some are deal facts (purchase price, square footage, in-place rents), and they stay the same. Others are assumptions about the future, and those vary.
+
+### Inputs that vary by scenario
+
+| Input | Why it varies |
+|---|---|
+| Rent growth rate | Market direction is uncertain |
+| Market vacancy | Submarket health varies |
+| OpEx growth rate | Insurance/tax shocks possible |
+| Exit cap rate | Future market sentiment unknown |
+| Lease-up time | Speed of absorption varies |
+| Re-leasing cost (TI/LC) | Market negotiation power varies |
+| Renovation cost overrun % | Construction risk |
+| Concession days | Market softness varies |
+
+### Inputs that stay constant
+
+| Input | Why it doesn't vary |
+|---|---|
+| Purchase price | Negotiated, fixed |
+| Loan amount and rate | Financing is committed |
+| Square footage / unit count | Physical fact |
+| In-place rents at acquisition | Current rent roll, fact |
+| Acquisition closing costs | Mostly fixed |
+| Hold period | Strategic decision, not market-driven |
+| Sponsor promote / waterfall | Negotiated, fixed |
+
+A common mistake is varying everything between scenarios. Don't. Vary only what's actually uncertain about the future. Holding the deal-fact inputs constant makes the model more credible.
+
+## Choosing the right ranges
+
+The hardest part of scenario modeling isn't the Excel mechanics — it's choosing input ranges that are honestly downside and honestly upside. Most beginners pick ranges that are too narrow.
+
+### A discipline for picking ranges
+
+For each input, ask: **"What's the worst this realistically gets, and what's the best this realistically gets?"**
+
+Realistic doesn't mean "tail event" — it means "things I would not be shocked to see in normal market conditions over the next 5 years."
+
+**Rent growth example.** Base case is 3% per year.
+- "Realistic downside" → 1% (slow market, no growth in real terms)
+- "Realistic upside" → 4.5% (above-trend growth, supply-constrained)
+- NOT downside: -3% (that's a recession scenario, save it for stress)
+- NOT upside: 7% (that's frothy, only happens in extreme markets briefly)
+
+**Exit cap rate example.** Base case is 6.0%.
+- "Realistic downside" → 6.75% (cap rates expand 75 bps over hold period)
+- "Realistic upside" → 5.5% (cap rates compress 50 bps)
+- NOT downside: 8.0% (financial crisis level)
+- NOT upside: 4.5% (peak euphoria)
+
+Save the truly bad and truly good cases for the stress and "blue sky" runs — they don't belong in your standard three-scenario model.
+
+### The "asymmetric range" check
+
+Real estate downside is bigger than upside because:
+- Cap rates can expand more than they can compress (no upper bound, but a floor exists near zero)
+- Vacancy can rise to 30%+ in bad times but can only drop to 0%
+- OpEx can spike 20% in a bad year but rarely drops 20%
+- Tenants can default but rarely overpay
+
+So your downside should be MORE different from base than your upside is. If your downside is "1% rent growth" and your upside is "5%" (both 2 points off the 3% base), you're being too symmetric. Real downside might be "0% growth + higher vacancy + cap rate expansion" — multiple bad inputs at once.
+
+This is why scenario analysis (named, narrative cases) matters more than single-variable sensitivity. Real downside is the correlated combination, not any single input.
+
+## The output dashboard
+
+The scenarios are useless without a clean comparison view. Build a dashboard that shows the three scenarios side by side on key metrics.
+
+```
+Metric                   Downside    Base       Upside
+Year-1 NOI               $172,000   $185,000   $195,000
+Year-5 NOI               $198,000   $237,000   $268,000
+Year-10 NOI              $235,000   $295,000   $352,000
+
+Stabilized Year DSCR        1.05      1.25       1.40
+Min DSCR over hold          0.98      1.22       1.38
+
+Sale price (Year 10)     $3,360K   $4,920K    $6,400K
+Sale net of costs        $3,260K   $4,770K    $6,210K
+
+Equity at sale             $850K   $2,250K    $3,690K
+Equity multiple            1.21x    2.20x      3.08x
+Levered IRR                3.5%    14.5%      21.0%
+NPV at 12%               -$320K    $410K      $980K
+
+Scenario probability        25%      50%       25%
+```
+
+Color-code: red for failing metrics (DSCR <1.0, negative IRR), yellow for marginal, green for strong. The color tells the story before anyone reads the numbers.
+
+## The probability assignment
+
+The probability column is subjective but it forces a useful conversation. Standard buckets:
+
+| Confidence in deal | Downside | Base | Upside |
+|---|---|---|---|
+| Very confident | 15% | 65% | 20% |
+| Normal underwriting | 25% | 50% | 25% |
+| Uncertain market | 35% | 45% | 20% |
+| Speculative | 40% | 40% | 20% |
+
+Most deals belong in the "normal" or "uncertain market" rows. If you find yourself wanting to assign 80% to your base case, ask why you're so confident. Usually the honest answer is "I'm not, I'm just hoping."
+
+### Probability-weighted metrics
+
+Multiply each scenario's IRR by its probability:
+
+```
+Probability-weighted IRR = 0.25 × 3.5% + 0.50 × 14.5% + 0.25 × 21.0%
+                        = 0.875% + 7.25% + 5.25%
+                        = 13.375%
+```
+
+Compare to the base-case IRR of 14.5%. The probability-weighted IRR is about 1.1 points lower because the downside is dragging it down. Over many deals, this gap accumulates — base-case investors systematically overstate their long-run returns.
+
+The probability-weighted IRR is what you should use to compare deals against each other and against your hurdle rate. Not the base case alone.
+
+## Presenting the three-scenario model
+
+How you show this to a partner or LP matters as much as how you build it.
+
+### Don't lead with the base case
+
+The natural temptation is to open with "our base case shows 14.5% IRR." Resist it. That sets the anchor at the most optimistic of your honest scenarios.
+
+Instead, lead with the range:
+
+"This deal produces an IRR range of about 4% to 21% across the realistic scenarios we modeled, with a probability-weighted return of around 13%. Let me walk through why."
+
+That framing immediately tells your audience: this is uncertain, I've thought about it, here's how I'm thinking about the risk.
+
+### Walk through downside first
+
+Always present the downside scenario before the base case. Why? Because if your audience doesn't understand the downside, they can't evaluate the base case. They'll assume the base case is optimistic and discount everything else.
+
+Show the downside specifically:
+- "If rent growth comes in at 1% instead of 3%, vacancy stays at 8% instead of dropping to 5%, and we exit at 6.75% cap rate instead of 6.0%, the IRR is 4% and the equity multiple is 1.21x."
+- "We'd still get our money back. We wouldn't get a great return, but we wouldn't lose."
+
+Now your audience knows the floor. The base case lands on solid ground.
+
+### Show the upside last
+
+Save the upside for last. It's the cherry on top, not the meal. Many beginners spend half the meeting on the upside ("if this hits, we'll make 25%!") and the audience tunes out because they assume the upside is fantasy.
+
+Spending one minute on the upside, after thoroughly grounding the conversation in downside and base, makes the upside credible.
+
+### Always include probability
+
+Without probabilities attached, the three scenarios feel like a buffet ("pick whichever one you like!"). With probabilities, they become a prediction ("we think there's a 25% chance we hit downside and a 25% chance we hit upside").
+
+Probabilities also force you to commit. If you say "I think there's a 50% chance of base case," you've made a falsifiable claim. Six months in, you can re-check whether the world is moving toward your downside or your upside scenarios. Without probabilities, there's nothing to re-check.
+
+## A worked example — 24-unit Orlando MF
+
+Same deal we used in earlier lessons. Three-scenario summary:
+
+**Downside scenario (25% probability)**
+- Rent growth 1.5%, vacancy stays 7%, exit cap 6.5%
+- Renovation comes in 10% over budget
+- Year-1 NOI: $165K
+- Year-10 sale: $4.4M
+- Levered IRR: **6.8%**
+- Equity multiple: **1.42x**
+- Outcome: get equity back plus a small return; underperform but don't lose
+
+**Base scenario (50% probability)**
+- Rent growth 3%, vacancy 5%, exit cap 6.0%
+- Renovation on budget
+- Year-1 NOI: $185K
+- Year-10 sale: $5.4M
+- Levered IRR: **13.5%**
+- Equity multiple: **2.20x**
+- Outcome: hit projections, deliver target return
+
+**Upside scenario (25% probability)**
+- Rent growth 4.5%, vacancy 4%, exit cap 5.5%
+- Renovation slightly under budget
+- Year-1 NOI: $195K
+- Year-10 sale: $6.6M
+- Levered IRR: **19.2%**
+- Equity multiple: **2.95x**
+- Outcome: hit on multiple variables, exceed target
+
+**Probability-weighted IRR**: 0.25(6.8%) + 0.50(13.5%) + 0.25(19.2%) = **13.25%**
+
+**The pitch**:
+"This deal has a probability-weighted IRR of about 13%, with a downside floor of 7% (so we get our money back even if rent growth disappoints) and an upside of 19% if Orlando MF rents and cap rates cooperate. The base case is 13.5% — right at our 13% target. The risk-adjusted return is fairly priced for the asset class, with positive optionality if the Sunbelt thesis plays out."
+
+That's a complete pitch in three sentences. Investors can act on it.
+
+## A note on lender presentation
+
+When presenting to a lender, lead even more conservatively. Lenders care about downside, not upside.
+
+- Show downside DSCR, not just base case
+- Highlight how the deal performs under stress (not just downside) — because the lender's covenant math is what matters
+- Show debt yield in all three scenarios
+- De-emphasize equity-side returns; emphasize cushion above lender thresholds
+
+Lender meetings should feel different from LP meetings — same model, different framing. The lender wants to know "can this deal pay me back?" not "will this make my LPs rich?"
+
+## What to take away
+
+- Three-scenario pro formas replace fake precision with honest uncertainty
+- Use a toggle approach during analysis, side-by-side for presentations
+- Vary inputs that are uncertain about the future; hold deal facts constant
+- Pick honestly downside and upside ranges — most beginners are too conservative on downside
+- Real estate downside is bigger than upside — your downside should reflect that asymmetry
+- Probability-weighted IRR is the metric that matters; the base case alone is misleading
+- Lead presentations with the range, walk through downside first, save upside for last
+- Lender meetings emphasize downside cushion; LP meetings emphasize range
+
+Next lesson: stress testing — what happens beyond the realistic downside, and why every serious deal needs a "catastrophe insurance" check before you commit capital.
