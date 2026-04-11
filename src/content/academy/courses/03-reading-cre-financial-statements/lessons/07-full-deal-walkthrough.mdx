@@ -1,0 +1,239 @@
+---
+order: 7
+title: Full Walkthrough — Reading a Real Multi-Tenant Retail Deal
+description: Applying every skill from this course to a realistic multi-tenant retail deal — rent roll, T-12, pro forma, red flags, and a final offer price.
+durationMinutes: 18
+keywords:
+  - cre deal walkthrough
+  - multi tenant retail underwriting
+  - commercial real estate deal example
+  - noi analysis example
+  - cre deal offer price
+---
+
+Time to put it all together. We're going to walk through a realistic multi-tenant retail deal the way a sophisticated buyer would — starting from nothing, building our own analysis, and ending with a defensible offer price.
+
+## The deal
+
+**Property:** 18,500 sq ft strip center in Orlando, FL (Kissimmee submarket)
+**Year built:** 2006
+**Asking price:** $4,200,000
+**Broker's claimed cap rate:** 5.95%
+**Broker's claimed NOI:** $249,900
+
+Let's figure out if any of that is true.
+
+## Step 1: The rent roll
+
+```
+Suite  Tenant              SF     Start    End      Rent/mo  Rent/yr  PSF     Type  Escalations
+A      Dollar Tree          8,500  5/2018   4/2028    17,000  204,000  $24.00  NNN   10% at option
+B      Subway               1,400   2/2019   1/2029    3,200   38,400  $27.43  NNN   3%/yr
+C      H&R Block            1,200   1/2022  12/2026    2,100   25,200  $21.00  NNN   Flat
+D      Cell phone repair    1,200   6/2024   5/2027    2,000   24,000  $20.00  NNN   Flat
+E      Nail salon           1,400  10/2022   9/2025    2,650   31,800  $22.71  NNN   Flat
+F      Local boutique       1,400   3/2020   2/2026    2,400   28,800  $20.57  MG    Flat
+G      Vacant               1,800     —        —            0        0    —      —     —
+H      Vacant               1,600     —        —            0        0    —      —     —
+      
+Total: 18,500 SF, 15,100 occupied (81.6%), 3,400 vacant (18.4%)
+Total annual rent: $352,200
+```
+
+**5-question rent roll scan:**
+
+1. **Top tenant concentration**: Dollar Tree = $204,000 of $352,200 = **58% of rent** from one tenant. Medium-high concentration but on a national chain with solid credit, so manageable.
+
+2. **Near-term rollover**: In the next 24 months we have Nail Salon (9/2025), Local Boutique (2/2026), and H&R Block (12/2026) — that's 3 tenants representing $85,800 of rent (**24% of total**). Moderate rollover risk.
+
+3. **Credit quality**: Dollar Tree (investment grade) + Subway (franchise, non-rated) + H&R Block (corporate-owned, decent) = 76% of rent from decent tenants. Remaining 24% is mom-and-pop.
+
+4. **Rent-to-market**: Let's say Kissimmee strip center market rate is $22/SF NNN.
+   - Dollar Tree at $24 — slightly **above market** (but national chain on a long lease — they'll probably renew)
+   - Subway at $27.43 — **above market**. Red flag for option period 2029.
+   - H&R Block at $21 — at market ✓
+   - Cell phone repair at $20 — at market-ish ✓
+   - Nail salon at $22.71 — at market ✓
+   - Boutique at $20.57 — below market, but on modified gross so hard to compare directly
+
+5. **Current vacancy**: **18.4% physical vacancy** — high. Two vacant suites need to be leased up. This is a value-add opportunity but also a risk.
+
+**Rent roll summary in one sentence:** Dollar Tree-anchored strip center with 18% vacancy, moderate rollover risk on 3 mom-and-pop tenants, and one above-market Subway that's safe for now but risky at 2029 renewal.
+
+## Step 2: The T-12
+
+Here's the trailing 12-month operating statement:
+
+```
+                       Total
+Gross rent income    $348,500
+Vacancy/credit loss  ($20,910)
+CAM reimbursements    $42,000
+Other income          $2,400
+Effective Gross      $371,990
+
+Property taxes       $18,200
+Insurance             $7,500
+Management                 $0      <-- missing
+R&M                  $12,800
+Landscaping           $3,600
+Utilities (common)    $4,200
+Pest control          $1,800
+Legal/professional    $2,100
+Trash                 $2,400
+Roof repair (1x)     $15,000      <-- one-time item
+Total expenses       $67,600
+
+NOI                 $304,390
+```
+
+Wait — the broker claimed NOI of $249,900 but the T-12 raw number is $304,390? That's because the broker is using a "pro forma" that strips out some things but adds in others, OR this T-12 reflects a better-than-normal year. Let's normalize.
+
+**Step 2a: Adjustments to T-12**
+
+- **Strip out one-time roof repair**: +$15,000 → NOI becomes $319,390
+- **Add back a normalized R&M reserve**: −$2,000/year CapEx reserve to account for future roof
+- **Add management fee** (4% of EGI for multi-tenant retail): $371,990 × 4% = $14,880 → −$14,880
+- **Add CapEx reserve** ($0.20/SF): 18,500 × $0.20 = $3,700 → −$3,700
+- **Recalculate property taxes**: Sale price $4,200,000 × 1.8% millage = $75,600. T-12 shows $18,200 (based on seller's old basis of around $1M). Your post-sale tax bill jumps by $57,400. → −$57,400
+- **Update insurance**: T-12 shows $7,500. Florida commercial insurance has risen — let's budget $10,500. → −$3,000
+
+**Normalized NOI:**
+$304,390 + $15,000 − $2,000 − $14,880 − $3,700 − $57,400 − $3,000 = **$238,410**
+
+Compared to the broker's $249,900, we're about **$11,490 lower** — a 5% gap. Not huge, but there's more. The big killer is the post-sale tax increase of $57K.
+
+## Step 3: Compare to broker's pro forma
+
+The broker's Year 1 pro forma in the OM shows:
+
+```
+Gross rent:      $370,000  (claim: releasing vacancy)
+Vacancy (3%):   ($11,100)
+CAM income:      $44,000
+EGI:            $402,900
+Operating exp:  ($153,000)
+NOI:            $249,900
+Cap rate:         5.95%
+```
+
+Now let's pick this apart:
+
+### Red flag 1: Year 1 rental income
+Broker shows $370,000. Current rent roll sums to $352,200, and that assumes both vacant suites are leased. Getting from $352K to $370K implies:
+- Lease up 3,400 SF of vacant space at ~$22/SF = $74,800 of new rent
+- Add escalations on existing leases
+- But wait — lease up 3,400 SF and you only add $74,800 IF you assume market rent
+- Net change: $352,200 + $74,800 = $427,000 gross rent
+
+The broker is showing $370,000 — implying they think only PART of the vacancy will lease up, OR they've made other adjustments. Either way, it's unclear. **This needs to be questioned.**
+
+### Red flag 2: Vacancy assumption
+The broker shows 3% stabilized vacancy. Current physical vacancy is 18.4%. To get to 3%, you'd need to lease up $74,800 of rent. That's at least 6-12 months of effort and leasing commissions.
+
+Realistic Year 1 vacancy: 8-10%, not 3%. At 8% on $427K gross, that's $34K of vacancy (vs. the broker's $11K). A $23K difference.
+
+### Red flag 3: Operating expenses
+Broker shows $153,000. Let's rebuild honestly:
+- Property taxes: $75,600 (post-sale)
+- Insurance: $10,500
+- Management (4% of EGI): ~$16,000
+- R&M: $12,000 (normalized)
+- Landscaping: $3,600
+- Utilities: $4,200
+- Pest control: $1,800
+- Legal: $2,100
+- Trash: $2,400
+- CapEx reserves ($0.20/SF): $3,700
+- **Total: $131,900**
+
+Hmm — actually the broker's number of $153K looks about right or slightly HIGH. Interesting. Let me double-check... ah, the broker might be including some other line items (leasing commissions on releasing vacancy, tenant improvements). That's legitimate for a value-add pro forma.
+
+### Red flag 4: Missing context for the jump from T-12 NOI to pro forma NOI
+The T-12 showed $304K raw NOI, and the broker's pro forma shows $249K (after adding real expenses). The difference is:
+- Post-sale tax increase: $57K
+- Updated insurance: $3K
+- Management fee: $15K
+- **Total: $75K of additional costs that the pro forma correctly adds**
+
+But the broker also added a bunch of revenue from filling vacancies. So on balance the pro forma NOI and our normalized T-12 NOI are close: **broker $249K vs. our $238K.** About 4.5% apart.
+
+## Step 4: What's the deal really worth?
+
+Let's build our own 3-scenario offer model:
+
+### Scenario A: Conservative (use current in-place only)
+
+Assume the vacancies never fill. Use the existing tenants' rent and actual expenses.
+- Current in-place gross: $352,200
+- Vacancy (5%): −$17,610
+- EGI: $334,590
+- Realistic expenses: $131,900 (as calculated above)
+- **Conservative NOI: $202,690**
+
+At a 7% cap (reflecting the risk of never filling vacancies): **$2,895,571**
+
+### Scenario B: Realistic (partial lease-up over 12-18 months)
+
+Assume one of the two vacancies leases up in Year 1, the other in Year 2.
+- Year 1 gross: ~$390,000
+- Vacancy (10%): −$39,000
+- EGI: $351,000
+- Expenses: $138,000
+- **Realistic NOI: $213,000**
+
+At a 6.5% cap: **$3,276,923**
+
+### Scenario C: Full stabilization (broker's scenario)
+
+Both vacancies fill within 12 months at market rent.
+- Year 1 gross: $427,000
+- Vacancy (5%): −$21,350
+- EGI: $405,650
+- Expenses: $147,000
+- **Stabilized NOI: $258,650**
+
+At a 6% cap: **$4,310,833**
+
+## Step 5: Make the offer
+
+The broker is asking **$4,200,000 at a 5.95% cap**. Our three scenarios give:
+- Conservative: $2,895,571
+- Realistic: $3,276,923
+- Stabilized: $4,310,833
+
+A sharp buyer's move: **offer around Scenario B (Realistic) — let's say $3,300,000.**
+
+That's **21% below asking**. Why this offer?
+
+1. **It reflects current in-place reality plus realistic lease-up timing** — not the broker's optimistic stabilized dream.
+2. **It leaves the stabilized upside for you** — if you execute the business plan and fill the vacancies, you capture the Scenario C upside (roughly $1M).
+3. **It's defensible** — you can walk the broker through the same math we just did and justify every assumption.
+
+Will the seller accept $3.3M? Probably not at first. But they'll counter, and you'll likely meet somewhere in the $3.5-3.7M range. That's still $500K-700K below asking — and that's the whole point.
+
+## What you just did
+
+In about 45 minutes of analysis on a single deal, you:
+
+1. Read the rent roll and extracted the 5 key data points
+2. Normalized the T-12 to strip out one-time items and add missing categories
+3. Recalculated property taxes to reflect post-sale reassessment
+4. Compared the broker's pro forma against reality and identified red flags
+5. Built three scenarios with defensible assumptions
+6. Arrived at an offer price $900,000 below asking
+
+**This is what sharp commercial real estate investing looks like.** It's not about picking the right asset class or having connections — it's about reading three documents carefully and doing the math yourself. Every time. On every deal.
+
+## What to take away
+
+- Reading a rent roll + T-12 + pro forma is the core skill of CRE underwriting
+- Always recalculate property taxes to reflect your purchase price, not the seller's basis
+- Always add missing management fees and CapEx reserves
+- Always build your own Year 1 projection rather than trusting the broker's pro forma
+- Three-scenario modeling (conservative / realistic / stabilized) gives you a defensible offer range
+- Your offer should reflect realistic in-place value, not broker's stabilized dreams
+
+You've finished Course 3. You can now read any commercial real estate deal's financial statements and extract the truth from the marketing. In Course 4, we'll go deeper on the financial math itself — DCF, IRR, NPV, MIRR, and the full cash flow model that every institutional buyer uses.
+
+Ready? [Continue to Course 4: Financial Analysis for CRE →](/academy/courses/04-financial-analysis-for-cre)

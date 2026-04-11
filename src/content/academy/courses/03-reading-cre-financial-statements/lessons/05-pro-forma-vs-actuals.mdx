@@ -1,0 +1,172 @@
+---
+order: 5
+title: Pro Forma vs. Actuals — Where the Broker's Math Gets Creative
+description: How to compare a broker's forward-looking pro forma against the T-12 and rent roll, find the assumptions that don't line up, and build your own realistic projection.
+durationMinutes: 12
+keywords:
+  - cre pro forma analysis
+  - broker pro forma vs actuals
+  - rent growth assumptions
+  - stabilized noi
+  - commercial real estate underwriting mistakes
+---
+
+The pro forma is the broker's sales pitch. It says: "If you buy this property and do what we suggest, here's what the numbers will look like in Year 1, Year 3, and Year 5."
+
+It's always more optimistic than reality. Always. Your job isn't to believe it or reject it — your job is to figure out *which specific assumptions* are being stretched, by how much, and whether those stretches are reasonable.
+
+This lesson teaches you to do that reconciliation.
+
+## What a typical pro forma looks like
+
+Here's a stripped-down pro forma from a hypothetical OM for our 14,000 SF strip center:
+
+```
+                        Year 1    Year 2    Year 3    Year 4    Year 5
+Gross rental income    280,000   294,000   308,700   324,135   340,342
+Vacancy (3%)            (8,400)   (8,820)   (9,261)   (9,724)  (10,210)
+Other income            12,000    12,360    12,731    13,113    13,506
+EGI                    283,600   297,540   312,170   327,524   343,638
+
+Operating expenses:
+  Property taxes        14,000    14,420    14,853    15,298    15,757
+  Insurance              6,500     6,695     6,896     7,103     7,316
+  Management (3%)        8,508     8,926     9,365     9,826    10,309
+  R&M                    4,500     4,635     4,774     4,917     5,065
+  Landscaping            2,400     2,472     2,546     2,622     2,701
+  Utilities              3,200     3,296     3,395     3,497     3,602
+  Legal                  1,500     1,545     1,591     1,639     1,688
+  Total expenses        40,608    41,989    43,420    44,902    46,438
+
+NOI                    242,992   255,551   268,750   282,622   297,200
+
+Cap rate @ 5.89%
+Value                 4,126,350 4,339,574 4,563,617 4,799,151 5,046,614
+```
+
+Looks pretty good, right? A clean story with steady growth and a rising valuation. That's the whole point of the pro forma — to make it look good.
+
+Now let's compare it to the actual T-12 we analyzed in Lesson 3 (**normalized NOI of ~$209,350**) and see how honest Year 1 is.
+
+## The 7 pro forma red flags to check
+
+Go down the pro forma line by line looking for these specific gaps.
+
+### 1. Year 1 "in-place" vs. T-12 actual
+
+The broker's Year 1 gross rent is $280,000. The T-12 showed $260,500.
+
+**That's a $19,500 gap in Year 1 — a 7.5% rent increase assumed in the first 12 months of ownership, with no clear source.** Where is it coming from?
+
+Possible answers:
+- Below-market leases rolling to market (plausible if timing aligns with lease ends)
+- A vacant unit being leased up (plausible if the pro forma shows the current vacancy filled)
+- Pure broker optimism (most common)
+
+The way to check: add up the rent roll, add the expected rent from releasing the vacancy, add any scheduled escalations during Year 1, and see if the total reaches $280,000. Often it doesn't, and the gap is just hope.
+
+### 2. Vacancy assumption too low
+
+The pro forma shows 3% vacancy. The rent roll shows 10.7% **physical** vacancy right now.
+
+**For the broker's Year 1 number to be right, you'd need to lease up 7.7% of the property AND keep vacancy at 3% thereafter.** That's usually optimistic. A reasonable assumption is 5-8% for a Class B strip center — and probably closer to 8% if rollover is heavy.
+
+Each percentage point of vacancy on $280,000 of rent = $2,800/year of NOI. If you use 6% vacancy instead of 3%, you lose $8,400 of projected NOI.
+
+### 3. Management fee too small
+
+Pro forma shows 3% management. Market for multi-tenant retail is 4-5%. At 3%, you're understating management by ~$2,000-3,000 per year. Add it back.
+
+### 4. Expenses growing slower than revenue
+
+Look carefully: the pro forma has **revenue growing 5% per year** but **expenses growing only 3% per year**. That's a silent 2% per year "NOI lift" hidden in the assumption mismatch.
+
+In reality, expenses grow roughly in line with revenue — sometimes faster in inflationary environments. A pro forma that has expenses rising slower than revenue is claiming magical operating leverage that usually doesn't materialize.
+
+### 5. No reserves
+
+Notice what's NOT in this pro forma: **CapEx reserves**. At $0.15/SF for a 14,000 SF strip center, that's $2,100/year of NOI that should be set aside for roof/parking/HVAC. The pro forma ignores it.
+
+### 6. Rent growth baked in without source
+
+The pro forma shows rent growing 5% per year. Where does that come from? For this to materialize, you need:
+- Lease escalations to average 5% (not just the one dry cleaner at 3%), OR
+- Market rent growth of 5% annually (aggressive for Central Florida — more realistic is 2-4%), OR
+- Rolling leases to market rent and finding major below-market gaps
+
+Check the lease escalation column on the rent roll. In our example, only the dry cleaner has 3% annual bumps, everyone else is flat. So 5% portfolio rent growth is **completely unsupported** by the rent roll.
+
+### 7. Property tax not reassessed
+
+Pro forma Year 1 taxes: $14,000, same as T-12. But remember — Florida reassesses on sale, and if the seller's basis is $1.5M but you're paying $2.8M, your tax bill could jump to $20,000+. The pro forma is using the old owner's tax bill.
+
+## Rebuild the pro forma honestly
+
+Let's take the broker's Year 1 and rebuild with realistic assumptions:
+
+```
+                        Broker    Honest      Delta
+Gross rental income     280,000   262,000   (18,000)
+  - rent roll actual    260,500
+  - +escalations          1,500
+Vacancy (5-8%)           (8,400)  (15,720)   (7,320)
+Other income             12,000    12,000         0
+EGI                     283,600   258,280   (25,320)
+
+Operating expenses:
+  Property taxes         14,000    20,000    +6,000 (post-sale reassessment)
+  Insurance               6,500     7,500    +1,000 (Florida rates rising)
+  Management (4.5%)       8,508    11,623    +3,115 (market rate)
+  R&M                     4,500     5,500    +1,000 (normalized)
+  Landscaping             2,400     2,400         0
+  Utilities               3,200     3,200         0
+  Legal                   1,500     1,500         0
+  CapEx reserves              0     2,100    +2,100 (missing)
+  Total expenses         40,608    53,823   +13,215
+
+NOI                    242,992   204,457   (38,535)
+```
+
+**Broker's Year 1 NOI: $242,992**
+**Honest Year 1 NOI: $204,457**
+
+**Gap: $38,535 — a 16% overstatement.**
+
+At a 6% cap rate, this 16% NOI gap translates to a **$642,000 difference in valuation**. On a "5.89% cap" headline, that's the difference between a $4.1M asking price and a $3.4M offer price — huge.
+
+## The "stabilized pro forma" trick
+
+Some pro formas go further: they show a "stabilized NOI" in Year 3 or Year 5, implying that by that point the property will have been leased up, renovated, and running at peak performance.
+
+Brokers love to quote the **stabilized cap rate** — "it's a 7% cap going-in or a 9.2% cap stabilized" — because the stabilized number makes the deal sound amazing.
+
+Two things to remember:
+
+1. **The stabilized NOI depends entirely on assumptions that haven't happened yet.** Every Year 3 number in a pro forma is a guess.
+2. **You don't pay for stabilized NOI.** You pay for Year 1 NOI (or maybe Year 2). If the property actually reaches stabilized by Year 3, you get to capture that upside. But the SELLER is trying to get you to pay for the upside *now* — that defeats the purpose of a value-add deal.
+
+A good rule: never pay more than about 110% of what the in-place NOI would justify. That preserves the stabilized upside for yourself and protects you if the business plan takes longer than expected (which it usually does).
+
+## Your own pro forma
+
+This is what serious buyers do:
+
+1. **Open a spreadsheet**
+2. **Paste in the rent roll** with each tenant as a row and columns for current rent, market rent, lease end date, and rollover assumptions
+3. **Calculate Year 1 revenue** based on actual rent roll, escalations, and realistic vacancy
+4. **Build expenses** from the T-12 categories, with your own adjustments for management, taxes, insurance, and reserves
+5. **Compute your own Year 1 NOI** — this is the number you underwrite to
+6. **Apply your own cap rate** — this is your offer price
+7. **Use the broker's pro forma for one thing**: to understand what the seller thinks the upside is, so you can calibrate how aggressive to be in negotiation
+
+Build your own Year 2-5 projections only if you're doing a value-add deal and need to plan the business plan — not to justify today's price.
+
+## What to take away
+
+- The broker's pro forma is always optimistic. Always.
+- The 7 most common red flags: Year 1 in-place gap, vacancy too low, management fee too small, expenses growing slower than revenue, missing reserves, unsupported rent growth, and unreassessed property taxes
+- Rebuild Year 1 honestly, then apply your own cap rate to get your offer price
+- Never pay for stabilized NOI — pay for in-place and keep the upside
+- A 10-15% overstatement of NOI is typical on small commercial deals; spotting it is worth hundreds of thousands in valuation
+
+Next lesson: the six most common seller/broker tricks — the catalog of specific things to flag on every deal.
