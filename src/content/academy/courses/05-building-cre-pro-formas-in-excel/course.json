@@ -1,0 +1,26 @@
+{
+  "order": 5,
+  "tier": 2,
+  "tierTitle": "Financial Analysis",
+  "title": "Building CRE Pro Formas in Excel",
+  "subtitle": "Model any CRE deal from a blank spreadsheet",
+  "description": "A hands-on Excel workshop. You'll build a complete institutional-quality pro forma from scratch: rent roll, expense growth assumptions, debt service, levered and unlevered returns, sensitivity tables, and tornado charts. Downloadable template included.",
+  "durationMinutes": 180,
+  "outcomes": [
+    "Structure a CRE pro forma with inputs, calcs, and outputs cleanly separated",
+    "Model rent growth, vacancy, expense inflation, and reversion value",
+    "Build a monthly loan amortization schedule and compute debt service coverage",
+    "Create sensitivity tables on cap rate, rent growth, and loan terms",
+    "Download and use the MaxLife pro forma template on your own deals"
+  ],
+  "prerequisites": ["04-financial-analysis-for-cre"],
+  "cireLevel": "CIRE Level 1 — Financial Analysis",
+  "keywords": [
+    "commercial real estate pro forma excel",
+    "cre financial model template",
+    "real estate DCF excel",
+    "pro forma template",
+    "commercial real estate excel model"
+  ],
+  "isContentComplete": false
+}

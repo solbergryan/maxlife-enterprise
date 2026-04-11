@@ -1,0 +1,26 @@
+{
+  "order": 6,
+  "tier": 3,
+  "tierTitle": "Market & Deal Analysis",
+  "title": "Market & Submarket Analysis",
+  "subtitle": "How to pick the right MSA, the right submarket, and the right corner",
+  "description": "Location still wins in CRE, but 'good location' is a lagging indicator. This course teaches you to read leading indicators: population growth, job formation, path of development, absorption rates, and traffic counts. You'll apply the framework to Central Florida and your home market.",
+  "durationMinutes": 120,
+  "outcomes": [
+    "Analyze demographics and job growth at the MSA and submarket level",
+    "Use absorption, vacancy, and rent trend data to time a market",
+    "Read traffic counts and daytime population for retail deals",
+    "Identify the 'path of growth' before prices reflect it",
+    "Build a one-page market brief for any submarket in 30 minutes"
+  ],
+  "prerequisites": ["05-building-cre-pro-formas-in-excel"],
+  "cireLevel": "CIRE Level 2 — Market & Deal Analysis",
+  "keywords": [
+    "commercial real estate market analysis",
+    "submarket analysis",
+    "cre demographics",
+    "absorption rate real estate",
+    "traffic count commercial real estate"
+  ],
+  "isContentComplete": false
+}

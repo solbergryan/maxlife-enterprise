@@ -1,0 +1,184 @@
+---
+order: 7
+title: Putting It All Together — A Full NNN Deal Walkthrough
+description: A complete worked example applying every metric from this course to a real-world NNN retail deal, from listing to closing math.
+durationMinutes: 16
+keywords:
+  - nnn deal analysis
+  - cre deal walkthrough
+  - commercial real estate underwriting example
+  - nnn investment example
+  - cre deal math
+---
+
+You've learned all the individual metrics. Now let's put them together on a real deal and see how they work in combination. This is the kind of walkthrough you'll do on every property you evaluate for the rest of your CRE career.
+
+## The deal
+
+A single-tenant NNN retail property — an AutoZone store on a busy Central Florida arterial. Here are the facts from the OM:
+
+- **Asking price:** $2,800,000
+- **Tenant:** AutoZone (investment-grade, NYSE: AZO)
+- **Lease term remaining:** 8 years on primary term, 4 × 5-year options
+- **Annual base rent:** $165,000
+- **Rent escalations:** 10% bump at the start of each option period
+- **Lease type:** Absolute NNN (tenant pays everything including roof and structure)
+- **Building size:** 7,400 sq ft
+- **Land:** 0.85 acres
+- **Year built:** 2017
+- **Location:** 30,000+ VPD traffic count, strong retail corridor in Orlando MSA
+
+**Broker's quoted cap rate:** 5.89%
+
+Let's run it.
+
+## Step 1: Recalculate NOI
+
+This is an absolute NNN lease, so the tenant pays all operating expenses. The owner's only real expenses are:
+
+- CapEx reserves: basically zero because even the roof is the tenant's responsibility
+- Asset management / administrative: let's estimate $2,000/year for accounting, tax prep, and entity maintenance
+
+So:
+
+- Gross rent: $165,000
+- Vacancy: 0% (tenant is in place and investment-grade)
+- Other income: $0
+- Effective Gross Income: $165,000
+- Operating expenses: $2,000
+- **NOI: $163,000**
+
+## Step 2: Recalculate cap rate
+
+Cap Rate = $163,000 ÷ $2,800,000 = **5.82%**
+
+The broker quoted 5.89%. Pretty close — on an absolute NNN deal with a strong credit tenant, there's not much room for broker manipulation because there are no expenses to understate. Cap rate checks out.
+
+## Step 3: Size the loan
+
+Assume you're going to use a local bank for financing. Typical terms:
+
+- Interest rate: 7.0% (rates in 2026)
+- Amortization: 25 years
+- Term: 10 years with balloon
+- DSCR minimum: 1.25
+- Max LTV: 70%
+
+**Loan constant calculation.** At 7.0% / 25-year amortization, the annual loan constant is approximately 0.0848.
+
+**Max loan sized by DSCR:**
+($163,000 NOI ÷ 1.25 DSCR) ÷ 0.0848 loan constant = **$1,538,443**
+
+**Max loan sized by LTV:**
+$2,800,000 × 70% = **$1,960,000**
+
+**Binding constraint:** DSCR is smaller, so the max loan is **$1,538,443**. Round down to $1,535,000 to leave a buffer.
+
+Down payment = $2,800,000 − $1,535,000 = **$1,265,000** (about 45% equity)
+
+This is the reality of the 2026 rate environment: on lower-cap-rate deals, DSCR is squeezing leverage to 55% rather than the 70% max by LTV.
+
+## Step 4: Check debt yield
+
+Debt yield = $163,000 ÷ $1,535,000 = **10.6%**
+
+Above a typical 9% minimum — comfortable.
+
+## Step 5: Calculate cash-on-cash return
+
+**Annual debt service** at 7% on $1,535,000 over 25 years ≈ $130,200/year
+
+**Annual pre-tax cash flow** = $163,000 − $130,200 = $32,800
+
+**Total cash invested** (down payment + closing costs + legal + DD):
+- Down payment: $1,265,000
+- Closing costs and title: $30,000
+- Legal + DD: $20,000
+- Lender fees + appraisal: $18,000
+- **Total: $1,333,000**
+
+**Cash-on-cash return** = $32,800 ÷ $1,333,000 = **2.46%**
+
+That looks bad for a first year, but notice what's happening: we're earning 5.82% on the whole asset and paying 7% on the debt. Negative leverage is eating most of the return.
+
+## Step 6: Project total return over 10 years
+
+Where this deal actually makes its money:
+
+### Rent escalation
+At year 9, the option period kicks in with a 10% rent bump. Year 9 NOI becomes roughly $179,000, pushing cash flow to around $49,000/year. Not huge, but real.
+
+### Principal paydown
+Over 10 years, you'll pay down approximately $290,000 of principal. That's equity you didn't have at closing.
+
+### Exit value
+At year 10, assuming cap rates are stable (a big assumption), the property is worth:
+$179,000 NOI ÷ 0.0582 cap = **$3,075,000**
+
+Minus selling costs (3% broker commission + title/legal): $92,000
+Minus loan payoff: $1,245,000 (approximate after 10 years of amortization)
+= **Net sale proceeds: $1,738,000**
+
+### Total return calculation
+- Year 1–10 cumulative cash flow: approximately $370,000
+- Sale proceeds: $1,738,000
+- Total cash returned: **$2,108,000**
+
+**Equity multiple:** $2,108,000 ÷ $1,333,000 = **1.58x**
+
+**IRR:** Using Excel's XIRR on the full cash flow stream, approximately **5.8%**
+
+## Step 7: Evaluate
+
+So here's the picture:
+- Cap rate: 5.82%
+- Cash-on-cash year 1: 2.46%
+- Cash-on-cash year 10: about 3.7%
+- Debt yield: 10.6%
+- DSCR: 1.25
+- 10-year equity multiple: 1.58x
+- 10-year IRR: 5.8%
+
+**Is this a good deal?**
+
+In 2026, probably not. A 5.8% IRR is barely above the risk-free rate on 10-year treasuries. You're taking commercial real estate risk, illiquidity risk, interest rate risk, and tenant concentration risk — and earning only a modest premium. Worse, negative leverage is grinding your equity down.
+
+**What would make it work?**
+
+1. **Lower price.** Buy at a 7.0% cap ($2,328,000) instead of 5.82%. The same rent check becomes a dramatically better deal.
+2. **Cheaper financing.** SBA 504 at 5.5% instead of bank debt at 7% flips the leverage from negative to positive.
+3. **Better tenant optionality.** Longer primary term (15 years instead of 8) would command a lower exit cap rate.
+4. **Rent growth.** A lease with 2% annual bumps instead of option-period-only bumps would meaningfully improve the IRR.
+
+Most likely move: **counter at a 6.5–7% cap and walk if the seller won't budge.**
+
+## What this walkthrough teaches
+
+Three things:
+
+### 1. You can do this math on any deal in 30 minutes
+Given the asking price, the rent, the lease details, and current debt costs, you can fully underwrite a simple NNN deal before lunch. This is the skill brokers and investors refer to when they say "it pencils" or "it doesn't pencil."
+
+### 2. The numbers tell the truth
+You'll hear brokers say "it's a 6 cap" as if that's the answer. It's the start of the question. A 6 cap can be a great deal or a terrible deal depending on leverage, tenant credit, lease term, and submarket. The full underwriting tells you which.
+
+### 3. Cap rate and cash-on-cash are different answers to different questions
+This deal has a 5.82% cap rate and a 2.46% year-one cash-on-cash. Both are correct. Both describe the same deal. Neither alone tells you whether to buy.
+
+## Your action item
+
+Pick one NNN listing from Crexi or LoopNet right now and run it through this same walkthrough. Use today's interest rates. Calculate NOI, cap rate, max loan size, cash-on-cash, and a rough 10-year IRR. Don't use a template — write it out line by line until the math feels second nature.
+
+Your first few attempts will be slow. By your tenth deal, you'll be able to do the whole thing in 15 minutes, and by your fiftieth you'll spot bad deals in five. That's the level you need to reach before you submit your first LOI.
+
+## What to take away
+
+- On any deal, follow the same sequence: verify NOI → verify cap rate → size the loan → check DSCR and debt yield → calculate cash-on-cash → project IRR and equity multiple.
+- Negative leverage (cap rate below interest rate) is the silent killer of 2026-era deals.
+- A 5.8% cap NNN deal with bank debt at 7% is a weak investment — not because the property is bad but because the cost of capital is too high.
+- The answer to "is this a good deal?" is never a single number — it's the pattern all the metrics tell together.
+- Practice on real listings until the workflow is automatic.
+
+You've finished Course 2. You now speak the language of commercial real estate. In Course 3 you'll learn to read the financial statements that feed these calculations — the rent roll, the T-12, and the operating statement — so you can verify the numbers yourself instead of trusting the broker's OM.
+
+Ready? [Continue to Course 3: Reading CRE Financial Statements →](/academy/courses/03-reading-cre-financial-statements)

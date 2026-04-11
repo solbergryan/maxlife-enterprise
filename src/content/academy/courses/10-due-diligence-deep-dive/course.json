@@ -1,0 +1,25 @@
+{
+  "order": 10,
+  "tier": 4,
+  "tierTitle": "Deal-Making",
+  "title": "Due Diligence Deep Dive",
+  "subtitle": "The 90-day checklist that keeps you out of bad deals",
+  "description": "Due diligence is where deals die — or where they should. You'll walk through the complete DD checklist: legal (title, survey, zoning, liens), physical (PCA, roof, HVAC, structural), environmental (Phase I/II ESA), financial (lease audit, CAM reconciliation), and tenant credit DD. Includes MaxLife's full downloadable checklist.",
+  "durationMinutes": 140,
+  "outcomes": [
+    "Run a complete DD process from LOI signature to closing",
+    "Order and interpret a Phase I environmental site assessment",
+    "Audit a rent roll against actual leases and tenant payments",
+    "Spot title exceptions, easements, and zoning issues that kill deals",
+    "Use findings to renegotiate price or walk with earnest money refunded"
+  ],
+  "prerequisites": ["09-finding-commercial-deals"],
+  "keywords": [
+    "commercial real estate due diligence checklist",
+    "phase 1 environmental site assessment",
+    "cre lease audit",
+    "title exception commercial real estate",
+    "property condition assessment"
+  ],
+  "isContentComplete": false
+}

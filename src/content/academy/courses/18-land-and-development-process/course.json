@@ -1,0 +1,28 @@
+{
+  "order": 18,
+  "tier": 6,
+  "tierTitle": "Advanced & Specialized",
+  "title": "Land & Development Process",
+  "subtitle": "The MaxLife Development specialty — from raw dirt to ribbon cutting",
+  "description": "Commercial development is where the biggest upside lives — and the biggest risks. This course walks through the complete development process: site selection, feasibility, entitlements, zoning, site planning, civil engineering, construction contracting, and project delivery. Based on MaxLife Development's live Florida projects.",
+  "durationMinutes": 180,
+  "outcomes": [
+    "Evaluate raw land for commercial development feasibility",
+    "Navigate entitlements, rezoning, variances, and special exceptions",
+    "Understand site plan approval and construction documents",
+    "Build a development pro forma including hard costs, soft costs, and contingencies",
+    "Manage construction delivery and lender draw requests"
+  ],
+  "prerequisites": ["17-office-and-industrial-flex"],
+  "isSpecialty": true,
+  "keywords": [
+    "commercial real estate development",
+    "land development process",
+    "commercial entitlements",
+    "site plan approval",
+    "construction contracting",
+    "ground up commercial development",
+    "development pro forma"
+  ],
+  "isContentComplete": false
+}

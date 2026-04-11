@@ -1,0 +1,25 @@
+{
+  "order": 3,
+  "tier": 2,
+  "tierTitle": "Financial Analysis",
+  "title": "Reading CRE Financial Statements",
+  "subtitle": "Decode rent rolls, T-12s, and operating statements like a broker",
+  "description": "Every CRE deal revolves around three documents: the rent roll, the T-12 (trailing 12-month operating statement), and the pro forma. This course teaches you to read all three, spot the numbers that matter, and identify the accounting tricks sellers use to make a property look better than it is.",
+  "durationMinutes": 90,
+  "outcomes": [
+    "Read a rent roll and flag expiring leases, below-market rents, and tenant concentration risk",
+    "Analyze a T-12 for seasonality, one-time expenses, and normalized NOI",
+    "Compare actual operating statements against pro forma projections",
+    "Categorize operating expenses and spot missing line items",
+    "Identify common seller tricks: expense omissions, above-market rent assumptions, ghost tenants"
+  ],
+  "prerequisites": ["02-cre-terminology-and-key-metrics"],
+  "keywords": [
+    "rent roll commercial real estate",
+    "T-12 operating statement",
+    "CRE pro forma",
+    "commercial real estate financial statements",
+    "how to read a rent roll"
+  ],
+  "isContentComplete": false
+}

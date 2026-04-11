@@ -1,0 +1,28 @@
+{
+  "order": 20,
+  "tier": 6,
+  "tierTitle": "Advanced & Specialized",
+  "title": "Tax Strategy & 1031 Exchanges",
+  "subtitle": "Keep more of what you earn — legally",
+  "description": "CRE's greatest advantage is the tax code. This course covers 1031 like-kind exchanges, cost segregation studies, bonus depreciation, passive activity rules, qualified opportunity zones, and how to structure an exit that defers (or eliminates) capital gains. This is how smart operators compound wealth tax-free for decades.",
+  "durationMinutes": 130,
+  "outcomes": [
+    "Execute a 1031 exchange with a qualified intermediary and meet all deadlines",
+    "Order a cost segregation study and calculate accelerated depreciation",
+    "Understand bonus depreciation, Section 179, and the current phase-down",
+    "Navigate passive activity loss rules and real estate professional status",
+    "Structure an exit using 1031, DST, 721 UPREIT, or installment sale"
+  ],
+  "prerequisites": ["19-syndication-and-raising-capital"],
+  "keywords": [
+    "1031 exchange",
+    "cost segregation",
+    "bonus depreciation real estate",
+    "passive activity rules",
+    "real estate professional status",
+    "qualified opportunity zone",
+    "1031 exchange rules",
+    "commercial real estate taxes"
+  ],
+  "isContentComplete": false
+}

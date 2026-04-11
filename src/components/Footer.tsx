@@ -30,6 +30,7 @@ export default function Footer() {
                 { href: "/services/nnn-investments", label: "NNN Investments" },
                 { href: "/services/land-development", label: "Land Development" },
                 { href: "/portfolio", label: "Portfolio" },
+                { href: "/academy", label: "Academy (Free CRE Courses)" },
                 { href: "/blog", label: "Market Insights" },
                 { href: "/resources", label: "Resources" },
                 { href: "/contact", label: "Contact" },

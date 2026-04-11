@@ -1,0 +1,141 @@
+---
+order: 5
+title: IRR and Equity Multiple — Measuring Total Return Over a Hold
+description: Internal rate of return and equity multiple, the two metrics institutional investors live by. What they mean, how they differ, and when each one matters.
+durationMinutes: 13
+keywords:
+  - IRR commercial real estate
+  - equity multiple
+  - internal rate of return
+  - cre returns
+  - cash on cash vs irr
+---
+
+Cash-on-cash is a year-one snapshot. It doesn't tell you what happens when you sell, when NOI grows, or when you refinance. For multi-year analysis — which is how all real CRE deals are evaluated — you need two more metrics: **internal rate of return (IRR)** and **equity multiple**.
+
+Institutional investors quote both on every deal. Private investors who don't know them get outnegotiated by the ones who do.
+
+## Equity multiple
+
+<Callout type="formula">
+Equity Multiple = Total Cash Returned ÷ Total Cash Invested
+</Callout>
+
+The simplest total-return metric. Count every dollar that came back to you (annual cash flows plus eventual sale proceeds), divide by the cash you put in. If you invested $500,000 and got back $1,200,000 over the hold (including the exit), your equity multiple is 2.4x.
+
+An equity multiple of:
+
+- **1.0x** — you got your money back, no profit
+- **1.5x** — you made 50% on your money total
+- **2.0x** — you doubled your money
+- **3.0x** — you tripled your money (typical target for 5–7 year value-add holds)
+
+### Why equity multiple matters
+
+Equity multiple ignores time. A 2x over 2 years and a 2x over 10 years produce the same equity multiple, but they're completely different investments. That's both a bug and a feature:
+
+- **Bug:** It can make long, slow deals look great.
+- **Feature:** It tells you the total dollar outcome, which is what you actually spend at the end.
+
+Cash multiples are the number you use when you want to know "how much money will I actually have at the end?" — rather than "what's my annualized return?"
+
+## Internal rate of return (IRR)
+
+IRR is the time-weighted total return of the deal. It's calculated by finding the discount rate that sets the net present value of all cash flows to zero.
+
+<Callout type="formula">
+NPV = Σ [Cash Flow(t) ÷ (1 + IRR)^t] = 0
+</Callout>
+
+You don't calculate IRR by hand — you use Excel's `=IRR()` or `=XIRR()` function, or a financial calculator. What matters is the intuition:
+
+**IRR is the annualized return on your money over the full hold period, accounting for both timing and amount of every cash flow.**
+
+### Why IRR solves equity multiple's weakness
+
+Imagine two deals, both return 2.0x equity multiple:
+
+- **Deal A** — 2.0x over 4 years. IRR ≈ 19%
+- **Deal B** — 2.0x over 10 years. IRR ≈ 7.2%
+
+Same equity multiple, dramatically different IRR. Deal A is obviously better if you can redeploy the capital — you got the money back twice as fast, which means you can do it again.
+
+### Why equity multiple solves IRR's weakness
+
+Now imagine:
+
+- **Deal A** — $100K invested, 3-month flip, $108K returned. IRR ≈ 35%, equity multiple 1.08x
+- **Deal B** — $100K invested, 7-year hold, $300K returned. IRR ≈ 17%, equity multiple 3.0x
+
+Deal A has a much higher IRR but you only made $8,000. Deal B has a lower IRR but you made $200,000. Which is better? It depends on what you can do with the $108K in the 7 years between deals. If you can redeploy at 17% IRR repeatedly, Deal A wins. If you can't, Deal B wins.
+
+<Callout type="key">
+Equity multiple = how much money you made. IRR = how fast you made it. You need both.
+</Callout>
+
+## A full worked example
+
+Take a simple 5-year hold on a stabilized property:
+
+- **Year 0:** Invest $500,000 (down payment + closing)
+- **Year 1:** Cash flow of $30,000
+- **Year 2:** Cash flow of $35,000
+- **Year 3:** Cash flow of $40,000
+- **Year 4:** Cash flow of $45,000
+- **Year 5:** Cash flow of $50,000 + sale proceeds (net of debt payoff and closing) of $800,000
+
+**Total cash returned:** $30 + $35 + $40 + $45 + $50 + $800 = $1,000,000
+
+**Equity multiple:** $1,000,000 ÷ $500,000 = **2.0x**
+
+**IRR:** Plug the cash flows into Excel's `=IRR()` function. The answer is approximately **17.4%**.
+
+So this deal delivers a 2.0x equity multiple and a 17.4% IRR over 5 years. That's a great stabilized deal.
+
+## Target IRR and equity multiples by deal type
+
+| Deal type | Target IRR | Target equity multiple | Hold period |
+|---|---|---|---|
+| Stabilized NNN | 8–12% | 1.5–1.8x | 7–10 years |
+| Stabilized multifamily | 10–14% | 1.6–2.0x | 5–10 years |
+| Value-add multifamily | 15–20% | 1.8–2.2x | 3–5 years |
+| Opportunistic / distressed | 18–25% | 2.0–3.0x | 3–7 years |
+| Ground-up development | 20–30% | 2.0–2.5x | 3–5 years |
+| Syndication LPs | 12–18% preferred + 7–10% IRR premium | 1.7–2.2x | 5–7 years |
+
+A deal with a 10% IRR is fine for stabilized, mediocre for value-add, and terrible for development. Context is everything.
+
+## XIRR vs. IRR in Excel
+
+`=IRR()` assumes evenly spaced cash flows (typically annual). `=XIRR()` lets you specify actual dates, which is what you need for real deals where cash flow timing is irregular.
+
+Always use `=XIRR()` for real underwriting. It's one of the 5 most important Excel functions in CRE (along with `=PMT()`, `=PV()`, `=FV()`, and `=NPV()`).
+
+## The big limitation of IRR
+
+IRR assumes you can reinvest every interim cash flow at the same IRR. This almost never holds in practice. A 25% IRR deal doesn't actually earn you 25% per year on your capital because the cash flows come out at different times, and you probably can't keep them working at 25%.
+
+The honest fix is **MIRR (modified internal rate of return)**, which lets you specify a reinvestment rate separately. MIRR usually comes out 2–4 percentage points below IRR for good deals, and it's a much more realistic number. You'll see it in Course 4 (Financial Analysis for CRE).
+
+For now, just know that very high IRRs (30%+) on long-hold deals are somewhat overstated in reality — use equity multiple as your reality check.
+
+## The two metrics together
+
+Put it this way:
+
+- **If you want to know how much money you made:** equity multiple
+- **If you want to know how fast you made it:** IRR
+- **If you want to know how good the deal was:** look at both
+
+Never make a decision on one without the other. A 30% IRR deal with a 1.2x equity multiple is not the same as a 15% IRR deal with a 2.5x equity multiple — even though the first one sounds more impressive. On the second deal you made much more money; on the first one you made a little money very quickly.
+
+## What to take away
+
+- Equity multiple = total cash returned ÷ total cash invested. How much money you made.
+- IRR = time-weighted annualized return. How fast you made it.
+- Both metrics are needed because each is blind to what the other measures.
+- Use `=XIRR()` in Excel for real deals with irregular cash flows.
+- IRR overstates realistic returns because it assumes reinvestment at the same rate — MIRR is more honest.
+- Target IRR and equity multiple vary by deal type: stabilized (8–12%, 1.5–1.8x), value-add (15–20%, 1.8–2.2x), development (20–30%, 2.0–2.5x).
+
+Next lesson: GRM, LTC, loan constants, and the other smaller metrics every CRE investor should know.

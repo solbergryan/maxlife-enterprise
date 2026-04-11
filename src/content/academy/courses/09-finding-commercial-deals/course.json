@@ -1,0 +1,26 @@
+{
+  "order": 9,
+  "tier": 4,
+  "tierTitle": "Deal-Making",
+  "title": "Finding Commercial Deals",
+  "subtitle": "Where deals actually come from — hint: it's not LoopNet",
+  "description": "The on-market listings everyone sees are the worst deals. This course teaches the full sourcing toolkit: building broker relationships, cold calling owners, direct mail, driving-for-dollars at a commercial scale, and the exact scripts MaxLife uses to generate off-market deal flow in Central Florida.",
+  "durationMinutes": 100,
+  "outcomes": [
+    "Build a repeatable deal-sourcing system across multiple channels",
+    "Develop broker relationships that get you 'pocket listings' before they hit market",
+    "Write a cold-call script that books return calls with CRE owners",
+    "Use tools like Crexi, CoStar, LoopNet, and Reonomy effectively",
+    "Launch a direct-outreach campaign to a target asset class and submarket"
+  ],
+  "prerequisites": ["08-investment-analysis-and-risk"],
+  "keywords": [
+    "how to find commercial real estate deals",
+    "off market commercial real estate",
+    "commercial real estate cold calling",
+    "cre sourcing",
+    "loopnet vs crexi",
+    "pocket listings commercial real estate"
+  ],
+  "isContentComplete": false
+}

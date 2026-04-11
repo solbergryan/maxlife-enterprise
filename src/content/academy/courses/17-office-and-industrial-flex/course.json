@@ -1,0 +1,26 @@
+{
+  "order": 17,
+  "tier": 5,
+  "tierTitle": "Asset Classes",
+  "title": "Office & Industrial/Flex",
+  "subtitle": "The post-COVID office reset and the industrial supercycle",
+  "description": "Office is the most challenged asset class post-COVID, while industrial is in a multi-decade supercycle. This course teaches how to evaluate both — from trophy Class A office to suburban medical office to bulk distribution and small-bay industrial flex, plus last-mile logistics and IOS (industrial outdoor storage).",
+  "durationMinutes": 120,
+  "outcomes": [
+    "Assess office market fundamentals post-COVID and find safe pockets",
+    "Underwrite Class A, B, and C office differently",
+    "Understand bulk distribution, light industrial, and flex/R&D space",
+    "Evaluate last-mile logistics sites and IOS (industrial outdoor storage)",
+    "Know which Florida submarkets are industrial growth zones"
+  ],
+  "prerequisites": ["16-retail-and-specialty"],
+  "keywords": [
+    "office real estate investing",
+    "industrial real estate",
+    "flex space investing",
+    "IOS industrial outdoor storage",
+    "last mile logistics real estate",
+    "bulk distribution"
+  ],
+  "isContentComplete": false
+}
