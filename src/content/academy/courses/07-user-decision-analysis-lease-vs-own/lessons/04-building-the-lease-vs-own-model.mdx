@@ -1,0 +1,290 @@
+---
+order: 4
+title: Building the Lease-vs-Own Model in Excel
+description: A step-by-step walkthrough of constructing a 10-year lease-vs-own cost-of-occupancy comparison in Excel, complete with NPV and breakeven analysis.
+durationMinutes: 14
+keywords:
+  - lease vs own excel model
+  - cost of occupancy spreadsheet
+  - cre owner user model
+  - lease vs purchase analysis
+  - business real estate model
+---
+
+This lesson is a hands-on walkthrough of building a complete lease-vs-own model in Excel. By the end you'll have a 10-year side-by-side comparison that produces a clear answer for any client.
+
+## The deal we'll model
+
+A medical practice in Lake Mary, FL is looking at a 6,000 SF freestanding medical office building. Their options:
+
+**Option A: Lease**
+- Sign a new 10-year lease at a comparable building
+- Asking rent: $24/SF NNN ($144,000/year base rent)
+- Operating expenses (taxes, insurance, CAM): $6/SF ($36,000/year)
+- Annual escalation: 3%/year
+- Tenant improvements: paid by landlord up to $35/SF, no out-of-pocket
+- Year-1 total occupancy cost: $180,000
+
+**Option B: Buy**
+- Purchase price: $1,800,000 ($300/SF)
+- SBA 504 financing: 10% down, 50% bank, 40% CDC
+- Down payment: $180,000
+- Closing costs: $35,000
+- Bank loan: $900,000 at 7.5%, 25-year amort
+- CDC loan: $720,000 at 5.8%, 25-year fixed
+- Property taxes (Year 1): $24,000
+- Insurance (Year 1): $7,500
+- Repairs/maintenance: $5,000
+- Replacement reserves: $9,000
+- Property management: $0 (owner-user, no third-party tenants)
+
+Both options compared over a 10-year horizon.
+
+## The model layout
+
+Open a new Excel workbook. We'll build a single tab with three sections: Inputs, Calculations, Outputs.
+
+### Section 1: Inputs
+
+```
+Row  A                            B
+ 1   LEASE vs OWN MODEL: 6,000 SF Medical Office
+ 3   === COMMON INPUTS ===
+ 4   Square footage              6,000
+ 5   Hold period (years)             10
+ 6   Discount rate                 8.0%
+ 7   Marginal tax rate            32.0%
+ 8
+ 9   === LEASE INPUTS ===
+10   Year 1 base rent ($/SF)     $24.00
+11   Year 1 op ex ($/SF)          $6.00
+12   Annual rent escalation        3.0%
+13   Annual op ex growth           3.5%
+14
+15   === OWN INPUTS ===
+16   Purchase price          $1,800,000
+17   Closing costs              $35,000
+18   Total project cost      $1,835,000
+19
+20   Down payment (10%)        $180,000
+21   Bank loan (50%)           $900,000
+22   CDC loan (40%)            $720,000
+23
+24   Bank rate                     7.5%
+25   Bank amort years                25
+26   CDC rate                      5.8%
+27   CDC amort years                 25
+28
+29   Year 1 prop taxes          $24,000
+30   Year 1 insurance            $7,500
+31   Year 1 maintenance          $5,000
+32   Year 1 reserves             $9,000
+33   Property tax growth           3.0%
+34   Insurance growth             10.0%
+35   Maintenance growth            3.5%
+36
+37   Building depreciation life     39    years
+38   Land allocation                25%   (non-depreciable)
+39   Annual appreciation           3.0%
+40   Sale at year 10
+41   Selling costs                 6.0%
+```
+
+That's the input block. Every assumption is in one place.
+
+### Section 2: Calculations — Lease side
+
+```
+Row  A                  B           C           D           E           F           G          H          I          J          K
+44   === LEASE CASH FLOWS ===
+45                       Year 1      Year 2      Year 3      Year 4      Year 5      Year 6     Year 7     Year 8     Year 9    Year 10
+46   Base rent          144,000     148,320     152,770     157,353     162,073     166,936    171,944    177,102    182,415    187,888
+        =B10*B4         =B46*1.03   =C46*1.03   ...
+47   Op ex               36,000      37,260      38,564      39,914      41,311      42,757     44,253     45,802     47,405     49,064
+48   Total cash out     180,000     185,580     191,334     197,267     203,384     209,693    216,197    222,904    229,820    236,952
+
+49   Tax savings on rent (32%)     (57,600)    (59,386)    (61,227)    (63,125)    (65,083)   (67,102)   (69,184)   (71,329)   (73,542)   (75,825)
+        =J48*0.32  ← rent is tax deductible against business income
+50   After-tax lease cost          122,400     126,194     130,108     134,142     138,301    142,591    147,012    151,575    156,278    161,128
+```
+
+Notice how the rent + op ex is the gross cash outflow, but the tax deduction reduces the after-tax cost by ~32% (the practice's marginal tax rate).
+
+### Section 2: Calculations — Own side
+
+```
+Row  A                       Year 0       Year 1      Year 2      Year 3      Year 4     Year 5     Year 6     Year 7     Year 8     Year 9    Year 10
+54   === OWN CASH FLOWS ===
+55   Down payment + closing  (215,000)
+56
+57   Bank P&I                              79,872     79,872     79,872     79,872     79,872    79,872    79,872    79,872    79,872     79,872
+        =PMT(7.5%/12,300,-900000)*12
+58   CDC P&I                               54,096     54,096     54,096     54,096     54,096    54,096    54,096    54,096    54,096     54,096
+        =PMT(5.8%/12,300,-720000)*12
+59   Total debt service                   133,968    133,968    133,968    133,968    133,968   133,968   133,968   133,968   133,968    133,968
+
+60   Property taxes                        24,000     24,720     25,462     26,225     27,012    27,823    28,657    29,517    30,403     31,315
+61   Insurance                              7,500      8,250      9,075      9,983     10,981    12,079    13,287    14,615    16,077     17,685
+62   Maintenance                            5,000      5,175      5,356      5,544      5,738     5,939     6,147     6,362     6,585      6,816
+63   Reserves                               9,000      9,270      9,548      9,835     10,130    10,433    10,746    11,069    11,401     11,743
+64   Total opex                            45,500     47,415     49,441     51,587     53,861    56,274    58,837    61,563    64,466     67,559
+
+65   Total cash out                       179,468    181,383    183,409    185,555    187,829   190,242   192,805   195,531   198,434    201,527
+```
+
+Now the tax effects:
+
+```
+Row  A                                Year 1     Year 2     Year 3     Year 4    Year 5    Year 6    Year 7    Year 8    Year 9   Year 10
+68   Building basis (75% × 1.8M)   1,350,000
+69   Annual depreciation              34,615    34,615     34,615     34,615    34,615    34,615    34,615    34,615    34,615    34,615
+        =1350000/39 (straight line over 39 years)
+
+70   Interest on bank piece           67,500    66,672     65,778     64,815    63,778    62,663    61,464    60,176    58,792    57,304
+        =Y1 balance × 7.5% (decreasing as principal pays down)
+71   Interest on CDC piece            41,760    41,028     40,251     39,427    38,553    37,627    36,646    35,607    34,506    33,341
+72   Total interest                  109,260   107,700    106,029    104,242   102,331   100,290    98,110    95,783    93,298    90,645
+
+73   Tax-deductible items            143,875   142,315    140,644    138,857   136,946   134,905   132,725   130,398   127,913   125,260
+        =depreciation + interest
+74   Tax savings (32%)                46,040    45,541     45,006     44,434    43,823    43,170    42,472    41,727    40,932    40,083
+
+75   After-tax cash cost             133,428   135,842    138,403    141,121   144,006   147,072   150,333   153,804   157,502   161,444
+        =total cash out − tax savings
+```
+
+The depreciation deduction is a non-cash expense that creates real tax savings — that's why "after-tax cash cost" is lower than "total cash out."
+
+### The exit at Year 10
+
+The owner sells (or refinances) at Year 10. Calculate the exit:
+
+```
+Row  A                                                                                                                              Year 10
+80   Sale price                                                                                                                  $2,420,000
+        =1,800,000 × (1.03^10)
+81   Selling costs (6%)                                                                                                            (145,200)
+82   Net sale proceeds                                                                                                            2,274,800
+83   Loan balance EOY 10 — bank piece                                                                                              (731,468)
+        Calculated from amortization
+84   Loan balance EOY 10 — CDC piece                                                                                               (590,217)
+85   Net cash from sale                                                                                                            953,115
+
+86   Capital gains tax (~15% on appreciation portion)                                                                              (54,000)
+87   Recapture of depreciation (~25% on cumulative depr)                                                                            (86,538)
+88   After-tax sale proceeds                                                                                                       812,577
+```
+
+The Year-10 cash inflow from the sale flows into the model as a positive number that offsets the cumulative ownership cost.
+
+### Section 3: Net comparison
+
+```
+Row  A                              Year 0       Year 1     Year 2     Year 3     Year 4    Year 5    Year 6    Year 7    Year 8   Year 9   Year 10
+
+92   Net lease (after tax)                       122,400    126,194    130,108    134,142   138,301   142,591   147,012   151,575  156,278   161,128
+93   Net own (after tax)            (215,000)    133,428    135,842    138,403    141,121   144,006   147,072   150,333   153,804  157,502   161,444
+94   Plus exit proceeds                                                                                                                       (812,577)
+        (negative because it's a benefit)
+95   Net own all-in                 (215,000)    133,428    135,842    138,403    141,121   144,006   147,072   150,333   153,804  157,502   (651,133)
+
+96   Difference (own - lease)       (215,000)     11,028      9,648      8,295      6,979     5,705     4,481     3,321     2,229      1,224  (812,261)
+97   Cumulative difference          (215,000)   (203,972)  (194,324)  (186,029)  (179,050) (173,345) (168,864) (165,543) (163,314) (162,090)  (974,351)
+```
+
+The cumulative difference column tells the story. Year 0 starts at −$215K (the down payment). Each year, owning costs slightly MORE on a cash basis than leasing, so the gap closes slowly. Then in Year 10, the sale wipes out the disadvantage and creates a massive positive — owning ends $974K BETTER than leasing on a cumulative basis.
+
+### Section 3: Outputs
+
+```
+Row  A                              B
+100  === OUTPUTS ===
+101
+102  NPV of leasing (10-year)      ($956,000)
+        =NPV(0.08, B92:K92)
+103  NPV of owning (10-year)       ($432,000)
+        =B95 + NPV(0.08, C95:K95)
+104  Net advantage of owning       $524,000
+        =B102 - B103
+105
+106  Equity build-up at Year 10    $329,000
+        =Loan paydown over 10 years (combined bank + CDC)
+107  Appreciation at Year 10       $620,000
+        =Sale price - purchase price
+108  Total wealth created          $949,000
+        =Equity + appreciation - down payment
+109
+110  Year cumulative cash flips    Year 7
+        (the year cumulative own < cumulative lease)
+111
+112  Recommendation:               BUY
+```
+
+The NPV comparison shows owning is $524K better than leasing on a present-value basis over 10 years. The model also tells you the wealth created from equity buildup + appreciation, separate from the operating savings.
+
+## What the numbers tell you
+
+1. **Year 1 alone, leasing is cheaper.** No down payment, immediate operating cash flow.
+2. **Year 10 alone, owning is dramatically cheaper.** The sale unlocks all the equity and appreciation.
+3. **Cumulative basis, owning beats leasing in Year 7.** This is the "breakeven" — if the practice plans to stay 7+ years, ownership wins.
+4. **NPV shows a $524K advantage to owning** at an 8% discount rate.
+5. **Wealth creation through appreciation + equity buildup is ~$949K** — that's the "extra" benefit beyond just operating cost savings.
+
+For this practice, in this market, with this financing, owning is clearly the better choice. The model proves it with hard numbers.
+
+## What changes the answer
+
+Run sensitivity analysis on the model — sweep one input at a time and see how the NPV gap changes:
+
+### Sensitivity to discount rate
+- Discount rate 6% → owning advantage = $640K
+- Discount rate 8% → owning advantage = $524K
+- Discount rate 10% → owning advantage = $410K
+- Discount rate 12% → owning advantage = $295K
+
+Higher discount rates favor leasing (because future tax/equity benefits are discounted more aggressively). Use the right discount rate for the client.
+
+### Sensitivity to appreciation
+- 0% appreciation → owning advantage = $115K
+- 2% appreciation → owning advantage = $325K
+- 3% appreciation → owning advantage = $524K (base)
+- 5% appreciation → owning advantage = $950K
+
+If appreciation is zero, owning still wins by ~$115K — the cost-of-occupancy savings alone justify it. But the upside scenario is much bigger.
+
+### Sensitivity to hold period
+- 5-year hold → owning advantage = ($35K) ← LEASING WINS
+- 7-year hold → owning advantage = $145K
+- 10-year hold → owning advantage = $524K (base)
+- 15-year hold → owning advantage = $1,150K
+
+Hold period matters enormously. Below 7 years, leasing wins because the down payment hasn't recovered yet.
+
+## When the model favors leasing
+
+Re-run the model with these changes:
+
+- Hold period: 4 years instead of 10
+- Annual rent escalation: 2% instead of 3%
+- Annual appreciation: 1% instead of 3%
+- Down payment: 25% (conventional financing) instead of 10%
+
+NPV result: Leasing wins by ~$240K.
+
+The lesson: the same building, with different assumptions, produces opposite recommendations. The model is honest with each set of inputs — don't fall in love with one answer.
+
+## Saving the template
+
+Save your final workbook as a master template. For each new client, copy it, change the inputs, and the entire model recalculates. With practice, you can run a complete lease-vs-own comparison in 30-45 minutes per client.
+
+## What to take away
+
+- Build the model in three sections: inputs, calcs (lease + own + exit), outputs
+- Always run after-tax — pre-tax comparisons are misleading
+- 10-year horizon is standard; sensitivity-test shorter and longer holds
+- Discount rate matters — use the client's actual cost of capital
+- The "year cumulative cash flips" tells you the breakeven hold period
+- The exit proceeds in the final year often drive the entire conclusion
+- Sensitivity-test 3-4 key inputs to see how robust the answer is
+
+Next lesson: after-tax analysis in detail — depreciation, cost segregation, and the tax mechanics that make the owner-user math work.
