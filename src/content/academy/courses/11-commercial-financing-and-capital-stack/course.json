@@ -1,0 +1,27 @@
+{
+  "order": 11,
+  "tier": 4,
+  "tierTitle": "Deal-Making",
+  "title": "Commercial Financing & Capital Stack",
+  "subtitle": "Every debt product a CRE investor needs to know",
+  "description": "From conventional bank loans to CMBS, agency, bridge, mezz, and preferred equity — the full capital stack explained in plain English. You'll learn when each product fits, how to shop lenders, and how to structure a deal that gets you the best leverage without boxing yourself in.",
+  "durationMinutes": 140,
+  "outcomes": [
+    "Understand the differences between conventional, SBA 504/7a, CMBS, agency, bridge, and hard money debt",
+    "Build a capital stack with senior debt + mezz + equity for larger deals",
+    "Calculate LTV, LTC, DSCR, and debt yield from a lender's perspective",
+    "Shop and compare loan term sheets",
+    "Know when to use interest-only, partial recourse, or non-recourse"
+  ],
+  "prerequisites": ["10-due-diligence-deep-dive"],
+  "keywords": [
+    "commercial real estate financing",
+    "capital stack",
+    "CMBS loan",
+    "SBA 504 commercial real estate",
+    "bridge loan real estate",
+    "agency debt multifamily",
+    "mezz debt real estate"
+  ],
+  "isContentComplete": false
+}

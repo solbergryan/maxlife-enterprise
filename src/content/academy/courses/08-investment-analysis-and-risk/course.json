@@ -1,0 +1,26 @@
+{
+  "order": 8,
+  "tier": 3,
+  "tierTitle": "Market & Deal Analysis",
+  "title": "Investment Analysis & Risk",
+  "subtitle": "Quantify risk, stress-test deals, and forecast performance",
+  "description": "Every deal looks great in the base case — what separates pros from amateurs is how they handle downside scenarios. This course teaches sensitivity analysis, Monte Carlo basics, debt yield, break-even analysis, and the risk-adjusted return metrics institutional buyers use.",
+  "durationMinutes": 120,
+  "outcomes": [
+    "Run sensitivity and stress tests on cap rate, rent, and expenses",
+    "Calculate debt yield and break-even occupancy",
+    "Understand risk-adjusted returns and how to think about probability of loss",
+    "Build a three-scenario pro forma: base, upside, downside",
+    "Know when to walk from a deal that 'pencils' but is actually fragile"
+  ],
+  "prerequisites": ["07-user-decision-analysis-lease-vs-own"],
+  "cireLevel": "CIRE Level 2 — Market & Deal Analysis",
+  "keywords": [
+    "cre risk analysis",
+    "sensitivity analysis real estate",
+    "debt yield commercial real estate",
+    "break even occupancy",
+    "risk adjusted return"
+  ],
+  "isContentComplete": false
+}

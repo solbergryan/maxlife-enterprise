@@ -1,0 +1,26 @@
+{
+  "order": 7,
+  "tier": 3,
+  "tierTitle": "Market & Deal Analysis",
+  "title": "User Decision Analysis — Lease vs. Own",
+  "subtitle": "The most-overlooked skill in CRE: when a business should buy its real estate",
+  "description": "The topic most free CRE content skips entirely. Business owners constantly ask: should we lease this space or buy it? The answer is a quantifiable cost-of-occupancy comparison, and a broker who can run it becomes indispensable. This course teaches the full framework.",
+  "durationMinutes": 100,
+  "outcomes": [
+    "Build a lease-vs-own cost-of-occupancy model over a 10-year hold",
+    "Factor in SBA 504 financing advantages for owner-users",
+    "Explain after-tax cash flow differences between leasing and owning",
+    "Advise business-owner clients on the true economics of their space decisions",
+    "Position yourself as a tenant rep or owner-user specialist"
+  ],
+  "prerequisites": ["06-market-and-submarket-analysis"],
+  "cireLevel": "CIRE Level 2 — Market & Deal Analysis",
+  "keywords": [
+    "lease vs own commercial real estate",
+    "cost of occupancy analysis",
+    "owner user commercial real estate",
+    "SBA 504 commercial real estate",
+    "tenant representation"
+  ],
+  "isContentComplete": false
+}

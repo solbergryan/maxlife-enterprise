@@ -1,0 +1,28 @@
+{
+  "order": 4,
+  "tier": 2,
+  "tierTitle": "Financial Analysis",
+  "title": "Financial Analysis for CRE",
+  "subtitle": "Discounted cash flow, IRR, NPV, and MIRR from the ground up",
+  "description": "The gateway course for the CIRE — Certified Investment Real Estate Expert track. You'll build the mental model that underpins all serious CRE investing: the discounted cash flow, the time value of money, and the reason IRR and cap rate answer completely different questions. By the end you can underwrite a 10-year hold on any asset class.",
+  "durationMinutes": 150,
+  "outcomes": [
+    "Explain the time value of money and why it drives every CRE decision",
+    "Build a 10-year discounted cash flow (DCF) projection for a sample deal",
+    "Calculate and interpret IRR, NPV, MIRR, and equity multiple",
+    "Understand the capital stack: senior debt, mezz, preferred equity, common equity",
+    "Use a full cash flow model to compare two competing investment opportunities"
+  ],
+  "prerequisites": ["03-reading-cre-financial-statements"],
+  "cireLevel": "CIRE Level 1 — Financial Analysis",
+  "keywords": [
+    "DCF commercial real estate",
+    "IRR calculation",
+    "NPV real estate",
+    "MIRR real estate",
+    "cre cash flow model",
+    "commercial real estate financial analysis",
+    "commercial real estate underwriting"
+  ],
+  "isContentComplete": false
+}

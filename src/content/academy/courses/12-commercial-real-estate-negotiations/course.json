@@ -1,0 +1,25 @@
+{
+  "order": 12,
+  "tier": 4,
+  "tierTitle": "Deal-Making",
+  "title": "Commercial Real Estate Negotiations",
+  "subtitle": "LOIs, term sheets, and the deal points that win or lose millions",
+  "description": "Negotiation is the highest-leverage skill in CRE — the difference between a 6% cap rate and a 7% cap rate on the same property is often who sat across the table. This course covers LOI drafting, term sheet strategy, the psychology of negotiation, BATNAs, walkaway points, and the 15 contract terms where most money gets made or lost at the table.",
+  "durationMinutes": 110,
+  "outcomes": [
+    "Draft a tight LOI that protects your interests without scaring off the seller",
+    "Identify your BATNA and walkaway point before you sit down",
+    "Negotiate price, due diligence period, earnest money, and closing date as a bundled package",
+    "Use silence, framing, and anchoring to your advantage",
+    "Structure deal protections like financing contingencies and title contingencies"
+  ],
+  "prerequisites": ["11-commercial-financing-and-capital-stack"],
+  "keywords": [
+    "commercial real estate negotiation",
+    "letter of intent real estate",
+    "CRE LOI",
+    "purchase contract negotiation",
+    "earnest money commercial real estate"
+  ],
+  "isContentComplete": false
+}

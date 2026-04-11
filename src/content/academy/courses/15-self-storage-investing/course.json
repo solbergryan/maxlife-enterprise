@@ -1,0 +1,25 @@
+{
+  "order": 15,
+  "tier": 5,
+  "tierTitle": "Asset Classes",
+  "title": "Self-Storage Investing",
+  "subtitle": "Recession-resistant, management-light, and still fragmented",
+  "description": "Self-storage has outperformed nearly every other CRE asset class over the last 20 years. This course covers why storage is so profitable, how to underwrite a facility, the three main acquisition strategies (mom-and-pop conversions, ground-up development, portfolio plays), and Florida-specific storage market dynamics.",
+  "durationMinutes": 110,
+  "outcomes": [
+    "Underwrite a self-storage facility using square foot, unit mix, and rate economics",
+    "Identify mom-and-pop facilities ripe for professional management",
+    "Evaluate ground-up storage development feasibility",
+    "Understand REIT comps (Public Storage, Extra Space, CubeSmart) and what they mean for private buyers",
+    "Apply revenue management (ECRI) to drive existing-customer rent growth"
+  ],
+  "prerequisites": ["14-multifamily-investing"],
+  "keywords": [
+    "self storage investing",
+    "self storage for sale",
+    "storage unit investing",
+    "self storage development",
+    "ECRI self storage"
+  ],
+  "isContentComplete": false
+}

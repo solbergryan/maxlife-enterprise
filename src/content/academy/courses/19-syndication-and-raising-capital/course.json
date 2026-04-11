@@ -1,0 +1,26 @@
+{
+  "order": 19,
+  "tier": 6,
+  "tierTitle": "Advanced & Specialized",
+  "title": "Syndication & Raising Capital",
+  "subtitle": "Scale past your own checkbook with passive investor capital",
+  "description": "Once you've done a few deals on your own, the next step is raising outside capital. This course covers Reg D 506(b) vs 506(c), the LP/GP structure, waterfalls and promote, PPM drafting, investor relations, and the fiduciary duties that come with holding other people's money.",
+  "durationMinutes": 140,
+  "outcomes": [
+    "Understand the difference between Reg D 506(b) and 506(c) offerings",
+    "Structure a limited partnership with sponsor/GP promote",
+    "Build a waterfall with preferred return, catch-up, and tiers",
+    "Understand what goes in a PPM, operating agreement, and subscription agreement",
+    "Build an investor pipeline and raise your first $1M deal"
+  ],
+  "prerequisites": ["18-land-and-development-process"],
+  "keywords": [
+    "real estate syndication",
+    "reg d 506 b 506 c",
+    "LP GP structure real estate",
+    "waterfall real estate",
+    "raising capital real estate",
+    "PPM real estate"
+  ],
+  "isContentComplete": false
+}

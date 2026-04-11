@@ -1,0 +1,26 @@
+{
+  "order": 14,
+  "tier": 5,
+  "tierTitle": "Asset Classes",
+  "title": "Multifamily Investing",
+  "subtitle": "From duplexes to 200-unit value-add deals",
+  "description": "Multifamily is the most-understood CRE asset class — and the most competitive. This course covers small (5-20 unit), mid (20-100 unit), and institutional (100+ unit) multifamily, the unique financing options (agency debt from Fannie/Freddie), value-add strategies, and how to underwrite a deal in any sub-segment.",
+  "durationMinutes": 140,
+  "outcomes": [
+    "Underwrite a small, mid, and institutional multifamily deal",
+    "Access agency debt through Fannie Mae, Freddie Mac, and HUD",
+    "Execute value-add plays: unit renovations, amenity upgrades, operational efficiency",
+    "Understand market rent, LRO, loss-to-lease, and other multifamily-specific metrics",
+    "Evaluate Class A, B, C, and D multifamily properties"
+  ],
+  "prerequisites": ["13-nnn-and-net-lease-investing"],
+  "keywords": [
+    "multifamily investing",
+    "apartment investing",
+    "value add multifamily",
+    "fannie mae multifamily loan",
+    "agency debt multifamily",
+    "class c apartment investing"
+  ],
+  "isContentComplete": false
+}

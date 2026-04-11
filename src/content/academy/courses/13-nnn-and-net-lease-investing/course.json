@@ -1,0 +1,28 @@
+{
+  "order": 13,
+  "tier": 5,
+  "tierTitle": "Asset Classes",
+  "title": "NNN & Net Lease Investing",
+  "subtitle": "The MaxLife Development specialty — passive income from credit tenants",
+  "description": "Triple-net leased properties are the closest thing CRE offers to bonds: long-term, credit-tenant leases with the tenant paying taxes, insurance, and maintenance. This course covers the full NNN playbook — from tenant credit analysis and lease structure to 1031-exchange-ready underwriting — drawing on MaxLife's live deal flow.",
+  "durationMinutes": 150,
+  "outcomes": [
+    "Understand NNN, NN, and absolute NNN lease structures and who pays what",
+    "Analyze tenant credit for investment-grade and non-rated tenants",
+    "Underwrite a NNN deal including primary term, options, and rent escalations",
+    "Identify the best NNN tenants for Florida markets",
+    "Use NNN properties as 1031-exchange destinations for passive income"
+  ],
+  "prerequisites": ["12-commercial-real-estate-negotiations"],
+  "isSpecialty": true,
+  "keywords": [
+    "nnn lease investing",
+    "triple net lease",
+    "net lease investment",
+    "nnn properties for sale",
+    "credit tenant lease",
+    "absolute nnn lease",
+    "1031 exchange nnn"
+  ],
+  "isContentComplete": false
+}

@@ -1,0 +1,26 @@
+{
+  "order": 16,
+  "tier": 5,
+  "tierTitle": "Asset Classes",
+  "title": "Retail & Specialty Properties",
+  "subtitle": "Car washes, QSR, automotive, medical office, and other specialty plays",
+  "description": "Specialty retail has some of the best cap rates in CRE — if you understand the specific business model. This course covers car washes (tunnel vs. self-serve), quick-service restaurants (QSR), automotive (Autozone, O'Reilly, Firestone), drive-thru coffee, and medical office. Each has unique underwriting quirks.",
+  "durationMinutes": 130,
+  "outcomes": [
+    "Underwrite car wash, QSR, auto parts, and drive-thru coffee properties",
+    "Evaluate tenant credit for national, regional, and franchisee-operated stores",
+    "Understand sale-leaseback deals and how to source them",
+    "Navigate medical office building (MOB) leasing and investment",
+    "Spot specialty retail opportunities with embedded upside"
+  ],
+  "prerequisites": ["15-self-storage-investing"],
+  "keywords": [
+    "car wash investment",
+    "QSR real estate",
+    "medical office building",
+    "autozone nnn",
+    "sale leaseback",
+    "retail commercial real estate"
+  ],
+  "isContentComplete": false
+}

@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { markets } from "@/data/markets";
 import { deals } from "@/data/deals";
+import { getAllCourses } from "@/lib/academy/content";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
 
   // Static pages
@@ -192,6 +193,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    // Academy
+    {
+      url: `${BASE_URL}/academy`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 
   // Blog articles
@@ -241,5 +249,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...blogPages, ...marketPages, ...dealPages];
+  // Dynamic academy course + lesson pages
+  const courses = await getAllCourses();
+  const academyPages: MetadataRoute.Sitemap = [];
+  for (const course of courses) {
+    academyPages.push({
+      url: `${BASE_URL}/academy/courses/${course.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    });
+    for (const lesson of course.lessons) {
+      academyPages.push({
+        url: `${BASE_URL}/academy/courses/${course.slug}/lessons/${lesson.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      });
+    }
+  }
+
+  return [...staticPages, ...blogPages, ...marketPages, ...dealPages, ...academyPages];
 }

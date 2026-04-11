@@ -1,0 +1,29 @@
+{
+  "order": 2,
+  "tier": 1,
+  "tierTitle": "Foundations",
+  "title": "CRE Terminology & Key Metrics",
+  "subtitle": "The vocabulary and formulas every CRE investor must know cold",
+  "description": "A hands-on tour of the CRE metrics that drive every deal: cap rate, NOI, DSCR, LTV, cash-on-cash, IRR, equity multiple, and more. You'll learn not just the formulas but when each metric matters, how they relate to each other, and the pitfalls that trip up new investors.",
+  "durationMinutes": 120,
+  "outcomes": [
+    "Calculate and interpret cap rate, NOI, GRM, DSCR, LTV, and loan constant",
+    "Distinguish between cash-on-cash return, IRR, and equity multiple — and know when to use each",
+    "Read a broker's offering memorandum (OM) and spot inflated numbers",
+    "Understand how operating expenses flow from gross income to NOI",
+    "Apply each metric to a real example NNN deal from start to finish"
+  ],
+  "prerequisites": ["01-intro-to-commercial-real-estate"],
+  "keywords": [
+    "cap rate formula",
+    "NOI calculation",
+    "cash on cash return",
+    "DSCR commercial real estate",
+    "IRR commercial real estate",
+    "equity multiple",
+    "GRM gross rent multiplier",
+    "LTV loan to value",
+    "commercial real estate metrics"
+  ],
+  "isContentComplete": true
+}
