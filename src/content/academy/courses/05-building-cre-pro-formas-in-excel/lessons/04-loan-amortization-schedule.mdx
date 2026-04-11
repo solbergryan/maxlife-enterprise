@@ -1,0 +1,225 @@
+---
+order: 4
+title: The Loan Amortization Schedule — Monthly P&I, DSCR, and Balloon
+description: How to build a monthly loan amortization schedule in Excel, compute debt service coverage ratio, and handle balloon maturities on a typical CRE loan.
+durationMinutes: 13
+keywords:
+  - loan amortization excel
+  - cre debt schedule
+  - monthly debt service
+  - dscr calculation
+  - balloon payment
+---
+
+Almost every CRE deal involves debt, and you can't build a credible pro forma without modeling it properly. This lesson walks through how to build a complete loan amortization schedule in Excel, calculate annual debt service, compute DSCR by year, and handle the balloon payment at loan maturity.
+
+## The loan inputs you need
+
+To build an amortization schedule, you need five inputs:
+
+1. **Loan amount** — the principal at closing
+2. **Interest rate** — the annual rate (fixed in most CRE loans)
+3. **Amortization period** — the number of years over which the loan would pay off at a constant monthly payment (commonly 25 or 30 years)
+4. **Loan term** — how long until the balloon payment is due (commonly 5, 7, or 10 years)
+5. **Payment frequency** — almost always monthly
+
+Note the distinction between **amortization period** and **loan term**. A 10-year CRE loan with a 30-year amortization means: payments are calculated as if the loan amortized over 360 months, but the entire remaining balance is due at month 120 (the balloon).
+
+## Step 1: Monthly payment
+
+The monthly payment of a fully amortizing loan is calculated by Excel's `=PMT()` function:
+
+```
+=PMT(rate/12, amort_years*12, -loan_amount)
+```
+
+**Example.** $2,250,000 at 6.5% for 30 years:
+```
+=PMT(0.065/12, 360, -2250000) = $14,223.27
+```
+
+That's the monthly principal + interest payment. Note:
+- The rate is divided by 12 to get the monthly rate
+- The periods are multiplied by 12 to get total months
+- The loan amount is entered as a negative number so the payment comes out positive
+
+**Annual debt service** is this monthly payment × 12:
+```
+=PMT(0.065/12, 360, -2250000) * 12 = $170,679
+```
+
+## Step 2: Building the full amortization schedule
+
+A full amortization schedule breaks each monthly payment into:
+- **Interest portion** — remaining balance × monthly interest rate
+- **Principal portion** — monthly payment minus interest portion
+- **New balance** — old balance minus principal portion
+
+Here's the Excel formula pattern for month N:
+
+```
+A = Month number
+B = Beginning balance   (prior row's ending balance)
+C = Interest           (B * rate/12)
+D = Principal          (monthly payment - C)
+E = Ending balance     (B - D)
+```
+
+For month 1, beginning balance = loan amount. For month 2+, it's the prior month's ending balance.
+
+The first few rows of our example ($2.25M at 6.5%/30yr):
+
+```
+Month  Beg Balance    Payment       Interest     Principal    End Balance
+  1    $2,250,000    $14,223       $12,188       $2,035      $2,247,965
+  2    $2,247,965    $14,223       $12,177       $2,046      $2,245,919
+  3    $2,245,919    $14,223       $12,166       $2,057      $2,243,862
+  ...
+```
+
+Notice how in month 1, $12,188 of the payment goes to interest and only $2,035 goes to principal. That's why 30-year amortization feels so slow at the start — the lender gets most of your payment in interest. The principal portion grows every month as the balance shrinks.
+
+### Excel shortcuts for the schedule
+
+You don't actually have to type formulas row by row. Excel has two helper functions:
+
+- `=IPMT(rate, period, total_periods, -loan)` — interest portion for a given month
+- `=PPMT(rate, period, total_periods, -loan)` — principal portion for a given month
+
+**Example.** Interest and principal in month 36 of a 30-year loan:
+```
+Interest month 36:  =IPMT(0.065/12, 36, 360, -2250000) = $11,851
+Principal month 36: =PPMT(0.065/12, 36, 360, -2250000) = $2,372
+```
+
+For a pro forma, you usually only care about annual totals — not every month. So you can use `=CUMIPMT()` and `=CUMPRINC()` to sum interest and principal across a range of months.
+
+**Example.** Total interest paid in Year 1 (months 1-12) of our $2.25M loan:
+```
+=CUMIPMT(0.065/12, 360, 2250000, 1, 12, 0) = -$145,626
+```
+
+Total principal in Year 1:
+```
+=CUMPRINC(0.065/12, 360, 2250000, 1, 12, 0) = -$25,053
+```
+
+Total debt service Year 1: $145,626 + $25,053 = $170,679 (matches our annual PMT calculation).
+
+### Annual summary table
+
+For the pro forma, you want one row per year. Here's the 5-year summary for our example loan:
+
+```
+Year    Interest      Principal     Total DS      Ending Balance
+  1     $145,626      $25,053       $170,679      $2,224,947
+  2     $143,946      $26,733       $170,679      $2,198,214
+  3     $142,154      $28,525       $170,679      $2,169,689
+  4     $140,241      $30,438       $170,679      $2,139,251
+  5     $138,201      $32,478       $170,679      $2,106,773
+```
+
+At year 5, the remaining loan balance is $2,106,773. That's your balloon — if the loan has a 5-year term, you owe the full $2.1M at month 60. You either refinance, sell, or pay it off from cash.
+
+## Step 3: Computing DSCR year by year
+
+DSCR (Debt Service Coverage Ratio) = NOI ÷ Annual Debt Service.
+
+Lenders typically require 1.20-1.40x DSCR at origination and throughout the hold period. If your DSCR drops below that threshold, you're in technical default on most loans even if you're still making payments.
+
+**Example with our loan + earlier revenue/expense numbers:**
+
+```
+Year           1          2          3          4          5
+NOI        147,752    156,477    165,161    173,793    176,936
+Debt Svc   170,679    170,679    170,679    170,679    170,679
+DSCR         0.87x      0.92x      0.97x      1.02x      1.04x
+```
+
+This deal FAILS DSCR. A 0.87x DSCR in year 1 means NOI isn't even covering debt service — you'd need to fund the shortfall from equity reserves, and no lender would make this loan in the first place.
+
+This is why you build the loan schedule early and check DSCR early. If it doesn't pencil, you change the financing structure: lower LTV, longer amortization, or you wait until NOI grows (value-add).
+
+## Step 4: Handling the balloon at exit
+
+At the end of the loan term (not the amortization period), the remaining balance is due as a balloon payment. In your pro forma's exit-year cash flow, you deduct this balloon from the sale proceeds.
+
+**Example.** Exit at Year 5:
+```
+Sale price (Year 6 NOI ÷ exit cap):        $3,077,569
+Less selling costs (3%):                      (92,327)
+Net sale proceeds:                         $2,985,242
+Less loan balloon payoff (Y5 end balance): (2,106,773)
+Net cash to equity:                          $878,469
+```
+
+That $878K is your equity exit, which flows into the year-5 cell of your levered cash flow row.
+
+## Interest-only periods
+
+Many CRE loans, especially agency multifamily and bridge loans, include an interest-only (IO) period at the start — typically 1-5 years. During IO, you only pay interest; no principal is paid down. This boosts early cash flow but leaves a larger balance at exit.
+
+To model IO:
+- Year 1 through end of IO: debt service = loan amount × interest rate
+- After IO expires: full amortization kicks in, based on the remaining balance and the remaining amortization period
+
+**Example.** Our loan with a 2-year IO period:
+```
+Year    Interest     Principal    Total DS    Ending Balance
+  1    $146,250          0       $146,250    $2,250,000
+  2    $146,250          0       $146,250    $2,250,000
+  3    $145,716      $24,963     $170,679    $2,225,037
+  4    $144,055      $26,624     $170,679    $2,198,413
+  5    $142,281      $28,398     $170,679    $2,170,015
+```
+
+Year 1 debt service is lower ($146K vs $170K), boosting cash flow by ~$24K. But the balloon at year 5 is higher ($2.17M vs $2.11M) because no principal was paid in years 1-2.
+
+IO is useful for value-add deals where early cash flow is tight. Just know you're trading near-term cash flow for a larger exit payoff.
+
+## Fixed vs. floating rate
+
+Most CRE loans are fixed rate — the rate doesn't change over the loan term. But bridge loans, construction loans, and some bank loans are floating rate, typically tied to SOFR + a spread.
+
+For a fixed rate, the amortization schedule is deterministic. For a floating rate, you either model a constant-rate assumption (for simplicity) or build rate scenarios (for stress testing).
+
+## Common lender requirements to bake into the model
+
+- **Minimum DSCR** at close and annually: 1.20-1.40x
+- **Maximum LTV**: 65-75% on stabilized, 70-80% on agency multifamily
+- **Debt yield** (NOI ÷ loan amount): 8-11% minimum
+- **Reserve requirements**: typically 0.25-0.30% of loan balance per year, escrowed monthly
+
+These aren't just modeling conventions — they're the actual covenants you'll sign. If your pro forma violates any of them, your deal won't clear the lender's underwriting.
+
+## Putting it together in the pro forma
+
+In the calcs section of your model, the debt block looks like this:
+
+```
+                        Year 0      Year 1      Year 2      Year 3      Year 4      Year 5
+Loan balance BOY     2,250,000   2,250,000   2,224,947   2,198,214   2,169,689   2,139,251
+Interest paid                     145,626     143,946     142,154     140,241     138,201
+Principal paid                     25,053      26,733      28,525      30,438      32,478
+Total debt service                170,679     170,679     170,679     170,679     170,679
+Loan balance EOY     2,250,000   2,224,947   2,198,214   2,169,689   2,139,251   2,106,773
+
+NOI                                147,752   156,477     165,161     173,793     176,936
+Debt service                      (170,679) (170,679)   (170,679)   (170,679)   (170,679)
+Levered cash flow                  (22,927)  (14,202)     (5,518)      3,114       6,257
+
+DSCR                                  0.87x     0.92x       0.97x       1.02x       1.04x
+```
+
+This makes the entire debt picture obvious. You can see DSCR, levered cash flow, and the principal paydown all on one view.
+
+## What to take away
+
+- Use `=PMT()` for monthly payments, `=CUMIPMT()` and `=CUMPRINC()` for annual interest and principal
+- Amortization period ≠ loan term — the balloon is what you owe at the loan's maturity date
+- DSCR should be calculated every year and stay above the lender's minimum
+- Interest-only periods boost early cash flow but leave bigger balloons
+- The balloon payoff in the exit year reduces your net sale proceeds to equity
+- Build the debt block early in your modeling so you can catch financing problems before you fall in love with the deal
+
+Next lesson: calculating returns — unlevered IRR, levered IRR, equity multiple, and NPV — the output metrics that tell you whether the deal is worth doing.

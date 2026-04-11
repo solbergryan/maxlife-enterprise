@@ -1,0 +1,201 @@
+---
+order: 1
+title: Pro Forma Structure — Inputs, Calcs, and Outputs
+description: How to lay out a CRE pro forma in Excel so it's auditable, flexible, and fast to build — the three-section discipline every institutional model follows.
+durationMinutes: 14
+keywords:
+  - cre pro forma structure
+  - excel model layout
+  - real estate financial model
+  - pro forma template
+  - cre modeling best practices
+---
+
+Every professional commercial real estate model follows the same underlying architecture. It doesn't matter whether you're building a 5-tab underwriting model for a $2M retail center or a 40-tab institutional model for a $200M portfolio — the structure is the same:
+
+1. **Inputs** — assumptions that drive everything else
+2. **Calculations** — the engine that turns inputs into pro forma numbers
+3. **Outputs** — the metrics and summaries you actually care about
+
+If you mix these three, your model becomes a tangled mess that nobody (including you, six months later) can audit. If you keep them separate, you can change any assumption and instantly see the effect ripple through to outputs.
+
+This lesson is about setting up that structure before you type a single formula.
+
+## Why the discipline matters
+
+Most beginner CRE models fail in the same way. The modeler starts typing numbers into a spreadsheet, building formulas that reference hard-coded values scattered across dozens of cells. Six weeks later, they need to test "what happens if rents grow at 4% instead of 3%" — and they can't find every place where 3% was used.
+
+A well-structured model lets you:
+
+- **Change one input** and see the entire pro forma update
+- **Audit every calculation** by tracing back to named input cells
+- **Share the model** with a partner or lender without having to explain "oh, you also need to change that other cell on tab 4"
+- **Build sensitivity tables** that sweep across a range of assumptions
+- **Stress-test downside cases** in 30 seconds instead of 3 hours
+
+All of that comes from one simple habit: separate inputs, calcs, and outputs.
+
+## The three-section architecture
+
+Here's the layout I'll use for every pro forma in this course. You can implement it in a single tab or across multiple tabs — the logic is identical.
+
+### Section 1: Inputs (top of the model)
+
+This is where every assumption lives. Nothing else in the model should contain hard-coded numbers. Every formula in the calcs section references cells here.
+
+Typical input categories:
+
+**Property basics:**
+- Purchase price
+- Closing costs (% or $)
+- Year-1 effective gross income (EGI)
+- Year-1 operating expenses
+- Year-1 NOI (can be a formula or an input)
+- Number of units or rentable square feet
+- Hold period (years)
+
+**Growth and market assumptions:**
+- Market rent growth rate (year 2+)
+- Vacancy rate
+- Operating expense growth rate
+- Exit cap rate
+- Selling costs at exit
+
+**Financing:**
+- Loan-to-value (LTV) or loan amount
+- Interest rate
+- Amortization period
+- Loan term
+- Loan fees / points
+
+**Return thresholds (for comparison):**
+- Required unlevered IRR
+- Required levered IRR
+- Discount rate for NPV
+
+### Section 2: Calculations (middle of the model)
+
+This is the DCF itself. A typical CRE calcs section has these row groups, stacked from top to bottom:
+
+1. **Revenue** — base rents, other income, recoverable expenses
+2. **Vacancy & collection loss**
+3. **Effective gross income (EGI)**
+4. **Operating expenses** — broken out by category
+5. **Net operating income (NOI)**
+6. **Capital expenditures** — leasing costs, reserves, renovations
+7. **Debt service** — interest + principal from the loan amortization
+8. **Levered cash flow** — NOI minus capex minus debt service
+9. **Sale proceeds** (only in the exit year) — sale price, selling costs, loan payoff
+10. **Total cash flow to equity** (unlevered and levered versions)
+
+Each column is a year. A 10-year hold needs columns for Year 0 (closing) through Year 10 (exit). That's it.
+
+### Section 3: Outputs (bottom of the model)
+
+The outputs are the numbers you'll actually look at when deciding whether to do the deal. Every output is a simple formula that pulls from the calcs section.
+
+Standard outputs:
+
+- **Unlevered IRR** — `=IRR()` on the unlevered cash flow row
+- **Levered IRR** — `=IRR()` on the levered cash flow row
+- **Equity multiple** — total cash returned / total equity invested
+- **Cash-on-cash year 1** — year-1 levered cash flow / equity invested
+- **Stabilized cash-on-cash** — average across years 2-5
+- **NPV at target discount rate** — `=NPV()` on the cash flow stream
+- **Debt service coverage ratio (DSCR)** — NOI / debt service (year 1 and average)
+- **LTV ratio at close and at exit**
+- **Peak equity requirement** — the lowest point of cumulative cash flow
+
+When a seller or broker hands you a pro forma, the first thing you check is whether their output numbers actually match what the inputs produce. About half the time, they don't — because the pro forma was built without discipline and has hardcoded numbers where formulas should be.
+
+## The color-coding convention
+
+Professional modelers use a color convention that makes auditability dramatically faster:
+
+| Cell type | Font color | Background |
+|---|---|---|
+| Hardcoded input (raw assumption) | **Blue** | White or light gray |
+| Formula pulling from same sheet | **Black** | White |
+| Formula pulling from another sheet/tab | **Green** | White |
+| External link (another file) | **Red** | White (avoid — fragile) |
+| Output / key result | **Black bold** | Light yellow |
+
+Every institutional CRE analyst uses this. When you open a model someone else built and see a blue number, you instantly know "that's an assumption I can change." When you see a green number, you know "that's a formula — don't edit it directly, trace it back." This color discipline alone will save you hours of debugging.
+
+## One tab or many?
+
+For a pro forma that models a single property over 5-10 years, a single tab is fine. For a portfolio model or a deal with multiple tenants and complex lease rollover, use multiple tabs:
+
+- **Tab 1: Assumptions** — all inputs in one place
+- **Tab 2: Rent Roll** — tenant-by-tenant lease data
+- **Tab 3: Operating Budget** — revenue and expense projections by year
+- **Tab 4: Debt** — loan amortization schedule
+- **Tab 5: Returns** — IRR, equity multiple, NPV calculations
+- **Tab 6: Sensitivity** — data tables varying key assumptions
+- **Tab 7: Summary / Output** — one-page dashboard for investors
+
+In this course, we'll build a single-tab model first (Lessons 2-5), then split it into multi-tab form when we add sensitivity analysis (Lesson 6) and a full template walkthrough (Lesson 7).
+
+## What makes a model "institutional quality"
+
+When investors, lenders, or equity partners see a pro forma, they instantly judge its credibility from a few signals:
+
+1. **Every input is labeled and sourced.** No bare numbers floating in the assumptions — every row says where the number came from (appraisal, broker OM, comps, tenant financials).
+2. **Formulas are consistent across rows.** Year 2's rent growth formula looks exactly like Year 3's, just pulling from a different column.
+3. **No hardcoded numbers in the middle of the model.** If you select a random formula, you should see it references input cells or prior calcs — never a raw number.
+4. **Color coding is used.** Blue for inputs, black for formulas.
+5. **Error checks are built in.** Rows that sum to zero when they shouldn't, DSCR below 1, or negative cash flows are flagged in red so you can't miss them.
+6. **Outputs reconcile to standard metrics.** IRR, NPV, equity multiple, cash-on-cash — all present, all correct.
+
+A model with these properties looks serious and lets a lender or partner sign off in 10 minutes instead of 3 hours of asking questions.
+
+## A practical layout example
+
+Here's what the top-left of a clean single-tab model looks like:
+
+```
+                  A                B         C         D         E         F         G
+ 1   DEAL: 24-Unit Multifamily, Orlando FL
+ 2
+ 3   === INPUTS ===
+ 4
+ 5   Purchase price             $3,000,000
+ 6   Closing costs (%)                1.5%
+ 7   Year 1 EGI                  $300,000
+ 8   Year 1 OpEx                 $120,000
+ 9   Year 1 NOI                  $180,000    (=B7-B8)
+10
+11   Market rent growth              3.0%
+12   Vacancy                         5.0%
+13   OpEx growth                     2.5%
+14   Exit cap rate                   5.75%
+15   Selling costs                   3.0%
+16
+17   LTV                            75.0%
+18   Interest rate                   6.5%
+19   Amortization (years)             30
+20   Loan amount                $2,250,000   (=B5*B17)
+21
+22   Hold period (years)              5
+23   Discount rate                  10.0%
+24
+25   === CALCULATIONS ===
+26                                 Year 0    Year 1    Year 2    Year 3    Year 4    Year 5
+27   EGI                                     300,000   309,000   318,270   327,818   337,652
+28   Vacancy                                 (15,000)  (15,450)  (15,914)  (16,391)  (16,883)
+29   OpEx                                   (120,000) (123,000) (126,075) (129,227) (132,458)
+30   NOI                                     165,000   170,550   176,281   182,200   188,311
+```
+
+Notice how every number in the calcs section is either a label or a formula — no raw numbers. Every formula references the inputs at the top. That's the discipline.
+
+## What to take away
+
+- Every CRE model has three sections: Inputs, Calcs, Outputs — keep them strictly separate
+- Inputs are hardcoded assumptions; everything else is a formula
+- Use the blue/black/green color convention so assumptions are instantly visible
+- Stack calcs vertically: revenue, vacancy, EGI, OpEx, NOI, debt service, cash flow
+- Standard outputs: unlevered IRR, levered IRR, equity multiple, cash-on-cash, NPV, DSCR
+- Start single-tab for simple deals; split into multi-tab when complexity grows
+
+Next lesson: building the revenue side of the pro forma — rent rolls, escalations, vacancy, and growth rates, and how to avoid the three most common revenue modeling mistakes.

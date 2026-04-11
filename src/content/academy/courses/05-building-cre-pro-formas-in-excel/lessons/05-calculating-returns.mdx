@@ -1,0 +1,248 @@
+---
+order: 5
+title: Calculating Returns — IRR, Equity Multiple, NPV, and Cash-on-Cash
+description: How to wire the outputs section of a CRE pro forma — unlevered IRR, levered IRR, equity multiple, NPV, and cash-on-cash — using the right Excel formulas on the right cash flows.
+durationMinutes: 12
+keywords:
+  - cre returns excel
+  - irr formula real estate
+  - equity multiple calculation
+  - npv excel real estate
+  - cash on cash return
+---
+
+Once the revenue, expenses, and debt are modeled, the final step is computing the return metrics. This is the outputs section — the numbers a lender, partner, or investor will actually look at first when deciding whether the deal is worth doing.
+
+This lesson shows you how to set up each metric correctly, what cash flows each one uses, and how to avoid the classic mistakes that cause Excel returns to disagree with reality.
+
+## The two cash flow streams you need
+
+Every return metric is calculated from one of two cash flow streams:
+
+**Unlevered cash flow** = NOI − capital expenditures (no debt)
+Used for: unlevered IRR, property-level return, "what does the real estate itself earn?"
+
+**Levered cash flow** = NOI − capex − debt service (net of debt)
+Used for: levered IRR, equity multiple, cash-on-cash, NPV, "what does the investor earn on their equity?"
+
+Both streams have a Year 0 entry (the initial investment) and a Year N exit entry (the sale proceeds).
+
+### Unlevered Year 0 and Year N
+
+```
+Year 0 unlevered cash flow:  −(Purchase price + closing costs + capex spent at close)
+Year N unlevered cash flow:  Operating cash flow + Net sale proceeds (no loan payoff)
+```
+
+### Levered Year 0 and Year N
+
+```
+Year 0 levered cash flow:    −(Equity invested at close)
+                              = −(Purchase + closing + capex − Loan proceeds)
+Year N levered cash flow:    Operating cash flow + Net sale proceeds − Loan balloon payoff
+```
+
+Keeping these straight is the single most common modeling mistake — mixing levered and unlevered numbers in the same IRR calculation will give you meaningless output.
+
+## Setting up the cash flow rows in Excel
+
+Here's how to structure your calcs section:
+
+```
+Row              Year 0        Year 1      Year 2      Year 3      Year 4      Year 5
+
+NOI                              147,752    156,477    165,161    173,793    176,936
+CapEx                                  0          0          0          0          0
+Unlevered operating CF           147,752    156,477    165,161    173,793    176,936
+
+Unlevered sale CF                                                                       +2,985,242
+                                                                                     (sale price - selling costs)
+Total unlevered CF   (3,045,000)  147,752    156,477    165,161    173,793   3,162,178
+                     (purchase +
+                      closing)
+
+Debt service                    (170,679)  (170,679)  (170,679)  (170,679)  (170,679)
+Levered operating CF            (22,927)   (14,202)    (5,518)     3,114      6,257
+
+Loan balloon payoff                                                                     (2,106,773)
+Total levered CF       (795,000)  (22,927)   (14,202)    (5,518)     3,114    878,469
+                      (purchase −
+                       loan +
+                       closing)
+```
+
+Notice how the Year 0 cell for each stream is different:
+- Unlevered: full purchase price (you're buying with cash)
+- Levered: just the equity (purchase − loan proceeds)
+
+And Year 5:
+- Unlevered: net sale proceeds (no loan to pay off)
+- Levered: net sale proceeds minus loan balloon
+
+## The return formulas
+
+With the cash flow rows in place, the output formulas are one-liners.
+
+### Unlevered IRR
+
+```
+=IRR(unlevered_cash_flow_range)
+```
+
+**Example**: `=IRR(C10:H10)` → 5.8%
+
+The unlevered IRR tells you what the property itself earns, independent of financing. For stabilized commercial, unlevered IRR roughly approximates cap rate + growth rate. A 6% cap deal with 2% growth should produce an unlevered IRR around 6-7% — if yours is dramatically different, check your exit cap and growth assumptions.
+
+### Levered IRR
+
+```
+=IRR(levered_cash_flow_range)
+```
+
+**Example**: `=IRR(C14:H14)` → 2.2%
+
+This particular deal has a weaker levered IRR than unlevered IRR, which is a **warning sign**: it means the deal has **negative leverage**. The interest rate is higher than the unlevered return, so borrowing money actively hurts equity returns.
+
+A healthy levered IRR should be 2-8 percentage points higher than the unlevered IRR. When leverage is neutral or negative, reconsider the capital structure (lower LTV, different loan product) or skip the deal.
+
+### Equity multiple
+
+```
+=(SUM(operating CF years 1-N) + exit CF) / ABS(equity at close)
+```
+
+More practically:
+```
+=(SUM(levered_cf_years_1_through_N) − levered_cf_year_0) / ABS(levered_cf_year_0)
+```
+
+Or, since Year 0 is negative, just sum all the positive cash flows and divide by the absolute value of Year 0:
+
+```
+=SUM(C14:H14) / ABS(C14) + 1
+```
+
+Wait — that formula is a little off because Year 0 is included in the SUM. The cleanest version:
+
+```
+equity_multiple = (total_cash_returned) / abs(initial_equity)
+                = SUM(levered_cf_year_1_to_N) / ABS(levered_cf_year_0)
+```
+
+In Excel:
+```
+=SUM(D14:H14) / ABS(C14)
+```
+
+**Example**: equity at close is $795,000 (negative), cash flow years 1-5 sums to $842,893 → equity multiple = $842,893 / $795,000 = **1.06x**
+
+An equity multiple of 1.06x is weak — you barely got your money back. Healthy deals target 1.6x-2.5x over a 5-year hold, depending on asset class.
+
+### NPV
+
+```
+=NPV(discount_rate, cash_flow_years_1_to_N) + year_0_cash_flow
+```
+
+**Important**: Excel's `=NPV()` function assumes the first cash flow is at Year 1, not Year 0. So you pass in years 1-N and then manually add the Year 0 cash flow (which is negative).
+
+```
+=NPV(0.10, D14:H14) + C14
+```
+
+**Example**: discount at 10%, cash flows years 1-5 → present value, then add the −$795,000 Year 0 → NPV.
+
+If NPV is positive, the deal beats your discount rate. If negative, it doesn't.
+
+For our example deal with a weak 2.2% levered IRR and a 10% required return, NPV will be strongly negative — the deal doesn't clear the hurdle.
+
+### Cash-on-cash return (by year)
+
+```
+Year N cash-on-cash = (Year N levered cash flow) / (Equity invested)
+```
+
+In Excel, for Year 1:
+```
+=D14 / ABS(C14)
+```
+
+**Example**: Year 1 levered cash flow is −$22,927, equity is $795,000 → Year 1 cash-on-cash = −2.9%.
+
+The deal is burning cash in Year 1. You'd need to fund this shortfall from personal reserves or a working capital line. By Year 5 it's barely positive (0.8%).
+
+Stabilized deals target 6-10% cash-on-cash in Year 1, rising as rents grow. Value-add deals are lower in early years as renovations complete.
+
+### Stabilized cash-on-cash (average)
+
+```
+=AVERAGE(years_2_through_5 cash_on_cash)
+```
+
+Year 1 is excluded because it often reflects the deal's transition period.
+
+## A complete outputs section
+
+Here's what a clean outputs block looks like, stacked below the cash flow rows:
+
+```
+=== OUTPUTS ===
+
+Purchase price                 $3,000,000
+Equity at close                  $795,000     =purchase + closing − loan
+Loan amount                    $2,250,000
+
+Unlevered IRR                        5.8%     =IRR(unlev_cf_range)
+Levered IRR                          2.2%     =IRR(lev_cf_range)
+Equity multiple                     1.06x     =SUM(lev_cf_Y1:Y5)/ABS(lev_cf_Y0)
+NPV (at 10%)                    ($308,722)    =NPV(0.10, lev_cf_Y1:Y5) + lev_cf_Y0
+Cash-on-cash Year 1                 -2.9%
+Cash-on-cash Stabilized              0.5%     =AVG(Y2:Y5 cash-on-cash)
+
+DSCR Year 1                         0.87x     =Y1 NOI / Y1 DS
+DSCR Year 5                         1.04x
+
+Levered vs. unlevered IRR spread   −3.6%      ← NEGATIVE LEVERAGE WARNING
+```
+
+This dashboard gives you the full picture in 10 rows. A glance tells you this deal has problems — IRR is well below the 10% hurdle, DSCR fails lender minimum, and leverage is negative.
+
+## When your IRR doesn't match expectations
+
+If your model's IRR comes back wildly different from what you expected, check these in order:
+
+1. **Did you include the Year 0 cell in the IRR range?** If you accidentally only selected years 1-5, you're computing the IRR of positive cash flows with no initial investment — which Excel can't compute (returns #NUM!).
+
+2. **Is the Year 0 cell negative?** It should be a negative number (outflow). If you typed the equity as positive, IRR will be wrong.
+
+3. **Did you include the exit proceeds in Year N?** A common mistake is showing Year 5 as just operating cash flow, forgetting the sale.
+
+4. **Are the growth rates realistic?** If IRR looks weirdly high, double-check rent growth, exit cap, and reversion assumptions. A 0.5% exit cap compression + 5% rent growth can juice IRR by 4-6 points.
+
+5. **Are levered and unlevered cash flows mixed?** Most common mistake: Year 0 is the full purchase price (unlevered convention), but the operating cash flows are levered (net of debt). Pick one convention and stick to it.
+
+## The reality-check ratios
+
+Once the outputs are calculated, sanity-check them against these benchmarks:
+
+| Deal type | Unlevered IRR | Levered IRR | Equity multiple (5yr) | Year-1 cash-on-cash |
+|---|---|---|---|---|
+| Stabilized NNN | 5-7% | 7-10% | 1.4-1.7x | 5-8% |
+| Stabilized multifamily | 6-8% | 9-13% | 1.6-2.0x | 5-9% |
+| Value-add multifamily | 8-12% | 14-20% | 1.8-2.3x | 2-5% (ramping) |
+| Opportunistic/development | 12-18% | 18-25% | 2.0-3.0x | Often negative Y1-2 |
+| Stabilized retail | 6-9% | 8-13% | 1.5-1.9x | 6-9% |
+
+If your model returns numbers that fall inside these ranges, it passes the smell test. If they're dramatically outside, review your assumptions.
+
+## What to take away
+
+- Build two cash flow rows: unlevered and levered. Don't mix them.
+- `=IRR()` needs the full range including Year 0 (negative)
+- `=NPV()` assumes cash flow starts at Year 1 — manually add the Year 0 cell
+- Equity multiple = sum of years 1-N levered cash flows / absolute value of Year 0 equity
+- Stabilized cash-on-cash excludes Year 1 to avoid transition noise
+- Levered IRR should beat unlevered IRR by 2-8 points — if not, leverage is negative
+- Always check that DSCR stays above 1.20x throughout the hold
+
+Next lesson: sensitivity tables and tornado charts — how to stress-test a model by sweeping key inputs across a range of values to see which assumptions actually drive returns.

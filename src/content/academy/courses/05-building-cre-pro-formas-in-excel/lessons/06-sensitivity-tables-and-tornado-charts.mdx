@@ -1,0 +1,255 @@
+---
+order: 6
+title: Sensitivity Tables and Tornado Charts
+description: How to use Excel Data Tables to stress-test a CRE pro forma across ranges of key assumptions, and how to build a tornado chart to rank drivers by impact.
+durationMinutes: 12
+keywords:
+  - excel sensitivity table
+  - cre sensitivity analysis
+  - tornado chart real estate
+  - data table excel
+  - stress testing pro forma
+---
+
+A single-point IRR number is useful, but it's also dangerous. Every input in your model has uncertainty attached to it — and some inputs move the return number much more than others. A sensitivity analysis tells you *which* assumptions matter most and *how much* your return could move if those assumptions are wrong.
+
+This is the step that separates hobby modelers from institutional analysts. A pro forma without sensitivity is just a single guess; a pro forma with sensitivity is a range of possible outcomes you can actually reason about.
+
+## Why sensitivity matters
+
+Consider two deals:
+
+**Deal X** — Base-case IRR 15%. Under a realistic downside, IRR drops to 8%.
+**Deal Y** — Base-case IRR 15%. Under the same realistic downside, IRR drops to −2%.
+
+On base-case IRR alone, they look identical. With sensitivity, Deal X is clearly safer. If you underwrite only the base case, you'll treat these two deals as equivalent and occasionally walk into a disaster.
+
+Sensitivity analysis also exposes "return inflation" — deals where a tiny change in one assumption (say, exit cap) causes a huge swing in IRR. That's a fragile deal. Robust deals have returns that don't collapse when one input moves 50 basis points.
+
+## The three kinds of sensitivity
+
+1. **One-variable** — sweep a single input (e.g., exit cap rate from 5.0% to 7.0% in 25 bp steps) and see how IRR changes
+2. **Two-variable** — sweep two inputs at once (e.g., exit cap × rent growth) in a matrix
+3. **Tornado chart** — sweep every key input individually across a ±20% range, then rank them by impact on the output
+
+You should run all three on every deal you seriously underwrite.
+
+## Building a one-variable sensitivity in Excel
+
+Excel has a built-in feature called **Data Tables** that automates this. Here's how:
+
+### Step 1: Set up the input column
+
+Put the values you want to sweep in a column:
+
+```
+   A         B
+1  Exit cap  IRR
+2    5.00%
+3    5.25%
+4    5.50%
+5    5.75%
+6    6.00%
+7    6.25%
+8    6.50%
+9    6.75%
+10   7.00%
+```
+
+### Step 2: Reference the output cell
+
+In cell B1 (directly above the IRR column), enter a formula that references your model's IRR output cell:
+
+```
+=SomeSheet!$IRRCell$
+```
+
+Or if IRR is on the same sheet at cell K22:
+```
+=$K$22
+```
+
+### Step 3: Select the data table range and run the Data Table command
+
+1. Select range A1:B10 (including the header row with the formula)
+2. Go to **Data → What-If Analysis → Data Table**
+3. Leave **Row input cell** blank
+4. For **Column input cell**, click the input cell in your model that holds the exit cap rate (e.g., `$B$14`)
+5. Click OK
+
+Excel will run your entire model nine times, once for each exit cap value, and populate column B with the resulting IRRs. It's extraordinarily fast — you get instant sensitivity without writing any formulas.
+
+### The result
+
+```
+   A         B
+1  Exit cap  IRR
+2    5.00%   8.4%
+3    5.25%   7.1%
+4    5.50%   5.8%
+5    5.75%   4.6%
+6    6.00%   3.4%
+7    6.25%   2.2%
+8    6.50%   1.0%
+9    6.75%  −0.1%
+10   7.00%  −1.2%
+```
+
+Now you can see that a 50 bp move in exit cap (5.75% → 6.25%) drops IRR by 2.4 points. That's the deal's sensitivity to exit cap.
+
+## Building a two-variable sensitivity
+
+This is the most useful version because it captures interactions between two inputs. Typical combinations:
+
+- Exit cap × Rent growth
+- Interest rate × LTV
+- Year-1 NOI × Exit cap
+- Vacancy × Rent growth
+
+### Step 1: Set up the grid
+
+Put one variable across the top row and one down the left column. Put the output formula in the intersection cell (top-left of the grid).
+
+```
+         B         C         D         E         F
+1   =K22       2.0%      2.5%      3.0%      3.5%      4.0%
+2     5.00%
+3     5.25%
+4     5.50%
+5     5.75%
+6     6.00%
+7     6.25%
+8     6.50%
+```
+
+Cell B1 is `=K22` (the IRR output). C1:F1 are the rent-growth values. B2:B8 are the exit-cap values.
+
+### Step 2: Select and run the Data Table
+
+1. Select range B1:F8 (the entire grid including headers)
+2. Go to **Data → What-If Analysis → Data Table**
+3. **Row input cell** = the rent growth input in your model (e.g., `$B$11`)
+4. **Column input cell** = the exit cap input in your model (e.g., `$B$14`)
+5. OK
+
+Excel computes the entire grid — one run per cell — and populates with IRRs.
+
+### The result
+
+```
+          2.0%    2.5%    3.0%    3.5%    4.0%
+ 5.00%    7.1%    8.8%   10.5%   12.3%   14.0%
+ 5.25%    5.9%    7.5%    9.2%   10.9%   12.7%
+ 5.50%    4.7%    6.3%    8.0%    9.7%   11.4%
+ 5.75%    3.6%    5.2%    6.8%    8.5%   10.2%
+ 6.00%    2.6%    4.2%    5.8%    7.4%    9.1%
+ 6.25%    1.5%    3.1%    4.7%    6.3%    8.0%
+ 6.50%    0.5%    2.1%    3.7%    5.3%    7.0%
+```
+
+Now you can reason about the deal more completely. Base case (6.00% exit cap, 3.0% rent growth) = 5.8% IRR. Upside (5.50% cap, 3.5% growth) = 9.7%. Downside (6.25% cap, 2.5% growth) = 3.1%.
+
+The deal has a realistic downside to 3% IRR — barely positive. That's the honest risk-return profile, not the single-point "5.8%" number.
+
+## Color-coding the results
+
+After the data table is populated, apply conditional formatting:
+
+- IRR ≥ 12% → dark green
+- IRR 8-12% → light green
+- IRR 5-8% → yellow
+- IRR 0-5% → orange
+- IRR < 0% → red
+
+Now the matrix becomes visual. You can see at a glance which corner of the assumption space gives acceptable returns and which doesn't.
+
+## The tornado chart — ranking assumption impact
+
+A tornado chart shows each assumption's impact on IRR when moved by ±10% (or ±1 standard deviation, or any fixed range). The bars are sorted from largest impact to smallest, giving it a "tornado" shape.
+
+### Step 1: Pick the key inputs
+
+Typical list:
+- Purchase price
+- Year-1 NOI
+- Rent growth rate
+- Vacancy
+- Exit cap rate
+- Interest rate
+- LTV
+- OpEx growth rate
+
+### Step 2: Compute low/high IRRs for each
+
+For each input, move it down 10% (low case), record the IRR. Then move it up 10% (high case), record the IRR. Reset to base. Repeat for every input.
+
+In Excel this is tedious to do by hand, but you can automate it with a simple macro, or with multiple small data tables, or even by changing cells manually and recording the outputs.
+
+### Step 3: Build the data table
+
+```
+Input                Low IRR    Base IRR    High IRR    Range
+Purchase price        8.2%       5.8%        3.5%        4.7%
+Exit cap rate         8.1%       5.8%        3.6%        4.5%
+Year-1 NOI            3.6%       5.8%        7.9%        4.3%
+Rent growth           4.0%       5.8%        7.5%        3.5%
+Vacancy               6.5%       5.8%        5.1%        1.4%
+Interest rate         6.4%       5.8%        5.2%        1.2%
+OpEx growth           6.0%       5.8%        5.5%        0.5%
+LTV                   5.6%       5.8%        6.0%        0.4%
+```
+
+Sort by Range descending — that's the tornado order.
+
+### Step 4: Plot as a bar chart
+
+Create a stacked horizontal bar chart showing each input's range. The result looks like a tornado, with the most impactful variable at the top and the least at the bottom.
+
+### Reading the tornado
+
+In this example:
+- **Purchase price** has the biggest impact — a 10% change in price moves IRR by 4.7 points
+- **Exit cap** and **Year-1 NOI** are nearly tied for second
+- **OpEx growth** and **LTV** barely matter
+
+This tells you: spend your due diligence time on **price**, **NOI**, and **exit cap assumptions**. Don't waste time arguing over whether OpEx growth should be 3.0% or 3.25% — it won't move the return.
+
+## What to stress in every model
+
+At minimum, run these three stress tests on every deal:
+
+### 1. The "rates stay high" stress
+- Exit cap rate up 75 bp from base
+- Refinance rate 100 bp higher than purchase rate
+- Does the deal still clear your hurdle?
+
+### 2. The "revenue miss" stress
+- Rent growth at half your base case (e.g., 1.5% instead of 3%)
+- Vacancy up 2 percentage points
+- Bad debt up 1 percentage point
+- Does the deal still break even on levered cash flow?
+
+### 3. The "expense inflation" stress
+- Property taxes up 15% above base
+- Insurance up 25% above base
+- OpEx growth 1 point higher
+- Does the deal still clear DSCR?
+
+If any of these three blow up the deal, you need a plan: either walk away, negotiate a lower purchase price, or have a documented reason why the stress is unrealistic. "I don't think rates will stay high" is not a plan.
+
+## The modeling discipline
+
+Sensitivity analysis is the step where you confront your assumptions honestly. When you build a base-case model, you use your best guess for every input. When you stress-test, you find out which guesses you can't afford to be wrong about.
+
+Sophisticated investors budget 20-30% of their modeling time on sensitivity. Beginners spend 0% — they build the base case, see the IRR, and commit. That's how bad deals get done.
+
+## What to take away
+
+- Excel Data Tables automate sensitivity analysis with zero formulas
+- One-variable tables for "what if this one thing is wrong?"
+- Two-variable tables capture interactions between inputs
+- Tornado charts rank all inputs by impact — spend DD time on the top 3
+- Always stress: rates stay high, revenue miss, expense inflation
+- A model without sensitivity is just a guess. A model with sensitivity is a range.
+
+Next lesson: the full template walkthrough — we apply everything from this course to a complete deal, end to end, building a real institutional-quality pro forma you can reuse on your own deals.
