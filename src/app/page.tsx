@@ -1,14 +1,10 @@
 import Link from "next/link";
-import { listings } from "@/data/listings";
 import { caseStudies } from "@/data/case-studies";
 import { markets } from "@/data/markets";
-import ListingCard from "@/components/ListingCard";
-import ListingDisclaimer from "@/components/ListingDisclaimer";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 
 export default function HomePage() {
-  const featuredListings = listings.filter((l) => l.featured).slice(0, 3);
   const featuredStudy = caseStudies[0];
 
   return (
@@ -21,68 +17,122 @@ export default function HomePage() {
             Central Florida &amp; Space Coast
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight">
-            Orlando Commercial Real Estate{" "}
-            <span className="text-gold">Broker &amp; Advisor</span>
+            Selling Commercial Property in{" "}
+            <span className="text-gold">Central Florida?</span>
           </h1>
           <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mb-10 leading-relaxed">
-            MaxLife Realty is a Central Florida commercial real estate
-            brokerage specializing in commercial property sales, leasing, NNN
-            investments, and land development across Orlando, the Space Coast,
-            and Lake Nona.
+            MaxLife Realty is a Central Florida commercial brokerage focused
+            on owners who want straight answers, real numbers, and a
+            well-connected broker &mdash; not another search portal. We help
+            sellers price, position, and place commercial properties across
+            Orlando, the Space Coast, and Lake Nona.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/opportunities"
+              href="/contact"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
-              View Available Deals
+              Request a Seller Valuation
             </Link>
             <Link
-              href="/investor-access"
+              href="/net-sheets/seller"
               className="inline-block border border-gold/30 text-gold hover:bg-gold/10 font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
-              Get Off-Market Access
+              Run a Seller Net Sheet
             </Link>
             <Link
-              href="/contact"
+              href="/deal-analyzer"
               className="inline-block border border-dark-border text-gray-300 hover:border-gray-500 font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
-              Request Property Analysis
+              Open Deal Analyzer
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Featured Active Deals */}
+      {/* Why MaxLife */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-2xl font-bold text-white">
-              Central Florida Market Directory
-            </h2>
-            <p className="text-gray-500 mt-1">
-              Third-party commercial listings &mdash; address-only directory
-            </p>
-          </div>
-          <Link
-            href="/opportunities"
-            className="hidden sm:inline-block text-gold hover:underline text-sm font-medium"
-          >
-            View All Deals &rarr;
-          </Link>
-        </div>
-        <div className="mb-6">
-          <ListingDisclaimer />
+        <div className="mb-10">
+          <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
+            For Commercial Property Owners
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            The broker you hire should know{" "}
+            <span className="text-gold">more than the market</span>
+          </h2>
+          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+            Central Florida has hundreds of agents who can put a sign in the
+            ground. There are very few who can underwrite your property at
+            institutional depth, walk you through the net-at-close before you
+            sign, and hand-match you with the right buyer pool. That&apos;s
+            what we do.
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredListings.map((listing, i) => (
-            <ListingCard key={`home-featured-${i}`} listing={listing} />
+          {[
+            {
+              title: "Honest valuations, not sales pitches",
+              body: "Cap-rate and DSCR-based underwriting using our in-house Deal Analyzer. You see the math before you list.",
+              cta: { label: "Try the Deal Analyzer", href: "/deal-analyzer" },
+            },
+            {
+              title: "Know your net at close",
+              body: "Free Florida net sheet calculator with per-county defaults and a branded PDF for your files.",
+              cta: { label: "Open Seller Net Sheet", href: "/net-sheets/seller" },
+            },
+            {
+              title: "A real investor network",
+              body: "Direct relationships with Central Florida&apos;s active commercial buyers &mdash; 1031 exchangers, NNN funds, and private capital.",
+              cta: { label: "How we work", href: "/services" },
+            },
+            {
+              title: "Market-by-market depth",
+              body: "Orlando, Brevard, Lake, Seminole, Osceola, Volusia, and Polk. Each market has its own dynamics and we know them cold.",
+              cta: { label: "See market reports", href: "/markets" },
+            },
+            {
+              title: "Off-market when it fits",
+              body: "For the right property, the quietest sale is often the most profitable. We place quietly when that&apos;s the brief.",
+              cta: { label: "Contact us", href: "/contact" },
+            },
+            {
+              title: "Central Florida insights",
+              body: "Long-form market research, trend pieces, and cap-rate guides written by practitioners, not content mills.",
+              cta: { label: "Read the blog", href: "/blog" },
+            },
+          ].map((f) => (
+            <div
+              key={f.title}
+              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+            >
+              <h3 className="text-white font-semibold text-lg mb-2">
+                {f.title}
+              </h3>
+              <p
+                className="text-gray-400 text-sm leading-relaxed mb-4 flex-1"
+                dangerouslySetInnerHTML={{ __html: f.body }}
+              />
+              <Link
+                href={f.cta.href}
+                className="text-gold hover:text-gold-light font-semibold text-sm inline-flex items-center gap-1.5"
+              >
+                {f.cta.label}
+                <svg
+                  className="w-3.5 h-3.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </div>
           ))}
-        </div>
-        <div className="sm:hidden mt-6 text-center">
-          <Link href="/opportunities" className="text-gold hover:underline text-sm font-medium">
-            View All Deals &rarr;
-          </Link>
         </div>
       </section>
 

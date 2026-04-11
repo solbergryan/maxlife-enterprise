@@ -111,10 +111,10 @@ export default function Navbar() {
               )
             )}
             <Link
-              href="/investor-access"
+              href="/contact"
               className="bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm transition-colors"
             >
-              Get Deal Access
+              Request Valuation
             </Link>
           </div>
 
@@ -203,11 +203,11 @@ export default function Navbar() {
             )}
             <div className="pt-2">
               <Link
-                href="/investor-access"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 className="block bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm text-center transition-colors"
               >
-                Get Deal Access
+                Request Valuation
               </Link>
             </div>
           </div>

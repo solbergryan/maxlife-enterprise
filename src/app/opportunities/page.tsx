@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { listings } from "@/data/listings";
-import ListingCard from "@/components/ListingCard";
-import ListingGrid from "@/components/ListingGrid";
-import ListingDisclaimer from "@/components/ListingDisclaimer";
+import Link from "next/link";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 import CTABanner from "@/components/CTABanner";
 import JsonLd from "@/components/JsonLd";
@@ -27,134 +24,219 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Central Florida Commercial Property Directory | MaxLife Realty",
+  title:
+    "Sell Commercial Property in Central Florida | MaxLife Realty",
   description:
-    "Link-only directory of third-party commercial real estate listings across Orlando, Brevard, Lake, Seminole, Osceola, Volusia, and Polk counties. Click through to each source for pricing, photos, and the listing brokerage of record.",
+    "Thinking of selling commercial property in Orlando, Brevard, Lake, Seminole, Osceola, Volusia, or Polk County? MaxLife Realty offers honest valuations, seller net sheets, and a direct investor network. Request a seller valuation today.",
   openGraph: {
-    title: "Central Florida Commercial Property Directory | MaxLife Realty",
+    title: "Sell Commercial Property in Central Florida | MaxLife Realty",
     description:
-      "Address-only directory of third-party Central Florida commercial listings. MaxLife Realty is not the listing broker; click through to each listing source for full details.",
+      "Seller-first Central Florida commercial real estate brokerage. Honest underwriting, per-county seller net sheets, and a direct buyer network. Request a valuation.",
   },
 };
 
 export default function OpportunitiesPage() {
-  const featured = listings.filter((l) => l.featured);
-  const allListings = listings;
-
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
-      {/* Header */}
+
+      {/* Hero */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
-            Investment Opportunities
+            For Commercial Property Owners
           </p>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Central Florida Commercial{" "}
-            <span className="text-gold">Directory</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Selling Central Florida{" "}
+            <span className="text-gold">Commercial Property?</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
-            Address-only directory of third-party commercial properties
-            across Central Florida and the Space Coast. Each entry links to
-            the original listing source where pricing, photos, and the
-            listing brokerage of record are shown. MaxLife Realty is not the
-            listing broker for any entry in this directory.
+          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+            MaxLife Realty is a seller-focused commercial brokerage covering
+            Orlando, the Space Coast, and Central Florida. We underwrite your
+            property like an institutional buyer would, show you a realistic
+            net-at-close before you list, and match the right property to the
+            right buyer &mdash; publicly or off-market. No listing portals.
+            No search engines. Just a broker who knows the market cold.
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/contact"
+              className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-6 py-3 rounded-lg transition-colors text-center"
+            >
+              Request a Seller Valuation
+            </Link>
+            <Link
+              href="/net-sheets/seller"
+              className="inline-block border border-gold/30 text-gold hover:bg-gold/10 font-semibold px-6 py-3 rounded-lg transition-colors text-center"
+            >
+              Run Your Net Sheet
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Persistent top-of-page compliance banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <ListingDisclaimer />
-      </section>
-
-      {/* Featured Picks */}
-      {featured.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
-          <h2 className="text-2xl font-bold text-white mb-2">
-            Featured Directory Entries
+      {/* How we work with sellers */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-3xl mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            How we work with sellers
           </h2>
-          <p className="text-gray-500 mb-6">
-            Third-party properties of interest &mdash; click through to each
-            source for pricing, photos, and the listing brokerage of record.
+          <p className="text-gray-400 text-lg leading-relaxed">
+            Every seller engagement follows the same four steps. We move as
+            fast or as slowly as the property and your situation require, but
+            the rigor is the same whether it&apos;s a single-tenant NNN or a
+            ground-up development parcel.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featured.map((listing, i) => (
-              <ListingCard key={`featured-${i}`} listing={listing} />
-            ))}
-          </div>
-        </section>
-      )}
+        </div>
 
-      {/* All Market Listings */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-border">
-        <h2 className="text-2xl font-bold text-white mb-2">
-          Full Directory
-        </h2>
-        <p className="text-gray-500 mb-8">
-          Address-only entries for third-party commercial properties across
-          Orange, Seminole, Osceola, Lake, Polk, Volusia, and Brevard
-          counties. Click any entry to view the original listing on Crexi.
-        </p>
-        <ListingGrid listings={allListings} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              step: "01",
+              title: "Institutional-grade underwriting",
+              body: "We run your property through the same cap-rate, DSCR, IRR, and sensitivity analysis that a real buyer will. No happy-math pro-formas. You see the honest numbers before you decide to list.",
+              cta: { label: "See the Deal Analyzer", href: "/deal-analyzer" },
+            },
+            {
+              step: "02",
+              title: "Realistic net-at-close",
+              body: "Before any listing agreement is signed, we run a seller net sheet with per-county defaults for Orange, Brevard, Lake, Seminole, Osceola, Volusia, and Polk. You know exactly what you walk away with at every price point.",
+              cta: { label: "Open Seller Net Sheet", href: "/net-sheets/seller" },
+            },
+            {
+              step: "03",
+              title: "Targeted buyer matching",
+              body: "We keep a working list of active Central Florida commercial buyers \u2014 1031 exchangers, NNN funds, private capital, and operator-buyers. Your property goes to the short list that actually closes, not a mass blast.",
+              cta: { label: "How we market listings", href: "/services" },
+            },
+            {
+              step: "04",
+              title: "Public or off-market, your call",
+              body: "Some properties sell best in full daylight. Others need quiet. We&apos;ll tell you honestly which your property is, and either way we have the reach to move it \u2014 without cluttering up your business on public listing portals.",
+              cta: { label: "Contact us", href: "/contact" },
+            },
+          ].map((s) => (
+            <div
+              key={s.step}
+              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+            >
+              <p className="text-gold font-mono text-sm tracking-widest mb-3">
+                {s.step}
+              </p>
+              <h3 className="text-white font-semibold text-lg mb-2">
+                {s.title}
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                {s.body}
+              </p>
+              <Link
+                href={s.cta.href}
+                className="text-gold hover:text-gold-light font-semibold text-sm inline-flex items-center gap-1.5"
+              >
+                {s.cta.label}
+                <svg
+                  className="w-3.5 h-3.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        {/* Broker Compliance Disclaimer (full legal text) */}
-        <div className="mt-10 bg-dark-card border border-gold/20 rounded-lg p-5">
-          <h3 className="text-gold font-semibold text-sm mb-2">
-            Broker Attribution &amp; Disclaimer
-          </h3>
-          <div className="text-gray-500 text-xs leading-relaxed space-y-2">
-            <p>
-              All properties displayed above are syndicated third-party
-              listings sourced from Crexi and are marketed by their respective
-              listing brokerages.{" "}
-              <span className="text-gray-300 font-semibold">
-                MaxLife Realty is not the listing broker for any third-party
-                listing on this page.
-              </span>{" "}
-              Each listing card links directly to the original listing source
-              where the full listing brokerage of record, listing agent, terms,
-              conditions, and contact information are available.
+      {/* What we need from you */}
+      <section className="bg-dark-card/30 border-y border-dark-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-4xl">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              What we need to value your property
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              A valuation call with MaxLife Realty is free, confidential, and
+              typically takes 20 minutes. To give you a real number instead
+              of a guess, we work from the same information any serious
+              buyer will eventually ask for.
             </p>
-            <p>
-              Listing information, including price, square footage, cap rate,
-              NOI, tenant data, and property details, is deemed reliable but
-              is not guaranteed and may have changed since syndication. Buyers
-              and investors must verify all information directly with the
-              listing brokerage of record and conduct their own due diligence
-              before acting on any information shown here.
-            </p>
-            <p>
-              MaxLife Realty &middot; Florida Licensed Real Estate Brokerage
-              &middot; Ryan Solberg, Managing Broker &middot; FL Broker License
-              #3354351 &middot; Equal Housing Opportunity.
-            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                {
+                  title: "Property basics",
+                  body: "Address, current use, year built, square footage, and any known upcoming capital expenditures (roof, HVAC, parking).",
+                },
+                {
+                  title: "Income & expenses",
+                  body: "Last 12 months of rent roll or gross revenue, plus operating expenses. A T-12 or tax returns work fine.",
+                },
+                {
+                  title: "Leases (if tenanted)",
+                  body: "Copies of executed leases with remaining term, rent escalations, and who pays expenses (NNN, modified gross, full service).",
+                },
+                {
+                  title: "Your goals",
+                  body: "Timeline, net proceeds target, 1031 plans, tax sensitivity, and whether you&apos;d consider an off-market sale.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                >
+                  <h3 className="text-gold font-semibold text-sm mb-2">
+                    {item.title}
+                  </h3>
+                  <p
+                    className="text-gray-400 text-sm leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: item.body }}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="mt-10">
+              <Link
+                href="/contact"
+                className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-3 rounded-lg transition-colors"
+              >
+                Request a Valuation Call
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Off-Market Signup */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-2 text-center">
-              Don&apos;t See What You&apos;re Looking For?
-            </h2>
-            <p className="text-gray-400 text-center mb-8">
-              Many of our best deals never make it to the open market. Sign up
-              for off-market deal access and be the first to know.
-            </p>
-            <InvestorSignupForm />
-          </div>
+      {/* Buyer side — investor signup (secondary) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
+            For Buyers &amp; Investors
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Looking for Central Florida commercial property?
+          </h2>
+          <p className="text-gray-400 mb-8 leading-relaxed">
+            We don&apos;t run a public listings portal &mdash; there are
+            plenty of those. What we do is keep a short list of serious
+            Central Florida commercial buyers and introduce them to the
+            off-market and pre-market deals we source. If you&apos;re
+            actively deploying capital, sign up below and tell us what
+            you&apos;re looking for.
+          </p>
+          <InvestorSignupForm />
         </div>
       </section>
 
       <CTABanner
-        heading="Have a Property to Sell?"
-        description="We help commercial property owners maximize value through strategic marketing and qualified buyer access."
-        primaryCTA={{ label: "Submit a Property", href: "/contact" }}
-        secondaryCTA={{ label: "Schedule a Call", href: "/contact" }}
+        heading="Not sure yet? Start with the net sheet."
+        description="Before you decide whether to sell, run a free seller net sheet with your property details. Per-county Florida defaults, branded PDF, five minutes."
+        primaryCTA={{ label: "Open Seller Net Sheet", href: "/net-sheets/seller" }}
+        secondaryCTA={{ label: "Read Market Insights", href: "/blog" }}
       />
     </>
   );

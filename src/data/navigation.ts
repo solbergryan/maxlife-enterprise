@@ -6,7 +6,7 @@ export interface NavLink {
 
 export const mainNav: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Opportunities", href: "/opportunities" },
+  { label: "For Sellers", href: "/opportunities" },
   {
     label: "Markets",
     href: "/markets",
@@ -17,20 +17,20 @@ export const mainNav: NavLink[] = [
       { label: "Central Florida", href: "/markets/central-florida-investment-properties" },
     ],
   },
-  { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "Net Sheets", href: "/net-sheets" },
-  { label: "Services", href: "/services" },
+  { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "Insights", href: "/blog" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
 ];
 
 export const footerInvestorLinks: NavLink[] = [
-  { label: "Current Opportunities", href: "/opportunities" },
-  { label: "Off-Market Deals", href: "/orlando-commercial-real-estate-deals" },
+  { label: "Sell Your Property", href: "/opportunities" },
+  { label: "Seller Net Sheet", href: "/net-sheets/seller" },
+  { label: "Buyer Estimate", href: "/net-sheets/buyer" },
+  { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "1031 Exchange", href: "/1031-exchange-florida" },
   { label: "NNN Properties", href: "/nnn-properties-florida" },
-  { label: "Deal Analyzer", href: "/deal-analyzer" },
-  { label: "Net Sheet Calculator", href: "/net-sheets" },
   { label: "Land for Development", href: "/central-florida-land-for-development" },
 ];
 

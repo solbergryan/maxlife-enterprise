@@ -45,19 +45,18 @@ export default function ListingGrid({ listings }: { listings: Listing[] }) {
     if (type !== "All") result = result.filter((l) => l.type === type);
     if (county !== "All") result = result.filter((l) => l.county === county);
     if (search.trim()) {
-      // Search limited to public-record location fields only.
+      // Search is limited to category metadata only. Street address,
+      // city, ZIP, and other property-specific identifiers have been
+      // intentionally removed from search to match the directory view.
       const q = search.toLowerCase();
       result = result.filter(
         (l) =>
-          l.city.toLowerCase().includes(q) ||
-          l.address.toLowerCase().includes(q) ||
-          l.zip.toLowerCase().includes(q) ||
-          l.county.toLowerCase().includes(q)
+          l.county.toLowerCase().includes(q) ||
+          l.type.toLowerCase().includes(q)
       );
     }
 
     result = [...result].sort((a, b) => {
-      if (sort === "city") return a.city.localeCompare(b.city);
       if (sort === "type") return a.type.localeCompare(b.type);
       return a.county.localeCompare(b.county);
     });

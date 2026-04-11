@@ -3,13 +3,14 @@ import { Listing } from "@/data/listings";
 /**
  * Link-only directory card for third-party syndicated listings.
  *
- * Intentionally displays only minimal, non-marketing, public-record
- * facts: street address, city/state/ZIP, county, property type, and a
- * link to the original listing source. Does NOT display price, cap
- * rate, NOI, square footage, lot size, tenant name, photographs, or
- * marketing titles, all of which may be subject to copyright or
- * competing brokerages' rights. Each card carries its own attribution
- * statement alongside the top-of-page ListingDisclaimer banner.
+ * Intentionally displays ONLY category metadata and a link to the
+ * original listing source. Does NOT display street address, price,
+ * cap rate, NOI, square footage, lot size, tenant name, photographs,
+ * or marketing titles. Even the city and ZIP are suppressed so the
+ * card cannot be used to identify a specific property without
+ * clicking through to the source. Each card carries its own
+ * attribution statement alongside the top-of-page ListingDisclaimer
+ * banner.
  */
 export default function ListingCard({ listing }: { listing: Listing }) {
   return (
@@ -24,27 +25,29 @@ export default function ListingCard({ listing }: { listing: Listing }) {
         </span>
       </div>
 
-      {/* Address block — public-record facts only */}
+      {/* Category block — general location only, no identifying data */}
       <div className="flex-1 mb-4">
-        <h3 className="text-white font-semibold text-base leading-snug mb-1 line-clamp-2">
-          {listing.address}
+        <h3 className="text-white font-semibold text-base leading-snug mb-1">
+          {listing.type} Property
         </h3>
-        <p className="text-gray-400 text-sm">
-          {listing.city}, {listing.state} {listing.zip}
-        </p>
-        {listing.county && listing.county !== "Other" && (
-          <p className="text-gray-600 text-xs mt-1">
+        {listing.county && listing.county !== "Other" ? (
+          <p className="text-gray-400 text-sm">
             {listing.county} County, FL
           </p>
+        ) : (
+          <p className="text-gray-500 text-sm">Central Florida</p>
         )}
+        <p className="text-gray-600 text-xs mt-2">
+          Address and property details available on the source listing.
+        </p>
       </div>
 
       {/* Per-card attribution */}
       <div className="border-t border-dark-border pt-3">
         <p className="text-[10px] text-gray-600 leading-snug mb-3">
           Syndicated third-party listing. MaxLife Realty is not the listing
-          broker. See source for the listing brokerage of record, pricing,
-          terms, and full details.
+          broker. Click through to the source for the listing brokerage of
+          record, address, pricing, terms, and full details.
         </p>
         <a
           href={listing.crexiUrl}
