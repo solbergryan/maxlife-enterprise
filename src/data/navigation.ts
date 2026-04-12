@@ -5,8 +5,6 @@ export interface NavLink {
 }
 
 export const mainNav: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "For Sellers", href: "/opportunities" },
   {
     label: "Properties",
     href: "/properties",
@@ -26,7 +24,6 @@ export const mainNav: NavLink[] = [
       { label: "Notes & Loans", href: "/properties/note-loan" },
     ],
   },
-  { label: "Market Reports", href: "/market-reports" },
   {
     label: "Markets",
     href: "/markets",
@@ -37,10 +34,25 @@ export const mainNav: NavLink[] = [
       { label: "Central Florida", href: "/markets/central-florida-investment-properties" },
     ],
   },
-  { label: "Net Sheets", href: "/net-sheets" },
-  { label: "Deal Analyzer", href: "/deal-analyzer" },
-  { label: "Academy", href: "/academy" },
-  { label: "Insights", href: "/blog" },
+  {
+    label: "Tools",
+    href: "/investor-tools",
+    children: [
+      { label: "Deal Analyzer", href: "/deal-analyzer" },
+      { label: "Seller Net Sheet", href: "/net-sheets/seller" },
+      { label: "Buyer Estimate", href: "/net-sheets/buyer" },
+      { label: "For Sellers", href: "/opportunities" },
+    ],
+  },
+  {
+    label: "Insights",
+    href: "/blog",
+    children: [
+      { label: "Market Reports", href: "/market-reports" },
+      { label: "Blog & Insights", href: "/blog" },
+      { label: "Academy", href: "/academy" },
+    ],
+  },
   { label: "About", href: "/about" },
 ];
 

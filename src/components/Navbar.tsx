@@ -6,6 +6,26 @@ import { useState, useRef, useEffect } from "react";
 import { mainNav } from "@/data/navigation";
 import SearchBar from "@/components/SearchBar";
 
+/**
+ * Label for the "top of dropdown" header link that points to the parent
+ * index page. Per-path overrides for the cases where "All {label}" reads
+ * awkwardly.
+ */
+function dropdownHeaderLabel(href: string, label: string): string {
+  switch (href) {
+    case "/markets":
+      return "All Markets";
+    case "/properties":
+      return "All Property Types";
+    case "/investor-tools":
+      return "All Investor Tools";
+    case "/blog":
+      return "All Insights";
+    default:
+      return `All ${label}`;
+  }
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -47,11 +67,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-5 lg:gap-6">
-            {/* Search — shown on large screens where there's room */}
-            <div className="w-56 xl:w-64">
-              <SearchBar />
-            </div>
+          <div className="hidden lg:flex items-center gap-6">
             {mainNav.map((link) =>
               link.children ? (
                 <div
@@ -65,7 +81,7 @@ export default function Navbar() {
                         openDropdown === link.href ? null : link.href,
                       )
                     }
-                    className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+                    className={`text-sm font-medium whitespace-nowrap transition-colors flex items-center gap-1 ${
                       isActive(link.href)
                         ? "text-gold"
                         : "text-gray-300 hover:text-gold"
@@ -93,11 +109,7 @@ export default function Navbar() {
                         onClick={() => setOpenDropdown(null)}
                         className="block px-4 py-2 text-sm text-gray-400 hover:text-gold hover:bg-dark-hover transition-colors"
                       >
-                        {link.href === "/markets"
-                          ? "All Markets"
-                          : link.href === "/properties"
-                            ? "All Property Types"
-                            : `All ${link.label}`}
+                        {dropdownHeaderLabel(link.href, link.label)}
                       </Link>
                       <div className="border-t border-dark-border my-1" />
                       {link.children.map((child) => (
@@ -121,7 +133,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors ${
+                  className={`text-sm font-medium whitespace-nowrap transition-colors ${
                     isActive(link.href)
                       ? "text-gold"
                       : "text-gray-300 hover:text-gold"
@@ -131,9 +143,14 @@ export default function Navbar() {
                 </Link>
               )
             )}
+            {/* Search — compact, pushed to the right before the CTA. Hidden
+                on md/lg where space is tight; shown on xl+ where it fits. */}
+            <div className="hidden xl:block w-52">
+              <SearchBar />
+            </div>
             <Link
               href="/opportunities#request-valuation"
-              className="bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm transition-colors"
+              className="bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm whitespace-nowrap transition-colors"
             >
               Request Valuation
             </Link>
@@ -195,11 +212,7 @@ export default function Navbar() {
                         onClick={() => setOpen(false)}
                         className="block text-sm text-gray-400 hover:text-gold py-1.5 transition-colors"
                       >
-                        {link.href === "/markets"
-                          ? "All Markets"
-                          : link.href === "/properties"
-                            ? "All Property Types"
-                            : `All ${link.label}`}
+                        {dropdownHeaderLabel(link.href, link.label)}
                       </Link>
                       {link.children.map((child) => (
                         <Link
