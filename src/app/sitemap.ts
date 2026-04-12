@@ -7,6 +7,7 @@ import { cities } from "@/data/seo/cities";
 import { getAllPropertyTypes } from "@/data/seo/propertyTypes";
 import { submarkets } from "@/data/seo/submarkets";
 import { getOutlookParams } from "@/data/seo/outlooks";
+import { propertyTypeRegistry } from "@/data/property-types";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -322,6 +323,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  // /properties hub — index + 13 top-level categories + 126 subtypes
+  const propertiesIndex: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/properties`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+  ];
+  const propertyTypePages: MetadataRoute.Sitemap = propertyTypeRegistry.map(
+    (entry) => ({
+      url: entry.parentSlug
+        ? `${BASE_URL}/properties/${entry.parentSlug}/${entry.slug}`
+        : `${BASE_URL}/properties/${entry.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      // Top-level categories get higher priority than niche subtypes.
+      priority: entry.parentSlug ? 0.7 : 0.85,
+    }),
+  );
 
   return [
     ...staticPages,
@@ -333,5 +354,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...propertyTypeCityPages,
     ...capRatePages,
     ...outlookPages,
+    ...propertiesIndex,
+    ...propertyTypePages,
   ];
 }
