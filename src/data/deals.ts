@@ -43,6 +43,7 @@ export const deals: Deal[] = [
       "High-traffic corridor with strong co-tenancy",
       "Annual rent escalations built into lease",
     ],
+    image: "/portfolio/autozone-1.jpg",
     description:
       "Absolute NNN AutoZone located on a high-traffic retail corridor in Orlando. The property features a long-term lease with annual rent escalations, providing stable and predictable income with zero landlord responsibilities. Prime location with strong co-tenancy including national retailers.",
   },
@@ -64,6 +65,7 @@ export const deals: Deal[] = [
       "Located near major tourist corridor",
       "Potential to increase NOI by 20%+ at lease renewal",
     ],
+    image: "/listings/819837.jpg",
     upsidePotential:
       "Below-market rents on 3 of 5 units with leases expiring within 18 months — opportunity to push rents to market rate and increase NOI by 20%+.",
     description:
@@ -85,6 +87,7 @@ export const deals: Deal[] = [
       "Rapidly growing Brevard County market",
       "Surrounded by new residential development",
     ],
+    image: "/listings/867542.jpg",
     upsidePotential:
       "4.5 acres of commercially zoned land in one of Brevard County's fastest-growing corridors. Ideal for retail pad site, medical office, or mixed-use development.",
     description:
@@ -108,6 +111,7 @@ export const deals: Deal[] = [
       "Below-market rents with upside at turnover",
       "Walking distance to downtown Sanford",
     ],
+    image: "/listings/1207448.jpg",
     upsidePotential:
       "Current rents average 15% below market. As units turn over, rents can be adjusted to market rate, projecting a 6.8% cap to 8.1% within 24 months.",
     description:
@@ -134,6 +138,7 @@ export const deals: Deal[] = [
       "Growing Lake County submarket",
       "1.5% annual rent increases",
     ],
+    image: "/listings/850486.jpg",
     description:
       "Dollar General NNN property in Clermont, one of Lake County's fastest-growing communities. The property is leased to a national credit tenant on a NNN basis with 8 years remaining and built-in annual rent escalations. Ideal 1031 exchange candidate or passive income investment.",
   },

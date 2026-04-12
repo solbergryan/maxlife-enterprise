@@ -1,9 +1,24 @@
+import Image from "next/image";
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
 import { markets } from "@/data/markets";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 import Testimonials from "@/components/Testimonials";
+
+const marketImages: Record<string, string> = {
+  "orlando-commercial-real-estate": "/listings/989971.jpg",
+  "brevard-county-commercial-real-estate": "/listings/867542.jpg",
+  "lake-county-commercial-land": "/listings/985632.jpg",
+  "central-florida-investment-properties": "/listings/677235.jpg",
+  "lake-nona-commercial-real-estate": "/listings/591367.jpg",
+};
+
+const blogImages: Record<string, string> = {
+  "orlando-commercial-real-estate-trends-2026": "/listings/1020923.jpg",
+  "orlando-entertainment-district-investment-guide": "/listings/1066460.jpg",
+  "brevard-county-investment-property-outlook": "/listings/634448.jpg",
+};
 
 export default function HomePage() {
   const featuredStudy = caseStudies[0];
@@ -12,7 +27,15 @@ export default function HomePage() {
     <>
       {/* Hero — Deal-Focused */}
       <section className="relative border-b border-dark-border overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-card to-navy-dark/30" />
+        <Image
+          src="/listings/677235.jpg"
+          alt="Central Florida commercial real estate aerial"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-dark/80 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-4">
             Central Florida &amp; Space Coast
@@ -212,21 +235,35 @@ export default function HomePage() {
               <Link
                 key={market.slug}
                 href={`/markets/${market.slug}`}
-                className="group bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
               >
-                <h3 className="text-white font-semibold text-lg group-hover:text-gold transition-colors mb-2">
-                  {market.name}
-                </h3>
-                <p className="text-gray-500 text-sm mb-3">{market.county}</p>
-                <div className="flex flex-wrap gap-2">
-                  {market.stats.slice(0, 2).map((stat) => (
-                    <span
-                      key={stat.label}
-                      className="text-xs bg-dark-hover border border-dark-border rounded-full px-2.5 py-1 text-gray-400"
-                    >
-                      {stat.label}: {stat.value}
-                    </span>
-                  ))}
+                {marketImages[market.slug] && (
+                  <div className="relative aspect-[16/9] w-full overflow-hidden">
+                    <Image
+                      src={marketImages[market.slug]}
+                      alt={`${market.name} commercial real estate`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
+                  </div>
+                )}
+                <div className="p-5">
+                  <h3 className="text-white font-semibold text-lg group-hover:text-gold transition-colors mb-2">
+                    {market.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm mb-3">{market.county}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {market.stats.slice(0, 2).map((stat) => (
+                      <span
+                        key={stat.label}
+                        className="text-xs bg-dark-hover border border-dark-border rounded-full px-2.5 py-1 text-gray-400"
+                      >
+                        {stat.label}: {stat.value}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </Link>
             ))}
@@ -330,51 +367,57 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <Link
-            href="/blog/orlando-commercial-real-estate-trends-2026"
-            className="group bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
-          >
-            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
-              Market Report
-            </span>
-            <h3 className="text-white font-semibold group-hover:text-gold transition-colors mt-3 mb-1">
-              Orlando Commercial Real Estate Trends 2026
-            </h3>
-            <p className="text-gray-500 text-sm">
-              Cap rates, submarkets, investment strategies, and market outlook
-              for Central Florida.
-            </p>
-          </Link>
-          <Link
-            href="/blog/orlando-entertainment-district-investment-guide"
-            className="group bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
-          >
-            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
-              Investment Guide
-            </span>
-            <h3 className="text-white font-semibold group-hover:text-gold transition-colors mt-3 mb-1">
-              Entertainment District Investment Guide
-            </h3>
-            <p className="text-gray-500 text-sm">
-              Disney, Universal, and I-Drive corridor CRE investment
-              opportunities.
-            </p>
-          </Link>
-          <Link
-            href="/blog/brevard-county-investment-property-outlook"
-            className="group bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
-          >
-            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
-              Market Report
-            </span>
-            <h3 className="text-white font-semibold group-hover:text-gold transition-colors mt-3 mb-1">
-              Brevard County Investment Outlook
-            </h3>
-            <p className="text-gray-500 text-sm">
-              Space Coast growth drivers and commercial real estate
-              opportunities.
-            </p>
-          </Link>
+          {[
+            {
+              href: "/blog/orlando-commercial-real-estate-trends-2026",
+              slug: "orlando-commercial-real-estate-trends-2026",
+              tag: "Market Report",
+              title: "Orlando Commercial Real Estate Trends 2026",
+              desc: "Cap rates, submarkets, investment strategies, and market outlook for Central Florida.",
+            },
+            {
+              href: "/blog/orlando-entertainment-district-investment-guide",
+              slug: "orlando-entertainment-district-investment-guide",
+              tag: "Investment Guide",
+              title: "Entertainment District Investment Guide",
+              desc: "Disney, Universal, and I-Drive corridor CRE investment opportunities.",
+            },
+            {
+              href: "/blog/brevard-county-investment-property-outlook",
+              slug: "brevard-county-investment-property-outlook",
+              tag: "Market Report",
+              title: "Brevard County Investment Outlook",
+              desc: "Space Coast growth drivers and commercial real estate opportunities.",
+            },
+          ].map((post) => (
+            <Link
+              key={post.slug}
+              href={post.href}
+              className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
+            >
+              {blogImages[post.slug] && (
+                <div className="relative aspect-[16/9] w-full overflow-hidden">
+                  <Image
+                    src={blogImages[post.slug]}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
+                </div>
+              )}
+              <div className="p-5">
+                <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gold/10 text-gold border border-gold/20">
+                  {post.tag}
+                </span>
+                <h3 className="text-white font-semibold group-hover:text-gold transition-colors mt-3 mb-1">
+                  {post.title}
+                </h3>
+                <p className="text-gray-500 text-sm">{post.desc}</p>
+              </div>
+            </Link>
+          ))}
         </div>
         <div className="sm:hidden mt-6 text-center">
           <Link href="/blog" className="text-gold hover:underline text-sm font-medium">

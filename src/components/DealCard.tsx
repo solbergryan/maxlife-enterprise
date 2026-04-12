@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Deal, formatPrice } from "@/data/deals";
 
@@ -11,8 +12,22 @@ export default function DealCard({ deal }: { deal: Deal }) {
   return (
     <div className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors">
       <Link href={`/opportunities/${deal.slug}`} className="block">
+        {/* Property Image */}
+        {deal.image && (
+          <div className="relative aspect-[16/9] w-full overflow-hidden">
+            <Image
+              src={deal.image}
+              alt={deal.title}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
+          </div>
+        )}
+
         {/* Status Badge + Type */}
-        <div className="px-5 pt-5 flex items-center justify-between">
+        <div className={`px-5 ${deal.image ? "pt-4" : "pt-5"} flex items-center justify-between`}>
           <span
             className={`text-xs font-medium px-2.5 py-1 rounded-full border ${statusColors[deal.status]}`}
           >
