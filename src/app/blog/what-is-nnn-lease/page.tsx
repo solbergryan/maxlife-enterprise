@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "What Is a Triple Net (NNN) Lease? | MaxLife Realty",
@@ -233,6 +234,7 @@ export default function NNNLeaseArticle() {
             </Link>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/what-is-nnn-lease" />
       </article>
     </>
   );

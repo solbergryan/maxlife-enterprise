@@ -5,7 +5,10 @@ export type LeadSource =
   | "net-sheet-seller"
   | "net-sheet-buyer"
   | "deal-analyzer"
-  | "newsletter";
+  | "newsletter"
+  | "newsletter-footer"
+  | "blog-inline"
+  | "exit-intent";
 
 export interface LeadInsert {
   email: string;

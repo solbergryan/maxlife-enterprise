@@ -12,10 +12,24 @@ export default function NewsletterSignup() {
 
     setStatus("loading");
 
-    // TODO: Replace with your email service (Mailchimp, ConvertKit, etc.)
-    // For now, simulate a successful signup
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      // Submit to Formspree for email notification + subscribe API for nurture
+      await Promise.all([
+        fetch("https://formspree.io/f/xdapjean", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            _subject: "MaxLife Newsletter Signup",
+            source: "newsletter-footer",
+          }),
+        }),
+        fetch("/api/leads/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, source: "newsletter-footer" }),
+        }),
+      ]);
       setStatus("success");
       setEmail("");
     } catch {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Why Central Florida Is Hot for Land Development | MaxLife Realty",
@@ -194,6 +195,7 @@ export default function CentralFloridaLandArticle() {
             </Link>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/central-florida-land-development" />
       </article>
     </>
   );

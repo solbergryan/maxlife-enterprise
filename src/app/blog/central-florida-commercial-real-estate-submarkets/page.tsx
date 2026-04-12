@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Central Florida's Top Commercial Real Estate Submarkets | MaxLife",
@@ -386,6 +387,7 @@ export default function CentralFloridaSubmarketsArticle() {
             </div>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/central-florida-commercial-real-estate-submarkets" />
       </article>
     </>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Orlando Cap Rates Guide for CRE Investors | MaxLife",
@@ -791,6 +792,7 @@ export default function OrlandoCapRatesGuide() {
             </Link>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/orlando-cap-rates-investor-guide" />
       </article>
     </>
   );

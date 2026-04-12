@@ -3,6 +3,7 @@ import { caseStudies } from "@/data/case-studies";
 import { markets } from "@/data/markets";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
+import Testimonials from "@/components/Testimonials";
 
 export default function HomePage() {
   const featuredStudy = caseStudies[0];
@@ -30,12 +31,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/opportunities#request-valuation"
+              data-track="hero-seller-valuation"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
               Request a Seller Valuation
             </Link>
             <Link
               href="/net-sheets/seller"
+              data-track="hero-seller-net-sheet"
               className="inline-block border border-gold/30 text-gold hover:bg-gold/10 font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
               Run a Seller Net Sheet
@@ -403,6 +406,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* Final CTA */}
       <section className="bg-dark-card/50 border-t border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -416,12 +422,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
+              data-track="home-schedule-call"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors"
             >
               Schedule a Call
             </Link>
             <Link
               href="/investor-access"
+              data-track="home-deal-alerts"
               className="inline-block border border-gold/30 text-gold hover:bg-gold/10 font-semibold px-10 py-4 rounded-lg transition-colors"
             >
               Get Deal Alerts

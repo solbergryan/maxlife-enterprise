@@ -150,6 +150,7 @@ export default function Navbar() {
             </div>
             <Link
               href="/opportunities#request-valuation"
+              data-track="navbar-request-valuation"
               className="bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm whitespace-nowrap transition-colors"
             >
               Request Valuation
@@ -250,6 +251,7 @@ export default function Navbar() {
               <Link
                 href="/opportunities#request-valuation"
                 onClick={() => setOpen(false)}
+                data-track="mobile-request-valuation"
                 className="block bg-gold hover:bg-gold-dark text-dark font-semibold px-5 py-2 rounded-md text-sm text-center transition-colors"
               >
                 Request Valuation

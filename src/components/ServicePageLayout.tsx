@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 interface Feature {
   title: string;
@@ -146,6 +147,15 @@ export default function ServicePageLayout({
         </div>
       </section>
 
+      {/* Lead Capture */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <BlogLeadCapture
+          heading={`Interested in ${title}?`}
+          description="Get exclusive Central Florida CRE opportunities and market insights delivered to your inbox. No spam, unsubscribe anytime."
+          sourcePage={`/services`}
+        />
+      </section>
+
       {/* CTA */}
       <section className="bg-dark-card/50 border-t border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -159,12 +169,14 @@ export default function ServicePageLayout({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
+              data-track="service-get-quote"
               className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors"
             >
               Get a Free Quote
             </Link>
             <a
               href="tel:3215862121"
+              data-track="service-call"
               className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Call (321) 586-2121

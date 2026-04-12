@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "1031 Exchange Rules for Florida Investors | MaxLife",
@@ -618,6 +619,7 @@ export default function ExchangeOrlandoGuide() {
             </Link>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/1031-exchange-orlando-guide" />
       </article>
     </>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Best Orlando Submarkets for Retail Space for Rent | MaxLife",
@@ -644,6 +645,7 @@ export default function OrlandoRetailGuideArticle() {
             </Link>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/orlando-retail-commercial-real-estate" />
       </article>
     </>
   );

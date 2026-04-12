@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title:
@@ -908,6 +909,7 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
             </div>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/how-to-evaluate-commercial-real-estate-deal" />
       </article>
     </>
   );

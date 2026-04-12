@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Orlando Commercial Real Estate Market Report 2026 | MaxLife Realty",
@@ -1114,6 +1115,7 @@ export default function OrlandoTrends2026() {
             </div>
           </div>
         </div>
+              <BlogLeadCapture sourcePage="/blog/orlando-commercial-real-estate-trends-2026" />
       </article>
     </>
   );

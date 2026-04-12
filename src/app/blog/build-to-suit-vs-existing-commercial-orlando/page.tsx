@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Build-to-Suit vs Existing Commercial Property in Orlando | MaxLife",
@@ -358,6 +359,7 @@ export default function BuildToSuitVsExistingOrlando() {
             </div>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/build-to-suit-vs-existing-commercial-orlando" />
       </article>
     </>
   );

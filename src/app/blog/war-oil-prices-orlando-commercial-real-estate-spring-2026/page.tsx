@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import WarOilChartsSection from "./Charts";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title:
@@ -526,6 +527,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             </div>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/war-oil-prices-orlando-commercial-real-estate-spring-2026" />
       </article>
     </>
   );

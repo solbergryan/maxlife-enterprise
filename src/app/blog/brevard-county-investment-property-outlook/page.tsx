@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Brevard County Investment Property Outlook | MaxLife Realty",
@@ -270,6 +271,7 @@ export default function BrevardOutlook() {
             </div>
           </div>
         </div>
+              <BlogLeadCapture sourcePage="/blog/brevard-county-investment-property-outlook" />
       </article>
     </>
   );

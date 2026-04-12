@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
@@ -187,7 +189,9 @@ export default function RootLayout({
         <JsonLd data={websiteSchema} />
         <Navbar />
         <main className="pt-16 min-h-screen">{children}</main>
+        <NewsletterSignup />
         <Footer />
+        <ExitIntentPopup />
         <Analytics />
         <SpeedInsights />
       </body>

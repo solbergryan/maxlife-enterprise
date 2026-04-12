@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Industrial Property in Central Florida: Investor's Guide | MaxLife",
@@ -642,6 +643,7 @@ export default function OrlandoIndustrialGuideArticle() {
             </Link>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/orlando-industrial-real-estate-guide" />
       </article>
     </>
   );

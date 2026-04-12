@@ -123,11 +123,13 @@ export default function ContactForm() {
             className="w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white focus:border-gold focus:outline-none transition-colors"
           >
             <option value="">Select a service</option>
-            <option value="Commercial Real Estate">Commercial Real Estate</option>
+            <option value="Commercial Property Sales">Commercial Property Sales</option>
+            <option value="NNN Investment Properties">NNN Investment Properties</option>
+            <option value="Land Development">Land Development</option>
+            <option value="Office/Retail Leasing">Office/Retail Leasing</option>
+            <option value="1031 Exchange">1031 Exchange</option>
             <option value="Residential Real Estate">Residential Real Estate</option>
-            <option value="Handyman Services">Handyman Services</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Cleaning Services">Cleaning Services</option>
+            <option value="Mortgage Lending">Mortgage Lending</option>
             <option value="Other">Other</option>
           </select>
         </div>

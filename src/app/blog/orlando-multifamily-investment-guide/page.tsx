@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Orlando Multifamily Investment Guide | MaxLife",
@@ -521,6 +522,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             </Link>
           </section>
         </div>
+              <BlogLeadCapture sourcePage="/blog/orlando-multifamily-investment-guide" />
       </article>
     </>
   );
