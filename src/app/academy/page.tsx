@@ -5,6 +5,7 @@ import { getUser, getCourseProgress } from "@/lib/academy/progress";
 import { CourseCard } from "@/components/academy/CourseCard";
 import { JsonLdScript } from "@/components/academy/JsonLdScript";
 import { buildCourseListJsonLd } from "@/lib/academy/seo";
+import { TIER_THEMES, TIER_ICONS } from "@/lib/academy/theme";
 
 export const metadata: Metadata = {
   title: "MaxLife Academy — Free Commercial Real Estate Courses",
@@ -155,15 +156,28 @@ export default async function AcademyPage() {
           </div>
 
           <div className="space-y-16">
-            {tiers.map((tier) => (
+            {tiers.map((tier) => {
+              const tierTheme = TIER_THEMES[tier.tier];
+              const tierIcon = TIER_ICONS[tier.tier];
+              return (
               <div key={tier.tier}>
-                <div className="mb-6 flex items-baseline gap-4">
-                  <div className="text-4xl font-bold text-gold/30">
-                    {tier.tier.toString().padStart(2, "0")}
+                <div className={`mb-8 flex items-center gap-5 rounded-2xl border border-dark-border bg-gradient-to-r ${tierTheme.gradient} to-dark-card/50 p-6`}>
+                  <div className={`flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl ${tierTheme.bg} ${tierTheme.border} border`}>
+                    <svg className={`h-7 w-7 ${tierTheme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                      <path d={tierIcon} />
+                    </svg>
                   </div>
-                  <div>
+                  <div className="flex-grow">
+                    <div className="flex items-center gap-3 mb-1">
+                      <span className={`text-xs font-bold uppercase tracking-wider ${tierTheme.text}`}>
+                        Tier {tier.tier}
+                      </span>
+                      <span className={`rounded-full ${tierTheme.bg} ${tierTheme.border} border px-2 py-0.5 text-xs font-medium ${tierTheme.text}`}>
+                        {tier.courses.length} courses
+                      </span>
+                    </div>
                     <h3 className="text-2xl font-bold text-white">{tier.tierTitle}</h3>
-                    <p className="text-sm text-gray-400">{tier.tierSubtitle}</p>
+                    <p className="text-sm text-gray-400 mt-1">{tier.tierSubtitle}</p>
                   </div>
                 </div>
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -183,7 +197,8 @@ export default async function AcademyPage() {
                   })}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

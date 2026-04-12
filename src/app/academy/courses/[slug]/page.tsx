@@ -6,6 +6,7 @@ import { getUser, getCompletedLessons } from "@/lib/academy/progress";
 import { JsonLdScript } from "@/components/academy/JsonLdScript";
 import { buildCourseJsonLd, buildBreadcrumbJsonLd } from "@/lib/academy/seo";
 import LeadCaptureForm from "@/components/leads/LeadCaptureForm";
+import { TIER_THEMES, COURSE_ICONS } from "@/lib/academy/theme";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -67,64 +68,83 @@ export default async function CoursePage({ params }: PageProps) {
       />
 
       {/* Hero */}
-      <section className="border-b border-dark-border bg-dark py-14 sm:py-20">
+      {(() => {
+        const theme = TIER_THEMES[course.tier];
+        const iconPath = COURSE_ICONS[course.slug];
+        return (
+      <section className={`border-b border-dark-border bg-gradient-to-br ${theme.gradient} to-dark py-14 sm:py-20`}>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/academy"
-            className="mb-6 inline-flex items-center gap-2 text-sm text-gold hover:text-gold-light"
+            className={`mb-6 inline-flex items-center gap-2 text-sm ${theme.text} hover:opacity-80`}
           >
             ← Back to all courses
           </Link>
 
-          <div className="mb-4 flex flex-wrap items-center gap-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-gold">
-              Tier {course.tier} — {course.tierTitle}
-            </span>
-            <span className="text-xs text-gray-500">·</span>
-            <span className="text-xs text-gray-400">
-              Course {course.order.toString().padStart(2, "0")}
-            </span>
-            {course.cireLevel && (
-              <>
-                <span className="text-xs text-gray-500">·</span>
-                <span className="rounded-full border border-gold/30 bg-gold/5 px-2.5 py-0.5 text-xs text-gold">
-                  {course.cireLevel}
+          <div className="flex items-start gap-6 mb-6">
+            {/* Course icon */}
+            <div className={`hidden sm:flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl ${theme.bg} ${theme.border} border-2`}>
+              {iconPath ? (
+                <svg className={`h-10 w-10 ${theme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                  <path d={iconPath} />
+                </svg>
+              ) : (
+                <span className={`text-2xl font-bold ${theme.text}`}>
+                  {course.order.toString().padStart(2, "0")}
                 </span>
-              </>
-            )}
-            {course.isSpecialty && (
-              <>
-                <span className="text-xs text-gray-500">·</span>
-                <span className="rounded-full border border-gold/40 bg-gold/10 px-2.5 py-0.5 text-xs font-medium text-gold">
-                  ★ MaxLife Specialty
+              )}
+            </div>
+
+            <div className="flex-grow">
+              <div className="mb-3 flex flex-wrap items-center gap-3">
+                <span className={`rounded-full ${theme.bg} ${theme.border} border px-3 py-1 text-xs font-semibold uppercase tracking-wider ${theme.text}`}>
+                  Tier {course.tier} — {course.tierTitle}
                 </span>
-              </>
-            )}
+                <span className="text-xs text-gray-400">
+                  Course {course.order.toString().padStart(2, "0")}
+                </span>
+                {course.cireLevel && (
+                  <span className={`rounded-full ${theme.bg} ${theme.border} border px-2.5 py-0.5 text-xs ${theme.text}`}>
+                    {course.cireLevel}
+                  </span>
+                )}
+                {course.isSpecialty && (
+                  <span className="rounded-full border border-gold/40 bg-gold/10 px-2.5 py-0.5 text-xs font-medium text-gold">
+                    ★ MaxLife Specialty
+                  </span>
+                )}
+              </div>
+
+              <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                {course.title}
+              </h1>
+            </div>
           </div>
 
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            {course.title}
-          </h1>
-          <p className="mb-6 text-xl text-gold">{course.subtitle}</p>
+          <p className={`mb-6 text-xl ${theme.text}`}>{course.subtitle}</p>
           <p className="mb-8 text-lg leading-relaxed text-gray-300">
             {course.description}
           </p>
 
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <span className="text-gold">⏱</span>
+          <div className="flex flex-wrap items-center gap-4 text-sm">
+            <span className={`inline-flex items-center gap-2 rounded-full ${theme.bg} ${theme.border} border px-3 py-1.5 ${theme.text}`}>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               {course.durationMinutes} minutes
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-gold">📚</span>
-              {course.lessons.length > 0
-                ? `${course.lessons.length} lessons`
-                : "Coming soon"}
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-gold">$</span>
+            </span>
+            <span className={`inline-flex items-center gap-2 rounded-full ${theme.bg} ${theme.border} border px-3 py-1.5 ${theme.text}`}>
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              {course.lessons.length > 0 ? `${course.lessons.length} lessons` : "Coming soon"}
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-dark-border bg-dark px-3 py-1.5 text-gray-400">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V7m0 10v1" />
+              </svg>
               Free forever
-            </div>
+            </span>
           </div>
 
           {user && hasContent && (
@@ -133,11 +153,11 @@ export default async function CoursePage({ params }: PageProps) {
                 <span>
                   Your progress: {completedCount} / {course.lessons.length} lessons
                 </span>
-                <span className="text-gold">{progress}%</span>
+                <span className={theme.text}>{progress}%</span>
               </div>
               <div className="h-2 overflow-hidden rounded-full bg-dark-border">
                 <div
-                  className="h-full bg-gold transition-all"
+                  className={`h-full ${theme.bar} transition-all`}
                   style={{ width: `${progress}%` }}
                 />
               </div>
@@ -164,6 +184,8 @@ export default async function CoursePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+        );
+      })()}
 
       {/* Workbook lead magnet */}
       {course.hasWorkbook && (
@@ -218,6 +240,9 @@ export default async function CoursePage({ params }: PageProps) {
       </section>
 
       {/* Lessons */}
+      {(() => {
+        const lessonTheme = TIER_THEMES[course.tier];
+        return (
       <section className="bg-dark py-14">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-2xl font-bold text-white">Lessons</h2>
@@ -236,7 +261,7 @@ export default async function CoursePage({ params }: PageProps) {
                         className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 font-bold ${
                           isCompleted
                             ? "border-green-500 bg-green-500/10 text-green-400"
-                            : "border-dark-border bg-dark text-gray-500"
+                            : `${lessonTheme.border} ${lessonTheme.bg} ${lessonTheme.text}`
                         }`}
                       >
                         {isCompleted ? (
@@ -244,7 +269,7 @@ export default async function CoursePage({ params }: PageProps) {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
                         ) : (
-                          lesson.order.toString().padStart(2, "0")
+                          <span className="text-sm">{lesson.order.toString().padStart(2, "0")}</span>
                         )}
                       </div>
                       <div className="flex-grow">
@@ -286,18 +311,36 @@ export default async function CoursePage({ params }: PageProps) {
           )}
         </div>
       </section>
+        );
+      })()}
 
       {/* Next course */}
-      {nextCourse && (
-        <section className="border-t border-dark-border bg-dark-card py-12">
+      {nextCourse && (() => {
+        const nextTheme = TIER_THEMES[nextCourse.tier];
+        const nextIcon = COURSE_ICONS[nextCourse.slug];
+        return (
+        <section className={`border-t border-dark-border bg-gradient-to-r ${nextTheme.gradient} to-dark-card py-12`}>
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gold">
-                  Up next
-                </p>
-                <h3 className="text-xl font-bold text-white">{nextCourse.title}</h3>
-                <p className="text-sm text-gray-400">{nextCourse.subtitle}</p>
+              <div className="flex items-center gap-4">
+                <div className={`hidden sm:flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl ${nextTheme.bg} ${nextTheme.border} border`}>
+                  {nextIcon ? (
+                    <svg className={`h-6 w-6 ${nextTheme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                      <path d={nextIcon} />
+                    </svg>
+                  ) : (
+                    <span className={`text-sm font-bold ${nextTheme.text}`}>
+                      {nextCourse.order.toString().padStart(2, "0")}
+                    </span>
+                  )}
+                </div>
+                <div>
+                  <p className={`mb-1 text-xs font-semibold uppercase tracking-wider ${nextTheme.text}`}>
+                    Up next — Course {nextCourse.order.toString().padStart(2, "0")}
+                  </p>
+                  <h3 className="text-xl font-bold text-white">{nextCourse.title}</h3>
+                  <p className="text-sm text-gray-400">{nextCourse.subtitle}</p>
+                </div>
               </div>
               <Link
                 href={`/academy/courses/${nextCourse.slug}`}
@@ -308,7 +351,8 @@ export default async function CoursePage({ params }: PageProps) {
             </div>
           </div>
         </section>
-      )}
+        );
+      })()}
     </>
   );
 }
