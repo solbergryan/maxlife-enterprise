@@ -215,6 +215,82 @@ const postOffice: PropertyTypeEntry = {
   page: { ...base, displayName: "Post Office", pluralDisplayName: "Post Office Properties", heroHeadline: "Post Office Properties in Florida", heroSubheadline: "USPS-leased real estate with federal government tenancy", heroBody: "Post office real estate is a specialty NNN category where buildings are leased long-term to the United States Postal Service. The tenant credit is federal government, but USPS leases often include termination-for-convenience clauses that require careful underwriting. Cap rates typically run 6.5% – 8.0% for standard branch buildings." },
 };
 
+const carDealership: PropertyTypeEntry = {
+  slug: "car-dealership",
+  parentSlug: "special-purpose",
+  meta: { title: "Car Dealership Properties for Sale in Florida | Auto Dealer Real Estate", description: "Buy car dealership properties in Florida. New-car franchise, used-car lot, multi-brand auto mall, and EV showroom real estate across Orlando and Central Florida.", keywords: "car dealership florida, auto dealer real estate, franchise dealership for sale, auto mall florida" },
+  page: {
+    ...base,
+    displayName: "Car Dealership",
+    pluralDisplayName: "Car Dealership Properties",
+    heroEyebrow: "Automotive Dealership Investments",
+    heroHeadline: "Car Dealership Properties in Florida",
+    heroSubheadline: "New-car franchise, used-car lots, multi-brand auto malls, and EV showroom real estate",
+    heroBody: "Car dealership real estate is one of the largest and most capital-intensive specialty CRE subcategories in Florida. A single franchise dealership pad can range from 2 to 15+ acres with purpose-built showrooms, service bays, parts departments, and surface lot inventory storage. Florida ranks #2 nationally in new vehicle registrations and #1 in population growth — making it one of the most active markets for dealership acquisitions, relocations, and new-point franchise awards. Cap rates run 5.75% – 7.50% for NNN sale-leasebacks to credit dealer groups, with trophy franchise locations in growth corridors commanding the tightest pricing.",
+    quickStats: [
+      { label: "Typical Deal Size", value: "$5M – $60M+", detail: "Single-point to multi-brand auto mall" },
+      { label: "Common Cap Rate", value: "5.75% – 7.50%", detail: "Credit dealer group NNN leasebacks" },
+      { label: "Avg. Site Size", value: "2 – 15+ acres", detail: "Showroom, service, and lot inventory" },
+    ],
+    formats: [
+      { name: "New-Car Franchise", capRate: "5.75% – 6.75%", footprint: "3 – 10 acres", note: "Toyota, Honda, Ford, BMW — manufacturer-backed franchise with OEM facility requirements." },
+      { name: "Used-Car Superstore", capRate: "6.25% – 7.25%", footprint: "3 – 8 acres", note: "CarMax, Carvana, AutoNation USA — large-format used-vehicle retail operations." },
+      { name: "Multi-Brand Auto Mall", capRate: "5.50% – 6.50%", footprint: "10 – 25+ acres", note: "Multiple franchise rooftops under one ownership group on a campus." },
+      { name: "Independent Used Lot", capRate: "7.00% – 8.50%", footprint: "1 – 3 acres", note: "Independent used-car dealers — higher yield but weaker tenant credit." },
+      { name: "EV Showroom / Service", capRate: "6.00% – 7.00%", footprint: "1 – 5 acres", note: "Tesla, Rivian, Lucid — direct-to-consumer model with smaller footprint than legacy franchise." },
+    ],
+    prosConsIntro: "Car dealership real estate combines institutional tenant credit with premium yield in Florida's high-growth auto market.",
+    pros: [
+      { title: "Institutional Tenant Credit", description: "Major dealer groups (AutoNation, Hendrick, Lithia, Larry H. Miller) provide corporate-backed guarantees on NNN leases." },
+      { title: "High Barrier to Entry", description: "OEM franchise agreements, capital requirements, and zoning make new dealership points extremely difficult to replicate." },
+      { title: "Triple-Net Structure", description: "Most dealer sale-leasebacks are absolute NNN with the dealer responsible for all maintenance, taxes, and insurance." },
+      { title: "Florida Market Tailwinds", description: "Florida's population growth, no state income tax, and year-round driving season support strong vehicle demand." },
+      { title: "Long Lease Terms", description: "Dealer NNN leases typically run 15 – 20 years with 5-year renewal options and built-in rent escalations." },
+    ],
+    cons: [
+      { title: "Purpose-Built Facilities", description: "Showrooms, service bays, and lot improvements are highly purpose-built — limited reuse optionality if the dealer vacates." },
+      { title: "OEM Image Requirements", description: "Manufacturers require periodic facility upgrades (every 7–10 years) that can be capital-intensive for landlords." },
+      { title: "Large Capital Outlay", description: "Dealership sites are expensive — $5M–$60M+ — limiting the buyer pool to institutional and high-net-worth investors." },
+      { title: "EV Transition Risk", description: "The shift to electric vehicles may reduce service revenue (fewer moving parts) and change facility requirements long-term." },
+      { title: "Environmental Exposure", description: "Service bays, paint booths, and fuel storage can create environmental liability — Phase I ESA is mandatory." },
+    ],
+    personas: [
+      { name: "1031 Exchange Buyers", tag: "Large Exchange", description: "Investors with $5M+ exchange proceeds seeking credit-tenant NNN replacement property.", fit: "Dealer NNN leasebacks absorb large 1031 exchanges in a single transaction." },
+      { name: "Institutional Investors", tag: "Portfolio Scale", description: "REITs and private equity funds building automotive real estate portfolios.", fit: "Dealer sale-leasebacks provide institutional-grade credit and long lease terms." },
+      { name: "Dealer Group Operators", tag: "Owner-Operators", description: "Multi-rooftop dealer groups acquiring their own real estate.", fit: "Owning the real estate builds long-term wealth alongside the operating business." },
+      { name: "Net Lease Investors", tag: "Passive Income", description: "Passive investors seeking credit-backed NNN income with minimal landlord responsibilities.", fit: "Absolute NNN dealer leases are among the most passive specialty investments." },
+    ],
+    underwritingIntro: "Dealer real estate underwriting focuses on franchise value, operator credit, and facility condition.",
+    underwritingMetrics: [
+      { label: "Dealer Group Credit", detail: "Corporate guarantee from publicly traded or large private dealer group — critical to value" },
+      { label: "Franchise Brand", detail: "Toyota, Honda, and luxury brands command tighter pricing than domestic or economy brands" },
+      { label: "Remaining Lease Term", detail: "15–20 year initial terms with renewal options — value drops sharply below 10 years remaining" },
+      { label: "OEM Image Compliance", detail: "Has the dealer completed the most recent manufacturer facility upgrade program?" },
+      { label: "Environmental", detail: "Phase I ESA mandatory; Phase II common for older service facilities with fuel or paint operations" },
+      { label: "Lot & Inventory Capacity", detail: "Sufficient vehicle storage capacity for the dealer's inventory turn — typically 200–800+ spaces" },
+    ],
+    listingSites: specialPurposeListings,
+    listingsIntro: "Browse active car dealership listings across Florida and nationwide.",
+    faqs: [
+      { q: "What is a car dealership sale-leaseback?", a: "A dealer sells their real estate to an investor and leases it back on a long-term NNN basis — typically 15–20 years. The dealer frees up capital for inventory and operations while the investor receives stable, credit-backed rental income. Most major dealer groups use sale-leasebacks as a core capital strategy." },
+      { q: "What cap rates do car dealerships trade at in Florida?", a: "Credit dealer group NNN leasebacks typically trade at 5.75% – 7.50% cap rates depending on franchise brand, dealer credit, lease term, and location. Trophy franchise locations on major auto corridors can trade below 6%. Independent used-car lots trade wider at 7.0% – 8.5%." },
+      { q: "How does the EV transition affect dealership real estate?", a: "Electric vehicles require less service (no oil changes, fewer brake jobs) which may reduce the service bay revenue component over time. However, EV charging infrastructure and battery service create new facility requirements. Most major OEMs are investing heavily in EV-ready facility upgrades." },
+      { q: "What environmental risks exist with dealership properties?", a: "Service bays, paint booths, parts cleaning, and underground fuel storage can create environmental liability. Phase I Environmental Site Assessments are mandatory, and Phase II testing is common for older facilities. Environmental insurance is often prudent for older service properties." },
+      { q: "Are car dealership properties good 1031 exchange candidates?", a: "Yes — dealership NNN leasebacks are popular 1031 replacement properties because they absorb large exchange amounts ($5M–$60M+) in a single transaction, offer long lease terms, and provide institutional tenant credit. The NNN structure also satisfies passive investor requirements." },
+    ],
+    faqIntro: "Common questions about investing in car dealership real estate in Florida.",
+    fitCheckIntro: 'If you nod "yes" to three or more of these, car dealership real estate may be a fit for your portfolio.',
+    fitCheckQuestions: [
+      "You have $5M+ to deploy in a single transaction or 1031 exchange.",
+      "You want absolute NNN income with minimal landlord responsibilities.",
+      "You value institutional-grade tenant credit over maximum yield.",
+      "You're comfortable with purpose-built real estate that has limited reuse optionality.",
+      "You want long lease terms (15–20 years) with built-in rent escalations.",
+    ],
+    leadFormIntro: "Interested in car dealership properties in Florida? Tell us your investment criteria and we'll send you current opportunities.",
+  },
+};
+
 const veterinary: PropertyTypeEntry = {
   slug: "veterinary-animal-hospital",
   parentSlug: "special-purpose",
@@ -244,4 +320,5 @@ export const specialPurposeRegistry: PropertyTypeEntry[] = [
   cannabis,
   postOffice,
   veterinary,
+  carDealership,
 ];
