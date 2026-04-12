@@ -336,6 +336,20 @@ export default function CarWashPropertiesFloridaPage() {
           ],
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: carWashFaqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.a,
+            },
+          })),
+        }}
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-dark-border">

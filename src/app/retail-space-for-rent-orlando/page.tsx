@@ -149,6 +149,20 @@ export default function RetailSpaceForRentOrlandoPage() {
             "Tenant representation for retail space for rent across Orlando — endcap, inline, anchored, and freestanding retail in I-Drive, Sand Lake, Winter Park, Lake Nona, and Millenia.",
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.a,
+            },
+          })),
+        }}
+      />
 
       {/* Hero */}
       <section className="bg-dark-card/50 border-b border-dark-border">

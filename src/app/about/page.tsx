@@ -22,6 +22,65 @@ const breadcrumbSchema = {
   ],
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ryan Solberg",
+  jobTitle: "Real Estate Broker & Mortgage Loan Officer",
+  description:
+    "Licensed Florida Real Estate Broker and Mortgage Loan Officer specializing in commercial property sales, NNN investments, and land development across Central Florida and the Space Coast.",
+  url: "https://maxlifedevelopment.com/about",
+  image: "https://maxlifedevelopment.com/ryan-solberg.jpg",
+  telephone: "(321) 586-2121",
+  email: "Ryan@MaxLifeRealty.com",
+  worksFor: {
+    "@type": "RealEstateAgent",
+    name: "MaxLife Realty",
+    url: "https://maxlifedevelopment.com",
+  },
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: "Florida Real Estate Broker License",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Florida Department of Business and Professional Regulation",
+      },
+      identifier: "BK3354351",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: "Mortgage Loan Officer — NMLS",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Nationwide Multistate Licensing System",
+      },
+      identifier: "1784218",
+    },
+  ],
+  knowsAbout: [
+    "Commercial Real Estate",
+    "NNN Investments",
+    "Land Development",
+    "1031 Exchanges",
+    "Commercial Property Sales",
+    "Office Leasing",
+    "Retail Leasing",
+    "Industrial Real Estate",
+    "Multifamily Investing",
+    "Investment Analysis",
+    "Mortgage Lending",
+  ],
+  areaServed: [
+    { "@type": "City", name: "Orlando" },
+    { "@type": "AdministrativeArea", name: "Central Florida" },
+    { "@type": "County", name: "Brevard County" },
+  ],
+  sameAs: ["https://www.linkedin.com/in/ryansolberg"],
+};
+
 export const metadata: Metadata = {
   title: "Orlando Commercial Real Estate Broker | Ryan Solberg",
   description:
@@ -37,6 +96,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={personSchema} />
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -75,6 +135,9 @@ export default function AboutPage() {
               <p className="text-gold text-sm mt-1">
                 Founder &amp; Commercial Real Estate Broker
               </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Mortgage Loan Officer
+              </p>
               <div className="border-t border-dark-border mt-6 pt-6 space-y-3 text-sm text-gray-400">
                 <div className="flex items-center gap-2 justify-center">
                   <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,12 +148,20 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center gap-2 justify-center">
                   <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  Licensed FL Broker
+                  (321) 586-2121
                 </div>
-                <div className="text-gray-500 text-xs mt-2">
-                  License #3354351
+                <div className="flex items-center gap-2 justify-center">
+                  <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Ryan@MaxLifeRealty.com
+                </div>
+                <div className="text-gray-500 text-xs mt-3 space-y-1">
+                  <div>DBPR BK3354351</div>
+                  <div>NMLS 1784218</div>
+                  <div>MortgageInc NMLS 2028516</div>
                 </div>
               </div>
 

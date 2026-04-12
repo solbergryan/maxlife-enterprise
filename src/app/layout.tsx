@@ -110,8 +110,22 @@ const organizationSchema = {
   founder: {
     "@type": "Person",
     name: "Ryan Solberg",
-    jobTitle: "Broker",
+    jobTitle: "Real Estate Broker & Mortgage Loan Officer",
     url: "https://maxlifedevelopment.com/about",
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "license",
+        name: "Florida Real Estate Broker License",
+        identifier: "BK3354351",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "license",
+        name: "Mortgage Loan Officer — NMLS",
+        identifier: "1784218",
+      },
+    ],
   },
   sameAs: ["https://www.linkedin.com/in/ryansolberg"],
   priceRange: "$$$$",

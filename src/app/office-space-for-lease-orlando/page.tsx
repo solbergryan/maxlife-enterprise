@@ -140,6 +140,20 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
             "Tenant representation and office leasing across Orlando — Class A, B, and flex office space in Downtown Orlando, Lake Nona, Maitland, Winter Park, Sand Lake, and I-Drive.",
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.a,
+            },
+          })),
+        }}
+      />
 
       {/* Hero */}
       <section className="bg-dark-card/50 border-b border-dark-border">
