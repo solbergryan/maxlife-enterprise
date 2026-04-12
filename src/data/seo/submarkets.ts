@@ -141,6 +141,149 @@ export const submarkets: SubmarketData[] = [
     outlook:
       "Sand Lake Road continues to attract both private and institutional retail capital. Cap rates are expected to remain firm as limited new supply and strong demographics support tenant demand. The restaurant submarket in particular is highly competitive for both operators and investors.",
   },
+  // ── Additional Orlando submarkets ──────────────────────────────
+  {
+    slug: "metrowest-millenia",
+    name: "MetroWest & Millenia",
+    summary:
+      "MetroWest and the Millenia corridor form one of Orlando's densest suburban markets. The Mall at Millenia anchors luxury retail, while MetroWest provides a massive base of workforce multifamily housing. Together they attract significant retail, multifamily, and value-add office investment.",
+    demandDrivers: [
+      "Mall at Millenia — Central Florida's premier luxury retail destination",
+      "Dense multifamily housing base with 15,000+ rental units",
+      "Convenient access to I-4, Florida Turnpike, and SR-408",
+      "Growing medical office demand along Kirkman Road",
+    ],
+    capRates: [
+      { assetClass: "Multifamily (Value-Add)", range: "6.0% - 7.5%", trend: "stable", notes: "Strong absorption in workforce housing segment." },
+      { assetClass: "Multifamily (Stabilized)", range: "5.25% - 6.25%", trend: "stable", notes: "Dense population supports consistent occupancy." },
+      { assetClass: "Retail (Shadow-Anchored)", range: "6.25% - 7.5%", trend: "stable", notes: "Strong tenant demand from Millenia traffic." },
+      { assetClass: "Class B Office", range: "8.0% - 10.0%", trend: "softening", notes: "Value-add opportunity in older suburban product." },
+    ],
+    outlook:
+      "MetroWest multifamily remains among the most liquid product types in the Orlando metro due to consistent demand from service-sector workers and proximity to major employment centers. Retail fundamentals are strong near Millenia, while Class B office offers repositioning opportunities for value-add investors.",
+  },
+  {
+    slug: "college-park-mills-50",
+    name: "College Park & Mills 50",
+    summary:
+      "College Park and Mills 50 (ViMi) are Orlando's most walkable urban neighborhoods. Independent retail, craft F&B, and adaptive reuse define the commercial landscape. These neighborhoods attract creative tenants and infill multifamily developers.",
+    demandDrivers: [
+      "Edgewater Drive and Mills Avenue — walkable independent retail corridors",
+      "Strong young professional and creative class demand",
+      "Infill multifamily and adaptive reuse pipeline",
+      "Proximity to downtown Orlando and Orlando Health campus",
+    ],
+    capRates: [
+      { assetClass: "Street Retail (Edgewater/Mills)", range: "5.75% - 7.25%", trend: "firming", notes: "Limited inventory and high tenant demand compress cap rates." },
+      { assetClass: "Infill Multifamily", range: "5.0% - 6.0%", trend: "firming", notes: "Walkable urban premium drives pricing." },
+      { assetClass: "Adaptive Reuse", range: "7.0% - 9.0%", trend: "stable", notes: "Execution risk reflected in higher cap rates." },
+      { assetClass: "Small-Bay Flex/Creative", range: "7.5% - 9.0%", trend: "stable", notes: "Emerging product type for creative office tenants." },
+    ],
+    outlook:
+      "College Park and Mills 50 represent Orlando's best bet for walkable urban CRE investment. Cap rates are firming as demand outpaces the limited supply of quality street retail and infill sites. Adaptive reuse offers upside for investors willing to manage construction and lease-up risk.",
+  },
+  {
+    slug: "lake-mary-heathrow",
+    name: "Lake Mary & Heathrow",
+    summary:
+      "Lake Mary and Heathrow comprise Central Florida's premier suburban corporate office submarket. Fortune 1000 regional headquarters, high-income demographics, and top-rated schools create stable demand for Class A office, medical, and premium retail.",
+    demandDrivers: [
+      "Heathrow International Business Center — multiple Fortune 1000 HQs",
+      "I-4 / SR-46A interchange with strong traffic counts",
+      "One of Central Florida's highest median household incomes",
+      "Top-rated Seminole County schools drive residential stability",
+    ],
+    capRates: [
+      { assetClass: "Class A Office", range: "7.0% - 8.5%", trend: "stable", notes: "Corporate tenants provide long-term stability." },
+      { assetClass: "Medical Office", range: "6.0% - 7.25%", trend: "stable", notes: "Affluent demographics drive specialist practices." },
+      { assetClass: "Premium Retail", range: "6.0% - 7.0%", trend: "firming", notes: "High-income households drive premium tenant demand." },
+      { assetClass: "Class A Multifamily", range: "5.0% - 5.75%", trend: "stable", notes: "Corporate relocations drive luxury rental demand." },
+    ],
+    outlook:
+      "Lake Mary and Heathrow cap rates reflect the premium investors pay for corporate-anchored, high-income submarkets. Office fundamentals are holding better here than in most Central Florida submarkets due to the concentration of corporate tenants. Premium retail and medical office remain highly attractive for 1031 exchange buyers.",
+  },
+  {
+    slug: "ucf-east-orlando",
+    name: "UCF & East Orlando",
+    summary:
+      "The UCF corridor in east Orlando is one of Central Florida's fastest-growing submarkets, anchored by the University of Central Florida's 70,000+ student body. Multifamily, student housing, retail, and medical office demand are all driven by the university's expansion.",
+    demandDrivers: [
+      "UCF — largest university in Florida by enrollment (70,000+)",
+      "Research Park and incubator tenants drive flex/office demand",
+      "Massive student and young professional rental population",
+      "Waterford Lakes Town Center — major retail anchor",
+    ],
+    capRates: [
+      { assetClass: "Student Housing", range: "5.5% - 6.75%", trend: "stable", notes: "Purpose-built student housing commands premium pricing." },
+      { assetClass: "Conventional Multifamily", range: "5.25% - 6.5%", trend: "stable", notes: "Strong rental demand from university workforce." },
+      { assetClass: "Retail (Waterford Lakes)", range: "6.0% - 7.25%", trend: "stable", notes: "Power center fundamentals remain strong." },
+      { assetClass: "Flex/R&D", range: "7.25% - 8.5%", trend: "firming", notes: "UCF Research Park and simulation/training tenants." },
+    ],
+    outlook:
+      "The UCF corridor continues to benefit from enrollment growth and the university's expanding research mission. Student housing remains a core product type, while conventional multifamily and retail benefit from the broader east Orlando population surge. Flex and R&D space demand is emerging as a notable secondary asset class.",
+  },
+  // ── Brevard County / Space Coast ──────────────────────────────
+  {
+    slug: "melbourne-space-coast",
+    name: "Melbourne & Space Coast",
+    summary:
+      "Melbourne and the greater Space Coast form Brevard County's commercial hub, anchored by aerospace and defense contractors. L3Harris Technologies, Collins Aerospace, and the broader space industry drive demand for office, flex, industrial, and multifamily.",
+    demandDrivers: [
+      "L3Harris Technologies HQ — 5,000+ employees in Melbourne",
+      "Collins Aerospace, Northrop Grumman, Embraer manufacturing",
+      "Melbourne Orlando International Airport (MLB)",
+      "SpaceX and Blue Origin activity at Cape Canaveral",
+    ],
+    capRates: [
+      { assetClass: "Class A Office", range: "7.25% - 8.5%", trend: "stable", notes: "Defense contractor tenants provide stability." },
+      { assetClass: "Flex/Industrial", range: "6.75% - 8.0%", trend: "firming", notes: "Aerospace manufacturing drives spec demand." },
+      { assetClass: "Multifamily", range: "5.5% - 6.5%", trend: "stable", notes: "Workforce housing absorption remains strong." },
+      { assetClass: "Neighborhood Retail", range: "6.75% - 8.0%", trend: "stable", notes: "Population growth supports new retail." },
+    ],
+    outlook:
+      "The Space Coast continues to benefit from aerospace and defense investment. Cap rates reflect the market's smaller scale compared to Orlando, but fundamentals are strengthening as SpaceX and Blue Origin activity drives population and job growth. Flex and industrial space are the most sought-after asset classes.",
+  },
+  // ── Growth corridors ──────────────────────────────────────────
+  {
+    slug: "horizon-west",
+    name: "Horizon West",
+    summary:
+      "Horizon West is a massive master-planned community in west Orange County and one of the fastest-growing submarkets in Florida. Population growth is creating demand for new retail pad sites, medical office, and NNN investment opportunities.",
+    demandDrivers: [
+      "One of Florida's fastest-growing master-planned areas",
+      "Orlando Health Horizon West Hospital campus",
+      "SR-429 Western Expressway connectivity",
+      "National retailers and QSR tenants actively expanding",
+    ],
+    capRates: [
+      { assetClass: "NNN Retail (New Build)", range: "5.5% - 6.5%", trend: "firming", notes: "National credit tenants on long-term leases." },
+      { assetClass: "Medical Office", range: "6.0% - 7.0%", trend: "stable", notes: "Hospital campus anchors demand." },
+      { assetClass: "Multifamily (New Build)", range: "4.75% - 5.75%", trend: "stable", notes: "Strong absorption in Class A garden-style." },
+      { assetClass: "Land (Entitled Commercial)", range: "N/A", trend: "firming", notes: "Entitled pad sites trading at premium per-acre pricing." },
+    ],
+    outlook:
+      "Horizon West's growth trajectory rivals Lake Nona's from a decade ago. NNN pad sites and medical office are the most actionable asset classes today, while land investors are positioning for future development along the SR-429 corridor. Cap rates on new-build NNN reflect strong investor demand for growth-market passive income.",
+  },
+  {
+    slug: "us-27-corridor",
+    name: "US-27 Corridor (Clermont to Davenport)",
+    summary:
+      "The US-27 corridor from Clermont through Davenport is one of the highest-growth commercial corridors in the Orlando metro. National retailers, QSR chains, and self-storage operators are racing to serve the rapidly expanding residential population.",
+    demandDrivers: [
+      "Explosive residential growth in south Lake and north Polk counties",
+      "National retailers backfilling US-27 with new pad sites and power centers",
+      "Self-storage demand from rapid housing construction",
+      "Florida Turnpike interchange access at key nodes",
+    ],
+    capRates: [
+      { assetClass: "NNN Retail Pad", range: "5.75% - 6.75%", trend: "firming", notes: "Credit-tenant QSR and convenience pads in highest demand." },
+      { assetClass: "Multi-Tenant Retail", range: "7.0% - 8.5%", trend: "stable", notes: "Lease-up risk on newer centers." },
+      { assetClass: "Self-Storage", range: "6.5% - 7.75%", trend: "stable", notes: "New supply meeting demand from construction boom." },
+      { assetClass: "Land (Commercial)", range: "N/A", trend: "firming", notes: "Pad-ready sites along US-27 trading at aggressive pricing." },
+    ],
+    outlook:
+      "The US-27 corridor offers some of the strongest yield-on-cost opportunities in the Orlando metro for retail and self-storage investors. Population growth shows no signs of slowing, and national tenants are actively seeking sites. Land investors should focus on entitled pad sites near Turnpike interchanges.",
+  },
 ];
 
 export function getSubmarketBySlug(slug: string): SubmarketData | null {
