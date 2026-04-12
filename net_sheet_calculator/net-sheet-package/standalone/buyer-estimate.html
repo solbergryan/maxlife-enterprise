@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Estimate | Brevard County, FL</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+<style>.focus-within-ring:focus-within{box-shadow:0 0 0 2px rgba(96,165,250,0.5)}</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useMemo, useCallback } = React;
+
+const FL_DOC_STAMP_NOTE = 0.35;
+const FL_INTANGIBLE_TAX = 0.20;
+const FL_TITLE_BASE = 5.75;
+const FL_TITLE_EXCESS = 5.00;
+
+function calcOwnerTitle(p) { if(p<=0)return 0; if(p<=100000)return p/1000*FL_TITLE_BASE; return 100*FL_TITLE_BASE+(p-100000)/1000*FL_TITLE_EXCESS; }
+function calcLoanTitle(la) { if(la<=0)return 0; return Math.round(calcOwnerTitle(la)*0.25*100)/100; }
+const fmt = (n) => n.toLocaleString("en-US",{style:"currency",currency:"USD",minimumFractionDigits:2});
+
+const CC = {
+  conventional:{prepaid:{monthsInsurance:14,monthsTaxes:4,daysInterest:15},titleFees:{closingFee:225,taxServiceFee:78,floodCert:20,titleEndorsement81:45},lenderFees:{originationPct:1.0,termiteInspection:70,underwriting:250,appraisal:350,creditReport:35,survey:350},otherFees:{recordingDeed:250,recordingMortgage:19},docStamps:true,intangibleTax:true,proratedTax:true},
+  fha:{prepaid:{monthsInsurance:14,monthsTaxes:4,daysInterest:15},titleFees:{closingFee:225,taxServiceFee:78,floodCert:20,titleEndorsement81:45},lenderFees:{originationPct:1.0,termiteInspection:70,underwriting:250,appraisal:350,creditReport:35,survey:350},otherFees:{recordingDeed:250,recordingMortgage:19},docStamps:true,intangibleTax:true,proratedTax:true,upfrontMIP:1.75},
+  va:{prepaid:{monthsInsurance:14,monthsTaxes:4,daysInterest:15},titleFees:{closingFee:225,taxServiceFee:78,floodCert:20,titleEndorsement81:45},lenderFees:{originationPct:1.0,termiteInspection:0,underwriting:250,appraisal:350,creditReport:35,survey:350},otherFees:{recordingDeed:250,recordingMortgage:19},docStamps:true,intangibleTax:true,proratedTax:true,vaFundingFee:2.15},
+  allCash:{prepaid:{monthsInsurance:0,monthsTaxes:4,daysInterest:0},titleFees:{closingFee:225,taxServiceFee:0,floodCert:0,titleEndorsement81:0},lenderFees:{originationPct:0,termiteInspection:70,underwriting:0,appraisal:0,creditReport:0,survey:350},otherFees:{recordingDeed:250,recordingMortgage:0},docStamps:false,intangibleTax:false,proratedTax:true},
+  usda:{prepaid:{monthsInsurance:14,monthsTaxes:4,daysInterest:15},titleFees:{closingFee:225,taxServiceFee:78,floodCert:20,titleEndorsement81:45},lenderFees:{originationPct:1.0,termiteInspection:70,underwriting:250,appraisal:350,creditReport:35,survey:350},otherFees:{recordingDeed:250,recordingMortgage:19},docStamps:true,intangibleTax:true,proratedTax:true,usdaGuaranteeFee:1.0},
+};
+const LOAN_TYPES = [{value:"conventional",label:"Conventional"},{value:"fha",label:"FHA"},{value:"va",label:"VA"},{value:"allCash",label:"All Cash"},{value:"usda",label:"USDA"}];
+
+function CurrencyInput({label,value,onChange,placeholder}) {
+  return (<div className="mb-4"><label className="block text-sm font-medium text-gray-600 mb-1">{label}</label>
+    <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within-ring">
+      <span className="px-3 py-2 bg-blue-50 text-blue-600 font-semibold text-sm border-r border-gray-300">$</span>
+      <input type="text" className="flex-1 px-3 py-2 outline-none text-gray-800" placeholder={placeholder||"0"} value={value===0?"":value.toLocaleString()} onChange={(e)=>{const r=e.target.value.replace(/[^0-9.]/g,"");onChange(r===""?0:parseFloat(r))}} />
+    </div></div>);
+}
+function PctOrDollarInput({label,value,isPct,onValueChange,onModeChange}) {
+  return (<div className="mb-4"><label className="block text-sm font-medium text-gray-600 mb-1">{label}</label>
+    <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within-ring">
+      <button onClick={()=>onModeChange(true)} className={`px-3 py-2 text-sm font-semibold border-r border-gray-300 ${isPct?"bg-blue-50 text-blue-600":"bg-gray-50 text-gray-400"}`}>%</button>
+      <button onClick={()=>onModeChange(false)} className={`px-3 py-2 text-sm font-semibold border-r border-gray-300 ${!isPct?"bg-blue-50 text-blue-600":"bg-gray-50 text-gray-400"}`}>$</button>
+      <input type="text" className="flex-1 px-3 py-2 outline-none text-gray-800" value={value===0?"":value} onChange={(e)=>{const r=e.target.value.replace(/[^0-9.]/g,"");onValueChange(r===""?0:parseFloat(r))}} />
+    </div></div>);
+}
+function DonutChart({data,size=200}) {
+  const total=data.reduce((s,d)=>s+d.value,0); if(total===0)return null;
+  const cx=size/2,cy=size/2,r=size*0.38,sw=size*0.18; let cum=0;
+  return (<svg width={size} height={size} viewBox={"0 0 "+size+" "+size}>
+    {data.filter(d=>d.value>0).map((d,i)=>{const pct=d.value/total,da=2*Math.PI*r,doff=da*(1-pct),rot=cum*360-90;cum+=pct;
+      return <circle key={i} cx={cx} cy={cy} r={r} fill="none" stroke={d.color} strokeWidth={sw} strokeDasharray={da} strokeDashoffset={doff} transform={"rotate("+rot+" "+cx+" "+cy+")"} style={{transition:"all 0.5s ease"}} />;
+    })}<circle cx={cx} cy={cy} r={r-sw/2+1} fill="white" /></svg>);
+}
+function ResultCard({title,amount,items,colors}) {
+  return (<div className="bg-white rounded-2xl shadow-lg p-6 mb-6"><h3 className="text-lg font-bold text-gray-700 mb-1">{title}</h3>
+    <p className="text-3xl font-bold text-blue-600 mb-4">{fmt(amount)}</p>
+    <div className="flex items-center gap-6">
+      <DonutChart data={items.map((it,i)=>({value:it.value,color:colors[i%colors.length]}))} size={160} />
+      <div className="flex-1 space-y-2">{items.filter(it=>it.value>0).map((it,i)=>(
+        <div key={i} className="flex items-center gap-2 text-sm">
+          <span style={{width:12,height:12,borderRadius:6,background:colors[i%colors.length],display:"inline-block",flexShrink:0}}></span>
+          <span className="text-gray-600 flex-1">{it.label}</span><span className="font-semibold text-gray-800">{fmt(it.value)}</span>
+        </div>))}</div></div></div>);
+}
+
+function App() {
+  const [loanType,setLoanType]=useState("conventional");
+  const [homePrice,setHomePrice]=useState(0);
+  const [downPmt,setDownPmt]=useState(10);
+  const [downPmtIsPct,setDownPmtIsPct]=useState(true);
+  const [interestRate,setInterestRate]=useState(6.375);
+  const [termYears,setTermYears]=useState(30);
+  const [buyerBrokerFee,setBuyerBrokerFee]=useState(0);
+  const [buyerBrokerIsPct,setBuyerBrokerIsPct]=useState(true);
+  const [sellerConcession,setSellerConcession]=useState(0);
+  const [sellerConcessionIsPct,setSellerConcessionIsPct]=useState(true);
+  const [hazardIns,setHazardIns]=useState(1.5);
+  const [hazardInsIsPct,setHazardInsIsPct]=useState(true);
+  const [reTax,setReTax]=useState(1);
+  const [reTaxIsPct,setReTaxIsPct]=useState(true);
+  const [hoaMonthly,setHoaMonthly]=useState(0);
+  const [showDetail,setShowDetail]=useState(false);
+  const [computed,setComputed]=useState(false);
+
+  const calc = useMemo(()=>{
+    if(homePrice<=0)return null;
+    const cc=CC[loanType]||CC.conventional;
+    const dd=downPmtIsPct?homePrice*(downPmt/100):downPmt;
+    const la=Math.max(homePrice-dd,0);
+    const mr=interestRate/100/12, np=termYears*12;
+    let mpi=0; if(la>0&&mr>0) mpi=la*(mr*Math.pow(1+mr,np))/(Math.pow(1+mr,np)-1);
+    const ai=hazardInsIsPct?homePrice*(hazardIns/100):hazardIns;
+    const at=reTaxIsPct?homePrice*(reTax/100):reTax;
+    const mi=ai/12, mt=at/12, mh=hoaMonthly;
+    const pi=mi*cc.prepaid.monthsInsurance, pt=mt*cc.prepaid.monthsTaxes;
+    const di=la>0?(la*(interestRate/100))/365:0, pint=di*cc.prepaid.daysInterest;
+    const tp=pi+pt+pint;
+    const ot=calcOwnerTitle(homePrice), lt=loanType==="allCash"?0:calcLoanTitle(la);
+    const sf=ot>0?Math.round(ot*0.25):0, te9=ot>0?25:0, te92=ot>0?25:0;
+    const tff=cc.titleFees.closingFee+cc.titleFees.taxServiceFee+cc.titleFees.floodCert+cc.titleFees.titleEndorsement81;
+    const ttf=lt+tff+te9+te92+sf;
+    const of_=la*(cc.lenderFees.originationPct/100);
+    const lff=cc.lenderFees.termiteInspection+cc.lenderFees.underwriting+cc.lenderFees.appraisal+cc.lenderFees.creditReport+cc.lenderFees.survey;
+    const tlf=of_+lff;
+    const ds=cc.docStamps?Math.ceil(la/100)*FL_DOC_STAMP_NOTE:0;
+    const it_=cc.intangibleTax?Math.ceil(la/100)*FL_INTANGIBLE_TAX:0;
+    const prta=cc.proratedTax?mt*2:0;
+    const rf=cc.otherFees.recordingDeed+cc.otherFees.recordingMortgage;
+    const tof=ds+it_+prta+rf;
+    let spf=0,spl=""; if(cc.upfrontMIP){spf=la*(cc.upfrontMIP/100);spl="Upfront MIP (FHA)"}
+    if(cc.vaFundingFee){spf=la*(cc.vaFundingFee/100);spl="VA Funding Fee"}
+    if(cc.usdaGuaranteeFee){spf=la*(cc.usdaGuaranteeFee/100);spl="USDA Guarantee Fee"}
+    const bd=buyerBrokerIsPct?homePrice*(buyerBrokerFee/100):buyerBrokerFee;
+    const cd=sellerConcessionIsPct?homePrice*(sellerConcession/100):sellerConcession;
+    const tcc=tp+ttf+tlf+tof+spf+bd;
+    const btc=dd+tcc-cd;
+    const mtot=mpi+mi+mt+mh;
+    return {loanAmount:la,downDollar:dd,monthlyPI:mpi,monthlyInsurance:mi,monthlyTax:mt,monthlyHOA:mh,monthlyTotal:mtot,prepaidInsurance:pi,prepaidTax:pt,prepaidInterest:pint,totalPrepaid:tp,ownerTitle:ot,loanTitle:lt,searchFee:sf,titleEndForm9:te9,titleEndForm92:te92,titleFeeFixed:tff,totalTitleFees:ttf,originationFee:of_,lenderFeeFixed:lff,totalLenderFees:tlf,docStampAmount:ds,intangibleAmount:it_,proratedTaxAmount:prta,recordingFees:rf,totalOtherFees:tof,specialFee:spf,specialFeeLabel:spl,brokerDollar:bd,concessionDollar:cd,totalClosingCosts:tcc,bringToClose:btc,cc};
+  },[homePrice,downPmt,downPmtIsPct,interestRate,termYears,loanType,hazardIns,hazardInsIsPct,reTax,reTaxIsPct,hoaMonthly,buyerBrokerFee,buyerBrokerIsPct,sellerConcession,sellerConcessionIsPct]);
+
+  const CM=["#5E81C1","#35AB49","#FDB415","#BF6A00"];
+  const CB=["#5E81C1","#53f400","#35AB49","#FDB415","#d00000","#BF6A00"];
+
+  return (
+    <div style={{minHeight:"100vh",background:"linear-gradient(to bottom,#fff7ed,#fff)"}}>
+      <div style={{height:6,background:"linear-gradient(to right,#f87171,#fdba74)"}}></div>
+      <header className="bg-white shadow-sm px-6 py-3 flex items-center justify-between" style={{position:"sticky",top:0,zIndex:10}}>
+        <div className="flex items-center gap-3">
+          <div style={{width:40,height:40,borderRadius:"50%",background:"linear-gradient(135deg,#3b82f6,#1d4ed8)",display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",fontWeight:"bold",fontSize:18}}>B</div>
+          <div><span className="text-xl font-bold text-gray-800">BuyerEstimate</span><span className="ml-2 text-xs font-bold text-blue-500 bg-blue-50 px-2 py-1 rounded">PRO</span></div>
+        </div>
+        <span className="text-sm text-gray-400">Brevard County, FL</span>
+      </header>
+      <div className="max-w-5xl mx-auto px-4 py-6" style={{display:"flex",flexWrap:"wrap",gap:24}}>
+        <div style={{width:384,flexShrink:0}}>
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Buyer Estimate</h2>
+            <div className="mb-4"><label className="block text-sm font-medium text-gray-600 mb-1">Loan Type</label>
+              <select className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800" value={loanType} onChange={(e)=>{setLoanType(e.target.value);setComputed(false)}}>
+                {LOAN_TYPES.map(lt=><option key={lt.value} value={lt.value}>{lt.label}</option>)}
+              </select></div>
+            <CurrencyInput label="Home Price" value={homePrice} onChange={(v)=>{setHomePrice(v);setComputed(false)}} placeholder="Required" />
+            <PctOrDollarInput label="Down Payment" value={downPmt} isPct={downPmtIsPct} onValueChange={(v)=>{setDownPmt(v);setComputed(false)}} onModeChange={(p)=>setDownPmtIsPct(p)} />
+            <div className="mb-4"><label className="block text-sm font-medium text-gray-600 mb-1">Interest Rate</label>
+              <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within-ring">
+                <span className="px-3 py-2 bg-blue-50 text-blue-600 font-semibold text-sm border-r border-gray-300">%</span>
+                <input type="text" className="flex-1 px-3 py-2 outline-none text-gray-800" value={interestRate} onChange={(e)=>{setInterestRate(parseFloat(e.target.value.replace(/[^0-9.]/g,""))||0);setComputed(false)}} />
+              </div></div>
+            <div className="mb-4"><label className="block text-sm font-medium text-gray-600 mb-1">Term (Years)</label>
+              <select className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800" value={termYears} onChange={(e)=>{setTermYears(parseInt(e.target.value));setComputed(false)}}>
+                <option value={30}>30</option><option value={25}>25</option><option value={20}>20</option><option value={15}>15</option><option value={10}>10</option>
+              </select></div>
+            <PctOrDollarInput label="Buyer Broker Fee" value={buyerBrokerFee} isPct={buyerBrokerIsPct} onValueChange={(v)=>{setBuyerBrokerFee(v);setComputed(false)}} onModeChange={(p)=>setBuyerBrokerIsPct(p)} />
+            <PctOrDollarInput label="Seller Concession" value={sellerConcession} isPct={sellerConcessionIsPct} onValueChange={(v)=>{setSellerConcession(v);setComputed(false)}} onModeChange={(p)=>setSellerConcessionIsPct(p)} />
+            <PctOrDollarInput label="Hazard Insurance" value={hazardIns} isPct={hazardInsIsPct} onValueChange={(v)=>{setHazardIns(v);setComputed(false)}} onModeChange={(p)=>setHazardInsIsPct(p)} />
+            <PctOrDollarInput label="RE Tax" value={reTax} isPct={reTaxIsPct} onValueChange={(v)=>{setReTax(v);setComputed(false)}} onModeChange={(p)=>setReTaxIsPct(p)} />
+            <CurrencyInput label="HOA (Monthly)" value={hoaMonthly} onChange={(v)=>{setHoaMonthly(v);setComputed(false)}} />
+            <button onClick={()=>setComputed(true)} disabled={homePrice<=0}
+              style={{width:"100%",marginTop:16,padding:"12px 0",borderRadius:12,fontWeight:"bold",color:"#fff",fontSize:18,border:"none",cursor:homePrice>0?"pointer":"not-allowed",opacity:homePrice>0?1:0.4,background:"linear-gradient(to right,#3b82f6,#2563eb)"}}>
+              COMPUTE
+            </button>
+          </div>
+        </div>
+        <div style={{flex:1,minWidth:0}}>
+          {(!computed||!calc)?(<div className="flex items-center justify-center bg-white rounded-2xl shadow-lg" style={{height:256}}><p className="text-gray-400 text-lg">Enter a home price and hit <span className="font-bold text-blue-500">COMPUTE</span></p></div>):(
+            <div>
+              <ResultCard title="Monthly Payment" amount={calc.monthlyTotal} items={[{label:"Principal & Interest",value:calc.monthlyPI},{label:"Hazard Insurance",value:calc.monthlyInsurance},{label:"Property Tax",value:calc.monthlyTax},{label:"HOA",value:calc.monthlyHOA}]} colors={CM} />
+              <ResultCard title="Bring to Close" amount={calc.bringToClose} items={[{label:"Down Payment",value:calc.downDollar},{label:"Prepaid Costs",value:calc.totalPrepaid},{label:"Title Fees",value:calc.totalTitleFees},{label:"Lender Fees",value:calc.totalLenderFees},{label:"Other Fees",value:calc.totalOtherFees},...(calc.specialFee>0?[{label:calc.specialFeeLabel,value:calc.specialFee}]:[]),...(calc.brokerDollar>0?[{label:"Buyer Broker Fee",value:calc.brokerDollar}]:[])]} colors={CB} />
+              <button onClick={()=>setShowDetail(!showDetail)} className="w-full py-3 bg-white rounded-xl shadow text-blue-600 font-semibold mb-4" style={{border:"none",cursor:"pointer"}}>{showDetail?"Hide":"Show"} Detailed Closing Costs</button>
+              {showDetail&&(
+                <div className="bg-white rounded-2xl shadow-lg p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Detailed Closing Costs</h3>
+                  <div className="text-sm text-gray-500 mb-4">Loan Type: <span className="font-semibold text-gray-700">{LOAN_TYPES.find(l=>l.value===loanType)?.label}</span> | Loan Amount: <span className="font-semibold text-gray-700">{fmt(calc.loanAmount)}</span></div>
+                  {[
+                    {title:"Prepaid Costs",items:[{label:"Hazard Insurance ("+calc.cc.prepaid.monthsInsurance+" mo)",value:calc.prepaidInsurance},{label:"Property Tax ("+calc.cc.prepaid.monthsTaxes+" mo)",value:calc.prepaidTax},{label:"Prepaid Interest ("+calc.cc.prepaid.daysInterest+" days)",value:calc.prepaidInterest}]},
+                    {title:"Title Fees",items:[{label:"Loan Title Policy (simo)",value:calc.loanTitle},{label:"Title Search Fee",value:calc.searchFee},{label:"Closing Fee",value:calc.cc.titleFees.closingFee},{label:"Tax Service Fee",value:calc.cc.titleFees.taxServiceFee}].filter(x=>x.value>0)},
+                    {title:"Lender Fees",items:[{label:"Origination Fee ("+calc.cc.lenderFees.originationPct+"%)",value:calc.originationFee},{label:"Appraisal",value:calc.cc.lenderFees.appraisal},{label:"Underwriting",value:calc.cc.lenderFees.underwriting},{label:"Survey",value:calc.cc.lenderFees.survey}].filter(x=>x.value>0)},
+                    {title:"Other Fees",items:[...(calc.docStampAmount>0?[{label:"Doc Stamps (Notes)",value:calc.docStampAmount}]:[]),...(calc.intangibleAmount>0?[{label:"Intangible Tax",value:calc.intangibleAmount}]:[]),{label:"Recording Fee (Deed)",value:calc.cc.otherFees.recordingDeed}].filter(x=>x.value>0)},
+                    ...(calc.specialFee>0?[{title:"Special Fees",items:[{label:calc.specialFeeLabel,value:calc.specialFee}]}]:[]),
+                  ].map((sec,si)=>(
+                    <div key={si} className="mb-5"><h4 className="font-bold text-gray-700 text-sm uppercase tracking-wide mb-2" style={{borderBottom:"1px solid #e5e7eb",paddingBottom:4}}>{sec.title}</h4>
+                      {sec.items.map((it,ii)=>(<div key={ii} className="flex justify-between py-1 text-sm"><span className="text-gray-600">{it.label}</span><span className="font-medium text-gray-800">{fmt(it.value)}</span></div>))}
+                    </div>))}
+                  <div style={{borderTop:"2px solid #d1d5db",paddingTop:12,marginTop:16}} className="flex justify-between font-bold text-lg">
+                    <span className="text-gray-700">Total Closing Costs</span><span className="text-blue-600">{fmt(calc.totalClosingCosts)}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+      <footer className="text-center text-xs text-gray-400 py-6">Buyer Estimate Calculator — Brevard County, FL — Rates are estimates only.</footer>
+    </div>
+  );
+}
+ReactDOM.render(<App />, document.getElementById("root"));
+</script>
+</body>
+</html>
