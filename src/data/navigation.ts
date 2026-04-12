@@ -7,6 +7,25 @@ export interface NavLink {
 export const mainNav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "For Sellers", href: "/opportunities" },
+  {
+    label: "Properties",
+    href: "/properties",
+    children: [
+      { label: "Retail", href: "/properties/retail" },
+      { label: "Office", href: "/properties/office" },
+      { label: "Industrial", href: "/properties/industrial" },
+      { label: "Multifamily", href: "/properties/multifamily" },
+      { label: "Hospitality", href: "/properties/hospitality" },
+      { label: "Land", href: "/properties/land" },
+      { label: "Mixed-Use", href: "/properties/mixed-use" },
+      { label: "Special Purpose", href: "/properties/special-purpose" },
+      { label: "Self Storage", href: "/properties/self-storage" },
+      { label: "Mobile Home Park", href: "/properties/mobile-home-park" },
+      { label: "Senior Living", href: "/properties/senior-living" },
+      { label: "Business for Sale", href: "/properties/business-for-sale" },
+      { label: "Notes & Loans", href: "/properties/note-loan" },
+    ],
+  },
   { label: "Market Reports", href: "/market-reports" },
   {
     label: "Markets",

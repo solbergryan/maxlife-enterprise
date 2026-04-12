@@ -9,8 +9,12 @@ import SearchBar from "@/components/SearchBar";
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [marketsOpen, setMarketsOpen] = useState(false);
-  const [mobileMarketsOpen, setMobileMarketsOpen] = useState(false);
+  /** Which top-level dropdown (if any) is open in desktop nav — keyed by href. */
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  /** Which top-level dropdown (if any) is expanded in mobile nav — keyed by href. */
+  const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(
+    null,
+  );
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,7 +23,7 @@ export default function Navbar() {
         dropdownRef.current &&
         !dropdownRef.current.contains(e.target as Node)
       ) {
-        setMarketsOpen(false);
+        setOpenDropdown(null);
       }
     }
     document.addEventListener("mousedown", handleClick);
@@ -50,9 +54,17 @@ export default function Navbar() {
             </div>
             {mainNav.map((link) =>
               link.children ? (
-                <div key={link.href} className="relative" ref={dropdownRef}>
+                <div
+                  key={link.href}
+                  className="relative"
+                  ref={openDropdown === link.href ? dropdownRef : undefined}
+                >
                   <button
-                    onClick={() => setMarketsOpen(!marketsOpen)}
+                    onClick={() =>
+                      setOpenDropdown(
+                        openDropdown === link.href ? null : link.href,
+                      )
+                    }
                     className={`text-sm font-medium transition-colors flex items-center gap-1 ${
                       isActive(link.href)
                         ? "text-gold"
@@ -61,7 +73,7 @@ export default function Navbar() {
                   >
                     {link.label}
                     <svg
-                      className={`w-3.5 h-3.5 transition-transform ${marketsOpen ? "rotate-180" : ""}`}
+                      className={`w-3.5 h-3.5 transition-transform ${openDropdown === link.href ? "rotate-180" : ""}`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -74,21 +86,25 @@ export default function Navbar() {
                       />
                     </svg>
                   </button>
-                  {marketsOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-dark-card border border-dark-border rounded-lg shadow-xl py-2">
+                  {openDropdown === link.href && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-dark-card border border-dark-border rounded-lg shadow-xl py-2 max-h-[80vh] overflow-y-auto">
                       <Link
                         href={link.href}
-                        onClick={() => setMarketsOpen(false)}
+                        onClick={() => setOpenDropdown(null)}
                         className="block px-4 py-2 text-sm text-gray-400 hover:text-gold hover:bg-dark-hover transition-colors"
                       >
-                        All Markets
+                        {link.href === "/markets"
+                          ? "All Markets"
+                          : link.href === "/properties"
+                            ? "All Property Types"
+                            : `All ${link.label}`}
                       </Link>
                       <div className="border-t border-dark-border my-1" />
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          onClick={() => setMarketsOpen(false)}
+                          onClick={() => setOpenDropdown(null)}
                           className={`block px-4 py-2 text-sm transition-colors ${
                             isActive(child.href)
                               ? "text-gold"
@@ -151,7 +167,11 @@ export default function Navbar() {
               link.children ? (
                 <div key={link.href}>
                   <button
-                    onClick={() => setMobileMarketsOpen(!mobileMarketsOpen)}
+                    onClick={() =>
+                      setMobileOpenDropdown(
+                        mobileOpenDropdown === link.href ? null : link.href,
+                      )
+                    }
                     className={`flex items-center justify-between w-full text-sm font-medium py-2 transition-colors ${
                       isActive(link.href)
                         ? "text-gold"
@@ -160,7 +180,7 @@ export default function Navbar() {
                   >
                     {link.label}
                     <svg
-                      className={`w-4 h-4 transition-transform ${mobileMarketsOpen ? "rotate-180" : ""}`}
+                      className={`w-4 h-4 transition-transform ${mobileOpenDropdown === link.href ? "rotate-180" : ""}`}
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -168,14 +188,18 @@ export default function Navbar() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  {mobileMarketsOpen && (
+                  {mobileOpenDropdown === link.href && (
                     <div className="pl-4 space-y-1 mb-2">
                       <Link
                         href={link.href}
                         onClick={() => setOpen(false)}
                         className="block text-sm text-gray-400 hover:text-gold py-1.5 transition-colors"
                       >
-                        All Markets
+                        {link.href === "/markets"
+                          ? "All Markets"
+                          : link.href === "/properties"
+                            ? "All Property Types"
+                            : `All ${link.label}`}
                       </Link>
                       {link.children.map((child) => (
                         <Link
