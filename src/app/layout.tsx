@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "Central Florida's trusted commercial real estate brokerage. Sales, leasing, NNN investments, and land development across Orlando and the Space Coast.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "MaxLife Realty — Orlando Commercial Real Estate",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       "Orlando Commercial Real Estate Broker | MaxLife Realty",
     description:
       "Sales, leasing, NNN investments, and land development across Central Florida.",
-    images: ["/og-image.jpg"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -83,7 +83,7 @@ const organizationSchema = {
   alternateName: "MaxLife Realty LLC",
   url: "https://maxlifedevelopment.com",
   logo: "https://maxlifedevelopment.com/logo.png",
-  image: "https://maxlifedevelopment.com/og-image.jpg",
+  image: "https://maxlifedevelopment.com/opengraph-image",
   description:
     "Orlando commercial real estate broker specializing in commercial property sales, leasing, NNN investments, and land development across Central Florida and the Space Coast.",
   telephone: "(321) 586-2121",
