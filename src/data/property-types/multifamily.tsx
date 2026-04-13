@@ -48,9 +48,9 @@ const mfListings = [
     name: "CBRE Deal Flow",
     tag: "Institutional broker platform",
     description: "Institutional multifamily opportunities across Florida.",
-    floridaUrl: "https://www.cbre.com/properties/for-sale/florida/multifamily",
-    orlandoUrl: "https://www.cbre.com/properties/for-sale/florida/multifamily",
-    allUrl: "https://www.cbre.com/properties/for-sale/multifamily",
+    floridaUrl: "https://www.cbre.com/properties",
+    orlandoUrl: "https://www.cbre.com/properties",
+    allUrl: "https://www.cbre.com/properties",
   },
 ];
 

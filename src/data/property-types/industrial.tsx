@@ -52,9 +52,9 @@ const industrialListings = [
     name: "CBRE Deal Flow",
     tag: "Institutional broker platform",
     description: "Institutional industrial opportunities across Florida.",
-    floridaUrl: "https://www.cbre.com/properties/for-sale/florida/industrial",
-    orlandoUrl: "https://www.cbre.com/properties/for-sale/florida/industrial",
-    allUrl: "https://www.cbre.com/properties/for-sale/industrial",
+    floridaUrl: "https://www.cbre.com/properties",
+    orlandoUrl: "https://www.cbre.com/properties",
+    allUrl: "https://www.cbre.com/properties",
   },
 ];
 

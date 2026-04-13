@@ -3,7 +3,7 @@ import type { PropertyTypeEntry } from "./types";
 const mixedUseListings = [
   { name: "Crexi", tag: "Tech-forward CRE marketplace", description: "Growing inventory of Florida mixed-use listings.", floridaUrl: "https://www.crexi.com/properties/FL/Mixed-Use", orlandoUrl: "https://www.crexi.com/properties/FL/Orlando/Mixed-Use", allUrl: "https://www.crexi.com/properties/Mixed-Use" },
   { name: "LoopNet", tag: "Largest CRE listings network", description: "The biggest pool of mixed-use listings in Florida.", floridaUrl: "https://www.loopnet.com/search/mixed-use-property/fl/for-sale/", orlandoUrl: "https://www.loopnet.com/search/mixed-use-property/orlando-fl/for-sale/", allUrl: "https://www.loopnet.com/search/mixed-use-property/usa/for-sale/" },
-  { name: "CBRE Deal Flow", tag: "Institutional broker platform", description: "Institutional mixed-use opportunities across Florida.", floridaUrl: "https://www.cbre.com/properties/for-sale/florida", orlandoUrl: "https://www.cbre.com/properties/for-sale/florida", allUrl: "https://www.cbre.com/properties/for-sale" },
+  { name: "CBRE Deal Flow", tag: "Institutional broker platform", description: "Institutional mixed-use opportunities across Florida.", floridaUrl: "https://www.cbre.com/properties", orlandoUrl: "https://www.cbre.com/properties", allUrl: "https://www.cbre.com/properties" },
 ];
 
 const mixedUseTopLevel: PropertyTypeEntry = {

@@ -52,9 +52,9 @@ const officeListingSites = [
     name: "CBRE Deal Flow",
     tag: "Institutional broker platform",
     description: "Institutional office opportunities across Florida.",
-    floridaUrl: "https://www.cbre.com/properties/for-sale/florida/office",
-    orlandoUrl: "https://www.cbre.com/properties/for-sale/florida/office",
-    allUrl: "https://www.cbre.com/properties/for-sale/office",
+    floridaUrl: "https://www.cbre.com/properties",
+    orlandoUrl: "https://www.cbre.com/properties",
+    allUrl: "https://www.cbre.com/properties",
   },
 ];
 

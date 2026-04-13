@@ -23,7 +23,7 @@ const hospitalityListings = [
     description: "Specialty hotel brokerage with institutional Florida inventory.",
     floridaUrl: "https://www.hvs.com/Brokerage/Listings",
     orlandoUrl: "https://www.hvs.com/Brokerage/Listings",
-    allUrl: "https://www.hvs.com/Brokerage",
+    allUrl: "https://www.hvs.com/Brokerage/Listings",
   },
 ];
 

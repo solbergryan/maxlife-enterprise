@@ -107,9 +107,9 @@ const retailListingSites = [
     tag: "Institutional broker platform",
     description:
       "CBRE's deal marketplace for institutional and mid-market retail across Florida.",
-    floridaUrl: "https://www.cbre.com/properties/for-sale/florida/retail",
-    orlandoUrl: "https://www.cbre.com/properties/for-sale/florida/retail",
-    allUrl: "https://www.cbre.com/properties/for-sale/retail",
+    floridaUrl: "https://www.cbre.com/properties",
+    orlandoUrl: "https://www.cbre.com/properties",
+    allUrl: "https://www.cbre.com/properties",
   },
 ];
 
