@@ -52,6 +52,14 @@ export const searchIndex: SearchItem[] = [
     keywords: ["calculators", "net sheets"],
   },
   {
+    title: "CRE Lenders Directory",
+    description:
+      "30+ commercial real estate lenders active in Florida — banks, CMBS, SBA, agency, life companies, debt funds, and hard money.",
+    url: "/lenders",
+    category: "Tool",
+    keywords: ["lenders", "financing", "loan", "mortgage", "bank", "SBA", "CMBS", "bridge", "hard money", "construction loan"],
+  },
+  {
     title: "Investor Tools",
     description:
       "Calculators and resources for commercial real estate investors.",

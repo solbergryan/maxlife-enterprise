@@ -42,6 +42,7 @@ export const mainNav: NavLink[] = [
       { label: "Seller Net Sheet", href: "/net-sheets/seller" },
       { label: "Buyer Estimate", href: "/net-sheets/buyer" },
       { label: "For Sellers", href: "/opportunities" },
+      { label: "CRE Lenders", href: "/lenders" },
     ],
   },
   {
@@ -61,6 +62,7 @@ export const footerInvestorLinks: NavLink[] = [
   { label: "Seller Net Sheet", href: "/net-sheets/seller" },
   { label: "Buyer Estimate", href: "/net-sheets/buyer" },
   { label: "Deal Analyzer", href: "/deal-analyzer" },
+  { label: "CRE Lenders Directory", href: "/lenders" },
   { label: "1031 Exchange", href: "/1031-exchange-florida" },
   { label: "NNN Properties", href: "/nnn-properties-florida" },
   { label: "Land for Development", href: "/central-florida-land-for-development" },
