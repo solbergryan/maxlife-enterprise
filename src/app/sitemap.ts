@@ -10,6 +10,8 @@ import { getOutlookParams } from "@/data/seo/outlooks";
 import { propertyTypeRegistry } from "@/data/property-types";
 import { professionals } from "@/lib/professionals";
 import { jobs } from "@/data/careers";
+import { faqTopics } from "@/data/faqs";
+import { nnnTenants } from "@/data/nnn-tenants";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -400,6 +402,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: j.datePosted,
       changeFrequency: "weekly" as const,
       priority: 0.75,
+    })),
+    // FAQ pages
+    {
+      url: `${BASE_URL}/faq`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+    ...faqTopics.map((t) => ({
+      url: `${BASE_URL}/faq/${t.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    // NNN Tenant landing pages
+    {
+      url: `${BASE_URL}/nnn-tenants`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    ...nnnTenants.map((t) => ({
+      url: `${BASE_URL}/nnn-tenants/${t.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    // New comparison blog posts
+    ...[
+      "nnn-vs-multifamily-investing",
+      "build-to-suit-vs-value-add",
+      "1031-exchange-vs-opportunity-zone",
+      "cap-rate-vs-cash-on-cash-return",
+      "ground-lease-vs-fee-simple",
+      "orlando-vs-tampa-cre-market",
+    ].map((slug) => ({
+      url: `${BASE_URL}/blog/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     })),
   ];
 }

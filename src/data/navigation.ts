@@ -51,6 +51,8 @@ export const mainNav: NavLink[] = [
     children: [
       { label: "Market Reports", href: "/market-reports" },
       { label: "Blog & Insights", href: "/blog" },
+      { label: "FAQ", href: "/faq" },
+      { label: "NNN by Tenant", href: "/nnn-tenants" },
       { label: "Academy", href: "/academy" },
       { label: "CRE Professionals Guide", href: "/professionals" },
       { label: "CRE Team Org Chart", href: "/professionals/org-chart" },

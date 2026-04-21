@@ -223,6 +223,61 @@ const articles = [
     readTime: "9 min read",
     featured: true,
   },
+  {
+    slug: "nnn-vs-multifamily-investing",
+    title: "NNN vs Multifamily Investing: Which Is Better for CRE Investors?",
+    excerpt:
+      "Two of the most popular commercial real estate asset classes compared head-to-head — cap rates, management intensity, tax treatment, and which fits your portfolio.",
+    category: "Comparison",
+    date: "April 2026",
+    readTime: "8 min read",
+  },
+  {
+    slug: "build-to-suit-vs-value-add",
+    title: "Build-to-Suit vs Value-Add: Which CRE Strategy Wins?",
+    excerpt:
+      "Comparing ground-up build-to-suit development with value-add commercial real estate — risk, returns, timelines, and capital requirements.",
+    category: "Comparison",
+    date: "April 2026",
+    readTime: "7 min read",
+  },
+  {
+    slug: "1031-exchange-vs-opportunity-zone",
+    title: "1031 Exchange vs Opportunity Zone: Which Tax Strategy Wins?",
+    excerpt:
+      "Both defer capital gains — but work completely differently. Compare 1031 exchanges and Opportunity Zone investments to pick the right tool for your situation.",
+    category: "Comparison",
+    date: "April 2026",
+    readTime: "8 min read",
+  },
+  {
+    slug: "cap-rate-vs-cash-on-cash-return",
+    title: "Cap Rate vs Cash-on-Cash Return: What's the Difference?",
+    excerpt:
+      "Two essential CRE metrics that measure completely different things. Learn which to use when, how leverage changes everything, and what other metrics matter.",
+    category: "Comparison",
+    date: "April 2026",
+    readTime: "6 min read",
+  },
+  {
+    slug: "ground-lease-vs-fee-simple",
+    title:
+      "Ground Lease vs Fee Simple: Which Commercial Real Estate Structure?",
+    excerpt:
+      "The ownership structure of a commercial property has more impact on risk and returns than most investors realize. Here's the full breakdown.",
+    category: "Comparison",
+    date: "April 2026",
+    readTime: "7 min read",
+  },
+  {
+    slug: "orlando-vs-tampa-cre-market",
+    title: "Orlando vs Tampa CRE Market: Which Should You Invest In?",
+    excerpt:
+      "Florida's two largest I-4 corridor metros compared — cap rates, sector performance, infrastructure, and which is better for different investor types.",
+    category: "Comparison",
+    date: "April 2026",
+    readTime: "9 min read",
+  },
 ];
 
 export default function BlogPage() {
