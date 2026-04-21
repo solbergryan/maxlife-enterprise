@@ -69,6 +69,7 @@ export const mainNav: NavLink[] = [
       { label: "Blog & Insights", href: "/blog" },
       { label: "FAQ", href: "/faq" },
       { label: "CRE Glossary", href: "/glossary" },
+      { label: "Lease Types Guide", href: "/lease-types" },
       { label: "NNN by Tenant", href: "/nnn-tenants" },
       { label: "Academy", href: "/academy" },
       { label: "CRE Professionals Guide", href: "/professionals" },

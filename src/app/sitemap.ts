@@ -14,6 +14,8 @@ import { faqTopics } from "@/data/faqs";
 import { nnnTenants } from "@/data/nnn-tenants";
 import { glossaryTerms } from "@/data/glossary";
 import { investorPersonas } from "@/data/investor-personas";
+import { leaseTypes } from "@/data/lease-types";
+import { cities as seoCities } from "@/data/seo/cities";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -450,6 +452,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
+    // Lease type pages
+    {
+      url: `${BASE_URL}/lease-types`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...leaseTypes.map((l) => ({
+      url: `${BASE_URL}/lease-types/${l.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
+    // Sell commercial property city pages (programmatic)
+    ...seoCities.map((c) => ({
+      url: `${BASE_URL}/sell-commercial-property/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    // Buy NNN property city pages (programmatic)
+    ...seoCities.map((c) => ({
+      url: `${BASE_URL}/buy-nnn-property/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
     // Investor persona pages
     {
       url: `${BASE_URL}/investors`,
