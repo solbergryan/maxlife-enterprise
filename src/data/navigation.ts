@@ -35,6 +35,19 @@ export const mainNav: NavLink[] = [
     ],
   },
   {
+    label: "For Investors",
+    href: "/investors",
+    children: [
+      { label: "1031 Exchange Buyers", href: "/investors/1031-exchange-buyers" },
+      { label: "Family Offices", href: "/investors/family-offices" },
+      { label: "Foreign Investors", href: "/investors/foreign-investors" },
+      { label: "Passive Income Investors", href: "/investors/passive-income-investors" },
+      { label: "CRE Developers", href: "/investors/real-estate-developers" },
+      { label: "Institutional Investors", href: "/investors/institutional-investors" },
+      { label: "First-Time CRE Investors", href: "/investors/first-time-cre-investors" },
+    ],
+  },
+  {
     label: "Tools",
     href: "/investor-tools",
     children: [

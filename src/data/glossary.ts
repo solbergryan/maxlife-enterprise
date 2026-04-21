@@ -567,6 +567,239 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Fee simple (or fee simple absolute) is the highest form of real estate ownership. The owner holds the land and all improvements with no time limit and the right to sell, lease, or mortgage at will. Contrast with ground lease (owner of land only) or leasehold (tenant's interest).",
     relatedTerms: ["ground-lease"],
   },
+
+  // ADDITIONAL TERMS
+
+  {
+    slug: "pro-forma",
+    term: "Pro Forma",
+    category: "Investment Metrics",
+    shortDefinition:
+      "A projected financial statement for a property showing expected income, expenses, and cash flow over time.",
+    definition:
+      "A pro forma is a financial projection for a real estate investment — showing expected gross rent, vacancy, operating expenses, NOI, debt service, and cash flow typically over 5-10 years. Critical for underwriting acquisitions and development deals. Quality pro formas stress-test assumptions (cap rates, rent growth, vacancy) to model sensitivity.",
+    relatedTerms: ["noi", "underwriting", "cap-rate"],
+  },
+  {
+    slug: "underwriting",
+    term: "Underwriting",
+    category: "Investment Metrics",
+    shortDefinition:
+      "The process of evaluating a property's financial performance, risks, and potential returns before committing to invest.",
+    definition:
+      "Underwriting is the comprehensive financial and risk analysis of a commercial real estate investment. Buyer underwriting evaluates rent rolls, operating expenses, market comparables, tenant credit, lease terms, and capital needs. Lender underwriting additionally analyzes DSCR, LTV, debt yield, and sponsor financial strength. Every institutional deal involves underwriting before LOI or closing.",
+    relatedTerms: ["pro-forma", "dscr", "ltv"],
+  },
+  {
+    slug: "operating-expenses",
+    term: "Operating Expenses (OpEx)",
+    category: "Investment Metrics",
+    shortDefinition:
+      "Recurring costs required to operate a property — taxes, insurance, maintenance, utilities, management.",
+    definition:
+      "Operating expenses are recurring costs required to run a commercial property: property taxes, insurance, repairs and maintenance, utilities, trash, landscaping, property management, legal, professional services. OpEx excludes debt service, capital expenditures, and depreciation. In NNN leases, the tenant pays most or all OpEx directly.",
+    relatedTerms: ["noi", "cam-charges", "capex"],
+  },
+  {
+    slug: "capex",
+    term: "CapEx (Capital Expenditures)",
+    category: "Investment Metrics",
+    shortDefinition:
+      "One-time investments to improve, replace, or extend the useful life of a property — roof replacement, HVAC, parking lot.",
+    definition:
+      "Capital expenditures are non-recurring investments to extend a property's useful life or add value — roof replacement, HVAC unit replacement, parking lot repaving, tenant improvements, facade renovations. CapEx is capitalized and depreciated over time (not expensed). Projected CapEx over a 10-year hold is a key component of underwriting.",
+    relatedTerms: ["operating-expenses", "pca", "ti-allowance"],
+  },
+  {
+    slug: "ti-allowance",
+    term: "TI Allowance (Tenant Improvement Allowance)",
+    category: "Lease Terms",
+    shortDefinition:
+      "Dollar amount landlord contributes toward tenant's buildout of leased space, typically quoted per square foot.",
+    definition:
+      "A Tenant Improvement (TI) allowance is the capital the landlord contributes toward a tenant's buildout of leased space. Typically quoted per square foot (e.g., $40/SF). Higher TI = tenant pays less out of pocket but landlord recoups through higher rent. TI is common in office and multi-tenant retail; less common in NNN single-tenant (tenants fund their own buildouts).",
+    relatedTerms: ["capex", "nnn-lease", "free-rent"],
+  },
+  {
+    slug: "free-rent",
+    term: "Free Rent / Rent Abatement",
+    category: "Lease Terms",
+    shortDefinition:
+      "Period at lease start when tenant doesn't pay rent, used to offset buildout costs or attract tenants.",
+    definition:
+      "Free rent (or rent abatement) is a concession from landlord to tenant — a period at the start of a lease where no rent is paid. Typical in office and multi-tenant retail (2-6 months is common). It effectively reduces the tenant's all-in occupancy cost and is a common negotiating point. Concessions are accounted for on a straight-line basis for GAAP reporting.",
+    relatedTerms: ["ti-allowance"],
+  },
+  {
+    slug: "dcf",
+    term: "DCF (Discounted Cash Flow)",
+    category: "Valuation & Appraisal",
+    shortDefinition:
+      "Valuation method that discounts projected future cash flows (including sale proceeds) back to present value using a target rate of return.",
+    definition:
+      "Discounted Cash Flow analysis projects a property's cash flows (annual NOI plus terminal sale proceeds) over a hold period and discounts them back to present value using a discount rate (target IRR). The resulting Net Present Value indicates whether the deal meets return thresholds. DCF is the primary underwriting method for institutional CRE.",
+    relatedTerms: ["irr", "cap-rate", "reversion-value"],
+  },
+  {
+    slug: "exit-cap-rate",
+    term: "Exit Cap Rate (Terminal Cap Rate)",
+    category: "Valuation & Appraisal",
+    shortDefinition:
+      "The cap rate used to value a property at the end of an investment hold period — typically 25-50 bps higher than entry cap.",
+    definition:
+      "Exit cap rate is the cap rate applied to the final year's NOI in DCF analysis to calculate terminal sale value. Conservative underwriters project exit cap rates 25-50 basis points higher than entry cap rates (reflecting the building's additional age at disposition). Exit cap rate assumption is one of the most sensitive variables in DCF returns.",
+    relatedTerms: ["dcf", "cap-rate", "reversion-value"],
+  },
+  {
+    slug: "bridge-loan",
+    term: "Bridge Loan",
+    category: "Financing",
+    shortDefinition:
+      "Short-term (1-3 year) commercial loan used to acquire, stabilize, or reposition a property before permanent financing.",
+    definition:
+      "Bridge loans are short-term financing (typically 1-3 years) used for value-add acquisitions, lease-up periods, construction-to-permanent transitions, or time-sensitive opportunities. Higher rates than permanent financing (often 200-400+ bps over SOFR) but more flexible terms and faster close. Often interest-only with no amortization.",
+    relatedTerms: ["cmbs", "construction-loan", "permanent-loan"],
+  },
+  {
+    slug: "cmbs",
+    term: "CMBS (Commercial Mortgage-Backed Securities)",
+    category: "Financing",
+    shortDefinition:
+      "Securitized commercial real estate loans pooled and sold as bonds to investors. Competitive rates but rigid terms.",
+    definition:
+      "CMBS loans are commercial mortgages packaged into pools and sold as bonds to institutional investors. Benefits: competitive fixed rates, non-recourse, long terms (5-10 years). Tradeoffs: rigid servicing (limited flexibility for modifications), yield maintenance prepayment penalties, strict reserves. Typical for stabilized properties $5M+.",
+    relatedTerms: ["bridge-loan", "permanent-loan"],
+  },
+  {
+    slug: "construction-loan",
+    term: "Construction Loan",
+    category: "Financing",
+    shortDefinition:
+      "Short-term financing for ground-up development, disbursed in draws as construction progresses.",
+    definition:
+      "Construction loans fund ground-up development during the construction period. Funds are disbursed in monthly 'draws' as work progresses, with the lender verifying completion before advancing. Typical term: 12-24 months. Interest-only during construction. At stabilization, the loan is refinanced with permanent financing or the property is sold.",
+    relatedTerms: ["ltc", "bridge-loan", "build-to-suit"],
+  },
+  {
+    slug: "sponsor",
+    term: "Sponsor / Syndicator / General Partner",
+    category: "Financing",
+    shortDefinition:
+      "The principal who organizes a real estate deal, raises capital, and manages the investment on behalf of passive investors.",
+    definition:
+      "A sponsor (also called syndicator or general partner) is the individual or firm that organizes a real estate investment — sources the deal, raises equity from passive investors (LPs), manages the asset, and executes the exit. Sponsors typically earn acquisition fees, asset management fees, and carried interest ('promote') above a return threshold.",
+    relatedTerms: ["promote", "limited-partner"],
+  },
+  {
+    slug: "promote",
+    term: "Promote / Carried Interest",
+    category: "Financing",
+    shortDefinition:
+      "The sponsor's share of profits above a preferred return threshold. Aligns sponsor incentives with investor returns.",
+    definition:
+      "Promote (also called carried interest or 'carry') is the sponsor's disproportionate share of profits above a preferred return threshold paid to LPs. Typical structure: 8% preferred return to LPs, then profits split 80/20 (LPs/GP) above that. Promote aligns sponsor incentives with investor returns — sponsors only earn when LPs have been paid first.",
+    relatedTerms: ["sponsor", "limited-partner"],
+  },
+  {
+    slug: "limited-partner",
+    term: "Limited Partner (LP)",
+    category: "Financing",
+    shortDefinition:
+      "Passive equity investor in a syndicated deal who provides capital but has no operational role. Liability limited to investment amount.",
+    definition:
+      "A Limited Partner (LP) is a passive investor in a real estate syndication or fund. LPs provide capital, receive their pro-rata share of distributions (typically after a preferred return), and face limited liability (maximum loss = invested capital). LPs have no operational role or management responsibility.",
+    relatedTerms: ["sponsor", "promote"],
+  },
+  {
+    slug: "constructive-receipt",
+    term: "Constructive Receipt",
+    category: "Tax & Legal",
+    shortDefinition:
+      "The IRS doctrine that treats money as received when it becomes available to you — critical concept in 1031 exchanges.",
+    definition:
+      "Constructive receipt is an IRS doctrine that treats funds as received when they become available without restriction to the taxpayer. In 1031 exchanges, if the exchanger takes constructive receipt of sale proceeds (even briefly), the exchange fails. This is why a Qualified Intermediary must hold the funds — preventing constructive receipt.",
+    relatedTerms: ["1031-exchange", "qualified-intermediary"],
+  },
+  {
+    slug: "zoning",
+    term: "Zoning",
+    category: "Development & Construction",
+    shortDefinition:
+      "Municipal regulations dictating how land can be used — commercial, residential, industrial, mixed-use.",
+    definition:
+      "Zoning is the regulatory framework established by local governments dictating permitted uses, density, height, setbacks, and other development parameters for each parcel. Zoning districts (e.g., C-2 commercial, R-1 residential) have specific permitted and conditional uses. Rezoning can take 6-12 months and carries approval risk.",
+    relatedTerms: ["entitlements", "variance", "land-use-attorney"],
+  },
+  {
+    slug: "entitlements",
+    term: "Entitlements",
+    category: "Development & Construction",
+    shortDefinition:
+      "The governmental approvals required before development can proceed — site plan, variance, conditional use, plat approval.",
+    definition:
+      "Entitlements are the specific approvals a property must obtain from the municipality before development can proceed: site plan approval, variance, conditional use permit, plat approval, concurrency certificate. Entitlement processes typically take 3-12 months and carry approval risk. Pre-entitled land commands premium pricing.",
+    relatedTerms: ["zoning", "variance", "site-plan"],
+  },
+  {
+    slug: "variance",
+    term: "Variance",
+    category: "Development & Construction",
+    shortDefinition:
+      "Municipal approval allowing a specific property to deviate from zoning requirements due to unique hardship.",
+    definition:
+      "A variance is a municipal approval permitting a specific property to deviate from zoning requirements (setback, height, parking count, etc.) based on unique hardship. Requires demonstrating the hardship is property-specific and the variance won't harm neighbors. Approvals involve planning commission hearings and can take 2-4 months.",
+    relatedTerms: ["zoning", "entitlements"],
+  },
+  {
+    slug: "site-plan",
+    term: "Site Plan",
+    category: "Development & Construction",
+    shortDefinition:
+      "Engineering drawings showing how a site will be developed — building, parking, drainage, landscaping, utilities.",
+    definition:
+      "Site plan refers to the engineering drawings showing proposed development on a site — building footprint, parking layout, access drives, stormwater management, landscaping, utilities. Site plan approval is required before building permits can be issued. Typically produced by civil engineer; approved through planning commission or administrative review.",
+    relatedTerms: ["entitlements", "zoning", "civil-engineer"],
+  },
+  {
+    slug: "civil-engineer",
+    term: "Civil Engineer",
+    category: "Development & Construction",
+    shortDefinition:
+      "Licensed engineer who designs site-level infrastructure — grading, drainage, utilities, site plans.",
+    definition:
+      "A civil engineer designs the site-level infrastructure for a commercial development — grading, drainage, stormwater management, utility connections, parking, driveways. Civil engineering plans are required for site plan approval and building permits. Typical cost: $15,000-$75,000+ per project depending on complexity.",
+    relatedTerms: ["site-plan", "entitlements"],
+  },
+  {
+    slug: "ecl",
+    term: "Environmental Contamination Liability",
+    category: "Tax & Legal",
+    shortDefinition:
+      "Under federal CERCLA law, property owners can be held liable for contamination regardless of who caused it — even if it occurred before they owned the property.",
+    definition:
+      "Under the federal Comprehensive Environmental Response, Compensation, and Liability Act (CERCLA), current property owners can be held liable for environmental contamination regardless of whether they caused it. This is why Phase I Environmental Site Assessments are critical — they establish the 'innocent landowner' or 'bona fide prospective purchaser' defense.",
+    relatedTerms: ["phase-1-esa", "phase-2-esa"],
+  },
+  {
+    slug: "market-rent",
+    term: "Market Rent",
+    category: "Investment Metrics",
+    shortDefinition:
+      "The rent a property would command if leased today in an arms-length transaction. Used to evaluate mark-to-market upside.",
+    definition:
+      "Market rent is the rent a property would achieve in a current arms-length transaction with a willing, informed tenant. Compared to actual contract rent, market rent reveals mark-to-market upside (or downside) as leases roll. Key metric in value-add underwriting — the gap between contract and market rent drives projected NOI growth.",
+    relatedTerms: ["rent-roll", "value-add"],
+  },
+  {
+    slug: "rent-roll",
+    term: "Rent Roll",
+    category: "Investment Metrics",
+    shortDefinition:
+      "Schedule of all tenants in a property showing unit, square footage, lease terms, and rent amounts. Core due diligence document.",
+    definition:
+      "A rent roll is a schedule listing every tenant in a property: unit/suite, tenant name, leased square footage, lease start/end dates, current rent, rent escalations, options, and security deposit. The rent roll is one of the most important due diligence documents — it forms the basis of income underwriting.",
+    relatedTerms: ["estoppel-certificate", "market-rent"],
+  },
 ];
 
 export function getGlossaryTerm(slug: string): GlossaryTerm | undefined {

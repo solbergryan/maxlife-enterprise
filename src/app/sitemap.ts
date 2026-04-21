@@ -13,6 +13,7 @@ import { jobs } from "@/data/careers";
 import { faqTopics } from "@/data/faqs";
 import { nnnTenants } from "@/data/nnn-tenants";
 import { glossaryTerms } from "@/data/glossary";
+import { investorPersonas } from "@/data/investor-personas";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -449,6 +450,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
+    // Investor persona pages
+    {
+      url: `${BASE_URL}/investors`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    ...investorPersonas.map((p) => ({
+      url: `${BASE_URL}/investors/${p.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     // Glossary
     {
       url: `${BASE_URL}/glossary`,
