@@ -12,6 +12,7 @@ import { professionals } from "@/lib/professionals";
 import { jobs } from "@/data/careers";
 import { faqTopics } from "@/data/faqs";
 import { nnnTenants } from "@/data/nnn-tenants";
+import { glossaryTerms } from "@/data/glossary";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -448,6 +449,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.85,
     },
+    // Glossary
+    {
+      url: `${BASE_URL}/glossary`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+    ...glossaryTerms.map((t) => ({
+      url: `${BASE_URL}/glossary/${t.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
     // New comparison blog posts
     ...[
       "nnn-vs-multifamily-investing",

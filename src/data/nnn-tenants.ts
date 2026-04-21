@@ -439,6 +439,638 @@ export const nnnTenants: NNNTenant[] = [
       "Some leases are NN not absolute NNN",
     ],
   },
+
+  // Additional tenants
+  {
+    slug: "wawa",
+    tenant: "Wawa",
+    category: "Convenience Store",
+    creditRating: "Private (very strong)",
+    typicalCapRate: "4.75% - 5.50%",
+    typicalLeaseTerm: "20 years",
+    typicalBuildingSize: "2,800 - 6,300 SF",
+    typicalLotSize: "2.00 - 2.50 acres",
+    typicalPrice: "$4M - $10M+",
+    metaDescription:
+      "Wawa NNN properties for sale in Florida — premier convenience store with fuel net lease real estate. Available deals through MaxLife Development.",
+    overview:
+      "Wawa is the premium convenience store chain in Florida and the Mid-Atlantic, with ~1,100 stores expanding aggressively into Florida. Wawa NNN deals are among the most coveted net lease assets due to the company's strong financial performance, 20-year lease commitments, and premium pad site locations with large fuel canopies and robust food service operations.",
+    investmentHighlights: [
+      "Premium convenience store brand with strong Florida expansion",
+      "20-year initial lease terms",
+      "Absolute NNN lease structure",
+      "Large 2+ acre pad sites at major intersections",
+      "Strong food service + fuel revenue diversification",
+      "Private company with excellent financial performance",
+    ],
+    leaseStructure:
+      "Wawa leases are typically 20-year absolute NNN with 4-6 five-year renewal options and 7.5-10% rent bumps every 5 years. Corporate guarantee from Wawa, Inc.",
+    tenantProfile:
+      "Wawa, Inc. is a private family/employee-owned company based in Pennsylvania with ~1,100 stores across 8 states. Known for premium food service, fuel, and convenience. Aggressive Florida expansion with dozens of new stores annually. Credit is private but treated as very strong.",
+    floridaNotes:
+      "Wawa has 200+ Florida locations and continues aggressive expansion. Premier pad sites in growth corridors trade at 4.75-5.25% cap rates. Newly opened stores with 20 years remaining trade at the tightest end.",
+    whyInvest: [
+      "Best-in-class convenience store brand in Florida",
+      "Long-term lease commitments on prime pad sites",
+      "Strong operating model (food + fuel + convenience)",
+      "Tight cap rates reflect premium brand positioning",
+      "Aggressive Florida expansion creates new inventory",
+    ],
+    considerations: [
+      "Tight cap rates limit current yield",
+      "Environmental diligence critical on fuel properties",
+      "Private company means less public financial data",
+      "Large lot sizes concentrate land basis",
+    ],
+  },
+  {
+    slug: "chase-bank",
+    tenant: "Chase Bank",
+    category: "Bank",
+    creditRating: "S&P: A+",
+    typicalCapRate: "4.50% - 5.25%",
+    typicalLeaseTerm: "15 - 20 years",
+    typicalBuildingSize: "2,600 - 4,800 SF",
+    typicalLotSize: "0.65 - 1.00 acres",
+    typicalPrice: "$3M - $6M",
+    metaDescription:
+      "Chase Bank NNN ground lease properties for sale in Florida — premier bank branch net lease real estate with top-tier corporate credit. Available deals through MaxLife Development.",
+    overview:
+      "Chase Bank (JPMorgan Chase & Co., NYSE: JPM) is the largest US bank by assets, with approximately 5,000 branches nationwide. Chase NNN deals are typically ground lease structures with A+ corporate credit — one of the strongest in net lease real estate. Ground lease cap rates reflect the premium credit profile and minimal landlord risk.",
+    investmentHighlights: [
+      "A+ corporate credit (JPMorgan Chase)",
+      "15-20 year ground lease terms",
+      "Premier signalized intersection locations",
+      "Drive-thru banking essential",
+      "Minimal landlord risk (ground lease structure)",
+      "One of the tightest cap rate categories in net lease",
+    ],
+    leaseStructure:
+      "Chase deals are typically ground leases with 15-20 year initial terms and multiple 5-year renewal options. Rent bumps commonly 10% every 5 years. JPMorgan Chase corporate guarantee. Chase prefers ground lease structure where the bank owns the improvements.",
+    tenantProfile:
+      "JPMorgan Chase is the largest bank in America with $3.9T+ in assets. Credit: S&P A+, Moody's Aa2 (among the strongest investment-grade ratings in US corporate finance). Consistent profitability and strong capital ratios.",
+    floridaNotes:
+      "Florida has 400+ Chase branches with continued expansion. Prime Florida pad sites trade at 4.5-5% cap rates. Newer ground leases in growth markets trade at the tightest end.",
+    whyInvest: [
+      "One of the strongest credits in net lease commercial real estate",
+      "Ground lease structure eliminates building-level risk",
+      "20-year lease commitments with long reversion horizon",
+      "Prime intersection real estate with long-term value",
+      "Tight cap rates reflect near-institutional grade safety",
+    ],
+    considerations: [
+      "Tight cap rates mean low current yield",
+      "Ground lease structure limits depreciation benefits",
+      "Bank branch consolidation trend — verify specific location",
+      "Most prime sites already owned by institutional buyers",
+    ],
+  },
+  {
+    slug: "aldi",
+    tenant: "Aldi",
+    category: "Grocery",
+    creditRating: "Private (very strong)",
+    typicalCapRate: "5.25% - 6.00%",
+    typicalLeaseTerm: "15 - 20 years",
+    typicalBuildingSize: "17,000 - 22,000 SF",
+    typicalLotSize: "2.00 - 3.00 acres",
+    typicalPrice: "$4M - $8M",
+    metaDescription:
+      "Aldi NNN grocery properties for sale in Florida — discount grocery net lease real estate with strong corporate guarantees. Available deals through MaxLife Development.",
+    overview:
+      "Aldi is the fastest-growing grocery chain in America with approximately 2,400 US stores and aggressive expansion plans targeting 800 new stores by 2028. Aldi NNN properties trade at attractive cap rates with strong corporate backing from Aldi Süd (one of Europe's largest private companies).",
+    investmentHighlights: [
+      "Fastest-growing US grocery chain",
+      "Strong private parent company (Aldi Süd)",
+      "15-20 year lease terms",
+      "Absolute NNN lease structure",
+      "Large pad sites with freestanding or anchor pad configurations",
+      "Aggressive expansion creates continuous new BTS inventory",
+    ],
+    leaseStructure:
+      "Aldi leases are typically 15-20 year absolute NNN with 4 five-year renewal options and 5-10% rent bumps every 5 years. Corporate guarantee from Aldi Süd or US subsidiary.",
+    tenantProfile:
+      "Aldi Süd operates approximately 2,400 US stores under the Aldi brand and is part of one of the world's largest private grocery companies. The discount grocery model with high private-label mix creates strong unit economics. Private company but treated as very strong credit.",
+    floridaNotes:
+      "Aldi has 80+ Florida stores with active expansion in Orlando, Tampa, Jacksonville, and South Florida. New Florida BTS Aldi locations trade at 5.25-5.75% cap rates. Continued expansion creates strong buyer demand.",
+    whyInvest: [
+      "Fastest-growing US grocer with aggressive expansion",
+      "Recession-resistant discount grocery model",
+      "Strong private parent company backing",
+      "Long-term lease commitments on well-located pad sites",
+      "Active BTS program creates new inventory",
+    ],
+    considerations: [
+      "Large building size = higher entry price than small-box NNN",
+      "Private company = less financial transparency",
+      "Some locations are anchor pads in shopping centers (not freestanding)",
+      "Grocery competition varies by submarket",
+    ],
+  },
+  {
+    slug: "davita-dialysis",
+    tenant: "DaVita Dialysis",
+    category: "Medical",
+    creditRating: "S&P: BB+",
+    typicalCapRate: "6.00% - 6.75%",
+    typicalLeaseTerm: "10 - 20 years",
+    typicalBuildingSize: "8,000 - 12,000 SF",
+    typicalLotSize: "0.75 - 1.50 acres",
+    typicalPrice: "$2.5M - $5M",
+    metaDescription:
+      "DaVita Dialysis NNN properties for sale in Florida — specialized medical net lease real estate with corporate guarantees. Available dialysis center deals through MaxLife Development.",
+    overview:
+      "DaVita Inc. (NYSE: DVA) is the largest dialysis provider in the US with approximately 2,700 centers. DaVita NNN properties trade at wider cap rates due to the company's non-investment-grade credit (BB+), but the specialized build-out and sticky patient relationships make DaVita locations exceptionally difficult to relocate — a key tenant retention factor.",
+    investmentHighlights: [
+      "Largest US dialysis provider",
+      "Sticky tenant (specialized build-out hard to replicate)",
+      "Long-term lease terms (10-20 years)",
+      "NNN lease structure",
+      "Recession-resistant (end-stage renal disease is non-discretionary)",
+      "Wider cap rates due to credit profile",
+    ],
+    leaseStructure:
+      "DaVita leases are typically 10-20 year NNN terms with renewal options and 5-10% rent bumps every 5 years. Specialized plumbing, water supply, and electrical requirements make tenant relocations expensive.",
+    tenantProfile:
+      "DaVita operates 2,700+ US dialysis centers and serves ~200,000 patients. Revenue $12B+. Credit: S&P BB+, Moody's Ba2 (non-investment grade but stable). The dialysis market is essentially a duopoly with DaVita and Fresenius.",
+    floridaNotes:
+      "Florida has 200+ DaVita centers. Properties trade at 6-6.75% cap rates depending on lease term and location. Florida's aging population supports long-term dialysis demand.",
+    whyInvest: [
+      "Sticky tenant with high switching costs",
+      "Non-discretionary medical necessity",
+      "Wider cap rates than investment-grade NNN",
+      "Florida demographic tailwinds",
+      "Long-term lease commitments",
+    ],
+    considerations: [
+      "Non-investment-grade credit (BB+)",
+      "Healthcare reimbursement risk (Medicare changes)",
+      "Specialized build-out creates higher tenant improvements",
+      "Verify water supply and specialized infrastructure",
+    ],
+  },
+  {
+    slug: "chipotle",
+    tenant: "Chipotle",
+    category: "QSR",
+    creditRating: "S&P: BBB+",
+    typicalCapRate: "5.00% - 5.75%",
+    typicalLeaseTerm: "15 years + options",
+    typicalBuildingSize: "2,200 - 2,500 SF",
+    typicalLotSize: "0.75 - 1.00 acres",
+    typicalPrice: "$2.5M - $5M",
+    metaDescription:
+      "Chipotle NNN properties for sale in Florida — fast casual Mexican net lease real estate with investment-grade corporate guarantees. Available deals through MaxLife Development.",
+    overview:
+      "Chipotle Mexican Grill (NYSE: CMG) is one of the best-performing QSR chains with approximately 3,400 US locations. Chipotle's shift toward 'Chipotlane' drive-thru locations has driven unit-level performance and NNN real estate demand. Corporate-guaranteed leases with strong investment-grade credit.",
+    investmentHighlights: [
+      "Investment-grade corporate credit (BBB+)",
+      "Best-in-class QSR unit economics",
+      "Chipotlane (drive-thru) strategy driving new BTS",
+      "15-year lease terms with renewal options",
+      "Corporate-owned and operated model",
+      "Strong brand with young consumer loyalty",
+    ],
+    leaseStructure:
+      "Chipotle leases are typically NNN (or ground lease) with 15-year initial terms and 4 five-year options. Rent bumps 7-12% every 5 years. Corporate guarantee from Chipotle Mexican Grill, Inc.",
+    tenantProfile:
+      "Chipotle Mexican Grill operates 3,400+ corporate-owned US restaurants. Revenue $10B+. Credit: S&P BBB+, Moody's Baa2 (solid investment grade). Strong same-store sales growth and high average unit volumes ($3M+ per store).",
+    floridaNotes:
+      "Florida has 200+ Chipotle locations with aggressive Chipotlane expansion. Prime drive-thru locations trade at 5-5.5% cap rates.",
+    whyInvest: [
+      "Strong investment-grade corporate credit",
+      "Best-performing QSR chain for unit economics",
+      "Corporate-owned (no franchisee risk)",
+      "Active Chipotlane BTS program",
+      "Brand loyalty drives resilient performance",
+    ],
+    considerations: [
+      "Smaller building size limits reuse if Chipotle exits",
+      "Tight cap rates limit current yield",
+      "Verify Chipotlane vs. endcap configuration",
+      "Food safety track record warrants due diligence",
+    ],
+  },
+  {
+    slug: "panera-bread",
+    tenant: "Panera Bread",
+    category: "QSR",
+    creditRating: "Private (JAB Holdings)",
+    typicalCapRate: "5.50% - 6.25%",
+    typicalLeaseTerm: "15 years + options",
+    typicalBuildingSize: "4,000 - 4,500 SF",
+    typicalLotSize: "1.00 - 1.50 acres",
+    typicalPrice: "$2.5M - $5M",
+    metaDescription:
+      "Panera Bread NNN properties for sale in Florida — fast casual net lease real estate with strong corporate parent JAB Holdings. Available deals through MaxLife Development.",
+    overview:
+      "Panera Bread operates approximately 2,100 US bakery-cafes under private ownership (JAB Holdings). Panera NNN properties benefit from the breakfast/lunch daypart, strong catering revenue, and expanding drive-thru locations. Cap rates reflect the private company credit profile.",
+    investmentHighlights: [
+      "Strong private parent company (JAB Holdings)",
+      "Breakfast/lunch daypart diversification",
+      "Drive-thru locations increasingly common on new BTS",
+      "15-year lease terms",
+      "NNN lease structure",
+      "Catering revenue provides operational diversification",
+    ],
+    leaseStructure:
+      "Panera leases are typically NNN with 15-year initial terms and renewal options. Rent bumps 5-10% every 5 years. Corporate guarantee from Panera Bread or parent entity.",
+    tenantProfile:
+      "Panera Bread, owned by JAB Holdings (private European investment firm), operates 2,100+ US bakery-cafes. JAB Holdings also owns Pret A Manger, Keurig Dr Pepper, and other major brands. Private but well-capitalized.",
+    floridaNotes:
+      "Florida has 100+ Panera locations. Prime pad sites with drive-thru trade at 5.5-6% cap rates.",
+    whyInvest: [
+      "Strong private parent with deep capital",
+      "Multi-daypart revenue diversification",
+      "Growing drive-thru format",
+      "Stable fast casual operator",
+      "Larger building size supports re-leasing",
+    ],
+    considerations: [
+      "Private company (less transparency)",
+      "Fast casual competition is intense",
+      "Verify drive-thru vs. in-line configuration",
+      "Labor costs pressuring unit economics industry-wide",
+    ],
+  },
+  {
+    slug: "taco-bell",
+    tenant: "Taco Bell",
+    category: "QSR",
+    creditRating: "S&P: BB+ (Yum!)",
+    typicalCapRate: "5.25% - 6.00%",
+    typicalLeaseTerm: "20 years",
+    typicalBuildingSize: "2,000 - 2,500 SF",
+    typicalLotSize: "0.60 - 1.00 acres",
+    typicalPrice: "$1.8M - $3.5M",
+    metaDescription:
+      "Taco Bell NNN properties for sale in Florida — QSR net lease real estate with Yum! Brands corporate credit. Available drive-thru Taco Bell deals through MaxLife Development.",
+    overview:
+      "Taco Bell, owned by Yum! Brands (NYSE: YUM), is one of the largest QSR chains in America with approximately 7,400 US locations. Most properties are franchisee-owned and leased, so lease guarantees vary — corporate-guaranteed deals trade tighter than franchisee-guaranteed deals.",
+    investmentHighlights: [
+      "Yum! Brands corporate guarantee (when available)",
+      "20-year lease terms",
+      "Absolute NNN lease structure common",
+      "Drive-thru corner pad locations",
+      "Strong brand recognition and customer loyalty",
+      "Recession-resistant value-oriented model",
+    ],
+    leaseStructure:
+      "Taco Bell leases vary widely depending on corporate vs. franchisee guarantee. Corporate-guaranteed deals trade at 5.25-5.75% cap rates; franchisee-guaranteed trade wider (5.75-6.5%) depending on franchisee credit strength. 20-year initial terms with 4-5 five-year options.",
+    tenantProfile:
+      "Yum! Brands owns Taco Bell, KFC, and Pizza Hut with ~57,000 global restaurants. Credit: S&P BB+, Moody's Ba2 (non-investment grade but stable). Most US Taco Bells are franchisee-operated; corporate-guaranteed deals are preferred by investors.",
+    floridaNotes:
+      "Florida has 400+ Taco Bell locations. Corporate-guaranteed properties in growth markets trade at 5.25-5.75% cap rates. Franchisee-guaranteed deals require individual franchisee credit analysis.",
+    whyInvest: [
+      "Established QSR brand with strong customer loyalty",
+      "Drive-thru pad sites in prime locations",
+      "20-year lease commitments",
+      "Absolute NNN on most corporate deals",
+      "Wider cap rates than Chick-fil-A/Starbucks",
+    ],
+    considerations: [
+      "Critical to verify corporate vs. franchisee guarantee",
+      "Non-investment-grade parent credit (BB+)",
+      "Franchisee deals require credit diligence on operator",
+      "Competitive QSR Mexican segment",
+    ],
+  },
+  {
+    slug: "tractor-supply",
+    tenant: "Tractor Supply",
+    category: "Retail",
+    creditRating: "S&P: A-",
+    typicalCapRate: "5.75% - 6.50%",
+    typicalLeaseTerm: "15 - 20 years",
+    typicalBuildingSize: "19,000 - 24,000 SF",
+    typicalLotSize: "3.50 - 5.00 acres",
+    typicalPrice: "$3M - $6M",
+    metaDescription:
+      "Tractor Supply Co NNN properties for sale in Florida — rural retail net lease real estate with investment-grade corporate credit. Available deals through MaxLife Development.",
+    overview:
+      "Tractor Supply Company (NASDAQ: TSCO) is the largest rural lifestyle retailer in America with approximately 2,300 stores. Strong investment-grade credit (A-) and consistent expansion make Tractor Supply NNN properties attractive for investors seeking rural/secondary market exposure with corporate guarantees.",
+    investmentHighlights: [
+      "Strong investment-grade credit (A-)",
+      "Largest rural lifestyle retailer in America",
+      "15-20 year lease terms",
+      "Absolute NNN lease structure",
+      "Rural/secondary market locations (reduced competition)",
+      "Consistent expansion and strong financial performance",
+    ],
+    leaseStructure:
+      "Tractor Supply leases are typically 15-20 year absolute NNN with 4 five-year renewal options and 10% rent bumps every 5 years. Corporate guarantee from Tractor Supply Company.",
+    tenantProfile:
+      "Tractor Supply Company operates 2,300+ stores across 49 states. Revenue $14B+. Credit: S&P A-, Moody's Baa1 (solid investment grade). Growing petfood and animal supply segments drive consistent same-store sales.",
+    floridaNotes:
+      "Florida has 80+ Tractor Supply locations primarily in rural and suburban markets. New Florida BTS stores trade at 5.75-6.25% cap rates.",
+    whyInvest: [
+      "Strong investment-grade credit in a specialty category",
+      "Large footprint with rural/suburban diversification",
+      "Long-term lease commitments",
+      "Consistent financial performance and expansion",
+      "Limited competition in rural markets",
+    ],
+    considerations: [
+      "Large lot size concentrates land basis",
+      "Rural markets may have less liquidity at resale",
+      "Large building size limits re-leasing options",
+      "Ecommerce pressure on rural retail warrants monitoring",
+    ],
+  },
+  {
+    slug: "advance-auto-parts",
+    tenant: "Advance Auto Parts",
+    category: "Auto Parts",
+    creditRating: "S&P: BB- (recently downgraded)",
+    typicalCapRate: "5.75% - 6.75%",
+    typicalLeaseTerm: "15 years",
+    typicalBuildingSize: "6,000 - 7,000 SF",
+    typicalLotSize: "0.75 - 1.25 acres",
+    typicalPrice: "$1.5M - $2.5M",
+    metaDescription:
+      "Advance Auto Parts NNN properties for sale in Florida — auto parts retail net lease investments. Cap rates and lease structures through MaxLife Development.",
+    overview:
+      "Advance Auto Parts (NYSE: AAP) is the third-largest auto parts retailer in America with approximately 4,700 stores. The company has faced operational challenges and a 2024 credit downgrade, which has widened cap rates compared to AutoZone and O'Reilly. Value-oriented investors find compelling opportunities in Advance Auto NNN due to the wider yields.",
+    investmentHighlights: [
+      "Third-largest US auto parts retailer",
+      "Wider cap rates than AutoZone/O'Reilly",
+      "15-year lease terms",
+      "NN lease structure (landlord has roof and structure)",
+      "Long turnaround runway if operational improvements continue",
+      "Value play for yield-focused investors",
+    ],
+    leaseStructure:
+      "Most Advance Auto leases are NN (Double Net) with landlord responsible for roof and structure — not absolute NNN. 15-year initial terms with renewal options and 5-10% rent bumps every 5 years.",
+    tenantProfile:
+      "Advance Auto Parts has 4,700+ US stores. Credit: S&P BB- (downgraded from BB in 2024 following operational challenges). Revenue $11B+. The company is pursuing a turnaround strategy under new management.",
+    floridaNotes:
+      "Florida has 200+ Advance Auto locations. Properties trade at 5.75-6.5% cap rates reflecting the credit downgrade.",
+    whyInvest: [
+      "Wider cap rates create value opportunity",
+      "Third-largest auto parts chain with established network",
+      "Turnaround potential if operational improvements continue",
+      "Category benefits from aging vehicle fleet",
+      "Lower entry prices than AutoZone/O'Reilly",
+    ],
+    considerations: [
+      "Non-investment-grade credit (BB-) creates higher risk",
+      "NN lease structure means some landlord responsibilities",
+      "Turnaround execution uncertainty",
+      "Track underperforming store closures carefully",
+    ],
+  },
+  {
+    slug: "take-5-oil-change",
+    tenant: "Take 5 Oil Change",
+    category: "Auto Service",
+    creditRating: "Private (Driven Brands)",
+    typicalCapRate: "5.50% - 6.25%",
+    typicalLeaseTerm: "15 years",
+    typicalBuildingSize: "1,400 - 1,600 SF",
+    typicalLotSize: "0.50 - 0.65 acres",
+    typicalPrice: "$1.5M - $2.5M",
+    metaDescription:
+      "Take 5 Oil Change NNN properties for sale in Florida — quick oil change net lease real estate with Driven Brands corporate backing. Available deals through MaxLife Development.",
+    overview:
+      "Take 5 Oil Change, owned by Driven Brands (NASDAQ: DRVN), is one of the fastest-growing quick oil change concepts with approximately 1,100 locations and aggressive expansion plans. The small footprint, drive-thru-only format, and growing unit count make Take 5 a compelling NNN category for investors.",
+    investmentHighlights: [
+      "Fastest-growing US quick oil change chain",
+      "Driven Brands corporate backing",
+      "Small footprint = lower entry price",
+      "15-year absolute NNN lease structure",
+      "Drive-thru-only format (no lobby)",
+      "Active BTS program with aggressive expansion",
+    ],
+    leaseStructure:
+      "Take 5 leases are typically 15-year absolute NNN with 4 five-year renewal options and 10% rent bumps every 5 years. Corporate guarantee from Driven Brands or Take 5 entity.",
+    tenantProfile:
+      "Driven Brands owns Take 5 Oil Change, Meineke, Maaco, and other automotive service brands with 5,000+ combined locations. Public parent provides financial transparency. Company credit varies but is generally moderate.",
+    floridaNotes:
+      "Take 5 is rapidly expanding in Florida with new BTS locations across Orlando, Tampa, and secondary markets. New deals trade at 5.5-6% cap rates.",
+    whyInvest: [
+      "Fastest-growing oil change chain",
+      "Small footprint = affordable entry for investors",
+      "Active BTS creates continuous inventory",
+      "Secular tailwinds from aging vehicle fleet",
+      "Drive-thru model minimizes operational complexity",
+    ],
+    considerations: [
+      "Specialized building layout limits re-leasing options",
+      "Long-term EV transition could impact industry",
+      "Small site = limited redevelopment value",
+      "Verify Driven Brands corporate vs. franchisee guarantee",
+    ],
+  },
+  {
+    slug: "popeyes",
+    tenant: "Popeyes",
+    category: "QSR",
+    creditRating: "Franchisee-dependent",
+    typicalCapRate: "5.50% - 6.75%",
+    typicalLeaseTerm: "20 - 25 years",
+    typicalBuildingSize: "2,200 - 2,800 SF",
+    typicalLotSize: "0.75 - 1.00 acres",
+    typicalPrice: "$1.8M - $3.5M",
+    metaDescription:
+      "Popeyes NNN properties for sale in Florida — chicken QSR net lease real estate. Available deals through MaxLife Development.",
+    overview:
+      "Popeyes Louisiana Kitchen, owned by Restaurant Brands International (NYSE: QSR), is one of the fastest-growing chicken QSR chains with approximately 3,700 US locations. Cap rates vary significantly based on corporate vs. franchisee guarantee and franchisee credit strength.",
+    investmentHighlights: [
+      "Fastest-growing chicken QSR in America",
+      "20-25 year lease terms",
+      "Absolute NNN lease structure common",
+      "Corner pad sites with drive-thru",
+      "Strong same-store sales momentum since 2019",
+      "Active BTS program",
+    ],
+    leaseStructure:
+      "Most Popeyes leases are franchisee-guaranteed with 20-25 year absolute NNN terms and 5-year options. Rent bumps 10% every 5 years. RBI corporate guarantees are rare but command premium cap rates.",
+    tenantProfile:
+      "Restaurant Brands International (parent) also owns Burger King and Tim Hortons. Most Popeyes units are franchisee-operated. The 2019 chicken sandwich launch transformed unit economics and drove category expansion.",
+    floridaNotes:
+      "Florida has 150+ Popeyes locations with active BTS expansion. Cap rates vary 5.5-6.75% depending on franchisee credit.",
+    whyInvest: [
+      "Fast-growing chicken QSR category",
+      "Long-term lease commitments",
+      "Drive-thru corner pad sites",
+      "Active BTS creates new inventory",
+      "Higher yield than corporate QSR tenants",
+    ],
+    considerations: [
+      "Franchisee credit risk (verify operator financial strength)",
+      "Corporate guarantees rare",
+      "Competitive chicken QSR segment",
+      "Franchisee-specific lease terms vary",
+    ],
+  },
+  {
+    slug: "wendys",
+    tenant: "Wendy's",
+    category: "QSR",
+    creditRating: "S&P: BB (Wendy's Co.)",
+    typicalCapRate: "5.50% - 6.25%",
+    typicalLeaseTerm: "20 years",
+    typicalBuildingSize: "2,500 - 3,500 SF",
+    typicalLotSize: "0.75 - 1.25 acres",
+    typicalPrice: "$2M - $4M",
+    metaDescription:
+      "Wendy's NNN properties for sale in Florida — QSR net lease real estate with corporate or franchisee guarantees. Available deals through MaxLife Development.",
+    overview:
+      "The Wendy's Company (NASDAQ: WEN) operates approximately 7,000 global restaurants, mostly franchisee-operated. Wendy's NNN cap rates vary by guarantee structure (corporate vs. franchisee) and franchisee credit quality.",
+    investmentHighlights: [
+      "Third-largest US burger chain",
+      "20-year initial lease terms",
+      "NNN lease structure common",
+      "Signalized corner pad sites preferred",
+      "Wide franchise network = multiple deal sources",
+      "Consistent same-store sales performance",
+    ],
+    leaseStructure:
+      "Wendy's leases are typically 20-year NNN with 4 five-year options and 10% rent bumps every 5 years. Corporate-guaranteed deals trade tighter than franchisee-guaranteed.",
+    tenantProfile:
+      "The Wendy's Company is primarily a franchisor (90%+ of stores franchisee-operated). Credit: S&P BB (non-investment grade but stable). Strong brand with loyal customer base.",
+    floridaNotes:
+      "Florida has 300+ Wendy's locations. Franchisee-guaranteed properties in growth markets trade at 5.75-6.25% cap rates.",
+    whyInvest: [
+      "Established brand with 50+ year history",
+      "20-year lease commitments",
+      "Wide franchisee network supports inventory",
+      "Drive-thru corner locations",
+      "Competitive cap rates in QSR category",
+    ],
+    considerations: [
+      "Franchisee guarantee most common (verify credit)",
+      "Non-investment-grade corporate credit",
+      "Competitive burger QSR segment",
+      "Corporate deals are rare and trade at premium",
+    ],
+  },
+  {
+    slug: "wingstop",
+    tenant: "Wingstop",
+    category: "QSR",
+    creditRating: "S&P: B+",
+    typicalCapRate: "6.00% - 6.75%",
+    typicalLeaseTerm: "10 - 15 years",
+    typicalBuildingSize: "1,800 - 2,500 SF",
+    typicalLotSize: "Endcap / smaller pad",
+    typicalPrice: "$1.5M - $3M",
+    metaDescription:
+      "Wingstop NNN properties for sale in Florida — chicken wing fast casual net lease real estate. Available deals through MaxLife Development.",
+    overview:
+      "Wingstop (NASDAQ: WING) operates approximately 2,200 US restaurants with 95%+ franchisee-operated. The chain has demonstrated exceptional same-store sales growth and unit economics. Smaller footprint and delivery-heavy model create a different investment profile than traditional drive-thru QSR.",
+    investmentHighlights: [
+      "Best-in-class same-store sales growth in QSR",
+      "Delivery-heavy model with strong unit economics",
+      "Smaller footprint = more affordable entry",
+      "10-15 year lease terms",
+      "NNN lease structure",
+      "Rapid unit expansion",
+    ],
+    leaseStructure:
+      "Wingstop leases are typically 10-15 year NNN with renewal options. Rent bumps 10% every 5 years. Mostly franchisee-guaranteed.",
+    tenantProfile:
+      "Wingstop Inc. (franchisor). 95%+ of US stores are franchisee-operated. Credit: S&P B+ (non-investment grade). Exceptional financial metrics: 28%+ royalty margins, consistent double-digit same-store sales growth.",
+    floridaNotes:
+      "Florida has 100+ Wingstop locations with active expansion. Endcap or freestanding units trade at 6-6.5% cap rates.",
+    whyInvest: [
+      "Best-in-class QSR operator performance",
+      "Smaller footprint supports re-leasing flexibility",
+      "Active expansion creates new inventory",
+      "Delivery-forward model reduces dine-in capex",
+      "Wider cap rates than corporate QSR",
+    ],
+    considerations: [
+      "Non-investment-grade corporate credit (B+)",
+      "Franchisee credit analysis critical",
+      "Delivery-heavy model = different site criteria",
+      "Smaller properties have less institutional buyer appeal",
+    ],
+  },
+  {
+    slug: "fresenius-dialysis",
+    tenant: "Fresenius Kidney Care",
+    category: "Medical",
+    creditRating: "S&P: BBB-",
+    typicalCapRate: "6.00% - 7.00%",
+    typicalLeaseTerm: "10 - 15 years",
+    typicalBuildingSize: "8,000 - 11,000 SF",
+    typicalLotSize: "0.75 - 1.50 acres",
+    typicalPrice: "$2.5M - $5M",
+    metaDescription:
+      "Fresenius Kidney Care NNN properties for sale in Florida — specialized medical dialysis net lease real estate. Available deals through MaxLife Development.",
+    overview:
+      "Fresenius Medical Care (NYSE: FMS) is the second-largest US dialysis provider with approximately 2,600 US centers. Like DaVita, Fresenius properties benefit from sticky tenants (specialized build-out) and non-discretionary medical demand, with cap rates reflecting moderate investment-grade credit.",
+    investmentHighlights: [
+      "Second-largest US dialysis provider",
+      "Sticky tenant (specialized build-out)",
+      "Investment-grade corporate credit (BBB-)",
+      "Non-discretionary medical demand",
+      "NNN lease structure",
+      "Florida aging demographics support long-term demand",
+    ],
+    leaseStructure:
+      "Fresenius leases are typically 10-15 year NNN with renewal options and 5-10% rent bumps every 5 years. Corporate guarantee from Fresenius Medical Care North America.",
+    tenantProfile:
+      "Fresenius Medical Care operates 2,600+ US dialysis centers. Global parent Fresenius SE is one of Europe's largest healthcare companies. Credit: S&P BBB- (investment grade, below DaVita).",
+    floridaNotes:
+      "Florida has 150+ Fresenius centers. Properties trade at 6-6.75% cap rates depending on lease term and location.",
+    whyInvest: [
+      "Investment-grade credit in a specialty category",
+      "Sticky tenant with high switching costs",
+      "Non-discretionary medical necessity",
+      "Duopoly category (DaVita + Fresenius)",
+      "Florida aging demographics tailwind",
+    ],
+    considerations: [
+      "Lower-end investment-grade credit",
+      "Healthcare reimbursement risk",
+      "Specialized build-out requirements",
+      "Category regulatory scrutiny",
+    ],
+  },
+  {
+    slug: "dutch-bros",
+    tenant: "Dutch Bros Coffee",
+    category: "Coffee",
+    creditRating: "S&P: B",
+    typicalCapRate: "4.50% - 5.25%",
+    typicalLeaseTerm: "15 years",
+    typicalBuildingSize: "375 - 1,000 SF",
+    typicalLotSize: "0.40 - 0.60 acres",
+    typicalPrice: "$1.8M - $3.5M",
+    metaDescription:
+      "Dutch Bros Coffee NNN properties for sale in Florida — drive-thru coffee net lease real estate. Available Dutch Bros NNN deals through MaxLife Development.",
+    overview:
+      "Dutch Bros (NYSE: BROS) is one of the fastest-growing drive-thru coffee chains with approximately 900 US locations. The ultra-compact drive-thru-only prototype and aggressive expansion make Dutch Bros a rising NNN category, with tight cap rates reflecting growth expectations.",
+    investmentHighlights: [
+      "Fastest-growing drive-thru coffee chain",
+      "Ultra-compact footprint (~950 SF prototype)",
+      "Dual-lane drive-thru only (no lobby)",
+      "15-year absolute NNN lease terms",
+      "Small land footprint = affordable entry",
+      "Aggressive national expansion",
+    ],
+    leaseStructure:
+      "Dutch Bros leases are typically 15-year absolute NNN with 4 five-year renewal options and 10% rent bumps every 5 years. Corporate guarantee from Dutch Bros, Inc.",
+    tenantProfile:
+      "Dutch Bros is a publicly-traded corporate-operated coffee chain (not franchised in most states). Revenue $1.2B+. Credit: S&P B (non-investment grade, early growth stage). Exceptional unit economics and same-store sales growth.",
+    floridaNotes:
+      "Dutch Bros is actively expanding in Florida with new BTS locations across Central Florida. Prime pad sites trade at 4.5-5% cap rates reflecting growth expectations.",
+    whyInvest: [
+      "Fastest-growing coffee chain in America",
+      "Ultra-compact footprint with high sales/SF",
+      "Corporate-owned model eliminates franchisee risk",
+      "Active Florida expansion",
+      "Absolute NNN with long-term commitments",
+    ],
+    considerations: [
+      "Non-investment-grade credit (B) creates risk",
+      "Specialized ultra-small building limits re-leasing",
+      "Growth-stage company (financial performance volatility)",
+      "Tight cap rates priced for expansion success",
+    ],
+  },
 ];
 
 export function getTenant(slug: string): NNNTenant | undefined {
