@@ -53,6 +53,7 @@ export const mainNav: NavLink[] = [
       { label: "Blog & Insights", href: "/blog" },
       { label: "Academy", href: "/academy" },
       { label: "CRE Professionals Guide", href: "/professionals" },
+      { label: "CRE Team Org Chart", href: "/professionals/org-chart" },
     ],
   },
   { label: "About", href: "/about" },

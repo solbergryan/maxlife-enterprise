@@ -347,6 +347,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/professionals/org-chart`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
   ];
   const professionalPages: MetadataRoute.Sitemap = professionals.map((p) => ({
     url: `${BASE_URL}/professionals/${p.slug}`,

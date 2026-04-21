@@ -74,6 +74,54 @@ export default function ProfessionalsPage() {
         </div>
       </section>
 
+      {/* Org Chart Callout */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <Link
+          href="/professionals/org-chart"
+          className="group flex items-center justify-between bg-gradient-to-r from-gold/10 via-gold/5 to-transparent border border-gold/30 hover:border-gold/60 rounded-xl p-5 transition-colors"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center shrink-0">
+              <svg
+                className="w-6 h-6 text-gold"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
+                />
+              </svg>
+            </div>
+            <div>
+              <p className="text-white font-semibold group-hover:text-gold transition-colors">
+                Interactive Org Chart &mdash; Search &amp; Explore Visually
+              </p>
+              <p className="text-gray-400 text-sm">
+                Filter {professionals.length} roles by category, search by
+                keyword, see the full CRE deal team at a glance.
+              </p>
+            </div>
+          </div>
+          <svg
+            className="w-5 h-5 text-gold shrink-0 group-hover:translate-x-1 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </Link>
+      </section>
+
       {/* Intro */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
