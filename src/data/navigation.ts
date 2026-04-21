@@ -35,10 +35,26 @@ export const mainNav: NavLink[] = [
     ],
   },
   {
+    label: "For Investors",
+    href: "/investors",
+    children: [
+      { label: "1031 Exchange Buyers", href: "/investors/1031-exchange-buyers" },
+      { label: "Family Offices", href: "/investors/family-offices" },
+      { label: "Foreign Investors", href: "/investors/foreign-investors" },
+      { label: "Passive Income Investors", href: "/investors/passive-income-investors" },
+      { label: "CRE Developers", href: "/investors/real-estate-developers" },
+      { label: "Institutional Investors", href: "/investors/institutional-investors" },
+      { label: "First-Time CRE Investors", href: "/investors/first-time-cre-investors" },
+    ],
+  },
+  {
     label: "Tools",
     href: "/investor-tools",
     children: [
       { label: "Deal Analyzer", href: "/deal-analyzer" },
+      { label: "Cap Rate Calculator", href: "/cap-rate-calculator" },
+      { label: "1031 Timeline Calculator", href: "/1031-timeline-calculator" },
+      { label: "Cost Segregation Calculator", href: "/cost-segregation-calculator" },
       { label: "Seller Net Sheet", href: "/net-sheets/seller" },
       { label: "Buyer Estimate", href: "/net-sheets/buyer" },
       { label: "For Sellers", href: "/opportunities" },
@@ -51,10 +67,24 @@ export const mainNav: NavLink[] = [
     children: [
       { label: "Market Reports", href: "/market-reports" },
       { label: "Blog & Insights", href: "/blog" },
+      { label: "FAQ", href: "/faq" },
+      { label: "CRE Glossary", href: "/glossary" },
+      { label: "Lease Types Guide", href: "/lease-types" },
+      { label: "NNN by Tenant", href: "/nnn-tenants" },
       { label: "Academy", href: "/academy" },
+      { label: "CRE Professionals Guide", href: "/professionals" },
+      { label: "CRE Team Org Chart", href: "/professionals/org-chart" },
     ],
   },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "About MaxLife", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
 ];
 
 export const footerInvestorLinks: NavLink[] = [
@@ -80,6 +110,7 @@ export const footerResourceLinks: NavLink[] = [
   { label: "Quarterly Market Reports", href: "/market-reports" },
   { label: "Market Insights (Blog)", href: "/blog" },
   { label: "Academy (Free CRE Courses)", href: "/academy" },
+  { label: "CRE Professionals Guide", href: "/professionals" },
   { label: "Orlando Market", href: "/markets/orlando-commercial-real-estate" },
   { label: "Brevard County Market", href: "/markets/brevard-county-commercial-real-estate" },
   { label: "About", href: "/about" },

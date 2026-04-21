@@ -8,6 +8,14 @@ import { getAllPropertyTypes } from "@/data/seo/propertyTypes";
 import { submarkets } from "@/data/seo/submarkets";
 import { getOutlookParams } from "@/data/seo/outlooks";
 import { propertyTypeRegistry } from "@/data/property-types";
+import { professionals } from "@/lib/professionals";
+import { jobs } from "@/data/careers";
+import { faqTopics } from "@/data/faqs";
+import { nnnTenants } from "@/data/nnn-tenants";
+import { glossaryTerms } from "@/data/glossary";
+import { investorPersonas } from "@/data/investor-personas";
+import { leaseTypes } from "@/data/lease-types";
+import { cities as seoCities } from "@/data/seo/cities";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -338,6 +346,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
   ];
+  // Professionals directory — hub + individual role pages
+  const professionalsHub: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/professionals`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/professionals/org-chart`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+  ];
+  const professionalPages: MetadataRoute.Sitemap = professionals.map((p) => ({
+    url: `${BASE_URL}/professionals/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   const propertyTypePages: MetadataRoute.Sitemap = propertyTypeRegistry.map(
     (entry) => ({
       url: entry.parentSlug
@@ -362,5 +392,132 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...outlookPages,
     ...propertiesIndex,
     ...propertyTypePages,
+    ...professionalsHub,
+    ...professionalPages,
+    // Careers pages
+    {
+      url: `${BASE_URL}/careers`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...jobs.map((j) => ({
+      url: `${BASE_URL}/careers/${j.slug}`,
+      lastModified: j.datePosted,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    })),
+    // FAQ pages
+    {
+      url: `${BASE_URL}/faq`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+    ...faqTopics.map((t) => ({
+      url: `${BASE_URL}/faq/${t.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    // NNN Tenant landing pages
+    {
+      url: `${BASE_URL}/nnn-tenants`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    ...nnnTenants.map((t) => ({
+      url: `${BASE_URL}/nnn-tenants/${t.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    // New investor tools
+    {
+      url: `${BASE_URL}/1031-timeline-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/cost-segregation-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/cap-rate-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    // Lease type pages
+    {
+      url: `${BASE_URL}/lease-types`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...leaseTypes.map((l) => ({
+      url: `${BASE_URL}/lease-types/${l.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
+    // Sell commercial property city pages (programmatic)
+    ...seoCities.map((c) => ({
+      url: `${BASE_URL}/sell-commercial-property/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    // Buy NNN property city pages (programmatic)
+    ...seoCities.map((c) => ({
+      url: `${BASE_URL}/buy-nnn-property/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
+    // Investor persona pages
+    {
+      url: `${BASE_URL}/investors`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    ...investorPersonas.map((p) => ({
+      url: `${BASE_URL}/investors/${p.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    // Glossary
+    {
+      url: `${BASE_URL}/glossary`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    },
+    ...glossaryTerms.map((t) => ({
+      url: `${BASE_URL}/glossary/${t.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+    // New comparison blog posts
+    ...[
+      "nnn-vs-multifamily-investing",
+      "build-to-suit-vs-value-add",
+      "1031-exchange-vs-opportunity-zone",
+      "cap-rate-vs-cash-on-cash-return",
+      "ground-lease-vs-fee-simple",
+      "orlando-vs-tampa-cre-market",
+    ].map((slug) => ({
+      url: `${BASE_URL}/blog/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }
