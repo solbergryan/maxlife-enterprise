@@ -70,6 +70,7 @@ export default function LeadCaptureForm({
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showOptional, setShowOptional] = useState(false);
 
   function toggleInterest(type: string) {
     setForm((prev) => ({
@@ -164,6 +165,7 @@ export default function LeadCaptureForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Required fields — always visible */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <input
           type="text"
@@ -181,90 +183,115 @@ export default function LeadCaptureForm({
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           className={inputClass}
         />
-        <input
-          type="tel"
-          placeholder="Phone Number"
-          value={form.phone}
-          onChange={(e) => setForm({ ...form, phone: e.target.value })}
-          className={inputClass}
-        />
-        <select
-          value={form.investmentRange}
-          onChange={(e) =>
-            setForm({ ...form, investmentRange: e.target.value })
-          }
-          className={inputClass}
-        >
-          <option value="">Investment Range</option>
-          {investmentRanges.map((range) => (
-            <option key={range} value={range}>
-              {range}
-            </option>
-          ))}
-        </select>
       </div>
 
-      {/* Property Type Interests */}
-      <div>
-        <p className="text-gray-400 text-sm mb-2">
-          Property types of interest
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {propertyTypes.map((type) => (
-            <button
-              key={type}
-              type="button"
-              onClick={() => toggleInterest(type)}
-              className={`text-sm px-3 py-1.5 rounded-full border transition-colors ${
-                form.interests.includes(type)
-                  ? "bg-gold/20 border-gold/50 text-gold"
-                  : "bg-dark border-dark-border text-gray-400 hover:border-gray-500"
-              }`}
+      {/* Optional details — collapsed by default to reduce visual friction */}
+      <button
+        type="button"
+        onClick={() => setShowOptional((s) => !s)}
+        aria-expanded={showOptional}
+        className="text-sm text-gray-400 hover:text-gold transition-colors flex items-center gap-1.5"
+      >
+        <svg
+          className={`w-4 h-4 transition-transform ${showOptional ? "rotate-90" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+        {showOptional ? "Hide investment details" : "Add investment details (optional) — get better-matched deals"}
+      </button>
+
+      {showOptional && (
+        <div className="space-y-4 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              className={inputClass}
+            />
+            <select
+              value={form.investmentRange}
+              onChange={(e) =>
+                setForm({ ...form, investmentRange: e.target.value })
+              }
+              className={inputClass}
             >
-              {type}
-            </button>
-          ))}
-        </div>
-      </div>
+              <option value="">Investment Range</option>
+              {investmentRanges.map((range) => (
+                <option key={range} value={range}>
+                  {range}
+                </option>
+              ))}
+            </select>
+          </div>
 
-      {showTimeline && (
-        <select
-          value={form.timeline}
-          onChange={(e) => setForm({ ...form, timeline: e.target.value })}
-          className={inputClass}
-        >
-          <option value="">Investment Timeline</option>
-          {timelines.map((t) => (
-            <option key={t} value={t}>
-              {t}
-            </option>
-          ))}
-        </select>
-      )}
+          {/* Property Type Interests */}
+          <div>
+            <p className="text-gray-400 text-sm mb-2">
+              Property types of interest
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {propertyTypes.map((type) => (
+                <button
+                  key={type}
+                  type="button"
+                  onClick={() => toggleInterest(type)}
+                  className={`text-sm px-3 py-1.5 rounded-full border transition-colors ${
+                    form.interests.includes(type)
+                      ? "bg-gold/20 border-gold/50 text-gold"
+                      : "bg-dark border-dark-border text-gray-400 hover:border-gray-500"
+                  }`}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
+          </div>
 
-      {showExchangeDeadline && (
-        <div>
-          <label className="text-gray-400 text-sm mb-1 block">
-            1031 Exchange Deadline (if applicable)
-          </label>
-          <input
-            type="date"
-            value={form.exchangeDeadline}
-            onChange={(e) =>
-              setForm({ ...form, exchangeDeadline: e.target.value })
-            }
+          {showTimeline && (
+            <select
+              value={form.timeline}
+              onChange={(e) => setForm({ ...form, timeline: e.target.value })}
+              className={inputClass}
+            >
+              <option value="">Investment Timeline</option>
+              {timelines.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
+            </select>
+          )}
+
+          {showExchangeDeadline && (
+            <div>
+              <label className="text-gray-400 text-sm mb-1 block">
+                1031 Exchange Deadline (if applicable)
+              </label>
+              <input
+                type="date"
+                value={form.exchangeDeadline}
+                onChange={(e) =>
+                  setForm({ ...form, exchangeDeadline: e.target.value })
+                }
+                className={inputClass}
+              />
+            </div>
+          )}
+
+          <textarea
+            placeholder="Tell us about your investment goals (optional)"
+            rows={3}
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
             className={inputClass}
           />
         </div>
       )}
-
-      <textarea
-        placeholder="Tell us about your investment goals (optional)"
-        rows={3}
-        value={form.message}
-        onChange={(e) => setForm({ ...form, message: e.target.value })}
-        className={inputClass}
-      />
 
       {error && <p className="text-red-400 text-sm">{error}</p>}
 

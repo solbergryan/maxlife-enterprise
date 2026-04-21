@@ -11,7 +11,7 @@ import { trackFormSubmit, trackEvent } from "@/lib/analytics";
 export default function ExitIntentPopup() {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const trigger = useCallback(() => {
     if (typeof window === "undefined") return;
@@ -44,7 +44,7 @@ export default function ExitIntentPopup() {
 
     try {
       const sourcePage = typeof window !== "undefined" ? window.location.pathname : "";
-      await Promise.all([
+      const [formspreeRes, apiRes] = await Promise.all([
         fetch("https://formspree.io/f/xdapjean", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -61,14 +61,20 @@ export default function ExitIntentPopup() {
           body: JSON.stringify({ email, source: "exit-intent", source_page: sourcePage }),
         }),
       ]);
-      setStatus("success");
-      trackFormSubmit({
-        form_type: "exit-intent",
-        source_page: typeof window !== "undefined" ? window.location.pathname : "",
-      });
+
+      // Consider the signup successful if either destination accepted it —
+      // that way a flaky internal API doesn't lose leads Formspree already has.
+      if (formspreeRes.ok || apiRes.ok) {
+        setStatus("success");
+        trackFormSubmit({
+          form_type: "exit-intent",
+          source_page: sourcePage,
+        });
+      } else {
+        setStatus("error");
+      }
     } catch {
-      // Silently fail — don't block the user
-      setShow(false);
+      setStatus("error");
     }
   };
 
@@ -148,6 +154,11 @@ export default function ExitIntentPopup() {
               >
                 {status === "loading" ? "Joining..." : "Send Me Deals"}
               </button>
+              {status === "error" && (
+                <p className="text-red-400 text-xs text-center">
+                  Something went wrong. Try again or email Ryan@MaxLifeRealty.com directly.
+                </p>
+              )}
               <p className="text-gray-600 text-xs text-center">
                 No spam. Unsubscribe anytime.
               </p>
