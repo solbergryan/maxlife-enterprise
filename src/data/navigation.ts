@@ -39,6 +39,9 @@ export const mainNav: NavLink[] = [
     href: "/investor-tools",
     children: [
       { label: "Deal Analyzer", href: "/deal-analyzer" },
+      { label: "Cap Rate Calculator", href: "/cap-rate-calculator" },
+      { label: "1031 Timeline Calculator", href: "/1031-timeline-calculator" },
+      { label: "Cost Segregation Calculator", href: "/cost-segregation-calculator" },
       { label: "Seller Net Sheet", href: "/net-sheets/seller" },
       { label: "Buyer Estimate", href: "/net-sheets/buyer" },
       { label: "For Sellers", href: "/opportunities" },

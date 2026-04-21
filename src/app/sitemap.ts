@@ -429,6 +429,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    // New investor tools
+    {
+      url: `${BASE_URL}/1031-timeline-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/cost-segregation-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/cap-rate-calculator`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
     // New comparison blog posts
     ...[
       "nnn-vs-multifamily-investing",
