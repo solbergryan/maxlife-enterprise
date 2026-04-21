@@ -56,7 +56,15 @@ export const mainNav: NavLink[] = [
       { label: "CRE Team Org Chart", href: "/professionals/org-chart" },
     ],
   },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "About MaxLife", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
 ];
 
 export const footerInvestorLinks: NavLink[] = [

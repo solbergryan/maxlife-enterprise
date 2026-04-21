@@ -9,6 +9,7 @@ import { submarkets } from "@/data/seo/submarkets";
 import { getOutlookParams } from "@/data/seo/outlooks";
 import { propertyTypeRegistry } from "@/data/property-types";
 import { professionals } from "@/lib/professionals";
+import { jobs } from "@/data/careers";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -387,5 +388,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...propertyTypePages,
     ...professionalsHub,
     ...professionalPages,
+    // Careers pages
+    {
+      url: `${BASE_URL}/careers`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...jobs.map((j) => ({
+      url: `${BASE_URL}/careers/${j.slug}`,
+      lastModified: j.datePosted,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    })),
   ];
 }
