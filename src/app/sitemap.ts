@@ -8,6 +8,7 @@ import { getAllPropertyTypes } from "@/data/seo/propertyTypes";
 import { submarkets } from "@/data/seo/submarkets";
 import { getOutlookParams } from "@/data/seo/outlooks";
 import { propertyTypeRegistry } from "@/data/property-types";
+import { professionals } from "@/lib/professionals";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -338,6 +339,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
   ];
+  // Professionals directory — hub + individual role pages
+  const professionalsHub: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/professionals`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+  ];
+  const professionalPages: MetadataRoute.Sitemap = professionals.map((p) => ({
+    url: `${BASE_URL}/professionals/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   const propertyTypePages: MetadataRoute.Sitemap = propertyTypeRegistry.map(
     (entry) => ({
       url: entry.parentSlug
@@ -362,5 +379,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...outlookPages,
     ...propertiesIndex,
     ...propertyTypePages,
+    ...professionalsHub,
+    ...professionalPages,
   ];
 }
