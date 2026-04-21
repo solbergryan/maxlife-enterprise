@@ -16,6 +16,10 @@ const mixedUseTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Mixed-Use",
     pluralDisplayName: "Mixed-Use Properties",
+    heroImage: {
+      src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-office-4k-wallpaper-1920x1080-city-3306146.webp",
+      alt: "Mixed-use commercial and residential district skyline",
+    },
     heroEyebrow: "Mixed-Use Investment Opportunities",
     heroHeadline: "Mixed-Use Properties for Sale in Florida",
     heroSubheadline: "Retail, residential, and office — combined cash flow from walkable urban formats",

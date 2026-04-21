@@ -16,6 +16,10 @@ const noteLoanTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Notes & Loans",
     pluralDisplayName: "Notes & Loans",
+    heroImage: {
+      src: "/images/commercial-stock/commercial-business/maxlife-commercial-business-building-architecture-modern-exterior-skyscraper-facade-5535464.webp",
+      alt: "Commercial real estate note and mortgage secured by office tower",
+    },
     heroEyebrow: "Note & Loan Investments",
     heroHeadline: "Notes, Loans & NPL in Florida",
     heroSubheadline: "Commercial and residential mortgage notes — the debt side of real estate investing",

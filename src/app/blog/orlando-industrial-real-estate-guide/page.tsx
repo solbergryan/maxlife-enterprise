@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import BlogLeadCapture from "@/components/BlogLeadCapture";
@@ -34,13 +35,33 @@ const articleSchema = {
     "Investor's guide to industrial property for sale in Central Florida. Warehouse, flex, distribution, and manufacturing across Orlando, the I-4 corridor, and the Space Coast.",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://maxlifedevelopment.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://maxlifedevelopment.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Industrial Property in Central Florida: An Investor's Guide", item: "https://maxlifedevelopment.com/blog/orlando-industrial-real-estate-guide" },
+  ],
+};
+
 export default function OrlandoIndustrialGuideArticle() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/warehouse/maxlife-warehouse-container-metal-port-iron-warehouse-subwoofer-3639617.webp"
+          alt="Orlando industrial warehouse and distribution facility"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
             className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"

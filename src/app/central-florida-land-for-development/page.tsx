@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -184,8 +185,17 @@ export default function CentralFloridaLandForDevelopmentPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-building-to-build-framework-construction-site-1210677.webp"
+          alt="Central Florida land for development with construction framework"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Land Investment
           </p>

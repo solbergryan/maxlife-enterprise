@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import BlogLeadCapture from "@/components/BlogLeadCapture";
 
@@ -20,6 +21,8 @@ interface ServicePageLayoutProps {
   features: Feature[];
   process: ProcessStep[];
   benefits: string[];
+  heroImage?: string;
+  heroAlt?: string;
 }
 
 export default function ServicePageLayout({
@@ -30,12 +33,30 @@ export default function ServicePageLayout({
   features,
   process,
   benefits,
+  heroImage,
+  heroAlt,
 }: ServicePageLayoutProps) {
   return (
     <>
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-dark-border">
-        <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
+        {heroImage && (
+          <Image
+            src={heroImage}
+            alt={heroAlt ?? title}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        )}
+        <div
+          className={
+            heroImage
+              ? "absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70"
+              : "absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent"
+          }
+        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/services"

@@ -5,6 +5,8 @@
  * If no ID is set, gtag calls are no-ops — safe to call everywhere.
  */
 
+import { getVisitorId } from "./consent";
+
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 type GtagWindow = Window & {
@@ -21,13 +23,14 @@ function gtag(...args: unknown[]) {
   }
 }
 
-/** Fire a custom event with parameters. */
+/** Fire a custom event with parameters. Adds visitor_id if consent has been given. */
 export function trackEvent(
   eventName: string,
   params: Record<string, string | number | boolean> = {}
 ) {
   if (!GA_MEASUREMENT_ID) return;
-  gtag("event", eventName, params);
+  const vid = getVisitorId();
+  gtag("event", eventName, vid ? { ...params, visitor_id: vid } : params);
 }
 
 /** Track a page view (used on client-side route changes). */

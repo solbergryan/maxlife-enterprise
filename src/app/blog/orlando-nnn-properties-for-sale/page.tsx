@@ -1,9 +1,42 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 import BlogLeadCapture from "@/components/BlogLeadCapture";
 
 export const metadata: Metadata = {
   title: "Orlando NNN Properties for Sale | MaxLife",
+  description:
+    "Find NNN properties for sale in Orlando. Single-tenant triple net lease investments with national credit tenants across Central Florida.",
+  alternates: { canonical: "/blog/orlando-nnn-properties-for-sale" },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://maxlifedevelopment.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://maxlifedevelopment.com/blog" },
+    { "@type": "ListItem", position: 3, name: "Orlando NNN Properties for Sale: Investor Guide", item: "https://maxlifedevelopment.com/blog/orlando-nnn-properties-for-sale" },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Orlando NNN Properties for Sale: Investor Guide",
+  author: { "@type": "Person", name: "Ryan Solberg" },
+  publisher: {
+    "@type": "Organization",
+    name: "MaxLife Realty",
+    logo: { "@type": "ImageObject", url: "https://maxlifedevelopment.com/logo.png" },
+  },
+  datePublished: "2026-04-07",
+  dateModified: "2026-04-10",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://maxlifedevelopment.com/blog/orlando-nnn-properties-for-sale",
+  },
   description:
     "Find NNN properties for sale in Orlando. Single-tenant triple net lease investments with national credit tenants across Central Florida.",
 };
@@ -11,9 +44,20 @@ export const metadata: Metadata = {
 export default function OrlandoNNNPropertiesArticle() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-germany-shop-window-storefront-sale-business-983358.webp"
+          alt="Orlando NNN retail property for sale"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
             className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"

@@ -130,6 +130,10 @@ const retailTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Retail",
     pluralDisplayName: "Retail Properties",
+    heroImage: {
+      src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-architecture-building-convenience-store-grocery-people-2577330.webp",
+      alt: "Florida retail storefront with customer foot traffic",
+    },
     heroEyebrow: "Retail Investment Opportunities",
     heroHeadline: "Retail Commercial Properties in Florida",
     heroSubheadline:

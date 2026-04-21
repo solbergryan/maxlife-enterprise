@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { CityData } from "@/data/seo/cities";
 import type { PropertyTypeData } from "@/data/seo/propertyTypes";
@@ -7,6 +8,25 @@ interface Props {
   propertyType: PropertyTypeData;
   city: CityData;
 }
+
+const HERO_IMAGES: Record<string, { src: string; alt: string }> = {
+  "office-space": {
+    src: "/images/commercial-stock/office-buildings/maxlife-office-buildings-building-tower-architecture-city-construction-business-911688.webp",
+    alt: "Office tower with cityscape",
+  },
+  retail: {
+    src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-buildings-city-coffee-shop-doors-street-1836478.webp",
+    alt: "Retail storefronts on city street",
+  },
+  industrial: {
+    src: "/images/commercial-stock/warehouse/maxlife-warehouse-container-metal-port-iron-warehouse-subwoofer-3639617.webp",
+    alt: "Industrial warehouse and shipping containers",
+  },
+  "nnn-properties": {
+    src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-architecture-building-convenience-store-grocery-people-2577330.webp",
+    alt: "NNN single-tenant retail property",
+  },
+};
 
 /**
  * Shared rendering shell for every /<property-type>/[city] SEO page.
@@ -60,8 +80,21 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
 
       {/* Hero */}
-      <section className="border-b border-dark-border bg-dark py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-b border-dark-border py-16 sm:py-20">
+        {HERO_IMAGES[propertyType.slug] && (
+          <>
+            <Image
+              src={HERO_IMAGES[propertyType.slug].src}
+              alt={HERO_IMAGES[propertyType.slug].alt}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+          </>
+        )}
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gold">
             {propertyType.name} · {city.county}
           </p>

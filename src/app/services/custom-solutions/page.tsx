@@ -12,6 +12,8 @@ export default function CustomSolutionsPage() {
     <ServicePageLayout
       title="Custom Solutions"
       subtitle="Specialty Services"
+      heroImage="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-business-building-elevators-modern-tower-3285853.webp"
+      heroAlt="Modern commercial business tower in Central Florida"
       description="Have a project that doesn't fit neatly into one category? That's our specialty. We bring the same professionalism, problem-solving, and follow-through to any challenge you throw our way."
       icon={
         <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">

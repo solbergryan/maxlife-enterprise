@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSector, getOutlookParams, sectors } from "@/data/seo/outlooks";
@@ -68,8 +69,17 @@ export default async function OutlookPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
 
       {/* Hero */}
-      <section className="border-b border-dark-border bg-dark py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-b border-dark-border py-16 sm:py-20">
+        <Image
+          src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-skyscraper-office-architecture-skyline-district-3939138.webp"
+          alt="Central Florida commercial real estate sector investment outlook"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gold">
             Central Florida · {year} Outlook
           </p>

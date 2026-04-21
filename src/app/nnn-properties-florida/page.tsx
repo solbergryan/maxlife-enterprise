@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -124,7 +125,15 @@ export default function NNNPropertiesFloridaPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-dark-border">
-        <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
+        <Image
+          src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-germany-shop-window-storefront-sale-business-983358.webp"
+          alt="Florida NNN property storefront"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-4">
             NNN Investment Opportunities

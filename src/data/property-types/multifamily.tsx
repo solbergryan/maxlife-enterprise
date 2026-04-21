@@ -64,6 +64,10 @@ const multifamilyTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Multifamily",
     pluralDisplayName: "Multifamily Properties",
+    heroImage: {
+      src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-real-estate-property-apartment-house-5339245.webp",
+      alt: "Florida multifamily apartment community",
+    },
     heroEyebrow: "Multifamily Investment Opportunities",
     heroHeadline: "Multifamily Properties in Florida",
     heroSubheadline: "Apartments and workforce housing in the #1 population growth state",

@@ -16,6 +16,10 @@ const selfStorageTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Self Storage",
     pluralDisplayName: "Self Storage Facilities",
+    heroImage: {
+      src: "/images/commercial-stock/warehouse/maxlife-warehouse-archive-boxes-shelf-folders-documents-data-1850170.webp",
+      alt: "Self-storage facility interior with organized shelving",
+    },
     heroEyebrow: "Self Storage Investment Opportunities",
     heroHeadline: "Self Storage Facilities for Sale in Florida",
     heroSubheadline: "One of the most resilient CRE asset classes — low CapEx, sticky customers, inflation-protected pricing",

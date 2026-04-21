@@ -70,6 +70,10 @@ const industrialTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Industrial",
     pluralDisplayName: "Industrial Properties",
+    heroImage: {
+      src: "/images/commercial-stock/warehouse/maxlife-warehouse-container-metal-port-iron-warehouse-subwoofer-3639617.webp",
+      alt: "Industrial warehouse and distribution facility",
+    },
     heroEyebrow: "Industrial Investment Opportunities",
     heroHeadline: "Industrial Properties for Sale in Florida",
     heroSubheadline:

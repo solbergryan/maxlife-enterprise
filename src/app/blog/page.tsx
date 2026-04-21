@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 
@@ -30,6 +31,89 @@ const breadcrumbSchema = {
       item: "https://maxlifedevelopment.com/blog",
     },
   ],
+};
+
+const articleImages: Record<string, { src: string; alt: string }> = {
+  "orlando-commercial-real-estate-trends-2026": {
+    src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-office-4k-wallpaper-1920x1080-city-3306146.webp",
+    alt: "Orlando commercial real estate market skyline",
+  },
+  "orlando-entertainment-district-investment-guide": {
+    src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-adidas-atlantic-city-shopping-fisheye-store-458043.webp",
+    alt: "Orlando entertainment district retail and shopping storefronts",
+  },
+  "brevard-county-investment-property-outlook": {
+    src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-city-sky-sunlight-office-houston-4549648.webp",
+    alt: "Brevard County commercial investment property",
+  },
+  "what-is-nnn-lease": {
+    src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-architecture-building-convenience-store-grocery-people-2577330.webp",
+    alt: "Single-tenant NNN retail property storefront",
+  },
+  "central-florida-land-development": {
+    src: "/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-site-crane-building-helmet-architecture-228470.webp",
+    alt: "Central Florida land development construction site",
+  },
+  "orlando-industrial-real-estate-guide": {
+    src: "/images/commercial-stock/warehouse/maxlife-warehouse-container-metal-port-iron-warehouse-subwoofer-3639617.webp",
+    alt: "Orlando industrial warehouse and distribution facility",
+  },
+  "orlando-multifamily-investment-guide": {
+    src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-real-estate-property-apartment-house-5339245.webp",
+    alt: "Orlando multifamily apartment investment property",
+  },
+  "orlando-retail-commercial-real-estate": {
+    src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-buildings-city-coffee-shop-doors-street-1836478.webp",
+    alt: "Orlando retail commercial storefronts on a city street",
+  },
+  "orlando-nnn-properties-for-sale": {
+    src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-germany-shop-window-storefront-sale-business-983358.webp",
+    alt: "Orlando NNN retail property for sale",
+  },
+  "how-to-buy-commercial-property-orlando": {
+    src: "/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscraper-building-glass-windows-modern-2083687.webp",
+    alt: "Orlando commercial office skyscraper acquisition",
+  },
+  "orlando-cap-rates-investor-guide": {
+    src: "/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-glass-windows-business-blue-1508086.webp",
+    alt: "Commercial real estate cap rate analysis building",
+  },
+  "1031-exchange-orlando-guide": {
+    src: "/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-amsterdam-blue-sky-business-1448221.webp",
+    alt: "1031 exchange replacement commercial property",
+  },
+  "lake-county-commercial-real-estate-guide": {
+    src: "/images/commercial-stock/real-estate-development/maxlife-real-estate-development-building-to-build-framework-construction-site-1210677.webp",
+    alt: "Lake County Florida commercial development framework",
+  },
+  "how-to-evaluate-commercial-real-estate-deal": {
+    src: "/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-full-hd-wallpaper-building-facade-21883.webp",
+    alt: "Evaluating a commercial real estate office deal",
+  },
+  "medical-office-investing-central-florida": {
+    src: "/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscraper-glass-facades-modern-facade-2256489.webp",
+    alt: "Central Florida medical office building",
+  },
+  "why-invest-commercial-real-estate-florida": {
+    src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-tower-office-building-skyscraper-facade-2175937.webp",
+    alt: "Florida commercial real estate investment skyline",
+  },
+  "office-space-for-lease-orlando-guide": {
+    src: "/images/commercial-stock/office-buildings/maxlife-office-buildings-building-architecture-glass-facade-exterior-glassware-3285254.webp",
+    alt: "Orlando office space for lease with glass facade",
+  },
+  "build-to-suit-vs-existing-commercial-orlando": {
+    src: "/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-site-architect-work-building-housebuilding-2733678.webp",
+    alt: "Build-to-suit commercial construction with architect on site",
+  },
+  "central-florida-commercial-real-estate-submarkets": {
+    src: "/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscrapers-buildings-skyline-city-real-5999913.webp",
+    alt: "Central Florida commercial real estate submarkets skyline",
+  },
+  "war-oil-prices-orlando-commercial-real-estate-spring-2026": {
+    src: "/images/commercial-stock/commercial-business/maxlife-commercial-business-bridge-business-future-training-skyline-development-1916757.webp",
+    alt: "Orlando commercial real estate amid global economic shifts",
+  },
 };
 
 const articles = [
@@ -252,8 +336,20 @@ export default function BlogPage() {
             <Link
               key={article.slug}
               href={`/blog/${article.slug}`}
-              className="group bg-dark-card border border-dark-border rounded-xl p-8 hover:border-gold/30 transition-all"
+              className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-all flex flex-col"
             >
+              {articleImages[article.slug] && (
+                <div className="relative aspect-[16/9] overflow-hidden border-b border-dark-border">
+                  <Image
+                    src={articleImages[article.slug].src}
+                    alt={articleImages[article.slug].alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-8 flex flex-col flex-1">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-gold text-xs font-semibold uppercase tracking-wider bg-gold/10 px-2.5 py-1 rounded">
                   {article.category}
@@ -269,9 +365,10 @@ export default function BlogPage() {
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 {article.excerpt}
               </p>
-              <span className="text-gold text-sm font-medium group-hover:text-gold-light transition-colors">
+              <span className="text-gold text-sm font-medium group-hover:text-gold-light transition-colors mt-auto">
                 Read article &rarr;
               </span>
+              </div>
             </Link>
           ))}
         </div>

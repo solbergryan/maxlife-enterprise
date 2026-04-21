@@ -7,6 +7,8 @@ export interface CaseStudy {
   strategy: string;
   result: string;
   metrics: { label: string; value: string }[];
+  image?: string;
+  imageAlt?: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -27,6 +29,9 @@ export const caseStudies: CaseStudy[] = [
       { label: "Value Increase", value: "15%" },
       { label: "Time to Stabilize", value: "12 Months" },
     ],
+    image:
+      "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-city-night-supermarket-food-street-regional-7458934.webp",
+    imageAlt: "Multi-tenant retail strip center in Orlando",
   },
   {
     slug: "off-market-land-brevard",
@@ -45,6 +50,9 @@ export const caseStudies: CaseStudy[] = [
       { label: "Time to Groundbreaking", value: "8 Months" },
       { label: "Deal Source", value: "Off-Market" },
     ],
+    image:
+      "/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-blue-sky-nature-site-crane-228471.webp",
+    imageAlt: "Brevard County commercial land development site",
   },
   {
     slug: "nnn-portfolio-1031-exchange",
@@ -63,5 +71,8 @@ export const caseStudies: CaseStudy[] = [
       { label: "Tax Deferred", value: "100%" },
       { label: "Closing Timeline", value: "38 Days" },
     ],
+    image:
+      "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-germany-shop-window-storefront-sale-business-983358.webp",
+    imageAlt: "NNN retail property investment for 1031 exchange",
   },
 ];

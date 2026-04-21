@@ -16,6 +16,10 @@ const seniorLivingTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Senior Living",
     pluralDisplayName: "Senior Living Properties",
+    heroImage: {
+      src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-tower-office-building-skyscraper-facade-2175937.webp",
+      alt: "Senior living community building exterior",
+    },
     heroEyebrow: "Senior Living & Healthcare Investments",
     heroHeadline: "Senior Living & Healthcare Properties in Florida",
     heroSubheadline: "The demographic growth story of the next 20 years — baby boomers are aging into the care continuum",

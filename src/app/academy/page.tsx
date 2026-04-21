@@ -83,6 +83,12 @@ export default async function AcademyPage() {
               >
                 Preview Course 1 →
               </Link>
+              <Link
+                href="/academy/browse"
+                className="rounded-lg border border-dark-border bg-dark-card px-7 py-3 text-base font-semibold text-white transition-colors hover:border-gold hover:text-gold"
+              >
+                Browse all lessons →
+              </Link>
             </div>
 
             {user && totalLessons > 0 && (

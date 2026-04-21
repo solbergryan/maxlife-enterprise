@@ -16,6 +16,10 @@ const specialPurposeTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Special Purpose",
     pluralDisplayName: "Special Purpose Properties",
+    heroImage: {
+      src: "/images/commercial-stock/commercial-business/maxlife-commercial-business-building-dark-night-convenience-store-shop-2583628.webp",
+      alt: "Special purpose commercial building at night",
+    },
     heroEyebrow: "Specialty CRE Investments",
     heroHeadline: "Special Purpose Properties in Florida",
     heroSubheadline: "The catch-all category for niche CRE assets that don't fit the major five",

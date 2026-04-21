@@ -1,8 +1,21 @@
+import Image from "next/image";
 import { CaseStudy } from "@/data/case-studies";
 
 export default function CaseStudyCard({ study }: { study: CaseStudy }) {
   return (
     <div className="bg-dark-card border border-dark-border rounded-xl overflow-hidden">
+      {study.image && (
+        <div className="relative aspect-[21/9] w-full overflow-hidden border-b border-dark-border">
+          <Image
+            src={study.image}
+            alt={study.imageAlt ?? study.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 900px"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/20 to-transparent" />
+        </div>
+      )}
       {/* Header */}
       <div className="px-6 pt-6 pb-4 border-b border-dark-border">
         <div className="flex items-center justify-between mb-2">

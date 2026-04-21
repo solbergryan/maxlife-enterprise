@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import remarkGfm from "remark-gfm";
 import {
   getAllLessonParams,
   getCourse,
@@ -137,6 +138,7 @@ export default async function LessonPage({ params }: PageProps) {
                 components={mdxComponents}
                 options={{
                   mdxOptions: {
+                    remarkPlugins: [remarkGfm],
                     rehypePlugins: [
                       rehypeSlug,
                       [rehypeAutolinkHeadings, { behavior: "wrap" }],

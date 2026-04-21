@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Market } from "@/data/markets";
 import InvestorSignupForm from "./InvestorSignupForm";
@@ -6,8 +7,21 @@ export default function MarketPageLayout({ market }: { market: Market }) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        {market.heroImage && (
+          <>
+            <Image
+              src={market.heroImage}
+              alt={market.heroAlt ?? market.heroHeading}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+          </>
+        )}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/markets"
             className="text-gold hover:underline text-sm mb-4 inline-flex items-center gap-1"

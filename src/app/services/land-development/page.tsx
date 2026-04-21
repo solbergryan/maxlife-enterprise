@@ -15,6 +15,8 @@ export default function LandDevelopmentPage() {
     <ServicePageLayout
       title="Land for Development in Central Florida"
       subtitle="Land Brokerage & Development"
+      heroImage="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-blue-sky-nature-site-crane-228471.webp"
+      heroAlt="Commercial development site with crane and blue sky"
       description="From raw land acquisitions to entitled, development-ready sites, MaxLife Realty helps investors, developers, and build-to-suit users find land for development across Central Florida — Orlando, the Space Coast, Lake County, and the I-4 corridor."
       icon={
         <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">

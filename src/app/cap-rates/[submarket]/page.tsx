@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -73,8 +74,17 @@ export default async function CapRatesPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Hero */}
-      <section className="border-b border-dark-border bg-dark py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-b border-dark-border py-16 sm:py-20">
+        <Image
+          src="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-glass-windows-business-blue-1508086.webp"
+          alt="Central Florida commercial real estate cap rates analysis"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gold">
             Central Florida Cap Rates
           </p>

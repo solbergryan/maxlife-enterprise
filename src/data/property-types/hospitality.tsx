@@ -44,6 +44,10 @@ const hospitalityTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Hospitality",
     pluralDisplayName: "Hospitality Properties",
+    heroImage: {
+      src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-apartment-building-hotel-balcony-terrace-high-6490208.webp",
+      alt: "Hospitality hotel building with balconies",
+    },
     heroEyebrow: "Hospitality Investment Opportunities",
     heroHeadline: "Hotels & Hospitality Properties in Florida",
     heroSubheadline: "Florida is the #1 tourism state in America — 130M+ annual visitors, year-round demand",

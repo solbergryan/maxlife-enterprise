@@ -11,6 +11,8 @@ export interface Market {
   metaDescription: string;
   heroHeading: string;
   heroSubheading: string;
+  heroImage?: string;
+  heroAlt?: string;
   sections: MarketSection[];
   propertyTypes: string[];
   stats: { label: string; value: string }[];
@@ -28,6 +30,9 @@ export const markets: Market[] = [
     heroHeading: "Orlando Commercial Real Estate Market",
     heroSubheading:
       "Central Florida's fastest-growing CRE market. Retail, office, industrial, multifamily, and NNN investment properties across Orange County and the surrounding Orlando metro.",
+    heroImage:
+      "/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscraper-glass-facades-modern-facade-2256489.webp",
+    heroAlt: "Orlando commercial real estate skyline",
     sections: [
       {
         heading: "Why Orlando Is a Top Commercial Real Estate Market",
@@ -83,6 +88,9 @@ export const markets: Market[] = [
     heroHeading: "Brevard County Commercial Real Estate",
     heroSubheading:
       "Investment opportunities on Florida's Space Coast. Commercial properties across Melbourne, Palm Bay, Cocoa, Titusville, and the I-95 corridor.",
+    heroImage:
+      "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-skyscraper-office-architecture-skyline-district-3939138.webp",
+    heroAlt: "Brevard County Space Coast commercial real estate",
     sections: [
       {
         heading: "The Space Coast: A Rapidly Growing Commercial Market",
@@ -133,6 +141,9 @@ export const markets: Market[] = [
     heroHeading: "Lake County Commercial Land & Development",
     heroSubheading:
       "Development land and commercial investment opportunities in one of Central Florida's fastest-growing counties. Clermont, Leesburg, and the US-27 growth corridor.",
+    heroImage:
+      "/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-nature-site-building-helmet-architecture-257326.webp",
+    heroAlt: "Lake County Florida commercial development land",
     sections: [
       {
         heading: "Lake County: Central Florida's Emerging Growth Market",
@@ -183,6 +194,9 @@ export const markets: Market[] = [
     heroHeading: "Central Florida Investment Properties",
     heroSubheading:
       "Commercial real estate investment opportunities across Orange, Seminole, Osceola, Lake, Polk, and Brevard counties. From NNN properties to development land.",
+    heroImage:
+      "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-exzenterhaus-architecture-building-bochum-skyscraper-germany-2175925.webp",
+    heroAlt: "Central Florida commercial investment properties",
     sections: [
       {
         heading: "Central Florida: A Premier Market for Commercial Real Estate Investment",
@@ -233,6 +247,9 @@ export const markets: Market[] = [
     heroHeading: "Lake Nona Commercial Real Estate",
     heroSubheading:
       "Investment opportunities in Orlando's premier medical and innovation district. Healthcare-anchored commercial properties, multifamily, logistics, and mixed-use development in southeast Orange County.",
+    heroImage:
+      "/images/commercial-stock/office-buildings/maxlife-office-buildings-city-street-architecture-business-skyscrapers-building-4667143.webp",
+    heroAlt: "Lake Nona commercial real estate corridor",
     sections: [
       {
         heading: "Lake Nona: Orlando's Premier Innovation and Medical District",
@@ -288,6 +305,9 @@ export const markets: Market[] = [
     heroHeading: "International Drive Commercial Real Estate",
     heroSubheading:
       "Investment opportunities along Orlando's premier tourism and entertainment corridor. Retail, hospitality, NNN, and commercial properties serving over 80 million annual visitors.",
+    heroImage:
+      "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-apple-inc-mac-store-macintosh-technology-508812.webp",
+    heroAlt: "International Drive Orlando commercial retail",
     sections: [
       {
         heading: "International Drive: Orlando's 11-Mile Tourism and Entertainment Corridor",
@@ -343,6 +363,9 @@ export const markets: Market[] = [
     heroHeading: "Downtown Orlando Commercial Real Estate",
     heroSubheading:
       "Investment opportunities in Orlando's urban core. Office, multifamily, ground-floor retail, and adaptive reuse properties in the CBD, Creative Village, and surrounding neighborhoods.",
+    heroImage:
+      "/images/commercial-stock/office-buildings/maxlife-office-buildings-city-window-architecture-urban-glass-construction-4991094.webp",
+    heroAlt: "Downtown Orlando commercial office buildings",
     sections: [
       {
         heading: "Downtown Orlando: The Urban Core of Central Florida's Largest Metro",

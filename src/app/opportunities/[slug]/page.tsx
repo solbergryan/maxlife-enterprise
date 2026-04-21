@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { deals, getDealBySlug, formatPrice } from "@/data/deals";
 import DealCard from "@/components/DealCard";
@@ -44,8 +45,17 @@ export default async function DealDetailPage({
   return (
     <>
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-business-building-elevators-modern-tower-3285853.webp"
+          alt="Commercial property investment opportunity"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/opportunities"
             className="text-gold hover:underline text-sm mb-4 inline-flex items-center gap-1"

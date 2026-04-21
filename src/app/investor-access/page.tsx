@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 
@@ -17,8 +18,17 @@ export default function InvestorAccessPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-businessman-man-stock-broker-real-estate-481113.webp"
+          alt="MaxLife Realty investor access portal"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Investor Access
           </p>

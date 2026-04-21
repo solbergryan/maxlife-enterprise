@@ -16,6 +16,10 @@ const mhpTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Mobile Home Park",
     pluralDisplayName: "Mobile Home Parks",
+    heroImage: {
+      src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-real-estate-house-living-architecture-394961.webp",
+      alt: "Mobile home park community in Central Florida",
+    },
     heroEyebrow: "Manufactured Housing Investments",
     heroHeadline: "Mobile Home Parks for Sale in Florida",
     heroSubheadline: "The affordable housing answer — and one of the best risk-adjusted CRE returns of the past decade",

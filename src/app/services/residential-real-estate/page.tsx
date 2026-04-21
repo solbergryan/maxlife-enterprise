@@ -12,6 +12,8 @@ export default function ResidentialRealEstatePage() {
     <ServicePageLayout
       title="Residential Real Estate Brokerage"
       subtitle="Real Estate Services"
+      heroImage="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-apartment-building-hotel-balcony-terrace-high-6490208.webp"
+      heroAlt="Central Florida residential apartment building exterior"
       description="Whether you're buying your first home, selling a property, or building an investment portfolio, we provide hands-on guidance through every step. Serving Orlando, Melbourne, and all of Central Florida."
       icon={
         <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">

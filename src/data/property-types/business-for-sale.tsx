@@ -16,6 +16,10 @@ const bizTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Business for Sale",
     pluralDisplayName: "Operating Businesses",
+    heroImage: {
+      src: "/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-glass-windows-business-blue-1508086.webp",
+      alt: "Operating commercial business building",
+    },
     heroEyebrow: "Operating Business Acquisitions",
     heroHeadline: "Businesses for Sale in Florida",
     heroSubheadline: "Operating businesses with or without real estate — combine income and appreciation in a single acquisition",

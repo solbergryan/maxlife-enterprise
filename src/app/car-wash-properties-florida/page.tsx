@@ -353,7 +353,15 @@ export default function CarWashPropertiesFloridaPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-dark-border">
-        <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
+        <Image
+          src="/images/commercial-stock/commercial-business/maxlife-commercial-business-building-dark-night-convenience-store-shop-2583628.webp"
+          alt="Florida car wash and convenience commercial property"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div>

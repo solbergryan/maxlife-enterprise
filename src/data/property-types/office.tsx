@@ -70,6 +70,10 @@ const officeTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Office",
     pluralDisplayName: "Office Properties",
+    heroImage: {
+      src: "/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-office-building-glass-skyscraper-city-4431284.webp",
+      alt: "Class A Florida office tower with glass facade",
+    },
     heroEyebrow: "Office Investment Opportunities",
     heroHeadline: "Office Properties for Sale in Florida",
     heroSubheadline:

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import BlogLeadCapture from "@/components/BlogLeadCapture";
@@ -42,7 +43,18 @@ export default function LakeCountyCommercialRealEstateGuide() {
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+        <Image
+          src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-building-to-build-framework-construction-site-1210677.webp"
+          alt="Lake County Florida commercial development framework"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/30 to-transparent" />
+      </section>
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
         {/* Back link */}
         <Link
           href="/blog"

@@ -203,16 +203,35 @@ export default async function CoursePage({ params }: PageProps) {
                 designed to go alongside every lesson in this course.
               </p>
             </div>
-            <LeadCaptureForm
-              endpoint="/api/leads/workbook"
-              payload={{ courseSlug: course.slug }}
-              ctaLabel="Email me the workbook PDF"
-              successMessage="Your workbook is on the way."
-              theme="dark"
-            >
-              No spam. One email with the PDF, and occasionally new CRE
-              resources you can unsubscribe from any time.
-            </LeadCaptureForm>
+            <div className="flex justify-center">
+              <a
+                href={`/academy/workbooks/${course.slug}.pdf`}
+                download
+                className="inline-flex items-center gap-2 rounded-lg bg-gold px-7 py-3 text-base font-semibold text-dark transition-colors hover:bg-gold-dark"
+              >
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                Download PDF workbook
+              </a>
+            </div>
+            <details className="mx-auto mt-6 max-w-md text-center text-sm">
+              <summary className="cursor-pointer text-gray-500 hover:text-gray-300">
+                Prefer it emailed to you?
+              </summary>
+              <div className="mt-4 text-left">
+                <LeadCaptureForm
+                  endpoint="/api/leads/workbook"
+                  payload={{ courseSlug: course.slug }}
+                  ctaLabel="Email me the workbook PDF"
+                  successMessage="Your workbook is on the way."
+                  theme="dark"
+                >
+                  No spam. One email with the PDF, and occasionally new CRE
+                  resources you can unsubscribe from any time.
+                </LeadCaptureForm>
+              </div>
+            </details>
           </div>
         </section>
       )}

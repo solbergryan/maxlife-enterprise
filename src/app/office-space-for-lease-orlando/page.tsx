@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -156,8 +157,17 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
       />
 
       {/* Hero */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscraper-building-glass-windows-modern-2083687.webp"
+          alt="Orlando office space for lease in modern glass tower"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Tenant Representation
           </p>

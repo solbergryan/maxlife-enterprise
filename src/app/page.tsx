@@ -15,9 +15,12 @@ const marketImages: Record<string, string> = {
 };
 
 const blogImages: Record<string, string> = {
-  "orlando-commercial-real-estate-trends-2026": "/listings/1020923.jpg",
-  "orlando-entertainment-district-investment-guide": "/listings/1066460.jpg",
-  "brevard-county-investment-property-outlook": "/listings/634448.jpg",
+  "orlando-commercial-real-estate-trends-2026":
+    "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-office-4k-wallpaper-1920x1080-city-3306146.webp",
+  "orlando-entertainment-district-investment-guide":
+    "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-adidas-atlantic-city-shopping-fisheye-store-458043.webp",
+  "brevard-county-investment-property-outlook":
+    "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-city-sky-sunlight-office-houston-4549648.webp",
 };
 
 export default function HomePage() {
@@ -27,14 +30,18 @@ export default function HomePage() {
     <>
       {/* Hero — Deal-Focused */}
       <section className="relative border-b border-dark-border overflow-hidden">
-        <Image
-          src="/listings/677235.jpg"
-          alt="Central Florida commercial real estate aerial"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/videos/hero/home-hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/hero/home-hero.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-dark/80 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-4">

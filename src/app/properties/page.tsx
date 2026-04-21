@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import {
@@ -41,7 +42,15 @@ export default function PropertiesIndexPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-dark-border">
-        <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
+        <Image
+          src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscrapers-buildings-skyline-city-real-5999913.webp"
+          alt="Commercial properties for sale in Central Florida"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
           <div className="max-w-3xl">
             <p className="text-gold font-medium text-sm tracking-widest uppercase mb-4">

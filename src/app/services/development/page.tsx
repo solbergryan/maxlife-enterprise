@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -16,8 +17,17 @@ export default function DevelopmentServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-architect-plan-construction-protective-helmet-engineering-3979490.webp"
+          alt="Commercial development architect planning with construction site"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/services"
             className="text-gold hover:underline text-sm mb-4 inline-flex items-center gap-1"

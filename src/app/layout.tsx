@@ -8,6 +8,8 @@ import ExitIntentPopup from "@/components/ExitIntentPopup";
 import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
+import CookieConsent from "@/components/cookies/CookieConsent";
+import TrackingScripts from "@/components/cookies/TrackingScripts";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -184,6 +186,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <GoogleAnalytics />
+        <TrackingScripts />
         <AnalyticsTracker />
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
@@ -192,6 +195,7 @@ export default function RootLayout({
         <NewsletterSignup />
         <Footer />
         <ExitIntentPopup />
+        <CookieConsent />
         <Analytics />
         <SpeedInsights />
       </body>

@@ -34,3 +34,9 @@ scripts/client_secret_*.json
 
 # generated analytics reports
 reports/
+
+# raw video source files — keep local only, use public/videos for the site
+assets/
+
+# stray root-level PDFs
+/300_Rutgers_Amenity_Shot_List.pdf

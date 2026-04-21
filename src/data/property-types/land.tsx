@@ -23,6 +23,10 @@ const landTopLevel: PropertyTypeEntry = {
   page: {
     displayName: "Land",
     pluralDisplayName: "Land Parcels",
+    heroImage: {
+      src: "/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-site-cranes-building-6778044.webp",
+      alt: "Central Florida development site with cranes",
+    },
     heroEyebrow: "Land Investment Opportunities",
     heroHeadline: "Land for Sale in Florida",
     heroSubheadline: "Commercial, residential, industrial, and agricultural parcels in the fastest-growing state in America",

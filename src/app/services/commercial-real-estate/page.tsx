@@ -12,6 +12,8 @@ export default function CommercialRealEstatePage() {
     <ServicePageLayout
       title="Commercial Real Estate Brokerage"
       subtitle="Real Estate Services"
+      heroImage="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-modern-building-facade-skyscraper-geometric-1048092.webp"
+      heroAlt="Modern Central Florida commercial office tower exterior"
       description="Full-service commercial real estate representation for buyers, sellers, landlords, and tenants across the Orlando and Melbourne metro areas. We specialize in NNN investment properties, office, retail, and industrial spaces — delivering results-driven brokerage with deep Central Florida market knowledge."
       icon={
         <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
