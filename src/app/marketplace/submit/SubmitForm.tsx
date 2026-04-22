@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { generateSlug } from "@/lib/listings-utils";
+import { uploadListingPhotos } from "@/lib/listing-photos";
+import { PhotoUploader } from "./PhotoUploader";
 import {
   PROPERTY_TYPE_LABELS,
   TRANSACTION_TYPE_LABELS,
@@ -130,8 +132,10 @@ const label = "text-gray-400 text-xs uppercase tracking-wider mb-1 block";
 export function SubmitForm({ userEmail }: SubmitFormProps) {
   const router = useRouter();
   const [form, setForm] = useState<FormState>(initial(userEmail));
+  const [photos, setPhotos] = useState<File[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [progressMsg, setProgressMsg] = useState("");
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -139,6 +143,7 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
+    setProgressMsg("");
     setLoading(true);
     try {
       const supabase = createClient();
@@ -151,10 +156,35 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
         return;
       }
 
+      // Upload photos first so we can persist URLs on the inserted row.
+      let photoUrls: string[] = [];
+      const slug = generateSlug(form.title);
+      if (photos.length > 0) {
+        try {
+          setProgressMsg(`Uploading ${photos.length} photo${photos.length === 1 ? "" : "s"}…`);
+          photoUrls = await uploadListingPhotos({
+            supabase,
+            userId: user.id,
+            slug,
+            files: photos,
+          });
+        } catch (err) {
+          setError(
+            err instanceof Error
+              ? `Photo upload failed: ${err.message}`
+              : "Photo upload failed."
+          );
+          setLoading(false);
+          setProgressMsg("");
+          return;
+        }
+      }
+
+      setProgressMsg("Publishing listing…");
       const row = {
         user_id: user.id,
-        slug: generateSlug(form.title),
-
+        slug,
+        photo_urls: photoUrls,
         title: form.title.trim(),
         property_type: form.property_type,
         property_subtype: form.property_subtype.trim() || null,
@@ -213,12 +243,14 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
       if (insertErr) {
         setError(insertErr.message);
         setLoading(false);
+        setProgressMsg("");
         return;
       }
       router.push(`/marketplace/${data.slug}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong.");
       setLoading(false);
+      setProgressMsg("");
     }
   }
 
@@ -512,6 +544,16 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
         </Field>
       </Section>
 
+      {/* --- Photos --- */}
+      <fieldset className="border border-dark-border rounded-xl p-5 bg-dark-card/40">
+        <legend className="text-gold text-sm font-semibold uppercase tracking-widest px-2">
+          Photos
+        </legend>
+        <div className="mt-2">
+          <PhotoUploader files={photos} onChange={setPhotos} />
+        </div>
+      </fieldset>
+
       {/* --- Descriptive --- */}
       <Section title="Description">
         <Field label="Property Description" full>
@@ -590,7 +632,7 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
         disabled={loading}
         className="w-full bg-gold hover:bg-gold-dark text-dark font-semibold py-4 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {loading ? "Publishing..." : "Publish Listing"}
+        {loading ? progressMsg || "Publishing..." : "Publish Listing"}
       </button>
     </form>
   );

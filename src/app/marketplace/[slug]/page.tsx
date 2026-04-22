@@ -123,12 +123,38 @@ export default async function ListingDetailPage({ params }: PageProps) {
           </p>
         </div>
 
-        {/* Hero photo placeholder */}
-        <div className="h-64 sm:h-80 bg-gradient-to-br from-gold/10 via-dark-card to-navy-dark/40 border border-dark-border rounded-xl mb-8 flex items-center justify-center">
-          <svg className="w-20 h-20 text-gold/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M9 14h6M9 18h6" />
-          </svg>
-        </div>
+        {/* Photo gallery or placeholder */}
+        {l.photo_urls.length > 0 ? (
+          <div className="mb-8">
+            <div className="h-64 sm:h-96 bg-dark border border-dark-border rounded-xl overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={l.photo_urls[0]}
+                alt={l.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {l.photo_urls.length > 1 && (
+              <div className="grid grid-cols-4 sm:grid-cols-6 gap-2 mt-2">
+                {l.photo_urls.slice(1).map((url, i) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={i}
+                    src={url}
+                    alt={`${l.title} — photo ${i + 2}`}
+                    className="aspect-square w-full object-cover rounded-md border border-dark-border"
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="h-64 sm:h-80 bg-gradient-to-br from-gold/10 via-dark-card to-navy-dark/40 border border-dark-border rounded-xl mb-8 flex items-center justify-center">
+            <svg className="w-20 h-20 text-gold/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M9 14h6M9 18h6" />
+            </svg>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main column */}

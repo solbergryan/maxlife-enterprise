@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { listListings, formatPrice, formatPercent } from "@/lib/listings";
@@ -67,8 +68,17 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-skyscrapers-skyline-city-buildings-high-rise-450793.webp"
+          alt="Commercial real estate marketplace listings"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Marketplace
           </p>
@@ -176,22 +186,34 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
                 href={`/marketplace/${l.slug}`}
                 className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/40 transition-all"
               >
-                {/* Photo placeholder (photos coming in Phase 2) */}
-                <div className="h-44 bg-gradient-to-br from-gold/10 via-dark-card to-navy-dark/40 flex items-center justify-center">
-                  <svg
-                    className="w-12 h-12 text-gold/30"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M9 14h6M9 18h6"
+                {/* Primary photo or placeholder */}
+                {l.photo_urls.length > 0 ? (
+                  <div className="h-44 bg-dark relative overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={l.photo_urls[0]}
+                      alt={l.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                  </svg>
-                </div>
+                  </div>
+                ) : (
+                  <div className="h-44 bg-gradient-to-br from-gold/10 via-dark-card to-navy-dark/40 flex items-center justify-center">
+                    <svg
+                      className="w-12 h-12 text-gold/30"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M9 14h6M9 18h6"
+                      />
+                    </svg>
+                  </div>
+                )}
 
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-3 text-xs">
