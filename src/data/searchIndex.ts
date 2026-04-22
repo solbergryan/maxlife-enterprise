@@ -91,6 +91,25 @@ export const searchIndex: SearchItem[] = [
     ],
   },
   {
+    title: "Gas Station Properties Florida",
+    description:
+      "Wawa, 7-Eleven, RaceTrac, Circle K, and branded fuel NNN and ground-lease investments with a pre-loaded deal analyzer.",
+    url: "/gas-station-properties-florida",
+    category: "Landing",
+    keywords: [
+      "gas station",
+      "c-store",
+      "convenience store",
+      "fuel",
+      "wawa",
+      "7-eleven",
+      "racetrac",
+      "circle k",
+      "ground lease",
+      "travel center",
+    ],
+  },
+  {
     title: "1031 Exchange Florida",
     description:
       "Replace property with qualifying CRE before your 45/180-day deadlines.",

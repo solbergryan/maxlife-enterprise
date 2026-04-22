@@ -17,8 +17,8 @@ const specialPurposeTopLevel: PropertyTypeEntry = {
     displayName: "Special Purpose",
     pluralDisplayName: "Special Purpose Properties",
     heroImage: {
-      src: "/images/commercial-stock/commercial-business/maxlife-commercial-business-building-dark-night-convenience-store-shop-2583628.webp",
-      alt: "Special purpose commercial building at night",
+      src: "/images/commercial-stock/special-purpose/maxlife-special-purpose-fuel-gas-station-refueling-gas-gasoline-car-wallpapers-gasol-6999650.webp",
+      alt: "Gas station fuel pumps — one of many specialty CRE asset types",
     },
     heroEyebrow: "Specialty CRE Investments",
     heroHeadline: "Special Purpose Properties in Florida",
@@ -97,7 +97,7 @@ const gasStation: PropertyTypeEntry = {
   slug: "gas-station",
   parentSlug: "special-purpose",
   meta: { title: "Gas Station & Fuel Station Properties for Sale in Florida", description: "Buy gas station and fuel station properties in Florida. 7-Eleven, Wawa, RaceTrac, Circle K, and branded fuel.", keywords: "gas station florida, fuel station, 7-eleven property" },
-  page: { ...base, displayName: "Gas Station", pluralDisplayName: "Gas Station Properties", heroHeadline: "Gas Stations & Fuel Properties in Florida", heroSubheadline: "C-store fuel pads from Wawa, 7-Eleven, and RaceTrac — tightest cap rates in specialty", heroBody: "Gas station and convenience store pad sites with fuel are among the most tightly priced specialty CRE assets in America. Premium brands like Wawa trade at sub-5% cap rates on ground leases, and 7-Eleven/RaceTrac/Buc-ee's product commands similar pricing. Environmental diligence is essential — Phase I and Phase II ESAs are standard." },
+  page: { ...base, displayName: "Gas Station", pluralDisplayName: "Gas Station Properties", heroHeadline: "Gas Stations & Fuel Properties in Florida", heroSubheadline: "C-store fuel pads from Wawa, 7-Eleven, and RaceTrac — tightest cap rates in specialty", heroBody: "Gas station and convenience store pad sites with fuel are among the most tightly priced specialty CRE assets in America. Premium brands like Wawa trade at sub-5% cap rates on ground leases, and 7-Eleven/RaceTrac/Buc-ee's product commands similar pricing. Environmental diligence is essential — Phase I and Phase II ESAs are standard.", relatedResources: [{ title: "Full Gas Station Properties Landing Page", description: "Deep dive on C-store ground leases, major operators, environmental diligence, and pre-loaded deal analyzer.", href: "/gas-station-properties-florida" }, ...(base.relatedResources || [])] },
 };
 
 const church: PropertyTypeEntry = {

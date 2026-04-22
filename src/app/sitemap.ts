@@ -197,6 +197,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/gas-station-properties-florida`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/central-florida-land-for-development`,
       lastModified: now,
       changeFrequency: "monthly",
