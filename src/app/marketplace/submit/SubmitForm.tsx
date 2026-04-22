@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { generateSlug } from "@/lib/listings-utils";
-import { uploadListingPhotos } from "@/lib/listing-photos";
+import { uploadListingPhotos, deleteListingPhoto } from "@/lib/listing-photos";
 import { PhotoUploader } from "./PhotoUploader";
 import {
   PROPERTY_TYPE_LABELS,
@@ -300,6 +300,20 @@ export function SubmitForm({ userEmail, editing }: SubmitFormProps) {
           setProgressMsg("");
           return;
         }
+
+        // Best-effort: delete orphaned files for photos the user removed.
+        // Runs after the DB update so we don't lose pointers if the save fails.
+        const removedUrls = editing.photo_urls.filter(
+          (url) => !existingPhotoUrls.includes(url)
+        );
+        if (removedUrls.length > 0) {
+          await Promise.all(
+            removedUrls.map((url) =>
+              deleteListingPhoto(supabase, url).catch(() => {})
+            )
+          );
+        }
+
         resultSlug = editing.slug;
       } else {
         const { data, error: insertErr } = await supabase

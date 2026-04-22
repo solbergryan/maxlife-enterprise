@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { deleteListingPhoto } from "@/lib/listing-photos";
 import type { Listing, ListingStatus } from "@/types/listing";
 import { STATUS_LABELS } from "@/types/listing";
 
@@ -46,7 +47,7 @@ export function MyListingActions({ listing }: Props) {
   async function handleDelete() {
     if (
       !window.confirm(
-        `Permanently delete "${listing.title}"? This cannot be undone. Photos will stay in storage but the listing row is removed.`
+        `Permanently delete "${listing.title}"? This cannot be undone.`
       )
     ) {
       return;
@@ -54,6 +55,9 @@ export function MyListingActions({ listing }: Props) {
     setBusy(true);
     setError("");
     const supabase = createClient();
+
+    // Delete the row first (under RLS). If that fails, bail before touching
+    // storage so we don't orphan files from a listing the user doesn't own.
     const { error: deleteErr } = await supabase
       .from("listings")
       .delete()
@@ -63,6 +67,16 @@ export function MyListingActions({ listing }: Props) {
       setBusy(false);
       return;
     }
+
+    // Best-effort cleanup of uploaded photos — a failure here is non-fatal
+    // because the listing is already gone. Worst case we leak a blob or two
+    // until a sweep job is added later.
+    await Promise.all(
+      listing.photo_urls.map((url) =>
+        deleteListingPhoto(supabase, url).catch(() => {})
+      )
+    );
+
     router.refresh();
   }
 
