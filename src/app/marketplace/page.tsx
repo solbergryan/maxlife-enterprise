@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { listListings, formatPrice, formatPercent } from "@/lib/listings";
@@ -9,6 +8,8 @@ import {
   LISTING_TYPE_LABELS,
   STATUS_LABELS,
   type PropertyType,
+  type TransactionType,
+  type ListingType,
 } from "@/types/listing";
 
 export const metadata: Metadata = {
@@ -24,10 +25,19 @@ export const metadata: Metadata = {
 
 interface PageProps {
   searchParams: Promise<{
+    q?: string;
     type?: string;
+    tx?: string;
+    lt?: string;
     city?: string;
+    county?: string;
     min?: string;
     max?: string;
+    capmin?: string;
+    capmax?: string;
+    sqft?: string;
+    sort?: string;
+    page?: string;
   }>;
 }
 
@@ -45,17 +55,55 @@ const breadcrumbSchema = {
   ],
 };
 
+const txLabel = (v: string): v is TransactionType =>
+  v === "sale" || v === "lease" || v === "both";
+const ltLabel = (v: string): v is ListingType =>
+  v === "broker" || v === "owner" || v === "investor";
+
+function buildQuery(
+  current: Record<string, string | undefined>,
+  patch: Record<string, string | null>
+) {
+  const params = new URLSearchParams();
+  for (const [k, v] of Object.entries(current)) {
+    if (v != null && v !== "") params.set(k, v);
+  }
+  for (const [k, v] of Object.entries(patch)) {
+    if (v === null) params.delete(k);
+    else params.set(k, v);
+  }
+  const s = params.toString();
+  return s ? `?${s}` : "";
+}
+
 export default async function MarketplacePage({ searchParams }: PageProps) {
   const sp = await searchParams;
   const propertyType =
     sp.type && sp.type in PROPERTY_TYPE_LABELS ? (sp.type as PropertyType) : undefined;
+  const transactionType = sp.tx && txLabel(sp.tx) ? sp.tx : undefined;
+  const listingType = sp.lt && ltLabel(sp.lt) ? sp.lt : undefined;
+  const page = Number(sp.page) || 1;
 
-  const listings = await listListings({
+  const {
+    listings,
+    total,
+    page: currentPage,
+    pageSize,
+    totalPages,
+  } = await listListings({
+    search: sp.q,
     propertyType,
+    transactionType,
+    listingType,
     city: sp.city,
+    county: sp.county,
     minPrice: sp.min ? Number(sp.min) : undefined,
     maxPrice: sp.max ? Number(sp.max) : undefined,
-    limit: 100,
+    minCapRate: sp.capmin ? Number(sp.capmin) : undefined,
+    maxCapRate: sp.capmax ? Number(sp.capmax) : undefined,
+    minSqft: sp.sqft ? Number(sp.sqft) : undefined,
+    sort: (sp.sort as "newest" | "price-asc" | "price-desc" | "cap-asc" | "cap-desc") || "newest",
+    page,
   });
 
   const propertyTypeOptions = Object.entries(PROPERTY_TYPE_LABELS) as [
@@ -63,22 +111,16 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
     string,
   ][];
 
+  const firstOnPage = total === 0 ? 0 : (currentPage - 1) * pageSize + 1;
+  const lastOnPage = Math.min(currentPage * pageSize, total);
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
-        <Image
-          src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-skyscrapers-skyline-city-buildings-high-rise-450793.webp"
-          alt="Commercial real estate marketplace listings"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
+      <section className="bg-dark-card/50 border-b border-dark-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Marketplace
           </p>
@@ -106,44 +148,121 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       {/* Filters */}
       <section className="border-b border-dark-border bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <form
-            method="GET"
-            className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm"
-          >
-            <select
-              name="type"
-              defaultValue={propertyType ?? ""}
-              className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
-            >
-              <option value="">All property types</option>
-              {propertyTypeOptions.map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-            <input
-              type="text"
-              name="city"
-              placeholder="City"
-              defaultValue={sp.city ?? ""}
-              className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
-            />
-            <input
-              type="number"
-              name="min"
-              placeholder="Min price"
-              defaultValue={sp.min ?? ""}
-              className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
-            />
-            <input
-              type="number"
-              name="max"
-              placeholder="Max price"
-              defaultValue={sp.max ?? ""}
-              className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
-            />
-            <div className="col-span-2 sm:col-span-4 flex gap-3">
+          <form method="GET" className="space-y-3 text-sm">
+            {/* Top row — search + sort */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="search"
+                name="q"
+                placeholder="Search title, description, tenant, city…"
+                defaultValue={sp.q ?? ""}
+                className="flex-1 bg-dark-card border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+              <select
+                name="sort"
+                defaultValue={sp.sort ?? "newest"}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2.5 text-white focus:border-gold focus:outline-none sm:w-48"
+              >
+                <option value="newest">Newest first</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="cap-desc">Cap rate: high to low</option>
+                <option value="cap-asc">Cap rate: low to high</option>
+              </select>
+            </div>
+
+            {/* Filter grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+              <select
+                name="type"
+                defaultValue={propertyType ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
+              >
+                <option value="">All property types</option>
+                {propertyTypeOptions.map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+              <select
+                name="tx"
+                defaultValue={transactionType ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
+              >
+                <option value="">Sale or lease</option>
+                {Object.entries(TRANSACTION_TYPE_LABELS).map(([v, l]) => (
+                  <option key={v} value={v}>
+                    {l}
+                  </option>
+                ))}
+              </select>
+              <select
+                name="lt"
+                defaultValue={listingType ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
+              >
+                <option value="">Any lister</option>
+                {Object.entries(LISTING_TYPE_LABELS).map(([v, l]) => (
+                  <option key={v} value={v}>
+                    {l}
+                  </option>
+                ))}
+              </select>
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                defaultValue={sp.city ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+              <input
+                type="text"
+                name="county"
+                placeholder="County"
+                defaultValue={sp.county ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+              <input
+                type="number"
+                name="sqft"
+                placeholder="Min SqFt"
+                defaultValue={sp.sqft ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+              <input
+                type="number"
+                name="min"
+                placeholder="Min price"
+                defaultValue={sp.min ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+              <input
+                type="number"
+                name="max"
+                placeholder="Max price"
+                defaultValue={sp.max ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+              <input
+                type="number"
+                step="0.1"
+                name="capmin"
+                placeholder="Min cap %"
+                defaultValue={sp.capmin ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+              <input
+                type="number"
+                step="0.1"
+                name="capmax"
+                placeholder="Max cap %"
+                defaultValue={sp.capmax ?? ""}
+                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+              />
+            </div>
+
+            <div className="flex flex-wrap gap-3 items-center">
               <button
                 type="submit"
                 className="bg-gold/20 hover:bg-gold/30 border border-gold/40 text-gold px-4 py-2 rounded-lg font-medium transition-colors"
@@ -156,8 +275,10 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               >
                 Reset
               </Link>
-              <span className="ml-auto text-gray-500 self-center">
-                {listings.length} listing{listings.length === 1 ? "" : "s"}
+              <span className="ml-auto text-gray-500">
+                {total === 0
+                  ? "0 listings"
+                  : `${firstOnPage}–${lastOnPage} of ${total} listing${total === 1 ? "" : "s"}`}
               </span>
             </div>
           </form>
@@ -255,6 +376,34 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               </Link>
             ))}
           </div>
+        )}
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <nav
+            className="mt-10 flex items-center justify-center gap-2"
+            aria-label="Pagination"
+          >
+            {currentPage > 1 && (
+              <Link
+                href={`/marketplace${buildQuery(sp, { page: String(currentPage - 1) })}`}
+                className="px-3 py-2 rounded-md border border-dark-border text-gray-300 hover:border-gold/40 hover:text-gold text-sm"
+              >
+                ← Prev
+              </Link>
+            )}
+            <span className="text-gray-500 text-sm px-3">
+              Page {currentPage} of {totalPages}
+            </span>
+            {currentPage < totalPages && (
+              <Link
+                href={`/marketplace${buildQuery(sp, { page: String(currentPage + 1) })}`}
+                className="px-3 py-2 rounded-md border border-dark-border text-gray-300 hover:border-gold/40 hover:text-gold text-sm"
+              >
+                Next →
+              </Link>
+            )}
+          </nav>
         )}
       </section>
 
