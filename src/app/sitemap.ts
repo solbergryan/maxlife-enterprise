@@ -498,20 +498,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.75,
     })),
-    // Sell commercial property city pages (programmatic)
+    // Sell commercial property hub + city pages (programmatic)
+    {
+      url: `${BASE_URL}/sell-commercial-property`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
     ...seoCities.map((c) => ({
       url: `${BASE_URL}/sell-commercial-property/${c.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
-    // Buy NNN property city pages (programmatic)
+    // Buy NNN property hub + city pages (programmatic)
+    {
+      url: `${BASE_URL}/buy-nnn-property`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
     ...seoCities.map((c) => ({
       url: `${BASE_URL}/buy-nnn-property/${c.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.75,
     })),
+    // Cap rates research hub (individual submarkets added above)
+    {
+      url: `${BASE_URL}/cap-rates`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    // Investment outlook research hub (sector/year pages added above)
+    {
+      url: `${BASE_URL}/investment-outlook`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
     // Investor persona pages
     {
       url: `${BASE_URL}/investors`,

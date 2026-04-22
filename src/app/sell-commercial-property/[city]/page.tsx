@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cities } from "@/data/seo/cities";
+import { nearbyCities, regionForCounty } from "@/lib/seo-regions";
 
 type Params = Promise<{ city: string }>;
 
@@ -34,8 +35,25 @@ export default async function SellCommercialPage({
   const c = cities.find((x) => x.slug === city);
   if (!c) return notFound();
 
+  const nearby = nearbyCities(c.slug, 8);
+  const region = regionForCounty(c.county);
+
   return (
     <>
+      {/* Breadcrumb */}
+      <nav
+        aria-label="Breadcrumb"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-xs text-gray-500"
+      >
+        <Link href="/" className="hover:text-gold">Home</Link>
+        <span className="mx-2">/</span>
+        <Link href="/sell-commercial-property" className="hover:text-gold">
+          Sell Commercial Property
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-400">{c.name}</span>
+      </nav>
+
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -216,6 +234,79 @@ export default async function SellCommercialPage({
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Nearby Cities */}
+      {nearby.length > 0 && (
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+          <h2 className="text-2xl font-bold text-white mb-2">
+            Nearby <span className="text-gold">{region} Markets</span>
+          </h2>
+          <p className="text-gray-400 text-sm mb-6">
+            We also sell commercial property in these nearby cities.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {nearby.map((n) => (
+              <Link
+                key={n.slug}
+                href={`/sell-commercial-property/${n.slug}`}
+                className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
+              >
+                Sell in {n.name}
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/sell-commercial-property"
+              className="text-gold hover:underline text-sm font-medium"
+            >
+              View all Florida markets →
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {/* Related Services */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+        <h2 className="text-2xl font-bold text-white mb-6">
+          Related <span className="text-gold">Services</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link
+            href="/net-sheets/seller"
+            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+          >
+            <h3 className="text-gold font-semibold mb-1 text-sm">
+              Seller Net Sheet
+            </h3>
+            <p className="text-gray-400 text-xs">
+              Estimate your proceeds after closing costs.
+            </p>
+          </Link>
+          <Link
+            href={`/buy-nnn-property/${c.slug}`}
+            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+          >
+            <h3 className="text-gold font-semibold mb-1 text-sm">
+              Buy NNN in {c.name}
+            </h3>
+            <p className="text-gray-400 text-xs">
+              1031 reinvestment options in {c.name}.
+            </p>
+          </Link>
+          <Link
+            href="/cap-rates"
+            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+          >
+            <h3 className="text-gold font-semibold mb-1 text-sm">
+              Cap Rates by Submarket
+            </h3>
+            <p className="text-gray-400 text-xs">
+              Current cap rate ranges across Central Florida.
+            </p>
+          </Link>
         </div>
       </section>
 

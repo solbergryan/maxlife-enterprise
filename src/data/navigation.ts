@@ -62,6 +62,17 @@ export const mainNav: NavLink[] = [
     ],
   },
   {
+    label: "Research",
+    href: "/cap-rates",
+    children: [
+      { label: "Cap Rates by Submarket", href: "/cap-rates" },
+      { label: "Sector Investment Outlook", href: "/investment-outlook" },
+      { label: "Sell Commercial Property", href: "/sell-commercial-property" },
+      { label: "Buy NNN Property", href: "/buy-nnn-property" },
+      { label: "Quarterly Market Reports", href: "/market-reports" },
+    ],
+  },
+  {
     label: "Marketplace",
     href: "/marketplace",
     children: [
@@ -97,9 +108,9 @@ export const mainNav: NavLink[] = [
 ];
 
 export const footerInvestorLinks: NavLink[] = [
-  { label: "Sell Your Property", href: "/opportunities" },
+  { label: "Sell Commercial Property", href: "/sell-commercial-property" },
+  { label: "Buy NNN Property", href: "/buy-nnn-property" },
   { label: "Seller Net Sheet", href: "/net-sheets/seller" },
-  { label: "Buyer Estimate", href: "/net-sheets/buyer" },
   { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "CRE Lenders Directory", href: "/lenders" },
   { label: "1031 Exchange", href: "/1031-exchange-florida" },
@@ -116,12 +127,13 @@ export const footerServiceLinks: NavLink[] = [
 ];
 
 export const footerResourceLinks: NavLink[] = [
+  { label: "Cap Rates by Submarket", href: "/cap-rates" },
+  { label: "Sector Investment Outlook", href: "/investment-outlook" },
   { label: "Quarterly Market Reports", href: "/market-reports" },
   { label: "Market Insights (Blog)", href: "/blog" },
   { label: "Academy (Free CRE Courses)", href: "/academy" },
   { label: "CRE Professionals Guide", href: "/professionals" },
   { label: "Orlando Market", href: "/markets/orlando-commercial-real-estate" },
-  { label: "Brevard County Market", href: "/markets/brevard-county-commercial-real-estate" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

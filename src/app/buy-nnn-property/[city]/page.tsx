@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cities } from "@/data/seo/cities";
+import { nearbyCities, regionForCounty } from "@/lib/seo-regions";
 
 type Params = Promise<{ city: string }>;
 
@@ -34,8 +35,25 @@ export default async function BuyNNNCityPage({
   const c = cities.find((x) => x.slug === city);
   if (!c) return notFound();
 
+  const nearby = nearbyCities(c.slug, 8);
+  const region = regionForCounty(c.county);
+
   return (
     <>
+      {/* Breadcrumb */}
+      <nav
+        aria-label="Breadcrumb"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-xs text-gray-500"
+      >
+        <Link href="/" className="hover:text-gold">Home</Link>
+        <span className="mx-2">/</span>
+        <Link href="/buy-nnn-property" className="hover:text-gold">
+          Buy NNN Property
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-400">{c.name}</span>
+      </nav>
+
       {/* Header */}
       <section className="bg-dark-card/50 border-b border-dark-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -184,6 +202,79 @@ export default async function BuyNNNCityPage({
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* Nearby Cities */}
+      {nearby.length > 0 && (
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+          <h2 className="text-2xl font-bold text-white mb-2">
+            Nearby <span className="text-gold">{region} NNN Markets</span>
+          </h2>
+          <p className="text-gray-400 text-sm mb-6">
+            We also source NNN inventory in these nearby cities.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {nearby.map((n) => (
+              <Link
+                key={n.slug}
+                href={`/buy-nnn-property/${n.slug}`}
+                className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
+              >
+                NNN in {n.name}
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/buy-nnn-property"
+              className="text-gold hover:underline text-sm font-medium"
+            >
+              View all Florida NNN markets →
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {/* Related Research */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+        <h2 className="text-2xl font-bold text-white mb-6">
+          Related <span className="text-gold">Research</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link
+            href="/investment-outlook/nnn/2026"
+            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+          >
+            <h3 className="text-gold font-semibold mb-1 text-sm">
+              NNN Sector Outlook 2026
+            </h3>
+            <p className="text-gray-400 text-xs">
+              Cap rate trends, tenant demand, and forward view.
+            </p>
+          </Link>
+          <Link
+            href="/cap-rates"
+            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+          >
+            <h3 className="text-gold font-semibold mb-1 text-sm">
+              Cap Rates by Submarket
+            </h3>
+            <p className="text-gray-400 text-xs">
+              Submarket-level cap rate ranges across Central Florida.
+            </p>
+          </Link>
+          <Link
+            href="/1031-exchange-florida"
+            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+          >
+            <h3 className="text-gold font-semibold mb-1 text-sm">
+              1031 Exchange Guide
+            </h3>
+            <p className="text-gray-400 text-xs">
+              Timelines, rules, and replacement property strategy.
+            </p>
+          </Link>
+        </div>
       </section>
 
       {/* CTA */}
