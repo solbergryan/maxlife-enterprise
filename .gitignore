@@ -32,8 +32,8 @@ scripts/.ga4-report-token.json
 scripts/.ga4-sa.json
 scripts/client_secret_*.json
 
-# generated analytics reports
-reports/
+# analytics run logs — keep generated reports (they commit via CI) but skip logs
+reports/logs/
 
 # raw video source files — keep local only, use public/videos for the site
 assets/

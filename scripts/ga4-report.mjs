@@ -35,6 +35,22 @@ const REPORTS_DIR = path.join(process.cwd(), "reports");
 // ---------------- Auth ----------------
 
 async function getAuth() {
+  // CI path: credentials come from environment variables (GitHub Actions, etc.)
+  if (
+    process.env.GA4_OAUTH_CLIENT_ID &&
+    process.env.GA4_OAUTH_CLIENT_SECRET &&
+    process.env.GA4_OAUTH_REFRESH_TOKEN
+  ) {
+    const oauth2 = new google.auth.OAuth2(
+      process.env.GA4_OAUTH_CLIENT_ID,
+      process.env.GA4_OAUTH_CLIENT_SECRET,
+      "http://localhost"
+    );
+    oauth2.setCredentials({ refresh_token: process.env.GA4_OAUTH_REFRESH_TOKEN });
+    return oauth2;
+  }
+
+  // Local path: read OAuth client JSON and cached token from disk.
   if (!fs.existsSync(OAUTH_CLIENT_PATH)) {
     throw new Error(`Missing ${OAUTH_CLIENT_PATH}`);
   }
@@ -258,6 +274,27 @@ async function main() {
     },
   });
 
+  // --- Report 8: Audience membership counts ---
+  // Use the audienceName dimension with activeUsers to show how each audience
+  // has populated. Brand-new audiences take 24-48h to accumulate members.
+  let audienceRes = null;
+  try {
+    audienceRes = await data.properties.runReport({
+      property,
+      requestBody: {
+        dateRanges: dateRange,
+        dimensions: [{ name: "audienceName" }],
+        metrics: [{ name: "activeUsers" }],
+        orderBys: [{ metric: { metricName: "activeUsers" }, desc: true }],
+        limit: "20",
+      },
+    });
+  } catch (err) {
+    // audienceName dimension isn't always available immediately after audience
+    // creation; fail softly so the rest of the report still runs.
+    console.error("[warn] audience report failed:", err.response?.data?.error?.message || err.message);
+  }
+
   // --- Report 7: CTA click breakdown (custom event cta_click w/ cta_name param) ---
   // cta_name is a custom event parameter — requires registered custom dimension.
   // We query eventCount filtered to cta_click by eventName only (parameter breakdown
@@ -353,6 +390,19 @@ async function main() {
       parseRows(ctaRes, 1)
     )
   );
+
+  md.push(`## 8. Audience Membership\n`);
+  md.push(`Active users currently matching each GA4 audience in the last 30 days. Use these numbers to decide which audiences are worth retargeting in Google Ads (typically 1000+ members for a usable seed list, 100+ for a specific nurture campaign).\n`);
+  if (audienceRes) {
+    md.push(
+      rowsToMarkdown(
+        ["Audience", "Active Users"],
+        parseRows(audienceRes, 1)
+      )
+    );
+  } else {
+    md.push(`_Audience data not available yet — newly created audiences take 24-48 hours to begin reporting._\n`);
+  }
 
   // --- Write file ---
   if (!fs.existsSync(REPORTS_DIR)) fs.mkdirSync(REPORTS_DIR, { recursive: true });

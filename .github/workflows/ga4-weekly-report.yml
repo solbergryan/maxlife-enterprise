@@ -1,0 +1,53 @@
+name: GA4 Weekly Report
+
+on:
+  # Every Monday at 21:00 UTC (5:00 PM Eastern Daylight Time / 4:00 PM EST)
+  schedule:
+    - cron: "0 21 * * 1"
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write # so the job can commit the generated report back to the repo
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install googleapis
+        run: npm install --no-save googleapis
+
+      - name: Generate GA4 report
+        env:
+          GA4_OAUTH_CLIENT_ID: ${{ secrets.GA4_OAUTH_CLIENT_ID }}
+          GA4_OAUTH_CLIENT_SECRET: ${{ secrets.GA4_OAUTH_CLIENT_SECRET }}
+          GA4_OAUTH_REFRESH_TOKEN: ${{ secrets.GA4_OAUTH_REFRESH_TOKEN }}
+        run: node scripts/ga4-report.mjs
+
+      - name: Commit report to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/
+          if git diff --staged --quiet; then
+            echo "No new report changes to commit."
+          else
+            DATE=$(date -u +"%Y-%m-%d")
+            git commit -m "chore(analytics): weekly GA4 report $DATE"
+            git push
+          fi
+
+      - name: Upload report as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ga4-weekly-report
+          path: reports/*.md
+          retention-days: 90
