@@ -16,6 +16,7 @@ import { glossaryTerms } from "@/data/glossary";
 import { investorPersonas } from "@/data/investor-personas";
 import { leaseTypes } from "@/data/lease-types";
 import { cities as seoCities } from "@/data/seo/cities";
+import { createClient } from "@/lib/supabase/server";
 
 const BASE_URL = "https://maxlifedevelopment.com";
 
@@ -380,6 +381,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  // Marketplace — user-submitted listings (read via Supabase if configured).
+  // Fails soft: if Supabase env isn't set or the table doesn't exist, skip.
+  const marketplaceIndex: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/marketplace`,
+      lastModified: now,
+      changeFrequency: "daily" as const,
+      priority: 0.85,
+    },
+  ];
+  let marketplaceListings: MetadataRoute.Sitemap = [];
+  if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
+    try {
+      const supabase = await createClient();
+      const { data } = await supabase
+        .from("listings")
+        .select("slug, updated_at, status")
+        .in("status", ["active", "under_contract", "sold"])
+        .limit(1000);
+      marketplaceListings = (data ?? []).map((row) => ({
+        url: `${BASE_URL}/marketplace/${row.slug}`,
+        lastModified: row.updated_at ?? now,
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+      }));
+    } catch {
+      // Table may not exist yet — silently omit.
+    }
+  }
+
   return [
     ...staticPages,
     ...blogPages,
@@ -394,6 +425,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...propertyTypePages,
     ...professionalsHub,
     ...professionalPages,
+    ...marketplaceIndex,
+    ...marketplaceListings,
     // Careers pages
     {
       url: `${BASE_URL}/careers`,

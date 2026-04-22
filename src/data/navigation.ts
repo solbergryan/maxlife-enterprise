@@ -62,6 +62,14 @@ export const mainNav: NavLink[] = [
     ],
   },
   {
+    label: "Marketplace",
+    href: "/marketplace",
+    children: [
+      { label: "Browse Listings", href: "/marketplace" },
+      { label: "Post a Listing", href: "/marketplace/submit" },
+    ],
+  },
+  {
     label: "Insights",
     href: "/blog",
     children: [
