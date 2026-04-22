@@ -67,6 +67,7 @@ export const mainNav: NavLink[] = [
     children: [
       { label: "Browse Listings", href: "/marketplace" },
       { label: "Post a Listing", href: "/marketplace/submit" },
+      { label: "My Listings", href: "/marketplace/my-listings" },
     ],
   },
   {

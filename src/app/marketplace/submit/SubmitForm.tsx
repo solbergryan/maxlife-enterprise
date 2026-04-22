@@ -10,6 +10,7 @@ import {
   PROPERTY_TYPE_LABELS,
   TRANSACTION_TYPE_LABELS,
   LISTING_TYPE_LABELS,
+  type Listing,
   type PropertyType,
   type TransactionType,
   type ListingType,
@@ -18,6 +19,8 @@ import {
 interface SubmitFormProps {
   /** Default contact email (comes from the authenticated user's account). */
   userEmail: string;
+  /** If provided, the form enters "edit" mode and updates the row on submit. */
+  editing?: Listing;
 }
 
 type FormState = {
@@ -72,6 +75,50 @@ type FormState = {
   contact_phone: string;
   contact_company: string;
 };
+
+const str = (v: string | null | undefined) => v ?? "";
+const numStr = (v: number | null | undefined) =>
+  v == null ? "" : String(v);
+
+const fromListing = (l: Listing): FormState => ({
+  title: l.title,
+  property_type: l.property_type,
+  property_subtype: str(l.property_subtype),
+  transaction_type: l.transaction_type,
+  listing_type: l.listing_type,
+  street_address: str(l.street_address),
+  city: l.city,
+  state: str(l.state) || "FL",
+  zip: str(l.zip),
+  county: str(l.county),
+  price: numStr(l.price),
+  price_per_sqft: numStr(l.price_per_sqft),
+  cap_rate: numStr(l.cap_rate),
+  noi: numStr(l.noi),
+  gross_income: numStr(l.gross_income),
+  operating_expenses: numStr(l.operating_expenses),
+  building_sqft: numStr(l.building_sqft),
+  lot_sqft: numStr(l.lot_sqft),
+  lot_acres: numStr(l.lot_acres),
+  units: numStr(l.units),
+  year_built: numStr(l.year_built),
+  year_renovated: numStr(l.year_renovated),
+  stories: numStr(l.stories),
+  parking_spaces: numStr(l.parking_spaces),
+  zoning: str(l.zoning),
+  occupancy_pct: numStr(l.occupancy_pct),
+  tenant: str(l.tenant),
+  lease_type: str(l.lease_type),
+  lease_term_remaining: str(l.lease_term_remaining),
+  escalations: str(l.escalations),
+  description: str(l.description),
+  highlights: l.highlights.join("\n"),
+  upside_potential: str(l.upside_potential),
+  contact_name: l.contact_name,
+  contact_email: l.contact_email,
+  contact_phone: str(l.contact_phone),
+  contact_company: str(l.contact_company),
+});
 
 const initial = (email: string): FormState => ({
   title: "",
@@ -129,13 +176,19 @@ const input =
   "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
 const label = "text-gray-400 text-xs uppercase tracking-wider mb-1 block";
 
-export function SubmitForm({ userEmail }: SubmitFormProps) {
+export function SubmitForm({ userEmail, editing }: SubmitFormProps) {
   const router = useRouter();
-  const [form, setForm] = useState<FormState>(initial(userEmail));
+  const [form, setForm] = useState<FormState>(
+    editing ? fromListing(editing) : initial(userEmail)
+  );
   const [photos, setPhotos] = useState<File[]>([]);
+  const [existingPhotoUrls, setExistingPhotoUrls] = useState<string[]>(
+    editing?.photo_urls ?? []
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [progressMsg, setProgressMsg] = useState("");
+  const isEditing = Boolean(editing);
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -156,13 +209,13 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
         return;
       }
 
-      // Upload photos first so we can persist URLs on the inserted row.
-      let photoUrls: string[] = [];
-      const slug = generateSlug(form.title);
+      // Upload new photos (appending to existing ones when editing).
+      let newPhotoUrls: string[] = [];
+      const slug = editing ? editing.slug : generateSlug(form.title);
       if (photos.length > 0) {
         try {
           setProgressMsg(`Uploading ${photos.length} photo${photos.length === 1 ? "" : "s"}…`);
-          photoUrls = await uploadListingPhotos({
+          newPhotoUrls = await uploadListingPhotos({
             supabase,
             userId: user.id,
             slug,
@@ -179,8 +232,9 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
           return;
         }
       }
+      const photoUrls = [...existingPhotoUrls, ...newPhotoUrls];
 
-      setProgressMsg("Publishing listing…");
+      setProgressMsg(isEditing ? "Saving changes…" : "Publishing listing…");
       const row = {
         user_id: user.id,
         slug,
@@ -234,19 +288,34 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
         contact_company: form.contact_company.trim() || null,
       };
 
-      const { data, error: insertErr } = await supabase
-        .from("listings")
-        .insert(row)
-        .select("slug")
-        .single();
-
-      if (insertErr) {
-        setError(insertErr.message);
-        setLoading(false);
-        setProgressMsg("");
-        return;
+      let resultSlug: string;
+      if (editing) {
+        const { error: updateErr } = await supabase
+          .from("listings")
+          .update(row)
+          .eq("id", editing.id);
+        if (updateErr) {
+          setError(updateErr.message);
+          setLoading(false);
+          setProgressMsg("");
+          return;
+        }
+        resultSlug = editing.slug;
+      } else {
+        const { data, error: insertErr } = await supabase
+          .from("listings")
+          .insert(row)
+          .select("slug")
+          .single();
+        if (insertErr) {
+          setError(insertErr.message);
+          setLoading(false);
+          setProgressMsg("");
+          return;
+        }
+        resultSlug = data.slug;
       }
-      router.push(`/marketplace/${data.slug}`);
+      router.push(`/marketplace/${resultSlug}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong.");
       setLoading(false);
@@ -549,7 +618,37 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
         <legend className="text-gold text-sm font-semibold uppercase tracking-widest px-2">
           Photos
         </legend>
-        <div className="mt-2">
+        <div className="mt-2 space-y-4">
+          {existingPhotoUrls.length > 0 && (
+            <div>
+              <p className="text-gray-400 text-xs uppercase tracking-wider mb-2">
+                Current photos
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                {existingPhotoUrls.map((url, i) => (
+                  <div
+                    key={url}
+                    className="relative group border border-dark-border rounded-lg overflow-hidden"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={url} alt={`Existing photo ${i + 1}`} className="aspect-square w-full object-cover" />
+                    <button
+                      type="button"
+                      onClick={() => setExistingPhotoUrls(existingPhotoUrls.filter((u) => u !== url))}
+                      className="absolute top-1 right-1 bg-red-500/80 hover:bg-red-500 text-white rounded w-6 h-6 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+                      aria-label="Remove photo"
+                    >
+                      ×
+                    </button>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600 text-xs mt-2">
+                Removing a photo here drops it from the listing when you save.
+                The underlying file stays in storage — we&apos;ll clean orphans later.
+              </p>
+            </div>
+          )}
           <PhotoUploader files={photos} onChange={setPhotos} />
         </div>
       </fieldset>
@@ -632,7 +731,11 @@ export function SubmitForm({ userEmail }: SubmitFormProps) {
         disabled={loading}
         className="w-full bg-gold hover:bg-gold-dark text-dark font-semibold py-4 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {loading ? progressMsg || "Publishing..." : "Publish Listing"}
+        {loading
+          ? progressMsg || (isEditing ? "Saving…" : "Publishing...")
+          : isEditing
+            ? "Save Changes"
+            : "Publish Listing"}
       </button>
     </form>
   );
