@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
+import { InquiryForm } from "./InquiryForm";
 import {
   getListingBySlug,
   formatPrice,
@@ -276,23 +277,14 @@ export default async function ListingDetailPage({ params }: PageProps) {
                 {LISTING_TYPE_LABELS[l.listing_type]}
               </p>
 
-              <a
-                href={`mailto:${l.contact_email}?subject=Inquiry: ${encodeURIComponent(
-                  l.title
-                )}`}
-                className="block w-full bg-gold hover:bg-gold-dark text-dark font-semibold text-center py-3 rounded-lg transition-colors mb-3"
-              >
-                Email Listing Contact
-              </a>
-
-              {l.contact_phone && (
-                <a
-                  href={`tel:${l.contact_phone.replace(/[^0-9+]/g, "")}`}
-                  className="block w-full border border-gold/40 hover:border-gold text-gold text-center py-3 rounded-lg transition-colors"
-                >
-                  {l.contact_phone}
-                </a>
-              )}
+              <div className="mt-4">
+                <InquiryForm
+                  listingId={l.id}
+                  listingTitle={l.title}
+                  contactName={l.contact_name}
+                  contactPhone={l.contact_phone}
+                />
+              </div>
 
               <p className="text-gray-600 text-xs mt-6">
                 Listed {new Date(l.created_at).toLocaleDateString()}

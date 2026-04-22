@@ -8,7 +8,8 @@ export type LeadSource =
   | "newsletter"
   | "newsletter-footer"
   | "blog-inline"
-  | "exit-intent";
+  | "exit-intent"
+  | "marketplace-inquiry";
 
 export interface LeadInsert {
   email: string;
