@@ -176,8 +176,8 @@ export default function HomePage() {
             {[
               { value: "6", label: "Counties Served" },
               { value: "$10M+", label: "Transaction Volume" },
-              { value: "0%", label: "State Income Tax" },
-              { value: "100%", label: "Client-Focused" },
+              { value: "20", label: "Free CRE Courses" },
+              { value: "0%", label: "Florida Income Tax" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-gold text-3xl font-bold">{stat.value}</p>
@@ -511,7 +511,7 @@ export default function HomePage() {
               href="/about"
               className="inline-block border border-gold/30 text-gold hover:bg-gold/10 font-semibold px-8 py-3 rounded-lg transition-colors"
             >
-              Learn About Our Team
+              Meet the Broker
             </Link>
           </div>
         </div>
