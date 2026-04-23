@@ -15,7 +15,8 @@ import { getUser, getCompletedLessons } from "@/lib/academy/progress";
 import { mdxComponents } from "@/components/academy/MdxComponents";
 import { MarkCompleteButton } from "@/components/academy/MarkCompleteButton";
 import { JsonLdScript } from "@/components/academy/JsonLdScript";
-import { buildLessonJsonLd, buildBreadcrumbJsonLd } from "@/lib/academy/seo";
+import { buildLessonJsonLd } from "@/lib/academy/seo";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 interface PageProps {
   params: Promise<{ slug: string; lessonSlug: string }>;
@@ -67,16 +68,21 @@ export default async function LessonPage({ params }: PageProps) {
   return (
     <>
       <JsonLdScript data={buildLessonJsonLd(course, lesson)} />
-      <JsonLdScript
-        data={buildBreadcrumbJsonLd([
-          { name: "Home", url: "/" },
-          { name: "Academy", url: "/academy" },
-          { name: course.title, url: `/academy/courses/${slug}` },
-          { name: lesson.title, url: `/academy/courses/${slug}/lessons/${lessonSlug}` },
-        ])}
-      />
 
       <div className="bg-dark">
+        <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+          <Breadcrumbs
+            items={[
+              { name: "Home", href: "/" },
+              { name: "Academy", href: "/academy" },
+              { name: course.title, href: `/academy/courses/${slug}` },
+              {
+                name: lesson.title,
+                href: `/academy/courses/${slug}/lessons/${lessonSlug}`,
+              },
+            ]}
+          />
+        </div>
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[280px_1fr] lg:px-8">
           {/* Sidebar — lesson TOC */}
           <aside className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto">

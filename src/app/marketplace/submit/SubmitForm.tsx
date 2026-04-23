@@ -775,10 +775,12 @@ function Field({
   full?: boolean;
   children: React.ReactNode;
 }) {
+  // Wrapping children in <label> gives an implicit label-input association
+  // so clicks on the label focus the input and screen readers pair them up.
   return (
-    <div className={full ? "sm:col-span-2" : ""}>
-      <label className={label}>{labelText}</label>
+    <label className={full ? "block sm:col-span-2" : "block"}>
+      <span className={label}>{labelText}</span>
       {children}
-    </div>
+    </label>
   );
 }

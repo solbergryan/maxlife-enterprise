@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -176,24 +177,31 @@ export default async function ListingDetailPage({ params }: PageProps) {
         {/* Photo gallery or placeholder */}
         {l.photo_urls.length > 0 ? (
           <div className="mb-8">
-            <div className="h-64 sm:h-96 bg-dark border border-dark-border rounded-xl overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="relative h-64 sm:h-96 bg-dark border border-dark-border rounded-xl overflow-hidden">
+              <Image
                 src={l.photo_urls[0]}
                 alt={l.title}
-                className="w-full h-full object-cover"
+                fill
+                priority
+                sizes="(min-width: 1024px) 1024px, 100vw"
+                className="object-cover"
               />
             </div>
             {l.photo_urls.length > 1 && (
               <div className="grid grid-cols-4 sm:grid-cols-6 gap-2 mt-2">
                 {l.photo_urls.slice(1).map((url, i) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <div
                     key={i}
-                    src={url}
-                    alt={`${l.title} — photo ${i + 2}`}
-                    className="aspect-square w-full object-cover rounded-md border border-dark-border"
-                  />
+                    className="relative aspect-square w-full overflow-hidden rounded-md border border-dark-border"
+                  >
+                    <Image
+                      src={url}
+                      alt={`${l.title} — photo ${i + 2}`}
+                      fill
+                      sizes="(min-width: 640px) 170px, 25vw"
+                      className="object-cover"
+                    />
+                  </div>
                 ))}
               </div>
             )}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { markets, getMarketBySlug } from "@/data/markets";
 import MarketPageLayout from "@/components/MarketPageLayout";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -30,5 +31,18 @@ export default async function MarketDetailPage({
   const market = getMarketBySlug(slug);
   if (!market) notFound();
 
-  return <MarketPageLayout market={market} />;
+  return (
+    <>
+      <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Markets", href: "/markets" },
+            { name: market.name, href: `/markets/${market.slug}` },
+          ]}
+        />
+      </div>
+      <MarketPageLayout market={market} />
+    </>
+  );
 }

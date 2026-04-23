@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { getAllCourseParams, getAllCourses, getCourse } from "@/lib/academy/content";
 import { getUser, getCompletedLessons } from "@/lib/academy/progress";
 import { JsonLdScript } from "@/components/academy/JsonLdScript";
-import { buildCourseJsonLd, buildBreadcrumbJsonLd } from "@/lib/academy/seo";
+import { buildCourseJsonLd } from "@/lib/academy/seo";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import LeadCaptureForm from "@/components/leads/LeadCaptureForm";
 import { TIER_THEMES, COURSE_ICONS } from "@/lib/academy/theme";
 
@@ -59,13 +60,15 @@ export default async function CoursePage({ params }: PageProps) {
   return (
     <>
       <JsonLdScript data={buildCourseJsonLd(course)} />
-      <JsonLdScript
-        data={buildBreadcrumbJsonLd([
-          { name: "Home", url: "/" },
-          { name: "Academy", url: "/academy" },
-          { name: course.title, url: `/academy/courses/${course.slug}` },
-        ])}
-      />
+      <div className="mx-auto max-w-4xl px-4 pt-6 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Academy", href: "/academy" },
+            { name: course.title, href: `/academy/courses/${course.slug}` },
+          ]}
+        />
+      </div>
 
       {/* Hero */}
       {(() => {

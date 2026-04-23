@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { listListings, formatPrice, formatPercent } from "@/lib/listings";
@@ -310,12 +311,13 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
                 {/* Primary photo or placeholder */}
                 {l.photo_urls.length > 0 ? (
                   <div className="h-44 bg-dark relative overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={l.photo_urls[0]}
                       alt={l.title}
+                      fill
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(min-width: 1024px) 384px, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 ) : (

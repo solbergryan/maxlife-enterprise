@@ -42,6 +42,13 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+  images: {
+    remotePatterns: [
+      // Supabase Storage (marketplace listing photos)
+      { protocol: "https", hostname: "*.supabase.co" },
+      { protocol: "https", hostname: "*.supabase.in" },
+    ],
+  },
   async headers() {
     return [
       {

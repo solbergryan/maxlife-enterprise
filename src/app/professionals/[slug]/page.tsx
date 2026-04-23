@@ -5,6 +5,7 @@ import {
   professionals,
   getProfessional,
 } from "@/lib/professionals";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 type Params = Promise<{ slug: string }>;
 
@@ -78,6 +79,16 @@ export default async function ProfessionalPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <div className="max-w-4xl mx-auto px-4 pt-6 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Professionals", href: "/professionals" },
+            { name: pro.title, href: `/professionals/${pro.slug}` },
+          ]}
+        />
+      </div>
 
       {/* Header */}
       <section className="relative overflow-hidden border-b border-dark-border">
