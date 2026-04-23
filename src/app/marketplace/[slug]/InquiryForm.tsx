@@ -18,6 +18,7 @@ export function InquiryForm({
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [website, setWebsite] = useState("");
   const [message, setMessage] = useState(
     `Hi ${contactName.split(" ")[0] || contactName},\n\nI'm interested in ${listingTitle}. Could we set up a time to discuss?\n\n`
   );
@@ -35,7 +36,7 @@ export function InquiryForm({
       const res = await fetch("/api/marketplace/inquire", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ listingId, name, email, phone, message }),
+        body: JSON.stringify({ listingId, name, email, phone, message, website }),
       });
       const body = await res.json().catch(() => ({}));
       if (!res.ok) {
@@ -72,6 +73,16 @@ export function InquiryForm({
 
   return (
     <form onSubmit={onSubmit} className="space-y-3">
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        value={website}
+        onChange={(e) => setWebsite(e.target.value)}
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
       <input
         required
         placeholder="Your full name *"

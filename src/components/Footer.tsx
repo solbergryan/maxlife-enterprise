@@ -115,14 +115,18 @@ export default function Footer() {
 
         <div className="border-t border-dark-border mt-8 pt-8 text-center text-gray-500 text-xs leading-relaxed space-y-2">
           <p>
-            &copy; {new Date().getFullYear()} MaxLife Realty. All rights
+            &copy; {new Date().getFullYear()} MaxLife Realty LLC. All rights
             reserved. &middot;{" "}
             <Link href="/privacy" className="hover:text-gold">
               Privacy Policy
+            </Link>{" "}
+            &middot;{" "}
+            <Link href="/terms" className="hover:text-gold">
+              Terms of Service
             </Link>
           </p>
           <p>
-            MaxLife Realty &middot; Florida Licensed Real Estate Brokerage
+            MaxLife Realty LLC &middot; Florida Licensed Real Estate Brokerage
             &middot; FL Broker License #3354351
           </p>
           <p className="max-w-3xl mx-auto text-gray-600">

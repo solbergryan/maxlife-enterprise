@@ -27,11 +27,18 @@ export async function POST(req: NextRequest) {
     email?: string;
     phone?: string;
     message?: string;
+    website?: string;
   };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  // Honeypot: real users can't see or tab to the hidden "website" field.
+  // If it's filled, pretend success so the bot doesn't retry with a new pattern.
+  if ((body.website || "").trim()) {
+    return NextResponse.json({ ok: true });
   }
 
   const listingId = (body.listingId || "").trim();
