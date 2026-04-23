@@ -578,11 +578,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       "cap-rate-vs-cash-on-cash-return",
       "ground-lease-vs-fee-simple",
       "orlando-vs-tampa-cre-market",
+      "ultimate-guide-nnn-investing",
+      "florida-cre-investor-guide",
     ].map((slug) => ({
       url: `${BASE_URL}/blog/${slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    // Start Here page
+    {
+      url: `${BASE_URL}/start-here`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    // Buy commercial land by city (programmatic)
+    ...seoCities.map((c) => ({
+      url: `${BASE_URL}/buy-commercial-land/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    // Buy retail property by city (programmatic)
+    ...seoCities.map((c) => ({
+      url: `${BASE_URL}/buy-retail-property/${c.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
     })),
   ];
 }

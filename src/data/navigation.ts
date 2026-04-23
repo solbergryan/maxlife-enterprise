@@ -5,6 +5,7 @@ export interface NavLink {
 }
 
 export const mainNav: NavLink[] = [
+  { label: "Start Here", href: "/start-here" },
   {
     label: "Properties",
     href: "/properties",
@@ -69,6 +70,8 @@ export const mainNav: NavLink[] = [
       { label: "Sector Investment Outlook", href: "/investment-outlook" },
       { label: "Sell Commercial Property", href: "/sell-commercial-property" },
       { label: "Buy NNN Property", href: "/buy-nnn-property" },
+      { label: "Buy Commercial Land", href: "/buy-commercial-land" },
+      { label: "Buy Retail Property", href: "/buy-retail-property" },
       { label: "Quarterly Market Reports", href: "/market-reports" },
     ],
   },

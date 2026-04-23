@@ -257,6 +257,128 @@ export const faqTopics: FAQTopic[] = [
       },
     ],
   },
+  {
+    slug: "commercial-financing",
+    title: "Commercial Real Estate Financing FAQ",
+    shortTitle: "Commercial Financing",
+    metaDescription:
+      "Frequently asked questions about commercial real estate financing — loan types, underwriting, LTV, DSCR, SBA loans, CMBS, bridge loans, and financing timelines for CRE acquisitions and development.",
+    intro:
+      "Financing is often the make-or-break factor in commercial real estate transactions. From conventional bank loans to CMBS, SBA, bridge, and construction financing, understanding which loan structure fits your deal — and how lenders underwrite — saves time, money, and deals. These are the commercial financing questions we hear most often.",
+    faqs: [
+      {
+        question: "What's a typical LTV for commercial real estate loans?",
+        answer:
+          "Commercial real estate LTV typically ranges 65-75% for stabilized properties. For strong investment-grade NNN properties, some lenders will go up to 75-80% LTV. Construction loans typically run 65-75% LTC (loan-to-cost). Multifamily often achieves higher LTV (75-80%) with agency financing (Fannie/Freddie). Owner-occupied SBA 504 loans can reach 90% LTV.",
+      },
+      {
+        question: "What DSCR do commercial lenders require?",
+        answer:
+          "Most commercial lenders require a minimum Debt Service Coverage Ratio (DSCR) of 1.20x to 1.30x for stabilized properties. Stronger assets or properties with investment-grade tenants can achieve approvals at 1.15x. Value-add or less stabilized deals may require 1.35x+. DSCR is calculated as NOI / Annual Debt Service.",
+      },
+      {
+        question: "How long does commercial financing take?",
+        answer:
+          "Typical commercial loan timeline: 45-75 days from application to funding. Bank portfolio loans: 30-60 days. CMBS: 60-90 days. SBA: 60-120 days. Bridge loans: 21-45 days. The timeline depends on third-party reports (appraisal, Phase I, survey), lender internal committee processes, and borrower document responsiveness.",
+      },
+      {
+        question: "What commercial loan types are available?",
+        answer:
+          "Primary categories: (1) Conventional bank loans — most common, 5-10 year terms, 20-25 year amortization. (2) CMBS — securitized, competitive rates, rigid terms. (3) SBA 504 and 7a — government-backed, owner-occupied. (4) Bridge loans — short-term (1-3 years) for transitions. (5) Construction loans — draw-based financing for ground-up development. (6) Life company loans — institutional-quality properties. (7) Agency loans — multifamily specific (Fannie/Freddie).",
+      },
+      {
+        question: "What are commercial loan interest rates in 2026?",
+        answer:
+          "As of early 2026, commercial mortgage rates range widely by lender type and asset quality. Conventional bank portfolio: ~6.5-7.5%. CMBS: ~6.0-7.0%. SBA 504: ~6.0-7.0%. Bridge loans: ~8.0-12.0%. Construction loans: Prime + 1-3% (~7.5-10%). Rates are volatile — always get fresh quotes at the time of financing decision.",
+      },
+      {
+        question: "Do I need personal guarantees on commercial loans?",
+        answer:
+          "Smaller commercial loans (under $2-5M) almost always require personal guarantees. Larger institutional loans (CMBS, life companies) on stabilized properties can be non-recourse, with carve-outs for 'bad boy acts' (fraud, misrepresentation, voluntary bankruptcy). Strong sponsors with established track records can sometimes negotiate limited or burn-off guarantees.",
+      },
+      {
+        question: "What's the difference between recourse and non-recourse?",
+        answer:
+          "Recourse loans: The borrower (and guarantor) is personally liable for the debt beyond the property itself. If the property doesn't cover the loan at foreclosure, the lender can pursue personal assets. Non-recourse loans: The property is the only collateral. Lender cannot pursue borrower personally except in cases of 'bad boy' conduct. Non-recourse is preferred but usually limited to larger stabilized deals.",
+      },
+      {
+        question: "What documents do I need to apply for a commercial loan?",
+        answer:
+          "Typical package: (1) Sponsor financials (PFS, 2-3 years tax returns), (2) Sponsor experience resume, (3) Entity organizational documents, (4) Subject property rent roll, (5) Operating statements (2-3 years), (6) Pro forma with assumptions, (7) Purchase contract, (8) Environmental records if available, (9) Leases or lease abstracts, (10) Business plan for value-add or development. Expect 50-100+ pages total.",
+      },
+      {
+        question: "Can I get financing for NNN property acquisition?",
+        answer:
+          "Yes — NNN single-tenant net lease properties are among the easiest commercial deals to finance. Investment-grade tenants (Walgreens, CVS, AutoZone, Dollar General) support 70-75% LTV with favorable rates. Many lenders specialize in NNN including private banks, credit unions, life companies, and specialty NNN lenders. Expect 45-60 day close.",
+      },
+      {
+        question: "What's a mortgage broker vs a lender?",
+        answer:
+          "A commercial mortgage broker shops your loan to multiple lenders to find the best terms. They have access to 20+ capital sources across banks, CMBS, SBA, bridge, and life companies. A direct lender lends their own money from a single source. Brokers charge origination fees (0.5-1% of loan amount) but typically find better terms than you would directly. Best for complex or specialized deals.",
+      },
+    ],
+  },
+  {
+    slug: "property-management",
+    title: "Commercial Property Management FAQ",
+    shortTitle: "Property Management",
+    metaDescription:
+      "FAQ on commercial real estate property management — tenant relations, CAM reconciliation, lease administration, capital planning, and when to hire a property manager.",
+    intro:
+      "Owning commercial real estate doesn't mean you have to manage it yourself. Professional property management preserves asset value, maximizes NOI, and frees you to focus on strategic decisions. Here's what every CRE owner should know about property management — from whether you need it to how to evaluate providers.",
+    faqs: [
+      {
+        question: "Do I need a property manager for NNN properties?",
+        answer:
+          "For true absolute NNN single-tenant properties, usually no. The tenant handles all operations, maintenance, taxes, and insurance. You collect rent and file it away. The only 'management' is annual bookkeeping and tracking lease events (renewal dates, rent escalations). For multi-tenant properties or properties with landlord maintenance obligations, yes — professional management is almost always worth the cost.",
+      },
+      {
+        question: "What does a property manager do?",
+        answer:
+          "Core property manager duties: (1) Collect rent and manage receivables, (2) Coordinate maintenance and vendor contracts, (3) Handle tenant communications and issues, (4) Manage CAM reconciliations and pass-throughs, (5) Prepare monthly financial reports, (6) Administer leases and manage renewals, (7) Oversee capital projects, (8) Maintain insurance and compliance documentation, (9) Interface with owners on strategic decisions.",
+      },
+      {
+        question: "How much does commercial property management cost?",
+        answer:
+          "Typical commercial PM fees: 3-6% of gross collected rent for stabilized properties. Smaller properties or heavy lease-up scenarios may have higher percentage fees or minimum monthly fees. Leasing commissions are separate (typically 4-6% of total lease value on new leases, 2-3% on renewals). Capital projects may carry a supervision fee (10-15% of cost).",
+      },
+      {
+        question: "What's a CAM reconciliation?",
+        answer:
+          "CAM (Common Area Maintenance) reconciliation is the annual process of comparing estimated CAM charges billed to tenants monthly against actual CAM expenses incurred. If actual expenses exceeded estimates, tenants owe the difference. If estimates exceeded actual, tenants get a credit. CAM reconciliations are typically completed within 90-120 days after year-end and are reviewed by tenants (who may audit).",
+      },
+      {
+        question: "What should I look for in a property manager?",
+        answer:
+          "Key factors: (1) Experience with your property type (retail, office, industrial each have different dynamics), (2) Local market knowledge, (3) Technology platform (owner portal, tenant portal, accounting system), (4) Response time to tenant/owner issues, (5) Financial reporting quality and timing, (6) References from current clients, (7) Fee structure transparency, (8) Insurance and bonding, (9) Preventive maintenance approach.",
+      },
+      {
+        question: "Can I self-manage my commercial property?",
+        answer:
+          "For simple NNN single-tenant properties — yes, self-management is common and low-burden. For multi-tenant properties, self-management requires significant time: tenant communications, vendor coordination, accounting, reconciliations. Most owners of multi-tenant properties find that professional PM pays for itself through better tenant retention, faster leasing, and fewer operational issues. Rule of thumb: if you have 3+ tenants or non-absolute-NNN leases, hire a professional.",
+      },
+      {
+        question: "What's the difference between property management and asset management?",
+        answer:
+          "Property management is tactical — day-to-day operations, tenant issues, maintenance, bookkeeping. Asset management is strategic — portfolio-level oversight, hold/sell decisions, capital planning, refinancing strategy, investor reporting. A property manager reports to the asset manager, who reports to the owner. On small portfolios, the owner often performs asset management directly.",
+      },
+      {
+        question: "How do I evaluate my property manager's performance?",
+        answer:
+          "Key metrics: (1) Occupancy rate trends, (2) Rent collection rate (aim for 98%+), (3) Tenant retention rate on lease expirations, (4) Days to lease up vacant space, (5) Operating expense vs budget variance, (6) CAM reconciliation accuracy, (7) Response time to tenant issues, (8) Financial reporting timeliness and accuracy, (9) Capital project management. Review quarterly; benchmark against market.",
+      },
+      {
+        question: "What property management software is standard?",
+        answer:
+          "Leading commercial PM platforms: Yardi Voyager (enterprise standard), RealPage (multifamily-focused with commercial capabilities), MRI Software, AppFolio (mid-market), Buildium (smaller portfolios), Entrata. For owners who want visibility, pick a PM using a platform with owner and tenant portals for real-time access to financials and lease documentation.",
+      },
+      {
+        question: "Does MaxLife Development offer property management?",
+        answer:
+          "Yes, MaxLife Development provides commercial property management services across Central Florida. We focus on NNN, multi-tenant retail, medical office, and small commercial properties. Services include rent collection, maintenance coordination, CAM reconciliation, financial reporting, and leasing. Contact us for a management proposal.",
+      },
+    ],
+  },
 ];
 
 export function getFAQTopic(slug: string): FAQTopic | undefined {

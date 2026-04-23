@@ -362,6 +362,26 @@ const articles = [
     date: "April 2026",
     readTime: "9 min read",
   },
+  {
+    slug: "ultimate-guide-nnn-investing",
+    title: "Ultimate Guide to NNN Investing — Everything You Need to Know",
+    excerpt:
+      "Complete 11-chapter guide to triple net lease investing — lease structures, tenant credit, cap rates, financing, due diligence, 1031 exchanges, and portfolio building.",
+    category: "Ultimate Guide",
+    date: "April 2026",
+    readTime: "18 min read",
+    featured: true,
+  },
+  {
+    slug: "florida-cre-investor-guide",
+    title: "Florida Commercial Real Estate Investor Guide",
+    excerpt:
+      "Everything out-of-state investors and first-time Florida CRE buyers need to know — markets, asset classes, tax advantages, hurricane code, and financing considerations.",
+    category: "Ultimate Guide",
+    date: "April 2026",
+    readTime: "15 min read",
+    featured: true,
+  },
 ];
 
 export default function BlogPage() {
