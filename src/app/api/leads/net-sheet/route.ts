@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { FROM_EMAIL, REPLY_TO, getResend } from "@/lib/leads/resend";
 import { insertLead } from "@/lib/leads/store";
 import { netSheetEmail } from "@/lib/leads/emailTemplates";
+import { enforce, getClientKey, leadLimiter } from "@/lib/ratelimit";
 
 export const runtime = "nodejs";
 
@@ -15,6 +16,22 @@ export const runtime = "nodejs";
  * We email the PNG as an attachment via Resend and log the lead.
  */
 export async function POST(req: NextRequest) {
+  const rl = await enforce(leadLimiter, getClientKey(req));
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again shortly." },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": Math.max(
+            1,
+            Math.ceil((rl.reset - Date.now()) / 1000),
+          ).toString(),
+        },
+      },
+    );
+  }
+
   let body: {
     email?: string;
     name?: string;

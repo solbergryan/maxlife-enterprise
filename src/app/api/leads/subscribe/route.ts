@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { insertLead, type LeadSource } from "@/lib/leads/store";
 import { enqueueNurtureSequence } from "@/lib/leads/nurture";
+import { enforce, getClientKey, leadLimiter } from "@/lib/ratelimit";
 
 export const runtime = "nodejs";
 
@@ -12,6 +13,22 @@ export const runtime = "nodejs";
  * 2. Triggers the 3-part email nurture sequence via Resend
  */
 export async function POST(req: NextRequest) {
+  const rl = await enforce(leadLimiter, getClientKey(req));
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again shortly." },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": Math.max(
+            1,
+            Math.ceil((rl.reset - Date.now()) / 1000),
+          ).toString(),
+        },
+      },
+    );
+  }
+
   let body: { email?: string; name?: string; source?: string; source_page?: string };
   try {
     body = await req.json();

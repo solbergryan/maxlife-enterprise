@@ -5,6 +5,7 @@ import { FROM_EMAIL, REPLY_TO, getResend } from "@/lib/leads/resend";
 import { insertLead } from "@/lib/leads/store";
 import { workbookEmail } from "@/lib/leads/emailTemplates";
 import { getCourse } from "@/lib/academy/content";
+import { enforce, getClientKey, leadLimiter } from "@/lib/ratelimit";
 
 export const runtime = "nodejs";
 
@@ -15,6 +16,22 @@ export const runtime = "nodejs";
  * public/academy/workbooks/<courseSlug>.pdf, and emails it via Resend.
  */
 export async function POST(req: NextRequest) {
+  const rl = await enforce(leadLimiter, getClientKey(req));
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again shortly." },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": Math.max(
+            1,
+            Math.ceil((rl.reset - Date.now()) / 1000),
+          ).toString(),
+        },
+      },
+    );
+  }
+
   let body: { email?: string; name?: string; courseSlug?: string };
   try {
     body = await req.json();

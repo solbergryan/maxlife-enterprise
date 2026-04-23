@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { FROM_EMAIL, REPLY_TO, getResend } from "@/lib/leads/resend";
 import { insertLead } from "@/lib/leads/store";
 import { createClient } from "@/lib/supabase/server";
+import { enforce, getClientKey, inquiryLimiter } from "@/lib/ratelimit";
 
 export const runtime = "nodejs";
 
@@ -21,6 +22,26 @@ export const runtime = "nodejs";
  * malicious client can't change the recipient and spam arbitrary addresses.
  */
 export async function POST(req: NextRequest) {
+  // Rate-limit first so abuse burns zero Resend quota / DB reads.
+  const rl = await enforce(inquiryLimiter, getClientKey(req));
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: "Too many inquiries. Please try again in a few minutes." },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": Math.max(
+            1,
+            Math.ceil((rl.reset - Date.now()) / 1000),
+          ).toString(),
+          "X-RateLimit-Limit": rl.limit.toString(),
+          "X-RateLimit-Remaining": rl.remaining.toString(),
+          "X-RateLimit-Reset": rl.reset.toString(),
+        },
+      },
+    );
+  }
+
   let body: {
     listingId?: string;
     name?: string;
