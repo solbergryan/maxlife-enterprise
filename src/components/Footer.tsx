@@ -115,7 +115,7 @@ export default function Footer() {
 
         <div className="border-t border-dark-border mt-8 pt-8 text-center text-gray-500 text-xs leading-relaxed space-y-2">
           <p>
-            &copy; {new Date().getFullYear()} MaxLife Realty LLC. All rights
+            &copy; {new Date().getFullYear()}{" "}MaxLife Realty LLC. All rights
             reserved. &middot;{" "}
             <Link href="/privacy" className="hover:text-gold">
               Privacy Policy
@@ -136,6 +136,22 @@ export default function Footer() {
             third-party listings. See the source linked on each listing for
             the listing brokerage of record. Information is deemed reliable
             but not guaranteed.
+          </p>
+          <p className="flex items-center justify-center gap-2 pt-2 text-gray-500">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 48 48"
+              className="h-5 w-5 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <rect x="4" y="4" width="40" height="40" rx="2" />
+              <path d="M12 30V22l12-10 12 10v8" strokeLinejoin="round" />
+              <path d="M20 34v-6h8v6" strokeLinejoin="round" />
+              <path d="M24 18v-4M24 38v4M14 24h-4M38 24h-4" strokeLinecap="round" />
+            </svg>
+            Equal Housing Opportunity &middot; REALTOR&reg;
           </p>
         </div>
       </div>

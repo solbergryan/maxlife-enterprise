@@ -190,8 +190,14 @@ export default function RootLayout({
         <AnalyticsTracker />
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-dark focus:shadow-lg"
+        >
+          Skip to content
+        </a>
         <Navbar />
-        <main className="pt-16 min-h-screen">{children}</main>
+        <main id="main-content" className="pt-16 min-h-screen">{children}</main>
         <NewsletterSignup />
         <Footer />
         <ExitIntentPopup />
