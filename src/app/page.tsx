@@ -170,7 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="border-y border-dark-border bg-dark-card/50">
+      <section className="border-t border-dark-border bg-dark-card/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
@@ -184,6 +184,67 @@ export default function HomePage() {
                 <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials strip */}
+      <section className="border-b border-dark-border bg-dark-card/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-gray-400">
+            <span className="flex items-center gap-2">
+              <svg
+                aria-hidden="true"
+                className="h-4 w-4 text-gold shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+              Florida Real Estate Broker&nbsp;
+              <span className="text-gray-500">#3354351</span>
+            </span>
+            <span className="flex items-center gap-2">
+              <svg
+                aria-hidden="true"
+                className="h-4 w-4 text-gold shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                />
+              </svg>
+              Mortgage Loan Officer&nbsp;
+              <span className="text-gray-500">NMLS #1784218</span>
+            </span>
+            <span className="flex items-center gap-2">
+              <svg
+                aria-hidden="true"
+                className="h-4 w-4 text-gold shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                />
+              </svg>
+              REALTOR<sup>&reg;</sup>
+            </span>
           </div>
         </div>
       </section>

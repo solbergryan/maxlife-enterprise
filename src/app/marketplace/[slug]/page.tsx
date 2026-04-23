@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { InquiryForm } from "./InquiryForm";
 import {
   getListingBySlug,
@@ -60,41 +60,90 @@ export default async function ListingDetailPage({ params }: PageProps) {
   if (!l || l.status === "withdrawn") notFound();
 
   const locale = l.city + (l.state ? `, ${l.state}` : "");
+  const listingUrl = `https://maxlifedevelopment.com/marketplace/${l.slug}`;
 
-  const breadcrumbSchema = {
+  const realEstateSchema = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://maxlifedevelopment.com" },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Marketplace",
-        item: "https://maxlifedevelopment.com/marketplace",
+    "@type": "RealEstateListing",
+    "@id": `${listingUrl}#listing`,
+    name: l.title,
+    description:
+      l.description ??
+      `${PROPERTY_TYPE_LABELS[l.property_type]} ${TRANSACTION_TYPE_LABELS[l.transaction_type].toLowerCase()} in ${locale}.`,
+    url: listingUrl,
+    datePosted: l.created_at,
+    ...(l.photo_urls.length > 0 ? { image: l.photo_urls } : {}),
+    offers: {
+      "@type": "Offer",
+      price: l.price,
+      priceCurrency: "USD",
+      availability:
+        l.status === "active"
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+      url: listingUrl,
+    },
+    mainEntity: {
+      "@type": "Place",
+      name: l.title,
+      address: {
+        "@type": "PostalAddress",
+        ...(l.street_address ? { streetAddress: l.street_address } : {}),
+        addressLocality: l.city,
+        ...(l.state ? { addressRegion: l.state } : {}),
+        ...(l.zip ? { postalCode: l.zip } : {}),
+        addressCountry: "US",
       },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: l.title,
-        item: `https://maxlifedevelopment.com/marketplace/${l.slug}`,
-      },
-    ],
+      ...(l.latitude != null && l.longitude != null
+        ? {
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: l.latitude,
+              longitude: l.longitude,
+            },
+          }
+        : {}),
+      additionalProperty: [
+        { name: "Property Type", value: PROPERTY_TYPE_LABELS[l.property_type] },
+        l.building_sqft != null && {
+          name: "Building Square Feet",
+          value: l.building_sqft,
+        },
+        l.lot_sqft != null && { name: "Lot Square Feet", value: l.lot_sqft },
+        l.lot_acres != null && { name: "Lot Acres", value: l.lot_acres },
+        l.cap_rate != null && { name: "Cap Rate", value: `${l.cap_rate}%` },
+        l.noi != null && { name: "NOI", value: l.noi },
+        l.occupancy_pct != null && {
+          name: "Occupancy",
+          value: `${l.occupancy_pct}%`,
+        },
+        l.year_built != null && { name: "Year Built", value: l.year_built },
+        l.zoning && { name: "Zoning", value: l.zoning },
+        l.tenant && { name: "Tenant", value: l.tenant },
+        l.lease_type && { name: "Lease Type", value: l.lease_type },
+      ]
+        .filter(Boolean)
+        .map((p) => ({ "@type": "PropertyValue", ...(p as object) })),
+    },
+    broker: {
+      "@type": "RealEstateAgent",
+      name: l.contact_company || l.contact_name,
+    },
   };
 
   return (
     <>
-      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={realEstateSchema} />
 
       <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Link
-          href="/marketplace"
-          className="text-gray-400 hover:text-gold text-sm inline-flex items-center gap-1 mb-6"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          All listings
-        </Link>
+        <Breadcrumbs
+          className="mb-6"
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Marketplace", href: "/marketplace" },
+            { name: l.title, href: `/marketplace/${l.slug}` },
+          ]}
+        />
 
         {/* Header */}
         <div className="mb-8">
