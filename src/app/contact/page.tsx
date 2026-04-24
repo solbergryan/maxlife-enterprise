@@ -164,6 +164,25 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+
+            <a
+              href="https://calendly.com/ryan-maxliferealty"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-gold/10 border border-gold/30 hover:border-gold rounded-xl p-6 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-white font-medium">Schedule a Call</h3>
+                  <p className="text-gold text-sm">Book a time on my calendar &rarr;</p>
+                </div>
+              </div>
+            </a>
           </div>
 
           {/* Form */}
