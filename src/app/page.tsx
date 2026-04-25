@@ -5,6 +5,8 @@ import { markets } from "@/data/markets";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
 import Testimonials from "@/components/Testimonials";
+import Reveal from "@/components/Reveal";
+import StatCounter from "@/components/StatCounter";
 
 const marketImages: Record<string, string> = {
   "orlando-commercial-real-estate": "/listings/989971.jpg",
@@ -45,18 +47,20 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-dark/80 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-4">
-            Central Florida &amp; Space Coast
+            Statewide Florida Coverage
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl leading-tight">
             Selling Commercial Property in{" "}
-            <span className="text-gold">Central Florida?</span>
+            <span className="text-gold">Florida?</span>
           </h1>
           <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mb-10 leading-relaxed">
-            MaxLife Realty is a Central Florida commercial brokerage focused
-            on owners who want straight answers, real numbers, and a
-            well-connected broker &mdash; not another search portal. We help
-            sellers price, position, and place commercial properties across
-            Orlando, the Space Coast, and Lake Nona.
+            MaxLife Realty is a Florida commercial brokerage focused on owners
+            who want straight answers, real numbers, and a well-connected
+            broker &mdash; not another search portal. Headquartered in Orlando,
+            we help sellers price, position, and place commercial properties
+            statewide &mdash; Central Florida, Tampa Bay, Jacksonville, South
+            Florida, Southwest Florida (Naples/Fort Myers/Sarasota), North
+            Florida (Gainesville/Tallahassee), and the Panhandle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -85,7 +89,7 @@ export default function HomePage() {
 
       {/* Why MaxLife */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-10">
+        <Reveal className="mb-10">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             For Commercial Property Owners
           </p>
@@ -94,14 +98,14 @@ export default function HomePage() {
             <span className="text-gold">more than the market</span>
           </h2>
           <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
-            Central Florida has hundreds of agents who can put a sign in the
-            ground. There are very few who can underwrite your property at
+            Florida has thousands of agents who can put a sign in the ground.
+            There are very few who can underwrite your property at
             institutional depth, walk you through the net-at-close before you
-            sign, and hand-match you with the right buyer pool. That&apos;s
-            what we do.
+            sign, and hand-match you with the right buyer pool statewide.
+            That&apos;s what we do.
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </Reveal>
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               title: "Honest valuations, not sales pitches",
@@ -120,7 +124,7 @@ export default function HomePage() {
             },
             {
               title: "Market-by-market depth",
-              body: "Orlando, Brevard, Lake, Seminole, Osceola, Volusia, and Polk. Each market has its own dynamics and we know them cold.",
+              body: "Orlando, Tampa Bay, Jacksonville, Miami, Fort Lauderdale, West Palm Beach, Naples, Sarasota, Gainesville, Tallahassee, Pensacola, and the Space Coast. Each market has its own dynamics and we know them cold.",
               cta: { label: "See market reports", href: "/markets" },
             },
             {
@@ -129,8 +133,8 @@ export default function HomePage() {
               cta: { label: "Contact us", href: "/contact" },
             },
             {
-              title: "Central Florida insights",
-              body: "Long-form market research, trend pieces, and cap-rate guides written by practitioners, not content mills.",
+              title: "Florida-wide insights",
+              body: "Long-form market research, trend pieces, and cap-rate guides across Florida, written by practitioners, not content mills.",
               cta: { label: "Read the blog", href: "/blog" },
             },
           ].map((f) => (
@@ -166,26 +170,23 @@ export default function HomePage() {
               </Link>
             </div>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       {/* Stats */}
       <section className="border-t border-dark-border bg-dark-card/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
-              { value: "6", label: "Counties Served" },
+              { value: "Statewide", label: "Florida Coverage" },
               { value: "$10M+", label: "Transaction Volume" },
               { value: "20", label: "Free CRE Courses" },
               { value: "0%", label: "Florida Income Tax" },
             ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-gold text-3xl font-bold">{stat.value}</p>
-                <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
-              </div>
+              <StatCounter key={stat.label} value={stat.value} label={stat.label} />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Credentials strip */}
@@ -251,7 +252,7 @@ export default function HomePage() {
 
       {/* Off-Market Signup */}
       <section id="investor-signup" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-dark-card border border-gold/20 rounded-xl p-8 sm:p-12">
+        <Reveal className="bg-dark-card border border-gold/20 rounded-xl p-8 sm:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
@@ -262,9 +263,9 @@ export default function HomePage() {
               </h2>
               <p className="text-gray-400 leading-relaxed mb-6">
                 We work with investors looking for retail, multifamily, NNN, and
-                development opportunities in Central Florida and the Space Coast.
-                Sign up to receive curated off-market deals before they hit the
-                open market.
+                development opportunities across Florida — from Orlando and
+                Tampa Bay to Jacksonville and South Florida. Sign up to receive
+                curated off-market deals before they hit the open market.
               </p>
               <ul className="space-y-3 text-gray-400 text-sm">
                 {[
@@ -286,18 +287,31 @@ export default function HomePage() {
               <InvestorSignupForm />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Service Areas / Markets */}
       <section className="bg-dark-card/50 border-y border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-2">
             Markets We Serve
           </h2>
           <p className="text-gray-500 mb-8">
-            Commercial real estate expertise across Central Florida
+            Commercial real estate expertise across Florida — Orlando, Tampa
+            Bay, Jacksonville, South Florida, Southwest Florida, North Florida,
+            and the Panhandle
           </p>
+          <div className="mb-10 rounded-xl overflow-hidden border border-dark-border bg-dark">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/florida-coverage-map.svg"
+              alt="MaxLife Realty statewide Florida commercial real estate coverage map"
+              width={800}
+              height={720}
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {markets.map((market) => (
               <Link
@@ -305,11 +319,11 @@ export default function HomePage() {
                 href={`/markets/${market.slug}`}
                 className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
               >
-                {marketImages[market.slug] && (
+                {(marketImages[market.slug] || market.heroImage) && (
                   <div className="relative aspect-[16/9] w-full overflow-hidden">
                     <Image
-                      src={marketImages[market.slug]}
-                      alt={`${market.name} commercial real estate`}
+                      src={marketImages[market.slug] || market.heroImage!}
+                      alt={market.heroAlt || `${market.name} commercial real estate`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -336,11 +350,12 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Featured Case Study */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <Reveal>
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-2xl font-bold text-white">Recent Success</h2>
@@ -359,16 +374,17 @@ export default function HomePage() {
             View All Case Studies &rarr;
           </Link>
         </div>
+        </Reveal>
       </section>
 
       {/* Services Overview */}
       <section className="bg-dark-card/50 border-y border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-2">
-            Commercial Real Estate Services in Orlando
+            Commercial Real Estate Services Across Florida
           </h2>
           <p className="text-gray-500 mb-8">
-            Sales, leasing, NNN investments, and land development across Central Florida
+            Sales, leasing, NNN investments, and land development statewide — headquartered in Orlando
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
@@ -415,11 +431,12 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Market Insights */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <Reveal>
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-2xl font-bold text-white">Market Insights</h2>
@@ -492,20 +509,23 @@ export default function HomePage() {
             View All Insights &rarr;
           </Link>
         </div>
+        </Reveal>
       </section>
 
       {/* About & Trust */}
       <section className="bg-dark-card/50 border-y border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Local Expertise. Investor-First Approach.
             </h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              MaxLife Realty specializes in commercial real estate across
-              Central Florida and the Space Coast. We combine deep local market
-              knowledge with disciplined underwriting to help investors find,
-              acquire, and maximize high-performing assets.
+              MaxLife Realty is a Florida commercial real estate brokerage
+              headquartered in Orlando, serving investors and owners across
+              Central Florida, Tampa Bay, Jacksonville, South Florida, and the
+              Space Coast. We combine deep local market knowledge with
+              disciplined underwriting to help investors find, acquire, and
+              maximize high-performing assets.
             </p>
             <Link
               href="/about"
@@ -514,7 +534,7 @@ export default function HomePage() {
               Meet the Broker
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Testimonials */}
@@ -522,7 +542,7 @@ export default function HomePage() {
 
       {/* Final CTA */}
       <section className="bg-dark-card/50 border-t border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Find Your Next Deal?
           </h2>
@@ -546,7 +566,7 @@ export default function HomePage() {
               Get Deal Alerts
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

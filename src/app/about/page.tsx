@@ -99,14 +99,18 @@ export default function AboutPage() {
       <JsonLd data={personSchema} />
       {/* Header */}
       <section className="relative overflow-hidden border-b border-dark-border">
-        <Image
-          src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-tower-office-building-skyscraper-facade-2175937.webp"
-          alt="About MaxLife Realty Central Florida commercial broker"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/videos/about/about-hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/about/about-hero.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
@@ -119,6 +123,55 @@ export default function AboutPage() {
             Commercial Real Estate Professional &amp; Regional Administrator
             serving Central Florida and the Space Coast.
           </p>
+        </div>
+      </section>
+
+      {/* Commercial Services Banner */}
+      <section className="border-b border-dark-border bg-dark-card/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-wide">
+              COMMERCIAL
+            </h2>
+            <p className="text-gray-400 text-xs sm:text-sm mt-3 tracking-[0.2em] uppercase">
+              Tenant Rep <span className="text-gold/60 mx-2">|</span> Apartments{" "}
+              <span className="text-gold/60 mx-2">|</span> Cash Flow{" "}
+              <span className="text-gold/60 mx-2">|</span> Investments
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {[
+              {
+                src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-architecture-building-convenience-store-grocery-people-2577330.webp",
+                alt: "Retail and convenience store commercial property",
+              },
+              {
+                src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-real-estate-property-apartment-house-5339245.webp",
+                alt: "Multifamily apartment building commercial real estate",
+              },
+              {
+                src: "/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-buildings-city-coffee-shop-doors-street-1836478.webp",
+                alt: "Retail storefront cash-flowing commercial property",
+              },
+              {
+                src: "/images/commercial-stock/special-purpose/maxlife-special-purpose-gas-station-gas-pump-refuel-diesel-fuel-pump-fuel-tank-gasol-4978824.webp",
+                alt: "Gas station NNN commercial investment property",
+              },
+            ].map((img) => (
+              <div
+                key={img.src}
+                className="relative aspect-[4/3] rounded-lg overflow-hidden border border-dark-border"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
