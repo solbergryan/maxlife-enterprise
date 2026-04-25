@@ -5,13 +5,13 @@ import { markets } from "@/data/markets";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Central Florida Commercial Real Estate Markets",
+  title: "Florida Commercial Real Estate Markets | Statewide Coverage",
   description:
-    "Discover Orlando real estate market analysis and Central Florida commercial real estate trends. Explore data for Orange, Brevard, Seminole & 6 counties.",
+    "Florida commercial real estate market analysis across Orlando, Tampa Bay, Jacksonville, Miami, Fort Lauderdale, West Palm Beach, and the Space Coast. Statewide CRE intelligence for investors.",
   openGraph: {
-    title: "Central Florida CRE Market Analysis | Orlando & Space Coast",
+    title: "Florida CRE Markets | Orlando, Tampa, Jacksonville, South Florida",
     description:
-      "In-depth commercial real estate market intelligence across Orlando, Brevard County, and Central Florida. Data-driven insights for CRE investors.",
+      "In-depth commercial real estate market intelligence across Florida's major metros. Data-driven insights for CRE investors statewide.",
   },
 };
 
@@ -42,7 +42,7 @@ export default function MarketsPage() {
       <section className="relative overflow-hidden border-b border-dark-border">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-city-buildings-houston-texas-office-business-3779038.webp"
-          alt="Central Florida commercial real estate markets"
+          alt="Florida commercial real estate markets"
           fill
           priority
           sizes="100vw"
@@ -54,15 +54,34 @@ export default function MarketsPage() {
             Markets
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Central Florida{" "}
+            Florida{" "}
             <span className="text-gold">Commercial Real Estate Markets</span>
           </h1>
           <p className="text-gray-400 max-w-2xl text-lg">
-            In-depth market intelligence across Orange, Seminole, Osceola, Lake,
-            Polk, and Brevard counties. Understand the opportunity before you
-            invest.
+            In-depth market intelligence across Orlando, Tampa Bay, Jacksonville,
+            Miami, Fort Lauderdale, West Palm Beach, Naples, Sarasota,
+            Gainesville, Tallahassee, Pensacola, and the Space Coast.
+            Understand the opportunity before you invest.
           </p>
         </div>
+      </section>
+
+      {/* Coverage map */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="rounded-xl overflow-hidden border border-dark-border bg-dark">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/florida-coverage-map.svg"
+            alt="Map of Florida showing all commercial real estate markets served by MaxLife Realty"
+            width={800}
+            height={720}
+            className="w-full h-auto block"
+          />
+        </div>
+        <p className="text-center text-gray-500 text-sm mt-4">
+          Statewide Florida coverage — Orlando headquarters with market depth
+          across Tampa Bay, Jacksonville, South Florida, and the Space Coast.
+        </p>
       </section>
 
       {/* Market Cards */}
@@ -113,7 +132,7 @@ export default function MarketsPage() {
       <section className="bg-dark-card/50 border-t border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
-            Ready to Invest in Central Florida?
+            Ready to Invest Anywhere in Florida?
           </h2>
           <p className="text-gray-400 mb-8 max-w-lg mx-auto">
             Let&apos;s discuss which market is the best fit for your investment
