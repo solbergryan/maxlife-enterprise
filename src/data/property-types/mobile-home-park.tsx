@@ -17,8 +17,8 @@ const mhpTopLevel: PropertyTypeEntry = {
     displayName: "Mobile Home Park",
     pluralDisplayName: "Mobile Home Parks",
     heroImage: {
-      src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-real-estate-house-living-architecture-394961.webp",
-      alt: "Mobile home park community in Central Florida",
+      src: "/images/commercial-stock/mobile-home-park/maxlife-mobile-home-park-suburbs-homes-neighbors-neighborhood-suburbia-pattern-drivew-2211335.webp",
+      alt: "Aerial view of residential community with uniform rooflines",
     },
     heroEyebrow: "Manufactured Housing Investments",
     heroHeadline: "Mobile Home Parks for Sale in Florida",

@@ -17,8 +17,8 @@ const selfStorageTopLevel: PropertyTypeEntry = {
     displayName: "Self Storage",
     pluralDisplayName: "Self Storage Facilities",
     heroImage: {
-      src: "/images/commercial-stock/warehouse/maxlife-warehouse-archive-boxes-shelf-folders-documents-data-1850170.webp",
-      alt: "Self-storage facility interior with organized shelving",
+      src: "/images/commercial-stock/self-storage/maxlife-self-storage-garages-garage-doors-row-in-the-escape-architecture-overhead-3723994.webp",
+      alt: "Row of drive-up self-storage units under blue sky",
     },
     heroEyebrow: "Self Storage Investment Opportunities",
     heroHeadline: "Self Storage Facilities for Sale in Florida",

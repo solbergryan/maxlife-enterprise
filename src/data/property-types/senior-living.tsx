@@ -17,8 +17,8 @@ const seniorLivingTopLevel: PropertyTypeEntry = {
     displayName: "Senior Living",
     pluralDisplayName: "Senior Living Properties",
     heroImage: {
-      src: "/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-tower-office-building-skyscraper-facade-2175937.webp",
-      alt: "Senior living community building exterior",
+      src: "/images/commercial-stock/senior-living/maxlife-senior-living-senior-center-house-building-homestead-retirement-home-ulm-n-1024796.webp",
+      alt: "Senior living community building exterior overlooking waterway",
     },
     heroEyebrow: "Senior Living & Healthcare Investments",
     heroHeadline: "Senior Living & Healthcare Properties in Florida",

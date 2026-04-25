@@ -354,8 +354,8 @@ export default function CarWashPropertiesFloridaPage() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-dark-border">
         <Image
-          src="/images/commercial-stock/commercial-business/maxlife-commercial-business-building-dark-night-convenience-store-shop-2583628.webp"
-          alt="Florida car wash and convenience commercial property"
+          src="/images/commercial-stock/car-wash/maxlife-car-wash-car-washing-car-wallpapers-worker-man-car-wash-service-7086148.webp"
+          alt="Car wash attendant cleaning a vehicle at a Florida wash bay"
           fill
           priority
           sizes="100vw"

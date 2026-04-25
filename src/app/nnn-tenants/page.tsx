@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { nnnTenants } from "@/data/nnn-tenants";
 
@@ -24,8 +25,17 @@ export default function NNNTenantsHubPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-dark-border">
+        <Image
+          src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-apple-inc-mac-store-macintosh-technology-508812.webp"
+          alt="National NNN retail tenant storefront"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             NNN by Tenant
           </p>

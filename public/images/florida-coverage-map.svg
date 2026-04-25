@@ -1,0 +1,379 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of Florida showing statewide commercial real estate markets served by MaxLife Realty">
+  <title>MaxLife Realty — Statewide Florida Commercial Real Estate Coverage</title>
+  <desc>Detailed map of Florida with commercial real estate markets served by MaxLife Realty — Orlando headquarters plus Tampa Bay, Jacksonville, South Florida (Miami, Fort Lauderdale, West Palm Beach), Southwest Florida (Naples, Fort Myers, Sarasota), Gainesville, Tallahassee, and the Panhandle.</desc>
+
+  <defs>
+    <!-- Deep ocean gradient -->
+    <radialGradient id="ocean" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0b1424"/>
+      <stop offset="55%" stop-color="#070d1a"/>
+      <stop offset="100%" stop-color="#03060d"/>
+    </radialGradient>
+
+    <!-- Florida land fill -->
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b2a40"/>
+      <stop offset="100%" stop-color="#0f1827"/>
+    </linearGradient>
+
+    <!-- Coastal glow (very subtle gold) -->
+    <radialGradient id="coast-glow" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#EFBF04" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#EFBF04" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#EFBF04" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft shadow under land -->
+    <filter id="land-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- City dot halo glow -->
+    <filter id="halo" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+
+    <!-- Hub star glow (Orlando) -->
+    <filter id="hub-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gold line -->
+    <linearGradient id="spoke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EFBF04" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#EFBF04" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Clip to Florida shape for inner glow -->
+    <clipPath id="fl-clip">
+      <path id="fl-path" d="
+        M 37 109
+        L 57 101 L 78 103 L 107 97 L 135 97 L 154 99 L 178 107
+        L 211 118 L 222 125 L 249 142 L 273 163 L 287 160 L 315 163
+        L 339 154 L 349 130 L 362 140 L 386 145 L 400 155 L 429 169
+        L 457 191 L 472 216 L 490 244 L 505 277 L 500 305 L 496 319
+        L 491 329 L 496 332 L 498 343 L 507 345 L 501 351 L 505 357
+        L 507 372 L 504 376 L 517 389 L 527 410 L 546 433 L 556 447
+        L 562 457 L 572 467 L 572 475 L 586 495 L 591 500 L 595 519
+        L 624 528 L 663 561 L 672 584 L 672 596 L 660 612 L 630 635
+        L 592 646 L 564 633 L 596 602 L 617 575 L 640 558 L 665 535
+        L 687 510 L 710 483 L 736 458 L 751 435 L 753 410 L 756 385
+        L 761 360 L 761 335 L 747 310 L 732 282 L 712 258 L 708 236
+        L 708 213 L 689 195 L 666 170 L 650 140 L 640 115 L 635 95
+        L 628 82 L 625 68 L 625 54 L 620 49 L 573 49 L 464 54 L 374 62
+        L 287 54 L 287 30 L 239 25 L 144 25 L 97 25 L 64 30 L 40 44
+        L 40 73 L 37 109 Z
+      "/>
+    </clipPath>
+  </defs>
+
+  <!-- Ocean background -->
+  <rect width="960" height="720" fill="url(#ocean)"/>
+
+  <!-- Subtle grid (very faint) -->
+  <g stroke="#1e2d3d" stroke-width="0.5" opacity="0.15">
+    <line x1="0" y1="120" x2="960" y2="120"/>
+    <line x1="0" y1="240" x2="960" y2="240"/>
+    <line x1="0" y1="360" x2="960" y2="360"/>
+    <line x1="0" y1="480" x2="960" y2="480"/>
+    <line x1="0" y1="600" x2="960" y2="600"/>
+    <line x1="160" y1="0" x2="160" y2="720"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="480" y1="0" x2="480" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="800" y1="0" x2="800" y2="720"/>
+  </g>
+
+  <!-- Coastal glow halo behind Florida -->
+  <ellipse cx="540" cy="360" rx="480" ry="380" fill="url(#coast-glow)"/>
+
+  <!-- Florida landmass -->
+  <use href="#fl-path" fill="url(#land)" filter="url(#land-shadow)"/>
+
+  <!-- Florida coastline stroke -->
+  <use href="#fl-path" fill="none" stroke="#EFBF04" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Inner coastline highlight -->
+  <g clip-path="url(#fl-clip)">
+    <use href="#fl-path" fill="none" stroke="#EFBF04" stroke-width="3" opacity="0.15"/>
+  </g>
+
+  <!-- Florida Keys (hand-drawn dots for the chain) -->
+  <g fill="#1b2a40" stroke="#EFBF04" stroke-width="0.75" opacity="0.7">
+    <circle cx="695" cy="617" r="3"/>
+    <circle cx="670" cy="625" r="2.5"/>
+    <circle cx="640" cy="635" r="2.5"/>
+    <circle cx="620" cy="640" r="2"/>
+  </g>
+
+  <!-- Subtle coverage region washes -->
+  <g opacity="0.08" fill="#EFBF04" clip-path="url(#fl-clip)">
+    <ellipse cx="630" cy="255" rx="110" ry="90"/>      <!-- Central FL -->
+    <ellipse cx="500" cy="330" rx="70" ry="60"/>       <!-- Tampa Bay -->
+    <ellipse cx="615" cy="130" rx="60" ry="55"/>       <!-- Jacksonville -->
+    <ellipse cx="755" cy="500" rx="45" ry="120"/>      <!-- South FL -->
+    <ellipse cx="610" cy="495" rx="55" ry="70"/>       <!-- SW FL -->
+    <ellipse cx="520" cy="405" rx="40" ry="45"/>       <!-- Sarasota -->
+    <ellipse cx="485" cy="205" rx="35" ry="30"/>       <!-- Gainesville -->
+    <ellipse cx="345" cy="100" rx="45" ry="30"/>       <!-- Tallahassee -->
+    <ellipse cx="100" cy="85" rx="110" ry="30"/>       <!-- Panhandle -->
+  </g>
+
+  <!-- Hub-and-spoke lines from Orlando -->
+  <g stroke="#EFBF04" stroke-width="1" stroke-dasharray="2 5" opacity="0.25" fill="none">
+    <line x1="630" y1="273" x2="615" y2="130"/>   <!-- Jax -->
+    <line x1="630" y1="273" x2="500" y2="330"/>   <!-- Tampa -->
+    <line x1="630" y1="273" x2="753" y2="536"/>   <!-- Miami -->
+    <line x1="630" y1="273" x2="761" y2="449"/>   <!-- WPB -->
+    <line x1="630" y1="273" x2="708" y2="290"/>   <!-- Space Coast -->
+    <line x1="630" y1="273" x2="591" y2="500"/>   <!-- Naples -->
+    <line x1="630" y1="273" x2="517" y2="389"/>   <!-- Sarasota -->
+    <line x1="630" y1="273" x2="485" y2="205"/>   <!-- Gainesville -->
+    <line x1="630" y1="273" x2="345" y2="100"/>   <!-- Tallahassee -->
+    <line x1="630" y1="273" x2="75" y2="95"/>     <!-- Pensacola -->
+  </g>
+
+  <!-- Region labels (muted, inside Florida) -->
+  <g font-family="Inter, system-ui, -apple-system, sans-serif" fill="#6b7d96" font-weight="500" text-anchor="middle" letter-spacing="2">
+    <text x="100" y="80" font-size="9" opacity="0.65">PANHANDLE</text>
+    <text x="345" y="95" font-size="9" opacity="0.65">TALLAHASSEE</text>
+    <text x="485" y="180" font-size="9" opacity="0.65">NORTH FL</text>
+    <text x="615" y="100" font-size="9" opacity="0.65">NORTHEAST FL</text>
+    <text x="650" y="240" font-size="10" opacity="0.75">CENTRAL FL</text>
+    <text x="500" y="305" font-size="9" opacity="0.65">TAMPA BAY</text>
+    <text x="600" y="478" font-size="9" opacity="0.65">SW FLORIDA</text>
+  </g>
+
+  <!-- Major city markers (with labels) -->
+  <g font-family="Inter, system-ui, -apple-system, sans-serif">
+
+    <!-- Orlando HQ (flagship marker) -->
+    <g filter="url(#hub-glow)">
+      <circle cx="630" cy="273" r="16" fill="none" stroke="#EFBF04" stroke-width="1" opacity="0.3"/>
+      <circle cx="630" cy="273" r="11" fill="none" stroke="#EFBF04" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="630" cy="273" r="6" fill="#EFBF04"/>
+      <circle cx="630" cy="273" r="2.5" fill="#0a0a0a"/>
+    </g>
+    <text x="630" y="305" text-anchor="middle" fill="#EFBF04" font-size="13" font-weight="700" letter-spacing="1">ORLANDO</text>
+    <text x="630" y="319" text-anchor="middle" fill="#9ca3af" font-size="9.5" font-style="italic">Headquarters</text>
+
+    <!-- Jacksonville -->
+    <circle cx="615" cy="130" r="7" fill="#EFBF04"/>
+    <circle cx="615" cy="130" r="3" fill="#0a0a0a"/>
+    <text x="615" y="157" text-anchor="middle" fill="#f5f5f5" font-size="11.5" font-weight="700">JACKSONVILLE</text>
+
+    <!-- Tampa -->
+    <circle cx="500" cy="330" r="7" fill="#EFBF04"/>
+    <circle cx="500" cy="330" r="3" fill="#0a0a0a"/>
+    <text x="500" y="357" text-anchor="middle" fill="#f5f5f5" font-size="11.5" font-weight="700">TAMPA</text>
+
+    <!-- Miami -->
+    <circle cx="753" cy="536" r="7" fill="#EFBF04"/>
+    <circle cx="753" cy="536" r="3" fill="#0a0a0a"/>
+    <text x="745" y="540" text-anchor="end" fill="#f5f5f5" font-size="11.5" font-weight="700">MIAMI</text>
+
+    <!-- Fort Lauderdale -->
+    <circle cx="760" cy="504" r="5" fill="#EFBF04"/>
+    <text x="750" y="507" text-anchor="end" fill="#f5f5f5" font-size="10" font-weight="600">Ft. Lauderdale</text>
+
+    <!-- West Palm Beach -->
+    <circle cx="761" cy="449" r="5" fill="#EFBF04"/>
+    <text x="751" y="452" text-anchor="end" fill="#f5f5f5" font-size="10" font-weight="600">W. Palm Beach</text>
+
+    <!-- Boca Raton (smaller) -->
+    <circle cx="761" cy="478" r="3" fill="#EFBF04" opacity="0.85"/>
+    <text x="751" y="481" text-anchor="end" fill="#9ca3af" font-size="9">Boca Raton</text>
+
+    <!-- Jupiter -->
+    <circle cx="762" cy="432" r="3" fill="#EFBF04" opacity="0.85"/>
+    <text x="752" y="435" text-anchor="end" fill="#9ca3af" font-size="9">Jupiter</text>
+
+    <!-- Naples -->
+    <circle cx="591" cy="500" r="5" fill="#EFBF04"/>
+    <text x="581" y="503" text-anchor="end" fill="#f5f5f5" font-size="10.5" font-weight="600">NAPLES</text>
+
+    <!-- Fort Myers -->
+    <circle cx="575" cy="478" r="5" fill="#EFBF04"/>
+    <text x="565" y="481" text-anchor="end" fill="#f5f5f5" font-size="10.5" font-weight="600">Ft. Myers</text>
+
+    <!-- Cape Coral (smaller) -->
+    <circle cx="566" cy="488" r="2.5" fill="#EFBF04" opacity="0.85"/>
+
+    <!-- Marco Island -->
+    <circle cx="597" cy="519" r="2.5" fill="#EFBF04" opacity="0.85"/>
+    <text x="607" y="523" fill="#9ca3af" font-size="9">Marco Is.</text>
+
+    <!-- Bonita Springs -->
+    <circle cx="585" cy="490" r="2.5" fill="#EFBF04" opacity="0.85"/>
+
+    <!-- Sarasota -->
+    <circle cx="517" cy="389" r="5" fill="#EFBF04"/>
+    <text x="507" y="392" text-anchor="end" fill="#f5f5f5" font-size="10.5" font-weight="600">SARASOTA</text>
+
+    <!-- Bradenton (smaller) -->
+    <circle cx="507" cy="378" r="2.5" fill="#EFBF04" opacity="0.85"/>
+    <text x="497" y="376" text-anchor="end" fill="#9ca3af" font-size="9">Bradenton</text>
+
+    <!-- Lakewood Ranch -->
+    <circle cx="522" cy="380" r="2" fill="#EFBF04" opacity="0.7"/>
+
+    <!-- Venice -->
+    <circle cx="527" cy="410" r="2.5" fill="#EFBF04" opacity="0.85"/>
+    <text x="537" y="414" fill="#9ca3af" font-size="9">Venice</text>
+
+    <!-- St. Petersburg / Clearwater -->
+    <circle cx="504" cy="349" r="3" fill="#EFBF04" opacity="0.85"/>
+    <text x="494" y="352" text-anchor="end" fill="#9ca3af" font-size="9">St. Pete</text>
+
+    <circle cx="496" cy="330" r="2.5" fill="#EFBF04" opacity="0.85"/>
+    <text x="486" y="328" text-anchor="end" fill="#9ca3af" font-size="9">Clearwater</text>
+
+    <!-- Gainesville -->
+    <circle cx="485" cy="205" r="5" fill="#EFBF04"/>
+    <text x="485" y="229" text-anchor="middle" fill="#f5f5f5" font-size="10.5" font-weight="600">GAINESVILLE</text>
+
+    <!-- Tallahassee -->
+    <circle cx="345" cy="100" r="6" fill="#EFBF04"/>
+    <circle cx="345" cy="100" r="2.5" fill="#0a0a0a"/>
+    <text x="345" y="124" text-anchor="middle" fill="#f5f5f5" font-size="10.5" font-weight="600">TALLAHASSEE</text>
+
+    <!-- Pensacola -->
+    <circle cx="75" cy="95" r="6" fill="#EFBF04"/>
+    <circle cx="75" cy="95" r="2.5" fill="#0a0a0a"/>
+    <text x="75" y="119" text-anchor="middle" fill="#f5f5f5" font-size="10.5" font-weight="600">PENSACOLA</text>
+
+    <!-- Destin -->
+    <circle cx="154" cy="99" r="3" fill="#EFBF04" opacity="0.85"/>
+    <text x="154" y="123" text-anchor="middle" fill="#9ca3af" font-size="9">Destin</text>
+
+    <!-- Panama City Beach -->
+    <circle cx="211" cy="118" r="3" fill="#EFBF04" opacity="0.85"/>
+    <text x="211" y="142" text-anchor="middle" fill="#9ca3af" font-size="9">PC Beach</text>
+
+    <!-- Space Coast -->
+    <circle cx="708" cy="290" r="4" fill="#EFBF04"/>
+    <text x="720" y="294" fill="#f5f5f5" font-size="10" font-weight="600">Space Coast</text>
+
+    <!-- Lake Nona (Orlando area) -->
+    <circle cx="645" cy="290" r="2.5" fill="#EFBF04" opacity="0.85"/>
+
+    <!-- St. Augustine -->
+    <circle cx="640" cy="137" r="2.5" fill="#EFBF04" opacity="0.85"/>
+    <text x="651" y="141" fill="#9ca3af" font-size="9">St. Augustine</text>
+
+    <!-- Daytona -->
+    <circle cx="666" cy="212" r="2.5" fill="#EFBF04" opacity="0.7"/>
+
+    <!-- Kissimmee -->
+    <circle cx="638" cy="290" r="2" fill="#EFBF04" opacity="0.7"/>
+
+    <!-- Winter Park -->
+    <circle cx="628" cy="262" r="2" fill="#EFBF04" opacity="0.7"/>
+
+    <!-- Key West (tiny) -->
+    <circle cx="592" cy="646" r="3" fill="#EFBF04" opacity="0.6"/>
+    <text x="592" y="662" text-anchor="middle" fill="#6b7280" font-size="8">Key West</text>
+  </g>
+
+  <!-- Title block (top-left) -->
+  <g font-family="Inter, system-ui, -apple-system, sans-serif">
+    <rect x="0" y="0" width="340" height="90" fill="#0a0a0a" opacity="0.4"/>
+    <text x="32" y="38" fill="#EFBF04" font-size="20" font-weight="800" letter-spacing="2">MAXLIFE REALTY</text>
+    <text x="32" y="60" fill="#f5f5f5" font-size="13" font-weight="500">Florida Commercial Real Estate</text>
+    <text x="32" y="78" fill="#9ca3af" font-size="10.5" letter-spacing="0.5">Statewide coverage · Headquartered in Orlando</text>
+  </g>
+
+  <!-- Legend (bottom-left card) -->
+  <g font-family="Inter, system-ui, -apple-system, sans-serif" transform="translate(30, 440)">
+    <rect x="0" y="0" width="260" height="248" rx="8" fill="#0f1824" stroke="#1e2d3d" stroke-width="1"/>
+    <rect x="0" y="0" width="260" height="36" rx="8" fill="#EFBF04" opacity="0.08"/>
+    <text x="20" y="24" fill="#EFBF04" font-size="11" font-weight="700" letter-spacing="2">COVERAGE NETWORK</text>
+
+    <g transform="translate(20, 58)">
+      <circle cx="8" cy="8" r="8" fill="none" stroke="#EFBF04" stroke-width="1.25" opacity="0.55"/>
+      <circle cx="8" cy="8" r="4" fill="#EFBF04"/>
+      <text x="28" y="12" fill="#f5f5f5" font-size="11.5" font-weight="700">Orlando — Headquarters</text>
+    </g>
+
+    <line x1="20" y1="82" x2="240" y2="82" stroke="#1e2d3d" stroke-width="1"/>
+
+    <g transform="translate(20, 96)" font-size="10.5" fill="#d1d5db">
+      <g transform="translate(0, 0)">
+        <circle cx="8" cy="5" r="5" fill="#EFBF04"/>
+        <text x="24" y="9">Central FL &amp; Space Coast</text>
+      </g>
+      <g transform="translate(0, 20)">
+        <circle cx="8" cy="5" r="5" fill="#EFBF04"/>
+        <text x="24" y="9">Tampa Bay &amp; Sarasota</text>
+      </g>
+      <g transform="translate(0, 40)">
+        <circle cx="8" cy="5" r="5" fill="#EFBF04"/>
+        <text x="24" y="9">Jacksonville &amp; Northeast FL</text>
+      </g>
+      <g transform="translate(0, 60)">
+        <circle cx="8" cy="5" r="5" fill="#EFBF04"/>
+        <text x="24" y="9">South FL — Miami / FLL / WPB</text>
+      </g>
+      <g transform="translate(0, 80)">
+        <circle cx="8" cy="5" r="5" fill="#EFBF04"/>
+        <text x="24" y="9">SW FL — Naples / Ft. Myers</text>
+      </g>
+      <g transform="translate(0, 100)">
+        <circle cx="8" cy="5" r="5" fill="#EFBF04"/>
+        <text x="24" y="9">Gainesville &amp; Tallahassee</text>
+      </g>
+      <g transform="translate(0, 120)">
+        <circle cx="8" cy="5" r="5" fill="#EFBF04"/>
+        <text x="24" y="9">Panhandle &amp; Emerald Coast</text>
+      </g>
+    </g>
+
+    <line x1="20" y1="236" x2="240" y2="236" stroke="#1e2d3d" stroke-width="1"/>
+
+    <g transform="translate(20, 224)">
+      <line x1="0" y1="6" x2="14" y2="6" stroke="#EFBF04" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>
+      <text x="22" y="10" fill="#9ca3af" font-size="9.5">Hub &amp; spoke from Orlando</text>
+    </g>
+  </g>
+
+  <!-- Stats strip (bottom-right) -->
+  <g font-family="Inter, system-ui, -apple-system, sans-serif" transform="translate(720, 624)">
+    <rect x="0" y="0" width="220" height="72" rx="8" fill="#0f1824" stroke="#1e2d3d" stroke-width="1"/>
+    <g text-anchor="middle">
+      <text x="37" y="30" fill="#EFBF04" font-size="20" font-weight="800">18</text>
+      <text x="37" y="48" fill="#9ca3af" font-size="9" letter-spacing="1">MARKETS</text>
+      <text x="37" y="60" fill="#9ca3af" font-size="9" letter-spacing="1">COVERED</text>
+
+      <text x="110" y="30" fill="#EFBF04" font-size="20" font-weight="800">75+</text>
+      <text x="110" y="48" fill="#9ca3af" font-size="9" letter-spacing="1">CITIES &amp;</text>
+      <text x="110" y="60" fill="#9ca3af" font-size="9" letter-spacing="1">SUBMARKETS</text>
+
+      <text x="183" y="30" fill="#EFBF04" font-size="20" font-weight="800">1</text>
+      <text x="183" y="48" fill="#9ca3af" font-size="9" letter-spacing="1">STATE —</text>
+      <text x="183" y="60" fill="#9ca3af" font-size="9" letter-spacing="1">FLORIDA</text>
+    </g>
+  </g>
+
+  <!-- Compass rose -->
+  <g transform="translate(900, 60)" font-family="Inter, system-ui, sans-serif">
+    <circle cx="0" cy="0" r="22" fill="#0f1824" stroke="#1e2d3d" stroke-width="1"/>
+    <path d="M 0 -18 L 3 0 L 0 18 L -3 0 Z" fill="#EFBF04" opacity="0.85"/>
+    <path d="M -18 0 L 0 3 L 18 0 L 0 -3 Z" fill="#6b7280" opacity="0.5"/>
+    <text x="0" y="-26" text-anchor="middle" fill="#EFBF04" font-size="10" font-weight="700">N</text>
+  </g>
+
+  <!-- Footer attribution -->
+  <text x="30" y="706" font-family="Inter, system-ui, sans-serif" fill="#4b5563" font-size="9" letter-spacing="0.5">MaxLife Realty · FL Licensed Real Estate Brokerage · License #3354351 · maxlifedevelopment.com</text>
+</svg>
