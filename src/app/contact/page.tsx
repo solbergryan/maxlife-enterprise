@@ -52,7 +52,7 @@ export default function ContactPage() {
     <>
       <JsonLd data={contactPageSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-building-door-architecture-entrance-glass-indoors-8246151.webp"
           alt="Contact MaxLife Realty commercial real estate broker"
@@ -69,7 +69,7 @@ export default function ContactPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Let&apos;s <span className="text-gold">Talk</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Have a project in mind? Need a quote? Just want to ask a question?
             We&apos;re here and ready to help.
           </p>
@@ -77,12 +77,12 @@ export default function ContactPage() {
       </section>
 
       {/* Intro / keyword H2 */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-2xl font-bold text-white mb-3">
             Commercial Realtors Serving Central Florida
           </h2>
-          <p className="text-gray-400 max-w-3xl leading-relaxed">
+          <p className="text-gray-300 max-w-3xl leading-relaxed">
             MaxLife Realty is a full-service commercial real estate
             brokerage serving Orlando, the Space Coast, Lake Nona, and the
             surrounding Central Florida markets. Whether you&apos;re buying,
@@ -98,7 +98,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Info */}
           <div className="space-y-6">
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,12 +107,12 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium">Phone</h3>
-                  <p className="text-gray-400 text-sm">(321) 586-2121</p>
+                  <p className="text-gray-300 text-sm">(321) 586-2121</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,14 +121,14 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium">Email</h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-300 text-sm">
                     Ryan@MaxLifeRealty.com
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -138,12 +138,12 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium">Location</h3>
-                  <p className="text-gray-400 text-sm">Central Florida — Orlando & Melbourne Areas</p>
+                  <p className="text-gray-300 text-sm">Central Florida — Orlando & Melbourne Areas</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -152,13 +152,13 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium">Hours</h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-300 text-sm">
                     Mon - Fri: 8:00 AM - 6:00 PM
                   </p>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-300 text-sm">
                     Sat: 9:00 AM - 2:00 PM
                   </p>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-300 text-sm">
                     Emergency: 24/7
                   </p>
                 </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className="lg:col-span-2">
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
               <h2 className="text-xl font-bold text-white mb-6">
                 Send Us a Message
               </h2>

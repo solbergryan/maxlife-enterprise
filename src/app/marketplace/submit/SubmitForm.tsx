@@ -173,8 +173,8 @@ const int = (v: string): number | null => {
 };
 
 const input =
-  "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
-const label = "text-gray-400 text-xs uppercase tracking-wider mb-1 block";
+  "w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
+const label = "text-gray-300 text-xs uppercase tracking-wider mb-1 block";
 
 export function SubmitForm({ userEmail, editing }: SubmitFormProps) {
   const router = useRouter();
@@ -628,21 +628,21 @@ export function SubmitForm({ userEmail, editing }: SubmitFormProps) {
       </Section>
 
       {/* --- Photos --- */}
-      <fieldset className="border border-dark-border rounded-xl p-5 bg-dark-card/40">
+      <fieldset className="border border-white/10 rounded-xl p-5 bg-white/[0.04]/40">
         <legend className="text-gold text-sm font-semibold uppercase tracking-widest px-2">
           Photos
         </legend>
         <div className="mt-2 space-y-4">
           {existingPhotoUrls.length > 0 && (
             <div>
-              <p className="text-gray-400 text-xs uppercase tracking-wider mb-2">
+              <p className="text-gray-300 text-xs uppercase tracking-wider mb-2">
                 Current photos
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                 {existingPhotoUrls.map((url, i) => (
                   <div
                     key={url}
-                    className="relative group border border-dark-border rounded-lg overflow-hidden"
+                    className="relative group border border-white/10 rounded-lg overflow-hidden"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={url} alt={`Existing photo ${i + 1}`} className="aspect-square w-full object-cover" />
@@ -757,7 +757,7 @@ export function SubmitForm({ userEmail, editing }: SubmitFormProps) {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <fieldset className="border border-dark-border rounded-xl p-5 bg-dark-card/40">
+    <fieldset className="border border-white/10 rounded-xl p-5 bg-white/[0.04]/40">
       <legend className="text-gold text-sm font-semibold uppercase tracking-widest px-2">
         {title}
       </legend>

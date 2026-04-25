@@ -18,7 +18,7 @@ export default function InvestorToolsPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-city-san-francisco-market-street-urban-4764064.webp"
           alt="Commercial real estate investor tools and analytics"
@@ -35,7 +35,7 @@ export default function InvestorToolsPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Investor <span className="text-gold">Tools</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Free tools and guides to help you evaluate commercial real estate
             investment opportunities with confidence.
           </p>
@@ -48,13 +48,13 @@ export default function InvestorToolsPage() {
       </section>
 
       {/* Cap Rate Guide */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl">
             <h2 className="text-2xl font-bold text-white mb-6">
               Understanding Cap Rates
             </h2>
-            <div className="space-y-4 text-gray-400 leading-relaxed">
+            <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
                 The capitalization rate (cap rate) is the most commonly used
                 metric in commercial real estate to evaluate the return potential
@@ -62,7 +62,7 @@ export default function InvestorToolsPage() {
                 property&apos;s net operating income (NOI) to its purchase price,
                 expressed as a percentage.
               </p>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6 my-6">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 my-6">
                 <p className="text-gold font-mono text-lg text-center mb-2">
                   Cap Rate = (Net Operating Income / Purchase Price) x 100
                 </p>
@@ -93,7 +93,7 @@ export default function InvestorToolsPage() {
                 ].map((item) => (
                   <div
                     key={item.type}
-                    className="flex justify-between items-center bg-dark-card border border-dark-border rounded-lg px-4 py-3"
+                    className="flex justify-between items-center bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3"
                   >
                     <span className="text-gray-300 text-sm">{item.type}</span>
                     <span className="text-gold font-semibold text-sm">
@@ -118,7 +118,7 @@ export default function InvestorToolsPage() {
           <h2 className="text-2xl font-bold text-white mb-6">
             Is This Deal Worth It? A Quick Evaluation Checklist
           </h2>
-          <p className="text-gray-400 mb-8 leading-relaxed">
+          <p className="text-gray-300 mb-8 leading-relaxed">
             Before committing to any commercial real estate investment, run
             through this checklist to ensure you&apos;re making an informed
             decision.
@@ -168,7 +168,7 @@ export default function InvestorToolsPage() {
             ].map((section) => (
               <div
                 key={section.category}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-gold font-semibold mb-4">
                   {section.category}
@@ -177,7 +177,7 @@ export default function InvestorToolsPage() {
                   {section.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 text-gray-400 text-sm"
+                      className="flex items-start gap-2 text-gray-300 text-sm"
                     >
                       <span className="text-dark-border mt-1">&#9634;</span>
                       {item}
@@ -191,12 +191,12 @@ export default function InvestorToolsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Need Help Evaluating a Deal?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             We provide detailed underwriting and investment analysis for
             commercial properties across Central Florida.
           </p>

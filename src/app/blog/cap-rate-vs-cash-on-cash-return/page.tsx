@@ -25,9 +25,9 @@ export default function CapRateVsCoC() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <Link href="/blog" className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6">
+          <Link href="/blog" className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -41,7 +41,7 @@ export default function CapRateVsCoC() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Cap Rate vs Cash-on-Cash Return: What&apos;s the Difference?
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             New investors often confuse these two metrics. They measure totally
             different things — and confusing them can cost you money.
           </p>
@@ -65,7 +65,7 @@ export default function CapRateVsCoC() {
 
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">The Formulas</h2>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-5 space-y-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-5 space-y-4">
             <div>
               <p className="text-gold font-semibold text-sm mb-2">Cap Rate</p>
               <code className="text-white block bg-dark p-3 rounded text-sm">
@@ -93,12 +93,12 @@ export default function CapRateVsCoC() {
             <li className="text-gray-300 text-sm">Loan ($1.17M at 6.5%, 25yr amort): <strong className="text-white">$94,620/yr debt service</strong></li>
           </ul>
 
-          <div className="bg-dark-card border border-dark-border rounded-lg p-5 space-y-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-5 space-y-4">
             <div>
               <p className="text-gold text-sm font-semibold mb-1">Cap Rate</p>
               <p className="text-white">$108,000 / $1,800,000 = <strong>6.0%</strong></p>
             </div>
-            <div className="border-t border-dark-border pt-4">
+            <div className="border-t border-white/10 pt-4">
               <p className="text-gold text-sm font-semibold mb-1">Cash-on-Cash</p>
               <p className="text-gray-300 text-sm mb-1">Cash flow = NOI – Debt Service = $108,000 – $94,620 = $13,380</p>
               <p className="text-gray-300 text-sm mb-1">Cash invested = Down payment + closing costs = $630,000 + $50,000 = $680,000</p>
@@ -138,7 +138,7 @@ export default function CapRateVsCoC() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-dark-border">
+                <tr className="border-b border-white/10">
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Situation</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3">Use</th>
                 </tr>
@@ -153,7 +153,7 @@ export default function CapRateVsCoC() {
                   ["Underwriting new BTS development", "Cap Rate (exit valuation)"],
                   ["Tax returns and depreciation", "Neither — use after-tax cash flow"],
                 ].map(([s, u]) => (
-                  <tr key={s} className="border-b border-dark-border/50">
+                  <tr key={s} className="border-b border-white/10/50">
                     <td className="py-3 pr-4 text-white font-medium">{s}</td>
                     <td className="py-3 text-gray-300">{u}</td>
                   </tr>
@@ -174,9 +174,9 @@ export default function CapRateVsCoC() {
               { name: "Equity Multiple", desc: "Total cash distributions / cash invested. Simple multiplier — 2x means you doubled your money over the hold." },
               { name: "Yield on Cost", desc: "For development: Stabilized NOI / Total Development Cost. Used to measure the development spread vs. market cap rate." },
             ].map((m) => (
-              <li key={m.name} className="bg-dark-card border border-dark-border rounded-lg p-4">
+              <li key={m.name} className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
                 <p className="text-white font-semibold text-sm mb-1">{m.name}</p>
-                <p className="text-gray-400 text-sm">{m.desc}</p>
+                <p className="text-gray-300 text-sm">{m.desc}</p>
               </li>
             ))}
           </ul>
@@ -200,7 +200,7 @@ export default function CapRateVsCoC() {
               { slug: "how-to-evaluate-commercial-real-estate-deal", title: "How to Evaluate a CRE Deal" },
               { slug: "what-is-nnn-lease", title: "What Is a Triple Net (NNN) Lease?" },
             ].map((r) => (
-              <Link key={r.slug} href={`/blog/${r.slug}`} className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold">
+              <Link key={r.slug} href={`/blog/${r.slug}`} className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold">
                 {r.title} &rarr;
               </Link>
             ))}

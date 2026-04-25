@@ -47,7 +47,7 @@ export default function OrlandoCapRatesGuide() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-glass-windows-business-blue-1508086.webp"
           alt="Commercial real estate cap rate analysis building"
@@ -60,7 +60,7 @@ export default function OrlandoCapRatesGuide() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -77,7 +77,7 @@ export default function OrlandoCapRatesGuide() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Orlando Cap Rates: A Guide for Commercial Real Estate Investors
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             How cap rates work, what they look like across Orlando&apos;s
             property types, and how to use them to identify value in Central
             Florida&apos;s commercial market.
@@ -92,7 +92,7 @@ export default function OrlandoCapRatesGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               What Is a Cap Rate and Why It Matters
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The capitalization rate -- or cap rate -- is the most widely used
               metric in commercial real estate investing. It expresses the
               relationship between a property&apos;s net operating income and
@@ -100,7 +100,7 @@ export default function OrlandoCapRatesGuide() {
               $100,000 in annual NOI and sells for $1,500,000, the cap rate is
               6.67%. The formula is simple: Cap Rate = NOI / Purchase Price.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Cap rates serve two critical functions. First, they allow you to
               compare the relative value of different properties on an
               apples-to-apples basis regardless of size, location, or property
@@ -109,7 +109,7 @@ export default function OrlandoCapRatesGuide() {
               while a higher cap rate indicates greater risk or less competition
               for that asset type.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               It is important to recognize that cap rates are a snapshot metric.
               They represent the yield at a single point in time based on
               current income and current price. They do not account for future
@@ -121,7 +121,7 @@ export default function OrlandoCapRatesGuide() {
               treat the cap rate as a starting point for analysis rather than
               the final word on value.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Net operating income itself deserves scrutiny. NOI is calculated
               as gross rental income minus operating expenses, but the way
               sellers present NOI can vary. Some offering memorandums use
@@ -132,7 +132,7 @@ export default function OrlandoCapRatesGuide() {
               in-place cap rate and a pro forma cap rate can be 100 to 200
               basis points on properties with vacancy or below-market leases.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Understanding Orlando&apos;s cap rate environment is essential
               whether you are acquiring your first commercial property or
               building a diversified portfolio. Cap rates in Central Florida
@@ -150,7 +150,7 @@ export default function OrlandoCapRatesGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando Cap Rates by Property Type
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Cap rates vary significantly across property types in Orlando. The
               ranges below reflect current market conditions for stabilized
               assets in core and suburban locations throughout the metro area.
@@ -159,33 +159,33 @@ export default function OrlandoCapRatesGuide() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Property Type</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Cap Rate Range</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Risk Profile</th>
                     <th className="text-left text-gold font-semibold py-3">Typical Buyer</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-400">
-                  <tr className="border-b border-dark-border/50">
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">NNN (Net Lease)</td>
                     <td className="py-3 pr-4">5.5% - 7.0%</td>
                     <td className="py-3 pr-4">Low</td>
                     <td className="py-3">1031 Exchange / Passive</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Multifamily</td>
                     <td className="py-3 pr-4">5.0% - 6.5%</td>
                     <td className="py-3 pr-4">Low - Moderate</td>
                     <td className="py-3">Institutional / Syndicator</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Industrial</td>
                     <td className="py-3 pr-4">5.5% - 7.0%</td>
                     <td className="py-3 pr-4">Low - Moderate</td>
                     <td className="py-3">Institutional / Private</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Retail</td>
                     <td className="py-3 pr-4">6.5% - 8.0%</td>
                     <td className="py-3 pr-4">Moderate</td>
@@ -201,7 +201,7 @@ export default function OrlandoCapRatesGuide() {
               </table>
             </div>
 
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-300 leading-relaxed mb-6">
               These ranges represent stabilized assets with typical occupancy
               and lease terms. Distressed properties, value-add opportunities,
               and development sites will trade outside these bands. Below is a
@@ -211,11 +211,11 @@ export default function OrlandoCapRatesGuide() {
             </p>
 
             <div className="space-y-6">
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
                 <h3 className="text-gold font-semibold mb-2">
                   NNN Properties -- 5.5% to 7.0%
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Single-tenant net lease properties anchored by credit tenants
                   such as Dollar General, Walgreens, and AutoZone trade at some
                   of the tightest cap rates in the market. Investors pay a
@@ -225,7 +225,7 @@ export default function OrlandoCapRatesGuide() {
                   typically trade at the low end of this range, while shorter
                   lease terms or regional tenants push cap rates higher.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Rent escalation structure is another key variable. NNN
                   properties with built-in annual rent increases of 1.5% to
                   2.0% command tighter cap rates than flat leases because
@@ -237,7 +237,7 @@ export default function OrlandoCapRatesGuide() {
                   lease duration risk and the present value of future rent
                   growth.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Location within the Orlando metro also matters for NNN
                   pricing. A Chick-fil-A ground lease on International Drive or
                   along the 192 corridor near Disney will trade at a
@@ -247,7 +247,7 @@ export default function OrlandoCapRatesGuide() {
                   high-traffic sites give investors confidence that residual
                   value exists beyond the current lease term.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Browse available{" "}
                   <Link href="/blog/orlando-nnn-properties-for-sale" className="text-gold hover:underline">
                     Orlando NNN properties
@@ -256,11 +256,11 @@ export default function OrlandoCapRatesGuide() {
                 </p>
               </div>
 
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
                 <h3 className="text-gold font-semibold mb-2">
                   Retail -- 6.5% to 8.0%
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Multi-tenant retail centers, strip malls, and outparcel
                   developments in Orlando generally trade at higher cap rates
                   than NNN properties due to the added management complexity and
@@ -269,7 +269,7 @@ export default function OrlandoCapRatesGuide() {
                   secondary corridors command higher yields to compensate for
                   vacancy exposure.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Tenant mix quality is one of the strongest predictors of
                   where a retail center falls within this cap rate range. A
                   center anchored by Publix or Aldi with a complementary mix
@@ -280,7 +280,7 @@ export default function OrlandoCapRatesGuide() {
                   retail has proven resilient through multiple economic cycles
                   and commands a pricing premium from investors.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Lease structure also affects retail cap rates in Orlando.
                   Centers with staggered lease expirations spread across
                   multiple years present lower risk than properties where a
@@ -291,7 +291,7 @@ export default function OrlandoCapRatesGuide() {
                   effective NOI and therefore the true economic cap rate of
                   the investment.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   The retail sector in Orlando benefits from the metro&apos;s
                   strong population growth and tourism-driven consumer spending.
                   Read more in our{" "}
@@ -302,11 +302,11 @@ export default function OrlandoCapRatesGuide() {
                 </p>
               </div>
 
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
                 <h3 className="text-gold font-semibold mb-2">
                   Multifamily -- 5.0% to 6.5%
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Apartment communities in Orlando remain among the most
                   competitive asset classes in the metro. Strong in-migration,
                   household formation, and rent growth have compressed
@@ -316,7 +316,7 @@ export default function OrlandoCapRatesGuide() {
                   value-add opportunities in secondary submarkets offer higher
                   entry yields with upside potential.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   The value-add multifamily strategy remains one of the most
                   popular investment approaches in Orlando. Properties built in
                   the 1990s and early 2000s in submarkets like Kissimmee,
@@ -328,7 +328,7 @@ export default function OrlandoCapRatesGuide() {
                   and can generate a return on investment exceeding 25% annually
                   through the resulting rent premiums.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Submarket selection is critical for multifamily investors in
                   Orlando. Properties near major employment centers -- Orlando
                   Health, AdventHealth, the University of Central Florida,
@@ -338,7 +338,7 @@ export default function OrlandoCapRatesGuide() {
                   also becoming a meaningful differentiator as transit-oriented
                   living gains traction among Orlando renters.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Our{" "}
                   <Link href="/blog/orlando-multifamily-investment-guide" className="text-gold hover:underline">
                     Orlando multifamily investment guide
@@ -348,11 +348,11 @@ export default function OrlandoCapRatesGuide() {
                 </p>
               </div>
 
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
                 <h3 className="text-gold font-semibold mb-2">
                   Industrial -- 5.5% to 7.0%
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Industrial and logistics properties have seen the most cap
                   rate compression of any Orlando property type over the past
                   five years. E-commerce growth, supply chain restructuring, and
@@ -361,7 +361,7 @@ export default function OrlandoCapRatesGuide() {
                   International Airport and along the I-4 logistics corridor
                   trade at the tightest cap rates.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Building specifications drive cap rate differentiation within
                   the industrial sector. Modern Class A distribution facilities
                   with 32-foot clear heights, cross-dock configurations, and
@@ -373,7 +373,7 @@ export default function OrlandoCapRatesGuide() {
                   value-add opportunities through lease-up and tenant
                   improvement programs.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   The Orlando industrial market has also benefited from Central
                   Florida&apos;s emergence as a regional distribution hub.
                   Proximity to Port Canaveral, Jacksonville&apos;s JAXPORT,
@@ -389,7 +389,7 @@ export default function OrlandoCapRatesGuide() {
                   </Link>
                   , where cap rates remain slightly wider than core Orlando.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Explore the sector further in our{" "}
                   <Link href="/blog/orlando-industrial-real-estate-guide" className="text-gold hover:underline">
                     Orlando industrial real estate guide
@@ -398,11 +398,11 @@ export default function OrlandoCapRatesGuide() {
                 </p>
               </div>
 
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
                 <h3 className="text-gold font-semibold mb-2">
                   Office -- 7.0% to 9.0%
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Office cap rates in Orlando reflect the ongoing uncertainty in
                   the sector following the shift to hybrid and remote work. Class
                   A office buildings in prime locations with long-term tenants
@@ -412,13 +412,13 @@ export default function OrlandoCapRatesGuide() {
                   sector are pricing in both leasing risk and the capital
                   expenditures often needed to attract and retain tenants.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   Despite the challenges, medical office buildings and
                   single-tenant office properties leased to government or
                   healthcare tenants continue to perform well, often trading
                   at cap rates closer to the NNN range.
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   Adaptive reuse is emerging as a strategy for office
                   properties in Orlando that face persistent vacancy. Some
                   investors are acquiring Class B and C office buildings at
@@ -439,7 +439,7 @@ export default function OrlandoCapRatesGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               How Interest Rates Affect Orlando Cap Rates
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The relationship between interest rates and cap rates is one of
               the most important dynamics in commercial real estate. When the
               Federal Reserve raises the federal funds rate, the cost of
@@ -450,7 +450,7 @@ export default function OrlandoCapRatesGuide() {
               environments -- cheaper debt allows buyers to accept lower cap
               rates while still achieving their target cash-on-cash returns.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The spread between cap rates and the 10-year Treasury yield is a
               useful barometer for gauging relative value. Historically, Orlando
               commercial properties have traded at a spread of 200 to 350 basis
@@ -461,7 +461,7 @@ export default function OrlandoCapRatesGuide() {
               buying opportunity where private market pricing has not yet
               caught up to favorable financing conditions.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando experienced this dynamic firsthand between 2022 and
               2024 when aggressive Fed rate hikes pushed commercial mortgage
               rates above 7.0% for many borrowers. Transaction volume
@@ -473,7 +473,7 @@ export default function OrlandoCapRatesGuide() {
               125 basis points wider than the 2021 lows across most property
               types.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For investors evaluating deals today, the key question is whether
               current cap rates adequately compensate for the prevailing cost
               of debt. Positive leverage -- where the cap rate exceeds the
@@ -494,7 +494,7 @@ export default function OrlandoCapRatesGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Historical Cap Rate Trends in Central Florida
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando cap rates have followed a broad compression trend over
               the past decade, interrupted by periodic corrections tied to
               interest rate cycles and macroeconomic events. Between 2015 and
@@ -508,7 +508,7 @@ export default function OrlandoCapRatesGuide() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Property Type</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">2018 Avg</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">2021 Avg</th>
@@ -516,29 +516,29 @@ export default function OrlandoCapRatesGuide() {
                     <th className="text-left text-gold font-semibold py-3">2026 Avg</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-400">
-                  <tr className="border-b border-dark-border/50">
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">NNN</td>
                     <td className="py-3 pr-4">6.25%</td>
                     <td className="py-3 pr-4">5.50%</td>
                     <td className="py-3 pr-4">6.10%</td>
                     <td className="py-3">6.25%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Multifamily</td>
                     <td className="py-3 pr-4">5.75%</td>
                     <td className="py-3 pr-4">4.50%</td>
                     <td className="py-3 pr-4">5.50%</td>
                     <td className="py-3">5.75%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Industrial</td>
                     <td className="py-3 pr-4">6.50%</td>
                     <td className="py-3 pr-4">5.25%</td>
                     <td className="py-3 pr-4">6.00%</td>
                     <td className="py-3">6.25%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Retail</td>
                     <td className="py-3 pr-4">7.50%</td>
                     <td className="py-3 pr-4">6.75%</td>
@@ -556,7 +556,7 @@ export default function OrlandoCapRatesGuide() {
               </table>
             </div>
 
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The COVID-19 pandemic in 2020 created a brief dislocation, but
               Orlando&apos;s recovery was faster than most Sun Belt metros.
               Stimulus-fueled demand and a wave of institutional capital
@@ -566,7 +566,7 @@ export default function OrlandoCapRatesGuide() {
               no margin for error if rent growth stalled or interest rates
               rose, which is exactly what happened.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The rate-hike cycle of 2022 through 2024 forced a recalibration.
               Cap rates expanded 75 to 150 basis points from the lows
               depending on property type, with office experiencing the most
@@ -576,7 +576,7 @@ export default function OrlandoCapRatesGuide() {
               fundamental demand remained strong even as capital became more
               expensive.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Looking at the current environment, cap rates across most
               Orlando property types appear to have stabilized. Transaction
               volume is recovering as buyers and sellers converge on
@@ -598,7 +598,7 @@ export default function OrlandoCapRatesGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Factors Driving Orlando Cap Rate Trends
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Several macroeconomic and local factors shape where cap rates land
               in Orlando. Interest rates are the most influential external
               force. When the cost of debt rises, cap rates tend to expand as
@@ -607,7 +607,7 @@ export default function OrlandoCapRatesGuide() {
               financing allows investors to pay more for the same income
               stream.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s demographic tailwinds provide a strong foundation
               for cap rate stability. The metro area continues to attract over
               1,000 new residents per week, driven by employment growth in
@@ -616,7 +616,7 @@ export default function OrlandoCapRatesGuide() {
               space, and office -- supporting occupancy and rent growth across
               all property types.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Supply and demand dynamics at the submarket level also play a
               meaningful role. When new construction outpaces absorption --
               as happened in several Orlando multifamily submarkets in 2024
@@ -629,7 +629,7 @@ export default function OrlandoCapRatesGuide() {
               absorption trends for each property type is essential for
               anticipating where cap rates are headed.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Employment diversification strengthens Orlando&apos;s case as
               a cap rate compression market over the long term. While tourism
               and hospitality remain the largest employment sector, the
@@ -641,7 +641,7 @@ export default function OrlandoCapRatesGuide() {
               increasing competition for assets and supporting tighter cap
               rates.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Infrastructure investment also plays a role. The expansion of
               SunRail commuter service, the Brightline high-speed rail
               connection to South Florida, and ongoing highway improvements
@@ -665,7 +665,7 @@ export default function OrlandoCapRatesGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Cap Rate vs Cash-on-Cash Return
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               One of the most common mistakes new CRE investors make is
               conflating cap rate with cash-on-cash return. While both are
               expressed as percentages, they measure fundamentally different
@@ -674,7 +674,7 @@ export default function OrlandoCapRatesGuide() {
               for financing. Cash-on-cash return measures the actual return on
               the equity you invest after debt service.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For example, a property with a 6.5% cap rate purchased with 70%
               leverage at a 5.5% interest rate might deliver a 9% to 11%
               cash-on-cash return depending on the amortization schedule and
@@ -687,7 +687,7 @@ export default function OrlandoCapRatesGuide() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Scenario</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Cap Rate</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Mortgage Rate</th>
@@ -695,22 +695,22 @@ export default function OrlandoCapRatesGuide() {
                     <th className="text-left text-gold font-semibold py-3">Cash-on-Cash</th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-400">
-                  <tr className="border-b border-dark-border/50">
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Strong Positive Leverage</td>
                     <td className="py-3 pr-4">7.0%</td>
                     <td className="py-3 pr-4">5.5%</td>
                     <td className="py-3 pr-4">70%</td>
                     <td className="py-3">10.5%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Moderate Positive Leverage</td>
                     <td className="py-3 pr-4">6.5%</td>
                     <td className="py-3 pr-4">6.0%</td>
                     <td className="py-3 pr-4">65%</td>
                     <td className="py-3">7.4%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Neutral Leverage</td>
                     <td className="py-3 pr-4">6.5%</td>
                     <td className="py-3 pr-4">6.5%</td>
@@ -728,7 +728,7 @@ export default function OrlandoCapRatesGuide() {
               </table>
             </div>
 
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The table above illustrates how the interplay between cap rates,
               mortgage rates, and leverage ratios determines actual investor
               returns. In the current Orlando market, most property types
@@ -738,7 +738,7 @@ export default function OrlandoCapRatesGuide() {
               before committing to a deal, including the possibility that
               rates move against them during the hold period.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Another important distinction is that cap rates ignore principal
               paydown and appreciation. A property purchased at a 6.0% cap
               rate that delivers only a 7.5% cash-on-cash return may still
@@ -747,7 +747,7 @@ export default function OrlandoCapRatesGuide() {
               time. Total return analysis gives a more complete picture of
               investment performance than any single metric.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Smart investors use both metrics together. The cap rate helps you
               compare properties and assess relative value. The cash-on-cash
               return tells you how hard your actual dollars are working. Our{" "}
@@ -763,7 +763,7 @@ export default function OrlandoCapRatesGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Using Cap Rates to Find Value in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The cap rate is not just a valuation tool -- it is a lens for
               identifying opportunity. When a property trades at a cap rate
               significantly above the market average for its type and location,
@@ -771,7 +771,7 @@ export default function OrlandoCapRatesGuide() {
               the market has identified. Your job as an investor is to
               determine which one it is.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Value-add strategies in Orlando often target properties trading
               at wider cap rates due to below-market rents, deferred
               maintenance, or management inefficiency. By stabilizing the
@@ -780,7 +780,7 @@ export default function OrlandoCapRatesGuide() {
               effectively compress the cap rate, creating significant equity
               through forced appreciation.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Submarket arbitrage is another strategy that cap rate analysis
               enables. Different Orlando submarkets can exhibit meaningfully
               different cap rates for similar property types based on
@@ -794,7 +794,7 @@ export default function OrlandoCapRatesGuide() {
               outsized returns as the market recognizes and prices in the
               growth.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Cap rate analysis is also valuable for portfolio construction.
               By blending assets across the cap rate spectrum -- lower-cap-rate
               stabilized NNN properties for income and stability alongside
@@ -804,7 +804,7 @@ export default function OrlandoCapRatesGuide() {
               where the breadth of property types and submarkets provides
               ample opportunity to construct a balanced allocation.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For investors seeking stability over upside, acquiring
               properties at market cap rates with strong tenants and long lease
               terms remains a proven strategy in Orlando. NNN properties and
@@ -819,11 +819,11 @@ export default function OrlandoCapRatesGuide() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Analyze Orlando Cap Rates for Your Next Deal
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty provides cap rate analysis, deal underwriting,
               and acquisition support for commercial investors across Central
               Florida.

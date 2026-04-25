@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function SellerNetSheetPage() {
   return (
     <>
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             <Link href="/net-sheets" className="hover:text-gold-light">
@@ -28,7 +28,7 @@ export default function SellerNetSheetPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Seller <span className="text-gold">Net Sheet</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Estimate net proceeds at closing with Florida rates for any
             supported county — Orange (Orlando, default), Brevard, Lake,
             Seminole, Osceola, Volusia, or Polk. Generate a branded PDF in one
@@ -45,13 +45,13 @@ export default function SellerNetSheetPage() {
         <SellerNetSheet />
       </section>
 
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-xl font-bold text-white mb-4">
               How the Seller Net Sheet Works
             </h2>
-            <div className="space-y-3 text-gray-400 text-sm leading-relaxed">
+            <div className="space-y-3 text-gray-300 text-sm leading-relaxed">
               <p>
                 The Seller Net Sheet estimates your proceeds at closing by
                 subtracting commissions, title fees, documentary stamp tax,

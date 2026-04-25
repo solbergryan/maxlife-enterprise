@@ -37,7 +37,7 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-building-architecture-travel-tourism-facade-exterior-7114894.webp"
           alt="MaxLife Realty commercial real estate portfolio"
@@ -54,7 +54,7 @@ export default function PortfolioPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Featured <span className="text-gold">Deals</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             A selection of transactions we&apos;ve closed. Each deal represents
             our commitment to finding the right opportunity and executing
             flawlessly.
@@ -72,7 +72,7 @@ export default function PortfolioPage() {
 
       {/* Featured Deal */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-dark-card border border-dark-border rounded-xl overflow-hidden">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="relative h-64 lg:h-auto lg:min-h-[400px]">
               <Image
@@ -98,10 +98,10 @@ export default function PortfolioPage() {
               <h2 className="text-2xl font-bold text-white mb-1">
                 {featuredDeal.title}
               </h2>
-              <p className="text-gray-400 mb-6">{featuredDeal.location}</p>
+              <p className="text-gray-300 mb-6">{featuredDeal.location}</p>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-dark border border-dark-border rounded-lg p-4">
+                <div className="bg-dark border border-white/10 rounded-lg p-4">
                   <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                     Tenant
                   </p>
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
                     {featuredDeal.tenant}
                   </p>
                 </div>
-                <div className="bg-dark border border-dark-border rounded-lg p-4">
+                <div className="bg-dark border border-white/10 rounded-lg p-4">
                   <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                     Lease Type
                   </p>
@@ -162,12 +162,12 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Looking for Active Deals?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Browse our current commercial real estate opportunities or sign up
             for off-market deal access.
           </p>

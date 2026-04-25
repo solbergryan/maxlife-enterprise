@@ -51,7 +51,7 @@ export default function OrlandoRetailGuideArticle() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-buildings-city-coffee-shop-doors-street-1836478.webp"
           alt="Orlando retail commercial storefronts on a city street"
@@ -64,7 +64,7 @@ export default function OrlandoRetailGuideArticle() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -81,7 +81,7 @@ export default function OrlandoRetailGuideArticle() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Best Orlando Submarkets for Retail Space for Rent
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Where to find retail space for rent in Orlando — from I-Drive and
             Sand Lake to Winter Park, Lake Nona, and Millenia — plus investment
             guidance for strip centers, outparcels, and single-tenant net lease
@@ -97,7 +97,7 @@ export default function OrlandoRetailGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Retail Market Overview
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s retail real estate market benefits from a
               combination of factors that few metros can match: a massive
               tourism industry that drives foot traffic to commercial corridors,
@@ -107,7 +107,7 @@ export default function OrlandoRetailGuideArticle() {
               market with diverse investment opportunities across a wide range
               of property types and price points.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               While the broader narrative around retail real estate nationally
               has focused on challenges facing enclosed malls and big-box
               stores, Orlando&apos;s open-air retail formats have performed
@@ -117,7 +117,7 @@ export default function OrlandoRetailGuideArticle() {
               expansion of service-oriented retailers that are resistant to
               e-commerce disruption.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The metro area&apos;s retail inventory totals roughly 130 million
               square feet spread across Orange, Seminole, Osceola, and Lake
               counties. Vacancy rates for well-located retail properties have
@@ -127,7 +127,7 @@ export default function OrlandoRetailGuideArticle() {
               driven by both organic tenant expansion and new-to-market brands
               establishing their first Central Florida locations.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s population growth rate has outpaced the national
               average for over a decade. The metro adds an estimated 1,500 new
               residents per week, which translates directly into demand for
@@ -138,7 +138,7 @@ export default function OrlandoRetailGuideArticle() {
               where retail performance depends more heavily on discretionary
               spending alone.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The{" "}
               <Link href="/markets/orlando-commercial-real-estate" className="text-gold hover:underline">
                 Orlando commercial real estate market
@@ -158,7 +158,7 @@ export default function OrlandoRetailGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Retail Property Types in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Understanding the different categories of retail real estate is
               essential for identifying investments that align with your risk
               tolerance, return objectives, and management capacity. Each
@@ -189,14 +189,14 @@ export default function OrlandoRetailGuideArticle() {
               ].map((item) => (
                 <div
                   key={item.name}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <h3 className="text-gold font-semibold mb-2">{item.name}</h3>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                  <p className="text-gray-300 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For investors new to retail, single-tenant NNN properties provide
               the simplest entry point. Our{" "}
               <Link href="/blog/what-is-nnn-lease" className="text-gold hover:underline">
@@ -205,7 +205,7 @@ export default function OrlandoRetailGuideArticle() {
               explains how NNN lease structures work and what to evaluate before
               making an investment.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               In the Orlando market, single-tenant NNN retail properties
               typically trade between $1.2 million and $4.5 million for
               freestanding quick-service restaurants and pharmacies. Common
@@ -216,7 +216,7 @@ export default function OrlandoRetailGuideArticle() {
               franchisee-guaranteed leases offer higher yields with
               correspondingly higher risk.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Multi-tenant strip centers in Orlando typically range from $1.5
               million to $8 million, depending on size, occupancy, and location.
               Value-add investors frequently target strip centers with
@@ -237,7 +237,7 @@ export default function OrlandoRetailGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Top Retail Corridors and Submarkets
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Retail property performance is heavily influenced by location, and
               Orlando offers several high-performing corridors that attract
               strong tenant interest and command premium rents. Traffic counts,
@@ -245,9 +245,9 @@ export default function OrlandoRetailGuideArticle() {
               employers all factor into corridor quality.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">International Drive</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   One of the highest-traffic retail corridors in Florida,
                   International Drive benefits from tens of millions of annual
                   tourist visitors. Retail properties here serve both tourist and
@@ -255,9 +255,9 @@ export default function OrlandoRetailGuideArticle() {
                   entertainment concepts, and specialty retail.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Colonial Drive (SR 50)</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   A major east-west arterial that bisects the metro, Colonial
                   Drive serves a dense resident population with neighborhood
                   retail, services, and dining. Traffic counts exceed 50,000
@@ -265,9 +265,9 @@ export default function OrlandoRetailGuideArticle() {
                   demand.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">US-192 / Kissimmee</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   The US-192 corridor in Kissimmee has evolved from a
                   tourism-focused strip into a major retail destination serving
                   the rapidly growing Osceola County population. New retail
@@ -275,9 +275,9 @@ export default function OrlandoRetailGuideArticle() {
                   this corridor.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Narcoossee Road / Lake Nona</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   The growth of Lake Nona has created significant retail demand
                   along Narcoossee Road and the surrounding area. New
                   grocery-anchored centers and outparcels have been developed to
@@ -285,7 +285,7 @@ export default function OrlandoRetailGuideArticle() {
                 </p>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Beyond these primary corridors, several secondary submarkets
               deserve attention from retail investors. The Semoran Boulevard
               (SR 436) corridor running through Casselberry, Altamonte Springs,
@@ -300,7 +300,7 @@ export default function OrlandoRetailGuideArticle() {
               Publix-anchored centers and quick-service restaurant outparcels
               under construction.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Horizon West, located in southwest Orange County, represents one
               of the fastest-growing planned communities in the country. The
               area has attracted significant new retail development including
@@ -311,7 +311,7 @@ export default function OrlandoRetailGuideArticle() {
               for new construction inline space start at $28 to $32 per square
               foot NNN.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Our{" "}
               <Link href="/markets/international-drive-commercial-real-estate" className="text-gold hover:underline">
                 International Drive market page
@@ -330,7 +330,7 @@ export default function OrlandoRetailGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Retail Lease Structures in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lease structure is one of the most critical variables in retail
               real estate investment, and Orlando&apos;s retail market features
               the full spectrum of lease types. Understanding the differences
@@ -339,7 +339,7 @@ export default function OrlandoRetailGuideArticle() {
               forecasting expenses, and comparing properties on an
               apples-to-apples basis.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Triple net leases are the dominant structure for single-tenant
               retail properties in the Orlando market. Under a{" "}
               <Link href="/blog/what-is-nnn-lease" className="text-gold hover:underline">
@@ -354,7 +354,7 @@ export default function OrlandoRetailGuideArticle() {
               with 10- to 20-year initial terms and contractual rent increases
               of 1.5% to 2% annually or 10% every five years.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Multi-tenant strip centers and shopping centers in Orlando more
               commonly use modified gross or NNN structures with landlord-
               managed CAM billing. In these arrangements, the landlord collects
@@ -366,7 +366,7 @@ export default function OrlandoRetailGuideArticle() {
               practices and whether the landlord retains an administrative fee,
               typically 10% to 15% of total CAM costs.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Percentage rent clauses are less common in Orlando strip centers
               but appear frequently in grocery-anchored and power center leases
               with national tenants. Under a percentage rent structure, the
@@ -377,7 +377,7 @@ export default function OrlandoRetailGuideArticle() {
               in tenant performance and serve as a natural hedge against
               inflation over long lease terms.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For investors evaluating{" "}
               <Link href="/blog/orlando-nnn-properties-for-sale" className="text-gold hover:underline">
                 Orlando NNN properties for sale
@@ -402,7 +402,7 @@ export default function OrlandoRetailGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Tourism-Driven vs. Population-Driven Retail
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               One of the most important distinctions in Orlando retail real
               estate is the difference between tourism-driven and
               population-driven retail properties. The metro&apos;s unique
@@ -411,7 +411,7 @@ export default function OrlandoRetailGuideArticle() {
               affect property performance, tenant mix, lease terms, and
               investment risk in meaningfully different ways.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Tourism-driven retail is concentrated along the{" "}
               <Link href="/markets/international-drive-commercial-real-estate" className="text-gold hover:underline">
                 International Drive corridor
@@ -427,7 +427,7 @@ export default function OrlandoRetailGuideArticle() {
               high-visibility restaurant and retail pad sites, reflecting the
               outsized sales volumes these locations can produce.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               However, tourism-driven retail carries unique risks. Revenue is
               seasonal, with peak periods during summer and holidays and softer
               months in September and January. External disruptions such as
@@ -439,7 +439,7 @@ export default function OrlandoRetailGuideArticle() {
               favor tenants with strong balance sheets capable of weathering
               seasonal and cyclical swings.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Population-driven retail, by contrast, is anchored by the daily
               spending needs of Orlando&apos;s resident base. Grocery stores,
               medical offices, veterinary clinics, dry cleaners, hair salons,
@@ -451,7 +451,7 @@ export default function OrlandoRetailGuideArticle() {
               often longer for anchor tenants, and cash flows are less volatile
               across economic cycles.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The most resilient retail investments in the Orlando market often
               blend both demand drivers. A grocery-anchored center on Sand Lake
               Road, for instance, draws its primary customer base from nearby
@@ -472,7 +472,7 @@ export default function OrlandoRetailGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Retail Investment Strategy and Cap Rates
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Retail cap rates in Orlando vary significantly by property type,
               tenant quality, lease term, and location. Single-tenant NNN
               properties leased to investment-grade credit tenants with long
@@ -481,7 +481,7 @@ export default function OrlandoRetailGuideArticle() {
               properties offer higher yields, typically in the 6.5-8.5% range,
               reflecting the additional management intensity and leasing risk.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Grocery-anchored shopping centers in Orlando typically trade at
               cap rates between 5.5% and 7.0%, positioning them between the
               safety of credit-tenant NNN and the higher yields of unanchored
@@ -493,7 +493,7 @@ export default function OrlandoRetailGuideArticle() {
               West will trade at a meaningful premium to a comparable center
               anchored by a less dominant grocer.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Value-add retail investments represent a compelling strategy in
               the current Orlando market. Properties with near-term lease
               expirations, below-market rents, or correctable vacancy offer the
@@ -505,7 +505,7 @@ export default function OrlandoRetailGuideArticle() {
               modest tenant improvement investment, generating significant
               equity creation on a leveraged basis.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Successful retail investors in Orlando focus on properties with
               strong traffic counts, established tenant mixes, and lease
               structures that provide income growth. Look for properties with
@@ -513,7 +513,7 @@ export default function OrlandoRetailGuideArticle() {
               sales, and staggered lease expirations that reduce the risk of
               simultaneous vacancy.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For a comprehensive look at cap rate trends across all commercial
               property types in the Orlando metro, visit our{" "}
               <Link href="/blog/orlando-cap-rates-investor-guide" className="text-gold hover:underline">
@@ -532,7 +532,7 @@ export default function OrlandoRetailGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Retail Market Outlook
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The outlook for Orlando retail real estate is cautiously
               optimistic. While the sector faces ongoing structural shifts
               driven by e-commerce and changing consumer preferences, the
@@ -540,7 +540,7 @@ export default function OrlandoRetailGuideArticle() {
               retail, grocery-anchored centers, and essential-service NNN
               properties — continue to perform well in the Orlando market.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Population growth remains the primary tailwind. As Orlando
               continues to add residents, the demand for neighborhood goods and
               services grows proportionally. New residential communities in Lake
@@ -549,7 +549,7 @@ export default function OrlandoRetailGuideArticle() {
               fill, presenting near-term acquisition and development
               opportunities.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Construction activity in the retail sector has been disciplined
               compared to previous cycles. Developers are primarily building
               grocery-anchored and necessity-based retail rather than
@@ -562,7 +562,7 @@ export default function OrlandoRetailGuideArticle() {
               exceeds the cost to acquire existing stabilized assets, investors
               benefit from a natural value backstop.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The continued expansion of the Orlando International Airport,
               including the new Terminal C that opened in 2022 and the planned
               Brightline high-speed rail connection, will further boost the
@@ -575,7 +575,7 @@ export default function OrlandoRetailGuideArticle() {
               the core of the metro, benefiting retail corridors along and
               adjacent to the interstate.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Investors who focus on well-located properties with
               e-commerce-resistant tenant mixes and strong lease structures are
               well-positioned to generate attractive risk-adjusted returns in
@@ -593,12 +593,12 @@ export default function OrlandoRetailGuideArticle() {
           </section>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href="/retail-space-for-rent-orlando"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Retail Space for Rent in Orlando
@@ -610,7 +610,7 @@ export default function OrlandoRetailGuideArticle() {
               </Link>
               <Link
                 href="/orlando-commercial-real-estate-deals"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Off-Market Commercial Deals in Orlando
@@ -622,7 +622,7 @@ export default function OrlandoRetailGuideArticle() {
               </Link>
               <Link
                 href="/nnn-properties-florida"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   NNN Properties in Florida
@@ -634,7 +634,7 @@ export default function OrlandoRetailGuideArticle() {
               </Link>
               <Link
                 href="/build-to-suit-orlando"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Build-to-Suit Development in Orlando
@@ -648,11 +648,11 @@ export default function OrlandoRetailGuideArticle() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Explore Orlando Retail Investments
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty helps investors source, evaluate, and acquire
               retail properties across Central Florida. From NNN single-tenant
               assets to multi-tenant strip centers, we cover the full spectrum

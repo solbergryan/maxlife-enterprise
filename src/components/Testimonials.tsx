@@ -6,7 +6,7 @@ import { testimonials } from "@/data/testimonials";
  */
 export default function Testimonials() {
   return (
-    <section className="bg-dark-card/50 border-y border-dark-border">
+    <section className="bg-white/[0.03] border-y border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
@@ -21,7 +21,7 @@ export default function Testimonials() {
           {testimonials.slice(0, 3).map((t) => (
             <div
               key={t.context}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 flex flex-col"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 flex flex-col"
             >
               {/* Stars */}
               <div className="flex gap-0.5 mb-4">
@@ -43,7 +43,7 @@ export default function Testimonials() {
               </blockquote>
 
               {/* Attribution */}
-              <div className="border-t border-dark-border pt-4">
+              <div className="border-t border-white/10 pt-4">
                 <p className="text-white text-sm font-medium">{t.name}</p>
                 <p className="text-gray-500 text-xs">{t.title}</p>
                 <p className="text-gold/60 text-xs mt-1">{t.context}</p>

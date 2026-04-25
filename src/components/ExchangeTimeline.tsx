@@ -76,7 +76,7 @@ export default function ExchangeTimeline() {
   return (
     <div className="space-y-8">
       {/* Input */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
         <label className="block">
           <span className="text-gold text-sm font-semibold uppercase tracking-wider mb-2 block">
             Date You Sold (or Will Sell) the Relinquished Property
@@ -85,7 +85,7 @@ export default function ExchangeTimeline() {
             type="date"
             value={saleDate}
             onChange={(e) => setSaleDate(e.target.value)}
-            className="w-full bg-dark border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50 transition-colors"
+            className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50 transition-colors"
           />
           <p className="text-gray-500 text-xs mt-2">
             The 45-day and 180-day clocks both start on the day your sale
@@ -162,7 +162,7 @@ export default function ExchangeTimeline() {
       </div>
 
       {/* Visual Timeline */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
         <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
           Your Exchange Timeline
         </h3>
@@ -182,7 +182,7 @@ export default function ExchangeTimeline() {
             <div className="text-left">
               <p className="text-gold font-semibold">Day 0</p>
               <p className="text-gray-500">Sale Closes</p>
-              <p className="text-gray-400 mt-1">
+              <p className="text-gray-300 mt-1">
                 {new Date(saleDate + "T12:00:00").toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
@@ -195,7 +195,7 @@ export default function ExchangeTimeline() {
             >
               <p className="text-gold font-semibold">Day 45</p>
               <p className="text-gray-500">Identify</p>
-              <p className="text-gray-400 mt-1">
+              <p className="text-gray-300 mt-1">
                 {identifyDeadline.toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
@@ -205,7 +205,7 @@ export default function ExchangeTimeline() {
             <div className="text-right">
               <p className="text-gold font-semibold">Day 180</p>
               <p className="text-gray-500">Close</p>
-              <p className="text-gray-400 mt-1">
+              <p className="text-gray-300 mt-1">
                 {closingDeadline.toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
@@ -234,10 +234,10 @@ export default function ExchangeTimeline() {
         ].map((rule) => (
           <div
             key={rule.title}
-            className="bg-dark-card border border-dark-border rounded-lg p-4"
+            className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
           >
             <p className="text-gold font-semibold text-sm mb-2">{rule.title}</p>
-            <p className="text-gray-400 text-xs leading-relaxed">{rule.desc}</p>
+            <p className="text-gray-300 text-xs leading-relaxed">{rule.desc}</p>
           </div>
         ))}
       </div>

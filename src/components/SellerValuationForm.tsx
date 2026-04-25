@@ -56,7 +56,7 @@ const reasons = [
 ];
 
 const inputCls =
-  "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
+  "w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
 const labelCls = "block text-sm font-medium text-gray-300 mb-1.5";
 const requiredDot = <span className="text-gold ml-0.5">*</span>;
 
@@ -147,7 +147,7 @@ export default function SellerValuationForm() {
 
   if (submitted) {
     return (
-      <div className="bg-dark-card border border-gold/30 rounded-2xl p-8 sm:p-10 text-center">
+      <div className="bg-white/[0.04] border border-gold/30 rounded-2xl p-8 sm:p-10 text-center">
         <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-5">
           <svg
             className="w-8 h-8 text-gold"
@@ -162,7 +162,7 @@ export default function SellerValuationForm() {
         <h3 className="text-white text-2xl font-bold mb-3">
           Request received
         </h3>
-        <p className="text-gray-400 leading-relaxed max-w-lg mx-auto mb-6">
+        <p className="text-gray-300 leading-relaxed max-w-lg mx-auto mb-6">
           Thanks for reaching out. Ryan will personally review the details of
           your property and get back to you within one business day to
           schedule a no-obligation valuation call. In the meantime, feel
@@ -212,7 +212,7 @@ export default function SellerValuationForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* ─── Section 1: Contact ─── */}
-      <fieldset className="bg-dark-card border border-dark-border rounded-2xl p-6 sm:p-8">
+      <fieldset className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 sm:p-8">
         <legend className="px-3 text-gold font-semibold text-sm tracking-widest uppercase">
           About you
         </legend>
@@ -270,7 +270,7 @@ export default function SellerValuationForm() {
       </fieldset>
 
       {/* ─── Section 2: Property ─── */}
-      <fieldset className="bg-dark-card border border-dark-border rounded-2xl p-6 sm:p-8">
+      <fieldset className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 sm:p-8">
         <legend className="px-3 text-gold font-semibold text-sm tracking-widest uppercase">
           About the property
         </legend>
@@ -401,7 +401,7 @@ export default function SellerValuationForm() {
       </fieldset>
 
       {/* ─── Section 3: Sale ─── */}
-      <fieldset className="bg-dark-card border border-dark-border rounded-2xl p-6 sm:p-8">
+      <fieldset className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 sm:p-8">
         <legend className="px-3 text-gold font-semibold text-sm tracking-widest uppercase">
           About the sale
         </legend>
@@ -473,7 +473,7 @@ export default function SellerValuationForm() {
                 onChange={(e) =>
                   setForm({ ...form, exchange1031: e.target.checked })
                 }
-                className="mt-0.5 w-4 h-4 rounded border-dark-border bg-dark text-gold focus:ring-gold focus:ring-offset-0"
+                className="mt-0.5 w-4 h-4 rounded border-white/10 bg-dark text-gold focus:ring-gold focus:ring-offset-0"
               />
               <span>
                 Considering a 1031 exchange
@@ -489,7 +489,7 @@ export default function SellerValuationForm() {
                 onChange={(e) =>
                   setForm({ ...form, openOffMarket: e.target.checked })
                 }
-                className="mt-0.5 w-4 h-4 rounded border-dark-border bg-dark text-gold focus:ring-gold focus:ring-offset-0"
+                className="mt-0.5 w-4 h-4 rounded border-white/10 bg-dark text-gold focus:ring-gold focus:ring-offset-0"
               />
               <span>
                 Open to an off-market sale
@@ -528,7 +528,7 @@ export default function SellerValuationForm() {
         </button>
         <p className="text-xs text-gray-500 leading-relaxed max-w-2xl">
           Submitting this form does{" "}
-          <span className="text-gray-400 font-semibold">not</span> create a
+          <span className="text-gray-300 font-semibold">not</span> create a
           brokerage, agency, or listing relationship with MaxLife Realty. It
           is a no-obligation request for an initial valuation call.
           Information you provide is confidential and used only to prepare

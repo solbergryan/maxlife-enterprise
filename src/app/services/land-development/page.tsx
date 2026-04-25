@@ -91,12 +91,12 @@ export default function LandDevelopmentPage() {
       ]}
     />
     {/* Related */}
-    <section className="border-t border-dark-border">
+    <section className="border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-xl font-bold text-white mb-4">
           Related: Build-to-Suit Development in Orlando
         </h2>
-        <p className="text-gray-400 max-w-3xl leading-relaxed mb-4">
+        <p className="text-gray-300 max-w-3xl leading-relaxed mb-4">
           Already have a site or need one selected for a custom build? Our{" "}
           <Link
             href="/build-to-suit-orlando"

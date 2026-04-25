@@ -42,7 +42,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
-      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+      <section className="relative overflow-hidden border-b border-white/10 aspect-[21/6]">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-tower-office-building-skyscraper-facade-2175937.webp"
           alt="Florida commercial real estate investment skyline"
@@ -89,7 +89,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Why Out-of-State Investors Choose Florida Commercial Real Estate
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             From no state income tax to the nation&apos;s strongest migration
             trends, Florida has become the top destination for out-of-state
             commercial real estate capital. Here is why investors from
@@ -147,7 +147,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold font-bold text-xl mb-1">
                     {item.metric}
@@ -185,7 +185,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Feeder State</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Net Migration to FL (2020-2025)</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Avg HH Income of Movers</th>
@@ -193,37 +193,37 @@ export default function WhyInvestCommercialRealEstateFlorida() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">New York</td>
                     <td className="py-3 pr-4">~380,000</td>
                     <td className="py-3 pr-4">$112,000</td>
                     <td className="py-3">South FL, Orlando, Tampa</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">California</td>
                     <td className="py-3 pr-4">~195,000</td>
                     <td className="py-3 pr-4">$128,000</td>
                     <td className="py-3">Tampa, Orlando, Jacksonville</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">New Jersey</td>
                     <td className="py-3 pr-4">~165,000</td>
                     <td className="py-3 pr-4">$105,000</td>
                     <td className="py-3">South FL, Orlando</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Illinois</td>
                     <td className="py-3 pr-4">~145,000</td>
                     <td className="py-3 pr-4">$98,000</td>
                     <td className="py-3">Tampa, Orlando, SW FL</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Pennsylvania</td>
                     <td className="py-3 pr-4">~110,000</td>
                     <td className="py-3 pr-4">$92,000</td>
                     <td className="py-3">Central FL, Space Coast</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Connecticut</td>
                     <td className="py-3 pr-4">~65,000</td>
                     <td className="py-3 pr-4">$135,000</td>
@@ -277,7 +277,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Annual Income</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">California Tax</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">New York Tax</th>
@@ -287,7 +287,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">$200,000</td>
                     <td className="py-3 pr-4">$17,400</td>
                     <td className="py-3 pr-4">$13,200</td>
@@ -295,7 +295,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
                     <td className="py-3 pr-4">$9,900</td>
                     <td className="py-3 text-gold font-semibold">$0</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">$500,000</td>
                     <td className="py-3 pr-4">$52,500</td>
                     <td className="py-3 pr-4">$38,800</td>
@@ -303,7 +303,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
                     <td className="py-3 pr-4">$24,750</td>
                     <td className="py-3 text-gold font-semibold">$0</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">$1,000,000</td>
                     <td className="py-3 pr-4">$118,800</td>
                     <td className="py-3 pr-4">$82,500</td>
@@ -311,7 +311,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
                     <td className="py-3 pr-4">$49,500</td>
                     <td className="py-3 text-gold font-semibold">$0</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">$2,000,000</td>
                     <td className="py-3 pr-4">$251,600</td>
                     <td className="py-3 pr-4">$173,000</td>
@@ -392,12 +392,12 @@ export default function WhyInvestCommercialRealEstateFlorida() {
               ].map((item) => (
                 <div
                   key={item.advantage}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.advantage}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.detail}</p>
+                  <p className="text-gray-300 text-xs">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -606,7 +606,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Factor</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Orlando Metro</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">South Florida</th>
@@ -614,49 +614,49 @@ export default function WhyInvestCommercialRealEstateFlorida() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Population Growth (5yr)</td>
                     <td className="py-3 pr-4">+12.5%</td>
                     <td className="py-3 pr-4">+6.8%</td>
                     <td className="py-3">+10.2%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Avg Retail Cap Rate</td>
                     <td className="py-3 pr-4">6.0% - 7.5%</td>
                     <td className="py-3 pr-4">5.0% - 6.5%</td>
                     <td className="py-3">5.5% - 7.0%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Avg Industrial Cap Rate</td>
                     <td className="py-3 pr-4">5.5% - 7.0%</td>
                     <td className="py-3 pr-4">4.5% - 6.0%</td>
                     <td className="py-3">5.0% - 6.5%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Insurance Cost/SF</td>
                     <td className="py-3 pr-4">$1.50 - $3.50</td>
                     <td className="py-3 pr-4">$2.50 - $5.00</td>
                     <td className="py-3">$1.75 - $3.75</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Hurricane Risk</td>
                     <td className="py-3 pr-4">Moderate (inland)</td>
                     <td className="py-3 pr-4">High (coastal)</td>
                     <td className="py-3">Moderate-High (coastal)</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Economic Diversification</td>
                     <td className="py-3 pr-4">High (tourism, tech, defense, healthcare)</td>
                     <td className="py-3 pr-4">High (finance, trade, tourism)</td>
                     <td className="py-3">Moderate-High (finance, healthcare, defense)</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Entry Price Point</td>
                     <td className="py-3 pr-4">Lower — more accessible</td>
                     <td className="py-3 pr-4">Highest in state</td>
                     <td className="py-3">Moderate</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Development Land Availability</td>
                     <td className="py-3 pr-4">High (Lake, Osceola counties)</td>
                     <td className="py-3 pr-4">Very Limited</td>
@@ -754,7 +754,7 @@ export default function WhyInvestCommercialRealEstateFlorida() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold font-bold text-xl mb-1">
                     {item.metric}
@@ -806,12 +806,12 @@ export default function WhyInvestCommercialRealEstateFlorida() {
               ].map((item) => (
                 <div
                   key={item.step}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.step}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.detail}</p>
+                  <p className="text-gray-300 text-xs">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -852,11 +852,11 @@ export default function WhyInvestCommercialRealEstateFlorida() {
           </section>
 
           {/* ── CTA ── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-8">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-8">
             <h2 className="text-2xl font-bold text-white mb-3">
               Ready to Invest in Florida CRE?
             </h2>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Whether you are exploring your first Florida investment or
               expanding an existing portfolio, our team provides the local
               expertise and market access that out-of-state investors need to
@@ -879,18 +879,18 @@ export default function WhyInvestCommercialRealEstateFlorida() {
           </div>
 
           {/* ── Related Reading ── */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/1031-exchange-orlando-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/1031-exchange-orlando-guide" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">1031 Exchange Guide for Orlando</h3>
                 <p className="text-gray-500 text-xs">Complete guide to executing a 1031 exchange into Central Florida commercial real estate.</p>
               </Link>
-              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Cap Rates: Investor Guide</h3>
                 <p className="text-gray-500 text-xs">Cap rate analysis across all commercial property types in the Orlando metro area.</p>
               </Link>
-              <Link href="/markets/orlando-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/markets/orlando-commercial-real-estate" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Market</h3>
                 <p className="text-gray-500 text-xs">Comprehensive overview of the Orlando metro commercial real estate market.</p>
               </Link>

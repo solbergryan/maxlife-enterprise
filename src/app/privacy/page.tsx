@@ -75,7 +75,7 @@ export default function PrivacyPage() {
               <li>
                 <strong className="text-white">Analytics</strong> — Google
                 Analytics 4, Vercel Analytics, and a first-party visitor ID
-                cookie (<code className="rounded bg-dark-card px-1 text-gold">mxl_vid</code>)
+                cookie (<code className="rounded bg-white/[0.04] px-1 text-gold">mxl_vid</code>)
                 that helps us understand return visits.
               </li>
               <li>
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
             </p>
             <p>
               You can change your cookie choices any time by clearing the{" "}
-              <code className="rounded bg-dark-card px-1 text-gold">mxl_consent</code>{" "}
+              <code className="rounded bg-white/[0.04] px-1 text-gold">mxl_consent</code>{" "}
               cookie and reloading the page, or by clicking{" "}
               <Link
                 href="/privacy#manage"

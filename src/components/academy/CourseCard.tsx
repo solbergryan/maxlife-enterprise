@@ -19,7 +19,7 @@ export function CourseCard({ course, progress, completed = 0, total = 0 }: Cours
   return (
     <Link
       href={href}
-      className={`group flex h-full flex-col rounded-2xl border border-dark-border bg-dark-card overflow-hidden transition-all hover:border-gold/60 hover:bg-dark-hover`}
+      className={`group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] overflow-hidden transition-all hover:border-gold/60 hover:bg-white/10`}
     >
       {/* Icon header with tier gradient */}
       <div className={`relative px-6 pt-6 pb-4 bg-gradient-to-br ${theme.gradient} to-transparent`}>
@@ -42,7 +42,7 @@ export function CourseCard({ course, progress, completed = 0, total = 0 }: Cours
               </span>
             )}
             {!hasContent && (
-              <span className="rounded-full border border-gray-600 bg-dark px-2.5 py-0.5 text-xs font-medium text-gray-400">
+              <span className="rounded-full border border-gray-600 bg-dark px-2.5 py-0.5 text-xs font-medium text-gray-300">
                 Coming soon
               </span>
             )}
@@ -63,7 +63,7 @@ export function CourseCard({ course, progress, completed = 0, total = 0 }: Cours
           {course.title}
         </h3>
 
-        <p className="mb-4 text-sm text-gray-400 line-clamp-2">{course.subtitle}</p>
+        <p className="mb-4 text-sm text-gray-300 line-clamp-2">{course.subtitle}</p>
 
         <p className="mb-5 flex-grow text-sm text-gray-500 line-clamp-3">
           {course.description}
@@ -73,14 +73,14 @@ export function CourseCard({ course, progress, completed = 0, total = 0 }: Cours
           {/* Lesson count + duration badges */}
           <div className="flex flex-wrap gap-2">
             {lessonCount > 0 && (
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-dark-border bg-dark px-2.5 py-1 text-xs text-gray-400">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-dark px-2.5 py-1 text-xs text-gray-300">
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
                 {lessonCount} lessons
               </span>
             )}
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-dark-border bg-dark px-2.5 py-1 text-xs text-gray-400">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-dark px-2.5 py-1 text-xs text-gray-300">
               <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -91,7 +91,7 @@ export function CourseCard({ course, progress, completed = 0, total = 0 }: Cours
           {/* Progress bar */}
           {progress !== undefined && total > 0 && (
             <div className="space-y-1">
-              <div className="flex justify-between text-xs text-gray-400">
+              <div className="flex justify-between text-xs text-gray-300">
                 <span>{completed} / {total} lessons</span>
                 <span className={theme.text}>{progress}%</span>
               </div>

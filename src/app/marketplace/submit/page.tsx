@@ -27,7 +27,7 @@ export default async function SubmitListingPage() {
         <div className="mb-8">
           <Link
             href="/marketplace"
-            className="text-gray-400 hover:text-gold text-sm inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -37,7 +37,7 @@ export default async function SubmitListingPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             Post a <span className="text-gold">Listing</span>
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Fill out as much as you have. Required fields are marked with an
             asterisk — everything else is optional but helps buyers evaluate
             your property. You can edit your listing later.

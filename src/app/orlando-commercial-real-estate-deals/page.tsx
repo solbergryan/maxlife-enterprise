@@ -188,7 +188,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-office-4k-wallpaper-1920x1080-city-3306146.webp"
           alt="Orlando commercial real estate deals and investment opportunities"
@@ -210,7 +210,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
             Get exclusive access to investment-grade properties before they hit
             the market
           </p>
-          <p className="text-gray-400 max-w-2xl">
+          <p className="text-gray-300 max-w-2xl">
             Orlando&apos;s commercial real estate market is one of the strongest
             in the Southeast — fueled by record population growth, a
             tourism-driven economy, and major infrastructure investment. But the
@@ -231,12 +231,12 @@ export default function OrlandoCommercialRealEstateDealsPage() {
       </section>
 
       {/* Why Off-Market */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
             Why Off-Market?
           </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
             The most compelling commercial real estate opportunities in Orlando
             are never publicly listed. Here&apos;s why our investors prefer
             off-market sourcing.
@@ -245,7 +245,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
             {benefits.map((item) => (
               <div
                 key={item.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center mb-4">
                   {item.icon}
@@ -253,7 +253,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -263,12 +263,12 @@ export default function OrlandoCommercialRealEstateDealsPage() {
       </section>
 
       {/* Market at a Glance */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
             Market at a Glance
           </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
             Orlando&apos;s fundamentals make it one of the most attractive
             commercial real estate markets in the country.
           </p>
@@ -276,7 +276,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
             {marketStats.map((item) => (
               <div
                 key={item.label}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
               >
                 <p className="text-gold text-3xl sm:text-4xl font-bold mb-1">
                   {item.stat}
@@ -302,12 +302,12 @@ export default function OrlandoCommercialRealEstateDealsPage() {
       </section>
 
       {/* Recent Deal Examples */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
             Recent Deal Examples
           </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
             A sample of the types of off-market opportunities our investor
             network receives. Details anonymized for confidentiality.
           </p>
@@ -315,34 +315,34 @@ export default function OrlandoCommercialRealEstateDealsPage() {
             {dealExamples.map((deal) => (
               <div
                 key={deal.type + deal.area}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-gold font-semibold">{deal.type}</span>
-                  <span className="text-xs text-gray-500 bg-dark border border-dark-border rounded-full px-3 py-1">
+                  <span className="text-xs text-gray-500 bg-dark border border-white/10 rounded-full px-3 py-1">
                     {deal.area}
                   </span>
                 </div>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">Cap Rate</span>
+                    <span className="text-gray-300 text-sm">Cap Rate</span>
                     <span className="text-white font-semibold">
                       {deal.capRate}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">Price</span>
+                    <span className="text-gray-300 text-sm">Price</span>
                     <span className="text-white font-semibold">
                       {deal.price}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">NOI</span>
+                    <span className="text-gray-300 text-sm">NOI</span>
                     <span className="text-white font-semibold">
                       {deal.noi}
                     </span>
                   </div>
-                  <div className="border-t border-dark-border pt-3">
+                  <div className="border-t border-white/10 pt-3">
                     <span className="text-gray-500 text-xs">
                       {deal.leaseTerm}
                     </span>
@@ -369,19 +369,19 @@ export default function OrlandoCommercialRealEstateDealsPage() {
       </section>
 
       {/* How It Works */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
             How It Works
           </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
             Getting access to our off-market pipeline is straightforward.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {steps.map((item) => (
               <div
                 key={item.step}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
               >
                 <span className="inline-flex w-10 h-10 rounded-full bg-gold/20 text-gold font-bold items-center justify-center mb-4 text-lg">
                   {item.step}
@@ -389,7 +389,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -399,18 +399,18 @@ export default function OrlandoCommercialRealEstateDealsPage() {
       </section>
 
       {/* Lead Capture Form */}
-      <section id="get-deal-access" className="bg-dark-card/50">
+      <section id="get-deal-access" className="bg-white/[0.03]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
               Get Deal Access
             </h2>
-            <p className="text-gray-400 text-center mb-8">
+            <p className="text-gray-300 text-center mb-8">
               Tell us what you&apos;re looking for and we&apos;ll add you to our
               off-market investor pipeline. No obligation — just real
               opportunities matched to your criteria.
             </p>
-            <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+            <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8">
               <LeadCaptureForm
                 buttonText="Get Off-Market Deal Access"
                 subjectPrefix="Off-Market Deal Access Request"
@@ -422,7 +422,7 @@ export default function OrlandoCommercialRealEstateDealsPage() {
       </section>
 
       {/* Bottom CTA / Internal Links */}
-      <section className="border-t border-dark-border">
+      <section className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-xl font-bold text-white mb-6">
             Explore More Resources

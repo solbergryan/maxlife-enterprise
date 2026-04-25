@@ -352,7 +352,7 @@ export default function CarWashPropertiesFloridaPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/car-wash/maxlife-car-wash-car-washing-car-wallpapers-worker-man-car-wash-service-7086148.webp"
           alt="Car wash attendant cleaning a vehicle at a Florida wash bay"
@@ -375,7 +375,7 @@ export default function CarWashPropertiesFloridaPage() {
                 Year-round cash flow from one of the fastest-consolidating
                 asset classes in Central Florida
               </p>
-              <p className="text-gray-400 leading-relaxed mb-8">
+              <p className="text-gray-300 leading-relaxed mb-8">
                 Express tunnel car washes have become a favorite of private
                 equity and 1031 exchange buyers — and Florida is ground zero.
                 Warm weather, explosive population growth, and a wave of
@@ -402,7 +402,7 @@ export default function CarWashPropertiesFloridaPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden border border-dark-border shadow-2xl aspect-[3/2] lg:aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/2] lg:aspect-[4/3]">
               <Image
                 src="/car-wash/maxlife-car-wash.png"
                 alt="MaxLife Car Wash — Florida express tunnel car wash exterior with palm trees and detailing bay"
@@ -426,13 +426,13 @@ export default function CarWashPropertiesFloridaPage() {
       </section>
 
       {/* Quick stats */}
-      <section className="border-b border-dark-border bg-dark-card/30">
+      <section className="border-b border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {carWashMetrics.map((m) => (
               <div
                 key={m.label}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
               >
                 <p className="text-gold text-xs font-semibold uppercase tracking-wider mb-2">
                   {m.label}
@@ -450,7 +450,7 @@ export default function CarWashPropertiesFloridaPage() {
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
           Car Wash <span className="text-gold">Property Formats</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           Not every car wash investment is the same. Here are the three most
           common formats trading in the Florida market today and what to expect
           from each.
@@ -459,7 +459,7 @@ export default function CarWashPropertiesFloridaPage() {
           {carWashFormats.map((format) => (
             <div
               key={format.name}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
             >
               <h3 className="text-white font-semibold text-lg mb-3">
                 {format.name}
@@ -472,7 +472,7 @@ export default function CarWashPropertiesFloridaPage() {
                   {format.footprint}
                 </span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {format.note}
               </p>
             </div>
@@ -481,13 +481,13 @@ export default function CarWashPropertiesFloridaPage() {
       </section>
 
       {/* Why Florida is great year-round */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Why Florida Is a <span className="text-gold">Year-Round</span> Car
             Wash Market
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             Climate, demographics, and tourism combine to give Florida car
             washes something most markets don&apos;t have: twelve months of
             volume with virtually zero seasonal downtime.
@@ -496,12 +496,12 @@ export default function CarWashPropertiesFloridaPage() {
             {yearRoundReasons.map((reason) => (
               <div
                 key={reason.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-gold font-semibold text-lg mb-2">
                   {reason.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm">
                   {reason.description}
                 </p>
               </div>
@@ -516,13 +516,13 @@ export default function CarWashPropertiesFloridaPage() {
           Car Wash Investing:{" "}
           <span className="text-gold">Pros &amp; Cons</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           An honest look at both sides so you can decide if this asset class
           fits your portfolio strategy.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Pros */}
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center">
                 <svg
@@ -547,7 +547,7 @@ export default function CarWashPropertiesFloridaPage() {
                   <p className="text-white font-medium text-sm mb-1">
                     {pro.title}
                   </p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {pro.description}
                   </p>
                 </li>
@@ -555,7 +555,7 @@ export default function CarWashPropertiesFloridaPage() {
             </ul>
           </div>
           {/* Cons */}
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center">
                 <svg
@@ -582,7 +582,7 @@ export default function CarWashPropertiesFloridaPage() {
                   <p className="text-white font-medium text-sm mb-1">
                     {con.title}
                   </p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {con.description}
                   </p>
                 </li>
@@ -593,13 +593,13 @@ export default function CarWashPropertiesFloridaPage() {
       </section>
 
       {/* Investor personas — who it's best for */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Who Car Washes Are{" "}
             <span className="text-gold">Best Suited For</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             Car wash NNN leasebacks don&apos;t fit every investor — but for the
             right profiles, they&apos;re one of the most compelling commercial
             real estate products on the market.
@@ -608,7 +608,7 @@ export default function CarWashPropertiesFloridaPage() {
             {investorPersonas.map((persona) => (
               <div
                 key={persona.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col"
               >
                 <div className="mb-3">
                   <h3 className="text-white font-semibold text-lg">
@@ -618,10 +618,10 @@ export default function CarWashPropertiesFloridaPage() {
                     {persona.tag}
                   </p>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 flex-1">
                   {persona.description}
                 </p>
-                <div className="border-t border-dark-border pt-3 mt-auto">
+                <div className="border-t border-white/10 pt-3 mt-auto">
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1">
                     Why It Fits
                   </p>
@@ -641,7 +641,7 @@ export default function CarWashPropertiesFloridaPage() {
           Major Operators{" "}
           <span className="text-gold">Expanding in Florida</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           These are the national and regional car wash operators most actively
           acquiring or building new sites across the Florida market today.
           Most NNN leaseback opportunities come from these platforms.
@@ -650,10 +650,10 @@ export default function CarWashPropertiesFloridaPage() {
           {majorOperators.map((op) => (
             <div
               key={op.name}
-              className="bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-5 hover:border-gold/40 transition-colors"
             >
               <h3 className="text-white font-semibold mb-1">{op.name}</h3>
-              <p className="text-gray-400 text-xs leading-relaxed">
+              <p className="text-gray-300 text-xs leading-relaxed">
                 {op.detail}
               </p>
             </div>
@@ -667,13 +667,13 @@ export default function CarWashPropertiesFloridaPage() {
       </section>
 
       {/* Key underwriting metrics */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Key Car Wash{" "}
             <span className="text-gold">Underwriting Metrics</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             The numbers experienced car wash buyers stress-test before closing.
             Use these as benchmarks when you review an offering memorandum or
             operator P&amp;L.
@@ -682,7 +682,7 @@ export default function CarWashPropertiesFloridaPage() {
             {keyUnderwritingMetrics.map((metric) => (
               <div
                 key={metric.label}
-                className="bg-dark-card border border-dark-border rounded-xl p-5 flex items-start gap-4"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-5 flex items-start gap-4"
               >
                 <div className="w-8 h-8 rounded-lg bg-gold/10 text-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg
@@ -703,7 +703,7 @@ export default function CarWashPropertiesFloridaPage() {
                   <p className="text-white font-medium text-sm mb-0.5">
                     {metric.label}
                   </p>
-                  <p className="text-gray-400 text-xs leading-relaxed">
+                  <p className="text-gray-300 text-xs leading-relaxed">
                     {metric.detail}
                   </p>
                 </div>
@@ -726,7 +726,7 @@ export default function CarWashPropertiesFloridaPage() {
             Sample Car Wash Deal{" "}
             <span className="text-gold">Pre-Loaded</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Below is a representative Central Florida express tunnel car wash
             deal already loaded into our deal analyzer — a $5.2M NNN leaseback
             with a credit operator at a 6.0% cap rate. Adjust any input to
@@ -734,7 +734,7 @@ export default function CarWashPropertiesFloridaPage() {
           </p>
         </div>
 
-        <div className="bg-dark-card/30 border border-dark-border rounded-2xl p-4 sm:p-6 mb-6">
+        <div className="bg-white/[0.04]/30 border border-white/10 rounded-2xl p-4 sm:p-6 mb-6">
           <div className="flex flex-wrap gap-3 text-xs">
             <span className="bg-gold/10 text-gold font-semibold px-3 py-1 rounded-full">
               Purchase: $5.2M
@@ -771,7 +771,7 @@ export default function CarWashPropertiesFloridaPage() {
       </section>
 
       {/* Browse Listings on Major CRE Marketplaces */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="text-center mb-10">
             <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
@@ -781,7 +781,7 @@ export default function CarWashPropertiesFloridaPage() {
               Car Wash Deals on{" "}
               <span className="text-gold">Major CRE Marketplaces</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Want to see what&apos;s publicly listed right now? These
               marketplaces aggregate on-market car wash opportunities across
               Florida. For off-market deals and broker-direct pocket listings,
@@ -826,7 +826,7 @@ export default function CarWashPropertiesFloridaPage() {
             ].map((site) => (
               <div
                 key={site.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col"
               >
                 <div className="mb-4">
                   <h3 className="text-white font-semibold text-xl mb-1">
@@ -836,7 +836,7 @@ export default function CarWashPropertiesFloridaPage() {
                     {site.tag}
                   </p>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-1">
                   {site.description}
                 </p>
                 <div className="space-y-2">
@@ -889,7 +889,7 @@ export default function CarWashPropertiesFloridaPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-track={`carwash-listings-${site.name.toLowerCase()}-national`}
-                    className="flex items-center justify-between text-gray-400 hover:text-gold font-medium px-4 py-2 text-sm transition-colors"
+                    className="flex items-center justify-between text-gray-300 hover:text-gold font-medium px-4 py-2 text-sm transition-colors"
                   >
                     <span>Nationwide</span>
                     <svg
@@ -935,7 +935,7 @@ export default function CarWashPropertiesFloridaPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Car Wash <span className="text-gold">Investor FAQ</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
             The questions we get most often from investors evaluating their
             first (or fifth) car wash deal.
           </p>
@@ -944,7 +944,7 @@ export default function CarWashPropertiesFloridaPage() {
           {carWashFaqs.map((faq) => (
             <details
               key={faq.q}
-              className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
+              className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-colors"
             >
               <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
                 <h3 className="text-white font-medium text-base pr-4">
@@ -965,7 +965,7 @@ export default function CarWashPropertiesFloridaPage() {
                 </svg>
               </summary>
               <div className="px-6 pb-5 -mt-1">
-                <p className="text-gray-400 leading-relaxed">{faq.a}</p>
+                <p className="text-gray-300 leading-relaxed">{faq.a}</p>
               </div>
             </details>
           ))}
@@ -973,7 +973,7 @@ export default function CarWashPropertiesFloridaPage() {
       </section>
 
       {/* Fit Check */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
@@ -983,7 +983,7 @@ export default function CarWashPropertiesFloridaPage() {
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 Quick <span className="text-gold">Fit Check</span>
               </h2>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 If you nod &ldquo;yes&rdquo; to three or more of these, a car
                 wash NNN leaseback likely deserves a slot on your shortlist.
               </p>
@@ -992,7 +992,7 @@ export default function CarWashPropertiesFloridaPage() {
               {fitCheckQuestions.map((q) => (
                 <li
                   key={q}
-                  className="flex items-start gap-4 bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="flex items-start gap-4 bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <div className="w-6 h-6 rounded-full bg-gold/15 text-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
@@ -1029,16 +1029,16 @@ export default function CarWashPropertiesFloridaPage() {
       {/* Lead Capture Form */}
       <section
         id="car-wash-lead"
-        className="border-t border-dark-border"
+        className="border-t border-white/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-dark-card border border-dark-border rounded-xl p-8 sm:p-10">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8 sm:p-10">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
                 See Available{" "}
                 <span className="text-gold">Car Wash Properties</span>
               </h2>
-              <p className="text-gray-400 text-center mb-8 leading-relaxed">
+              <p className="text-gray-300 text-center mb-8 leading-relaxed">
                 Tell us about your investment criteria and we will send you
                 current Central Florida car wash opportunities — on and off
                 market — that match your goals.
@@ -1054,7 +1054,7 @@ export default function CarWashPropertiesFloridaPage() {
       </section>
 
       {/* Related Resources */}
-      <section className="border-t border-dark-border">
+      <section className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center">
             Related <span className="text-gold">Resources</span>
@@ -1083,12 +1083,12 @@ export default function CarWashPropertiesFloridaPage() {
               <Link
                 key={resource.href}
                 href={resource.href}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group block"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group block"
               >
                 <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                   {resource.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   {resource.description}
                 </p>
                 <span className="text-gold text-sm font-medium">

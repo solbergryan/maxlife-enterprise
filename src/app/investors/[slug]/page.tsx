@@ -61,11 +61,11 @@ export default async function InvestorPersonaPage({
       />
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <Link
             href="/investors"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -89,14 +89,14 @@ export default async function InvestorPersonaPage({
             {p.title}
           </h1>
           <p className="text-gold text-lg italic mb-4">{p.tagline}</p>
-          <p className="text-gray-400 text-lg leading-relaxed">{p.overview}</p>
+          <p className="text-gray-300 text-lg leading-relaxed">{p.overview}</p>
         </div>
       </section>
 
       {/* Profile Stats */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               Typical Investment
             </p>
@@ -104,7 +104,7 @@ export default async function InvestorPersonaPage({
               {p.typicalProfile.typicalInvestment}
             </p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               Target Returns
             </p>
@@ -112,7 +112,7 @@ export default async function InvestorPersonaPage({
               {p.typicalProfile.targetReturns}
             </p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4 col-span-2 md:col-span-1">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4 col-span-2 md:col-span-1">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               Timeline
             </p>
@@ -180,7 +180,7 @@ export default async function InvestorPersonaPage({
           {p.typicalProfile.preferredAssets.map((asset) => (
             <span
               key={asset}
-              className="bg-dark-card border border-dark-border rounded-md px-3 py-1.5 text-sm text-gray-300"
+              className="bg-white/[0.04] border border-white/10 rounded-md px-3 py-1.5 text-sm text-gray-300"
             >
               {asset}
             </span>
@@ -207,7 +207,7 @@ export default async function InvestorPersonaPage({
           {p.faqs.map((faq) => (
             <div
               key={faq.q}
-              className="bg-dark-card border border-dark-border rounded-xl p-5"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
             >
               <h3 className="text-white font-semibold mb-2">{faq.q}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">{faq.a}</p>
@@ -217,12 +217,12 @@ export default async function InvestorPersonaPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to <span className="text-gold">Get Started</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Tell us about your investment goals and we&apos;ll share curated
             opportunities that match your criteria.
           </p>
@@ -235,7 +235,7 @@ export default async function InvestorPersonaPage({
             </Link>
             <Link
               href="/investors"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Other Investor Types
             </Link>

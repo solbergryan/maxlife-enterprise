@@ -179,8 +179,8 @@ function TrafficLight({ status }: { status: "pass" | "watch" | "fail" }) {
 }
 
 // ── Input Field Component (must be outside main component to preserve focus) ──
-const INPUT_CLASS = "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors text-sm";
-const LABEL_CLASS = "text-gray-400 text-xs uppercase tracking-wider mb-1 block";
+const INPUT_CLASS = "w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors text-sm";
+const LABEL_CLASS = "text-gray-300 text-xs uppercase tracking-wider mb-1 block";
 
 function InputField({ label, value, onChange, placeholder, step, prefix, suffix }: {
   label: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -412,7 +412,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
   return (
     <div className="space-y-8">
       {/* ── Asset Type Selector ──────────────────────────── */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
         <h3 className="text-white text-lg font-semibold mb-4">Property Type</h3>
         <div className="grid grid-cols-3 gap-3">
           {(["NNN", "Multifamily", "SFR"] as AssetType[]).map(type => (
@@ -426,7 +426,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
               className={`py-3 px-4 rounded-lg border text-sm font-medium transition-all ${
                 inputs.assetType === type
                   ? "border-gold bg-gold/10 text-gold"
-                  : "border-dark-border text-gray-400 hover:border-gray-600"
+                  : "border-white/10 text-gray-300 hover:border-gray-600"
               }`}
             >
               {type === "NNN" ? "Commercial NNN" : type === "Multifamily" ? "Multifamily" : "SFR Rental"}
@@ -438,7 +438,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
       {/* ── Inputs Grid ──────────────────────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Property & Revenue */}
-        <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Property &amp; Revenue</h3>
           <div className="space-y-4">
             <InputField label="Purchase Price" value={inputs.purchasePrice} onChange={set("purchasePrice")} placeholder="1,000,000" prefix="$" />
@@ -460,7 +460,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
 
         {/* Expenses (MF/SFR only) or Financing */}
         {inputs.assetType !== "NNN" ? (
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
             <h3 className="text-white text-lg font-semibold mb-4">Operating Expenses</h3>
             <div className="space-y-4">
               <div>
@@ -468,7 +468,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                 <p className="text-gray-500 text-xs mb-3">Enter an expense ratio OR individual line items below</p>
               </div>
               <InputField label="Expense Ratio (% of EGI)" value={inputs.opexRatio} onChange={set("opexRatio")} placeholder="40" suffix="%" />
-              <div className="border-t border-dark-border pt-3 mt-3">
+              <div className="border-t border-white/10 pt-3 mt-3">
                 <p className="text-gray-500 text-xs mb-3 uppercase tracking-wider">Or Line Items</p>
               </div>
               <InputField label="Property Taxes" value={inputs.propertyTaxes} onChange={set("propertyTaxes")} placeholder="4,800" prefix="$" />
@@ -480,7 +480,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
         ) : null}
 
         {/* Financing */}
-        <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Financing</h3>
           <div className="space-y-4">
             <InputField label="Down Payment" value={inputs.downPaymentPct} onChange={set("downPaymentPct")} placeholder="25" suffix="%" />
@@ -492,7 +492,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
         </div>
 
         {/* Hold & Exit */}
-        <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
           <h3 className="text-white text-lg font-semibold mb-4">Hold Period &amp; Exit</h3>
           <div className="space-y-4">
             <InputField label="Hold Period" value={inputs.holdPeriod} onChange={set("holdPeriod")} placeholder="10" suffix="yrs" />
@@ -516,7 +516,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                     className={`py-2.5 px-2 rounded-lg border text-center transition-all ${
                       inputs.exitCapSpread === preset.value
                         ? "border-gold bg-gold/10"
-                        : "border-dark-border hover:border-gray-600"
+                        : "border-white/10 hover:border-gray-600"
                     }`}
                   >
                     <span className={`text-xs font-semibold block ${inputs.exitCapSpread === preset.value ? "text-gold" : preset.color}`}>
@@ -555,18 +555,18 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
               const xCap = eCap + spread;
               if (eCap <= 0) return null;
               return (
-                <div className="bg-dark/50 border border-dark-border rounded-lg p-4 space-y-3">
+                <div className="bg-dark/50 border border-white/10 rounded-lg p-4 space-y-3">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-400">Your entrance cap rate</span>
+                    <span className="text-gray-300">Your entrance cap rate</span>
                     <span className="text-white font-medium">{(eCap * 100).toFixed(2)}%</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-400">Spread at exit</span>
+                    <span className="text-gray-300">Spread at exit</span>
                     <span className={`font-medium ${spread > 0 ? "text-red-400" : spread < 0 ? "text-green-400" : "text-gold"}`}>
                       {spread >= 0 ? "+" : ""}{(spread * 100).toFixed(2)}%
                     </span>
                   </div>
-                  <div className="border-t border-dark-border pt-2 flex items-center justify-between text-sm">
+                  <div className="border-t border-white/10 pt-2 flex items-center justify-between text-sm">
                     <span className="text-white font-semibold">Exit cap rate</span>
                     <span className="text-gold font-bold text-lg">{(xCap * 100).toFixed(2)}%</span>
                   </div>
@@ -588,8 +588,8 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
       {analysis && (
         <>
           {/* Deal Grade */}
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6 text-center">
-            <p className="text-gray-400 text-xs uppercase tracking-wider mb-2">Overall Deal Grade</p>
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center">
+            <p className="text-gray-300 text-xs uppercase tracking-wider mb-2">Overall Deal Grade</p>
             <p className={`text-6xl font-black ${
               analysis.grade.startsWith("A") ? "text-green-400" :
               analysis.grade.startsWith("B") ? "text-gold" :
@@ -605,8 +605,8 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
               { label: "Cash-on-Cash", value: pct(analysis.avgCoC), score: analysis.scores.coc },
               { label: "Equity Multiple", value: analysis.em.toFixed(2) + "x", score: analysis.scores.em },
             ] as const).map(item => (
-              <div key={item.label} className="bg-dark-card border border-dark-border rounded-xl p-5 text-center">
-                <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">{item.label}</p>
+              <div key={item.label} className="bg-white/[0.04] border border-white/10 rounded-xl p-5 text-center">
+                <p className="text-gray-300 text-xs uppercase tracking-wider mb-1">{item.label}</p>
                 <p className={`text-3xl font-bold mb-2 ${
                   item.score.grade === "excellent" || item.score.grade === "good" ? "text-green-400" :
                   item.score.grade === "fair" ? "text-gold" :
@@ -621,7 +621,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
           {/* Charts */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Cash Flow Chart */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-4">Cash Flow Analysis</h4>
               <p className="text-gray-600 text-xs mb-4">NOI vs Debt Service vs Cash Flow by year</p>
               <div className="h-72">
@@ -646,7 +646,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
             </div>
 
             {/* Equity Build Chart */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-4">Equity Buildup</h4>
               <p className="text-gray-600 text-xs mb-4">How your equity grows: loan paydown + cash flow + appreciation</p>
               <div className="h-72">
@@ -671,7 +671,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
             </div>
 
             {/* Rent Schedule Chart */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-4">Rent Schedule</h4>
               <p className="text-gray-600 text-xs mb-4">Annual NOI growth over hold period</p>
               <div className="h-72">
@@ -693,7 +693,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
             </div>
 
             {/* Loan Paydown Chart */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-4">Loan Paydown</h4>
               <p className="text-gray-600 text-xs mb-4">Remaining loan balance over hold period</p>
               <div className="h-72">
@@ -718,7 +718,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
           {/* Key Metrics Summary */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Income & NOI */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-4">Income &amp; NOI</h4>
               <dl className="space-y-3 text-sm">
                 {[
@@ -730,7 +730,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                   [`${analysis.holdYrs}-Yr Total NOI`, fmt(analysis.totalNOI)],
                 ].map(([k, v]) => (
                   <div key={k} className="flex justify-between">
-                    <dt className="text-gray-400">{k}</dt>
+                    <dt className="text-gray-300">{k}</dt>
                     <dd className="text-white font-medium">{v}</dd>
                   </div>
                 ))}
@@ -738,7 +738,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
             </div>
 
             {/* Financing */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-4">Financing</h4>
               <dl className="space-y-3 text-sm">
                 {[
@@ -751,7 +751,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                   ["DSCR", analysis.dscr.toFixed(2) + "x"],
                 ].map(([k, v]) => (
                   <div key={k} className="flex justify-between">
-                    <dt className="text-gray-400">{k}</dt>
+                    <dt className="text-gray-300">{k}</dt>
                     <dd className="text-white font-medium">{v}</dd>
                   </div>
                 ))}
@@ -759,7 +759,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
             </div>
 
             {/* Exit & Returns */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-4">Exit &amp; Returns</h4>
               <dl className="space-y-3 text-sm">
                 {[
@@ -772,7 +772,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                   ["Total Profit", fmt(analysis.totalReturn)],
                 ].map(([k, v]) => (
                   <div key={k} className="flex justify-between">
-                    <dt className="text-gray-400">{k}</dt>
+                    <dt className="text-gray-300">{k}</dt>
                     <dd className="text-white font-medium">{v}</dd>
                   </div>
                 ))}
@@ -802,12 +802,12 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
           />
 
           {/* Traffic Light Benchmarks */}
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
             <h4 className="text-white font-semibold mb-4">Benchmark Comparison</h4>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border text-gray-400 text-xs uppercase">
+                  <tr className="border-b border-white/10 text-gray-300 text-xs uppercase">
                     <th className="text-left py-3 pr-4">Metric</th>
                     <th className="text-right py-3 px-4">Your Deal</th>
                     <th className="text-left py-3 px-4">Benchmark</th>
@@ -856,7 +856,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                     <tr key={row.metric}>
                       <td className="py-3 pr-4 text-white font-medium">{row.metric}</td>
                       <td className="py-3 px-4 text-right text-white">{row.value}</td>
-                      <td className="py-3 px-4 text-gray-400">{row.bench}</td>
+                      <td className="py-3 px-4 text-gray-300">{row.bench}</td>
                       <td className="py-3 px-4 text-center"><TrafficLight status={row.status} /></td>
                       <td className="py-3 pl-4 text-gray-500">{row.insight}</td>
                     </tr>
@@ -868,10 +868,10 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
 
           {/* Suggested Offer Price — Full Scorecard */}
           {analysis.suggestedPrice > 0 && analysis.suggestedPrice < analysis.price && (
-            <div className="bg-dark-card border border-gold/30 rounded-xl p-6 space-y-6">
+            <div className="bg-white/[0.04] border border-gold/30 rounded-xl p-6 space-y-6">
               <div>
                 <h4 className="text-gold font-semibold text-lg mb-1">Suggested Offer Price</h4>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   What to pay for this to be a great deal — backed into from Year 1 NOI and your financing terms so the deal meets a 1.25x DSCR lender requirement on day one.
                 </p>
               </div>
@@ -903,7 +903,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
-                      <tr className="border-b border-dark-border text-gray-400 text-xs uppercase">
+                      <tr className="border-b border-white/10 text-gray-300 text-xs uppercase">
                         <th className="text-left py-3 pr-4">Metric</th>
                         <th className="text-right py-3 px-4">At Suggested</th>
                         <th className="text-right py-3 px-4">vs Current</th>
@@ -953,7 +953,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                         <td className="py-3 px-4 text-right text-white">{fmt(analysis.suggestedMetrics.loanAmount)}</td>
                         <td className="py-3 px-4 text-right text-green-400">{fmt(analysis.suggestedMetrics.loanAmount - analysis.loanAmount)}</td>
                         <td className="py-3 px-4 text-center">
-                          <span className="inline-flex items-center text-xs text-gray-400">{fmt(analysis.suggestedMetrics.monthlyPmt)}/mo</span>
+                          <span className="inline-flex items-center text-xs text-gray-300">{fmt(analysis.suggestedMetrics.monthlyPmt)}/mo</span>
                         </td>
                         <td className="py-3 pl-4 text-gray-500">
                           {fmt(analysis.suggestedMetrics.loanAmount)} loan at {inputs.interestRate}% = {fmt(analysis.suggestedMetrics.monthlyPmt)}/mo debt service
@@ -977,23 +977,23 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
 
           {/* Sensitivity Matrix */}
           {sensitivity && (
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <h4 className="text-white font-semibold mb-2">Sensitivity Matrix</h4>
               <p className="text-gray-500 text-xs mb-4">Exit value at different cap rate and NOI growth combinations</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr>
-                      <th className="text-left py-2 px-3 text-gray-400 text-xs">Exit Cap / Growth</th>
+                      <th className="text-left py-2 px-3 text-gray-300 text-xs">Exit Cap / Growth</th>
                       {sensitivity.growths.map(g => (
-                        <th key={g} className="text-right py-2 px-3 text-gray-400 text-xs">{(g * 100).toFixed(0)}% Growth</th>
+                        <th key={g} className="text-right py-2 px-3 text-gray-300 text-xs">{(g * 100).toFixed(0)}% Growth</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-dark-border">
                     {sensitivity.grid.map((row, i) => (
                       <tr key={i}>
-                        <td className="py-2 px-3 text-gray-400 text-xs">{pct(sensitivity.exitCaps[i])}</td>
+                        <td className="py-2 px-3 text-gray-300 text-xs">{pct(sensitivity.exitCaps[i])}</td>
                         {row.map((cell, j) => (
                           <td key={j} className={`py-2 px-3 text-right text-xs font-medium ${
                             cell.profit ? "text-green-400" : "text-red-400"
@@ -1011,7 +1011,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
           )}
 
           {/* Cash Flow Table */}
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
             <div className="flex items-center justify-between mb-4">
               <h4 className="text-white font-semibold">Year-by-Year Cash Flows</h4>
               <button
@@ -1025,7 +1025,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="border-b border-dark-border text-gray-400 text-xs uppercase">
+                    <tr className="border-b border-white/10 text-gray-300 text-xs uppercase">
                       <th className="text-left py-2 px-3">Year</th>
                       <th className="text-right py-2 px-3">NOI</th>
                       <th className="text-right py-2 px-3">Debt Service</th>
@@ -1038,7 +1038,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
                       <tr key={yr.year} className={yr.year === analysis.holdYrs ? "bg-gold/5" : ""}>
                         <td className="py-2 px-3 text-white">{yr.year}{yr.year === analysis.holdYrs ? " (Exit)" : ""}</td>
                         <td className="py-2 px-3 text-right text-white">{fmt(yr.noi)}</td>
-                        <td className="py-2 px-3 text-right text-gray-400">{fmt(yr.ds)}</td>
+                        <td className="py-2 px-3 text-right text-gray-300">{fmt(yr.ds)}</td>
                         <td className={`py-2 px-3 text-right font-medium ${yr.cf >= 0 ? "text-green-400" : "text-red-400"}`}>
                           {fmt(yr.cf)}
                         </td>
@@ -1054,7 +1054,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
           </div>
 
           {/* Glossary */}
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
             <h4 className="text-white font-semibold mb-4">Metric Glossary</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               {[
@@ -1069,7 +1069,7 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
               ].map(([term, def]) => (
                 <div key={term} className="bg-dark/50 rounded-lg p-3">
                   <p className="text-gold font-medium mb-1">{term}</p>
-                  <p className="text-gray-400 text-xs leading-relaxed">{def}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed">{def}</p>
                 </div>
               ))}
             </div>
@@ -1085,9 +1085,9 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
 
       {/* No results state */}
       {!analysis && (
-        <div className="bg-dark-card border border-dark-border rounded-xl p-12 text-center">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-12 text-center">
           <div className="text-gray-600 text-5xl mb-4">&#9889;</div>
-          <p className="text-gray-400 text-lg mb-2">Enter your deal details above</p>
+          <p className="text-gray-300 text-lg mb-2">Enter your deal details above</p>
           <p className="text-gray-600 text-sm">
             Fill in the purchase price and rent to see a full investment analysis with deal scoring, cash flow projections, and sensitivity analysis.
           </p>

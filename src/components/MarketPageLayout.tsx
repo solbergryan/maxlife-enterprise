@@ -7,7 +7,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         {market.heroImage && (
           <>
             <Image
@@ -34,14 +34,14 @@ export default function MarketPageLayout({ market }: { market: Market }) {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             {market.heroHeading}
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             {market.heroSubheading}
           </p>
         </div>
       </section>
 
       {/* Stats Bar */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {market.stats.map((stat) => (
@@ -65,7 +65,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
               {section.content.split("\n\n").map((paragraph, i) => (
                 <p
                   key={i}
-                  className="text-gray-400 leading-relaxed mb-4 last:mb-0"
+                  className="text-gray-300 leading-relaxed mb-4 last:mb-0"
                 >
                   {paragraph}
                 </p>
@@ -76,7 +76,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
       </section>
 
       {/* Property Types */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-6">
             Property Types in {market.name}
@@ -85,7 +85,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
             {market.propertyTypes.map((type) => (
               <div
                 key={type}
-                className="bg-dark-card border border-dark-border rounded-lg px-4 py-3 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3 text-center"
               >
                 <p className="text-gray-300 text-sm">{type}</p>
               </div>
@@ -103,7 +103,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
           {market.whyInvest.map((reason) => (
             <div
               key={reason}
-              className="flex items-start gap-3 bg-dark-card border border-dark-border rounded-lg p-4"
+              className="flex items-start gap-3 bg-white/[0.04] border border-white/10 rounded-lg p-4"
             >
               <svg
                 className="w-5 h-5 text-gold shrink-0 mt-0.5"
@@ -118,20 +118,20 @@ export default function MarketPageLayout({ market }: { market: Market }) {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <p className="text-gray-400 text-sm">{reason}</p>
+              <p className="text-gray-300 text-sm">{reason}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Investor Signup */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-2 text-center">
               Get {market.name} Deal Alerts
             </h2>
-            <p className="text-gray-400 text-center mb-8">
+            <p className="text-gray-300 text-center mb-8">
               Be the first to know about commercial real estate opportunities in{" "}
               {market.name}. Sign up for off-market deal access.
             </p>
@@ -151,7 +151,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <Link
             href="/blog/orlando-commercial-real-estate-trends-2026"
-            className="group bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors"
+            className="group bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors"
           >
             <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
               Orlando Commercial Real Estate Trends 2026
@@ -162,7 +162,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
           </Link>
           <Link
             href="/blog/orlando-entertainment-district-investment-guide"
-            className="group bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors"
+            className="group bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors"
           >
             <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
               Entertainment District Investment Guide
@@ -173,7 +173,7 @@ export default function MarketPageLayout({ market }: { market: Market }) {
           </Link>
           <Link
             href="/blog/brevard-county-investment-property-outlook"
-            className="group bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors"
+            className="group bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors"
           >
             <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
               Brevard County Investment Outlook
@@ -194,12 +194,12 @@ export default function MarketPageLayout({ market }: { market: Market }) {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Invest in {market.name}?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Let&apos;s discuss your investment goals and find the right
             opportunity.
           </p>

@@ -89,7 +89,7 @@ export default function ExchangeFlorida1031Page() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-amsterdam-blue-sky-business-1448221.webp"
           alt="Florida 1031 exchange replacement commercial property"
@@ -107,7 +107,7 @@ export default function ExchangeFlorida1031Page() {
             1031 Exchange Into Florida —{" "}
             <span className="text-gold">No State Income Tax</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg mb-8">
+          <p className="text-gray-300 max-w-3xl text-lg mb-8">
             We help investors identify and close replacement properties on your
             timeline. Whether you&apos;re exchanging out of California, New York,
             or any high-tax state, Florida offers zero state income tax, a booming
@@ -130,15 +130,15 @@ export default function ExchangeFlorida1031Page() {
             </a>
           </div>
           <div className="flex flex-wrap gap-6 text-sm">
-            <span className="inline-flex items-center gap-2 text-gray-400">
+            <span className="inline-flex items-center gap-2 text-gray-300">
               <span className="w-2 h-2 bg-green-400 rounded-full" />
               0% State Income Tax
             </span>
-            <span className="inline-flex items-center gap-2 text-gray-400">
+            <span className="inline-flex items-center gap-2 text-gray-300">
               <span className="w-2 h-2 bg-gold rounded-full" />
               Pre-Vetted Inventory
             </span>
-            <span className="inline-flex items-center gap-2 text-gray-400">
+            <span className="inline-flex items-center gap-2 text-gray-300">
               <span className="w-2 h-2 bg-blue-400 rounded-full" />
               45-Day ID Support
             </span>
@@ -147,24 +147,24 @@ export default function ExchangeFlorida1031Page() {
       </section>
 
       {/* The 1031 Timeline */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             The 1031 <span className="text-gold">Timeline</span>
           </h2>
-          <p className="text-gray-400 mb-10 max-w-2xl">
+          <p className="text-gray-300 mb-10 max-w-2xl">
             Every 1031 exchange follows a strict federal timeline. Missing a
             deadline means losing your tax deferral — we make sure that
             doesn&apos;t happen.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Day 0 */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 relative">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 relative">
               <div className="text-gold text-3xl font-bold mb-2">Day 0</div>
               <h3 className="text-white font-semibold text-lg mb-2">
                 Close on Relinquished Property
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 You sell your current investment property. Proceeds go directly to
                 a Qualified Intermediary (QI) — you never touch the funds. The
                 clock starts now.
@@ -181,12 +181,12 @@ export default function ExchangeFlorida1031Page() {
             </div>
 
             {/* 45-Day ID */}
-            <div className="bg-dark-card border border-gold/30 rounded-xl p-6 relative ring-1 ring-gold/20">
+            <div className="bg-white/[0.04] border border-gold/30 rounded-xl p-6 relative ring-1 ring-gold/20">
               <div className="text-gold text-3xl font-bold mb-2">Day 45</div>
               <h3 className="text-white font-semibold text-lg mb-2">
                 Identification Deadline
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 You must formally identify up to three replacement properties in
                 writing to your QI. This is the most critical deadline — and where
                 most exchanges fail without proper preparation.
@@ -206,12 +206,12 @@ export default function ExchangeFlorida1031Page() {
             </div>
 
             {/* 180-Day Close */}
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
               <div className="text-gold text-3xl font-bold mb-2">Day 180</div>
               <h3 className="text-white font-semibold text-lg mb-2">
                 Close on Replacement Property
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 You must close on at least one identified replacement property
                 within 180 days of selling your original property. We ensure your
                 deal is under contract and closing on schedule.
@@ -222,13 +222,13 @@ export default function ExchangeFlorida1031Page() {
       </section>
 
       {/* Why Florida */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Why Florida for Your{" "}
             <span className="text-gold">1031 Exchange?</span>
           </h2>
-          <p className="text-gray-400 mb-10 max-w-2xl">
+          <p className="text-gray-300 mb-10 max-w-2xl">
             Florida is the #1 destination for 1031 exchange capital — and for good
             reason.
           </p>
@@ -317,13 +317,13 @@ export default function ExchangeFlorida1031Page() {
             ].map((card) => (
               <div
                 key={card.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <div className="text-gold mb-4">{card.icon}</div>
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {card.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {card.description}
                 </p>
               </div>
@@ -333,12 +333,12 @@ export default function ExchangeFlorida1031Page() {
       </section>
 
       {/* How MaxLife Helps */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             How <span className="text-gold">MaxLife</span> Helps
           </h2>
-          <p className="text-gray-400 mb-10 max-w-2xl">
+          <p className="text-gray-300 mb-10 max-w-2xl">
             We specialize in helping out-of-state investors execute 1031 exchanges
             into Central Florida commercial real estate — on time and on target.
           </p>
@@ -371,13 +371,13 @@ export default function ExchangeFlorida1031Page() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <div className="text-gold text-3xl font-bold mb-3">
                   {item.step}
                 </div>
                 <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -387,17 +387,17 @@ export default function ExchangeFlorida1031Page() {
       </section>
 
       {/* Tax Savings Example */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Tax Savings <span className="text-gold">Example</span>
           </h2>
-          <p className="text-gray-400 mb-10 max-w-2xl">
+          <p className="text-gray-300 mb-10 max-w-2xl">
             See the real impact of exchanging from a high-tax state into Florida.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* California scenario */}
-            <div className="bg-dark-card border border-red-500/30 rounded-xl p-6 sm:p-8">
+            <div className="bg-white/[0.04] border border-red-500/30 rounded-xl p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-3 h-3 bg-red-500 rounded-full" />
                 <h3 className="text-white font-semibold text-lg">
@@ -405,28 +405,28 @@ export default function ExchangeFlorida1031Page() {
                 </h3>
               </div>
               <div className="space-y-4">
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">Sale Price</span>
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">Sale Price</span>
                   <span className="text-white font-medium">$2,000,000</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">Capital Gain (est.)</span>
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">Capital Gain (est.)</span>
                   <span className="text-white font-medium">$800,000</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">
                     Federal Capital Gains (20%)
                   </span>
                   <span className="text-white font-medium">$160,000</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">
                     CA State Tax (13.3%)
                   </span>
                   <span className="text-red-400 font-medium">$106,400</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">
                     Net Investment Surtax (3.8%)
                   </span>
                   <span className="text-white font-medium">$30,400</span>
@@ -443,7 +443,7 @@ export default function ExchangeFlorida1031Page() {
             </div>
 
             {/* Florida 1031 scenario */}
-            <div className="bg-dark-card border border-gold/30 rounded-xl p-6 sm:p-8 ring-1 ring-gold/20">
+            <div className="bg-white/[0.04] border border-gold/30 rounded-xl p-6 sm:p-8 ring-1 ring-gold/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-3 h-3 bg-gold rounded-full" />
                 <h3 className="text-white font-semibold text-lg">
@@ -451,28 +451,28 @@ export default function ExchangeFlorida1031Page() {
                 </h3>
               </div>
               <div className="space-y-4">
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">Replacement Property</span>
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">Replacement Property</span>
                   <span className="text-white font-medium">$2,000,000+</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">
                     Federal Capital Gains Deferred
                   </span>
                   <span className="text-green-400 font-medium">$160,000</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">FL State Tax (0%)</span>
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">FL State Tax (0%)</span>
                   <span className="text-green-400 font-medium">$0</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">
                     Net Investment Surtax Deferred
                   </span>
                   <span className="text-green-400 font-medium">$30,400</span>
                 </div>
-                <div className="flex justify-between border-b border-dark-border pb-3">
-                  <span className="text-gray-400">
+                <div className="flex justify-between border-b border-white/10 pb-3">
+                  <span className="text-gray-300">
                     CA State Tax Eliminated
                   </span>
                   <span className="text-gold font-bold">$106,400</span>
@@ -502,17 +502,17 @@ export default function ExchangeFlorida1031Page() {
       </section>
 
       {/* Lead Capture Form */}
-      <section id="lead-form" className="border-b border-dark-border">
+      <section id="lead-form" className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
               Start Your <span className="text-gold">1031 Search</span>
             </h2>
-            <p className="text-gray-400 text-center mb-8">
+            <p className="text-gray-300 text-center mb-8">
               Tell us about your exchange timeline and investment criteria. We will
               match you with qualified replacement properties in Central Florida.
             </p>
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
               <LeadCaptureForm
                 buttonText="Start Your 1031 Search"
                 subjectPrefix="1031 Exchange Inquiry"
@@ -525,12 +525,12 @@ export default function ExchangeFlorida1031Page() {
       </section>
 
       {/* FAQ */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Frequently Asked <span className="text-gold">Questions</span>
           </h2>
-          <p className="text-gray-400 mb-10 max-w-2xl">
+          <p className="text-gray-300 mb-10 max-w-2xl">
             Common questions about 1031 exchanges into Florida commercial real
             estate.
           </p>
@@ -538,7 +538,7 @@ export default function ExchangeFlorida1031Page() {
             {faqItems.map((item) => (
               <details
                 key={item.question}
-                className="group bg-dark-card border border-dark-border rounded-xl"
+                className="group bg-white/[0.04] border border-white/10 rounded-xl"
               >
                 <summary className="flex items-center justify-between cursor-pointer p-6 text-white font-semibold list-none">
                   <span className="pr-4">{item.question}</span>
@@ -556,7 +556,7 @@ export default function ExchangeFlorida1031Page() {
                     />
                   </svg>
                 </summary>
-                <div className="px-6 pb-6 text-gray-400 leading-relaxed">
+                <div className="px-6 pb-6 text-gray-300 leading-relaxed">
                   {item.answer}
                 </div>
               </details>
@@ -566,7 +566,7 @@ export default function ExchangeFlorida1031Page() {
       </section>
 
       {/* Internal Links / Resources */}
-      <section className="bg-dark-card/50">
+      <section className="bg-white/[0.03]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl font-bold text-white mb-8">
             Related <span className="text-gold">Resources</span>
@@ -574,48 +574,48 @@ export default function ExchangeFlorida1031Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               href="/blog/1031-exchange-orlando-guide"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/50 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/50 transition-colors group"
             >
               <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                 1031 Exchange Orlando Guide
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 Step-by-step guide to executing a 1031 exchange in the Orlando
                 metro.
               </p>
             </Link>
             <Link
               href="/markets/orlando-commercial-real-estate"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/50 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/50 transition-colors group"
             >
               <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                 Orlando Market Overview
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 Market data, cap rates, and investment trends for Orlando
                 commercial real estate.
               </p>
             </Link>
             <Link
               href="/deal-analyzer"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/50 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/50 transition-colors group"
             >
               <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                 Deal Analyzer
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 Run the numbers on any replacement property with our free CRE
                 calculator.
               </p>
             </Link>
             <Link
               href="/blog/orlando-nnn-properties-for-sale"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/50 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/50 transition-colors group"
             >
               <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                 Orlando NNN Properties
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 Browse available NNN investment properties ideal for 1031 exchange
                 buyers.
               </p>

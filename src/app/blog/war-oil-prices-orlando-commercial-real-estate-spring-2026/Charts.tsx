@@ -66,7 +66,7 @@ export default function WarOilChartsSection() {
   return (
     <div className="space-y-8 my-12">
       {/* Chart 1: Construction Cost Exposure */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
         <h3 className="text-white font-semibold text-lg mb-1">
           Construction Hard Costs Exposed to Oil-Linked Inputs
         </h3>
@@ -127,7 +127,7 @@ export default function WarOilChartsSection() {
       </div>
 
       {/* Chart 2: Sector Sensitivity */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
         <h3 className="text-white font-semibold text-lg mb-1">
           Orlando CRE Sector Sensitivity to an Oil / Geopolitical Shock
         </h3>
@@ -190,7 +190,7 @@ export default function WarOilChartsSection() {
       </div>
 
       {/* Chart 3: Cap Rate Sensitivity on a $5M NNN deal */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
         <h3 className="text-white font-semibold text-lg mb-1">
           Cap Rate Sensitivity: $300k NOI NNN Property
         </h3>

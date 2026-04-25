@@ -31,7 +31,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero — Deal-Focused */}
-      <section className="relative border-b border-dark-border overflow-hidden">
+      <section className="relative border-b border-white/10 overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
@@ -44,7 +44,7 @@ export default function HomePage() {
         >
           <source src="/videos/hero/home-hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-dark/80 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-dark/55 to-dark/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-4">
             Statewide Florida Coverage
@@ -53,7 +53,7 @@ export default function HomePage() {
             Selling Commercial Property in{" "}
             <span className="text-gold">Florida?</span>
           </h1>
-          <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mb-10 leading-relaxed">
+          <p className="text-gray-300 text-lg sm:text-xl max-w-3xl mb-10 leading-relaxed">
             MaxLife Realty is a Florida commercial brokerage focused on owners
             who want straight answers, real numbers, and a well-connected
             broker &mdash; not another search portal. Headquartered in Orlando,
@@ -79,7 +79,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/deal-analyzer"
-              className="inline-block border border-dark-border text-gray-300 hover:border-gray-500 font-semibold px-8 py-4 rounded-lg transition-colors text-center"
+              className="inline-block border border-white/10 text-gray-300 hover:border-gray-500 font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
               Open Deal Analyzer
             </Link>
@@ -97,7 +97,7 @@ export default function HomePage() {
             The broker you hire should know{" "}
             <span className="text-gold">more than the market</span>
           </h2>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Florida has thousands of agents who can put a sign in the ground.
             There are very few who can underwrite your property at
             institutional depth, walk you through the net-at-close before you
@@ -140,13 +140,13 @@ export default function HomePage() {
           ].map((f) => (
             <div
               key={f.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 hover:bg-white/[0.06] transition-colors flex flex-col"
             >
               <h3 className="text-white font-semibold text-lg mb-2">
                 {f.title}
               </h3>
               <p
-                className="text-gray-400 text-sm leading-relaxed mb-4 flex-1"
+                className="text-gray-300 text-sm leading-relaxed mb-4 flex-1"
                 dangerouslySetInnerHTML={{ __html: f.body }}
               />
               <Link
@@ -174,7 +174,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="border-t border-dark-border bg-dark-card/50">
+      <section className="border-t border-white/10 bg-white/[0.03]">
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
@@ -190,9 +190,9 @@ export default function HomePage() {
       </section>
 
       {/* Credentials strip */}
-      <section className="border-b border-dark-border bg-dark-card/50">
+      <section className="border-b border-white/10 bg-white/[0.03]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-gray-300">
             <span className="flex items-center gap-2">
               <svg
                 aria-hidden="true"
@@ -252,7 +252,7 @@ export default function HomePage() {
 
       {/* Off-Market Signup */}
       <section id="investor-signup" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <Reveal className="bg-dark-card border border-gold/20 rounded-xl p-8 sm:p-12">
+        <Reveal className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 sm:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
@@ -261,13 +261,13 @@ export default function HomePage() {
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 Get Off-Market Commercial Deals
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-gray-300 leading-relaxed mb-6">
                 We work with investors looking for retail, multifamily, NNN, and
                 development opportunities across Florida — from Orlando and
                 Tampa Bay to Jacksonville and South Florida. Sign up to receive
                 curated off-market deals before they hit the open market.
               </p>
-              <ul className="space-y-3 text-gray-400 text-sm">
+              <ul className="space-y-3 text-gray-300 text-sm">
                 {[
                   "Early access to off-market opportunities",
                   "Deals curated to your investment criteria",
@@ -291,7 +291,7 @@ export default function HomePage() {
       </section>
 
       {/* Service Areas / Markets */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-2">
             Markets We Serve
@@ -301,7 +301,7 @@ export default function HomePage() {
             Bay, Jacksonville, South Florida, Southwest Florida, North Florida,
             and the Panhandle
           </p>
-          <div className="mb-10 rounded-xl overflow-hidden border border-dark-border bg-dark">
+          <div className="mb-10 rounded-xl overflow-hidden border border-white/10 bg-dark">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/florida-coverage-map.svg"
@@ -317,7 +317,7 @@ export default function HomePage() {
               <Link
                 key={market.slug}
                 href={`/markets/${market.slug}`}
-                className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
+                className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-colors"
               >
                 {(marketImages[market.slug] || market.heroImage) && (
                   <div className="relative aspect-[16/9] w-full overflow-hidden">
@@ -340,7 +340,7 @@ export default function HomePage() {
                     {market.stats.slice(0, 2).map((stat) => (
                       <span
                         key={stat.label}
-                        className="text-xs bg-dark-hover border border-dark-border rounded-full px-2.5 py-1 text-gray-400"
+                        className="text-xs bg-white/10 border border-white/10 rounded-full px-2.5 py-1 text-gray-300"
                       >
                         {stat.label}: {stat.value}
                       </span>
@@ -378,7 +378,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-2">
             Commercial Real Estate Services Across Florida
@@ -422,7 +422,7 @@ export default function HomePage() {
               <Link
                 key={service.title}
                 href={service.href}
-                className="group bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+                className="group bg-white/[0.04] border border-white/10 rounded-xl p-5 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold group-hover:text-gold transition-colors mb-2">
                   {service.title}
@@ -478,7 +478,7 @@ export default function HomePage() {
             <Link
               key={post.slug}
               href={post.href}
-              className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
+              className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-colors"
             >
               {blogImages[post.slug] && (
                 <div className="relative aspect-[16/9] w-full overflow-hidden">
@@ -513,13 +513,13 @@ export default function HomePage() {
       </section>
 
       {/* About & Trust */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
-        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="bg-white/[0.03] border-y border-white/10">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Local Expertise. Investor-First Approach.
             </h2>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed">
               MaxLife Realty is a Florida commercial real estate brokerage
               headquartered in Orlando, serving investors and owners across
               Central Florida, Tampa Bay, Jacksonville, South Florida, and the
@@ -541,12 +541,12 @@ export default function HomePage() {
       <Testimonials />
 
       {/* Final CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Find Your Next Deal?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Whether you&apos;re looking to acquire, sell, or explore new markets
             — let&apos;s talk about your investment goals.
           </p>

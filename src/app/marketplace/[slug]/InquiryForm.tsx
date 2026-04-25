@@ -60,7 +60,7 @@ export function InquiryForm({
           </svg>
         </div>
         <p className="text-white font-semibold mb-1">Message sent</p>
-        <p className="text-gray-400 text-sm">
+        <p className="text-gray-300 text-sm">
           {contactName} will reply directly. MaxLife Realty is CC&apos;d for
           follow-up support.
         </p>
@@ -69,7 +69,7 @@ export function InquiryForm({
   }
 
   const input =
-    "w-full bg-dark border border-dark-border rounded-md px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none text-sm";
+    "w-full bg-dark border border-white/10 rounded-md px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none text-sm";
 
   return (
     <form onSubmit={onSubmit} className="space-y-3">
@@ -124,7 +124,7 @@ export function InquiryForm({
         <p className="text-red-400 text-xs">{errorMsg}</p>
       )}
       {contactPhone && (
-        <p className="text-gray-500 text-xs text-center pt-2 border-t border-dark-border">
+        <p className="text-gray-500 text-xs text-center pt-2 border-t border-white/10">
           Or call{" "}
           <a
             href={`tel:${contactPhone.replace(/[^0-9+]/g, "")}`}

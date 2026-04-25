@@ -52,7 +52,7 @@ export default function CapRateCalculator() {
   return (
     <div className="space-y-6">
       {/* Mode Switcher */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-4">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-4">
         <p className="text-gold text-sm font-semibold uppercase tracking-wider mb-3">
           What do you want to calculate?
         </p>
@@ -68,7 +68,7 @@ export default function CapRateCalculator() {
               className={`text-left p-3 rounded-lg border transition-colors ${
                 mode === m.key
                   ? "bg-gold text-dark border-gold"
-                  : "bg-dark border-dark-border text-gray-300 hover:border-gold/30"
+                  : "bg-dark border-white/10 text-gray-300 hover:border-gold/40"
               }`}
             >
               <p className="font-semibold text-sm">{m.label}</p>
@@ -81,10 +81,10 @@ export default function CapRateCalculator() {
       </div>
 
       {/* Inputs */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6 space-y-5">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 space-y-5">
         {(mode === "compute-cap" || mode === "compute-price") && (
           <label className="block">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Net Operating Income (NOI) — Annual
             </span>
             <div className="relative">
@@ -95,7 +95,7 @@ export default function CapRateCalculator() {
                 type="number"
                 value={noi}
                 onChange={(e) => setNoi(Math.max(0, Number(e.target.value)))}
-                className="w-full bg-dark border border-dark-border rounded-lg pl-8 pr-4 py-3 text-white focus:outline-none focus:border-gold/50"
+                className="w-full bg-dark border border-white/10 rounded-lg pl-8 pr-4 py-3 text-white focus:outline-none focus:border-gold/50"
               />
             </div>
             <p className="text-gray-500 text-xs mt-1">
@@ -107,7 +107,7 @@ export default function CapRateCalculator() {
 
         {(mode === "compute-cap" || mode === "compute-noi") && (
           <label className="block">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Purchase Price
             </span>
             <div className="relative">
@@ -118,7 +118,7 @@ export default function CapRateCalculator() {
                 type="number"
                 value={price}
                 onChange={(e) => setPrice(Math.max(0, Number(e.target.value)))}
-                className="w-full bg-dark border border-dark-border rounded-lg pl-8 pr-4 py-3 text-white focus:outline-none focus:border-gold/50"
+                className="w-full bg-dark border border-white/10 rounded-lg pl-8 pr-4 py-3 text-white focus:outline-none focus:border-gold/50"
               />
             </div>
           </label>
@@ -126,7 +126,7 @@ export default function CapRateCalculator() {
 
         {(mode === "compute-price" || mode === "compute-noi") && (
           <label className="block">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Cap Rate
             </span>
             <div className="relative">
@@ -137,7 +137,7 @@ export default function CapRateCalculator() {
                 min={0}
                 max={20}
                 onChange={(e) => setCapRate(Number(e.target.value))}
-                className="w-full bg-dark border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
+                className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                 %
@@ -158,22 +158,22 @@ export default function CapRateCalculator() {
         <p className="text-5xl sm:text-6xl font-bold text-white mb-3">
           {mode === "compute-cap" ? pct(result.value) : money(result.value)}
         </p>
-        <p className="text-gray-400 text-sm font-mono">{result.formula}</p>
+        <p className="text-gray-300 text-sm font-mono">{result.formula}</p>
       </div>
 
       {/* Cap Rate Reference */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
         <h3 className="text-gold text-sm font-semibold uppercase tracking-wider mb-4">
           2026 Florida Cap Rate Reference
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-dark-border">
-                <th className="text-left text-gray-400 text-xs font-medium pb-2">
+              <tr className="border-b border-white/10">
+                <th className="text-left text-gray-300 text-xs font-medium pb-2">
                   Asset Type
                 </th>
-                <th className="text-left text-gray-400 text-xs font-medium pb-2">
+                <th className="text-left text-gray-300 text-xs font-medium pb-2">
                   Typical Cap Rate
                 </th>
               </tr>
@@ -194,7 +194,7 @@ export default function CapRateCalculator() {
                 ["Suburban Office", "7.00% - 8.50%"],
                 ["Medical Office Building", "6.00% - 6.75%"],
               ].map(([asset, rate]) => (
-                <tr key={asset} className="border-b border-dark-border/50">
+                <tr key={asset} className="border-b border-white/10/50">
                   <td className="py-2 text-white">{asset}</td>
                   <td className="py-2 text-gold font-medium">{rate}</td>
                 </tr>

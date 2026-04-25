@@ -99,13 +99,13 @@ export default function CostSegCalculator() {
   return (
     <div className="space-y-8">
       {/* Inputs */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6 space-y-5">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 space-y-5">
         <h3 className="text-gold text-sm font-semibold uppercase tracking-wider">
           Property Inputs
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <label className="block">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Purchase Price
             </span>
             <div className="relative">
@@ -118,13 +118,13 @@ export default function CostSegCalculator() {
                 onChange={(e) =>
                   setPurchasePrice(Math.max(0, Number(e.target.value)))
                 }
-                className="w-full bg-dark border border-dark-border rounded-lg pl-8 pr-4 py-3 text-white focus:outline-none focus:border-gold/50"
+                className="w-full bg-dark border border-white/10 rounded-lg pl-8 pr-4 py-3 text-white focus:outline-none focus:border-gold/50"
               />
             </div>
           </label>
 
           <label className="block">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Land Percentage
               <span className="text-gray-500 text-xs ml-2">
                 (typical 15-25%)
@@ -141,7 +141,7 @@ export default function CostSegCalculator() {
                     Math.max(5, Math.min(50, Number(e.target.value)))
                   )
                 }
-                className="w-full bg-dark border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
+                className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                 %
@@ -150,7 +150,7 @@ export default function CostSegCalculator() {
           </label>
 
           <label className="block">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Property Type
             </span>
             <select
@@ -158,7 +158,7 @@ export default function CostSegCalculator() {
               onChange={(e) =>
                 setAssetType(e.target.value as typeof assetType)
               }
-              className="w-full bg-dark border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
+              className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
             >
               <option value="nnn-retail">NNN Retail / Net Lease</option>
               <option value="office">Office Building</option>
@@ -169,13 +169,13 @@ export default function CostSegCalculator() {
           </label>
 
           <label className="block">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Acquisition Year
             </span>
             <select
               value={acqYear}
               onChange={(e) => setAcqYear(Number(e.target.value))}
-              className="w-full bg-dark border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
+              className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
             >
               {[
                 CURRENT_YEAR - 2,
@@ -191,7 +191,7 @@ export default function CostSegCalculator() {
           </label>
 
           <label className="block md:col-span-2">
-            <span className="text-gray-400 text-sm font-medium mb-2 block">
+            <span className="text-gray-300 text-sm font-medium mb-2 block">
               Marginal Tax Rate
               <span className="text-gray-500 text-xs ml-2">
                 (federal + state combined)
@@ -208,7 +208,7 @@ export default function CostSegCalculator() {
                     Math.max(10, Math.min(50, Number(e.target.value)))
                   )
                 }
-                className="w-full bg-dark border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
+                className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold/50"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                 %
@@ -226,7 +226,7 @@ export default function CostSegCalculator() {
         <p className="text-5xl sm:text-6xl font-bold text-white mb-3">
           {money(results.year1TaxSavings)}
         </p>
-        <p className="text-gray-400 text-sm">
+        <p className="text-gray-300 text-sm">
           Net of estimated {money(results.studyCost)} cost seg study cost:{" "}
           <strong className="text-white">
             {money(results.netYear1Benefit)}
@@ -254,31 +254,31 @@ export default function CostSegCalculator() {
 
       {/* Breakdown */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
           <h3 className="text-gold text-sm font-semibold uppercase tracking-wider mb-4">
             Basis Allocation
           </h3>
           <div className="space-y-2 text-sm">
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">Land</span>
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">Land</span>
               <span className="text-gray-300">{money(results.landValue)}</span>
             </div>
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">Building</span>
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">Building</span>
               <span className="text-gray-300">
                 {money(results.buildingValue)}
               </span>
             </div>
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">
                 5-Year Reclassification (Personal Property)
               </span>
               <span className="text-gold font-medium">
                 {money(results.reclass5yr)}
               </span>
             </div>
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">
                 15-Year Reclassification (Land Improvements)
               </span>
               <span className="text-gold font-medium">
@@ -286,7 +286,7 @@ export default function CostSegCalculator() {
               </span>
             </div>
             <div className="flex justify-between py-2">
-              <span className="text-gray-400">
+              <span className="text-gray-300">
                 Remaining Building (39-yr or 27.5-yr)
               </span>
               <span className="text-gray-300">
@@ -296,31 +296,31 @@ export default function CostSegCalculator() {
           </div>
         </div>
 
-        <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
           <h3 className="text-gold text-sm font-semibold uppercase tracking-wider mb-4">
             Year 1 Depreciation
           </h3>
           <div className="space-y-2 text-sm">
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">Without Cost Segregation</span>
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">Without Cost Segregation</span>
               <span className="text-gray-300">
                 {money(results.year1DepWithoutCostSeg)}
               </span>
             </div>
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">With Cost Segregation</span>
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">With Cost Segregation</span>
               <span className="text-white font-medium">
                 {money(results.totalYear1WithCostSeg)}
               </span>
             </div>
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">Accelerated Deduction</span>
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">Accelerated Deduction</span>
               <span className="text-gold font-semibold">
                 {money(results.year1AcceleratedDeduction)}
               </span>
             </div>
-            <div className="flex justify-between py-2 border-b border-dark-border">
-              <span className="text-gray-400">
+            <div className="flex justify-between py-2 border-b border-white/10">
+              <span className="text-gray-300">
                 @ {marginalTaxRate}% marginal rate
               </span>
               <span className="text-gold">×</span>

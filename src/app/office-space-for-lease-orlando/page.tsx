@@ -157,7 +157,7 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscraper-building-glass-windows-modern-2083687.webp"
           alt="Orlando office space for lease in modern glass tower"
@@ -179,7 +179,7 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
             Class A, B, and flex office space across Orlando, Lake Nona, and
             Downtown Orlando
           </p>
-          <p className="text-gray-400 max-w-3xl leading-relaxed">
+          <p className="text-gray-300 max-w-3xl leading-relaxed">
             MaxLife Realty helps tenants find office space for lease in
             Orlando and throughout Central Florida. From single-office users
             needing a few hundred square feet to growing companies taking a full
@@ -198,12 +198,12 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
       </section>
 
       {/* Submarkets */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Orlando Office Submarkets We Cover
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             Every Orlando office submarket has its own rent structure, tenant
             mix, and commute considerations. Here&apos;s where our tenants most
             commonly lease.
@@ -212,12 +212,12 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
             {submarkets.map((s) => (
               <div
                 key={s.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {s.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {s.desc}
                 </p>
               </div>
@@ -227,12 +227,12 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
       </section>
 
       {/* What to Know */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             What to Know Before Leasing Office Space in Orlando
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             Office leasing is more than a per-square-foot rate. Here are the
             four factors that most often determine whether a deal is actually
             good.
@@ -241,10 +241,10 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
             {whatToKnow.map((item) => (
               <div
                 key={item.title}
-                className="bg-dark border border-dark-border rounded-xl p-6"
+                className="bg-dark border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-gold font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -254,12 +254,12 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
       </section>
 
       {/* How We Help */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             How MaxLife Helps Tenants Find Office Space
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             A simple, three-step process for finding the right space without
             the back-and-forth.
           </p>
@@ -267,7 +267,7 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
             {howWeHelp.map((item) => (
               <div
                 key={item.step}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
               >
                 <span className="inline-flex w-10 h-10 rounded-full bg-gold/20 text-gold font-bold items-center justify-center mb-4 text-lg">
                   {item.step}
@@ -275,7 +275,7 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -285,12 +285,12 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Orlando Office Space Leasing FAQ
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             The questions we hear most from tenants searching for office space
             in Orlando.
           </p>
@@ -298,10 +298,10 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
             {faqs.map((f) => (
               <div
                 key={f.q}
-                className="bg-dark border border-dark-border rounded-xl p-6"
+                className="bg-dark border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-white font-semibold mb-2">{f.q}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{f.a}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
@@ -311,18 +311,18 @@ export default function OfficeSpaceForLeaseOrlandoPage() {
       {/* Lead Capture */}
       <section
         id="office-space-request"
-        className="bg-dark-card/50 border-b border-dark-border"
+        className="bg-white/[0.03] border-b border-white/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
               Request an Office Space Tour
             </h2>
-            <p className="text-gray-400 text-center mb-8">
+            <p className="text-gray-300 text-center mb-8">
               Tell us your size, submarket, and target move-in date — we&apos;ll
               come back with a shortlist and tour schedule.
             </p>
-            <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+            <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8">
               <LeadCaptureForm
                 buttonText="Request a Tour"
                 subjectPrefix="Office Space for Lease Orlando"

@@ -30,7 +30,7 @@ export default function DealAnalyzerPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Investor Tools
@@ -38,22 +38,22 @@ export default function DealAnalyzerPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Deal <span className="text-gold">Analyzer</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg mb-6">
+          <p className="text-gray-300 max-w-3xl text-lg mb-6">
             Institutional-grade underwriting in seconds. Score any commercial NNN,
             multifamily, or SFR rental deal with the same metrics used by
             professional investors — IRR, DSCR, cash-on-cash, equity multiple,
             and full sensitivity analysis.
           </p>
           <div className="flex flex-wrap gap-4 text-sm">
-            <span className="inline-flex items-center gap-2 text-gray-400">
+            <span className="inline-flex items-center gap-2 text-gray-300">
               <span className="w-2 h-2 bg-green-400 rounded-full" />
               Real-time calculations
             </span>
-            <span className="inline-flex items-center gap-2 text-gray-400">
+            <span className="inline-flex items-center gap-2 text-gray-300">
               <span className="w-2 h-2 bg-gold rounded-full" />
               Deal scoring & grading
             </span>
-            <span className="inline-flex items-center gap-2 text-gray-400">
+            <span className="inline-flex items-center gap-2 text-gray-300">
               <span className="w-2 h-2 bg-blue-400 rounded-full" />
               Sensitivity analysis
             </span>
@@ -67,7 +67,7 @@ export default function DealAnalyzerPage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-8">
             How the Deal Analyzer Works
@@ -76,7 +76,7 @@ export default function DealAnalyzerPage() {
             <div>
               <div className="text-gold text-3xl font-bold mb-3">01</div>
               <h3 className="text-white font-semibold mb-2">Enter Your Deal</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 Input the purchase price, rent, financing terms, and hold period.
                 Choose from commercial NNN, multifamily, or single-family rental
                 property types.
@@ -85,7 +85,7 @@ export default function DealAnalyzerPage() {
             <div>
               <div className="text-gold text-3xl font-bold mb-3">02</div>
               <h3 className="text-white font-semibold mb-2">Get Instant Analysis</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 The calculator runs a full underwriting analysis — computing IRR,
                 DSCR, cash-on-cash return, equity multiple, year-by-year cash flows,
                 and exit valuation in real time.
@@ -94,7 +94,7 @@ export default function DealAnalyzerPage() {
             <div>
               <div className="text-gold text-3xl font-bold mb-3">03</div>
               <h3 className="text-white font-semibold mb-2">Score & Compare</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 Every deal gets a letter grade and star ratings across four key
                 metrics. Traffic-light benchmarks show exactly where the deal
                 passes or falls short. Use the sensitivity matrix to stress-test
@@ -113,7 +113,7 @@ export default function DealAnalyzerPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-dark-border text-gray-400 text-xs uppercase">
+              <tr className="border-b border-white/10 text-gray-300 text-xs uppercase">
                 <th className="text-left py-3 pr-4">Metric</th>
                 <th className="text-left py-3 px-4">What It Measures</th>
                 <th className="text-left py-3 pl-4">Target</th>
@@ -131,7 +131,7 @@ export default function DealAnalyzerPage() {
               ].map(([metric, desc, target]) => (
                 <tr key={metric}>
                   <td className="py-3 pr-4 text-gold font-medium">{metric}</td>
-                  <td className="py-3 px-4 text-gray-400">{desc}</td>
+                  <td className="py-3 px-4 text-gray-300">{desc}</td>
                   <td className="py-3 pl-4 text-white">{target}</td>
                 </tr>
               ))}
@@ -141,12 +141,12 @@ export default function DealAnalyzerPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Found a Deal Worth Pursuing?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Our team underwrites every deal with institutional-grade analysis.
             Let us help you evaluate your next commercial real estate investment.
           </p>
@@ -159,7 +159,7 @@ export default function DealAnalyzerPage() {
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-3 border border-dark-border text-white font-semibold rounded-lg hover:border-gold transition-colors"
+              className="px-8 py-3 border border-white/10 text-white font-semibold rounded-lg hover:border-gold transition-colors"
             >
               Contact Us
             </Link>

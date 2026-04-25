@@ -21,7 +21,7 @@ export default function DealFilter({ deals }: { deals: Deal[] }) {
   });
 
   const selectClass =
-    "bg-dark border border-dark-border rounded-lg px-3 py-2 text-sm text-white focus:border-gold focus:outline-none";
+    "bg-dark border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-gold focus:outline-none";
 
   return (
     <div>
@@ -71,7 +71,7 @@ export default function DealFilter({ deals }: { deals: Deal[] }) {
         </div>
       ) : (
         <div className="text-center py-16">
-          <p className="text-gray-400 text-lg mb-2">
+          <p className="text-gray-300 text-lg mb-2">
             No properties match your filters.
           </p>
           <p className="text-gray-500 text-sm">

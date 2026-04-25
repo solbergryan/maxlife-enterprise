@@ -13,7 +13,7 @@ export default function NNNLeaseArticle() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-architecture-building-convenience-store-grocery-people-2577330.webp"
           alt="Single-tenant NNN retail property storefront"
@@ -26,7 +26,7 @@ export default function NNNLeaseArticle() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -43,7 +43,7 @@ export default function NNNLeaseArticle() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             What Is a Triple Net (NNN) Lease? A Guide for Investors
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Everything you need to know about NNN lease investments — how they
             work, why investors love them, and what to watch out for.
           </p>
@@ -57,13 +57,13 @@ export default function NNNLeaseArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Basics of a Triple Net Lease
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               A triple net lease — commonly written as &quot;NNN&quot; — is a commercial
               real estate lease agreement where the tenant is responsible for
               paying three key expenses on top of their base rent: property
               taxes, building insurance, and maintenance costs.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For the property owner, this means a truly passive investment. You
               collect rent, and the tenant handles virtually everything else.
               It&apos;s as close to &quot;mailbox money&quot; as real estate investing gets.
@@ -74,7 +74,7 @@ export default function NNNLeaseArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               How NNN Leases Are Structured
             </h2>
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
               <div className="space-y-3">
                 {[
                   { n: "Net 1", desc: "Tenant pays property taxes" },
@@ -90,7 +90,7 @@ export default function NNNLeaseArticle() {
                 ))}
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Typical NNN lease terms range from 10 to 25 years, often with
               built-in rent escalations (increases) of 1-2% annually or every 5
               years. This means your income grows over time without
@@ -102,7 +102,7 @@ export default function NNNLeaseArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Who Are the Typical NNN Tenants?
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               NNN properties are usually occupied by national or regional credit
               tenants — companies with strong balance sheets and brand
               recognition. Common examples include:
@@ -120,13 +120,13 @@ export default function NNNLeaseArticle() {
               ].map((t) => (
                 <div
                   key={t}
-                  className="bg-dark-card border border-dark-border rounded-lg p-3 text-center text-gray-300 text-sm"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-3 text-center text-gray-300 text-sm"
                 >
                   {t}
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The creditworthiness of the tenant is one of the most important
               factors in evaluating an NNN investment. A lease backed by a
               Fortune 500 company carries very different risk than one backed by
@@ -167,7 +167,7 @@ export default function NNNLeaseArticle() {
                   </svg>
                   <div>
                     <span className="text-white font-medium">{item.title}</span>
-                    <span className="text-gray-400 text-sm block">
+                    <span className="text-gray-300 text-sm block">
                       {item.desc}
                     </span>
                   </div>
@@ -180,21 +180,21 @@ export default function NNNLeaseArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Key Metrics: Cap Rate & NOI
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Two numbers dominate NNN investing conversations:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Cap Rate</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   The capitalization rate measures annual return relative to
                   purchase price. A 6% cap rate means you earn 6% of the
                   property&apos;s value in annual net income.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">NOI</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Net Operating Income is the annual rent minus any
                   owner-responsible expenses. In a true NNN lease, NOI is
                   essentially the full rent amount.
@@ -207,7 +207,7 @@ export default function NNNLeaseArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               What to Watch Out For
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               NNN investing isn&apos;t risk-free. Key considerations include:
             </p>
             <ul className="space-y-2">
@@ -218,7 +218,7 @@ export default function NNNLeaseArticle() {
                 "Roof and structure responsibility — some NNN leases have landlord carve-outs",
                 "Re-tenanting risk — can you find a new tenant if the current one leaves?",
               ].map((item) => (
-                <li key={item} className="flex gap-2 text-gray-400 text-sm">
+                <li key={item} className="flex gap-2 text-gray-300 text-sm">
                   <span className="text-gold">•</span>
                   {item}
                 </li>
@@ -227,11 +227,11 @@ export default function NNNLeaseArticle() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Interested in NNN Investing?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty specializes in NNN property acquisitions and
               dispositions across Central Florida. Let&apos;s find your next
               investment.

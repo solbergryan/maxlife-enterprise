@@ -37,7 +37,7 @@ export default async function BuyRetailCityPage({
   return (
     <>
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Retail Real Estate
@@ -46,7 +46,7 @@ export default async function BuyRetailCityPage({
             Buy Retail Property in{" "}
             <span className="text-gold">{c.name}, Florida</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Source retail commercial real estate opportunities in {c.name} and
             surrounding {c.county}. From single-tenant NNN pads to
             grocery-anchored shopping centers and strip retail, MaxLife
@@ -72,13 +72,13 @@ export default async function BuyRetailCityPage({
         </h2>
         <p className="text-gray-300 leading-relaxed mb-6">{c.description}</p>
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               Population
             </p>
             <p className="text-white font-semibold">{c.population}</p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               County
             </p>
@@ -128,7 +128,7 @@ export default async function BuyRetailCityPage({
           ].map((item) => (
             <div
               key={item.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-5"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
             >
               <div className="flex items-start justify-between gap-3 mb-2">
                 <h3 className="text-gold font-semibold">{item.title}</h3>
@@ -183,12 +183,12 @@ export default async function BuyRetailCityPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Request <span className="text-gold">{c.name}</span> Retail Inventory
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Share your investment criteria — cap rate target, tenant type,
             price range — and we&apos;ll send matching {c.name} retail
             opportunities within 48 hours.
@@ -204,7 +204,7 @@ export default async function BuyRetailCityPage({
             </Link>
             <Link
               href="/nnn-tenants"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Browse Tenants
             </Link>

@@ -53,7 +53,7 @@ export default function MarketReportsIndexPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-glass-windows-business-blue-1508086.webp"
           alt="Central Florida commercial real estate market reports"
@@ -71,7 +71,7 @@ export default function MarketReportsIndexPage() {
             Central Florida CRE{" "}
             <span className="text-gold">Market Reports</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Quarterly commercial real estate intelligence for Central Florida
             and the Space Coast. Cap rates, vacancy, absorption, and notable
             transactions across every major asset class. Every data point
@@ -87,7 +87,7 @@ export default function MarketReportsIndexPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <Link
             href={`/market-reports/${latest.slug}`}
-            className="block bg-dark-card border border-gold/30 rounded-2xl p-8 sm:p-10 hover:border-gold transition-colors group"
+            className="block bg-white/[0.04] border border-gold/30 rounded-2xl p-8 sm:p-10 hover:border-gold transition-colors group"
           >
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full bg-gold/10 text-gold border border-gold/30">
@@ -105,7 +105,7 @@ export default function MarketReportsIndexPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
               {latest.title}
             </h2>
-            <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-5 max-w-4xl">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-5 max-w-4xl">
               {latest.executiveSummary}
             </p>
             <span className="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all">
@@ -136,8 +136,8 @@ export default function MarketReportsIndexPage() {
         </p>
 
         {reports.length === 0 ? (
-          <div className="bg-dark-card border border-dark-border rounded-xl p-8 text-center">
-            <p className="text-gray-400">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8 text-center">
+            <p className="text-gray-300">
               The first quarterly report will be published shortly. Check back
               soon, or{" "}
               <Link
@@ -161,7 +161,7 @@ export default function MarketReportsIndexPage() {
                     <Link
                       key={r.slug}
                       href={`/market-reports/${r.slug}`}
-                      className="bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors group"
+                      className="bg-white/[0.04] border border-white/10 rounded-xl p-5 hover:border-gold/40 transition-colors group"
                     >
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <p className="text-xs text-gray-500 uppercase tracking-wider">
@@ -184,11 +184,11 @@ export default function MarketReportsIndexPage() {
       </section>
 
       {/* Methodology */}
-      <section className="bg-dark-card/30 border-y border-dark-border">
+      <section className="bg-white/[0.04]/30 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold text-white mb-4">Methodology</h2>
-            <div className="space-y-4 text-gray-400 text-sm leading-relaxed">
+            <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
               <p>
                 Every MaxLife Realty market report follows the same
                 discipline: macro data comes from publicly cited sources
@@ -232,7 +232,7 @@ export default function MarketReportsIndexPage() {
         <h2 className="text-2xl font-bold text-white mb-4">
           Thinking of selling? Let&apos;s talk the numbers.
         </h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
           Our market reports are a starting point. When you&apos;re ready for
           a property-specific valuation on your own building or land, the
           call is free and confidential.

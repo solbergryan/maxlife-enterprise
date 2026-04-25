@@ -12,7 +12,7 @@ export default function PropertyServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-architecture-construction-design-business-office-849849.webp"
           alt="Commercial property maintenance and services in Central Florida"
@@ -25,7 +25,7 @@ export default function PropertyServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/services"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -46,7 +46,7 @@ export default function PropertyServicesPage() {
               <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 Maintenance, Cleaning & Engineering
               </h1>
-              <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
+              <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
                 Comprehensive property services for investors, landlords, and
                 homeowners. From routine maintenance to deep cleans to
                 technical engineering — one call covers it all.
@@ -61,7 +61,7 @@ export default function PropertyServicesPage() {
         <h2 className="text-2xl font-bold text-white mb-2">
           Maintenance & <span className="text-gold">Repairs</span>
         </h2>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-300 mb-8">
           Reliable handyman services for residential and commercial properties.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -75,7 +75,7 @@ export default function PropertyServicesPage() {
           ].map((item) => (
             <div
               key={item}
-              className="flex items-center gap-3 bg-dark-card border border-dark-border rounded-lg p-4"
+              className="flex items-center gap-3 bg-white/[0.04] border border-white/10 rounded-lg p-4"
             >
               <svg className="w-5 h-5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -87,12 +87,12 @@ export default function PropertyServicesPage() {
       </section>
 
       {/* Cleaning */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-2">
             Professional <span className="text-gold">Cleaning</span>
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-300 mb-8">
             Spotless results for homes, offices, and investment properties.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -106,7 +106,7 @@ export default function PropertyServicesPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 bg-dark border border-dark-border rounded-lg p-4"
+                className="flex items-center gap-3 bg-dark border border-white/10 rounded-lg p-4"
               >
                 <svg className="w-5 h-5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -123,7 +123,7 @@ export default function PropertyServicesPage() {
         <h2 className="text-2xl font-bold text-white mb-2">
           Technical & <span className="text-gold">Engineering</span>
         </h2>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-300 mb-8">
           Engineering expertise for complex property challenges.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -137,7 +137,7 @@ export default function PropertyServicesPage() {
           ].map((item) => (
             <div
               key={item}
-              className="flex items-center gap-3 bg-dark-card border border-dark-border rounded-lg p-4"
+              className="flex items-center gap-3 bg-white/[0.04] border border-white/10 rounded-lg p-4"
             >
               <svg className="w-5 h-5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -149,12 +149,12 @@ export default function PropertyServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Need Property Work Done?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Whether it&apos;s a quick repair, a deep clean, or a technical
             assessment — we&apos;ve got you covered. One call, done right.
           </p>
@@ -167,7 +167,7 @@ export default function PropertyServicesPage() {
             </Link>
             <a
               href="tel:3215862121"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Call (321) 586-2121
             </a>

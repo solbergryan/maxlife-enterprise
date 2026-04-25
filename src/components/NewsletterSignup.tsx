@@ -38,13 +38,13 @@ export default function NewsletterSignup() {
   };
 
   return (
-    <section className="border-y border-dark-border bg-dark-card/50">
+    <section className="border-y border-white/10 bg-white/[0.03]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Get <span className="text-gold">Market Insights</span> Delivered
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-300 mb-8">
             Weekly Central Florida CRE updates — cap rates, new listings, market
             trends, and investment opportunities. No spam, unsubscribe anytime.
           </p>
@@ -79,7 +79,7 @@ export default function NewsletterSignup() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="flex-1 bg-dark border border-dark-border rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold/60 transition-colors"
+                className="flex-1 bg-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold/60 transition-colors"
               />
               <button
                 type="submit"

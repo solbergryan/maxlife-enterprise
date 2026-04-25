@@ -18,7 +18,7 @@ export default function InvestorAccessPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-businessman-man-stock-broker-real-estate-481113.webp"
           alt="MaxLife Realty investor access portal"
@@ -36,7 +36,7 @@ export default function InvestorAccessPage() {
             Get Exclusive Access to{" "}
             <span className="text-gold">Off-Market Commercial Deals</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Join our investor network and receive curated commercial real estate
             opportunities in Central Florida and the Space Coast before they hit
             the open market.
@@ -82,7 +82,7 @@ export default function InvestorAccessPage() {
                       <h3 className="text-white font-semibold mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                      <p className="text-gray-300 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -114,7 +114,7 @@ export default function InvestorAccessPage() {
                 ].map((item) => (
                   <div
                     key={item.step}
-                    className="flex items-start gap-4 bg-dark-card border border-dark-border rounded-lg p-4"
+                    className="flex items-start gap-4 bg-white/[0.04] border border-white/10 rounded-lg p-4"
                   >
                     <span className="w-8 h-8 rounded-full bg-gold/20 text-gold font-bold flex items-center justify-center shrink-0 text-sm">
                       {item.step}
@@ -123,7 +123,7 @@ export default function InvestorAccessPage() {
                       <h3 className="text-white font-semibold mb-0.5">
                         {item.title}
                       </h3>
-                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                      <p className="text-gray-300 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -133,11 +133,11 @@ export default function InvestorAccessPage() {
 
           {/* Right — Form */}
           <div>
-            <div className="bg-dark-card border border-gold/20 rounded-xl p-8 sticky top-24">
+            <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 sticky top-24">
               <h2 className="text-xl font-bold text-white mb-2">
                 Get Started
               </h2>
-              <p className="text-gray-400 text-sm mb-6">
+              <p className="text-gray-300 text-sm mb-6">
                 Fill out the form below and we&apos;ll add you to our investor
                 network. No spam — just real deals.
               </p>
@@ -148,12 +148,12 @@ export default function InvestorAccessPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Prefer to Talk First?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Have questions about our investor network or a specific deal?
             Let&apos;s connect.
           </p>

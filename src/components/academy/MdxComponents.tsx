@@ -109,7 +109,7 @@ function code(props: ComponentProps<"code">) {
   return (
     <code
       {...props}
-      className="rounded bg-dark-card px-1.5 py-0.5 font-mono text-sm text-gold border border-dark-border"
+      className="rounded bg-white/[0.04] px-1.5 py-0.5 font-mono text-sm text-gold border border-white/10"
     />
   );
 }
@@ -118,7 +118,7 @@ function pre(props: ComponentProps<"pre">) {
   return (
     <pre
       {...props}
-      className="my-6 overflow-x-auto rounded-xl border border-dark-border bg-dark-card p-5 font-mono text-sm text-gray-200 leading-relaxed"
+      className="my-6 overflow-x-auto rounded-xl border border-white/10 bg-white/[0.04] p-5 font-mono text-sm text-gray-200 leading-relaxed"
     />
   );
 }
@@ -134,27 +134,27 @@ function blockquote(props: ComponentProps<"blockquote">) {
 
 function table(props: ComponentProps<"table">) {
   return (
-    <div className="my-6 overflow-x-auto rounded-xl border border-dark-border">
+    <div className="my-6 overflow-x-auto rounded-xl border border-white/10">
       <table {...props} className="w-full border-collapse text-sm" />
     </div>
   );
 }
 
 function thead(props: ComponentProps<"thead">) {
-  return <thead {...props} className="bg-dark-card" />;
+  return <thead {...props} className="bg-white/[0.04]" />;
 }
 
 function th(props: ComponentProps<"th">) {
   return (
     <th
       {...props}
-      className="border-b border-dark-border px-4 py-3 text-left font-semibold text-gold"
+      className="border-b border-white/10 px-4 py-3 text-left font-semibold text-gold"
     />
   );
 }
 
 function td(props: ComponentProps<"td">) {
-  return <td {...props} className="border-b border-dark-border px-4 py-3 text-gray-300" />;
+  return <td {...props} className="border-b border-white/10 px-4 py-3 text-gray-300" />;
 }
 
 function a(props: ComponentProps<"a">) {
@@ -173,7 +173,7 @@ function a(props: ComponentProps<"a">) {
 }
 
 function hr(props: ComponentProps<"hr">) {
-  return <hr {...props} className="my-10 border-dark-border" />;
+  return <hr {...props} className="my-10 border-white/10" />;
 }
 
 export const mdxComponents = {

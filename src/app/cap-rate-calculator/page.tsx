@@ -43,7 +43,7 @@ export default function CapRateCalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Investor Tools
@@ -51,7 +51,7 @@ export default function CapRateCalculatorPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Cap Rate <span className="text-gold">Calculator</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-300 text-lg leading-relaxed">
             Calculate capitalization rate, implied value, or required NOI for
             any commercial real estate investment. Instant calculations with
             2026 Florida cap rate reference by asset class.
@@ -76,7 +76,7 @@ export default function CapRateCalculatorPage() {
             real estate investments — essentially the unlevered yield of the
             property.
           </p>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <code className="text-gold text-sm block">
               Cap Rate = NOI ÷ Purchase Price
             </code>
@@ -108,7 +108,7 @@ export default function CapRateCalculatorPage() {
             ].map((item) => (
               <li
                 key={item.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-4"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-4"
               >
                 <p className="text-gold font-semibold text-sm mb-1">
                   {item.title}
@@ -136,12 +136,12 @@ export default function CapRateCalculatorPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready for a <span className="text-gold">Full Deal Analysis</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Cap rate is just the start. Use our Deal Analyzer for a complete
             institutional-grade underwriting with IRR, DSCR, cash-on-cash, and
             sensitivity analysis.
@@ -155,7 +155,7 @@ export default function CapRateCalculatorPage() {
             </Link>
             <Link
               href="/blog/cap-rate-vs-cash-on-cash-return"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Cap Rate vs Cash-on-Cash
             </Link>

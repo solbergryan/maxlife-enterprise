@@ -50,7 +50,7 @@ export default function LendersPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-bridge-business-future-training-skyline-development-1916757.webp"
           alt="Central Florida commercial real estate lender network"
@@ -67,7 +67,7 @@ export default function LendersPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Commercial Real Estate <span className="text-gold">Lenders</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             A curated directory of {lenders.length}+ commercial real estate
             lenders active in Florida — from local community banks to national
             CMBS shops. Find the right capital source for your next deal.
@@ -89,7 +89,7 @@ export default function LendersPage() {
       </section>
 
       {/* How to choose a lender */}
-      <section className="border-b border-dark-border bg-dark py-14">
+      <section className="border-b border-white/10 bg-dark py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-white mb-8">
             Which Lender Type Is Right for Your Deal?
@@ -129,7 +129,7 @@ export default function LendersPage() {
             ].map((item) => (
               <div
                 key={item.scenario}
-                className="rounded-xl border border-dark-border bg-dark-card p-5"
+                className="rounded-xl border border-white/10 bg-white/[0.04] p-5"
               >
                 <h3 className="mb-2 text-sm font-semibold text-white">
                   {item.scenario}
@@ -137,7 +137,7 @@ export default function LendersPage() {
                 <p className="mb-2 text-xs font-medium text-gold">
                   Best fit: {item.best}
                 </p>
-                <p className="text-xs text-gray-400 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-relaxed">
                   {item.why}
                 </p>
               </div>
@@ -156,7 +156,7 @@ export default function LendersPage() {
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
               CRE Lenders by Type
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-gray-400">
+            <p className="mx-auto mt-3 max-w-2xl text-gray-300">
               Browse lenders by category. Each section covers a different capital
               source — click any lender to visit their CRE lending page.
             </p>
@@ -170,7 +170,7 @@ export default function LendersPage() {
                 className="scroll-mt-24"
               >
                 {/* Category header */}
-                <div className="mb-6 rounded-2xl border border-dark-border bg-dark-card p-6">
+                <div className="mb-6 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-3 mb-2">
@@ -184,7 +184,7 @@ export default function LendersPage() {
                           {typeLenders.length !== 1 ? "s" : ""}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-400 max-w-2xl">
+                      <p className="text-sm text-gray-300 max-w-2xl">
                         {lenderTypeDescriptions[type]}
                       </p>
                     </div>
@@ -199,7 +199,7 @@ export default function LendersPage() {
                       href={lender.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex flex-col rounded-xl border border-dark-border bg-dark-card p-5 transition-all hover:border-gold/60 hover:bg-dark-hover"
+                      className="group flex flex-col rounded-xl border border-white/10 bg-white/[0.04] p-5 transition-all hover:border-gold/60 hover:bg-white/10"
                     >
                       <div className="flex items-start justify-between gap-3 mb-3">
                         <h3 className="font-semibold text-white group-hover:text-gold transition-colors">
@@ -226,7 +226,7 @@ export default function LendersPage() {
                         </p>
                       )}
 
-                      <p className="mb-4 text-sm text-gray-400 leading-relaxed flex-grow">
+                      <p className="mb-4 text-sm text-gray-300 leading-relaxed flex-grow">
                         {lender.description}
                       </p>
 
@@ -235,20 +235,20 @@ export default function LendersPage() {
                         {lender.loanTypes.slice(0, 4).map((lt) => (
                           <span
                             key={lt}
-                            className="rounded-full border border-dark-border bg-dark px-2 py-0.5 text-xs text-gray-500"
+                            className="rounded-full border border-white/10 bg-dark px-2 py-0.5 text-xs text-gray-500"
                           >
                             {lt}
                           </span>
                         ))}
                         {lender.loanTypes.length > 4 && (
-                          <span className="rounded-full border border-dark-border bg-dark px-2 py-0.5 text-xs text-gray-500">
+                          <span className="rounded-full border border-white/10 bg-dark px-2 py-0.5 text-xs text-gray-500">
                             +{lender.loanTypes.length - 4}
                           </span>
                         )}
                       </div>
 
                       {/* Loan range + markets */}
-                      <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mt-auto pt-3 border-t border-dark-border">
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mt-auto pt-3 border-t border-white/10">
                         {lender.minLoan && lender.maxLoan && (
                           <span>
                             {lender.minLoan} – {lender.maxLoan}
@@ -269,7 +269,7 @@ export default function LendersPage() {
       </section>
 
       {/* Loan comparison table */}
-      <section className="border-y border-dark-border bg-dark-card/50 py-14">
+      <section className="border-y border-white/10 bg-white/[0.03] py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-white mb-8">
             CRE Loan Types at a Glance
@@ -277,7 +277,7 @@ export default function LendersPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-dark-border text-left">
+                <tr className="border-b border-white/10 text-left">
                   <th className="py-3 pr-4 font-semibold text-gold">
                     Loan Type
                   </th>
@@ -291,7 +291,7 @@ export default function LendersPage() {
                   <th className="py-3 font-semibold text-gold">Best For</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-400">
+              <tbody className="text-gray-300">
                 {[
                   {
                     type: "Bank Permanent",
@@ -352,7 +352,7 @@ export default function LendersPage() {
                 ].map((row) => (
                   <tr
                     key={row.type}
-                    className="border-b border-dark-border/50"
+                    className="border-b border-white/10/50"
                   >
                     <td className="py-3 pr-4 font-medium text-white">
                       {row.type}
@@ -379,7 +379,7 @@ export default function LendersPage() {
           <h2 className="text-2xl font-bold text-white mb-4">
             Need Help Finding the Right Lender?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             We work with lenders across every capital source to match you with
             the best financing for your deal. Contact us for a free consultation
             on your CRE financing options.

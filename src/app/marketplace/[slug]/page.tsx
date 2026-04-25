@@ -46,7 +46,7 @@ export async function generateMetadata({
 function Stat({ label, value }: { label: string; value: string }) {
   if (value === "—" || value === "") return null;
   return (
-    <div className="border border-dark-border rounded-lg p-4">
+    <div className="border border-white/10 rounded-lg p-4">
       <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
         {label}
       </p>
@@ -152,10 +152,10 @@ export default async function ListingDetailPage({ params }: PageProps) {
             <span className="text-gold font-semibold uppercase tracking-wider bg-gold/10 px-2.5 py-1 rounded">
               {PROPERTY_TYPE_LABELS[l.property_type]}
             </span>
-            <span className="text-gray-400 border border-dark-border px-2.5 py-1 rounded">
+            <span className="text-gray-300 border border-white/10 px-2.5 py-1 rounded">
               {TRANSACTION_TYPE_LABELS[l.transaction_type]}
             </span>
-            <span className="text-gray-400 border border-dark-border px-2.5 py-1 rounded">
+            <span className="text-gray-300 border border-white/10 px-2.5 py-1 rounded">
               {LISTING_TYPE_LABELS[l.listing_type]}
             </span>
             {l.status !== "active" && (
@@ -167,7 +167,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             {l.title}
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             {l.street_address ? `${l.street_address} — ` : ""}
             {locale}
             {l.county ? `, ${l.county} County` : ""}
@@ -177,7 +177,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
         {/* Photo gallery or placeholder */}
         {l.photo_urls.length > 0 ? (
           <div className="mb-8">
-            <div className="relative h-64 sm:h-96 bg-dark border border-dark-border rounded-xl overflow-hidden">
+            <div className="relative h-64 sm:h-96 bg-dark border border-white/10 rounded-xl overflow-hidden">
               <Image
                 src={l.photo_urls[0]}
                 alt={l.title}
@@ -192,7 +192,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
                 {l.photo_urls.slice(1).map((url, i) => (
                   <div
                     key={i}
-                    className="relative aspect-square w-full overflow-hidden rounded-md border border-dark-border"
+                    className="relative aspect-square w-full overflow-hidden rounded-md border border-white/10"
                   >
                     <Image
                       src={url}
@@ -207,7 +207,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
             )}
           </div>
         ) : (
-          <div className="h-64 sm:h-80 bg-gradient-to-br from-gold/10 via-dark-card to-navy-dark/40 border border-dark-border rounded-xl mb-8 flex items-center justify-center">
+          <div className="h-64 sm:h-80 bg-gradient-to-br from-gold/10 via-dark-card to-navy-dark/40 border border-white/10 rounded-xl mb-8 flex items-center justify-center">
             <svg className="w-20 h-20 text-gold/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M9 14h6M9 18h6" />
             </svg>
@@ -218,7 +218,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
           {/* Main column */}
           <div className="lg:col-span-2 space-y-8">
             {/* Price + headline stats */}
-            <div className="border border-dark-border rounded-xl p-6 bg-dark-card">
+            <div className="border border-white/10 rounded-xl p-6 bg-white/[0.04]">
               <p className="text-gray-500 text-sm mb-1">Asking Price</p>
               <p className="text-gold text-4xl font-bold mb-6">
                 {formatPrice(l.price)}
@@ -239,7 +239,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
                 <h2 className="text-xl font-bold text-white mb-3">
                   Property Description
                 </h2>
-                <p className="text-gray-400 leading-relaxed whitespace-pre-wrap">
+                <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">
                   {l.description}
                 </p>
               </section>
@@ -251,7 +251,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
                 <h2 className="text-xl font-bold text-white mb-3">Highlights</h2>
                 <ul className="space-y-2">
                   {l.highlights.map((h, i) => (
-                    <li key={i} className="text-gray-400 flex gap-2">
+                    <li key={i} className="text-gray-300 flex gap-2">
                       <span className="text-gold">•</span>
                       <span>{h}</span>
                     </li>
@@ -264,7 +264,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
             {l.upside_potential && (
               <section>
                 <h2 className="text-xl font-bold text-white mb-3">Upside Potential</h2>
-                <p className="text-gray-400 leading-relaxed whitespace-pre-wrap">
+                <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">
                   {l.upside_potential}
                 </p>
               </section>
@@ -320,7 +320,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
 
           {/* Sidebar — contact */}
           <aside className="lg:col-span-1">
-            <div className="border border-dark-border rounded-xl p-6 bg-dark-card lg:sticky lg:top-6">
+            <div className="border border-white/10 rounded-xl p-6 bg-white/[0.04] lg:sticky lg:top-6">
               <p className="text-gray-500 text-xs uppercase tracking-wider mb-2">
                 Listed By
               </p>
@@ -328,7 +328,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
                 {l.contact_name}
               </p>
               {l.contact_company && (
-                <p className="text-gray-400 text-sm mb-4">{l.contact_company}</p>
+                <p className="text-gray-300 text-sm mb-4">{l.contact_company}</p>
               )}
               <p className="text-gold text-xs uppercase tracking-wider mb-3 mt-4">
                 {LISTING_TYPE_LABELS[l.listing_type]}
@@ -352,7 +352,7 @@ export default async function ListingDetailPage({ params }: PageProps) {
         </div>
 
         {/* Footer disclaimer */}
-        <div className="mt-16 border-t border-dark-border pt-8 text-gray-600 text-xs leading-relaxed">
+        <div className="mt-16 border-t border-white/10 pt-8 text-gray-600 text-xs leading-relaxed">
           <p>
             Listings on the MaxLife Marketplace are user-submitted and have not
             been verified by MaxLife Realty. Buyers should conduct their own due

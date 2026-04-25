@@ -37,7 +37,7 @@ export default function ROICalculator() {
   const hasInputs = price > 0 && noi > 0;
 
   const inputClass =
-    "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
+    "w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
 
   function formatCurrency(val: number): string {
     return new Intl.NumberFormat("en-US", {
@@ -48,7 +48,7 @@ export default function ROICalculator() {
   }
 
   return (
-    <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+    <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
       <h3 className="text-white text-xl font-semibold mb-6">
         Investment ROI Calculator
       </h3>
@@ -56,7 +56,7 @@ export default function ROICalculator() {
       {/* Inputs */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         <div>
-          <label className="text-gray-400 text-xs uppercase tracking-wider mb-1 block">
+          <label className="text-gray-300 text-xs uppercase tracking-wider mb-1 block">
             Purchase Price ($)
           </label>
           <input
@@ -70,7 +70,7 @@ export default function ROICalculator() {
           />
         </div>
         <div>
-          <label className="text-gray-400 text-xs uppercase tracking-wider mb-1 block">
+          <label className="text-gray-300 text-xs uppercase tracking-wider mb-1 block">
             Annual NOI ($)
           </label>
           <input
@@ -84,7 +84,7 @@ export default function ROICalculator() {
           />
         </div>
         <div>
-          <label className="text-gray-400 text-xs uppercase tracking-wider mb-1 block">
+          <label className="text-gray-300 text-xs uppercase tracking-wider mb-1 block">
             Down Payment (%)
           </label>
           <input
@@ -98,7 +98,7 @@ export default function ROICalculator() {
           />
         </div>
         <div>
-          <label className="text-gray-400 text-xs uppercase tracking-wider mb-1 block">
+          <label className="text-gray-300 text-xs uppercase tracking-wider mb-1 block">
             Interest Rate (%)
           </label>
           <input
@@ -113,7 +113,7 @@ export default function ROICalculator() {
           />
         </div>
         <div>
-          <label className="text-gray-400 text-xs uppercase tracking-wider mb-1 block">
+          <label className="text-gray-300 text-xs uppercase tracking-wider mb-1 block">
             Loan Term (Years)
           </label>
           <input
@@ -130,8 +130,8 @@ export default function ROICalculator() {
 
       {/* Results */}
       {hasInputs ? (
-        <div className="border-t border-dark-border pt-6">
-          <h4 className="text-gray-400 text-xs uppercase tracking-wider mb-4">
+        <div className="border-t border-white/10 pt-6">
+          <h4 className="text-gray-300 text-xs uppercase tracking-wider mb-4">
             Investment Analysis
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -178,7 +178,7 @@ export default function ROICalculator() {
           </div>
 
           {/* Formulas */}
-          <div className="mt-6 bg-dark/50 border border-dark-border rounded-lg p-4 text-xs text-gray-500 space-y-1">
+          <div className="mt-6 bg-dark/50 border border-white/10 rounded-lg p-4 text-xs text-gray-500 space-y-1">
             <p>
               Cap Rate = NOI / Purchase Price = {formatCurrency(noi)} /{" "}
               {formatCurrency(price)} = {capRate.toFixed(2)}%
@@ -191,7 +191,7 @@ export default function ROICalculator() {
           </div>
         </div>
       ) : (
-        <div className="border-t border-dark-border pt-6 text-center text-gray-500 text-sm">
+        <div className="border-t border-white/10 pt-6 text-center text-gray-500 text-sm">
           Enter a purchase price and annual NOI to see your investment analysis.
         </div>
       )}

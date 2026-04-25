@@ -50,7 +50,7 @@ export function LoginForm({ nextPath }: LoginFormProps) {
       <div className="text-center">
         <div className="mb-4 text-4xl">📧</div>
         <h2 className="mb-2 text-xl font-bold text-white">Check your email</h2>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-300">
           We sent a sign-in link to <strong className="text-white">{email}</strong>.
           Click the link to complete sign-in.
         </p>
@@ -72,7 +72,7 @@ export function LoginForm({ nextPath }: LoginFormProps) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
-            className="w-full rounded-lg border border-dark-border bg-dark px-4 py-2.5 text-white placeholder:text-gray-600 focus:border-gold focus:outline-none"
+            className="w-full rounded-lg border border-white/10 bg-dark px-4 py-2.5 text-white placeholder:text-gray-600 focus:border-gold focus:outline-none"
           />
         </div>
         <button
@@ -96,7 +96,7 @@ export function LoginForm({ nextPath }: LoginFormProps) {
           <button
             type="button"
             onClick={signInWithGoogle}
-            className="flex w-full items-center justify-center gap-2 rounded-lg border border-dark-border bg-dark px-4 py-2.5 font-medium text-white transition-colors hover:border-gold"
+            className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/10 bg-dark px-4 py-2.5 font-medium text-white transition-colors hover:border-gold"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24">
               <path

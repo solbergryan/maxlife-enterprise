@@ -7,7 +7,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-card border-t border-dark-border">
+    <footer className="bg-white/[0.04] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="text-gold font-bold text-xl">MaxLife</span>
               <span className="text-white font-light text-xl">Realty</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-3">
+            <p className="text-gray-300 text-sm leading-relaxed mb-3">
               Florida commercial real estate brokerage, NNN investments, land
               development, and investment services statewide — headquartered in
               Orlando and serving Tampa Bay, Jacksonville, South Florida,
@@ -61,7 +61,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -90,7 +90,7 @@ export default function Footer() {
           {/* Resources + Contact */}
           <div>
             <h3 className="text-gold font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -129,7 +129,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block text-gray-400 hover:text-gold text-sm transition-colors"
+                  className="block text-gray-300 hover:text-gold text-sm transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -138,7 +138,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-dark-border mt-8 pt-8 text-center text-gray-500 text-xs leading-relaxed space-y-2">
+        <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-500 text-xs leading-relaxed space-y-2">
           <p>
             &copy; {new Date().getFullYear()}{" "}MaxLife Realty LLC. All rights
             reserved. &middot;{" "}

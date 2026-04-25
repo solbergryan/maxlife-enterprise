@@ -108,7 +108,7 @@ export default function SearchBar({
           onKeyDown={onKeyDown}
           placeholder={placeholder}
           aria-label="Search MaxLife"
-          className="w-full bg-dark-card/80 border border-dark-border rounded-md pl-9 pr-8 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold/60 focus:ring-1 focus:ring-gold/40 transition-colors"
+          className="w-full bg-white/[0.04]/80 border border-white/10 rounded-md pl-9 pr-8 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold/60 focus:ring-1 focus:ring-gold/40 transition-colors"
         />
         {query && (
           <button
@@ -138,7 +138,7 @@ export default function SearchBar({
       </div>
 
       {showDropdown && (
-        <div className="absolute left-0 right-0 mt-2 bg-dark-card border border-dark-border rounded-lg shadow-2xl overflow-hidden z-50 max-h-[70vh] overflow-y-auto">
+        <div className="absolute left-0 right-0 mt-2 bg-white/[0.04] border border-white/10 rounded-lg shadow-2xl overflow-hidden z-50 max-h-[70vh] overflow-y-auto">
           {results.length === 0 ? (
             <div className="px-4 py-6 text-center text-sm text-gray-500">
               No results for{" "}
@@ -157,8 +157,8 @@ export default function SearchBar({
                     onMouseEnter={() => setActiveIdx(idx)}
                     className={`block px-4 py-3 transition-colors ${
                       idx === activeIdx
-                        ? "bg-dark-hover"
-                        : "hover:bg-dark-hover/60"
+                        ? "bg-white/10"
+                        : "hover:bg-white/10/60"
                     }`}
                   >
                     <div className="flex items-start justify-between gap-3">
@@ -166,7 +166,7 @@ export default function SearchBar({
                         <p className="text-sm font-medium text-white truncate">
                           {item.title}
                         </p>
-                        <p className="text-xs text-gray-400 truncate mt-0.5">
+                        <p className="text-xs text-gray-300 truncate mt-0.5">
                           {item.description}
                         </p>
                       </div>
@@ -179,7 +179,7 @@ export default function SearchBar({
               ))}
             </ul>
           )}
-          <div className="border-t border-dark-border px-4 py-2 text-[10px] text-gray-500 flex justify-between">
+          <div className="border-t border-white/10 px-4 py-2 text-[10px] text-gray-500 flex justify-between">
             <span>
               <kbd className="bg-dark-border px-1 rounded">↑</kbd>{" "}
               <kbd className="bg-dark-border px-1 rounded">↓</kbd> navigate

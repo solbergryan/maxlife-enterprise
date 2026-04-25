@@ -185,7 +185,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-building-to-build-framework-construction-site-1210677.webp"
           alt="Central Florida land for development with construction framework"
@@ -203,10 +203,10 @@ export default function CentralFloridaLandForDevelopmentPage() {
             Development-Ready Land in Central Florida&apos;s{" "}
             <span className="text-gold">Growth Corridors</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg mb-6">
+          <p className="text-gray-300 max-w-3xl text-lg mb-6">
             Entitled and pre-entitled parcels in the path of progress
           </p>
-          <p className="text-gray-400 max-w-3xl leading-relaxed mb-8">
+          <p className="text-gray-300 max-w-3xl leading-relaxed mb-8">
             Central Florida is adding more than 1,500 new residents every week,
             backed by billions in infrastructure investment and one of the largest
             development pipelines in the Southeast. For land investors, that
@@ -242,7 +242,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
           Central Florida Growth Corridors
         </h2>
-        <p className="text-gray-400 max-w-3xl mb-10 leading-relaxed">
+        <p className="text-gray-300 max-w-3xl mb-10 leading-relaxed">
           These five corridors represent the highest-velocity land markets in
           the Orlando metro. Each benefits from a combination of transportation
           investment, utility expansion, and rooftop demand that drives land
@@ -252,7 +252,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
           {growthCorridors.map((corridor) => (
             <div
               key={corridor.name}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
             >
               <h3 className="text-white text-xl font-semibold mb-1">
                 {corridor.name}
@@ -264,7 +264,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
                 <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                   Key Drivers
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {corridor.drivers}
                 </p>
               </div>
@@ -272,7 +272,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
                 <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                   Development Status
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {corridor.status}
                 </p>
               </div>
@@ -282,7 +282,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
       </section>
 
       {/* Land Types Available */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Inventory Categories
@@ -290,7 +290,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Land Types Available
           </h2>
-          <p className="text-gray-400 max-w-3xl mb-10 leading-relaxed">
+          <p className="text-gray-300 max-w-3xl mb-10 leading-relaxed">
             We source land across the entitlement spectrum, from shovel-ready
             lots to raw acreage positioned for long-term appreciation.
           </p>
@@ -298,15 +298,15 @@ export default function CentralFloridaLandForDevelopmentPage() {
             {landTypes.map((land) => (
               <div
                 key={land.type}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-white text-xl font-semibold mb-3">
                   {land.type}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {land.description}
                 </p>
-                <div className="bg-dark rounded-lg px-4 py-3 border border-dark-border">
+                <div className="bg-dark rounded-lg px-4 py-3 border border-white/10">
                   <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                     Typical Pricing
                   </p>
@@ -328,7 +328,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
           Infrastructure Triggers Driving Land Value
         </h2>
-        <p className="text-gray-400 max-w-3xl mb-10 leading-relaxed">
+        <p className="text-gray-300 max-w-3xl mb-10 leading-relaxed">
           Land values in Central Florida do not rise in a vacuum. These are the
           specific infrastructure investments that compress timelines, unlock
           entitlements, and drive per-acre appreciation.
@@ -337,13 +337,13 @@ export default function CentralFloridaLandForDevelopmentPage() {
           {infrastructureTriggers.map((trigger) => (
             <div
               key={trigger.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
             >
               <div className="mb-4">{trigger.icon}</div>
               <h3 className="text-white text-lg font-semibold mb-2">
                 {trigger.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {trigger.description}
               </p>
             </div>
@@ -352,7 +352,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
       </section>
 
       {/* Market Stats */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             By the Numbers
@@ -364,7 +364,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
             {marketStats.map((item) => (
               <div
                 key={item.label}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
               >
                 <p className="text-gold text-2xl sm:text-3xl font-bold mb-2">
                   {item.stat}
@@ -382,11 +382,11 @@ export default function CentralFloridaLandForDevelopmentPage() {
       {/* Lead Capture */}
       <section id="inventory" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-dark-card border border-dark-border rounded-xl p-8">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-2 text-center">
               Get Land Inventory
             </h2>
-            <p className="text-gray-400 text-center mb-6">
+            <p className="text-gray-300 text-center mb-6">
               Tell us what you are looking for and we will send you current
               parcels that match your criteria across Central Florida&apos;s
               growth corridors.
@@ -401,7 +401,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
       </section>
 
       {/* Related Resources */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl font-bold text-white mb-8">
             Related Resources
@@ -409,7 +409,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               href="/blog/central-florida-land-development"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group"
             >
               <p className="text-gold text-xs uppercase tracking-wider mb-2">
                 Blog
@@ -424,7 +424,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
             </Link>
             <Link
               href="/markets/lake-county-commercial-land"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group"
             >
               <p className="text-gold text-xs uppercase tracking-wider mb-2">
                 Market
@@ -439,7 +439,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
             </Link>
             <Link
               href="/services/land-development"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group"
             >
               <p className="text-gold text-xs uppercase tracking-wider mb-2">
                 Service
@@ -454,7 +454,7 @@ export default function CentralFloridaLandForDevelopmentPage() {
             </Link>
             <Link
               href="/deal-analyzer"
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group"
             >
               <p className="text-gold text-xs uppercase tracking-wider mb-2">
                 Tool

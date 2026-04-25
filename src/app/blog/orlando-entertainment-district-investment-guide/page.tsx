@@ -27,7 +27,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+      <section className="relative overflow-hidden border-b border-white/10 aspect-[21/6]">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-adidas-atlantic-city-shopping-fisheye-store-458043.webp"
           alt="Orlando entertainment district retail and shopping storefronts"
@@ -75,7 +75,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             Orlando&apos;s Entertainment District: A CRE Investment Guide for
             the Disney, Universal &amp; I-Drive Corridor
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             The definitive guide to commercial real estate investment
             opportunities in the nation&apos;s top tourist destination — from
             Epic Universe to Disney Springs, International Drive to Kissimmee,
@@ -90,7 +90,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando: The Capital of American Tourism and a CRE Powerhouse
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando welcomed more than 75 million visitors in 2025, reclaiming
               its position as the most-visited destination in the United States.
               That staggering volume of foot traffic does more than fill theme
@@ -99,7 +99,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               venues, and mixed-use developments that generate billions in
               annual revenue.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For commercial real estate investors, the Orlando entertainment
               corridor represents a unique asset class. Unlike traditional
               markets driven solely by population and employment, this corridor
@@ -109,7 +109,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               appreciation tied to the billions of dollars that major operators
               continue to invest in the region.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               This guide breaks down every major submarket and property type
               within Orlando&apos;s entertainment district, providing
               institutional-quality analysis for investors looking to deploy
@@ -126,7 +126,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4 text-center"
                 >
                   <p className="text-gold font-bold text-xl mb-1">
                     {item.metric}
@@ -142,7 +142,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Epic Universe &amp; The Universal Transformation
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Universal&apos;s Epic Universe opened in May 2025 as the largest
               and most ambitious theme park built in Central Florida in over two
               decades. The $6.5 billion project added a third major gate to the
@@ -151,7 +151,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               on-site hotels, and a massive entertainment and dining complex
               that functions as its own commercial district.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The impact on surrounding real estate has been transformative. The
               park sits on a 750-acre campus south of Sand Lake Road, and the
               ripple effect on adjacent properties has been dramatic. Land
@@ -163,7 +163,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Investment Opportunities Near Epic Universe
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The area surrounding Epic Universe — particularly along Universal
               Boulevard and Destination Parkway — is experiencing a wave of new
               hotel, restaurant, and retail development. National chains and
@@ -171,7 +171,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               rates for tourist-serving retail to $35-$55 per square foot NNN in
               prime locations.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For investors, the opportunity extends beyond new construction.
               Existing properties in the Universal corridor that were previously
               considered secondary are now benefiting from dramatically
@@ -206,12 +206,12 @@ export default function OrlandoEntertainmentDistrictGuide() {
               ].map((item) => (
                 <div
                   key={item.opportunity}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.opportunity}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.detail}</p>
+                  <p className="text-gray-300 text-xs">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -222,7 +222,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Walt Disney World&apos;s Continued Investment
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Walt Disney World remains the gravitational center of Orlando&apos;s
               tourism economy. Disney has committed to a multi-billion dollar
               expansion plan over the next decade, including new attractions at
@@ -231,7 +231,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               sustained capital investment ensures that the Disney corridor
               remains a premier CRE market for decades to come.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Disney Springs alone represents one of the most successful
               open-air retail and dining destinations in the country, attracting
               visitors who may not even enter the theme parks. The 120-acre
@@ -243,7 +243,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               The Celebration &amp; Disney-Adjacent Ecosystem
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Disney-planned community of Celebration, along with the
               broader Osceola County corridor south of Disney property, has
               evolved into a significant commercial submarket. Medical
@@ -257,7 +257,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Impact on Osceola County
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Osceola County continues to be one of the fastest-growing
               counties in Florida, and Disney&apos;s ongoing investment is a
               major catalyst. Residential development in communities like
@@ -275,7 +275,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The International Drive Corridor
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               International Drive — universally known as I-Drive — is the spine
               of Orlando&apos;s tourism economy outside the theme parks. This
               11-mile corridor stretches from the Premium Outlets at the north
@@ -284,7 +284,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               restaurants, and some of the highest-traffic retail locations in
               Central Florida.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               I-Drive is not a static market. The I-Drive 2040 vision plan,
               adopted by Orange County, calls for a transformation of the
               corridor from an auto-centric tourist strip into a more walkable,
@@ -298,7 +298,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               What to Look For on I-Drive
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The most compelling I-Drive investments share common
               characteristics: high visibility, proximity to anchor
               destinations (Convention Center, SeaWorld, ICON Park, or the
@@ -307,7 +307,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               below-market rents, and vacant parcels zoned for mixed-use
               development are the primary targets.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lease rates on I-Drive vary significantly by location. Prime
               tourist-facing retail near ICON Park or the Convention Center can
               command $40-$60 per square foot, while secondary locations further
@@ -330,7 +330,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4 text-center"
                 >
                   <p className="text-gold font-bold text-lg mb-1">
                     {item.metric}
@@ -346,7 +346,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               US-192 / Kissimmee Tourist Corridor
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               US-192, also known as Irlo Bronson Memorial Highway, serves as the
               primary east-west gateway to Walt Disney World from the south and
               east. This corridor runs through the heart of Kissimmee and is
@@ -359,7 +359,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Tourist Retail Evolution
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The character of US-192 is evolving. Once dominated by souvenir
               shops and budget motels, the corridor is increasingly attracting
               national restaurant chains, convenience-anchored retail, and
@@ -373,7 +373,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Vacation Rental Conversions
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Kissimmee area is the vacation rental capital of Florida. The
               proliferation of short-term rental communities south of US-192
               has created a secondary demand engine for commercial services —
@@ -386,7 +386,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Value-Add Opportunities in Aging Strip Centers
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               US-192 is home to dozens of strip retail centers built in the
               1990s and early 2000s that are now approaching the end of their
               first lifecycle. Many have deferred maintenance, below-market
@@ -398,11 +398,11 @@ export default function OrlandoEntertainmentDistrictGuide() {
           </section>
 
           {/* ── CTA #1 ── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 my-8 text-center">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 my-8 text-center">
             <h3 className="text-white text-xl font-bold mb-2">
               Investing in Orlando&apos;s Tourism Corridor?
             </h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4">
               We source off-market deals in the entertainment district —
               hotels, retail, NNN, and development sites near the parks.
             </p>
@@ -427,7 +427,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Convention Center District
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orange County Convention Center (OCCC) is the second-largest
               convention facility in the United States, with over 2.1 million
               square feet of exhibit space. It hosts more than 200 events
@@ -437,7 +437,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               different calendar than the theme parks, providing a counter-
               cyclical boost to the surrounding commercial real estate market.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orange County has approved a major expansion of the Convention
               Center, adding new exhibit halls, meeting space, and improved
               connectivity to the surrounding transportation network. This
@@ -450,7 +450,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Impact on Surrounding CRE
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Properties within walking distance or a short shuttle ride of the
               Convention Center command premium rates during major events. Hotels
               in the Convention Center district see occupancy spikes of 15-25%
@@ -466,7 +466,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Hospitality Investment Opportunities
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s hotel market is the largest in the United States
               outside of Las Vegas, with over 150,000 rooms across the metro
               area. This scale creates a deep and liquid investment market with
@@ -477,7 +477,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Hotel &amp; Motel Repositioning
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               One of the most compelling strategies in the Orlando entertainment
               corridor is acquiring older, independently operated hotels and
               repositioning them through renovation and rebranding. Many of
@@ -493,7 +493,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Branded vs. Independent
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The decision to flag a hotel or operate independently depends on
               location and target market. Properties near the parks benefit
               significantly from brand affiliation and the booking channel access
@@ -506,7 +506,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Extended Stay Demand
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Extended stay is one of the fastest-growing segments in
               Orlando&apos;s hospitality market. The demand is driven by
               multiple sources: theme park and construction workers on
@@ -520,7 +520,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Short-Term Rental Regulations &amp; Opportunities
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The regulatory landscape for short-term rentals in the Orlando
               area is evolving. Orange County has implemented registration
               requirements and zoning restrictions, while Osceola County
@@ -540,7 +540,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4 text-center"
                 >
                   <p className="text-gold font-bold text-lg mb-1">
                     {item.metric}
@@ -556,7 +556,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Retail &amp; Restaurant Investment Near the Parks
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Tourist-serving retail and restaurant properties in the Orlando
               entertainment corridor operate under different economics than
               traditional suburban retail. Foot traffic is measured in the tens
@@ -569,7 +569,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               High Foot Traffic Corridors
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The highest-performing retail locations cluster around anchor
               destinations: ICON Park and the north I-Drive entertainment
               district, the Convention Center area, the Universal Boulevard
@@ -582,7 +582,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               National Chains &amp; Local Concepts
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               National restaurant chains aggressively target the tourism
               corridor because of the traffic density. Operators like Chili&apos;s,
               Olive Garden, McDonald&apos;s, and Starbucks often report their
@@ -597,7 +597,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Lease Structures in Tourist Areas
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lease structures in the tourism corridor often differ from
               traditional retail. Percentage rent clauses are more common,
               particularly for restaurant tenants in high-traffic locations.
@@ -613,7 +613,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Entertainment &amp; Mixed-Use Development
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando entertainment district is evolving beyond theme parks
               and traditional retail into a broader ecosystem of experiential
               entertainment and mixed-use development. This evolution is driven
@@ -624,7 +624,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               New Entertainment Venues
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               ICON Park&apos;s continued expansion, new attraction concepts on
               I-Drive, and entertainment-focused developments near the parks are
               creating a new category of CRE investment. These venues — which
@@ -637,7 +637,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Mixed-Use Development Opportunities
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The I-Drive 2040 plan and ongoing corridor improvements are
               creating opportunities for higher-density, mixed-use development
               that combines hospitality, retail, entertainment, and even
@@ -652,7 +652,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               The &quot;Experiential&quot; Retail Trend
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Retail properties in the tourism corridor are increasingly being
               repositioned toward experiential concepts. Rather than traditional
               merchandise retail, landlords are leasing to tenants that offer
@@ -669,7 +669,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Infrastructure Driving Value
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Major infrastructure investments are reshaping accessibility and
               connectivity across Orlando&apos;s entertainment corridor. For CRE
               investors, infrastructure is one of the most reliable leading
@@ -701,7 +701,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               ].map((item) => (
                 <div
                   key={item.project}
-                  className="flex items-start gap-3 bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="flex items-start gap-3 bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <svg
                     className="w-5 h-5 text-gold shrink-0 mt-0.5"
@@ -720,7 +720,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
                     <h4 className="text-white font-semibold text-sm">
                       {item.project}
                     </h4>
-                    <p className="text-gray-400 text-xs mt-0.5">
+                    <p className="text-gray-300 text-xs mt-0.5">
                       {item.impact}
                     </p>
                   </div>
@@ -734,7 +734,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Investment Strategies for the Entertainment District
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando entertainment corridor supports a range of investment
               strategies, from passive NNN income plays to active value-add and
               development. The right strategy depends on your capital, risk
@@ -744,7 +744,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               NNN Tenant Targeting
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               National credit tenants operating in the tourism corridor — fast
               food, gas stations, convenience stores, pharmacies, and quick-
               service restaurants — often represent some of their
@@ -760,7 +760,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Hotel Repositioning
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               As discussed in the hospitality section, acquiring underperforming
               hotels at a discount to replacement cost, investing in renovation,
               and either rebranding or repositioning is a proven strategy in
@@ -773,7 +773,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Retail Value-Add
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Multi-tenant retail centers along US-192 and secondary I-Drive
               locations offer classic value-add opportunities. The playbook:
               acquire properties with below-market rents and deferred
@@ -787,7 +787,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Land Banking Near Expansion Areas
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Perhaps the highest-upside strategy in the entertainment corridor
               is acquiring commercially zoned land in the path of expansion.
               Areas adjacent to Epic Universe, along the southern I-Drive
@@ -827,21 +827,21 @@ export default function OrlandoEntertainmentDistrictGuide() {
               ].map((item) => (
                 <div
                   key={item.strategy}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-2">
                     {item.strategy}
                   </h4>
                   <div className="space-y-1">
-                    <p className="text-gray-400 text-xs">
+                    <p className="text-gray-300 text-xs">
                       <span className="text-gray-500">Risk:</span>{" "}
                       {item.risk}
                     </p>
-                    <p className="text-gray-400 text-xs">
+                    <p className="text-gray-300 text-xs">
                       <span className="text-gray-500">Target Return:</span>{" "}
                       {item.target}
                     </p>
-                    <p className="text-gray-400 text-xs">
+                    <p className="text-gray-300 text-xs">
                       <span className="text-gray-500">Hold Period:</span>{" "}
                       {item.timeline}
                     </p>
@@ -856,7 +856,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Risks &amp; Considerations
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               No investment thesis is complete without an honest assessment of
               risks. The Orlando entertainment corridor offers compelling
               fundamentals, but investors must account for the unique risk
@@ -866,7 +866,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Tourism Cyclicality
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s tourism economy has proven remarkably resilient
               over the long term, but it is not immune to downturns. Recessions,
               pandemics, and geopolitical disruptions can temporarily reduce
@@ -880,7 +880,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Over-Supply Risk
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The pace of new hotel and retail construction in the tourism
               corridor has accelerated in response to Epic Universe and broader
               market growth. While demand fundamentals remain strong, investors
@@ -893,7 +893,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Insurance &amp; Catastrophic Risk
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Florida&apos;s property insurance market remains one of the most
               challenging in the country. Insurance costs for commercial
               properties in the Orlando area have increased significantly in
@@ -908,7 +908,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Seasonal Fluctuations
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s tourism market has a well-defined seasonal pattern.
               Peak periods — summer, Thanksgiving through New Year, and spring
               break — see maximum occupancy and spending, while January through
@@ -946,23 +946,23 @@ export default function OrlandoEntertainmentDistrictGuide() {
               ].map((item) => (
                 <div
                   key={item.risk}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <h4 className="text-white font-semibold text-sm mb-1">
                     {item.risk}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.mitigation}</p>
+                  <p className="text-gray-300 text-xs">{item.mitigation}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* ── CTA #2 ── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 my-8 text-center">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 my-8 text-center">
             <h3 className="text-white text-xl font-bold mb-2">
               Ready to Invest in Orlando&apos;s Entertainment Corridor?
             </h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4">
               Whether you&apos;re targeting NNN income, hotel repositioning,
               retail value-add, or development land — we have the local
               expertise and deal flow to help you find the right opportunity.
@@ -988,7 +988,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Bottom Line
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s entertainment district is not just a tourist
               destination — it is one of the most powerful commercial real
               estate markets in the United States. The combination of 75+
@@ -997,7 +997,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               and a diversified demand base creates an environment where
               well-positioned commercial properties generate premium returns.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The opening of Epic Universe has accelerated growth across the
               entire corridor, and the I-Drive 2040 vision plan promises to
               further elevate the market over the coming decade. For investors
@@ -1007,7 +1007,7 @@ export default function OrlandoEntertainmentDistrictGuide() {
               opportunities that are difficult to replicate in any other U.S.
               market.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The key is working with a brokerage team that lives and breathes
               this market, has relationships with local operators and property
               owners, and can source opportunities before they hit the open
@@ -1015,18 +1015,18 @@ export default function OrlandoEntertainmentDistrictGuide() {
             </p>
           </section>
           {/* ──────────── RELATED READING ──────────── */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/orlando-commercial-real-estate-trends-2026" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-commercial-real-estate-trends-2026" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Trends 2026</h3>
                 <p className="text-gray-500 text-xs">Comprehensive market analysis covering cap rates, submarkets, and investment strategies across the Orlando metro.</p>
               </Link>
-              <Link href="/opportunities" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/opportunities" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Browse Entertainment Corridor Properties</h3>
                 <p className="text-gray-500 text-xs">View current commercial real estate opportunities including NNN, retail, and hospitality assets near Orlando&apos;s theme parks.</p>
               </Link>
-              <Link href="/markets/orlando-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/markets/orlando-commercial-real-estate" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Market</h3>
                 <p className="text-gray-500 text-xs">Market stats, property types, and investment fundamentals for the Orlando metro and Orange County.</p>
               </Link>

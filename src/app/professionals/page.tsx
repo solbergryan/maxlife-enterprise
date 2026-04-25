@@ -56,7 +56,7 @@ export default function ProfessionalsPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/professionals/maxlife-professionals-people-business-meeting-business-meeting-coworkers-agreement-1979261.webp"
           alt="Professional services team meeting across a conference table"
@@ -74,7 +74,7 @@ export default function ProfessionalsPage() {
             Commercial Real Estate{" "}
             <span className="text-gold">Professionals Guide</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Every commercial real estate deal involves a team of specialized
             professionals — from brokers and attorneys to engineers, appraisers,
             and contractors. This guide walks through each role, what they do,
@@ -110,7 +110,7 @@ export default function ProfessionalsPage() {
               <p className="text-white font-semibold group-hover:text-gold transition-colors">
                 Interactive Org Chart &mdash; Search &amp; Explore Visually
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 Filter {professionals.length} roles by category, search by
                 keyword, see the full CRE deal team at a glance.
               </p>
@@ -135,23 +135,23 @@ export default function ProfessionalsPage() {
       {/* Intro */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="bg-dark-card border border-dark-border rounded-xl p-5 text-center">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5 text-center">
             <p className="text-3xl font-bold text-gold">{professionals.length}</p>
-            <p className="text-gray-400 text-xs mt-1">Roles Covered</p>
+            <p className="text-gray-300 text-xs mt-1">Roles Covered</p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-xl p-5 text-center">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5 text-center">
             <p className="text-3xl font-bold text-gold">
               {categoriesOrder.length}
             </p>
-            <p className="text-gray-400 text-xs mt-1">Categories</p>
+            <p className="text-gray-300 text-xs mt-1">Categories</p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-xl p-5 text-center">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5 text-center">
             <p className="text-3xl font-bold text-gold">FL</p>
-            <p className="text-gray-400 text-xs mt-1">Licensed Statewide</p>
+            <p className="text-gray-300 text-xs mt-1">Licensed Statewide</p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-xl p-5 text-center">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5 text-center">
             <p className="text-3xl font-bold text-gold">24/7</p>
-            <p className="text-gray-400 text-xs mt-1">Response Time</p>
+            <p className="text-gray-300 text-xs mt-1">Response Time</p>
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function ProfessionalsPage() {
         return (
           <section
             key={category}
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center">
@@ -177,12 +177,12 @@ export default function ProfessionalsPage() {
                 <Link
                   key={p.slug}
                   href={`/professionals/${p.slug}`}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/40 transition-all group block"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-all group block"
                 >
                   <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-3">
                     {p.shortDescription}
                   </p>
                   <span className="text-gold text-xs font-medium group-hover:text-gold-light transition-colors">
@@ -196,12 +196,12 @@ export default function ProfessionalsPage() {
       })}
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border mt-12">
+      <section className="bg-white/[0.03] border-t border-white/10 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Need a Referral or Project Team?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             MaxLife Development has established relationships across every
             category of CRE professional in Florida. We can help you assemble
             the right team for your deal.

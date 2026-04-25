@@ -13,7 +13,7 @@ export default function CentralFloridaLandArticle() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-site-crane-building-helmet-architecture-228470.webp"
           alt="Central Florida land development construction site"
@@ -26,7 +26,7 @@ export default function CentralFloridaLandArticle() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -43,7 +43,7 @@ export default function CentralFloridaLandArticle() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Why Central Florida Is a Hot Market for Land Development
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Population growth, infrastructure spending, and strong commercial
             demand are making Central Florida one of the most active land
             markets in the Southeast.
@@ -58,13 +58,13 @@ export default function CentralFloridaLandArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Growth Engine
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Central Florida continues to be one of the fastest-growing regions
               in the United States. The Orlando-Kissimmee-Sanford metro area
               alone has been adding tens of thousands of new residents annually,
               driven by job growth, favorable tax policies, and quality of life.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The Space Coast corridor — anchored by Melbourne, Cocoa, and
               Titusville — is experiencing its own boom fueled by aerospace
               (SpaceX, Blue Origin, L3Harris), defense contractors, and an
@@ -98,12 +98,12 @@ export default function CentralFloridaLandArticle() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <h3 className="text-gold font-semibold mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                  <p className="text-gray-300 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -145,7 +145,7 @@ export default function CentralFloridaLandArticle() {
                     <span className="text-white font-medium">
                       {item.corridor}
                     </span>
-                    <span className="text-gray-400 text-sm block">
+                    <span className="text-gray-300 text-sm block">
                       {item.note}
                     </span>
                   </div>
@@ -158,14 +158,14 @@ export default function CentralFloridaLandArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               What Investors Should Consider
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Central Florida land investing isn&apos;t without complexity. Zoning
               regulations vary significantly between Orange, Osceola, Brevard,
               and Seminole counties. Environmental considerations (wetlands,
               flood zones, endangered species habitats) can make or break a
               project.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Working with a broker who understands the local entitlement
               process, has relationships with municipal planning departments,
               and can perform thorough due diligence is critical to avoiding
@@ -177,7 +177,7 @@ export default function CentralFloridaLandArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Bottom Line
             </h2>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Central Florida&apos;s combination of population growth,
               infrastructure investment, business-friendly policies, and diverse
               demand drivers makes it one of the strongest land markets in the
@@ -188,11 +188,11 @@ export default function CentralFloridaLandArticle() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Looking for Land in Central Florida?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty brokers land deals across Orange, Brevard,
               Seminole, and Osceola counties. Whether you&apos;re buying or
               selling, we know the market.

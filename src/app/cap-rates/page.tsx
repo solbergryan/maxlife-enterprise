@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function CapRatesHubPage() {
   return (
     <>
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Cap Rate Research
@@ -21,7 +21,7 @@ export default function CapRatesHubPage() {
             Orlando Commercial Real Estate{" "}
             <span className="text-gold">Cap Rates by Submarket</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Current cap rate ranges for Central Florida commercial real estate,
             broken out by submarket and property type — retail, office,
             industrial, multifamily, medical office, and NNN. Ranges reflect
@@ -37,7 +37,7 @@ export default function CapRatesHubPage() {
             </Link>
             <Link
               href="/market-reports"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
             >
               Quarterly Market Reports
             </Link>
@@ -54,12 +54,12 @@ export default function CapRatesHubPage() {
             <Link
               key={s.slug}
               href={`/cap-rates/${s.slug}`}
-              className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-xl p-5 transition-colors group"
+              className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-xl p-5 transition-colors group"
             >
               <h3 className="text-white text-lg font-semibold group-hover:text-gold transition-colors mb-2">
                 {s.name}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+              <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
                 {s.summary}
               </p>
               <p className="mt-3 text-gold text-xs font-medium">
@@ -70,7 +70,7 @@ export default function CapRatesHubPage() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-4">
           How to <span className="text-gold">Use This Data</span>
         </h2>
@@ -93,41 +93,41 @@ export default function CapRatesHubPage() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-6">
           Related <span className="text-gold">Research</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/investment-outlook"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-5 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-5 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-2">
               Sector Investment Outlooks
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               NNN, retail, office, industrial, multifamily, and land outlooks
               by year.
             </p>
           </Link>
           <Link
             href="/market-reports"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-5 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-5 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-2">
               Quarterly Market Reports
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               Detailed Orlando-metro quarterly reports with absorption, rent,
               and pricing trends.
             </p>
           </Link>
           <Link
             href="/blog"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-5 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-5 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-2">CRE Insights Blog</h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               In-depth articles on Central Florida CRE trends, tenant types,
               and investment strategy.
             </p>

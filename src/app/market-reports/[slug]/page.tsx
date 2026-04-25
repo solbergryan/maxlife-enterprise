@@ -52,7 +52,7 @@ function renderMetric(
     ? sources.findIndex((s) => s.id === metric.sourceId) + 1
     : 0;
   return (
-    <div className="bg-dark border border-dark-border rounded-lg p-4">
+    <div className="bg-dark border border-white/10 rounded-lg p-4">
       <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">
         {label}
       </p>
@@ -113,7 +113,7 @@ export default async function MarketReportPage({
       <JsonLd data={buildArticleSchema(report)} />
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-nyc-urban-business-new-1127182.webp"
           alt="Commercial real estate market report"
@@ -192,7 +192,7 @@ export default async function MarketReportPage({
               return (
                 <div
                   key={i}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">
                     {m.label}
@@ -230,7 +230,7 @@ export default async function MarketReportPage({
             {report.assetClasses.map((ac) => (
               <div
                 key={ac.key}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-gold font-semibold text-lg">
@@ -246,7 +246,7 @@ export default async function MarketReportPage({
                   {renderMetric("Price / SF", ac.pricePerSf, sources)}
                 </div>
                 {ac.commentary && (
-                  <p className="text-gray-300 text-sm leading-relaxed border-t border-dark-border pt-4">
+                  <p className="text-gray-300 text-sm leading-relaxed border-t border-white/10 pt-4">
                     {ac.commentary}
                   </p>
                 )}
@@ -273,7 +273,7 @@ export default async function MarketReportPage({
               return (
                 <div
                   key={i}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <div className="flex items-start justify-between gap-4 mb-3">
                     <h3 className="text-white font-semibold text-base">
@@ -344,14 +344,14 @@ export default async function MarketReportPage({
                     )}
                   </div>
                   {(tx.buyer || tx.seller) && (
-                    <p className="text-gray-400 text-xs mb-2">
+                    <p className="text-gray-300 text-xs mb-2">
                       {tx.buyer && <>Buyer: {tx.buyer}</>}
                       {tx.buyer && tx.seller && " \u00b7 "}
                       {tx.seller && <>Seller: {tx.seller}</>}
                     </p>
                   )}
                   {tx.summary && (
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       {tx.summary}
                     </p>
                   )}
@@ -365,7 +365,7 @@ export default async function MarketReportPage({
       {/* Submarket Spotlight */}
       {report.submarketSpotlight && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-          <div className="bg-dark-card border border-gold/30 rounded-xl p-6 sm:p-8">
+          <div className="bg-white/[0.04] border border-gold/30 rounded-xl p-6 sm:p-8">
             <p className="text-gold font-medium text-xs tracking-widest uppercase mb-2">
               Submarket Spotlight
             </p>
@@ -379,7 +379,7 @@ export default async function MarketReportPage({
               {report.submarketSpotlight.bullets.map((b, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-2 text-gray-400 text-sm"
+                  className="flex items-start gap-2 text-gray-300 text-sm"
                 >
                   <span className="text-gold mt-0.5">&bull;</span>
                   <span>{b}</span>
@@ -425,7 +425,7 @@ export default async function MarketReportPage({
       {/* Data gaps (transparency) */}
       {report.dataGaps && report.dataGaps.length > 0 && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-          <div className="bg-dark-card border border-dark-border rounded-lg p-5">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-5">
             <h3 className="text-gold font-semibold text-xs tracking-widest uppercase mb-3">
               Data Gaps
             </h3>
@@ -458,7 +458,7 @@ export default async function MarketReportPage({
           {sources.map((s, i) => (
             <li
               key={s.id}
-              className="bg-dark-card border border-dark-border rounded-lg p-4"
+              className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
             >
               <div className="flex items-start gap-3">
                 <span className="text-gold font-mono text-xs shrink-0">
@@ -486,12 +486,12 @@ export default async function MarketReportPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to see what your property is worth today?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Market reports are a starting point. A property-specific
             valuation is free, confidential, and typically takes 20 minutes
             on a call.
@@ -515,7 +515,7 @@ export default async function MarketReportPage({
 
       {/* Disclaimer footer */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="border-t border-dark-border pt-6 text-gray-600 text-xs leading-relaxed">
+        <div className="border-t border-white/10 pt-6 text-gray-600 text-xs leading-relaxed">
           <p className="mb-2">
             This market report is published by MaxLife Realty, a Florida
             licensed real estate brokerage (FL Broker License #3354351), for

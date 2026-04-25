@@ -305,7 +305,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
       )}
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -317,7 +317,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                 {heroHeadline}
               </h1>
               <p className="text-xl text-gray-300 mb-8">{heroSubheadline}</p>
-              <p className="text-gray-400 leading-relaxed mb-8">{heroBody}</p>
+              <p className="text-gray-300 leading-relaxed mb-8">{heroBody}</p>
               <div className="flex flex-wrap gap-4">
                 {hasAnalyzer && (
                   <Link
@@ -337,7 +337,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               </div>
             </div>
             {heroImage ? (
-              <div className="relative rounded-2xl overflow-hidden border border-dark-border shadow-2xl aspect-[3/2] lg:aspect-[4/3]">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/2] lg:aspect-[4/3]">
                 <Image
                   src={heroImage.src}
                   alt={heroImage.alt}
@@ -370,13 +370,13 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
 
       {/* Quick stats */}
       {quickStats.length > 0 && (
-        <section className="border-b border-dark-border bg-dark-card/30">
+        <section className="border-b border-white/10 bg-white/[0.04]/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {quickStats.map((m) => (
                 <div
                   key={m.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold text-xs font-semibold uppercase tracking-wider mb-2">
                     {m.label}
@@ -404,7 +404,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
             )}
           </h2>
           {formatsIntro && (
-            <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+            <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
               {formatsIntro}
             </p>
           )}
@@ -412,7 +412,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
             {formats!.map((format) => (
               <div
                 key={format.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg mb-3">
                   {format.name}
@@ -429,7 +429,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                     </span>
                   )}
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {format.note}
                 </p>
               </div>
@@ -440,7 +440,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
 
       {/* Why Florida */}
       {hasWhyFlorida && (
-        <section className="border-y border-dark-border bg-dark-card/30">
+        <section className="border-y border-white/10 bg-white/[0.04]/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               {whyFloridaTitle ?? (
@@ -452,7 +452,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               )}
             </h2>
             {whyFloridaIntro && (
-              <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+              <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
                 {whyFloridaIntro}
               </p>
             )}
@@ -460,12 +460,12 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               {whyFloridaReasons!.map((reason) => (
                 <div
                   key={reason.title}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h3 className="text-gold font-semibold text-lg mb-2">
                     {reason.title}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed text-sm">
+                  <p className="text-gray-300 leading-relaxed text-sm">
                     {reason.description}
                   </p>
                 </div>
@@ -487,13 +487,13 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
             )}
           </h2>
           {prosConsIntro && (
-            <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+            <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
               {prosConsIntro}
             </p>
           )}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {pros && pros.length > 0 && (
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center">
                     <svg
@@ -520,7 +520,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                       <p className="text-white font-medium text-sm mb-1">
                         {pro.title}
                       </p>
-                      <p className="text-gray-400 text-sm leading-relaxed">
+                      <p className="text-gray-300 text-sm leading-relaxed">
                         {pro.description}
                       </p>
                     </li>
@@ -529,7 +529,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               </div>
             )}
             {cons && cons.length > 0 && (
-              <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center">
                     <svg
@@ -556,7 +556,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                       <p className="text-white font-medium text-sm mb-1">
                         {con.title}
                       </p>
-                      <p className="text-gray-400 text-sm leading-relaxed">
+                      <p className="text-gray-300 text-sm leading-relaxed">
                         {con.description}
                       </p>
                     </li>
@@ -570,7 +570,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
 
       {/* Investor personas */}
       {hasPersonas && (
-        <section className="border-y border-dark-border bg-dark-card/30">
+        <section className="border-y border-white/10 bg-white/[0.04]/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               {personasTitle ?? (
@@ -581,7 +581,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               )}
             </h2>
             {personasIntro && (
-              <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+              <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
                 {personasIntro}
               </p>
             )}
@@ -589,7 +589,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               {personas!.map((persona) => (
                 <div
                   key={persona.name}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col"
                 >
                   <div className="mb-3">
                     <h3 className="text-white font-semibold text-lg">
@@ -599,10 +599,10 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                       {persona.tag}
                     </p>
                   </div>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4 flex-1">
                     {persona.description}
                   </p>
-                  <div className="border-t border-dark-border pt-3 mt-auto">
+                  <div className="border-t border-white/10 pt-3 mt-auto">
                     <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1">
                       Why It Fits
                     </p>
@@ -629,7 +629,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
             )}
           </h2>
           {operatorsIntro && (
-            <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+            <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
               {operatorsIntro}
             </p>
           )}
@@ -637,10 +637,10 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
             {operators!.map((op) => (
               <div
                 key={op.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-5 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold mb-1">{op.name}</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">
+                <p className="text-gray-300 text-xs leading-relaxed">
                   {op.detail}
                 </p>
               </div>
@@ -656,7 +656,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
 
       {/* Key underwriting metrics */}
       {hasUnderwriting && (
-        <section className="border-y border-dark-border bg-dark-card/30">
+        <section className="border-y border-white/10 bg-white/[0.04]/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               {underwritingTitle ?? (
@@ -667,7 +667,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               )}
             </h2>
             {underwritingIntro && (
-              <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+              <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
                 {underwritingIntro}
               </p>
             )}
@@ -675,7 +675,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               {underwritingMetrics!.map((metric) => (
                 <div
                   key={metric.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5 flex items-start gap-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5 flex items-start gap-4"
                 >
                   <div className="w-8 h-8 rounded-lg bg-gold/10 text-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
@@ -696,7 +696,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                     <p className="text-white font-medium text-sm mb-0.5">
                       {metric.label}
                     </p>
-                    <p className="text-gray-400 text-xs leading-relaxed">
+                    <p className="text-gray-300 text-xs leading-relaxed">
                       {metric.detail}
                     </p>
                   </div>
@@ -726,14 +726,14 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               )}
             </h2>
             {analyzerIntro && (
-              <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 {analyzerIntro}
               </p>
             )}
           </div>
 
           {analyzerBadges && analyzerBadges.length > 0 && (
-            <div className="bg-dark-card/30 border border-dark-border rounded-2xl p-4 sm:p-6 mb-6">
+            <div className="bg-white/[0.04]/30 border border-white/10 rounded-2xl p-4 sm:p-6 mb-6">
               <div className="flex flex-wrap gap-3 text-xs">
                 {analyzerBadges.map((b) => (
                   <span
@@ -764,7 +764,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
 
       {/* Listings */}
       {hasListings && (
-        <section className="border-y border-dark-border bg-dark-card/30">
+        <section className="border-y border-white/10 bg-white/[0.04]/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
             <div className="text-center mb-10">
               <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
@@ -779,7 +779,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                 )}
               </h2>
               {listingsIntro && (
-                <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
                   {listingsIntro}
                 </p>
               )}
@@ -789,7 +789,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               {listingSites!.map((site) => (
                 <div
                   key={site.name}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col"
                 >
                   <div className="mb-4">
                     <h3 className="text-white font-semibold text-xl mb-1">
@@ -799,7 +799,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                       {site.tag}
                     </p>
                   </div>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-1">
                     {site.description}
                   </p>
                   <div className="space-y-2">
@@ -828,7 +828,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       data-track={`${slug}-listings-${site.name.toLowerCase()}-national`}
-                      className="flex items-center justify-between text-gray-400 hover:text-gold font-medium px-4 py-2 text-sm transition-colors"
+                      className="flex items-center justify-between text-gray-300 hover:text-gold font-medium px-4 py-2 text-sm transition-colors"
                     >
                       <span>Nationwide</span>
                       <ExternalArrow />
@@ -866,7 +866,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
               )}
             </h2>
             {faqIntro && (
-              <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 {faqIntro}
               </p>
             )}
@@ -875,7 +875,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
             {faqs!.map((faq) => (
               <details
                 key={faq.q}
-                className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
+                className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-colors"
               >
                 <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
                   <h3 className="text-white font-medium text-base pr-4">
@@ -896,7 +896,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                   </svg>
                 </summary>
                 <div className="px-6 pb-5 -mt-1">
-                  <p className="text-gray-400 leading-relaxed">{faq.a}</p>
+                  <p className="text-gray-300 leading-relaxed">{faq.a}</p>
                 </div>
               </details>
             ))}
@@ -906,7 +906,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
 
       {/* Fit Check */}
       {hasFitCheck && (
-        <section className="border-y border-dark-border bg-dark-card/30">
+        <section className="border-y border-white/10 bg-white/[0.04]/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-10">
@@ -921,7 +921,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                   )}
                 </h2>
                 {fitCheckIntro && (
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     {fitCheckIntro}
                   </p>
                 )}
@@ -930,7 +930,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                 {fitCheckQuestions!.map((q) => (
                   <li
                     key={q}
-                    className="flex items-start gap-4 bg-dark-card border border-dark-border rounded-xl p-5"
+                    className="flex items-start gap-4 bg-white/[0.04] border border-white/10 rounded-xl p-5"
                   >
                     <div className="w-6 h-6 rounded-full bg-gold/15 text-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg
@@ -966,10 +966,10 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
       )}
 
       {/* Lead Capture Form */}
-      <section id={leadId} className="border-t border-dark-border">
+      <section id={leadId} className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-dark-card border border-dark-border rounded-xl p-8 sm:p-10">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8 sm:p-10">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
                 {leadFormTitle ?? (
                   <>
@@ -979,7 +979,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                 )}
               </h2>
               {leadFormIntro && (
-                <p className="text-gray-400 text-center mb-8 leading-relaxed">
+                <p className="text-gray-300 text-center mb-8 leading-relaxed">
                   {leadFormIntro}
                 </p>
               )}
@@ -995,7 +995,7 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
 
       {/* Related resources */}
       {hasRelated && (
-        <section className="border-t border-dark-border">
+        <section className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center">
               Related <span className="text-gold">Resources</span>
@@ -1005,12 +1005,12 @@ export default function PropertyTypeLanding(props: PropertyTypeLandingProps) {
                 <Link
                   key={resource.href}
                   href={resource.href}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group block"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group block"
                 >
                   <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                     {resource.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-3">
                     {resource.description}
                   </p>
                   <span className="text-gold text-sm font-medium">

@@ -124,7 +124,7 @@ export default function NNNPropertiesFloridaPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-germany-shop-window-storefront-sale-business-983358.webp"
           alt="Florida NNN property storefront"
@@ -145,7 +145,7 @@ export default function NNNPropertiesFloridaPage() {
             Passive income backed by credit tenants in one of America&apos;s
             fastest-growing metros
           </p>
-          <p className="text-gray-400 max-w-2xl leading-relaxed mb-8">
+          <p className="text-gray-300 max-w-2xl leading-relaxed mb-8">
             Central Florida&apos;s explosive population growth and
             business-friendly environment make it one of the top markets for
             triple net lease investing. Whether you&apos;re a 1031 exchange
@@ -177,7 +177,7 @@ export default function NNNPropertiesFloridaPage() {
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
           What Is a <span className="text-gold">Triple Net Lease</span>?
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           In a triple net (NNN) lease, the tenant is responsible for all
           operating expenses beyond base rent. As the property owner, you
           collect passive income with virtually no landlord obligations.
@@ -226,7 +226,7 @@ export default function NNNPropertiesFloridaPage() {
           ].map((item) => (
             <div
               key={item.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
             >
               <div className="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <svg
@@ -241,7 +241,7 @@ export default function NNNPropertiesFloridaPage() {
               <h3 className="text-white font-semibold text-lg mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -259,12 +259,12 @@ export default function NNNPropertiesFloridaPage() {
       </section>
 
       {/* Featured NNN Tenant Profiles */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Featured NNN <span className="text-gold">Tenant Profiles</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             These are the types of national credit tenants actively leasing NNN
             properties across the Orlando metro and Central Florida corridor.
           </p>
@@ -272,7 +272,7 @@ export default function NNNPropertiesFloridaPage() {
             {nnnTenants.map((tenant) => (
               <div
                 key={tenant.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg mb-3">
                   {tenant.name}
@@ -285,7 +285,7 @@ export default function NNNPropertiesFloridaPage() {
                     {tenant.leaseTerm}
                   </span>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {tenant.note}
                 </p>
               </div>
@@ -300,7 +300,7 @@ export default function NNNPropertiesFloridaPage() {
           Why Central Florida for{" "}
           <span className="text-gold">NNN Investing</span>?
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           Orlando and the surrounding metro area offer a rare combination of
           factors that make NNN properties here especially attractive to
           investors nationwide.
@@ -309,12 +309,12 @@ export default function NNNPropertiesFloridaPage() {
           {whyFloridaBenefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
             >
               <h3 className="text-gold font-semibold text-lg mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 {benefit.description}
               </p>
             </div>
@@ -323,12 +323,12 @@ export default function NNNPropertiesFloridaPage() {
       </section>
 
       {/* Current Cap Rate Ranges */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Current <span className="text-gold">Cap Rate Ranges</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             Cap rates vary based on tenant credit quality, lease term, and
             location. Here is what investors are seeing in the Central Florida
             NNN market today.
@@ -337,7 +337,7 @@ export default function NNNPropertiesFloridaPage() {
             {capRatesByCredit.map((tier) => (
               <div
                 key={tier.tier}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
               >
                 <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
                   {tier.tier}
@@ -345,7 +345,7 @@ export default function NNNPropertiesFloridaPage() {
                 <p className="text-white text-3xl font-bold mb-3">
                   {tier.range}
                 </p>
-                <p className="text-gray-400 text-sm mb-3">{tier.description}</p>
+                <p className="text-gray-300 text-sm mb-3">{tier.description}</p>
                 <p className="text-gray-500 text-xs">
                   e.g., {tier.examples}
                 </p>
@@ -367,11 +367,11 @@ export default function NNNPropertiesFloridaPage() {
       {/* Lead Capture Form */}
       <section id="available-nnn" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-dark-card border border-dark-border rounded-xl p-8 sm:p-10">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8 sm:p-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
               See Available <span className="text-gold">NNN Properties</span>
             </h2>
-            <p className="text-gray-400 text-center mb-8 leading-relaxed">
+            <p className="text-gray-300 text-center mb-8 leading-relaxed">
               Tell us about your investment criteria and we will send you
               current NNN opportunities in Central Florida that match your
               goals.
@@ -386,7 +386,7 @@ export default function NNNPropertiesFloridaPage() {
       </section>
 
       {/* Related Resources */}
-      <section className="border-t border-dark-border">
+      <section className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center">
             Related <span className="text-gold">Resources</span>
@@ -415,12 +415,12 @@ export default function NNNPropertiesFloridaPage() {
               <Link
                 key={resource.href}
                 href={resource.href}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group block"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group block"
               >
                 <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                   {resource.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   {resource.description}
                 </p>
                 <span className="text-gold text-sm font-medium">

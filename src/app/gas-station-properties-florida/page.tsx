@@ -605,7 +605,7 @@ export default function GasStationPropertiesFloridaPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/special-purpose/maxlife-special-purpose-fuel-gas-station-refueling-gas-gasoline-car-wallpapers-gasol-6999650.webp"
           alt="Florida gas station fuel pumps at a modern convenience store pad"
@@ -628,7 +628,7 @@ export default function GasStationPropertiesFloridaPage() {
                 Tightest cap rates in specialty CRE, backed by investment-grade
                 C-store credit in the fastest-growing state in America
               </p>
-              <p className="text-gray-400 leading-relaxed mb-8">
+              <p className="text-gray-300 leading-relaxed mb-8">
                 Florida C-store pads are arguably the most tightly priced
                 specialty NNN assets in the country. Wawa, 7-Eleven, RaceTrac,
                 and Buc-ee&apos;s ground leases regularly trade inside a 5.0%
@@ -655,7 +655,7 @@ export default function GasStationPropertiesFloridaPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden border border-dark-border shadow-2xl aspect-[3/2] lg:aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/2] lg:aspect-[4/3]">
               <Image
                 src="/gas-station/maxlife-gas-station.png"
                 alt="MaxLife gas station — Florida C-store with fuel pumps, price sign, and DCFC EV charging bay"
@@ -679,13 +679,13 @@ export default function GasStationPropertiesFloridaPage() {
       </section>
 
       {/* Quick stats */}
-      <section className="border-b border-dark-border bg-dark-card/30">
+      <section className="border-b border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {gasStationMetrics.map((m) => (
               <div
                 key={m.label}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
               >
                 <p className="text-gold text-xs font-semibold uppercase tracking-wider mb-2">
                   {m.label}
@@ -705,7 +705,7 @@ export default function GasStationPropertiesFloridaPage() {
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
           Gas Station <span className="text-gold">Property Formats</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           Not every gas station trades at the same cap rate. Tenant credit,
           lease structure, and site format all drive pricing — here are the six
           formats active in Florida today.
@@ -714,7 +714,7 @@ export default function GasStationPropertiesFloridaPage() {
           {gasStationFormats.map((format) => (
             <div
               key={format.name}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
             >
               <h3 className="text-white font-semibold text-lg mb-3">
                 {format.name}
@@ -727,7 +727,7 @@ export default function GasStationPropertiesFloridaPage() {
                   {format.footprint}
                 </span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {format.note}
               </p>
             </div>
@@ -736,13 +736,13 @@ export default function GasStationPropertiesFloridaPage() {
       </section>
 
       {/* Why Florida */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Why Florida Fuel Demand is{" "}
             <span className="text-gold">Structurally Bullish</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             Population growth, tourism, tax structure, and weather combine to
             give Florida C-stores something most markets don&apos;t have:
             twelve months of volume with durable demand tailwinds across every
@@ -752,12 +752,12 @@ export default function GasStationPropertiesFloridaPage() {
             {floridaFuelDrivers.map((reason) => (
               <div
                 key={reason.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-gold font-semibold text-lg mb-2">
                   {reason.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm">
                   {reason.description}
                 </p>
               </div>
@@ -772,12 +772,12 @@ export default function GasStationPropertiesFloridaPage() {
           Gas Station Investing:{" "}
           <span className="text-gold">Pros &amp; Cons</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           An honest look at both sides so you can decide if this asset class
           fits your portfolio strategy.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center">
                 <svg
@@ -802,14 +802,14 @@ export default function GasStationPropertiesFloridaPage() {
                   <p className="text-white font-medium text-sm mb-1">
                     {pro.title}
                   </p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {pro.description}
                   </p>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center">
                 <svg
@@ -836,7 +836,7 @@ export default function GasStationPropertiesFloridaPage() {
                   <p className="text-white font-medium text-sm mb-1">
                     {con.title}
                   </p>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {con.description}
                   </p>
                 </li>
@@ -847,13 +847,13 @@ export default function GasStationPropertiesFloridaPage() {
       </section>
 
       {/* Investor personas */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Who Gas Stations Are{" "}
             <span className="text-gold">Best Suited For</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             Gas station NNN and ground leases aren&apos;t for every investor —
             but for the right profiles, they&apos;re arguably the most durable
             net-lease product on the market today.
@@ -862,7 +862,7 @@ export default function GasStationPropertiesFloridaPage() {
             {investorPersonas.map((persona) => (
               <div
                 key={persona.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col"
               >
                 <div className="mb-3">
                   <h3 className="text-white font-semibold text-lg">
@@ -872,10 +872,10 @@ export default function GasStationPropertiesFloridaPage() {
                     {persona.tag}
                   </p>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 flex-1">
                   {persona.description}
                 </p>
-                <div className="border-t border-dark-border pt-3 mt-auto">
+                <div className="border-t border-white/10 pt-3 mt-auto">
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1">
                     Why It Fits
                   </p>
@@ -895,7 +895,7 @@ export default function GasStationPropertiesFloridaPage() {
           Major C-Store &amp; Fuel Operators{" "}
           <span className="text-gold">Expanding in Florida</span>
         </h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+        <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
           These are the national and regional C-store operators most actively
           acquiring, developing, or ground-leasing new sites across the Florida
           market today. Most institutional NNN opportunities come from this
@@ -905,10 +905,10 @@ export default function GasStationPropertiesFloridaPage() {
           {majorOperators.map((op) => (
             <div
               key={op.name}
-              className="bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-5 hover:border-gold/40 transition-colors"
             >
               <h3 className="text-white font-semibold mb-1">{op.name}</h3>
-              <p className="text-gray-400 text-xs leading-relaxed">
+              <p className="text-gray-300 text-xs leading-relaxed">
                 {op.detail}
               </p>
             </div>
@@ -922,13 +922,13 @@ export default function GasStationPropertiesFloridaPage() {
       </section>
 
       {/* Florida hotspots */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Florida&apos;s Most Active{" "}
             <span className="text-gold">C-Store Submarkets</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             Where the deal flow is heaviest right now. These submarkets combine
             population growth, tourism, interstate traffic, and active operator
             pipelines.
@@ -937,12 +937,12 @@ export default function GasStationPropertiesFloridaPage() {
             {floridaHotspots.map((spot) => (
               <div
                 key={spot.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {spot.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {spot.detail}
                 </p>
               </div>
@@ -961,7 +961,7 @@ export default function GasStationPropertiesFloridaPage() {
             The Gas Station of the Future is{" "}
             <span className="text-gold">Already Being Built in Florida</span>
           </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Electric vehicle charging isn&apos;t a threat to C-store real
             estate — it&apos;s the single biggest value-add opportunity in the
             category. Modern Florida fuel pads are being built EV-ready, and
@@ -974,7 +974,7 @@ export default function GasStationPropertiesFloridaPage() {
           {evInsights.map((insight) => (
             <div
               key={insight.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-lg bg-gold/10 text-gold flex items-center justify-center flex-shrink-0">
@@ -996,7 +996,7 @@ export default function GasStationPropertiesFloridaPage() {
                   {insight.title}
                 </h3>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {insight.description}
               </p>
             </div>
@@ -1008,7 +1008,7 @@ export default function GasStationPropertiesFloridaPage() {
             Major EV Charging Networks{" "}
             <span className="text-gold">in Florida</span>
           </h3>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-8 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-8 leading-relaxed">
             The charging networks building out Florida pad sites either
             standalone or co-located with existing C-store operators.
           </p>
@@ -1017,10 +1017,10 @@ export default function GasStationPropertiesFloridaPage() {
           {evChargingNetworks.map((n) => (
             <div
               key={n.name}
-              className="bg-dark-card border border-dark-border rounded-xl p-5 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-5 hover:border-gold/40 transition-colors"
             >
               <h4 className="text-white font-semibold mb-1">{n.name}</h4>
-              <p className="text-gray-400 text-xs leading-relaxed">
+              <p className="text-gray-300 text-xs leading-relaxed">
                 {n.detail}
               </p>
             </div>
@@ -1048,7 +1048,7 @@ export default function GasStationPropertiesFloridaPage() {
               <h3 className="text-white font-semibold text-lg mb-2">
                 The EV-Ready Diligence Checklist
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 When buying a Florida C-store pad today, these four items
                 decide whether the site captures EV value or loses residual
                 value to newer competitors over the next 10–15 years.
@@ -1085,13 +1085,13 @@ export default function GasStationPropertiesFloridaPage() {
       </section>
 
       {/* Underwriting metrics */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
             Key Gas Station{" "}
             <span className="text-gold">Underwriting Metrics</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-center mb-12 leading-relaxed">
             The numbers experienced C-store buyers stress-test before closing.
             Use these as benchmarks when you review an offering memorandum or
             operator P&amp;L.
@@ -1100,7 +1100,7 @@ export default function GasStationPropertiesFloridaPage() {
             {keyUnderwritingMetrics.map((metric) => (
               <div
                 key={metric.label}
-                className="bg-dark-card border border-dark-border rounded-xl p-5 flex items-start gap-4"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-5 flex items-start gap-4"
               >
                 <div className="w-8 h-8 rounded-lg bg-gold/10 text-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg
@@ -1121,7 +1121,7 @@ export default function GasStationPropertiesFloridaPage() {
                   <p className="text-white font-medium text-sm mb-0.5">
                     {metric.label}
                   </p>
-                  <p className="text-gray-400 text-xs leading-relaxed">
+                  <p className="text-gray-300 text-xs leading-relaxed">
                     {metric.detail}
                   </p>
                 </div>
@@ -1141,7 +1141,7 @@ export default function GasStationPropertiesFloridaPage() {
             The Six-Item{" "}
             <span className="text-gold">Diligence Checklist</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Environmental exposure is the single biggest differentiator of
             gas station investing. Done right, it&apos;s manageable and
             priced in. Done wrong, it&apos;s a career-ending liability. Never
@@ -1152,7 +1152,7 @@ export default function GasStationPropertiesFloridaPage() {
           {environmentalChecklist.map((item, idx) => (
             <div
               key={item.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-9 h-9 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold text-sm">
@@ -1160,7 +1160,7 @@ export default function GasStationPropertiesFloridaPage() {
                 </div>
                 <h3 className="text-white font-semibold">{item.title}</h3>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -1171,7 +1171,7 @@ export default function GasStationPropertiesFloridaPage() {
       {/* Deal Analyzer */}
       <section
         id="gas-station-analyzer"
-        className="border-y border-dark-border bg-dark-card/30"
+        className="border-y border-white/10 bg-white/[0.04]/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="text-center mb-10">
@@ -1182,7 +1182,7 @@ export default function GasStationPropertiesFloridaPage() {
               Sample Florida Gas Station Deal{" "}
               <span className="text-gold">Pre-Loaded</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
               Below is a representative Central Florida Wawa-style ground lease
               already loaded into our deal analyzer — a $6.5M NNN ground-lease
               deal with a credit C-store operator at a 5.0% entry cap. Adjust
@@ -1191,7 +1191,7 @@ export default function GasStationPropertiesFloridaPage() {
             </p>
           </div>
 
-          <div className="bg-dark-card/30 border border-dark-border rounded-2xl p-4 sm:p-6 mb-6">
+          <div className="bg-white/[0.04]/30 border border-white/10 rounded-2xl p-4 sm:p-6 mb-6">
             <div className="flex flex-wrap gap-3 text-xs">
               <span className="bg-gold/10 text-gold font-semibold px-3 py-1 rounded-full">
                 Purchase: $6.5M
@@ -1241,7 +1241,7 @@ export default function GasStationPropertiesFloridaPage() {
             Gas Station Deals on{" "}
             <span className="text-gold">Major CRE Marketplaces</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Want to see what&apos;s publicly listed right now? These
             marketplaces aggregate on-market gas station and C-store
             opportunities across Florida. For off-market deals and
@@ -1287,7 +1287,7 @@ export default function GasStationPropertiesFloridaPage() {
           ].map((site) => (
             <div
               key={site.name}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col"
             >
               <div className="mb-4">
                 <h3 className="text-white font-semibold text-xl mb-1">
@@ -1297,7 +1297,7 @@ export default function GasStationPropertiesFloridaPage() {
                   {site.tag}
                 </p>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+              <p className="text-gray-300 text-sm leading-relaxed mb-6 flex-1">
                 {site.description}
               </p>
               <div className="space-y-2">
@@ -1350,7 +1350,7 @@ export default function GasStationPropertiesFloridaPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track={`gasstation-listings-${site.name.toLowerCase()}-national`}
-                  className="flex items-center justify-between text-gray-400 hover:text-gold font-medium px-4 py-2 text-sm transition-colors"
+                  className="flex items-center justify-between text-gray-300 hover:text-gold font-medium px-4 py-2 text-sm transition-colors"
                 >
                   <span>Nationwide</span>
                   <svg
@@ -1385,7 +1385,7 @@ export default function GasStationPropertiesFloridaPage() {
       </section>
 
       {/* FAQ */}
-      <section className="border-y border-dark-border bg-dark-card/30">
+      <section className="border-y border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="text-center mb-12">
             <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
@@ -1394,7 +1394,7 @@ export default function GasStationPropertiesFloridaPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Gas Station <span className="text-gold">Investor FAQ</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
               The questions we get most often from investors evaluating their
               first (or fifth) gas station / C-store deal.
             </p>
@@ -1403,7 +1403,7 @@ export default function GasStationPropertiesFloridaPage() {
             {gasStationFaqs.map((faq) => (
               <details
                 key={faq.q}
-                className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
+                className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-colors"
               >
                 <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
                   <h3 className="text-white font-medium text-base pr-4">
@@ -1424,7 +1424,7 @@ export default function GasStationPropertiesFloridaPage() {
                   </svg>
                 </summary>
                 <div className="px-6 pb-5 -mt-1">
-                  <p className="text-gray-400 leading-relaxed">{faq.a}</p>
+                  <p className="text-gray-300 leading-relaxed">{faq.a}</p>
                 </div>
               </details>
             ))}
@@ -1442,7 +1442,7 @@ export default function GasStationPropertiesFloridaPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Quick <span className="text-gold">Fit Check</span>
             </h2>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               If you nod &ldquo;yes&rdquo; to three or more of these, a gas
               station or C-store ground lease likely deserves a slot on your
               shortlist.
@@ -1452,7 +1452,7 @@ export default function GasStationPropertiesFloridaPage() {
             {fitCheckQuestions.map((q) => (
               <li
                 key={q}
-                className="flex items-start gap-4 bg-dark-card border border-dark-border rounded-xl p-5"
+                className="flex items-start gap-4 bg-white/[0.04] border border-white/10 rounded-xl p-5"
               >
                 <div className="w-6 h-6 rounded-full bg-gold/15 text-gold flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg
@@ -1488,16 +1488,16 @@ export default function GasStationPropertiesFloridaPage() {
       {/* Lead capture */}
       <section
         id="gas-station-lead"
-        className="border-t border-dark-border bg-dark-card/30"
+        className="border-t border-white/10 bg-white/[0.04]/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-dark-card border border-dark-border rounded-xl p-8 sm:p-10">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8 sm:p-10">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
                 See Available{" "}
                 <span className="text-gold">Gas Station Properties</span>
               </h2>
-              <p className="text-gray-400 text-center mb-8 leading-relaxed">
+              <p className="text-gray-300 text-center mb-8 leading-relaxed">
                 Tell us about your investment criteria — target brand, cap rate,
                 deal size, 1031 timing, and geography — and we&apos;ll send you
                 current Florida gas station and C-store opportunities that
@@ -1514,7 +1514,7 @@ export default function GasStationPropertiesFloridaPage() {
       </section>
 
       {/* Related resources */}
-      <section className="border-t border-dark-border">
+      <section className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10 text-center">
             Related <span className="text-gold">Resources</span>
@@ -1561,12 +1561,12 @@ export default function GasStationPropertiesFloridaPage() {
               <Link
                 key={resource.href}
                 href={resource.href}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors group block"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors group block"
               >
                 <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                   {resource.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   {resource.description}
                 </p>
                 <span className="text-gold text-sm font-medium">

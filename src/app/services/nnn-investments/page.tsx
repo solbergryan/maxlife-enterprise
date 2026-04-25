@@ -13,7 +13,7 @@ export default function NNNInvestmentsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-buildings-city-coffee-shop-doors-street-1836478.webp"
           alt="NNN retail storefront investment property in Central Florida"
@@ -26,7 +26,7 @@ export default function NNNInvestmentsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/services"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -46,7 +46,7 @@ export default function NNNInvestmentsPage() {
               <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 Investment Property &amp; NNN Opportunities in Orlando
               </h1>
-              <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
+              <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
                 Build passive income through triple net lease and value-add
                 investment property in Orlando and Central Florida. We help
                 investors acquire and dispose of NNN properties backed by
@@ -71,21 +71,21 @@ export default function NNNInvestmentsPage() {
             <h2 className="text-2xl font-bold text-white mb-4">
               What Is a <span className="text-gold">Triple Net Lease</span>?
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               A triple net (NNN) lease is a commercial lease structure where the
               tenant pays all three major operating expenses — property taxes,
               insurance, and maintenance — in addition to rent. This means the
               property owner collects predictable, passive income with minimal
               landlord responsibilities.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               NNN properties are typically leased to national credit tenants like
               AutoZone, Dollar General, Walgreens, and other established brands
               on long-term leases (10-25 years), making them one of the most
               stable real estate investments available.
             </p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
             <h3 className="text-gold font-semibold mb-4">
               Tenant Pays Everything
             </h3>
@@ -102,7 +102,7 @@ export default function NNNInvestmentsPage() {
                   </svg>
                   <div>
                     <span className="text-white font-medium">{item.label}</span>
-                    <span className="text-gray-400 text-sm block">{item.desc}</span>
+                    <span className="text-gray-300 text-sm block">{item.desc}</span>
                   </div>
                 </li>
               ))}
@@ -112,7 +112,7 @@ export default function NNNInvestmentsPage() {
       </section>
 
       {/* Why NNN */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-8">
             Why Invest in <span className="text-gold">NNN Properties</span>?
@@ -152,10 +152,10 @@ export default function NNNInvestmentsPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-dark border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-dark border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -186,7 +186,7 @@ export default function NNNInvestmentsPage() {
           ].map((tenant) => (
             <div
               key={tenant}
-              className="bg-dark-card border border-dark-border rounded-lg p-4 text-center text-gray-300 text-sm font-medium hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-lg p-4 text-center text-gray-300 text-sm font-medium hover:border-gold/40 transition-colors"
             >
               {tenant}
             </div>
@@ -195,7 +195,7 @@ export default function NNNInvestmentsPage() {
       </section>
 
       {/* Our Process */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-8">
             Our <span className="text-gold">Process</span>
@@ -233,7 +233,7 @@ export default function NNNInvestmentsPage() {
                 </div>
                 <div className="pt-8 pl-2">
                   <h3 className="text-white font-semibold mb-2">{step.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -248,7 +248,7 @@ export default function NNNInvestmentsPage() {
         <h2 className="text-2xl font-bold text-white mb-4">
           Ready to Build Passive Income?
         </h2>
-        <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+        <p className="text-gray-300 mb-8 max-w-lg mx-auto">
           Whether you&apos;re buying your first NNN property or adding to a
           portfolio, we&apos;ll find the right deal. Let&apos;s talk.
         </p>
@@ -261,7 +261,7 @@ export default function NNNInvestmentsPage() {
           </Link>
           <a
             href="tel:3215862121"
-            className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+            className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
           >
             Call (321) 586-2121
           </a>

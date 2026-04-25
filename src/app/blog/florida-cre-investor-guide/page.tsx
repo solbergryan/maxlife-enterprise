@@ -37,11 +37,11 @@ export default function FloridaCREGuide() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -58,7 +58,7 @@ export default function FloridaCREGuide() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Florida Commercial Real Estate Investor Guide
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Everything out-of-state investors and first-time Florida CRE buyers
             need to know about investing in the Sunshine State.
           </p>
@@ -121,7 +121,7 @@ export default function FloridaCREGuide() {
             ].map((m) => (
               <div
                 key={m.market}
-                className="bg-dark-card border border-dark-border rounded-lg p-5"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5"
               >
                 <h3 className="text-gold font-semibold mb-2">{m.market}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -169,7 +169,7 @@ export default function FloridaCREGuide() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-dark-card border border-dark-border rounded-lg p-4"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
               >
                 <p className="text-gold font-semibold mb-1">{item.title}</p>
                 <p className="text-gray-300 text-sm">{item.desc}</p>
@@ -207,7 +207,7 @@ export default function FloridaCREGuide() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-dark-card border border-dark-border rounded-lg p-4"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
               >
                 <p className="text-gold font-semibold mb-1">{item.title}</p>
                 <p className="text-gray-300 text-sm">{item.desc}</p>

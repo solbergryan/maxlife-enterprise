@@ -14,7 +14,7 @@ export default function InvestmentOutlookHubPage() {
 
   return (
     <>
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Sector Research
@@ -23,7 +23,7 @@ export default function InvestmentOutlookHubPage() {
             Central Florida CRE{" "}
             <span className="text-gold">Investment Outlook</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Sector-by-sector commercial real estate investment outlooks for
             Central Florida. Each report covers cap rate snapshots, rent
             growth, supply-demand dynamics, key trends, and forward-looking
@@ -39,7 +39,7 @@ export default function InvestmentOutlookHubPage() {
             </Link>
             <Link
               href="/cap-rates"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
             >
               Cap Rates by Submarket
             </Link>
@@ -57,12 +57,12 @@ export default function InvestmentOutlookHubPage() {
             return (
               <div
                 key={sector.slug}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-gold text-xl font-bold mb-2">
                   {sector.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {sector.description}
                 </p>
                 <div className="space-y-2">
@@ -70,7 +70,7 @@ export default function InvestmentOutlookHubPage() {
                     <Link
                       key={y.year}
                       href={`/investment-outlook/${sector.slug}/${y.year}`}
-                      className="block bg-dark/40 border border-dark-border hover:border-gold/40 rounded-lg px-4 py-3 transition-colors group"
+                      className="block bg-dark/40 border border-white/10 hover:border-gold/40 rounded-lg px-4 py-3 transition-colors group"
                     >
                       <div className="flex items-center justify-between">
                         <span className="text-white font-semibold group-hover:text-gold transition-colors">
@@ -93,7 +93,7 @@ export default function InvestmentOutlookHubPage() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-4">
           How These <span className="text-gold">Outlooks Are Built</span>
         </h2>
@@ -117,39 +117,39 @@ export default function InvestmentOutlookHubPage() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-6">
           Related <span className="text-gold">Tools</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/cap-rate-calculator"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-5 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-5 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-2">Cap Rate Calculator</h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               Run cap rates and NOI analysis on any property.
             </p>
           </Link>
           <Link
             href="/deal-analyzer"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-5 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-5 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-2">
               Commercial Deal Analyzer
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               Full underwriting calculator — cap rate, cash-on-cash, IRR.
             </p>
           </Link>
           <Link
             href="/1031-timeline-calculator"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-5 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-5 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-2">
               1031 Timeline Calculator
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               Plan your 45-day identification and 180-day close deadlines.
             </p>
           </Link>

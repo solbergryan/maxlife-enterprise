@@ -33,12 +33,12 @@ export default async function LoginPage({ searchParams }: PageProps) {
             ← MaxLife Academy
           </Link>
           <h1 className="mt-4 text-3xl font-bold text-white">Sign in</h1>
-          <p className="mt-2 text-sm text-gray-400">
+          <p className="mt-2 text-sm text-gray-300">
             Free forever. No credit card. Track your progress and earn certificates.
           </p>
         </div>
 
-        <div className="rounded-2xl border border-dark-border bg-dark-card p-8">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-8">
           <LoginForm nextPath={next} />
         </div>
 

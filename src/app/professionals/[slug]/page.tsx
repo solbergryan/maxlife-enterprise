@@ -91,12 +91,12 @@ export default async function ProfessionalPage({
       </div>
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative">
           <Link
             href="/professionals"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -109,7 +109,7 @@ export default async function ProfessionalPage({
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             {pro.title}
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-300 text-lg leading-relaxed">
             {pro.shortDescription}
           </p>
         </div>
@@ -155,7 +155,7 @@ export default async function ProfessionalPage({
         </section>
 
         {/* When needed */}
-        <section className="bg-dark-card border border-dark-border rounded-xl p-6">
+        <section className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
           <h2 className="text-xl font-bold text-white mb-3">
             When You <span className="text-gold">Need One</span>
           </h2>
@@ -166,7 +166,7 @@ export default async function ProfessionalPage({
         {(pro.typicalCost || pro.typicalTiming) && (
           <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {pro.typicalCost && (
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
                   Typical Cost
                 </h3>
@@ -176,7 +176,7 @@ export default async function ProfessionalPage({
               </div>
             )}
             {pro.typicalTiming && (
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
                   Typical Timing
                 </h3>
@@ -208,7 +208,7 @@ export default async function ProfessionalPage({
                   <Link
                     key={rp.slug}
                     href={`/professionals/${rp.slug}`}
-                    className="bg-dark-card border border-dark-border rounded-lg p-4 hover:border-gold/40 transition-colors group block"
+                    className="bg-white/[0.04] border border-white/10 rounded-lg p-4 hover:border-gold/40 transition-colors group block"
                   >
                     <p className="text-white font-medium text-sm group-hover:text-gold transition-colors">
                       {rp.title}
@@ -223,12 +223,12 @@ export default async function ProfessionalPage({
       </article>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Need a {pro.title.replace(/\s*\(.*?\)\s*/g, "")}?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             MaxLife Development can connect you with trusted Florida{" "}
             {pro.title.toLowerCase().replace(/\s*\(.*?\)\s*/g, "")}s for your
             commercial real estate project.
@@ -242,7 +242,7 @@ export default async function ProfessionalPage({
             </Link>
             <Link
               href="/professionals"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               All Professionals
             </Link>

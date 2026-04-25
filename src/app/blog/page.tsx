@@ -389,7 +389,7 @@ export default function BlogPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Blog
@@ -397,7 +397,7 @@ export default function BlogPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Market <span className="text-gold">Insights</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Guides, analysis, and perspectives on NNN investing, land
             development, and the Central Florida real estate market.
           </p>
@@ -411,10 +411,10 @@ export default function BlogPage() {
             <Link
               key={article.slug}
               href={`/blog/${article.slug}`}
-              className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-all flex flex-col"
+              className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all flex flex-col"
             >
               {articleImages[article.slug] && (
-                <div className="relative aspect-[16/9] overflow-hidden border-b border-dark-border">
+                <div className="relative aspect-[16/9] overflow-hidden border-b border-white/10">
                   <Image
                     src={articleImages[article.slug].src}
                     alt={articleImages[article.slug].alt}
@@ -437,7 +437,7 @@ export default function BlogPage() {
               <h2 className="text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
                 {article.title}
               </h2>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 {article.excerpt}
               </p>
               <span className="text-gold text-sm font-medium group-hover:text-gold-light transition-colors mt-auto">
@@ -450,12 +450,12 @@ export default function BlogPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Have Questions About Investing?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             We&apos;re happy to discuss your investment goals, answer questions
             about the market, or just talk shop. No pressure.
           </p>

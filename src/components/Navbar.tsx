@@ -56,7 +56,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-dark-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
@@ -103,15 +103,15 @@ export default function Navbar() {
                     </svg>
                   </button>
                   {openDropdown === link.href && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-dark-card border border-dark-border rounded-lg shadow-xl py-2 max-h-[80vh] overflow-y-auto">
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white/[0.04] border border-white/10 rounded-lg shadow-xl py-2 max-h-[80vh] overflow-y-auto">
                       <Link
                         href={link.href}
                         onClick={() => setOpenDropdown(null)}
-                        className="block px-4 py-2 text-sm text-gray-400 hover:text-gold hover:bg-dark-hover transition-colors"
+                        className="block px-4 py-2 text-sm text-gray-300 hover:text-gold hover:bg-white/10 transition-colors"
                       >
                         {dropdownHeaderLabel(link.href, link.label)}
                       </Link>
-                      <div className="border-t border-dark-border my-1" />
+                      <div className="border-t border-white/10 my-1" />
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
@@ -120,7 +120,7 @@ export default function Navbar() {
                           className={`block px-4 py-2 text-sm transition-colors ${
                             isActive(child.href)
                               ? "text-gold"
-                              : "text-gray-400 hover:text-gold hover:bg-dark-hover"
+                              : "text-gray-300 hover:text-gold hover:bg-white/10"
                           }`}
                         >
                           {child.label}
@@ -176,7 +176,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-dark border-t border-dark-border">
+        <div className="lg:hidden bg-dark border-t border-white/10">
           <div className="px-4 py-3 space-y-1">
             <div className="pb-3">
               <SearchBar onSelect={() => setOpen(false)} />
@@ -211,7 +211,7 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className="block text-sm text-gray-400 hover:text-gold py-1.5 transition-colors"
+                        className="block text-sm text-gray-300 hover:text-gold py-1.5 transition-colors"
                       >
                         {dropdownHeaderLabel(link.href, link.label)}
                       </Link>
@@ -223,7 +223,7 @@ export default function Navbar() {
                           className={`block text-sm py-1.5 transition-colors ${
                             isActive(child.href)
                               ? "text-gold"
-                              : "text-gray-400 hover:text-gold"
+                              : "text-gray-300 hover:text-gold"
                           }`}
                         >
                           {child.label}

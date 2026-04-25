@@ -135,7 +135,7 @@ export default function IndustrialPropertyCentralFloridaPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/warehouse/maxlife-warehouse-container-metal-port-iron-warehouse-subwoofer-3639617.webp"
           alt="Central Florida industrial property with shipping containers"
@@ -157,7 +157,7 @@ export default function IndustrialPropertyCentralFloridaPage() {
             Warehouse, flex, distribution, manufacturing, and cold storage
             across the I-4 corridor
           </p>
-          <p className="text-gray-400 max-w-3xl leading-relaxed">
+          <p className="text-gray-300 max-w-3xl leading-relaxed">
             MaxLife Realty represents industrial buyers, sellers, and
             investors across Central Florida — from Orlando and the airport
             submarkets to Apopka, Sanford, the Space Coast, and Polk County.
@@ -176,12 +176,12 @@ export default function IndustrialPropertyCentralFloridaPage() {
       </section>
 
       {/* Submarkets */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Central Florida Industrial Submarkets
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             Central Florida&apos;s industrial market spans from the I-4
             corridor to the Space Coast. Each submarket has its own rent
             dynamics and user profile.
@@ -190,12 +190,12 @@ export default function IndustrialPropertyCentralFloridaPage() {
             {submarkets.map((s) => (
               <div
                 key={s.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {s.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {s.desc}
                 </p>
               </div>
@@ -205,12 +205,12 @@ export default function IndustrialPropertyCentralFloridaPage() {
       </section>
 
       {/* Property Types */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Types of Industrial Property
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             The industrial category covers a wide range of building types —
             each with its own user base and investment profile.
           </p>
@@ -218,10 +218,10 @@ export default function IndustrialPropertyCentralFloridaPage() {
             {propertyTypes.map((t) => (
               <div
                 key={t.title}
-                className="bg-dark border border-dark-border rounded-xl p-6"
+                className="bg-dark border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-gold font-semibold mb-2">{t.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {t.desc}
                 </p>
               </div>
@@ -231,12 +231,12 @@ export default function IndustrialPropertyCentralFloridaPage() {
       </section>
 
       {/* Market Trends */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Industrial Market Trends in Central Florida
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             The four dynamics driving industrial demand and pricing across the
             region.
           </p>
@@ -244,10 +244,10 @@ export default function IndustrialPropertyCentralFloridaPage() {
             {trends.map((t) => (
               <div
                 key={t.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-white font-semibold mb-2">{t.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {t.desc}
                 </p>
               </div>
@@ -265,19 +265,19 @@ export default function IndustrialPropertyCentralFloridaPage() {
       </section>
 
       {/* Working With Us */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Working with a Central Florida Industrial Broker
           </h2>
-          <p className="text-gray-400 max-w-3xl leading-relaxed mb-6">
+          <p className="text-gray-300 max-w-3xl leading-relaxed mb-6">
             Whether you&apos;re an owner-user looking for a warehouse to buy,
             an investor searching for income-producing industrial, or a
             developer sourcing land for a new build, MaxLife Realty brings
             local market knowledge, disciplined underwriting, and a deep
             network of owners and developers across Central Florida.
           </p>
-          <p className="text-gray-400 max-w-3xl leading-relaxed">
+          <p className="text-gray-300 max-w-3xl leading-relaxed">
             We handle acquisitions and dispositions, sale-leaseback structures,
             1031 exchange identifications, and build-to-suit site selection for
             industrial users.
@@ -288,18 +288,18 @@ export default function IndustrialPropertyCentralFloridaPage() {
       {/* Lead Capture */}
       <section
         id="industrial-request"
-        className="bg-dark-card/50 border-b border-dark-border"
+        className="bg-white/[0.03] border-b border-white/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
               Find Industrial Property
             </h2>
-            <p className="text-gray-400 text-center mb-8">
+            <p className="text-gray-300 text-center mb-8">
               Tell us your size, submarket, and use case — we&apos;ll source
               matching industrial properties across Central Florida.
             </p>
-            <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+            <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8">
               <LeadCaptureForm
                 buttonText="Request Industrial Listings"
                 subjectPrefix="Industrial Property Central Florida"

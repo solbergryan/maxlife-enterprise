@@ -85,7 +85,7 @@ export default function LeadCaptureForm({
       >
         <div className="mb-2 text-3xl">✓</div>
         <p className="font-semibold">{successMessage}</p>
-        <p className={`mt-1 text-sm ${isDark ? "text-gray-400" : "text-green-700"}`}>
+        <p className={`mt-1 text-sm ${isDark ? "text-gray-300" : "text-green-700"}`}>
           If you don't see it in a minute, check your spam folder.
         </p>
       </div>
@@ -93,7 +93,7 @@ export default function LeadCaptureForm({
   }
 
   const inputClass = isDark
-    ? "w-full rounded-lg border border-dark-border bg-dark px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+    ? "w-full rounded-lg border border-white/10 bg-dark px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
     : "w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-green-500 focus:outline-none";
 
   const buttonClass = isDark
@@ -104,7 +104,7 @@ export default function LeadCaptureForm({
     <form
       onSubmit={handleSubmit}
       className={`rounded-2xl p-6 sm:p-8 ${
-        isDark ? "border border-dark-border bg-dark-card" : "border border-gray-200 bg-white shadow-sm"
+        isDark ? "border border-white/10 bg-white/[0.04]" : "border border-gray-200 bg-white shadow-sm"
       }`}
     >
       {heading && (
@@ -113,7 +113,7 @@ export default function LeadCaptureForm({
         </h3>
       )}
       {description && (
-        <p className={`mb-5 text-sm ${isDark ? "text-gray-400" : "text-gray-600"}`}>
+        <p className={`mb-5 text-sm ${isDark ? "text-gray-300" : "text-gray-600"}`}>
           {description}
         </p>
       )}

@@ -41,7 +41,7 @@ export default function PropertiesIndexPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscrapers-buildings-skyline-city-real-5999913.webp"
           alt="Commercial properties for sale in Central Florida"
@@ -63,7 +63,7 @@ export default function PropertiesIndexPage() {
               From car washes to CCRCs, retail pads to raw land — deep coverage
               of every CRE asset class traded in Florida.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Each page includes Florida-specific cap rates, typical deal
               sizes, underwriting metrics, investor personas, pros and cons,
               and a pre-loaded deal analyzer. Click any category below to
@@ -81,7 +81,7 @@ export default function PropertiesIndexPage() {
             return (
               <div
                 key={category.slug}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors flex flex-col"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors flex flex-col"
               >
                 <div className="mb-4">
                   <p className="text-gold text-xs font-semibold uppercase tracking-wider mb-2">
@@ -95,13 +95,13 @@ export default function PropertiesIndexPage() {
                       {category.page.displayName}
                     </h2>
                   </Link>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {category.page.heroSubheadline}
                   </p>
                 </div>
 
                 {subtypes.length > 0 && (
-                  <div className="border-t border-dark-border pt-4 mt-auto">
+                  <div className="border-t border-white/10 pt-4 mt-auto">
                     <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-3">
                       {subtypes.length} Subtypes
                     </p>
@@ -140,13 +140,13 @@ export default function PropertiesIndexPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-dark-border bg-dark-card/30">
+      <section className="border-t border-white/10 bg-white/[0.04]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Not Sure Which Property Type Fits?
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-8">
+            <p className="text-gray-300 leading-relaxed mb-8">
               Every investor profile is different. Tell us your goals, capital,
               timeline, and risk tolerance — we will help you find the right
               asset class and source matching Florida opportunities on and off

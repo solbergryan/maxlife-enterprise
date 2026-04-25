@@ -16,7 +16,7 @@ export default function NotFound() {
         <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl">
           This page isn&rsquo;t here
         </h1>
-        <p className="mb-8 max-w-md text-gray-400">
+        <p className="mb-8 max-w-md text-gray-300">
           The link might be outdated or the page may have moved. Try one of
           these instead.
         </p>
@@ -29,13 +29,13 @@ export default function NotFound() {
           </Link>
           <Link
             href="/marketplace"
-            className="rounded-lg border border-dark-border px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-gold"
+            className="rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-gold"
           >
             Browse listings
           </Link>
           <Link
             href="/academy"
-            className="rounded-lg border border-dark-border px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-gold"
+            className="rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-gold"
           >
             Visit the Academy
           </Link>

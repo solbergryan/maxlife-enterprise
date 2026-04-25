@@ -60,7 +60,7 @@ export default function EmailDealAnalyzerButton({ summary, inputs }: Props) {
       <div className="rounded-xl border border-gold/40 bg-gold/5 p-6 text-center">
         <div className="mb-2 text-3xl text-gold">✓</div>
         <p className="font-semibold text-white">Sent — check your inbox.</p>
-        <p className="mt-1 text-sm text-gray-400">
+        <p className="mt-1 text-sm text-gray-300">
           Reply to the email if you want me to pressure-test these assumptions on a real property.
         </p>
       </div>
@@ -76,7 +76,7 @@ export default function EmailDealAnalyzerButton({ summary, inputs }: Props) {
               Save or share
             </p>
             <h4 className="text-white font-semibold text-lg">Email me this underwriting summary</h4>
-            <p className="text-gray-400 text-sm mt-1">
+            <p className="text-gray-300 text-sm mt-1">
               Get the full metrics in your inbox — forward to lenders, partners, or yourself.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function EmailDealAnalyzerButton({ summary, inputs }: Props) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "sending"}
-          className="flex-1 rounded-lg border border-dark-border bg-dark px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+          className="flex-1 rounded-lg border border-white/10 bg-dark px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
         />
         <button
           type="submit"

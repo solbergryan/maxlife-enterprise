@@ -69,7 +69,7 @@ export default async function OutlookPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-white/10 py-16 sm:py-20">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-skyscraper-office-architecture-skyline-district-3939138.webp"
           alt="Central Florida commercial real estate sector investment outlook"
@@ -94,7 +94,7 @@ export default async function OutlookPage({ params }: PageProps) {
       </section>
 
       {/* Main report body */}
-      <section className="border-b border-dark-border bg-dark-card py-14">
+      <section className="border-b border-white/10 bg-white/[0.04] py-14">
         <div className="mx-auto max-w-4xl space-y-10 px-4 sm:px-6 lg:px-8">
           <div>
             <h2 className="mb-3 text-xl font-bold text-white uppercase tracking-wider text-sm">
@@ -155,7 +155,7 @@ export default async function OutlookPage({ params }: PageProps) {
       </section>
 
       {/* Other sector outlooks */}
-      <section className="border-b border-dark-border bg-dark py-14">
+      <section className="border-b border-white/10 bg-dark py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-xl font-bold text-white">Other {year} Sector Outlooks</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -168,10 +168,10 @@ export default async function OutlookPage({ params }: PageProps) {
                   <Link
                     key={s.slug}
                     href={`/investment-outlook/${s.slug}/${yr}`}
-                    className="rounded-xl border border-dark-border bg-dark-card p-4 transition-colors hover:border-gold/60"
+                    className="rounded-xl border border-white/10 bg-white/[0.04] p-4 transition-colors hover:border-gold/60"
                   >
                     <div className="font-semibold text-white">{s.name}</div>
-                    <div className="mt-1 text-xs text-gray-400">{yr} outlook →</div>
+                    <div className="mt-1 text-xs text-gray-300">{yr} outlook →</div>
                   </Link>
                 );
               })}
@@ -180,12 +180,12 @@ export default async function OutlookPage({ params }: PageProps) {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card py-14">
+      <section className="bg-white/[0.04] py-14">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl">
             Looking to act on this outlook?
           </h2>
-          <p className="mb-6 text-gray-400">
+          <p className="mb-6 text-gray-300">
             MaxLife Realty works the Central Florida {sector.name.toLowerCase()} market every day.
             Get an introduction to available opportunities or request a current valuation on a
             property you already own.

@@ -42,7 +42,7 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
-      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+      <section className="relative overflow-hidden border-b border-white/10 aspect-[21/6]">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-full-hd-wallpaper-building-facade-21883.webp"
           alt="Evaluating a commercial real estate office deal"
@@ -90,7 +90,7 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
             How to Evaluate a Commercial Real Estate Deal: The Complete
             Investor&apos;s Framework
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             A step-by-step guide to analyzing commercial property investments
             using the metrics, ratios, and due diligence processes that
             institutional investors rely on. From cap rate to DSCR, tenant
@@ -241,7 +241,7 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Property Type</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Typical Cap Rate</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Risk Level</th>
@@ -249,37 +249,37 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Single-Tenant NNN (Credit)</td>
                     <td className="py-3 pr-4">5.0% - 6.5%</td>
                     <td className="py-3 pr-4">Low</td>
                     <td className="py-3">1031 Exchange / Passive</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Multi-Tenant Retail</td>
                     <td className="py-3 pr-4">6.5% - 8.0%</td>
                     <td className="py-3 pr-4">Moderate</td>
                     <td className="py-3">Active / Value-Add</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Medical Office</td>
                     <td className="py-3 pr-4">6.0% - 7.5%</td>
                     <td className="py-3 pr-4">Low - Moderate</td>
                     <td className="py-3">Income / Institutional</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Industrial / Warehouse</td>
                     <td className="py-3 pr-4">5.5% - 7.5%</td>
                     <td className="py-3 pr-4">Low - Moderate</td>
                     <td className="py-3">Institutional / REIT</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Office (Suburban)</td>
                     <td className="py-3 pr-4">7.0% - 9.0%</td>
                     <td className="py-3 pr-4">Moderate - High</td>
                     <td className="py-3">Value-Add / Opportunistic</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Multifamily</td>
                     <td className="py-3 pr-4">5.0% - 6.5%</td>
                     <td className="py-3 pr-4">Low</td>
@@ -357,7 +357,7 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Scenario</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Cap Rate</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Mortgage Rate</th>
@@ -366,28 +366,28 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">All Cash</td>
                     <td className="py-3 pr-4">7.0%</td>
                     <td className="py-3 pr-4">N/A</td>
                     <td className="py-3 pr-4">0%</td>
                     <td className="py-3">7.0%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Positive Leverage</td>
                     <td className="py-3 pr-4">7.0%</td>
                     <td className="py-3 pr-4">5.5%</td>
                     <td className="py-3 pr-4">65%</td>
                     <td className="py-3">9.8%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Neutral Leverage</td>
                     <td className="py-3 pr-4">7.0%</td>
                     <td className="py-3 pr-4">7.0%</td>
                     <td className="py-3 pr-4">65%</td>
                     <td className="py-3">7.0%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Negative Leverage</td>
                     <td className="py-3 pr-4">7.0%</td>
                     <td className="py-3 pr-4">8.0%</td>
@@ -432,7 +432,7 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold font-bold text-xl mb-1">
                     {item.metric}
@@ -478,7 +478,7 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Property Type</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Avg Purchase Price/SF</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Replacement Cost/SF</th>
@@ -486,25 +486,25 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Retail Strip Center</td>
                     <td className="py-3 pr-4">$180 - $280</td>
                     <td className="py-3 pr-4">$250 - $350</td>
                     <td className="py-3">15% - 30%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Medical Office</td>
                     <td className="py-3 pr-4">$220 - $350</td>
                     <td className="py-3 pr-4">$300 - $450</td>
                     <td className="py-3">10% - 25%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Industrial / Flex</td>
                     <td className="py-3 pr-4">$100 - $180</td>
                     <td className="py-3 pr-4">$130 - $200</td>
                     <td className="py-3">10% - 25%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Suburban Office</td>
                     <td className="py-3 pr-4">$130 - $220</td>
                     <td className="py-3 pr-4">$250 - $350</td>
@@ -609,12 +609,12 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
               ].map((item) => (
                 <div
                   key={item.tier}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.tier}
                   </h4>
-                  <p className="text-gray-400 text-xs mb-2">{item.examples}</p>
+                  <p className="text-gray-300 text-xs mb-2">{item.examples}</p>
                   <p className="text-gray-500 text-xs">{item.risk}</p>
                 </div>
               ))}
@@ -657,39 +657,39 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Provision</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">What to Look For</th>
                     <th className="text-left text-gold font-semibold py-3">Impact on Value</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Rent Escalations</td>
                     <td className="py-3 pr-4">Fixed $ increases, CPI-based, or percentage bumps</td>
                     <td className="py-3">Built-in NOI growth. 2-3% annual bumps are standard.</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Renewal Options</td>
                     <td className="py-3 pr-4">Number of options, renewal rental rate (fair market or fixed)</td>
                     <td className="py-3">Fair market renewals better for landlord. Fixed renewals can be below market.</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Early Termination</td>
                     <td className="py-3 pr-4">Kick-out clauses, sales thresholds, termination fees</td>
                     <td className="py-3">Reduces income certainty. Significant negative impact on value.</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">CAM / Expense Caps</td>
                     <td className="py-3 pr-4">Caps on controllable or total expense reimbursements</td>
                     <td className="py-3">Expense caps shift cost risk to landlord. Negotiate carefully.</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Assignment / Subletting</td>
                     <td className="py-3 pr-4">Tenant&apos;s right to assign or sublet without consent</td>
                     <td className="py-3">Unrestricted assignment can bring in weaker tenants.</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Co-Tenancy Clause</td>
                     <td className="py-3 pr-4">Rent reduction if anchor tenant leaves</td>
                     <td className="py-3">Major risk in multi-tenant centers. Can trigger rent cascades.</td>
@@ -742,12 +742,12 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
               ].map((item) => (
                 <div
                   key={item.category}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-2">
                     {item.category}
                   </h4>
-                  <p className="text-gray-400 text-xs leading-relaxed">{item.items}</p>
+                  <p className="text-gray-300 text-xs leading-relaxed">{item.items}</p>
                 </div>
               ))}
             </div>
@@ -797,54 +797,54 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Metric</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Calculation</th>
                     <th className="text-left text-gold font-semibold py-3">Result</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Gross Potential Income</td>
                     <td className="py-3 pr-4">12,000 SF x $28/SF avg</td>
                     <td className="py-3">$336,000</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Vacancy &amp; Credit Loss (5%)</td>
                     <td className="py-3 pr-4">$336,000 x 5%</td>
                     <td className="py-3">($16,800)</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Effective Gross Income</td>
                     <td className="py-3 pr-4">$336,000 - $16,800</td>
                     <td className="py-3">$319,200</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Operating Expenses</td>
                     <td className="py-3 pr-4">Non-reimbursable: mgmt, reserves</td>
                     <td className="py-3">($165,000 landlord share after NNN)</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">NOI</td>
                     <td className="py-3 pr-4">$319,200 - $165,000 adjusted</td>
                     <td className="py-3">$154,200</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Cap Rate</td>
                     <td className="py-3 pr-4">$154,200 / $2,200,000</td>
                     <td className="py-3">7.01%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Price Per SF</td>
                     <td className="py-3 pr-4">$2,200,000 / 12,000 SF</td>
                     <td className="py-3">$183/SF</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Cash-on-Cash (65% LTV, 6.5% rate)</td>
                     <td className="py-3 pr-4">Cash flow / equity invested</td>
                     <td className="py-3">8.4%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">DSCR</td>
                     <td className="py-3 pr-4">$154,200 / $114,500 debt service</td>
                     <td className="py-3">1.35x</td>
@@ -877,11 +877,11 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
           </section>
 
           {/* ── CTA ── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-8">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-8">
             <h2 className="text-2xl font-bold text-white mb-3">
               Need Help Evaluating a Deal?
             </h2>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team analyzes hundreds of commercial real estate deals across
               Central Florida every year. Let us help you evaluate your next
               opportunity with institutional-quality analysis.
@@ -903,18 +903,18 @@ export default function HowToEvaluateCommercialRealEstateDeal() {
           </div>
 
           {/* ── Related Reading ── */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Cap Rates: Investor Guide</h3>
                 <p className="text-gray-500 text-xs">Deep dive into cap rates across property types and submarkets in the Orlando metro area.</p>
               </Link>
-              <Link href="/blog/what-is-nnn-lease" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/what-is-nnn-lease" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">What Is a NNN Lease?</h3>
                 <p className="text-gray-500 text-xs">Understanding triple net leases, expense structures, and what they mean for commercial property investors.</p>
               </Link>
-              <Link href="/blog/how-to-buy-commercial-property-orlando" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/how-to-buy-commercial-property-orlando" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">How to Buy Commercial Property in Orlando</h3>
                 <p className="text-gray-500 text-xs">Step-by-step guide to purchasing commercial real estate in the Orlando metro area.</p>
               </Link>

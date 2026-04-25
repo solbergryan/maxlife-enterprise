@@ -57,7 +57,7 @@ export default function OrgChart() {
   return (
     <div className="space-y-10">
       {/* Search & Filter */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-5 sticky top-16 z-30 backdrop-blur-sm">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5 sticky top-16 z-30 backdrop-blur-sm">
         <div className="flex flex-col gap-4">
           <div className="relative">
             <svg
@@ -78,7 +78,7 @@ export default function OrgChart() {
               placeholder="Search a role (e.g. attorney, appraiser, architect)..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full bg-dark border border-dark-border rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold/50 transition-colors"
+              className="w-full bg-dark border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold/50 transition-colors"
             />
           </div>
 
@@ -88,7 +88,7 @@ export default function OrgChart() {
               className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                 activeCategory === "all"
                   ? "bg-gold text-dark"
-                  : "bg-dark border border-dark-border text-gray-400 hover:text-gold hover:border-gold/30"
+                  : "bg-dark border border-white/10 text-gray-300 hover:text-gold hover:border-gold/40"
               }`}
             >
               All Roles ({professionals.length})
@@ -103,7 +103,7 @@ export default function OrgChart() {
                   className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
                     activeCategory === cat
                       ? "bg-gold text-dark"
-                      : "bg-dark border border-dark-border text-gray-400 hover:text-gold hover:border-gold/30"
+                      : "bg-dark border border-white/10 text-gray-300 hover:text-gold hover:border-gold/40"
                   }`}
                 >
                   {categoryShortLabel[cat]} ({count})
@@ -165,7 +165,7 @@ export default function OrgChart() {
                   <Link
                     key={role.slug}
                     href={`/professionals/${role.slug}`}
-                    className="block bg-dark/70 border border-dark-border hover:border-gold/40 rounded-lg p-3 transition-colors group"
+                    className="block bg-dark/70 border border-white/10 hover:border-gold/40 rounded-lg p-3 transition-colors group"
                   >
                     <p className="text-white font-medium text-sm group-hover:text-gold transition-colors">
                       {role.title}
@@ -182,8 +182,8 @@ export default function OrgChart() {
       </div>
 
       {totalMatches === 0 && (
-        <div className="text-center py-12 bg-dark-card border border-dark-border rounded-xl">
-          <p className="text-gray-400">
+        <div className="text-center py-12 bg-white/[0.04] border border-white/10 rounded-xl">
+          <p className="text-gray-300">
             No roles match your search. Try a different keyword or category.
           </p>
           <button
@@ -199,7 +199,7 @@ export default function OrgChart() {
       )}
 
       {/* Deal flow */}
-      <div className="bg-dark-card border border-dark-border rounded-xl p-6 mt-12">
+      <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mt-12">
         <h3 className="text-white font-bold text-lg mb-6 text-center">
           Typical CRE Deal Flow —{" "}
           <span className="text-gold">Who Gets Involved When</span>
@@ -239,7 +239,7 @@ export default function OrgChart() {
           ].map((phase) => (
             <div
               key={phase.step}
-              className="bg-dark border border-dark-border rounded-lg p-4 text-center"
+              className="bg-dark border border-white/10 rounded-lg p-4 text-center"
             >
               <div className="text-2xl font-bold text-gold/40 mb-1">
                 {phase.step}

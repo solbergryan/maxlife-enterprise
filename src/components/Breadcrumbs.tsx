@@ -52,7 +52,7 @@ export default function Breadcrumbs({ items, className = "" }: Props) {
                 {isLast ? (
                   <span
                     aria-current="page"
-                    className="text-gray-400 line-clamp-1 max-w-[320px]"
+                    className="text-gray-300 line-clamp-1 max-w-[320px]"
                   >
                     {it.name}
                   </span>

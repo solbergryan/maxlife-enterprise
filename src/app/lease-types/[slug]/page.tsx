@@ -64,11 +64,11 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
       />
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <Link
             href="/lease-types"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -92,7 +92,7 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
             {l.name}
           </h1>
           <p className="text-gold text-lg italic mb-4">{l.tagline}</p>
-          <p className="text-gray-400 text-lg leading-relaxed">{l.definition}</p>
+          <p className="text-gray-300 text-lg leading-relaxed">{l.definition}</p>
         </div>
       </section>
 
@@ -107,7 +107,7 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
           ].map((item) => (
             <div
               key={item.label}
-              className="bg-dark-card border border-dark-border rounded-lg p-4"
+              className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
             >
               <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
                 {item.label}
@@ -125,10 +125,10 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
         <h2 className="text-2xl font-bold text-white mb-5">
           Who Pays <span className="text-gold">What</span>?
         </h2>
-        <div className="bg-dark-card border border-dark-border rounded-xl overflow-hidden">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-dark/50 border-b border-dark-border">
+              <tr className="bg-dark/50 border-b border-white/10">
                 <th className="text-left text-gold text-xs uppercase tracking-wider py-3 px-4">
                   Expense
                 </th>
@@ -144,7 +144,7 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
               {l.whoPays.map((item) => (
                 <tr
                   key={item.label}
-                  className="border-b border-dark-border/50"
+                  className="border-b border-white/10/50"
                 >
                   <td className="py-3 px-4 text-white">{item.label}</td>
                   <td className="py-3 px-4 text-center">
@@ -233,7 +233,7 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
           {l.typicalUseCases.map((uc) => (
             <span
               key={uc}
-              className="bg-dark-card border border-dark-border rounded-md px-3 py-2 text-sm text-gray-300"
+              className="bg-white/[0.04] border border-white/10 rounded-md px-3 py-2 text-sm text-gray-300"
             >
               {uc}
             </span>
@@ -269,7 +269,7 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
             <Link
               key={other.slug}
               href={`/lease-types/${other.slug}`}
-              className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors group block"
+              className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors group block"
             >
               <p className="text-white font-medium text-sm group-hover:text-gold transition-colors">
                 {other.shortName}
@@ -281,13 +281,13 @@ export default async function LeaseTypePage({ params }: { params: Params }) {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Invest in{" "}
             <span className="text-gold">{l.shortName}</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             MaxLife Development sources commercial real estate across Florida
             with the lease structures that match your investment strategy.
           </p>

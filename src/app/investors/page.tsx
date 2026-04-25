@@ -14,7 +14,7 @@ export default function InvestorsHubPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/investors/maxlife-investors-stock-trading-monitor-business-finance-exchange-investment-m-1863880.webp"
           alt="Commercial real estate investment analytics on a trading monitor"
@@ -32,7 +32,7 @@ export default function InvestorsHubPage() {
             CRE Investment Services by{" "}
             <span className="text-gold">Investor Type</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Commercial real estate investors come in many shapes — 1031
             exchange buyers on a 45-day clock, family offices managing
             generational wealth, international investors entering US markets,
@@ -49,20 +49,20 @@ export default function InvestorsHubPage() {
             <Link
               key={p.slug}
               href={`/investors/${p.slug}`}
-              className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-xl p-6 transition-colors group block"
+              className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-xl p-6 transition-colors group block"
             >
               <h2 className="text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors">
                 {p.shortTitle}
               </h2>
               <p className="text-gold text-sm italic mb-3">{p.tagline}</p>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                 {p.overview}
               </p>
               <div className="flex flex-wrap gap-2 text-xs mb-4">
-                <span className="bg-dark border border-dark-border rounded px-2 py-1 text-gray-400">
+                <span className="bg-dark border border-white/10 rounded px-2 py-1 text-gray-300">
                   {p.typicalProfile.typicalInvestment}
                 </span>
-                <span className="bg-dark border border-dark-border rounded px-2 py-1 text-gray-400">
+                <span className="bg-dark border border-white/10 rounded px-2 py-1 text-gray-300">
                   {p.typicalProfile.targetReturns}
                 </span>
               </div>
@@ -75,12 +75,12 @@ export default function InvestorsHubPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Not Sure Where You <span className="text-gold">Fit</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Every investor is different. Reach out and tell us about your
             goals, and we&apos;ll figure out the right approach together.
           </p>

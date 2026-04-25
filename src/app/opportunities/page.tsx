@@ -43,7 +43,7 @@ export default function OpportunitiesPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-business-office-skyscraper-windows-modern-4620084.webp"
           alt="Sell commercial property in Central Florida"
@@ -61,7 +61,7 @@ export default function OpportunitiesPage() {
             Selling Central Florida{" "}
             <span className="text-gold">Commercial Property?</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             MaxLife Realty is a seller-focused commercial brokerage covering
             Orlando, the Space Coast, and Central Florida. We underwrite your
             property like an institutional buyer would, show you a realistic
@@ -92,7 +92,7 @@ export default function OpportunitiesPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             How we work with sellers
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-300 text-lg leading-relaxed">
             Every seller engagement follows the same four steps. We move as
             fast or as slowly as the property and your situation require, but
             the rigor is the same whether it&apos;s a single-tenant NNN or a
@@ -129,7 +129,7 @@ export default function OpportunitiesPage() {
           ].map((s) => (
             <div
               key={s.step}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
             >
               <p className="text-gold font-mono text-sm tracking-widest mb-3">
                 {s.step}
@@ -137,7 +137,7 @@ export default function OpportunitiesPage() {
               <h3 className="text-white font-semibold text-lg mb-2">
                 {s.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 {s.body}
               </p>
               <Link
@@ -165,13 +165,13 @@ export default function OpportunitiesPage() {
       </section>
 
       {/* What we need from you */}
-      <section className="bg-dark-card/30 border-y border-dark-border">
+      <section className="bg-white/[0.04]/30 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               What we need to value your property
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
               A valuation call with MaxLife Realty is free, confidential, and
               typically takes 20 minutes. To give you a real number instead
               of a guess, we work from the same information any serious
@@ -198,13 +198,13 @@ export default function OpportunitiesPage() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <h3 className="text-gold font-semibold text-sm mb-2">
                     {item.title}
                   </h3>
                   <p
-                    className="text-gray-400 text-sm leading-relaxed"
+                    className="text-gray-300 text-sm leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: item.body }}
                   />
                 </div>
@@ -234,7 +234,7 @@ export default function OpportunitiesPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Tell us about your property
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-300 text-lg leading-relaxed">
             The more you share, the sharper the number we can give you on
             the call. Only the basics are required &mdash; fill in what you
             have and Ryan will follow up within one business day to
@@ -253,7 +253,7 @@ export default function OpportunitiesPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Looking for Central Florida commercial property?
           </h2>
-          <p className="text-gray-400 mb-8 leading-relaxed">
+          <p className="text-gray-300 mb-8 leading-relaxed">
             We don&apos;t run a public listings portal &mdash; there are
             plenty of those. What we do is keep a short list of serious
             Central Florida commercial buyers and introduce them to the

@@ -47,14 +47,14 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-dark-card border border-gold/30 rounded-xl p-8 text-center">
+      <div className="bg-white/[0.04] border border-gold/30 rounded-xl p-8 text-center">
         <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg className="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
         <h3 className="text-white text-xl font-semibold mb-2">Message Sent!</h3>
-        <p className="text-gray-400">
+        <p className="text-gray-300">
           We&apos;ve received your message and will get back to you shortly.
         </p>
         <button
@@ -79,7 +79,7 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors"
+            className="w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors"
             placeholder="Your name"
           />
         </div>
@@ -92,7 +92,7 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors"
+            className="w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors"
             placeholder="your@email.com"
           />
         </div>
@@ -107,7 +107,7 @@ export default function ContactForm() {
             type="tel"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors"
+            className="w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors"
             placeholder="(555) 123-4567"
           />
         </div>
@@ -120,7 +120,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, service: e.target.value })
             }
-            className="w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white focus:border-gold focus:outline-none transition-colors"
+            className="w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white focus:border-gold focus:outline-none transition-colors"
           >
             <option value="">Select a service</option>
             <option value="Commercial Property Sales">Commercial Property Sales</option>
@@ -146,7 +146,7 @@ export default function ContactForm() {
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
-          className="w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors resize-none"
+          className="w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors resize-none"
           placeholder="Tell us about your project or how we can help..."
         />
       </div>

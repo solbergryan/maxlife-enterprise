@@ -115,7 +115,7 @@ export default function StartHerePage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Start Here
@@ -123,7 +123,7 @@ export default function StartHerePage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             New Here? <span className="text-gold">Let&apos;s Get Started.</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             MaxLife Development offers a lot of resources — market reports,
             academy courses, tools, guides, services. This page is your
             roadmap. Pick the path that matches where you&apos;re at, and
@@ -138,14 +138,14 @@ export default function StartHerePage() {
           {paths.map((path) => (
             <div
               key={path.slug}
-              className="bg-dark-card border border-dark-border rounded-xl p-6"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
             >
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div>
                   <h2 className="text-xl font-bold text-white mb-2">
                     {path.title}
                   </h2>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {path.description}
                   </p>
                   <Link
@@ -164,7 +164,7 @@ export default function StartHerePage() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="bg-dark border border-dark-border hover:border-gold/40 rounded-lg p-3 text-sm text-gray-300 hover:text-gold transition-colors flex items-center justify-between group"
+                        className="bg-dark border border-white/10 hover:border-gold/40 rounded-lg p-3 text-sm text-gray-300 hover:text-gold transition-colors flex items-center justify-between group"
                       >
                         <span>{item.label}</span>
                         <span className="text-gold group-hover:translate-x-1 transition-transform">
@@ -181,7 +181,7 @@ export default function StartHerePage() {
       </section>
 
       {/* Site Map */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-dark-border">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-6">
           Complete <span className="text-gold">Site Map</span>
         </h2>
@@ -202,7 +202,7 @@ export default function StartHerePage() {
                 <li key={i.href}>
                   <Link
                     href={i.href}
-                    className="text-gray-400 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-sm transition-colors"
                   >
                     {i.label}
                   </Link>
@@ -226,7 +226,7 @@ export default function StartHerePage() {
                 <li key={i.href}>
                   <Link
                     href={i.href}
-                    className="text-gray-400 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-sm transition-colors"
                   >
                     {i.label}
                   </Link>
@@ -252,7 +252,7 @@ export default function StartHerePage() {
                 <li key={i.href}>
                   <Link
                     href={i.href}
-                    className="text-gray-400 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-sm transition-colors"
                   >
                     {i.label}
                   </Link>
@@ -276,7 +276,7 @@ export default function StartHerePage() {
                 <li key={i.href}>
                   <Link
                     href={i.href}
-                    className="text-gray-400 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-sm transition-colors"
                   >
                     {i.label}
                   </Link>
@@ -288,12 +288,12 @@ export default function StartHerePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Still Not Sure Where to <span className="text-gold">Start</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Reach out directly. Tell us what you&apos;re trying to accomplish,
             and we&apos;ll point you in the right direction.
           </p>

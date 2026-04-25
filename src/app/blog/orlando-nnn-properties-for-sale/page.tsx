@@ -47,7 +47,7 @@ export default function OrlandoNNNPropertiesArticle() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-germany-shop-window-storefront-sale-business-983358.webp"
           alt="Orlando NNN retail property for sale"
@@ -60,7 +60,7 @@ export default function OrlandoNNNPropertiesArticle() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -77,7 +77,7 @@ export default function OrlandoNNNPropertiesArticle() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Orlando NNN Properties for Sale: Investor Guide
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             How to find and evaluate triple net lease properties for sale in
             Orlando — national credit tenants, cap rate analysis, and
             acquisition strategies for NNN investors in Central Florida.
@@ -92,7 +92,7 @@ export default function OrlandoNNNPropertiesArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Why Orlando Is a Strong NNN Market
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando offers one of the most attractive markets in the
               southeastern United States for triple net lease investment. The
               metro&apos;s combination of strong population growth, expanding
@@ -100,7 +100,7 @@ export default function OrlandoNNNPropertiesArticle() {
               base creates ideal conditions for NNN property investors seeking
               stable, long-term income with minimal management responsibility.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               National retailers and service providers continue to expand their
               footprints across Central Florida, driven by the same demographic
               tailwinds that benefit the broader{" "}
@@ -112,7 +112,7 @@ export default function OrlandoNNNPropertiesArticle() {
               for the retail and service infrastructure that NNN tenants
               provide.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For 1031 exchange buyers, retirees seeking passive income, and
               institutional investors building net lease portfolios, Orlando
               provides a deep and liquid market with properties available across
@@ -122,7 +122,7 @@ export default function OrlandoNNNPropertiesArticle() {
               whether they are targeting a single asset or assembling a
               portfolio.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando metro area adds roughly 1,500 new residents per week,
               making it one of the fastest-growing metropolitan areas in the
               country. That sustained population influx translates directly into
@@ -133,7 +133,7 @@ export default function OrlandoNNNPropertiesArticle() {
               models that favor high-growth corridors, and Orlando consistently
               ranks among their top expansion markets.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s economic base has also diversified well beyond
               tourism. The metro is now home to major operations in defense
               technology, medical devices, fintech, and simulation training.
@@ -144,7 +144,7 @@ export default function OrlandoNNNPropertiesArticle() {
               that their tenants will continue to generate healthy store-level
               revenue regardless of short-term tourism fluctuations.
             </p>
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
               <h3 className="text-gold font-semibold mb-3">Orlando NNN Market Snapshot</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
@@ -165,7 +165,7 @@ export default function OrlandoNNNPropertiesArticle() {
                 </div>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Florida&apos;s lack of a state income tax is another structural
               advantage that draws both investors and residents to the Orlando
               market. For NNN investors who reside in Florida, rental income
@@ -181,7 +181,7 @@ export default function OrlandoNNNPropertiesArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Top NNN Tenants Active in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The quality and creditworthiness of the tenant is the single most
               important factor in evaluating a NNN investment. Orlando&apos;s
               market features a broad mix of national and regional tenants
@@ -206,13 +206,13 @@ export default function OrlandoNNNPropertiesArticle() {
               ].map((t) => (
                 <div
                   key={t}
-                  className="bg-dark-card border border-dark-border rounded-lg p-3 text-center text-gray-300 text-sm"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-3 text-center text-gray-300 text-sm"
                 >
                   {t}
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Investment-grade tenants — those with publicly traded parent
               companies or strong credit ratings — command the tightest cap
               rates because they present the lowest default risk. A NNN
@@ -220,7 +220,7 @@ export default function OrlandoNNNPropertiesArticle() {
               different risk than one leased to a regional restaurant chain or
               local business.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               That said, non-investment-grade tenants can offer attractive
               yields for investors willing to accept moderately higher risk.
               Regional operators with strong unit-level economics and long
@@ -232,7 +232,7 @@ export default function OrlandoNNNPropertiesArticle() {
               </Link>
               .
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Dollar General is one of the most prolific NNN tenants nationally
               and has a significant presence across Central Florida, with new
               stores opening in both suburban growth corridors and underserved
@@ -244,7 +244,7 @@ export default function OrlandoNNNPropertiesArticle() {
               fee-simple parcel, making these assets straightforward from a
               real estate and re-tenanting perspective.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Walgreens and CVS remain staple NNN investments in Orlando,
               though the pharmacy sector has undergone significant
               consolidation. Walgreens properties with long remaining lease
@@ -256,36 +256,36 @@ export default function OrlandoNNNPropertiesArticle() {
               re-tenanting risk given the large building footprints (typically
               13,000 to 15,000 square feet).
             </p>
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
               <h3 className="text-gold font-semibold mb-3">Tenant Comparison: Cap Rate vs. Lease Term</h3>
               <div className="space-y-3 text-sm">
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">Chick-fil-A (Ground Lease)</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">Chick-fil-A (Ground Lease)</span>
                   <span className="text-white">4.00% - 4.75% | 20 yr initial</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">Walgreens</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">Walgreens</span>
                   <span className="text-white">4.75% - 5.50% | 20-25 yr initial</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">Starbucks</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">Starbucks</span>
                   <span className="text-white">4.50% - 5.25% | 10 yr initial</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">Dollar General</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">Dollar General</span>
                   <span className="text-white">5.50% - 6.50% | 15 yr initial</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">AutoZone</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">AutoZone</span>
                   <span className="text-white">5.25% - 6.00% | 15-20 yr initial</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-400">7-Eleven</span>
+                  <span className="text-gray-300">7-Eleven</span>
                   <span className="text-white">4.50% - 5.50% | 15-20 yr initial</span>
                 </div>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Quick-service restaurant (QSR) tenants represent another major
               category in Orlando&apos;s NNN market. Chick-fil-A ground leases
               are among the most sought-after NNN investments in the country,
@@ -303,7 +303,7 @@ export default function OrlandoNNNPropertiesArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               How to Evaluate an Orlando NNN Property
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Evaluating a NNN property requires a systematic approach that goes
               beyond just the cap rate. While yield is important, the long-term
               performance of a net lease investment depends on multiple factors
@@ -338,14 +338,14 @@ export default function OrlandoNNNPropertiesArticle() {
                   </svg>
                   <div>
                     <span className="text-white font-medium">{item.title}</span>
-                    <span className="text-gray-400 text-sm block">
+                    <span className="text-gray-300 text-sm block">
                       {item.desc}
                     </span>
                   </div>
                 </li>
               ))}
             </ul>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Use our{" "}
               <Link href="/deal-analyzer" className="text-gold hover:underline">
                 Deal Analyzer
@@ -354,7 +354,7 @@ export default function OrlandoNNNPropertiesArticle() {
               terms, and escalation structures to see how each variable impacts
               your total return.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Beyond the lease itself, investors should evaluate the real estate
               from a residual value perspective. Ask what the property would be
               worth if the tenant vacated at lease expiration. Properties in
@@ -366,7 +366,7 @@ export default function OrlandoNNNPropertiesArticle() {
               use, while a build-to-suit medical facility in an office park
               presents significantly more re-tenanting complexity.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Environmental and structural due diligence is equally important.
               Investors should order a Phase I Environmental Site Assessment,
               review the property condition report, and verify that the roof,
@@ -383,7 +383,7 @@ export default function OrlandoNNNPropertiesArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               NNN Lease Terms and Rent Escalations
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The lease is the engine of a NNN investment, and understanding its
               structure is critical to projecting long-term returns. NNN leases
               in the Orlando market typically follow one of several standard
@@ -393,7 +393,7 @@ export default function OrlandoNNNPropertiesArticle() {
               structures than leases written during the low-rate era of
               2010-2021.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Initial lease terms for investment-grade tenants generally range
               from 10 to 20 years, with renewal options extending the total
               possible occupancy to 40 or even 60 years. Dollar General
@@ -404,28 +404,28 @@ export default function OrlandoNNNPropertiesArticle() {
               Chick-fil-A ground leases typically run 20 years with multiple
               5-year renewal options at the tenant&apos;s election.
             </p>
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
               <h3 className="text-gold font-semibold mb-3">Common Rent Escalation Structures in Orlando NNN Leases</h3>
               <div className="space-y-3 text-sm">
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">Fixed Annual Increases</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">Fixed Annual Increases</span>
                   <span className="text-white">1.0% - 2.0% per year</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">Periodic Bumps (every 5 years)</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">Periodic Bumps (every 5 years)</span>
                   <span className="text-white">5% - 10% at each interval</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-dark-border pb-2">
-                  <span className="text-gray-400">CPI-Linked Adjustments</span>
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <span className="text-gray-300">CPI-Linked Adjustments</span>
                   <span className="text-white">CPI with 1% floor / 3% cap typical</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-400">Flat (No Escalations)</span>
+                  <span className="text-gray-300">Flat (No Escalations)</span>
                   <span className="text-white">0% — common in older leases</span>
                 </div>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Rent escalations have a compounding effect on total return that
               many investors underestimate. A NNN lease with 1.5% annual rent
               bumps will produce roughly 16% more cumulative rental income over
@@ -441,7 +441,7 @@ export default function OrlandoNNNPropertiesArticle() {
               </Link>{" "}
               allows you to compare these scenarios side by side.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Renewal option rent is another often-overlooked element. Some
               leases set renewal rent at fair market value, which introduces
               uncertainty but can benefit landlords in appreciating markets.
@@ -458,7 +458,7 @@ export default function OrlandoNNNPropertiesArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               NNN Cap Rates in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Cap rates for NNN properties in Orlando are influenced by tenant
               credit quality, remaining lease term, location, and property
               condition. As a general framework, the market currently prices NNN
@@ -484,17 +484,17 @@ export default function OrlandoNNNPropertiesArticle() {
               ].map((item) => (
                 <div
                   key={item.tier}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-gold font-semibold">{item.tier}</h3>
                     <span className="text-white font-bold">{item.range}</span>
                   </div>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                  <p className="text-gray-300 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               These ranges shift over time with interest rate movements and
               market conditions. For the most current data across all property
               types, visit our{" "}
@@ -508,7 +508,7 @@ export default function OrlandoNNNPropertiesArticle() {
               to understand how NNN properties fit into tax-deferred investment
               strategies.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Cap rate compression has been a defining trend in the Orlando NNN
               market over the past several years. As institutional capital has
               increasingly targeted net lease assets for their bond-like income
@@ -518,7 +518,7 @@ export default function OrlandoNNNPropertiesArticle() {
               point that reflects both the tenant&apos;s creditworthiness and
               the intense buyer competition for best-in-class NNN assets.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The spread between NNN cap rates and the 10-year Treasury yield
               is a useful benchmark for assessing relative value. Historically,
               NNN cap rates have traded at a 150 to 250 basis point premium to
@@ -539,7 +539,7 @@ export default function OrlandoNNNPropertiesArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando NNN Submarkets to Watch
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Not all NNN opportunities in Orlando are created equal, and the
               submarket in which a property sits has a meaningful impact on both
               current yield and long-term value appreciation. Investors who
@@ -548,28 +548,28 @@ export default function OrlandoNNNPropertiesArticle() {
               values are rising, rather than chasing yield in stagnant or
               declining areas.
             </p>
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
               <h3 className="text-gold font-semibold mb-3">High-Growth NNN Corridors</h3>
               <div className="space-y-3 text-sm">
                 <div>
                   <span className="text-white font-medium block">Lake Nona / Medical City</span>
-                  <span className="text-gray-400">Anchored by a 650-acre medical campus and dense residential development. Medical and QSR tenants expanding rapidly. Strong income demographics.</span>
+                  <span className="text-gray-300">Anchored by a 650-acre medical campus and dense residential development. Medical and QSR tenants expanding rapidly. Strong income demographics.</span>
                 </div>
                 <div>
                   <span className="text-white font-medium block">Horizon West / Windermere</span>
-                  <span className="text-gray-400">One of the fastest-growing planned communities in the country. New retail pads are being developed along Avalon Road and New Independence Parkway with national credit tenants.</span>
+                  <span className="text-gray-300">One of the fastest-growing planned communities in the country. New retail pads are being developed along Avalon Road and New Independence Parkway with national credit tenants.</span>
                 </div>
                 <div>
                   <span className="text-white font-medium block">Kissimmee / US-192 Corridor</span>
-                  <span className="text-gray-400">Benefits from both tourist traffic and a rapidly expanding resident population. Dollar General, 7-Eleven, and Wawa are actively developing new locations.</span>
+                  <span className="text-gray-300">Benefits from both tourist traffic and a rapidly expanding resident population. Dollar General, 7-Eleven, and Wawa are actively developing new locations.</span>
                 </div>
                 <div>
                   <span className="text-white font-medium block">Sanford / North Seminole County</span>
-                  <span className="text-gray-400">Emerging logistics and residential hub along I-4. Auto parts retailers and convenience stores are expanding to serve the growing workforce population.</span>
+                  <span className="text-gray-300">Emerging logistics and residential hub along I-4. Auto parts retailers and convenience stores are expanding to serve the growing workforce population.</span>
                 </div>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The International Drive and tourist corridor remains a strong
               submarket for NNN investments, though pricing reflects the premium
               location. Properties along I-Drive benefit from the combination of
@@ -580,7 +580,7 @@ export default function OrlandoNNNPropertiesArticle() {
               translates into lower tenant default risk and stronger renewal
               probability.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               East Orlando along the SR-417 corridor and around the University
               of Central Florida campus is another area to watch. UCF&apos;s
               enrollment of over 70,000 students creates a built-in consumer
@@ -590,7 +590,7 @@ export default function OrlandoNNNPropertiesArticle() {
               Tractor Supply have all added locations in this submarket over
               the past 24 months.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For investors looking beyond the core Orlando metro, the Clermont
               and south Lake County corridor along US-27 offers NNN assets at
               wider cap rates, typically 50 to 75 basis points above comparable
@@ -610,14 +610,14 @@ export default function OrlandoNNNPropertiesArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               How to Buy NNN Properties in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Acquiring NNN properties in Orlando begins with defining your
               investment criteria. Determine your target price range, preferred
               tenant types, minimum remaining lease term, and acceptable cap
               rate range. These parameters will guide your search and help you
               move quickly when the right opportunity becomes available.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               NNN properties are sourced through a combination of broker
               networks, direct marketing to property owners, online listing
               platforms, and off-market relationships. The most desirable
@@ -627,7 +627,7 @@ export default function OrlandoNNNPropertiesArticle() {
               relationships in the NNN space can provide access to off-market
               and pre-market opportunities.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Due diligence timelines for NNN acquisitions typically run 30 to
               45 days. During this period, investors should review the full
               lease document (including all amendments and guarantees), order a
@@ -639,7 +639,7 @@ export default function OrlandoNNNPropertiesArticle() {
               issues that could impair the property&apos;s value or the
               tenant&apos;s operations.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Financing NNN acquisitions has become more straightforward as
               lenders have grown comfortable with the asset class. Typical loan
               structures for investment-grade NNN properties include 65% to 75%
@@ -655,7 +655,7 @@ export default function OrlandoNNNPropertiesArticle() {
               identification period and 180-day closing deadline leave no room
               for delays.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Our{" "}
               <Link href="/blog/how-to-buy-commercial-property-orlando" className="text-gold hover:underline">
                 guide to buying commercial property in Orlando
@@ -671,11 +671,11 @@ export default function OrlandoNNNPropertiesArticle() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Find Your Next NNN Investment
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty specializes in NNN property acquisitions and
               dispositions across Central Florida. Whether you are a 1031
               exchange buyer or building a passive income portfolio, we can help

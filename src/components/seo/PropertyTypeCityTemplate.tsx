@@ -80,7 +80,7 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-white/10 py-16 sm:py-20">
         {HERO_IMAGES[propertyType.slug] && (
           <>
             <Image
@@ -106,10 +106,10 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
             <span className="rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-gold">
               Cap Rates: {propertyType.capRateRange}
             </span>
-            <span className="rounded-full border border-dark-border bg-dark-card px-4 py-1.5 text-gray-300">
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-gray-300">
               Population: ~{city.population}
             </span>
-            <span className="rounded-full border border-dark-border bg-dark-card px-4 py-1.5 text-gray-300">
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-gray-300">
               {city.distanceFromOrlando}
             </span>
           </div>
@@ -131,7 +131,7 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
       </section>
 
       {/* About the city */}
-      <section className="border-b border-dark-border bg-dark-card py-14">
+      <section className="border-b border-white/10 bg-white/[0.04] py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl">About {city.name}</h2>
           <p className="mb-6 text-gray-300 leading-relaxed">{city.description}</p>
@@ -165,14 +165,14 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
       </section>
 
       {/* Benefits */}
-      <section className="border-b border-dark-border bg-dark py-14">
+      <section className="border-b border-white/10 bg-dark py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
             Why Invest in {propertyType.name} in {city.name}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {propertyType.benefits.map((b, i) => (
-              <li key={i} className="flex items-start gap-3 rounded-xl border border-dark-border bg-dark-card p-4 text-gray-300">
+              <li key={i} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4 text-gray-300">
                 <span className="mt-0.5 text-gold">✓</span>
                 <span>{b}</span>
               </li>
@@ -182,17 +182,17 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
       </section>
 
       {/* Typical tenants */}
-      <section className="border-b border-dark-border bg-dark-card py-14">
+      <section className="border-b border-white/10 bg-white/[0.04] py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl">
             Typical {propertyType.name} Tenants in {city.name}
           </h2>
-          <p className="mb-5 text-gray-400">{propertyType.investmentStrategy}</p>
+          <p className="mb-5 text-gray-300">{propertyType.investmentStrategy}</p>
           <div className="flex flex-wrap gap-2">
             {propertyType.typicalTenants.map((t) => (
               <span
                 key={t}
-                className="rounded-lg border border-dark-border bg-dark px-4 py-2 text-sm text-gray-300"
+                className="rounded-lg border border-white/10 bg-dark px-4 py-2 text-sm text-gray-300"
               >
                 {t}
               </span>
@@ -202,7 +202,7 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
       </section>
 
       {/* Local narrative sections */}
-      <section className="border-b border-dark-border bg-dark py-14">
+      <section className="border-b border-white/10 bg-dark py-14">
         <div className="mx-auto max-w-4xl space-y-10 px-4 sm:px-6 lg:px-8">
           {propertyType.localSections.map((section, i) => (
             <div key={i}>
@@ -214,12 +214,12 @@ export default function PropertyTypeCityTemplate({ propertyType, city }: Props) 
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card py-14">
+      <section className="bg-white/[0.04] py-14">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl">
             Looking for {propertyType.name.toLowerCase()} in {city.name}?
           </h2>
-          <p className="mb-6 text-gray-400">
+          <p className="mb-6 text-gray-300">
             Ryan Solberg and the MaxLife Realty team work {city.name} and the surrounding Central
             Florida markets every day. We source on-market and off-market opportunities, underwrite
             them against institutional standards, and help clients close with confidence.

@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-bridge-business-future-training-skyline-development-1916757.webp"
           alt="Commercial real estate success stories and deal track record"
@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Case Studies &amp; <span className="text-gold">Deal Results</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Real deals, real results. See how we help investors find, acquire,
             and maximize commercial real estate opportunities across Central
             Florida.
@@ -54,12 +54,12 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready for Your Own Success Story?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Let&apos;s discuss your investment goals and find the right
             commercial real estate opportunity.
           </p>

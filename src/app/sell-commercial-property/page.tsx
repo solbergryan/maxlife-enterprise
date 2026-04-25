@@ -15,7 +15,7 @@ export default function SellCommercialHubPage() {
 
   return (
     <>
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Sell Your Property
@@ -24,7 +24,7 @@ export default function SellCommercialHubPage() {
             Sell Commercial Property{" "}
             <span className="text-gold">in Florida</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Get a free, no-obligation valuation of your Florida commercial
             property. MaxLife Realty is a licensed Florida commercial broker
             serving {cities.length}+ cities statewide — from Orlando and Tampa
@@ -39,7 +39,7 @@ export default function SellCommercialHubPage() {
             </Link>
             <Link
               href="/net-sheets/seller"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
             >
               Seller Net Sheet Calculator
             </Link>
@@ -68,7 +68,7 @@ export default function SellCommercialHubPage() {
           ].map((t) => (
             <div
               key={t}
-              className="bg-dark-card border border-dark-border rounded-lg p-3 text-sm text-gray-300 text-center"
+              className="bg-white/[0.04] border border-white/10 rounded-lg p-3 text-sm text-gray-300 text-center"
             >
               {t}
             </div>
@@ -80,7 +80,7 @@ export default function SellCommercialHubPage() {
         <h2 className="text-2xl font-bold text-white mb-6">
           Find Your <span className="text-gold">Market</span>
         </h2>
-        <p className="text-gray-400 mb-8 leading-relaxed">
+        <p className="text-gray-300 mb-8 leading-relaxed">
           Click your city for a market-specific seller page with local
           demographics, comparable sales context, and direct access to our
           valuation form.
@@ -90,7 +90,7 @@ export default function SellCommercialHubPage() {
           if (regionCities.length === 0) return null;
           return (
             <div key={region} className="mb-8">
-              <h3 className="text-gold text-lg font-semibold mb-3 border-b border-dark-border pb-2">
+              <h3 className="text-gold text-lg font-semibold mb-3 border-b border-white/10 pb-2">
                 {region}
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
@@ -98,7 +98,7 @@ export default function SellCommercialHubPage() {
                   <Link
                     key={c.slug}
                     href={`/sell-commercial-property/${c.slug}`}
-                    className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
+                    className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
                   >
                     Sell in {c.name}
                   </Link>
@@ -109,7 +109,7 @@ export default function SellCommercialHubPage() {
         })}
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-4">
           Why List with <span className="text-gold">MaxLife Realty</span>
         </h2>
@@ -141,12 +141,12 @@ export default function SellCommercialHubPage() {
         </ul>
       </section>
 
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to <span className="text-gold">Sell</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Submit your property details for a free, no-obligation valuation.
             We respond within 48 hours.
           </p>
@@ -159,7 +159,7 @@ export default function SellCommercialHubPage() {
             </Link>
             <a
               href="tel:3215862121"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Call (321) 586-2121
             </a>

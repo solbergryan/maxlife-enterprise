@@ -24,7 +24,7 @@ export default function CareersPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/careers/maxlife-careers-meeting-business-architect-office-team-plan-blueprints-teamw-2284501.webp"
           alt="MaxLife Realty team reviewing commercial property plans"
@@ -42,7 +42,7 @@ export default function CareersPage() {
             Build the Future of{" "}
             <span className="text-gold">Florida CRE</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             MaxLife Development is a growing commercial real estate firm based
             in Central Florida. We work on NNN investments, ground-up
             development, land brokerage, and commercial financing across the
@@ -116,13 +116,13 @@ export default function CareersPage() {
           ].map((item) => (
             <div
               key={item.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
             >
               <div className="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mb-4">
                 {item.icon}
               </div>
               <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function CareersPage() {
               href={`/careers/${job.slug}`}
               className={`group block bg-gradient-to-br ${
                 departmentColors[job.department] ||
-                "from-dark-card to-transparent border-dark-border"
+                "from-dark-card to-transparent border-white/10"
               } border rounded-xl p-6 hover:border-gold/50 transition-all`}
             >
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
@@ -165,7 +165,7 @@ export default function CareersPage() {
                   <h3 className="text-white text-xl font-semibold group-hover:text-gold transition-colors mb-2">
                     {job.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-3 max-w-3xl">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-3 max-w-3xl">
                     {job.shortDescription}
                   </p>
                   <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500">
@@ -233,8 +233,8 @@ export default function CareersPage() {
         </div>
 
         {openJobs.length === 0 && (
-          <div className="text-center py-12 bg-dark-card border border-dark-border rounded-xl">
-            <p className="text-gray-400">
+          <div className="text-center py-12 bg-white/[0.04] border border-white/10 rounded-xl">
+            <p className="text-gray-300">
               No open positions at the moment — but we&apos;re always open to
               connecting with talented CRE professionals.
             </p>
@@ -250,11 +250,11 @@ export default function CareersPage() {
 
       {/* Don't See Your Role */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-dark-card border border-dark-border rounded-xl p-8 text-center">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8 text-center">
           <h3 className="text-xl font-bold text-white mb-3">
             Don&apos;t see your role?
           </h3>
-          <p className="text-gray-400 text-sm mb-6 max-w-lg mx-auto">
+          <p className="text-gray-300 text-sm mb-6 max-w-lg mx-auto">
             We&apos;re always open to connecting with talented CRE
             professionals, even when we&apos;re not actively hiring for a
             specific role. Send us a note and tell us what you&apos;d bring to

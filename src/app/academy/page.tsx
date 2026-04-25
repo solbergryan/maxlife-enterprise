@@ -44,7 +44,7 @@ export default async function AcademyPage() {
       <JsonLdScript data={jsonLd} />
 
       {/* Hero */}
-      <section className="relative border-b border-dark-border bg-dark py-20 sm:py-28">
+      <section className="relative border-b border-white/10 bg-dark py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">
@@ -79,20 +79,20 @@ export default async function AcademyPage() {
               )}
               <Link
                 href="/academy/courses/01-intro-to-commercial-real-estate"
-                className="rounded-lg border border-dark-border bg-dark-card px-7 py-3 text-base font-semibold text-white transition-colors hover:border-gold hover:text-gold"
+                className="rounded-lg border border-white/10 bg-white/[0.04] px-7 py-3 text-base font-semibold text-white transition-colors hover:border-gold hover:text-gold"
               >
                 Preview Course 1 →
               </Link>
               <Link
                 href="/academy/browse"
-                className="rounded-lg border border-dark-border bg-dark-card px-7 py-3 text-base font-semibold text-white transition-colors hover:border-gold hover:text-gold"
+                className="rounded-lg border border-white/10 bg-white/[0.04] px-7 py-3 text-base font-semibold text-white transition-colors hover:border-gold hover:text-gold"
               >
                 Browse all lessons →
               </Link>
             </div>
 
             {user && totalLessons > 0 && (
-              <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-dark-border bg-dark-card px-5 py-2 text-sm text-gray-300">
+              <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 text-sm text-gray-300">
                 <span className="text-gold font-bold">{completedLessons}</span>
                 <span>of {totalLessons} lessons complete</span>
                 <div className="h-1.5 w-32 overflow-hidden rounded-full bg-dark-border">
@@ -108,7 +108,7 @@ export default async function AcademyPage() {
       </section>
 
       {/* Program overview */}
-      <section className="border-b border-dark-border bg-dark-card py-16">
+      <section className="border-b border-white/10 bg-white/[0.04] py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
@@ -116,7 +116,7 @@ export default async function AcademyPage() {
               <h3 className="mb-2 text-lg font-semibold text-white">
                 Courses across 6 tiers
               </h3>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-300">
                 From beginner to advanced, structured so each course builds on
                 the last. Move at your own pace.
               </p>
@@ -124,7 +124,7 @@ export default async function AcademyPage() {
             <div>
               <div className="mb-3 text-3xl font-bold text-gold">$0</div>
               <h3 className="mb-2 text-lg font-semibold text-white">Always free</h3>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-300">
                 No credit card, no upsells, no premium tier. Just sign up with
                 an email and you have full access to everything.
               </p>
@@ -134,7 +134,7 @@ export default async function AcademyPage() {
               <h3 className="mb-2 text-lg font-semibold text-white">
                 Certificate of completion
               </h3>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-300">
                 Finish all 20 courses and earn your{" "}
                 <strong className="text-white">Certified Investment Real Estate Expert</strong>{" "}
                 certificate from MaxLife Development.
@@ -154,7 +154,7 @@ export default async function AcademyPage() {
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
               The CIRE curriculum
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-gray-400">
+            <p className="mx-auto mt-3 max-w-2xl text-gray-300">
               Complete the courses in order, or jump to the asset class you care
               about most. Every lesson is publicly readable — login only tracks
               your progress.
@@ -167,7 +167,7 @@ export default async function AcademyPage() {
               const tierIcon = TIER_ICONS[tier.tier];
               return (
               <div key={tier.tier}>
-                <div className={`mb-8 flex items-center gap-5 rounded-2xl border border-dark-border bg-gradient-to-r ${tierTheme.gradient} to-dark-card/50 p-6`}>
+                <div className={`mb-8 flex items-center gap-5 rounded-2xl border border-white/10 bg-gradient-to-r ${tierTheme.gradient} to-dark-card/50 p-6`}>
                   <div className={`flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl ${tierTheme.bg} ${tierTheme.border} border`}>
                     <svg className={`h-7 w-7 ${tierTheme.text}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
                       <path d={tierIcon} />
@@ -183,7 +183,7 @@ export default async function AcademyPage() {
                       </span>
                     </div>
                     <h3 className="text-2xl font-bold text-white">{tier.tierTitle}</h3>
-                    <p className="text-sm text-gray-400 mt-1">{tier.tierSubtitle}</p>
+                    <p className="text-sm text-gray-300 mt-1">{tier.tierSubtitle}</p>
                   </div>
                 </div>
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -210,12 +210,12 @@ export default async function AcademyPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-dark-border bg-dark-card py-16">
+      <section className="border-t border-white/10 bg-white/[0.04] py-16">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-4 text-3xl font-bold text-white">
             Ready to start?
           </h2>
-          <p className="mb-8 text-gray-400">
+          <p className="mb-8 text-gray-300">
             Sign up free with your email — no credit card, no spam. We'll save
             your progress, unlock completion certificates, and send you new
             lessons as they publish.

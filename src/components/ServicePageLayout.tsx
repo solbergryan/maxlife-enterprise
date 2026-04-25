@@ -39,7 +39,7 @@ export default function ServicePageLayout({
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         {heroImage && (
           <Image
             src={heroImage}
@@ -60,7 +60,7 @@ export default function ServicePageLayout({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/services"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -78,7 +78,7 @@ export default function ServicePageLayout({
               <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 {title}
               </h1>
-              <p className="text-gray-400 max-w-2xl text-lg leading-relaxed">
+              <p className="text-gray-300 max-w-2xl text-lg leading-relaxed">
                 {description}
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function ServicePageLayout({
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
             >
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-gold mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,7 +105,7 @@ export default function ServicePageLayout({
                   <h3 className="text-white font-semibold mb-1">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -116,7 +116,7 @@ export default function ServicePageLayout({
       </section>
 
       {/* Our Process */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-8">
             Our <span className="text-gold">Process</span>
@@ -131,7 +131,7 @@ export default function ServicePageLayout({
                   <h3 className="text-white font-semibold mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -157,7 +157,7 @@ export default function ServicePageLayout({
           {benefits.map((benefit) => (
             <div
               key={benefit}
-              className="flex items-center gap-3 bg-dark-card border border-dark-border rounded-lg p-4"
+              className="flex items-center gap-3 bg-white/[0.04] border border-white/10 rounded-lg p-4"
             >
               <svg className="w-5 h-5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -178,12 +178,12 @@ export default function ServicePageLayout({
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Contact us today for a free consultation. We&apos;ll discuss your
             needs and put together a plan that works for you.
           </p>
@@ -198,7 +198,7 @@ export default function ServicePageLayout({
             <a
               href="tel:3215862121"
               data-track="service-call"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Call (321) 586-2121
             </a>

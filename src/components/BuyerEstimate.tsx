@@ -14,10 +14,10 @@ import {
 import { generateBuyerPDF } from "@/lib/netSheetPdf";
 
 const inputWrap =
-  "flex items-center bg-dark border border-dark-border rounded-lg overflow-hidden focus-within:border-gold transition-colors";
+  "flex items-center bg-dark border border-white/10 rounded-lg overflow-hidden focus-within:border-gold transition-colors";
 const inputCls = "flex-1 px-3 py-2 bg-transparent outline-none text-white text-sm";
-const affixCls = "px-3 py-2 bg-navy/60 text-gold font-semibold text-sm border-r border-dark-border";
-const labelCls = "block text-xs font-medium text-gray-400 mb-1.5 uppercase tracking-wide";
+const affixCls = "px-3 py-2 bg-navy/60 text-gold font-semibold text-sm border-r border-white/10";
+const labelCls = "block text-xs font-medium text-gray-300 mb-1.5 uppercase tracking-wide";
 
 function CurrencyInput({
   label,
@@ -70,7 +70,7 @@ function PctOrDollarInput({
         <button
           type="button"
           onClick={() => onModeChange(true)}
-          className={`px-3 py-2 text-sm font-semibold border-r border-dark-border transition-colors ${
+          className={`px-3 py-2 text-sm font-semibold border-r border-white/10 transition-colors ${
             isPct ? "bg-navy/60 text-gold" : "bg-transparent text-gray-500"
           }`}
         >
@@ -79,7 +79,7 @@ function PctOrDollarInput({
         <button
           type="button"
           onClick={() => onModeChange(false)}
-          className={`px-3 py-2 text-sm font-semibold border-r border-dark-border transition-colors ${
+          className={`px-3 py-2 text-sm font-semibold border-r border-white/10 transition-colors ${
             !isPct ? "bg-navy/60 text-gold" : "bg-transparent text-gray-500"
           }`}
         >
@@ -156,8 +156,8 @@ function ResultCard({
   colors: string[];
 }) {
   return (
-    <div className="bg-dark-card border border-dark-border rounded-2xl p-6 mb-6">
-      <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-1">{title}</h3>
+    <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-6 mb-6">
+      <h3 className="text-sm text-gray-300 uppercase tracking-widest mb-1">{title}</h3>
       <p className="text-4xl sm:text-5xl font-bold text-gold mb-5">{fmt(amount)}</p>
       <div className="flex flex-col sm:flex-row items-center gap-6">
         <DonutChart
@@ -173,7 +173,7 @@ function ResultCard({
                   className="w-3 h-3 rounded-full inline-block flex-shrink-0"
                   style={{ backgroundColor: colors[i % colors.length] }}
                 />
-                <span className="text-gray-400 flex-1">{it.label}</span>
+                <span className="text-gray-300 flex-1">{it.label}</span>
                 <span className="font-semibold text-white">{fmt(it.value)}</span>
               </div>
             ))}
@@ -192,12 +192,12 @@ function DetailSection({
 }) {
   return (
     <div className="mb-5">
-      <h4 className="font-bold text-gold text-xs uppercase tracking-widest mb-2 border-b border-dark-border pb-1.5">
+      <h4 className="font-bold text-gold text-xs uppercase tracking-widest mb-2 border-b border-white/10 pb-1.5">
         {title}
       </h4>
       {items.map((it, i) => (
         <div key={i} className="flex justify-between py-1 text-sm">
-          <span className="text-gray-400">{it.label}</span>
+          <span className="text-gray-300">{it.label}</span>
           <span className="font-medium text-white">
             {typeof it.value === "number" ? fmt(it.value) : it.value}
           </span>
@@ -315,7 +315,7 @@ export default function BuyerEstimate({
     <div className="flex flex-col lg:flex-row gap-6">
       {/* Form */}
       <div className="lg:w-96 flex-shrink-0">
-        <div className="bg-dark-card border border-dark-border rounded-2xl p-6">
+        <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-6">
           <h2 className="text-xl font-bold text-white mb-1">Buyer Estimate</h2>
           <p className="text-xs text-gray-500 mb-5">
             {getCountyConfig(county).fullLabel} closing estimate
@@ -324,7 +324,7 @@ export default function BuyerEstimate({
           <div className="mb-4">
             <label className={labelCls}>County</label>
             <select
-              className="w-full bg-dark border border-dark-border rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
+              className="w-full bg-dark border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
               value={county}
               onChange={(e) => handleCountyChange(e.target.value as County)}
             >
@@ -349,7 +349,7 @@ export default function BuyerEstimate({
           <div className="mb-4">
             <label className={labelCls}>Loan Type</label>
             <select
-              className="w-full bg-dark border border-dark-border rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
+              className="w-full bg-dark border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
               value={loanType}
               onChange={(e) => {
                 setLoanType(e.target.value as BuyerLoanType);
@@ -394,7 +394,7 @@ export default function BuyerEstimate({
           <div className="mb-4">
             <label className={labelCls}>Term (Years)</label>
             <select
-              className="w-full bg-dark border border-dark-border rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
+              className="w-full bg-dark border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
               value={termYears}
               onChange={(e) => {
                 setTermYears(parseInt(e.target.value));
@@ -462,7 +462,7 @@ export default function BuyerEstimate({
             }}
           />
 
-          <div className="border-t border-dark-border pt-4 mt-4">
+          <div className="border-t border-white/10 pt-4 mt-4">
             <p className="text-[10px] uppercase tracking-widest text-gray-500 mb-2">
               Optional (for PDF)
             </p>
@@ -470,7 +470,7 @@ export default function BuyerEstimate({
               <label className={labelCls}>Client Name</label>
               <input
                 type="text"
-                className="w-full bg-dark border border-dark-border rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
+                className="w-full bg-dark border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
               />
@@ -479,7 +479,7 @@ export default function BuyerEstimate({
               <label className={labelCls}>Property Address</label>
               <input
                 type="text"
-                className="w-full bg-dark border border-dark-border rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
+                className="w-full bg-dark border border-white/10 rounded-lg px-3 py-2 text-white text-sm focus:border-gold outline-none transition-colors"
                 value={propertyAddress}
                 onChange={(e) => setPropertyAddress(e.target.value)}
               />
@@ -499,7 +499,7 @@ export default function BuyerEstimate({
       {/* Results */}
       <div className="flex-1 min-w-0">
         {!computed || !calc ? (
-          <div className="flex items-center justify-center h-64 bg-dark-card border border-dark-border rounded-2xl">
+          <div className="flex items-center justify-center h-64 bg-white/[0.04] border border-white/10 rounded-2xl">
             <p className="text-gray-500 text-lg text-center px-6">
               Enter a home price and click{" "}
               <span className="font-bold text-gold">COMPUTE</span> to see your estimate.
@@ -562,13 +562,13 @@ export default function BuyerEstimate({
 
             <button
               onClick={() => setShowDetail(!showDetail)}
-              className="w-full py-3 bg-dark-card border border-dark-border rounded-xl text-gold font-semibold hover:bg-dark-hover transition-colors mb-4"
+              className="w-full py-3 bg-white/[0.04] border border-white/10 rounded-xl text-gold font-semibold hover:bg-white/10 transition-colors mb-4"
             >
               {showDetail ? "Hide" : "Show"} Detailed Closing Costs
             </button>
 
             {showDetail && (
-              <div className="bg-dark-card border border-dark-border rounded-2xl p-6">
+              <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Detailed Closing Costs</h3>
                 <div className="text-sm text-gray-500 mb-4">
                   Loan Type:{" "}
@@ -651,7 +651,7 @@ export default function BuyerEstimate({
                     items={[{ label: calc.specialFeeLabel, value: calc.specialFee }]}
                   />
                 )}
-                <div className="border-t-2 border-dark-border pt-3 mt-4 flex justify-between font-bold text-lg">
+                <div className="border-t-2 border-white/10 pt-3 mt-4 flex justify-between font-bold text-lg">
                   <span className="text-gray-300">Total Closing Costs</span>
                   <span className="text-gold">{fmt(calc.totalClosingCosts)}</span>
                 </div>

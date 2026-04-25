@@ -25,9 +25,9 @@ export default function GroundLeaseVsFeeSimple() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <Link href="/blog" className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6">
+          <Link href="/blog" className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -41,7 +41,7 @@ export default function GroundLeaseVsFeeSimple() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ground Lease vs Fee Simple: Which CRE Structure Is Right?
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             The ownership structure of a commercial property has more impact
             on risk and returns than most investors realize. Here&apos;s the breakdown.
           </p>
@@ -95,7 +95,7 @@ export default function GroundLeaseVsFeeSimple() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-dark-border">
+                <tr className="border-b border-white/10">
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Factor</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Ground Lease</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3">Fee Simple</th>
@@ -114,7 +114,7 @@ export default function GroundLeaseVsFeeSimple() {
                   ["Control", "Limited during lease term", "Full control"],
                   ["Best For", "Passive income, long horizon", "Value-add, development, full ownership"],
                 ].map(([f, gl, fs]) => (
-                  <tr key={f} className="border-b border-dark-border/50">
+                  <tr key={f} className="border-b border-white/10/50">
                     <td className="py-3 pr-4 text-white font-medium">{f}</td>
                     <td className="py-3 pr-4 text-gray-300">{gl}</td>
                     <td className="py-3 text-gray-300">{fs}</td>
@@ -198,7 +198,7 @@ export default function GroundLeaseVsFeeSimple() {
               { slug: "how-to-buy-commercial-property-orlando", title: "How to Buy Commercial Property in Orlando" },
               { slug: "orlando-nnn-properties-for-sale", title: "Orlando NNN Properties for Sale" },
             ].map((r) => (
-              <Link key={r.slug} href={`/blog/${r.slug}`} className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold">
+              <Link key={r.slug} href={`/blog/${r.slug}`} className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold">
                 {r.title} &rarr;
               </Link>
             ))}

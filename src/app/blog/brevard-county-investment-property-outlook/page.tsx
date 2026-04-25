@@ -25,7 +25,7 @@ export default function BrevardOutlook() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+      <section className="relative overflow-hidden border-b border-white/10 aspect-[21/6]">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-building-city-sky-sunlight-office-houston-4549648.webp"
           alt="Brevard County commercial investment property"
@@ -60,7 +60,7 @@ export default function BrevardOutlook() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Brevard County Investment Property Outlook
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Why Florida&apos;s Space Coast is emerging as one of the
             state&apos;s most compelling commercial real estate markets.
           </p>
@@ -72,7 +72,7 @@ export default function BrevardOutlook() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Space Coast Renaissance
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Brevard County is no longer just &quot;the Space Coast&quot; in
               name only. The resurgence of the space industry — led by SpaceX,
               Blue Origin, and L3Harris Technologies — has fundamentally
@@ -81,7 +81,7 @@ export default function BrevardOutlook() {
               income growth, and commercial real estate demand across every
               property type.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For investors, this creates a compelling opportunity: a market
               with strong and accelerating fundamentals, but a cost basis that
               remains significantly below Orlando and South Florida. That
@@ -119,12 +119,12 @@ export default function BrevardOutlook() {
               ].map((item) => (
                 <div
                   key={item.driver}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.driver}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.detail}</p>
+                  <p className="text-gray-300 text-xs">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -138,7 +138,7 @@ export default function BrevardOutlook() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Industrial & Flex Space
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Industrial is the tightest sector in Brevard County. Aerospace
               manufacturing, defense contractors, and logistics operations are
               driving vacancy rates well below the state average. Investors
@@ -150,7 +150,7 @@ export default function BrevardOutlook() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Multifamily
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Housing demand significantly exceeds supply. Rental rates have
               increased substantially, and value-add multifamily properties offer
               investors the opportunity to renovate and increase rents. Class B
@@ -161,7 +161,7 @@ export default function BrevardOutlook() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Retail
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Population growth is creating strong demand for retail services,
               particularly in the southern growth corridor around Palm Bay and
               Viera. National tenants are actively expanding into the market, and
@@ -172,7 +172,7 @@ export default function BrevardOutlook() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Development Land
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Commercial land in growth corridors represents one of the
               highest-upside opportunities in Brevard County. As residential
               development expands, the demand for supporting commercial
@@ -207,7 +207,7 @@ export default function BrevardOutlook() {
               ].map((item) => (
                 <div
                   key={item.name}
-                  className="flex items-start gap-3 bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="flex items-start gap-3 bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -217,7 +217,7 @@ export default function BrevardOutlook() {
                     <h4 className="text-white font-semibold text-sm">
                       {item.name}
                     </h4>
-                    <p className="text-gray-400 text-xs mt-0.5">
+                    <p className="text-gray-300 text-xs mt-0.5">
                       {item.focus}
                     </p>
                   </div>
@@ -230,7 +230,7 @@ export default function BrevardOutlook() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Bottom Line for Investors
             </h2>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Brevard County offers a rare combination in Florida&apos;s
               commercial real estate market: strong growth fundamentals, a
               diversified economic base, and pricing that still offers value
@@ -241,18 +241,18 @@ export default function BrevardOutlook() {
           </section>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/orlando-commercial-real-estate-trends-2026" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-commercial-real-estate-trends-2026" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Trends 2026</h3>
                 <p className="text-gray-500 text-xs">Comprehensive market analysis covering cap rates, submarkets, and investment strategies across the Orlando metro.</p>
               </Link>
-              <Link href="/markets/brevard-county-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/markets/brevard-county-commercial-real-estate" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Brevard County Market Overview</h3>
                 <p className="text-gray-500 text-xs">Detailed market stats, property types, and investment fundamentals for the Space Coast commercial real estate market.</p>
               </Link>
-              <Link href="/opportunities" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/opportunities" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Current Investment Opportunities</h3>
                 <p className="text-gray-500 text-xs">Browse available commercial real estate deals across Central Florida and the Space Coast.</p>
               </Link>
@@ -260,11 +260,11 @@ export default function BrevardOutlook() {
           </section>
 
           {/* CTA */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 my-8 text-center">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 my-8 text-center">
             <h3 className="text-white text-xl font-bold mb-2">
               Interested in Brevard County?
             </h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4">
               Explore current opportunities on the Space Coast.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

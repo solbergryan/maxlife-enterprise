@@ -21,7 +21,7 @@ export default function FAQHubPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/faq/maxlife-faq-question-mark-question-symbol-character-help-reply-faq-info--463497.webp"
           alt="Frequently asked questions about commercial real estate"
@@ -39,7 +39,7 @@ export default function FAQHubPage() {
             Commercial Real Estate{" "}
             <span className="text-gold">Frequently Asked Questions</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Straight answers to the {totalQuestions}+ questions we hear most
             often from commercial real estate investors, developers, and buyers
             in Florida. Browse by topic below.
@@ -54,7 +54,7 @@ export default function FAQHubPage() {
             <Link
               key={topic.slug}
               href={`/faq/${topic.slug}`}
-              className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-xl p-6 transition-colors group block"
+              className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-xl p-6 transition-colors group block"
             >
               <div className="flex items-start justify-between gap-4 mb-3">
                 <h2 className="text-xl font-bold text-white group-hover:text-gold transition-colors">
@@ -64,7 +64,7 @@ export default function FAQHubPage() {
                   {topic.faqs.length} Q&amp;A
                 </span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 {topic.intro.split(". ")[0] + "."}
               </p>
               <span className="text-gold text-sm font-medium group-hover:text-gold-light transition-colors">
@@ -76,12 +76,12 @@ export default function FAQHubPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Still Have <span className="text-gold">Questions</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             If you can&apos;t find the answer here, reach out directly. We
             respond to every inquiry.
           </p>

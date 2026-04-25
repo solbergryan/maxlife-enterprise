@@ -92,7 +92,7 @@ export function MyListingActions({ listing }: Props) {
         value={status}
         onChange={(e) => updateStatus(e.target.value as ListingStatus)}
         disabled={busy}
-        className="bg-dark border border-dark-border rounded-md px-3 py-1.5 text-white text-sm focus:border-gold focus:outline-none disabled:opacity-60"
+        className="bg-dark border border-white/10 rounded-md px-3 py-1.5 text-white text-sm focus:border-gold focus:outline-none disabled:opacity-60"
       >
         {STATUS_ORDER.map((s) => (
           <option key={s} value={s}>

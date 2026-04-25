@@ -15,7 +15,7 @@ export default function BuyNNNHubPage() {
 
   return (
     <>
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Buy NNN Real Estate
@@ -24,7 +24,7 @@ export default function BuyNNNHubPage() {
             Buy NNN Properties{" "}
             <span className="text-gold">in Florida</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Access on- and off-market single-tenant net lease investment
             opportunities across Florida. MaxLife Realty sources NNN properties
             with investment-grade tenants for 1031 exchange buyers, family
@@ -40,7 +40,7 @@ export default function BuyNNNHubPage() {
             </Link>
             <Link
               href="/nnn-tenants"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-6 py-3 rounded-lg transition-colors text-center"
             >
               Browse NNN Tenants
             </Link>
@@ -63,10 +63,10 @@ export default function BuyNNNHubPage() {
           ].map((cat) => (
             <div
               key={cat.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-5"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
             >
               <h3 className="text-gold font-semibold mb-2">{cat.title}</h3>
-              <p className="text-gray-400 text-sm mb-3">{cat.tenants}</p>
+              <p className="text-gray-300 text-sm mb-3">{cat.tenants}</p>
               <p className="text-xs text-gray-500">
                 Cap rate range:{" "}
                 <span className="text-white font-medium">{cat.cap}</span>
@@ -88,7 +88,7 @@ export default function BuyNNNHubPage() {
         <h2 className="text-2xl font-bold text-white mb-6">
           NNN Inventory <span className="text-gold">by Market</span>
         </h2>
-        <p className="text-gray-400 mb-8 leading-relaxed">
+        <p className="text-gray-300 mb-8 leading-relaxed">
           Click your target market for city-specific NNN opportunities, local
           market context, and direct access to our sourcing team.
         </p>
@@ -97,7 +97,7 @@ export default function BuyNNNHubPage() {
           if (regionCities.length === 0) return null;
           return (
             <div key={region} className="mb-8">
-              <h3 className="text-gold text-lg font-semibold mb-3 border-b border-dark-border pb-2">
+              <h3 className="text-gold text-lg font-semibold mb-3 border-b border-white/10 pb-2">
                 {region}
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
@@ -105,7 +105,7 @@ export default function BuyNNNHubPage() {
                   <Link
                     key={c.slug}
                     href={`/buy-nnn-property/${c.slug}`}
-                    className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
+                    className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
                   >
                     NNN in {c.name}
                   </Link>
@@ -116,7 +116,7 @@ export default function BuyNNNHubPage() {
         })}
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-4">
           Why Buy NNN with <span className="text-gold">MaxLife</span>
         </h2>
@@ -145,12 +145,12 @@ export default function BuyNNNHubPage() {
         </ul>
       </section>
 
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Request <span className="text-gold">NNN Inventory</span>
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Tell us your criteria — tenant type, cap rate, price range, market
             — and we&apos;ll send matching NNN opportunities within 48 hours.
           </p>
@@ -163,7 +163,7 @@ export default function BuyNNNHubPage() {
             </Link>
             <a
               href="tel:3215862121"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Call (321) 586-2121
             </a>

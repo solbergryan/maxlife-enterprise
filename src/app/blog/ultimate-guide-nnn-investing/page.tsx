@@ -35,11 +35,11 @@ export default function UltimateNNNGuide() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -56,7 +56,7 @@ export default function UltimateNNNGuide() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ultimate Guide to NNN Investing
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Everything you need to know about triple net lease real estate —
             from lease basics to building a multi-property portfolio. For
             first-time NNN buyers and experienced CRE investors alike.
@@ -66,7 +66,7 @@ export default function UltimateNNNGuide() {
 
       {/* TOC */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
           <h2 className="text-gold text-sm font-semibold uppercase tracking-wider mb-3">
             Table of Contents
           </h2>
@@ -186,14 +186,14 @@ export default function UltimateNNNGuide() {
             ].map((item) => (
               <div
                 key={item.name}
-                className="bg-dark-card border border-dark-border rounded-lg p-4"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
               >
                 <h3 className="text-gold font-semibold mb-1">{item.name}</h3>
                 <p className="text-gray-300 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed mt-4">
+          <p className="text-gray-300 text-sm leading-relaxed mt-4">
             <strong className="text-white">Pro tip:</strong> Always read the
             specific lease. "NNN" in the listing title doesn&apos;t guarantee
             absolute NNN — confirm with the actual lease document during due
@@ -213,7 +213,7 @@ export default function UltimateNNNGuide() {
           <div className="overflow-x-auto mb-4">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-dark-border">
+                <tr className="border-b border-white/10">
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">
                     Credit Rating
                   </th>
@@ -232,7 +232,7 @@ export default function UltimateNNNGuide() {
                   ["BBB- to BB", "Walgreens, Wendy's, Dollar Tree", "Slightly wider (6-7%)"],
                   ["Below BB", "Franchisees, smaller chains", "Wider cap rates (7%+)"],
                 ].map(([rating, tenants, impact]) => (
-                  <tr key={rating} className="border-b border-dark-border/50">
+                  <tr key={rating} className="border-b border-white/10/50">
                     <td className="py-3 pr-4 text-white font-medium">{rating}</td>
                     <td className="py-3 pr-4 text-gray-300">{tenants}</td>
                     <td className="py-3 text-gray-300">{impact}</td>
@@ -317,7 +317,7 @@ export default function UltimateNNNGuide() {
             ].map((item) => (
               <div
                 key={item}
-                className="bg-dark-card border border-dark-border rounded-lg p-3 text-gray-300 text-sm flex items-start gap-2"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-3 text-gray-300 text-sm flex items-start gap-2"
               >
                 <svg
                   className="w-4 h-4 text-gold mt-0.5 shrink-0"
@@ -395,7 +395,7 @@ export default function UltimateNNNGuide() {
             ].map((item) => (
               <div
                 key={item.risk}
-                className="bg-dark-card border border-dark-border rounded-lg p-4"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
               >
                 <p className="text-red-300 font-semibold text-sm mb-1">
                   {item.risk}

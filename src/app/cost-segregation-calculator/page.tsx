@@ -52,7 +52,7 @@ export default function CostSegPage() {
       />
 
       {/* Hero */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Investor Tools
@@ -61,7 +61,7 @@ export default function CostSegPage() {
             Cost Segregation{" "}
             <span className="text-gold">ROI Calculator</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-300 text-lg leading-relaxed">
             Estimate your first-year tax savings from accelerated depreciation
             on commercial real estate. Cost segregation studies reclassify
             building components into 5-year and 15-year depreciation
@@ -98,7 +98,7 @@ export default function CostSegPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
             <h3 className="text-gold font-semibold mb-2 text-sm uppercase tracking-wider">
               5-Year Property
             </h3>
@@ -106,7 +106,7 @@ export default function CostSegPage() {
               Personal property components that can be reclassified from the
               building:
             </p>
-            <ul className="text-gray-400 text-xs space-y-1">
+            <ul className="text-gray-300 text-xs space-y-1">
               <li>• Decorative lighting, fixtures</li>
               <li>• Removable carpeting & flooring</li>
               <li>• Specialty electrical (process equipment)</li>
@@ -115,14 +115,14 @@ export default function CostSegPage() {
               <li>• Furniture & equipment</li>
             </ul>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
             <h3 className="text-gold font-semibold mb-2 text-sm uppercase tracking-wider">
               15-Year Property
             </h3>
             <p className="text-gray-300 text-xs leading-relaxed mb-3">
               Land improvements that can be depreciated over 15 years:
             </p>
-            <ul className="text-gray-400 text-xs space-y-1">
+            <ul className="text-gray-300 text-xs space-y-1">
               <li>• Paving & parking lots</li>
               <li>• Site lighting</li>
               <li>• Landscaping & irrigation</li>
@@ -131,14 +131,14 @@ export default function CostSegPage() {
               <li>• Fencing & walls</li>
             </ul>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
             <h3 className="text-gold font-semibold mb-2 text-sm uppercase tracking-wider">
               39-Year Property
             </h3>
             <p className="text-gray-300 text-xs leading-relaxed mb-3">
               Structural components remaining on the standard schedule:
             </p>
-            <ul className="text-gray-400 text-xs space-y-1">
+            <ul className="text-gray-300 text-xs space-y-1">
               <li>• Foundation & structure</li>
               <li>• Roof & walls</li>
               <li>• HVAC (primary systems)</li>
@@ -204,14 +204,14 @@ export default function CostSegPage() {
             ].map((y) => (
               <div
                 key={y.year}
-                className="bg-dark-card border border-dark-border rounded-lg p-3 text-center"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-3 text-center"
               >
                 <p className="text-gray-500 text-xs">{y.year}</p>
                 <p className="text-gold font-bold text-lg">{y.rate}</p>
               </div>
             ))}
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed mt-4">
+          <p className="text-gray-300 text-sm leading-relaxed mt-4">
             Even without bonus depreciation, cost segregation provides
             significant value through accelerated 5-year and 15-year MACRS
             schedules. Congressional proposals to restore 100% bonus
@@ -223,9 +223,9 @@ export default function CostSegPage() {
 
       {/* Disclaimer */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-        <div className="bg-dark-card border border-dark-border rounded-lg p-5">
+        <div className="bg-white/[0.04] border border-white/10 rounded-lg p-5">
           <p className="text-gray-500 text-xs leading-relaxed">
-            <strong className="text-gray-400">Disclaimer:</strong> This
+            <strong className="text-gray-300">Disclaimer:</strong> This
             calculator provides estimates for educational purposes only. Actual
             cost segregation results depend on a detailed engineering study,
             property-specific components, and current tax law. Reclassification
@@ -239,12 +239,12 @@ export default function CostSegPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Planning a CRE <span className="text-gold">Acquisition</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             MaxLife Development sources commercial real estate across Florida
             with strong cost segregation potential. We work with qualified CPAs
             and cost seg specialists to help clients maximize tax benefits.
@@ -258,7 +258,7 @@ export default function CostSegPage() {
             </Link>
             <Link
               href="/deal-analyzer"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Deal Analyzer
             </Link>

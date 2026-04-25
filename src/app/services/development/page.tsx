@@ -17,7 +17,7 @@ export default function DevelopmentServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-architect-plan-construction-protective-helmet-engineering-3979490.webp"
           alt="Commercial development architect planning with construction site"
@@ -43,7 +43,7 @@ export default function DevelopmentServicesPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Commercial <span className="text-gold">Development Services</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             More than a broker — a development partner. From site selection
             through project delivery, we guide investors and developers through
             every phase of commercial development in Central Florida.
@@ -83,7 +83,7 @@ export default function DevelopmentServicesPage() {
           ].map((service) => (
             <div
               key={service.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-6"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
             >
               <div className="flex items-start gap-3 mb-3">
                 <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -91,7 +91,7 @@ export default function DevelopmentServicesPage() {
                 </svg>
                 <h3 className="text-white font-semibold">{service.title}</h3>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed pl-8">
+              <p className="text-gray-300 text-sm leading-relaxed pl-8">
                 {service.desc}
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function DevelopmentServicesPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-dark-card/50 border-y border-dark-border">
+      <section className="bg-white/[0.03] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-2xl font-bold text-white mb-8">Our Process</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -128,7 +128,7 @@ export default function DevelopmentServicesPage() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <span className="text-gold text-3xl font-bold">
                   {item.step}
@@ -136,7 +136,7 @@ export default function DevelopmentServicesPage() {
                 <h3 className="text-white font-semibold mt-3 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm">{item.desc}</p>
+                <p className="text-gray-300 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -145,11 +145,11 @@ export default function DevelopmentServicesPage() {
 
       {/* Differentiator */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+        <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8">
           <h2 className="text-2xl font-bold text-white mb-4">
             Why Work With Us
           </h2>
-          <p className="text-gray-400 leading-relaxed mb-6">
+          <p className="text-gray-300 leading-relaxed mb-6">
             Most brokers focus exclusively on transactions. We bring a
             development operator&apos;s perspective to every engagement —
             understanding not just the deal, but the entire development lifecycle
@@ -177,12 +177,12 @@ export default function DevelopmentServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Have a Development Project in Mind?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Whether you&apos;re acquiring land, planning a new development, or
             exploring feasibility — let&apos;s talk.
           </p>

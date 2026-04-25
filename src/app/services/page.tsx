@@ -124,7 +124,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-building-architecture-modern-exterior-skyscraper-facade-5535464.webp"
           alt="MaxLife Realty commercial real estate services"
@@ -142,7 +142,7 @@ export default function ServicesPage() {
             Real Estate. Development.{" "}
             <span className="text-gold">Full Service.</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             From NNN investment properties and land development to residential
             brokerage and property services — MaxLife Realty delivers
             results across the full spectrum of real estate.
@@ -156,7 +156,7 @@ export default function ServicesPage() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`bg-dark-card border border-dark-border rounded-xl p-8 flex flex-col lg:flex-row gap-8 ${
+              className={`bg-white/[0.04] border border-white/10 rounded-xl p-8 flex flex-col lg:flex-row gap-8 ${
                 i % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
@@ -167,7 +167,7 @@ export default function ServicesPage() {
                 <h2 className="text-2xl font-bold text-white mb-3">
                   {service.title}
                 </h2>
-                <p className="text-gray-400 leading-relaxed mb-6">
+                <p className="text-gray-300 leading-relaxed mb-6">
                   {service.description}
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -179,7 +179,7 @@ export default function ServicesPage() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-6 py-2.5 rounded-lg text-sm transition-colors"
+                    className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-6 py-2.5 rounded-lg text-sm transition-colors"
                   >
                     Request This Service
                   </Link>
@@ -209,12 +209,12 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Not sure which service you need?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             No problem. Reach out and tell us about your situation — we&apos;ll
             figure out the best approach together.
           </p>

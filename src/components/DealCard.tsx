@@ -5,12 +5,12 @@ import { Deal, formatPrice } from "@/data/deals";
 const statusColors: Record<Deal["status"], string> = {
   Active: "bg-green-500/20 text-green-400 border-green-500/30",
   "Under Contract": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
-  Sold: "bg-gray-500/20 text-gray-400 border-gray-500/30",
+  Sold: "bg-gray-500/20 text-gray-300 border-gray-500/30",
 };
 
 export default function DealCard({ deal }: { deal: Deal }) {
   return (
-    <div className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors">
+    <div className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-colors">
       <Link href={`/opportunities/${deal.slug}`} className="block">
         {/* Property Image */}
         {deal.image && (
@@ -95,8 +95,8 @@ export default function DealCard({ deal }: { deal: Deal }) {
 
           {/* Tenant / Lease Info */}
           {deal.tenant && (
-            <div className="border-t border-dark-border pt-3 flex items-center justify-between text-sm">
-              <span className="text-gray-400">{deal.tenant}</span>
+            <div className="border-t border-white/10 pt-3 flex items-center justify-between text-sm">
+              <span className="text-gray-300">{deal.tenant}</span>
               {deal.leaseTermRemaining && (
                 <span className="text-gray-500">
                   {deal.leaseTermRemaining} remaining
@@ -109,7 +109,7 @@ export default function DealCard({ deal }: { deal: Deal }) {
           {deal.upsidePotential && deal.status === "Active" && (
             <div className="mt-3 bg-gold/5 border border-gold/20 rounded-lg px-3 py-2">
               <p className="text-gold text-xs font-medium">Upside Potential</p>
-              <p className="text-gray-400 text-xs mt-0.5 line-clamp-2">
+              <p className="text-gray-300 text-xs mt-0.5 line-clamp-2">
                 {deal.upsidePotential}
               </p>
             </div>
@@ -120,12 +120,12 @@ export default function DealCard({ deal }: { deal: Deal }) {
       {/* Crexi Link — outside the main Link to avoid nested <a> */}
       {deal.crexiUrl && (
         <div className="px-5 pb-4 -mt-1">
-          <div className="pt-3 border-t border-dark-border">
+          <div className="pt-3 border-t border-white/10">
             <a
               href={deal.crexiUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gold transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-gold transition-colors"
             >
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

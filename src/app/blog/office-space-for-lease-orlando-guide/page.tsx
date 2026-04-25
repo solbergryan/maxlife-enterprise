@@ -41,7 +41,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
       <JsonLd data={articleSchema} />
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-building-architecture-glass-facade-exterior-glassware-3285254.webp"
           alt="Orlando office space for lease with glass facade"
@@ -54,7 +54,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -81,7 +81,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Office Space for Lease in Orlando: A Tenant&apos;s Guide
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             How to find, compare, and negotiate office space for lease in
             Orlando — from Downtown and Lake Nona to Maitland, Winter Park, and
             the Sand Lake corridor.
@@ -95,7 +95,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando&apos;s Office Market in 2026
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Office space for lease in Orlando is more dynamic than it has
               been in years. After the demand shock that hit office markets
               nationally from 2020 through 2023, the Orlando office landscape
@@ -108,7 +108,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               better concessions, free rent, and tenant improvement allowances
               than they were three years ago.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando office market is not a single market — it&apos;s a
               patchwork of distinct submarkets with very different demand
               profiles. Downtown Orlando and Lake Nona operate in a different
@@ -123,7 +123,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando Office Submarkets
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Each of Orlando&apos;s office submarkets has its own tenant mix,
               rent structure, and commute profile. Here&apos;s how the major
               corridors stack up for tenants.
@@ -132,7 +132,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h3 className="text-xl font-semibold text-white mb-2 mt-6">
               Downtown Orlando / CBD
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Central Business District has the city&apos;s tallest and
               newest Class A product and is the natural home for law firms,
               financial services, accounting, and government-adjacent tenants
@@ -145,7 +145,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h3 className="text-xl font-semibold text-white mb-2 mt-6">
               Lake Nona / Medical City
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lake Nona is Orlando&apos;s fastest-growing office submarket and
               the epicenter of Central Florida&apos;s medical and life-science
               economy. Anchored by UCF College of Medicine, Nemours
@@ -159,7 +159,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h3 className="text-xl font-semibold text-white mb-2 mt-6">
               Maitland &amp; Winter Park
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Maitland and Winter Park are Orlando&apos;s mature suburban
               office submarkets. Tenant retention is historically strong,
               demographics are excellent, and commutes are manageable. These
@@ -173,7 +173,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h3 className="text-xl font-semibold text-white mb-2 mt-6">
               Sand Lake Road / Dr. Phillips
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Sand Lake and Dr. Phillips corridor offers Class A office
               product with proximity to affluent residential neighborhoods and
               the tourism corridor. This is a premium submarket for businesses
@@ -184,7 +184,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h3 className="text-xl font-semibold text-white mb-2 mt-6">
               I-Drive &amp; Convention Center Corridor
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               I-Drive is more known for hospitality than office, but a growing
               cluster of creative, entertainment, and convention-adjacent
               businesses are leasing flexible office space along the corridor.
@@ -197,7 +197,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Class A vs Class B vs Flex
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Office buildings are classified A, B, or C based on age,
               finishes, amenities, and location. Class A is the newest and
               most expensive — typically institutionally owned, with updated
@@ -209,7 +209,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               logistics, and small operators that need a mix of desk space
               and roll-up doors.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               A common mistake for first-time tenants is assuming they need
               Class A. In most Orlando submarkets, a well-maintained Class B
               building with a cooperative landlord and a strong TI package
@@ -223,7 +223,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Rent Structures: Gross vs NNN vs Modified Gross
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando office leases come in three main structures. A{" "}
               <strong className="text-white">full-service gross</strong> lease
               bundles base rent, CAM, taxes, insurance, utilities, and
@@ -235,7 +235,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               falls somewhere in between — typically with a base year stop
               for operating expenses.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The trap for tenants is comparing a gross lease number directly
               against a NNN number. When you see a $32/SF full-service gross
               quote next to a $22/SF NNN quote with $12/SF in pass-throughs,
@@ -249,7 +249,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Tenant Improvement Allowance (TI)
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Tenant improvement allowance is money the landlord provides to
               build out the space to the tenant&apos;s specifications. A
               standard TI package in Orlando ranges from a few dollars per
@@ -258,7 +258,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               with the lease term — the longer the commitment, the more the
               landlord is willing to spend on improvements.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               TI is negotiable, and a strong tenant rep will push for higher
               allowances, longer amortization on over-spend, and flexible
               construction management. The difference between a $20/SF TI
@@ -271,7 +271,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Parking Ratios Matter
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Parking is often an afterthought in office tours but it&apos;s
               one of the most operationally consequential lease terms. Orlando
               parking ratios range from around 3.0 spaces per 1,000 SF in the
@@ -287,7 +287,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Why Use a Tenant Rep Broker
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Tenant representation is paid by the landlord out of the
               transaction — so working with a tenant rep broker costs the
               tenant nothing while providing real negotiating leverage, full
@@ -298,7 +298,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               professionals, and they almost always leave money and terms on
               the table.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               When you&apos;re ready to start your search, see our{" "}
               <Link
                 href="/office-space-for-lease-orlando"
@@ -312,14 +312,14 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
           </section>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">
               Related Reading
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href="/office-space-for-lease-orlando"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Office Space for Lease in Orlando
@@ -331,7 +331,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               </Link>
               <Link
                 href="/retail-space-for-rent-orlando"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Retail Space for Rent in Orlando
@@ -343,7 +343,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               </Link>
               <Link
                 href="/markets/orlando-commercial-real-estate"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Orlando Commercial Real Estate Market
@@ -355,7 +355,7 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
               </Link>
               <Link
                 href="/blog/orlando-commercial-real-estate-trends-2026"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Orlando CRE Market Report 2026
@@ -369,11 +369,11 @@ export default function OfficeSpaceForLeaseOrlandoGuide() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Looking for Office Space in Orlando?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               Tell us your size, submarket, and target move-in date — our
               tenant-rep team will build a shortlist, schedule tours, and
               negotiate the lease on your behalf.

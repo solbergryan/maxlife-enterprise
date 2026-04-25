@@ -44,7 +44,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-dark">
-      <section className="border-b border-dark-border bg-dark-card py-12">
+      <section className="border-b border-white/10 bg-white/[0.04] py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
             <div>
@@ -54,7 +54,7 @@ export default async function DashboardPage() {
               <h1 className="text-3xl font-bold text-white sm:text-4xl">
                 {user.user_metadata?.full_name || user.email}
               </h1>
-              <p className="mt-2 text-sm text-gray-400">
+              <p className="mt-2 text-sm text-gray-300">
                 {completedLessons} of {totalLessons} lessons complete · {overallProgress}% overall
               </p>
             </div>
@@ -80,7 +80,7 @@ export default async function DashboardPage() {
 
       {/* Completed courses */}
       {completedCourses.length > 0 && (
-        <section className="border-b border-dark-border bg-dark py-10">
+        <section className="border-b border-white/10 bg-dark py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="mb-5 text-xl font-bold text-white">
               🏆 Completed ({completedCourses.length})

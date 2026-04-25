@@ -35,11 +35,11 @@ export default function BTSvsValueAdd() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -56,7 +56,7 @@ export default function BTSvsValueAdd() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Build-to-Suit vs Value-Add: Which CRE Strategy Wins?
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Two fundamentally different paths to CRE returns — one creates new
             supply, the other repositions existing inventory. Here&apos;s how to
             choose.
@@ -152,7 +152,7 @@ export default function BTSvsValueAdd() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-dark-border">
+                <tr className="border-b border-white/10">
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Factor</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Build-to-Suit</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3">Value-Add</th>
@@ -169,7 +169,7 @@ export default function BTSvsValueAdd() {
                   ["Liquidity", "Low (illiquid until completion)", "Medium (can sell anytime)"],
                   ["Scalability", "Replicable with pipeline", "Deal-by-deal"],
                 ].map(([factor, bts, va]) => (
-                  <tr key={factor} className="border-b border-dark-border/50">
+                  <tr key={factor} className="border-b border-white/10/50">
                     <td className="py-3 pr-4 text-white font-medium">{factor}</td>
                     <td className="py-3 pr-4 text-gray-300">{bts}</td>
                     <td className="py-3 text-gray-300">{va}</td>
@@ -269,7 +269,7 @@ export default function BTSvsValueAdd() {
               <Link
                 key={r.slug}
                 href={`/blog/${r.slug}`}
-                className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold"
+                className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold"
               >
                 {r.title} &rarr;
               </Link>

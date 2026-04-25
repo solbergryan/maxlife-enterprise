@@ -112,7 +112,7 @@ export default function BuildToSuitOrlandoPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-site-architect-work-building-housebuilding-2733678.webp"
           alt="Orlando build-to-suit commercial construction project"
@@ -134,7 +134,7 @@ export default function BuildToSuitOrlandoPage() {
             Site selection, entitlements, and turnkey commercial construction
             across Central Florida
           </p>
-          <p className="text-gray-400 max-w-3xl leading-relaxed">
+          <p className="text-gray-300 max-w-3xl leading-relaxed">
             MaxLife Realty delivers build-to-suit commercial development
             for retail, QSR, medical, office, and industrial users across
             Orlando and Central Florida. When the existing inventory
@@ -153,24 +153,24 @@ export default function BuildToSuitOrlandoPage() {
       </section>
 
       {/* What is BTS */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             What Is a Build-to-Suit?
           </h2>
-          <p className="text-gray-400 max-w-4xl leading-relaxed">
+          <p className="text-gray-300 max-w-4xl leading-relaxed">
             {whatIsBts}
           </p>
         </div>
       </section>
 
       {/* Process */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Our Build-to-Suit Process
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             A four-stage process from first site walk to certificate of
             occupancy.
           </p>
@@ -178,13 +178,13 @@ export default function BuildToSuitOrlandoPage() {
             {process.map((p) => (
               <div
                 key={p.step}
-                className="bg-dark border border-dark-border rounded-xl p-6"
+                className="bg-dark border border-white/10 rounded-xl p-6"
               >
                 <span className="inline-flex w-10 h-10 rounded-full bg-gold/20 text-gold font-bold items-center justify-center mb-4 text-lg">
                   {p.step}
                 </span>
                 <h3 className="text-white font-semibold mb-2">{p.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {p.desc}
                 </p>
               </div>
@@ -194,12 +194,12 @@ export default function BuildToSuitOrlandoPage() {
       </section>
 
       {/* Ideal Users */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Ideal Build-to-Suit Users
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             The businesses and property types best suited for a build-to-suit
             strategy in Orlando.
           </p>
@@ -207,10 +207,10 @@ export default function BuildToSuitOrlandoPage() {
             {idealUsers.map((u) => (
               <div
                 key={u.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-gold font-semibold mb-2">{u.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {u.desc}
                 </p>
               </div>
@@ -220,12 +220,12 @@ export default function BuildToSuitOrlandoPage() {
       </section>
 
       {/* Development Sites */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Available Development Sites
           </h2>
-          <p className="text-gray-400 max-w-3xl leading-relaxed mb-6">
+          <p className="text-gray-300 max-w-3xl leading-relaxed mb-6">
             We actively source both listed and off-market development sites
             across Orlando and Central Florida — including pad sites, full
             parcels, and entitled land ready for vertical construction. If you
@@ -244,19 +244,19 @@ export default function BuildToSuitOrlandoPage() {
       {/* Lead Capture */}
       <section
         id="bts-request"
-        className="bg-dark-card/50 border-b border-dark-border"
+        className="bg-white/[0.03] border-b border-white/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
               Request a Build-to-Suit Consultation
             </h2>
-            <p className="text-gray-400 text-center mb-8">
+            <p className="text-gray-300 text-center mb-8">
               Tell us your concept, target submarket, and building
               requirements — we&apos;ll schedule a call to walk through the
               opportunity.
             </p>
-            <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+            <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8">
               <LeadCaptureForm
                 buttonText="Start My BTS Project"
                 subjectPrefix="Build-to-Suit Orlando"

@@ -86,7 +86,7 @@ export default async function LessonPage({ params }: PageProps) {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[280px_1fr] lg:px-8">
           {/* Sidebar — lesson TOC */}
           <aside className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto">
-            <div className="rounded-2xl border border-dark-border bg-dark-card p-5">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
               <Link
                 href={`/academy/courses/${slug}`}
                 className="mb-4 block text-xs font-semibold uppercase tracking-wider text-gold hover:text-gold-light"
@@ -104,7 +104,7 @@ export default async function LessonPage({ params }: PageProps) {
                       className={`flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors ${
                         isCurrent
                           ? "bg-gold/10 text-gold"
-                          : "text-gray-400 hover:bg-dark-hover hover:text-white"
+                          : "text-gray-300 hover:bg-white/10 hover:text-white"
                       }`}
                     >
                       <span
@@ -128,14 +128,14 @@ export default async function LessonPage({ params }: PageProps) {
 
           {/* Main content */}
           <article className="min-w-0">
-            <header className="mb-8 border-b border-dark-border pb-8">
+            <header className="mb-8 border-b border-white/10 pb-8">
               <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gold">
                 Lesson {lesson.order.toString().padStart(2, "0")} · {lesson.durationMinutes} min read
               </p>
               <h1 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
                 {lesson.title}
               </h1>
-              <p className="text-lg text-gray-400">{lesson.description}</p>
+              <p className="text-lg text-gray-300">{lesson.description}</p>
             </header>
 
             <div className="prose prose-invert max-w-none">
@@ -155,7 +155,7 @@ export default async function LessonPage({ params }: PageProps) {
             </div>
 
             {/* Mark complete + footer nav */}
-            <div className="mt-12 border-t border-dark-border pt-8">
+            <div className="mt-12 border-t border-white/10 pt-8">
               <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <MarkCompleteButton
                   courseSlug={slug}
@@ -167,7 +167,7 @@ export default async function LessonPage({ params }: PageProps) {
                   {nav.prev && (
                     <Link
                       href={`/academy/courses/${nav.prev.courseSlug}/lessons/${nav.prev.lessonSlug}`}
-                      className="rounded-lg border border-dark-border bg-dark-card px-4 py-2.5 text-sm text-gray-300 transition-colors hover:border-gold hover:text-gold"
+                      className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-gray-300 transition-colors hover:border-gold hover:text-gold"
                     >
                       ← Previous
                     </Link>

@@ -51,11 +51,11 @@ export default async function SellCommercialPage({
           Sell Commercial Property
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-400">{c.name}</span>
+        <span className="text-gray-300">{c.name}</span>
       </nav>
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Sell Your Property
@@ -64,7 +64,7 @@ export default async function SellCommercialPage({
             Sell Commercial Property in{" "}
             <span className="text-gold">{c.name}, Florida</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Get a free, no-obligation valuation of your {c.name} commercial
             property. MaxLife Development is a licensed Florida commercial
             real estate broker specializing in{" "}
@@ -88,19 +88,19 @@ export default async function SellCommercialPage({
         </h2>
         <p className="text-gray-300 leading-relaxed mb-6">{c.description}</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               Population
             </p>
             <p className="text-white font-semibold">{c.population}</p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               County
             </p>
             <p className="text-white font-semibold">{c.county}</p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4 col-span-2 md:col-span-1">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4 col-span-2 md:col-span-1">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               Proximity
             </p>
@@ -133,7 +133,7 @@ export default async function SellCommercialPage({
           ].map((t) => (
             <div
               key={t}
-              className="bg-dark-card border border-dark-border rounded-lg p-3 text-sm text-gray-300 text-center hover:border-gold/30 transition-colors"
+              className="bg-white/[0.04] border border-white/10 rounded-lg p-3 text-sm text-gray-300 text-center hover:border-gold/40 transition-colors"
             >
               {t}
             </div>
@@ -172,7 +172,7 @@ export default async function SellCommercialPage({
           ].map((item) => (
             <div
               key={item.title}
-              className="bg-dark-card border border-dark-border rounded-lg p-5"
+              className="bg-white/[0.04] border border-white/10 rounded-lg p-5"
             >
               <h3 className="text-gold font-semibold mb-2">{item.title}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
@@ -223,14 +223,14 @@ export default async function SellCommercialPage({
           ].map((p) => (
             <div
               key={p.step}
-              className="flex gap-4 bg-dark-card border border-dark-border rounded-lg p-5"
+              className="flex gap-4 bg-white/[0.04] border border-white/10 rounded-lg p-5"
             >
               <div className="text-3xl font-bold text-gold/40 shrink-0">
                 {p.step}
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">{p.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{p.desc}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{p.desc}</p>
               </div>
             </div>
           ))}
@@ -239,11 +239,11 @@ export default async function SellCommercialPage({
 
       {/* Nearby Cities */}
       {nearby.length > 0 && (
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
           <h2 className="text-2xl font-bold text-white mb-2">
             Nearby <span className="text-gold">{region} Markets</span>
           </h2>
-          <p className="text-gray-400 text-sm mb-6">
+          <p className="text-gray-300 text-sm mb-6">
             We also sell commercial property in these nearby cities.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -251,7 +251,7 @@ export default async function SellCommercialPage({
               <Link
                 key={n.slug}
                 href={`/sell-commercial-property/${n.slug}`}
-                className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
+                className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
               >
                 Sell in {n.name}
               </Link>
@@ -269,41 +269,41 @@ export default async function SellCommercialPage({
       )}
 
       {/* Related Services */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-6">
           Related <span className="text-gold">Services</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/net-sheets/seller"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-1 text-sm">
               Seller Net Sheet
             </h3>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-300 text-xs">
               Estimate your proceeds after closing costs.
             </p>
           </Link>
           <Link
             href={`/buy-nnn-property/${c.slug}`}
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-1 text-sm">
               Buy NNN in {c.name}
             </h3>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-300 text-xs">
               1031 reinvestment options in {c.name}.
             </p>
           </Link>
           <Link
             href="/cap-rates"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-1 text-sm">
               Cap Rates by Submarket
             </h3>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-300 text-xs">
               Current cap rate ranges across Central Florida.
             </p>
           </Link>
@@ -311,13 +311,13 @@ export default async function SellCommercialPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Sell Your{" "}
             <span className="text-gold">{c.name}</span> Property?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Submit your property details for a free, no-obligation valuation.
             We respond within 48 hours.
           </p>
@@ -330,7 +330,7 @@ export default async function SellCommercialPage({
             </Link>
             <a
               href="tel:3215862121"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Call (321) 586-2121
             </a>

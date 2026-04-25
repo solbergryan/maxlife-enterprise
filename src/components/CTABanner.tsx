@@ -17,14 +17,14 @@ export default function CTABanner({
 }: CTABannerProps) {
   const wrapperClass =
     variant === "gold-border"
-      ? "bg-dark-card/50 border border-gold/20 rounded-xl"
-      : "bg-dark-card/50 border-t border-dark-border";
+      ? "bg-white/[0.03] border border-gold/20 rounded-xl"
+      : "bg-white/[0.03] border-t border-white/10";
 
   return (
     <section className={wrapperClass}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <h2 className="text-2xl font-bold text-white mb-4">{heading}</h2>
-        <p className="text-gray-400 mb-8 max-w-lg mx-auto">{description}</p>
+        <p className="text-gray-300 mb-8 max-w-lg mx-auto">{description}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={primaryCTA.href}

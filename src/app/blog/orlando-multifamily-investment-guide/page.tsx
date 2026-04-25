@@ -47,7 +47,7 @@ export default function OrlandoMultifamilyGuideArticle() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-real-estate-property-apartment-house-5339245.webp"
           alt="Orlando multifamily apartment investment property"
@@ -60,7 +60,7 @@ export default function OrlandoMultifamilyGuideArticle() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -77,7 +77,7 @@ export default function OrlandoMultifamilyGuideArticle() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Orlando Multifamily Investment Guide
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Everything investors need to know about Orlando&apos;s multifamily
             market — top submarkets, value-add strategies, cap rate trends,
             and how to get started with apartment investing in Central Florida.
@@ -92,7 +92,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Why Orlando Is a Top Multifamily Market
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando has consistently ranked among the top multifamily
               investment markets in the United States, and for good reason. The
               metro area&apos;s population growth rate significantly outpaces the
@@ -105,7 +105,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               sustained population growth directly translates into apartment
               demand that few competing markets can match.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The demand side of the equation is particularly compelling for
               apartment investors. Orlando&apos;s median household income has
               risen steadily, yet homeownership costs have also escalated,
@@ -117,7 +117,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               meaningfully above the national average, and housing affordability
               pressures continue to push would-be buyers toward leasing.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Employment diversification is another pillar supporting the
               multifamily thesis. While tourism and hospitality remain important,
               Orlando has developed significant employment clusters in
@@ -129,7 +129,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               of Central Florida, with enrollment exceeding 70,000 students,
               further anchors tenant demand in the eastern corridor.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               From a supply perspective, while new apartment deliveries have
               increased, absorption has remained healthy in well-located
               submarkets. The{" "}
@@ -150,7 +150,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Multifamily Submarkets to Watch
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Not all Orlando submarkets perform equally for multifamily
               investors. Location fundamentals — including employment centers,
               transportation access, school quality, and household income levels
@@ -183,14 +183,14 @@ export default function OrlandoMultifamilyGuideArticle() {
               ].map((item) => (
                 <div
                   key={item.name}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <h3 className="text-gold font-semibold mb-2">{item.name}</h3>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                  <p className="text-gray-300 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Our{" "}
               <Link href="/markets/downtown-orlando-commercial-real-estate" className="text-gold hover:underline">
                 Downtown Orlando market page
@@ -202,7 +202,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               provide deeper analysis of two of the most active multifamily
               corridors in the region.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Beyond these primary submarkets, investors should also monitor
               emerging corridors along the I-4 corridor between Orlando and
               Tampa, the Apopka and Mount Dora growth path in northwest Orange
@@ -218,7 +218,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Multifamily Rent Trends in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Tracking rent trends is essential for underwriting multifamily
               acquisitions accurately and identifying the strongest
               opportunities in the Orlando market. Over the past five years,
@@ -229,7 +229,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               trajectory supported by population growth and constrained
               single-family affordability.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               As of early 2026, average effective rents across the Orlando MSA
               range from approximately $1,500 for a one-bedroom unit to $1,800
               for a two-bedroom unit in Class B product. Class A communities in
@@ -241,7 +241,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               in the $1,100 to $1,300 range, providing accessible cash flow
               yields for investors willing to manage older product.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Rent growth has not been uniform across the metro. Submarkets
               anchored by strong employment nodes — particularly Lake Nona,
               the downtown core, and the UCF corridor — have demonstrated the
@@ -257,7 +257,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               to model submarket-specific rent growth assumptions rather than
               relying on metro-wide averages.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Looking ahead, several factors support continued rent growth in
               the Orlando multifamily market. The gap between the monthly cost
               of renting versus owning a median-priced home remains wide,
@@ -274,7 +274,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Value-Add vs Core Strategies
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Multifamily investment strategies in Orlando generally fall along a
               spectrum from core stabilized assets to opportunistic value-add
               plays. Understanding where your investment thesis falls on this
@@ -282,9 +282,9 @@ export default function OrlandoMultifamilyGuideArticle() {
               risk, and time horizon.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Core / Core-Plus</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Newer Class A or well-maintained Class B properties in prime
                   locations with stabilized occupancy. These assets offer lower
                   risk and predictable cash flow, typically trading at cap rates
@@ -292,9 +292,9 @@ export default function OrlandoMultifamilyGuideArticle() {
                   capital preservation and steady income.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Value-Add</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Older Class B and Class C properties with below-market rents
                   and deferred maintenance. Investors acquire these assets at
                   higher cap rates, invest capital in unit renovations and
@@ -304,7 +304,7 @@ export default function OrlandoMultifamilyGuideArticle() {
                 </p>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The value-add strategy has been particularly popular in Orlando
               over the past several years. The metro&apos;s strong rent growth
               fundamentals and large inventory of 1980s and 1990s vintage
@@ -315,7 +315,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               undergone significant renovation, representing a deep pipeline
               of potential value-add acquisitions.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Common value-add improvements in the Orlando market include
               updating unit interiors with modern finishes, adding in-unit
               washers and dryers, upgrading common areas and amenity spaces,
@@ -329,7 +329,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               push per-unit costs to $20,000 or higher but command
               proportionally greater rent premiums.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Investors should also consider exterior and amenity improvements
               that increase property-wide appeal. Adding a dog park, upgrading
               the fitness center, installing a package locker system, or
@@ -341,7 +341,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               competitive position during periods when new Class A supply
               enters the submarket.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For a comprehensive look at how cap rates differ between core and
               value-add multifamily product, see our{" "}
               <Link href="/blog/orlando-cap-rates-investor-guide" className="text-gold hover:underline">
@@ -356,7 +356,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Financing and Cap Rate Analysis
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Multifamily properties benefit from the most favorable financing
               terms in commercial real estate. Government-sponsored enterprises
               including Fannie Mae and Freddie Mac provide agency debt with
@@ -368,7 +368,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               interest-only periods are available for qualified borrowers on
               stabilized properties.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               In the current Orlando market, multifamily cap rates vary
               meaningfully by product quality and location. Class A properties
               in prime submarkets trade at the tightest cap rates, while Class C
@@ -384,7 +384,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               cap rates of 6.5% to 7.5%, though these assets carry higher
               operational risk and capital expenditure requirements.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Beyond agency debt, multifamily investors in Orlando have access
               to a range of financing options depending on deal size and
               strategy. Bridge lenders provide short-term financing for
@@ -396,7 +396,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               and longer commitment periods. CMBS lenders provide
               non-recourse options for borrowers seeking maximum flexibility.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For a detailed breakdown of current capitalization rates across
               all major property types in the Orlando metro, visit our{" "}
               <Link href="/blog/orlando-cap-rates-investor-guide" className="text-gold hover:underline">
@@ -415,7 +415,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Due Diligence for Orlando Apartments
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Thorough due diligence is the foundation of successful multifamily
               investing, and Orlando&apos;s climate, building stock, and
               regulatory environment create specific considerations that
@@ -425,7 +425,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               environmental assessments, title and survey analysis, and
               market validation.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Financial due diligence begins with a detailed audit of trailing
               12-month operating statements, current rent rolls, lease
               expiration schedules, and accounts receivable aging. Investors
@@ -438,7 +438,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               verify operating expenses and identify areas for cost reduction
               after acquisition.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Physical inspections deserve particular attention in the Orlando
               market. Florida&apos;s heat, humidity, and hurricane exposure
               create wear patterns that differ from other regions. Flat roofs
@@ -452,7 +452,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               codes may require structural upgrades to comply with current
               insurance requirements.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Insurance costs represent a critical line item for Orlando
               apartment investors. Property insurance premiums in Florida have
               increased substantially in recent years due to hurricane risk
@@ -463,7 +463,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               and properties with newer roofs, impact-resistant windows, and
               hurricane shutters typically qualify for meaningfully lower rates.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For a step-by-step walkthrough of the commercial property
               acquisition process in Central Florida, including due diligence
               checklists and timelines, read our{" "}
@@ -480,7 +480,7 @@ export default function OrlandoMultifamilyGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Getting Started
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Whether you are a first-time multifamily investor or an
               experienced operator expanding into the Orlando market, a
               disciplined approach to acquisition and underwriting is essential.
@@ -493,7 +493,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               this size range offer sufficient scale for professional management
               while remaining accessible to a broader buyer pool at exit.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Building a local team is equally important for investors who are
               not based in Central Florida. Your team should include a
               commercial real estate broker with multifamily specialization, a
@@ -505,7 +505,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               allows you to move quickly when attractive opportunities arise,
               which is essential in a competitive market.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Due diligence on a multifamily acquisition should include a
               thorough review of historical financials, rent rolls, lease
               expiration schedules, capital expenditure needs, and comparable
@@ -517,7 +517,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               estimate renovation costs if you are pursuing a value-add
               strategy.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Underwriting discipline separates successful apartment investors
               from those who overpay. Model conservative rent growth
               assumptions, budget adequate reserves for capital expenditures
@@ -530,7 +530,7 @@ export default function OrlandoMultifamilyGuideArticle() {
               provides an adequate margin of safety across a range of market
               conditions.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Our{" "}
               <Link href="/blog/how-to-buy-commercial-property-orlando" className="text-gold hover:underline">
                 guide to buying commercial property in Orlando
@@ -549,11 +549,11 @@ export default function OrlandoMultifamilyGuideArticle() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Ready to Invest in Orlando Multifamily?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty specializes in multifamily investment
               opportunities across Central Florida. Let us help you find,
               evaluate, and acquire your next apartment property.

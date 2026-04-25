@@ -89,7 +89,7 @@ export default function ExitIntentPopup() {
       />
 
       {/* Modal */}
-      <div className="relative bg-dark-card border border-dark-border rounded-2xl max-w-md w-full p-8 shadow-2xl">
+      <div className="relative bg-white/[0.04] border border-white/10 rounded-2xl max-w-md w-full p-8 shadow-2xl">
         <button
           onClick={() => setShow(false)}
           className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors"
@@ -108,7 +108,7 @@ export default function ExitIntentPopup() {
               </svg>
             </div>
             <h3 className="text-white text-xl font-bold mb-2">You&apos;re on the list</h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               We&apos;ll send you exclusive Central Florida CRE deals and market insights.
             </p>
             <button
@@ -130,7 +130,7 @@ export default function ExitIntentPopup() {
               <h3 className="text-white text-xl font-bold mb-2">
                 Get Off-Market CRE Deals
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-300 text-sm">
                 Join 500+ investors getting exclusive Central Florida commercial
                 real estate opportunities delivered weekly.
               </p>
@@ -144,7 +144,7 @@ export default function ExitIntentPopup() {
                 placeholder="Enter your email"
                 required
                 autoFocus
-                className="w-full bg-dark border border-dark-border rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold/60 focus:outline-none transition-colors"
+                className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-gold/60 focus:outline-none transition-colors"
               />
               <button
                 type="submit"

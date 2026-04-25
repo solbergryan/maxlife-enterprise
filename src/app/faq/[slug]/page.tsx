@@ -66,11 +66,11 @@ export default async function FAQTopicPage({
       />
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <Link
             href="/faq"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -93,13 +93,13 @@ export default async function FAQTopicPage({
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             {topic.title}
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed">{topic.intro}</p>
+          <p className="text-gray-300 text-lg leading-relaxed">{topic.intro}</p>
         </div>
       </section>
 
       {/* Table of Contents */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-dark-card border border-dark-border rounded-xl p-6">
+        <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
           <h2 className="text-gold text-sm font-semibold uppercase tracking-wider mb-4">
             Jump to a Question
           </h2>
@@ -152,7 +152,7 @@ export default async function FAQTopicPage({
             <Link
               key={t.slug}
               href={`/faq/${t.slug}`}
-              className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors group block"
+              className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors group block"
             >
               <p className="text-white font-medium text-sm group-hover:text-gold transition-colors">
                 {t.shortTitle}
@@ -166,12 +166,12 @@ export default async function FAQTopicPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Talk <span className="text-gold">Specifics</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             General FAQs go only so far. Reach out and we&apos;ll answer your
             specific questions about your property, deal, or investment
             strategy.
@@ -185,7 +185,7 @@ export default async function FAQTopicPage({
             </Link>
             <Link
               href="/faq"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Browse All FAQs
             </Link>

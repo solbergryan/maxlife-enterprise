@@ -31,7 +31,7 @@ export default function OrlandoTrends2026() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+      <section className="relative overflow-hidden border-b border-white/10 aspect-[21/6]">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-architecture-office-4k-wallpaper-1920x1080-city-3306146.webp"
           alt="Orlando commercial real estate market skyline"
@@ -66,7 +66,7 @@ export default function OrlandoTrends2026() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Orlando Commercial Real Estate Market Trends 2026
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             A comprehensive guide to trends, investment opportunities, cap rate
             analysis, and market outlook for commercial real estate investors
             across Orlando&apos;s fastest-growing corridors and submarkets.
@@ -81,7 +81,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Market Overview
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando commercial real estate market enters 2026 on solid
               footing. After navigating interest rate uncertainty over the past
               two years, cap rates have stabilized across most asset classes, and
@@ -89,14 +89,14 @@ export default function OrlandoTrends2026() {
               re-entering the market, particularly in the NNN, multifamily, and
               industrial sectors where fundamentals remain strong.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s population growth continues to outpace national
               averages, fueled by domestic migration from higher-cost markets.
               This demographic tailwind supports demand across all commercial
               property types — from retail and dining to housing and employment
               space.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Federal Reserve&apos;s pivot toward rate stabilization in late
               2025 gave lenders and borrowers renewed confidence. Debt markets
               have loosened meaningfully compared to the tighter conditions of
@@ -105,7 +105,7 @@ export default function OrlandoTrends2026() {
               million dollar range, creating competitive financing options for
               middle-market investors who know how to structure deals.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Perhaps more importantly, the supply-demand imbalance that defines
               Orlando&apos;s growth story shows no signs of easing. The metro
               area added roughly 60,000 new residents in 2025 according to U.S.
@@ -115,7 +115,7 @@ export default function OrlandoTrends2026() {
               core asset types that drive commercial real estate investment
               returns.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               What makes the 2026 vintage particularly interesting is the
               convergence of stabilized pricing, improving debt availability, and
               continued demand-side growth. This is the environment where
@@ -130,7 +130,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando&apos;s Entertainment &amp; Tourism Economy
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               No discussion of Orlando commercial real estate is complete without
               addressing the 800-pound gorilla: the tourism and entertainment
               economy. Orlando welcomed over 80 million visitors in 2025,
@@ -143,7 +143,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Universal&apos;s Epic Universe &amp; the Ripple Effect
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Universal Orlando&apos;s Epic Universe opened in 2025 as the
               largest theme park built in the United States in decades. The park
               spans over 750 acres and features worlds themed around Nintendo,
@@ -153,7 +153,7 @@ export default function OrlandoTrends2026() {
               restaurants, entertainment venues, and retail centers are either
               open or under construction within a two-mile radius.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The employment impact alone is staggering. Universal estimated
               14,000 new direct jobs from Epic Universe, with another
               20,000-plus indirect and induced positions across the region. That
@@ -165,7 +165,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Walt Disney World&apos;s $17 Billion Expansion
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Disney has committed approximately $17 billion in capital
               investment across its Florida properties over the coming decade.
               This is not speculative — it is approved, permitted, and actively
@@ -176,7 +176,7 @@ export default function OrlandoTrends2026() {
               catalyst for the entire south Orlando and Osceola County
               commercial market.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For commercial real estate investors, Disney&apos;s capital plan
               is significant because it ensures continued employment growth,
               visitor volume, and ancillary commercial demand in the US-192
@@ -188,7 +188,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Orange County Convention Center Expansion
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orange County Convention Center — already one of the largest
               in the nation — is undergoing a major expansion that will add
               approximately 500,000 square feet of new exhibit space along with
@@ -202,7 +202,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Hotel &amp; Hospitality Investment
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s hotel market comprises over 130,000 rooms, making
               it one of the largest lodging markets in the world. Occupancy
               rates have recovered to pre-pandemic levels, and RevPAR (revenue
@@ -218,7 +218,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Tourism Employment Driving Retail &amp; Housing Demand
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Orlando&apos;s tourism sector employs roughly 350,000 workers
               directly and supports hundreds of thousands more in adjacent
               industries. That workforce needs affordable and workforce housing,
@@ -237,7 +237,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The International Drive Corridor
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               International Drive — known locally as I-Drive — is one of the
               most dynamic commercial real estate corridors in the southeastern
               United States. Stretching roughly 15 miles through the heart of
@@ -249,7 +249,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Epic Universe&apos;s Transformation of South I-Drive
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The opening of Epic Universe on the southern end of I-Drive has
               fundamentally repositioned the corridor. Previously, the southern
               stretch was characterized by older hotels and underperforming
@@ -263,7 +263,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Retail, Restaurants &amp; Entertainment Venues
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               I-Drive has always been a retail and dining destination, but the
               mix is shifting toward higher-quality, experiential concepts.
               National restaurant groups, entertainment-focused retail tenants,
@@ -277,7 +277,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Hotel Conversions &amp; Repositioning
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               One of the most compelling investment themes on I-Drive is hotel
               repositioning. Dozens of older, independently operated hotels
               along the corridor are candidates for renovation, rebranding, or
@@ -291,7 +291,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               I-Drive 2040 Master Plan &amp; Transit Improvements
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Orange County&apos;s I-Drive 2040 master plan envisions the
               corridor as a more walkable, transit-connected, mixed-use
               district. Planned improvements include dedicated transit lanes,
@@ -309,7 +309,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Disney Area / US-192 / Kissimmee Corridor
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The area surrounding Walt Disney World — including the US-192
               corridor (Irlo Bronson Memorial Highway), Celebration,
               ChampionsGate, and the broader western Osceola County market — is
@@ -323,7 +323,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Disney&apos;s Campus Investment &amp; Ancillary Demand
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Beyond the parks themselves, Disney has continued investing in its
               broader Central Florida campus, including corporate offices,
               employee training facilities, and infrastructure improvements.
@@ -337,7 +337,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Celebration &amp; the Surrounding Commercial Market
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Celebration, the master-planned community originally developed by
               Disney, has matured into a desirable residential and mixed-use
               market. The town center features retail, dining, and office space
@@ -351,7 +351,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               US-192 Retail Corridor
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               US-192 is a dual-market corridor that serves both tourist retail
               (souvenir shops, restaurants, attractions) and residential
               services (grocery, medical, fitness, education). The most
@@ -366,7 +366,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Vacation Rental &amp; Short-Term Rental Conversion Market
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Disney-adjacent area has one of the highest concentrations of
               vacation rental properties in the country. As the short-term
               rental market matures and regulatory frameworks tighten, some
@@ -380,7 +380,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               ChampionsGate &amp; Four Corners Growth Area
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The ChampionsGate and Four Corners area — where Orange, Osceola,
               Polk, and Lake counties converge — has emerged as one of the
               fastest-growing residential and commercial corridors in Central
@@ -393,11 +393,11 @@ export default function OrlandoTrends2026() {
           </section>
 
           {/* ──────────── FIRST MID-ARTICLE CTA ──────────── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 my-8 text-center">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 my-8 text-center">
             <h3 className="text-white text-xl font-bold mb-2">
               Looking to Invest in Orlando?
             </h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4">
               Get access to current opportunities and off-market deals across
               Orlando&apos;s highest-growth corridors.
             </p>
@@ -422,7 +422,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Lake Nona &amp; Medical City
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lake Nona has evolved from an ambitious master-planned vision into
               one of the most talked-about growth stories in the southeastern
               United States. What began as a healthcare-focused development has
@@ -435,7 +435,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Healthcare &amp; Institutional Anchors
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lake Nona Medical City is home to the Orlando VA Medical Center,
               Nemours Children&apos;s Hospital, UCF College of Medicine, UCF
               Academic Health Sciences Center, and the Burnett School of
@@ -448,7 +448,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Life Sciences &amp; Biotech
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lake Nona&apos;s concentration of healthcare and research
               institutions is attracting life sciences and biotech firms that
               benefit from proximity to academic medical centers and a skilled
@@ -463,7 +463,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Office, Medical Office &amp; Retail
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Traditional office occupancy in Lake Nona has outperformed the
               broader Orlando office market, driven by tenants that benefit from
               the area&apos;s healthcare ecosystem and quality-of-life
@@ -479,7 +479,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Residential Growth Driving Commercial Demand
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Lake Nona&apos;s residential growth has been remarkable —
               thousands of new homes have been delivered over the past five
               years, with thousands more in the pipeline. Each new household
@@ -496,7 +496,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando&apos;s Population Growth &amp; Migration Trends
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Population growth is the single most important demand driver for
               commercial real estate, and Orlando is one of the
               fastest-growing metros in the country. The Orlando-Kissimmee-
@@ -508,7 +508,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Migration Patterns
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The largest sources of inbound migration to Orlando include the
               New York/New Jersey metro, the greater Chicago area, the
               Philadelphia/DMV corridor, and increasingly, California.
@@ -523,7 +523,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Remote Workers Choosing Orlando
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The rise of remote and hybrid work has been a structural tailwind
               for Orlando. Workers who previously needed to live near expensive
               coastal employment centers can now earn coastal salaries while
@@ -537,7 +537,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Impact on Housing &amp; Commercial Real Estate
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Population growth of 50,000&ndash;60,000 new residents per year
               translates into demand for approximately 20,000&ndash;25,000 new
               housing units annually, plus corresponding demand for retail,
@@ -550,7 +550,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Demographics &amp; Household Formation
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Orlando&apos;s median age skews younger than the Florida average,
               driven by UCF (one of the largest universities in the country),
               a young tourism workforce, and the inbound migration of
@@ -567,7 +567,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Infrastructure &amp; Transportation
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Transportation infrastructure is one of the most powerful — and
               often underappreciated — drivers of commercial real estate value.
               Orlando is in the middle of a generational infrastructure cycle,
@@ -579,7 +579,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               I-4 Ultimate Completion
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The I-4 Ultimate project — a $2.3 billion reconstruction of
               21 miles of Interstate 4 through the core of Orlando — has
               reached substantial completion. The project added express toll
@@ -594,7 +594,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Brightline Orlando Station at MCO
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Brightline&apos;s high-speed rail service connecting Orlando
               International Airport (MCO) to Miami, Fort Lauderdale, and West
               Palm Beach is operational and ramping ridership. The Orlando
@@ -610,7 +610,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               SunRail Expansion
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               SunRail, Orlando&apos;s commuter rail system, continues to
               expand its footprint and ridership. Extensions and operational
               improvements are bringing more of the metro area within
@@ -625,7 +625,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Road Expansions in South Orange County &amp; Osceola
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               As residential development pushes south and southeast, major road
               widening and new road construction projects are improving
               connectivity in south Orange County and Osceola County. The
@@ -648,7 +648,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               NNN Investments
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               NNN investment properties remain one of the most active segments in
               the Orlando market. National credit tenants — including
               quick-service restaurants, convenience stores, auto parts
@@ -658,7 +658,7 @@ export default function OrlandoTrends2026() {
               have settled in the 5.5%&ndash;6.5% range, with strong demand
               from 1031 exchange buyers and passive income investors.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando NNN market benefits from a unique dynamic: high
               population growth creates a continuous pipeline of new development,
               which means new-construction NNN assets with long-term leases are
@@ -671,14 +671,14 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Multifamily
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Rental demand remains robust as homeownership affordability
               challenges persist. Value-add multifamily — particularly Class B
               and C assets with below-market rents — continues to offer
               attractive risk-adjusted returns. Investors who can renovate units
               and push rents to market rate are seeing meaningful NOI growth.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               New multifamily deliveries in 2025 modestly increased vacancy in
               some submarkets, but absorption has been healthy given Orlando&apos;s
               population growth. The key to successful multifamily investing in
@@ -691,14 +691,14 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Industrial &amp; Logistics
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Industrial remains one of the tightest sectors in Central Florida.
               E-commerce growth and Orlando&apos;s central location as a
               distribution hub keep vacancy rates near historic lows. New
               construction is being absorbed quickly, and rental rates continue
               trending upward.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Sanford/North Orange County corridor and the SR-429/West
               Orange corridor have emerged as the primary industrial growth
               axes, with new speculative and build-to-suit projects delivering
@@ -710,14 +710,14 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Retail
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Reports of retail&apos;s demise have been greatly exaggerated —
               especially in high-growth markets like Orlando. Population growth
               is driving demand for service-oriented retail, restaurants, and
               medical uses. Multi-tenant strip centers in high-growth corridors
               with below-market rents offer compelling value-add opportunities.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The strongest retail fundamentals are found in
               grocery-anchored centers, outparcels to major retail nodes, and
               new-construction pads leased to national credit tenants. Tourist-
@@ -729,7 +729,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Office &amp; Medical Office
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The traditional office market in Orlando mirrors national trends —
               suburban office with flexible floor plates is outperforming older
               downtown inventory. Medical office, however, continues to be a
@@ -743,7 +743,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               Land &amp; Development
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               As residential development pushes into suburban and exurban areas,
               commercially zoned land in the path of growth continues to
               appreciate. The southeast Orange County corridor and the US-27
@@ -760,7 +760,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Cap Rate Analysis by Property Type
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Understanding where cap rates are today — and where they are
               heading — is essential for underwriting Orlando investment
               opportunities. The following ranges represent typical market cap
@@ -825,7 +825,7 @@ export default function OrlandoTrends2026() {
               ].map((item) => (
                 <div
                   key={item.type}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <h4 className="text-white font-semibold text-sm mb-1">
                     {item.type}
@@ -835,7 +835,7 @@ export default function OrlandoTrends2026() {
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Cap rates in Orlando have stabilized after the upward adjustment
               of 2023&ndash;2024. With the Fed signaling a steady rate
               environment, most market participants expect cap rates to hold
@@ -850,7 +850,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Key Submarkets to Watch
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando is not a monolithic market — it is a collection of
               distinct submarkets, each with its own demand drivers, growth
               trajectory, and investment profile. The following eight
@@ -895,7 +895,7 @@ export default function OrlandoTrends2026() {
               ].map((item) => (
                 <div
                   key={item.market}
-                  className="bg-dark-card border border-dark-border rounded-lg p-4"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
                 >
                   <h4 className="text-white font-semibold text-sm mb-1">
                     {item.market}
@@ -907,11 +907,11 @@ export default function OrlandoTrends2026() {
           </section>
 
           {/* ──────────── SECOND MID-ARTICLE CTA ──────────── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 my-8 text-center">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 my-8 text-center">
             <h3 className="text-white text-xl font-bold mb-2">
               Want to Discuss a Specific Submarket?
             </h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4">
               Our team tracks every corridor in Central Florida. Let&apos;s talk
               about which submarket fits your investment criteria and timeline.
             </p>
@@ -936,7 +936,7 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               2026 Investment Strategies
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Given the current market dynamics — stabilized cap rates,
               improving debt availability, and continued population growth —
               the following strategies are particularly well-suited for the
@@ -946,7 +946,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               1. Value-Add Multifamily in High-Growth Corridors
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Acquire Class B and C multifamily properties with below-market
               rents in corridors with strong employment growth (Lake Nona,
               Disney/Kissimmee area, I-4 corridor). Execute interior
@@ -960,7 +960,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               2. NNN Development &amp; Sale-Leaseback
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s population growth creates a continuous pipeline
               of new commercial development, and national tenants are actively
               seeking pad sites and build-to-suit opportunities. Investors who
@@ -974,7 +974,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               3. Medical Office Acquisition
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Medical office is one of the most defensive and growing asset
               classes in the Orlando market. As the population grows and ages,
               demand for outpatient healthcare services increases predictably.
@@ -987,7 +987,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               4. Retail Repositioning in Growth Corridors
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Older multi-tenant retail centers in corridors that have
               experienced significant residential growth often have
               below-market rents and underperforming tenant mixes. Acquiring
@@ -1001,7 +1001,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               5. Land Banking in the Path of Growth
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For patient capital, acquiring commercially zoned or
               commercially entitled land in the path of residential growth
               remains one of the most reliable strategies in the Orlando
@@ -1017,7 +1017,7 @@ export default function OrlandoTrends2026() {
             <h3 className="text-lg font-semibold text-gold mb-2">
               6. Tourism Corridor Repositioning
             </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The surge in tourism activity driven by Epic Universe and
               Disney&apos;s expansion has created opportunities to reposition
               underperforming assets along I-Drive, US-192, and other tourism
@@ -1035,14 +1035,14 @@ export default function OrlandoTrends2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               What This Means for Investors
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For investors targeting the Orlando market in 2026, the
               opportunity set is strong but requires discipline. Stabilized cap
               rates mean pricing is more predictable, but the best risk-adjusted
               returns will come from investors who can identify value-add
               opportunities, source off-market deals, and execute efficiently.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The macro tailwinds — population growth, tourism expansion,
               infrastructure investment, and improving debt markets — create a
               favorable backdrop. But macro tailwinds do not guarantee success
@@ -1050,7 +1050,7 @@ export default function OrlandoTrends2026() {
               and a mediocre one in Orlando often comes down to submarket
               selection, deal sourcing, and execution quality.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Investors who are new to the Orlando market should be aware that
               it is a large, diverse metro with submarkets that can perform
               very differently from one another. A multifamily property in
@@ -1060,7 +1060,7 @@ export default function OrlandoTrends2026() {
               will outperform one in a secondary location with limited
               population growth. Submarket selection matters enormously.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Whether you&apos;re a first-time commercial investor or expanding
               an existing portfolio, working with a broker who understands the
               nuances of Orlando&apos;s submarkets is critical to finding the
@@ -1072,30 +1072,30 @@ export default function OrlandoTrends2026() {
           </section>
 
           {/* ──────────── RELATED READING ──────────── */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/office-space-for-lease-orlando" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/office-space-for-lease-orlando" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Office Space for Lease in Orlando</h3>
                 <p className="text-gray-500 text-xs">Class A, B, and flex office space across Downtown, Lake Nona, Maitland, Winter Park, and Sand Lake.</p>
               </Link>
-              <Link href="/retail-space-for-rent-orlando" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/retail-space-for-rent-orlando" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Retail Space for Rent in Orlando</h3>
                 <p className="text-gray-500 text-xs">Endcap, inline, and anchored retail space across I-Drive, Sand Lake, Winter Park, and Lake Nona.</p>
               </Link>
-              <Link href="/industrial-property-central-florida" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/industrial-property-central-florida" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Industrial Property for Sale in Central Florida</h3>
                 <p className="text-gray-500 text-xs">Warehouse, flex, distribution, and manufacturing across the I-4 corridor and Space Coast.</p>
               </Link>
-              <Link href="/build-to-suit-orlando" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/build-to-suit-orlando" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Build-to-Suit Development in Orlando</h3>
                 <p className="text-gray-500 text-xs">Site selection, entitlements, and turnkey construction for retail, QSR, medical, and industrial users.</p>
               </Link>
-              <Link href="/blog/orlando-entertainment-district-investment-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-entertainment-district-investment-guide" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Entertainment District Investment Guide</h3>
                 <p className="text-gray-500 text-xs">Deep dive into Disney, Universal, and I-Drive corridor investment opportunities for commercial real estate investors.</p>
               </Link>
-              <Link href="/markets/orlando-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/markets/orlando-commercial-real-estate" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Market</h3>
                 <p className="text-gray-500 text-xs">Explore investment properties, market stats, and opportunities across Orange County and the Orlando metro.</p>
               </Link>
@@ -1103,11 +1103,11 @@ export default function OrlandoTrends2026() {
           </section>
 
           {/* ──────────── FINAL CTA ──────────── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 my-8 text-center">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 my-8 text-center">
             <h3 className="text-white text-xl font-bold mb-2">
               Ready to Invest in Orlando Commercial Real Estate?
             </h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-300 text-sm mb-4">
               Explore current listings or get access to off-market deals curated
               for serious investors.
             </p>

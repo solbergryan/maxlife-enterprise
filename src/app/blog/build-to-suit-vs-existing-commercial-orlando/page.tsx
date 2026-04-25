@@ -43,7 +43,7 @@ export default function BuildToSuitVsExistingOrlando() {
       <JsonLd data={articleSchema} />
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-construction-site-architect-work-building-housebuilding-2733678.webp"
           alt="Build-to-suit commercial construction with architect on site"
@@ -56,7 +56,7 @@ export default function BuildToSuitVsExistingOrlando() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -83,7 +83,7 @@ export default function BuildToSuitVsExistingOrlando() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Build-to-Suit vs Existing Commercial Property in Orlando
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             When does a build-to-suit Orlando project beat buying or leasing
             existing commercial property? A comparison of timeline, cost,
             customization, and risk for retail, QSR, medical, office, and
@@ -98,7 +98,7 @@ export default function BuildToSuitVsExistingOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Core Tradeoff
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Every commercial real estate user eventually faces a version of
               the same question: should we take existing space, or build
               something new? Existing space — whether leased or purchased — is
@@ -109,7 +109,7 @@ export default function BuildToSuitVsExistingOrlando() {
               answer is universally right. It depends entirely on your
               business model, growth plans, and time horizon.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For most small and mid-sized businesses in Orlando, existing
               space is the right call — the market has enough inventory at
               enough price points that a well-represented tenant can find a
@@ -125,7 +125,7 @@ export default function BuildToSuitVsExistingOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Timeline
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Timeline is the most obvious difference. A tenant signing a
               lease for existing space in Orlando can typically move in
               within 60–120 days from LOI, depending on build-out complexity.
@@ -135,7 +135,7 @@ export default function BuildToSuitVsExistingOrlando() {
               depending on entitlements, design, and construction
               timelines.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               If your business needs to be operational in Orlando in under a
               year — for example, to serve an already-signed contract, to
               replace an expiring lease, or to take advantage of a time-bound
@@ -149,7 +149,7 @@ export default function BuildToSuitVsExistingOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Customization
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               This is where build-to-suit shines. If your business has very
               specific physical requirements — drive-thru lanes for QSR,
               clear heights and dock counts for industrial, branded
@@ -159,7 +159,7 @@ export default function BuildToSuitVsExistingOrlando() {
               end up compromising on one dimension or paying significant TI
               to retrofit existing space.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               A build-to-suit lets you define the building around your
               operations instead of squeezing your operations into a building.
               For businesses where operational efficiency drives profitability
@@ -172,7 +172,7 @@ export default function BuildToSuitVsExistingOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Cost &amp; Capital Structure
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               On a day-one basis, leasing existing space requires the least
               capital — first month&apos;s rent, security deposit, and any
               over-standard TI contribution. Buying existing space requires
@@ -181,7 +181,7 @@ export default function BuildToSuitVsExistingOrlando() {
               ground lease, pre-development costs, construction financing,
               and permanent financing — meaningfully more complex.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               That said, many BTS deals in Orlando are structured so the
               developer absorbs most of the development risk in exchange for
               a long-term lease commitment from the tenant. In that case,
@@ -198,7 +198,7 @@ export default function BuildToSuitVsExistingOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Location Control
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               In Orlando&apos;s highest-demand corridors — the tourism
               corridor along I-Drive, the Lake Nona medical corridor, and
               the growing submarkets along 429 and 417 — existing buildings
@@ -207,7 +207,7 @@ export default function BuildToSuitVsExistingOrlando() {
               and specific demographic targets may only be achievable by
               developing on raw land or a redevelopment site.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Businesses where location is strategic — QSR, service retail,
               medical practices, and anything dependent on foot traffic or
               drive-by visibility — often end up in a BTS simply because the
@@ -228,7 +228,7 @@ export default function BuildToSuitVsExistingOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Risk Profile
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Existing space carries less development risk — the building is
               already constructed and operating, entitlements are in place,
               and the track record is visible. A build-to-suit carries
@@ -236,7 +236,7 @@ export default function BuildToSuitVsExistingOrlando() {
               schedule risk. For businesses without prior development
               experience, these risks can be significant.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Working with an experienced development partner mitigates
               these risks by transferring them to a developer who does this
               for a living. Most large BTS projects in Orlando are
@@ -252,7 +252,7 @@ export default function BuildToSuitVsExistingOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Decision Framework
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               A simple way to decide: if you need to be operational in under
               12 months, can work within the specifications of available
               existing product, and want low day-one capital requirements,
@@ -262,7 +262,7 @@ export default function BuildToSuitVsExistingOrlando() {
               location, build-to-suit is usually the better economic
               outcome.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For most Orlando businesses, the right answer is existing
               space. For a meaningful minority — specialized users, growing
               franchises, medical groups, and anyone fighting for a specific
@@ -287,14 +287,14 @@ export default function BuildToSuitVsExistingOrlando() {
           </section>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">
               Related Reading
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href="/build-to-suit-orlando"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Build-to-Suit Development in Orlando
@@ -306,7 +306,7 @@ export default function BuildToSuitVsExistingOrlando() {
               </Link>
               <Link
                 href="/central-florida-land-for-development"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Land for Development in Central Florida
@@ -318,7 +318,7 @@ export default function BuildToSuitVsExistingOrlando() {
               </Link>
               <Link
                 href="/services/development"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Development Services
@@ -330,7 +330,7 @@ export default function BuildToSuitVsExistingOrlando() {
               </Link>
               <Link
                 href="/industrial-property-central-florida"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Industrial Property for Sale
@@ -344,11 +344,11 @@ export default function BuildToSuitVsExistingOrlando() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Thinking About a Build-to-Suit?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               Tell us your concept, target submarket, and operating
               requirements. We&apos;ll run the numbers on both build-to-suit
               and existing-space options so you can make the right call.

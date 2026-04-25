@@ -120,7 +120,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Marketplace
@@ -130,7 +130,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 Central Florida CRE <span className="text-gold">Listings</span>
               </h1>
-              <p className="text-gray-400 max-w-2xl text-lg">
+              <p className="text-gray-300 max-w-2xl text-lg">
                 User-submitted commercial properties for sale and lease across
                 Orlando and Central Florida. Brokers, owners, and investors —
                 post a listing and reach a growing audience of qualified buyers.
@@ -147,7 +147,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       </section>
 
       {/* Filters */}
-      <section className="border-b border-dark-border bg-dark">
+      <section className="border-b border-white/10 bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <form method="GET" className="space-y-3 text-sm">
             {/* Top row — search + sort */}
@@ -157,12 +157,12 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
                 name="q"
                 placeholder="Search title, description, tenant, city…"
                 defaultValue={sp.q ?? ""}
-                className="flex-1 bg-dark-card border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="flex-1 bg-white/[0.04] border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
               <select
                 name="sort"
                 defaultValue={sp.sort ?? "newest"}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2.5 text-white focus:border-gold focus:outline-none sm:w-48"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2.5 text-white focus:border-gold focus:outline-none sm:w-48"
               >
                 <option value="newest">Newest first</option>
                 <option value="price-desc">Price: high to low</option>
@@ -177,7 +177,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               <select
                 name="type"
                 defaultValue={propertyType ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
               >
                 <option value="">All property types</option>
                 {propertyTypeOptions.map(([value, label]) => (
@@ -189,7 +189,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               <select
                 name="tx"
                 defaultValue={transactionType ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
               >
                 <option value="">Sale or lease</option>
                 {Object.entries(TRANSACTION_TYPE_LABELS).map(([v, l]) => (
@@ -201,7 +201,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               <select
                 name="lt"
                 defaultValue={listingType ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"
               >
                 <option value="">Any lister</option>
                 {Object.entries(LISTING_TYPE_LABELS).map(([v, l]) => (
@@ -215,35 +215,35 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
                 name="city"
                 placeholder="City"
                 defaultValue={sp.city ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
               <input
                 type="text"
                 name="county"
                 placeholder="County"
                 defaultValue={sp.county ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
               <input
                 type="number"
                 name="sqft"
                 placeholder="Min SqFt"
                 defaultValue={sp.sqft ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
               <input
                 type="number"
                 name="min"
                 placeholder="Min price"
                 defaultValue={sp.min ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
               <input
                 type="number"
                 name="max"
                 placeholder="Max price"
                 defaultValue={sp.max ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
               <input
                 type="number"
@@ -251,7 +251,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
                 name="capmin"
                 placeholder="Min cap %"
                 defaultValue={sp.capmin ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
               <input
                 type="number"
@@ -259,7 +259,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
                 name="capmax"
                 placeholder="Max cap %"
                 defaultValue={sp.capmax ?? ""}
-                className="bg-dark-card border border-dark-border rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
+                className="bg-white/[0.04] border border-white/10 rounded-lg px-3 py-2 text-white placeholder-gray-500 focus:border-gold focus:outline-none"
               />
             </div>
 
@@ -272,7 +272,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               </button>
               <Link
                 href="/marketplace"
-                className="text-gray-400 hover:text-white px-4 py-2 rounded-lg transition-colors"
+                className="text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors"
               >
                 Reset
               </Link>
@@ -290,7 +290,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {listings.length === 0 ? (
           <div className="text-center py-16">
-            <p className="text-gray-400 text-lg mb-4">
+            <p className="text-gray-300 text-lg mb-4">
               No listings match those filters yet.
             </p>
             <Link
@@ -306,7 +306,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               <Link
                 key={l.id}
                 href={`/marketplace/${l.slug}`}
-                className="group bg-dark-card border border-dark-border rounded-xl overflow-hidden hover:border-gold/40 transition-all"
+                className="group bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden hover:border-gold/40 transition-all"
               >
                 {/* Primary photo or placeholder */}
                 {l.photo_urls.length > 0 ? (
@@ -347,7 +347,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
                       {TRANSACTION_TYPE_LABELS[l.transaction_type]}
                     </span>
                     {l.status !== "active" && (
-                      <span className="text-gray-400 border border-dark-border px-2 py-0.5 rounded">
+                      <span className="text-gray-300 border border-white/10 px-2 py-0.5 rounded">
                         {STATUS_LABELS[l.status]}
                       </span>
                     )}
@@ -389,7 +389,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
             {currentPage > 1 && (
               <Link
                 href={`/marketplace${buildQuery(sp, { page: String(currentPage - 1) })}`}
-                className="px-3 py-2 rounded-md border border-dark-border text-gray-300 hover:border-gold/40 hover:text-gold text-sm"
+                className="px-3 py-2 rounded-md border border-white/10 text-gray-300 hover:border-gold/40 hover:text-gold text-sm"
               >
                 ← Prev
               </Link>
@@ -400,7 +400,7 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
             {currentPage < totalPages && (
               <Link
                 href={`/marketplace${buildQuery(sp, { page: String(currentPage + 1) })}`}
-                className="px-3 py-2 rounded-md border border-dark-border text-gray-300 hover:border-gold/40 hover:text-gold text-sm"
+                className="px-3 py-2 rounded-md border border-white/10 text-gray-300 hover:border-gold/40 hover:text-gold text-sm"
               >
                 Next →
               </Link>
@@ -410,12 +410,12 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/30 border-t border-dark-border">
+      <section className="bg-white/[0.04]/30 border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">
             Selling Commercial Property?
           </h2>
-          <p className="text-gray-400 mb-6 max-w-xl mx-auto">
+          <p className="text-gray-300 mb-6 max-w-xl mx-auto">
             List it here for free. Owners, brokers, and investors welcome. Your
             contact info appears directly on the listing so buyers can reach
             you without a middleman.

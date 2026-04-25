@@ -51,7 +51,7 @@ export default function OrlandoIndustrialGuideArticle() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/warehouse/maxlife-warehouse-container-metal-port-iron-warehouse-subwoofer-3639617.webp"
           alt="Orlando industrial warehouse and distribution facility"
@@ -64,7 +64,7 @@ export default function OrlandoIndustrialGuideArticle() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -81,7 +81,7 @@ export default function OrlandoIndustrialGuideArticle() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Industrial Property in Central Florida: An Investor&apos;s Guide
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             A comprehensive look at industrial property for sale in Central
             Florida — warehouse, flex, distribution, and manufacturing across
             Orlando, the I-4 corridor, the Space Coast, and Polk County.
@@ -96,7 +96,7 @@ export default function OrlandoIndustrialGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Why Orlando Industrial Is Surging
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s industrial real estate sector has experienced
               remarkable growth driven by the expansion of e-commerce fulfillment,
               third-party logistics, and the region&apos;s strategic position as a
@@ -106,7 +106,7 @@ export default function OrlandoIndustrialGuideArticle() {
               for companies that need to move goods efficiently across the state
               and beyond.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Population growth has been a catalyst as well. The greater Orlando
               metropolitan area continues to add tens of thousands of new
               residents each year, creating sustained demand for consumer goods
@@ -115,7 +115,7 @@ export default function OrlandoIndustrialGuideArticle() {
               by leasing and building facilities throughout Orange, Seminole, and
               Osceola counties.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The region&apos;s labor pool strengthens the case for industrial
               investment. With more than 1.7 million workers in the Orlando-Kissimmee-Sanford
               MSA, employers have access to a deep bench of warehouse, logistics,
@@ -126,7 +126,7 @@ export default function OrlandoIndustrialGuideArticle() {
               without the wage pressure seen in tighter labor markets like South
               Florida.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Infrastructure spending by the Florida Department of Transportation
               has further reinforced Orlando&apos;s industrial appeal. The widening
               of I-4 through the I-4 Ultimate project, capacity improvements along
@@ -137,7 +137,7 @@ export default function OrlandoIndustrialGuideArticle() {
               importers and exporters who want to avoid the congestion at South
               Florida seaports.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For investors, this combination of population growth, infrastructure
               investment, and tenant demand has translated into strong occupancy
               rates and rising rents. The{" "}
@@ -159,7 +159,7 @@ export default function OrlandoIndustrialGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Key Industrial Submarkets
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Understanding where to invest is just as important as understanding
               what to invest in. Orlando&apos;s industrial market is spread across
               several distinct submarkets, each with its own characteristics,
@@ -190,14 +190,14 @@ export default function OrlandoIndustrialGuideArticle() {
               ].map((item) => (
                 <div
                   key={item.name}
-                  className="bg-dark-card border border-dark-border rounded-xl p-5"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
                 >
                   <h3 className="text-gold font-semibold mb-2">{item.name}</h3>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
+                  <p className="text-gray-300 text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Each of these submarkets offers different risk-return profiles.
               Investors targeting newer Class A distribution space will find
               opportunities in the western and southern corridors, while those
@@ -208,7 +208,7 @@ export default function OrlandoIndustrialGuideArticle() {
               </Link>{" "}
               provides additional detail on the southeastern corridor.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Beyond these primary nodes, investors should also monitor emerging
               micro-submarkets along the SR-429 extension into Lake County and
               along the US-27 corridor south of Clermont. As land costs escalate
@@ -217,7 +217,7 @@ export default function OrlandoIndustrialGuideArticle() {
               corridors may carry more lease-up risk, but they also offer higher
               yield-on-cost for investors willing to take on development exposure.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Submarket selection is one of the most consequential decisions in an
               industrial investment strategy. Running a detailed cash flow
               projection on properties in competing corridors is the best way to
@@ -234,16 +234,16 @@ export default function OrlandoIndustrialGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Industrial Property Types and Investment Profiles
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Industrial real estate encompasses several distinct property types,
               each serving different tenant needs and offering different return
               characteristics. Understanding these categories is essential for
               building a targeted investment strategy.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Warehouse / Distribution</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Large-footprint buildings designed for storage and distribution.
                   Typically 50,000 to 500,000+ square feet with high clear
                   heights, dock-high loading, and trailer parking. These
@@ -254,9 +254,9 @@ export default function OrlandoIndustrialGuideArticle() {
                   location and vintage.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Flex / R&D Space</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Hybrid buildings that combine office and warehouse space, often
                   in a ratio of 30-50% office to 50-70% warehouse. Flex space
                   appeals to technology companies, light manufacturers, and
@@ -268,9 +268,9 @@ export default function OrlandoIndustrialGuideArticle() {
                   finish.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Light Manufacturing</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Purpose-built or adapted facilities for assembly, packaging,
                   and light production. These properties often require specialized
                   power, ventilation, or floor load capacity, which can create
@@ -281,9 +281,9 @@ export default function OrlandoIndustrialGuideArticle() {
                   Space Coast.
                 </p>
               </div>
-              <div className="bg-dark-card border border-dark-border rounded-xl p-5">
+              <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                 <h3 className="text-gold font-semibold mb-2">Cold Storage</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Temperature-controlled facilities for food distribution,
                   pharmaceuticals, and perishable goods. Cold storage commands
                   premium rents due to the significant capital expenditure
@@ -295,7 +295,7 @@ export default function OrlandoIndustrialGuideArticle() {
                 </p>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Warehouse and distribution assets have seen the strongest demand
               in recent years, driven by e-commerce growth and supply chain
               reconfiguration. However, flex space offers attractive yields for
@@ -306,7 +306,7 @@ export default function OrlandoIndustrialGuideArticle() {
               </Link>{" "}
               for current pricing benchmarks across these property types.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Small-bay industrial is another segment worth monitoring. Buildings
               in the 5,000 to 15,000 square foot range with grade-level roll-up
               doors appeal to contractors, service companies, and small
@@ -316,7 +316,7 @@ export default function OrlandoIndustrialGuideArticle() {
               Trail, and Silver Star Road have demonstrated strong occupancy even
               during periods of broader economic uncertainty.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Regardless of which property type you target, aligning the
               building&apos;s specifications with the needs of the most probable
               tenant is essential. A warehouse with 24-foot clear heights may suit
@@ -335,14 +335,14 @@ export default function OrlandoIndustrialGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Industrial Lease Structures in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Understanding lease structures is critical to underwriting an
               industrial investment accurately. The type of lease in place
               determines how operating expenses flow between landlord and tenant,
               which directly affects net operating income and, by extension,
               property value.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The most common industrial lease structure in the Orlando market is
               the triple net (NNN) lease. Under a NNN lease, the tenant pays base
               rent plus all three major operating expense categories: real estate
@@ -353,7 +353,7 @@ export default function OrlandoIndustrialGuideArticle() {
               buildings, and they are the preferred structure for national
               credit tenants.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Modified gross leases are more common in multi-tenant flex and
               small-bay industrial buildings. Under a modified gross structure,
               the landlord typically pays a base year amount of operating
@@ -362,7 +362,7 @@ export default function OrlandoIndustrialGuideArticle() {
               the landlord to expense creep if taxes or insurance rise faster
               than pass-through provisions allow.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lease terms in Orlando&apos;s industrial market vary by property
               type and tenant profile. National distribution tenants often sign
               leases of seven to fifteen years with built-in annual escalations
@@ -371,7 +371,7 @@ export default function OrlandoIndustrialGuideArticle() {
               more frequent opportunities to mark rents to market but also
               increases rollover risk and leasing costs.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Investors should pay close attention to renewal options, termination
               rights, and tenant improvement allowances embedded in existing
               leases. A below-market lease with a five-year renewal option at a
@@ -390,14 +390,14 @@ export default function OrlandoIndustrialGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Key Industrial Tenants and Demand Drivers
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Tenant demand is the engine that drives industrial real estate
               performance. In Orlando, several categories of tenants generate the
               bulk of leasing activity, and understanding these demand drivers
               helps investors anticipate which submarkets and building types will
               outperform.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               E-commerce and last-mile logistics operators represent the largest
               and fastest-growing source of demand. Amazon operates multiple
               fulfillment and sortation centers across the metro, including
@@ -407,7 +407,7 @@ export default function OrlandoIndustrialGuideArticle() {
               (3PLs) such as XPO Logistics and Ryder have built significant
               operations in the I-4 corridor to support omnichannel retailers.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The tourism and hospitality supply chain is a demand driver unique
               to Orlando. Theme parks, hotels, and convention venues require a
               constant flow of food, beverage, merchandise, linens, and
@@ -417,7 +417,7 @@ export default function OrlandoIndustrialGuideArticle() {
               supply chain demand is remarkably consistent in a market that
               welcomes visitors year-round.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Construction and building materials distributors have expanded
               their Orlando warehouse presence in response to the region&apos;s
               residential and commercial construction boom. Roofing suppliers,
@@ -428,7 +428,7 @@ export default function OrlandoIndustrialGuideArticle() {
               Orange Blossom Trail, West Colonial Drive, and East Semoran
               Boulevard.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               The defense and aerospace sector, anchored by facilities at Cape
               Canaveral, Patrick Space Force Base, and contractors throughout
               Brevard and Orange counties, also contributes to industrial
@@ -449,7 +449,7 @@ export default function OrlandoIndustrialGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               How to Evaluate an Industrial Investment
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Underwriting an industrial property requires attention to several
               factors that directly impact cash flow, appreciation potential, and
               long-term value. Whether you are acquiring a stabilized asset or
@@ -485,14 +485,14 @@ export default function OrlandoIndustrialGuideArticle() {
                   </svg>
                   <div>
                     <span className="text-white font-medium">{item.title}</span>
-                    <span className="text-gray-400 text-sm block">
+                    <span className="text-gray-300 text-sm block">
                       {item.desc}
                     </span>
                   </div>
                 </li>
               ))}
             </ul>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Beyond these core criteria, investors should also evaluate
               environmental considerations. Phase I Environmental Site
               Assessments are standard in industrial transactions, and properties
@@ -503,7 +503,7 @@ export default function OrlandoIndustrialGuideArticle() {
               permits the intended industrial use and check whether any overlay
               districts or planned land use changes could affect operations.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Capital expenditure planning is essential for older industrial
               buildings. Roof replacement on a 100,000 square foot warehouse can
               cost $400,000 to $700,000 depending on the system. HVAC
@@ -513,7 +513,7 @@ export default function OrlandoIndustrialGuideArticle() {
               property condition report from a qualified engineer before
               finalizing your acquisition price.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Our step-by-step{" "}
               <Link href="/blog/how-to-buy-commercial-property-orlando" className="text-gold hover:underline">
                 guide to buying commercial property in Orlando
@@ -531,7 +531,7 @@ export default function OrlandoIndustrialGuideArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando Industrial Market Outlook
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The outlook for Orlando industrial real estate remains strong
               heading into the latter half of 2026 and beyond. Several
               macro-level trends are working in the market&apos;s favor:
@@ -540,7 +540,7 @@ export default function OrlandoIndustrialGuideArticle() {
               ongoing investment in transportation infrastructure including
               highway widening projects and port improvements.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               New construction has picked up in response to demand, particularly
               in the western and southern corridors of the metro. While some
               observers have raised concerns about potential oversupply in
@@ -549,7 +549,7 @@ export default function OrlandoIndustrialGuideArticle() {
               historical averages, and rental rate growth has continued at a
               healthy pace.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Interest rates remain a factor for industrial investors to monitor.
               Higher borrowing costs have compressed leveraged returns and slowed
               transaction volume relative to the peak years of 2021 and 2022.
@@ -560,7 +560,7 @@ export default function OrlandoIndustrialGuideArticle() {
               and debt service coverage ratios remain healthy given current rent
               levels and occupancy rates.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Cap rates for Class A industrial product in Orlando have generally
               settled in the 5.25% to 6.50% range depending on lease term,
               tenant credit, and submarket. Value-add and multi-tenant properties
@@ -570,7 +570,7 @@ export default function OrlandoIndustrialGuideArticle() {
               expertise to capture yield premiums that passive investors in
               single-tenant, credit-leased deals cannot access.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For investors evaluating Orlando industrial opportunities, the
               fundamentals point to a market with durable demand drivers and
               limited downside risk relative to other property types. The key is
@@ -591,12 +591,12 @@ export default function OrlandoIndustrialGuideArticle() {
           </section>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href="/industrial-property-central-florida"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Industrial Property for Sale in Central Florida
@@ -608,7 +608,7 @@ export default function OrlandoIndustrialGuideArticle() {
               </Link>
               <Link
                 href="/build-to-suit-orlando"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Build-to-Suit Development in Orlando
@@ -620,7 +620,7 @@ export default function OrlandoIndustrialGuideArticle() {
               </Link>
               <Link
                 href="/central-florida-land-for-development"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Land for Development in Central Florida
@@ -632,7 +632,7 @@ export default function OrlandoIndustrialGuideArticle() {
               </Link>
               <Link
                 href="/orlando-commercial-real-estate-deals"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Off-Market Commercial Deals in Orlando
@@ -646,11 +646,11 @@ export default function OrlandoIndustrialGuideArticle() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Explore Orlando Industrial Investments
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty helps investors identify, underwrite, and acquire
               industrial properties across Central Florida. Whether you are
               targeting warehouse, flex, or distribution assets, we can help you

@@ -51,7 +51,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscraper-building-glass-windows-modern-2083687.webp"
           alt="Orlando commercial office skyscraper acquisition"
@@ -64,7 +64,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -81,7 +81,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             How to Buy Commercial Property in Orlando: A Complete Guide
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             A step-by-step guide to finding commercial property for sale in
             Orlando — from defining your criteria and sourcing deals through
             due diligence, financing, closing, and post-close asset management.
@@ -96,7 +96,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Orlando CRE Market Overview for Buyers
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando is one of the fastest-growing metropolitan areas in the
               United States, and that population growth translates directly into
               demand for commercial real estate. The metro area adds roughly
@@ -108,7 +108,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               center, an industrial warehouse, or a medical office building,
               Orlando&apos;s demographic tailwinds work in your favor.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando commercial real estate market is divided into distinct
               submarkets, each with its own supply-and-demand dynamics. Downtown
               Orlando and the Central Business District command the highest
@@ -130,7 +130,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               </Link>{" "}
               for current submarket data and trend analysis.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Typical pricing in Orlando varies widely by asset class. Small
               single-tenant NNN retail properties in secondary corridors can
               trade in the $500,000 to $2 million range, while well-located
@@ -145,9 +145,9 @@ export default function HowToBuyCommercialPropertyOrlando() {
               wasted time on properties that fall outside your capitalization
               range.
             </p>
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
               <h4 className="text-white font-semibold mb-3">Key Orlando Submarkets for CRE Buyers</h4>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="text-gray-300 space-y-2 text-sm">
                 <li><strong className="text-white">Downtown / CBD:</strong> Class A office, mixed-use; highest rents, institutional competition</li>
                 <li><strong className="text-white">I-Drive / Tourist Corridor:</strong> Retail, hospitality; compressed cap rates, strong revenue</li>
                 <li><strong className="text-white">Lake Nona / Medical City:</strong> Healthcare, life-science; premium land values, long-term growth</li>
@@ -163,7 +163,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Define Your Investment Criteria
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Before you start browsing listings, you need a clear picture of
               what you are buying and why. Orlando&apos;s commercial market spans
               everything from single-tenant NNN retail pads to large multifamily
@@ -173,7 +173,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               desired cap rate, and preferred submarket will save you months of
               unfocused searching.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Think about your investment timeline. Are you looking for
               long-term passive income from a credit-tenant NNN property, or are
               you pursuing a value-add multifamily deal that requires
@@ -183,7 +183,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               that look attractive on paper but conflict with their actual
               goals.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando&apos;s growth corridors each offer different advantages.
               The I-4 corridor between downtown and Walt Disney World anchors
               the tourism and hospitality sector. Lake Nona and the Medical City
@@ -196,7 +196,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               </Link>{" "}
               to compare submarkets side by side.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Capital structure is another critical variable to define upfront.
               Determine how much equity you can deploy and whether you will use
               conventional bank financing, SBA loans, private capital, or a
@@ -208,7 +208,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               true day-one capital need may be $600,000 to $650,000 once you
               factor in these additional costs.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Finally, define your return thresholds before you begin
               evaluating deals. Orlando cap rates for stabilized commercial
               properties generally range from 5.5% to 8.5% depending on asset
@@ -231,7 +231,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Finding Commercial Properties in Orlando
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Unlike residential real estate, most commercial deals never appear
               on consumer-facing portals. The best opportunities surface through
               broker networks, direct mail campaigns, and off-market
@@ -242,7 +242,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               gives you access to pocket listings and pre-market deal flow that
               the general public never sees.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Online platforms such as Crexi, LoopNet, and CoStar are useful
               starting points, but they represent only a fraction of the
               market. Many sellers prefer a quiet disposition to avoid
@@ -252,7 +252,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               knows the Orlando market will dramatically expand the universe of
               deals available to you.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               When evaluating listings, focus first on location fundamentals,
               tenant credit quality, and lease term remaining. A well-located
               property with a strong tenant on a long-term lease commands a
@@ -264,7 +264,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               to quickly model cap rates, cash-on-cash returns, and debt service
               coverage on any property you are considering.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For off-market sourcing, consider driving target submarkets and
               identifying properties that show signs of deferred maintenance,
               vacancy, or ownership fatigue. Orange County Property Appraiser
@@ -276,7 +276,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               approach requires patience, but it eliminates broker competition
               and often results in more favorable pricing.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Pay close attention to deal volume and days on market in your
               target submarket. Properties that have been listed for 120 days or
               more without a contract may present negotiation leverage,
@@ -292,14 +292,14 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Due Diligence for Orlando CRE
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Due diligence is where deals are won or lost. Once you have an
               executed letter of intent or purchase and sale agreement, the
               clock starts on your inspection period -- typically 30 to 60 days
               for commercial transactions in Florida. During this window you
               need to verify every assumption in your underwriting.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Start with a Phase I Environmental Site Assessment. This is
               standard for any commercial acquisition and identifies potential
               contamination from current or historical use. If the Phase I
@@ -308,7 +308,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               Orlando&apos;s history of citrus farming, dry cleaning operations,
               and gas stations means environmental surprises are not uncommon.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Review the lease documents line by line. Confirm the rent roll,
               verify tenant estoppels, and understand every landlord obligation
               including roof and structural responsibilities, capital
@@ -321,7 +321,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               </Link>{" "}
               can help you benchmark pricing against comparable properties.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Order a property condition assessment, a survey, and a title
               search. Verify zoning compliance with Orange County or the
               relevant municipality. Review historical tax assessments and
@@ -330,7 +330,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               Save Our Homes cap does not apply to commercial property, so
               taxes can and do increase substantially after a sale.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Beyond the physical and legal inspections, conduct thorough
               financial due diligence. Request at least three years of
               operating statements, including detailed breakdowns of revenue by
@@ -344,7 +344,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               assessment cycle, which can result in a significant tax increase
               from the current owner&apos;s grandfathered assessed value.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For properties with multiple tenants, request a copy of every
               lease amendment, guaranty, and subordination agreement. Confirm
               that no tenants are in default or have pending disputes with the
@@ -358,9 +358,9 @@ export default function HowToBuyCommercialPropertyOrlando() {
               strategy.
             </p>
 
-            <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
               <h4 className="text-white font-semibold mb-3">Due Diligence Checklist for Orlando CRE</h4>
-              <ul className="text-gray-400 space-y-2 text-sm">
+              <ul className="text-gray-300 space-y-2 text-sm">
                 <li>Phase I Environmental Site Assessment (Phase II if RECs are identified)</li>
                 <li>Property Condition Assessment (PCA) with roof, HVAC, and structural evaluation</li>
                 <li>ALTA survey and legal description verification</li>
@@ -381,7 +381,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Financing Your Purchase
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Commercial real estate financing differs significantly from
               residential mortgages. Lenders underwrite the property&apos;s
               income stream, not just the borrower&apos;s personal credit.
@@ -390,7 +390,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               rates, amortization schedules, and prepayment penalties vary
               widely between lenders and loan products.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Local and regional banks are often the most competitive lenders
               for Orlando commercial acquisitions under $5 million. They
               understand the local market and can offer more flexible terms than
@@ -398,7 +398,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               company financing provide lower rates but come with more
               restrictive covenants and longer closing timelines.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               If you are executing a{" "}
               <Link href="/blog/1031-exchange-orlando-guide" className="text-gold hover:underline">
                 1031 exchange
@@ -410,7 +410,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               identify replacement properties is critical to executing a
               successful exchange.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               SBA 504 loans deserve special attention for owner-occupied
               commercial properties in Orlando. This program allows qualifying
               buyers to acquire commercial real estate with as little as 10%
@@ -425,7 +425,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               and professional service firms purchasing their own space in
               Orlando&apos;s suburban submarkets.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Expect the commercial loan process to take 45 to 90 days from
               application to closing, depending on the lender and deal
               complexity. Lenders will require a full appraisal, environmental
@@ -446,7 +446,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Working with a Commercial Real Estate Broker
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Engaging an experienced commercial real estate broker is one of
               the highest-leverage decisions you can make as a buyer. Unlike
               residential transactions where buyers routinely search for homes
@@ -459,7 +459,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               are motivated, and what comparable properties have actually closed
               for versus their listed prices.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               In most commercial transactions, the seller pays the brokerage
               commission, which means buyer representation often comes at no
               direct cost to you. Your broker will prepare or review your
@@ -470,7 +470,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               when emotions run high over repair credits or lease assumption
               disputes.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               When selecting a broker in Orlando, prioritize experience in your
               target asset class and submarket. A broker who specializes in
               industrial properties along the 408 corridor will have different
@@ -485,7 +485,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               provides buyer advisory services across all major Orlando
               submarkets and asset classes.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Beyond the transaction itself, a strong broker relationship pays
               dividends over time. As you build a portfolio of commercial
               properties in Orlando, your broker becomes a strategic partner who
@@ -507,7 +507,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Closing and Post-Acquisition Strategy
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Closing a commercial transaction in Florida involves title
               insurance, documentary stamp taxes, and recording fees. The buyer
               typically pays for the owner&apos;s title policy, while the lender
@@ -517,7 +517,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               costs into your acquisition model -- they can add 1.5% to 2.5% to
               your total cost basis.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The closing timeline for a typical Orlando commercial transaction
               runs 60 to 90 days from executed purchase and sale agreement to
               funding. This includes the due diligence period, loan
@@ -532,7 +532,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               extension option in their purchase agreement to protect against
               unforeseen delays.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               After closing, your focus shifts to asset management. Even
               passive NNN investments require periodic attention -- monitoring
               tenant financial health, tracking lease renewal dates, and
@@ -546,7 +546,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               can support your post-acquisition strategy regardless of the
               asset type.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For value-add acquisitions, develop a detailed business plan
               with a month-by-month execution timeline before closing. Identify
               which capital improvements will generate the highest return on
@@ -558,7 +558,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               operators begin marketing available space during the due diligence
               period so they can execute leases shortly after closing.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Plan your exit from day one. Whether you intend to hold for five
               years, ten years, or indefinitely, understanding your disposition
               options keeps you ahead of market cycles. Refinancing to pull out
@@ -576,9 +576,9 @@ export default function HowToBuyCommercialPropertyOrlando() {
             </p>
           </section>
 
-          <div className="bg-dark-card border border-dark-border rounded-xl p-6 mb-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6 mb-4">
             <h4 className="text-white font-semibold mb-3">Orlando CRE Acquisition Timeline Summary</h4>
-            <ul className="text-gray-400 space-y-2 text-sm">
+            <ul className="text-gray-300 space-y-2 text-sm">
               <li><strong className="text-white">Weeks 1-4:</strong> Define criteria, secure financing pre-approval, engage broker</li>
               <li><strong className="text-white">Weeks 4-12:</strong> Property sourcing, tours, underwriting, and LOI submission</li>
               <li><strong className="text-white">Weeks 12-14:</strong> LOI negotiation and execution of purchase and sale agreement</li>
@@ -590,12 +590,12 @@ export default function HowToBuyCommercialPropertyOrlando() {
           </div>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href="/orlando-commercial-real-estate-deals"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Off-Market Commercial Deals in Orlando
@@ -607,7 +607,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               </Link>
               <Link
                 href="/nnn-properties-florida"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   NNN Properties in Florida
@@ -619,7 +619,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               </Link>
               <Link
                 href="/industrial-property-central-florida"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Industrial Property for Sale in Central Florida
@@ -631,7 +631,7 @@ export default function HowToBuyCommercialPropertyOrlando() {
               </Link>
               <Link
                 href="/1031-exchange-florida"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   1031 Exchange Replacement Properties
@@ -645,11 +645,11 @@ export default function HowToBuyCommercialPropertyOrlando() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Ready to Buy Commercial Property in Orlando?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty helps investors find, analyze, and close
               commercial real estate deals across Central Florida. Whether you
               are acquiring your first commercial property or expanding an

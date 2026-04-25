@@ -44,7 +44,7 @@ export default async function MyListingsPage() {
           <div>
             <Link
               href="/marketplace"
-              className="text-gray-400 hover:text-gold text-sm inline-flex items-center gap-1 mb-4"
+              className="text-gray-300 hover:text-gold text-sm inline-flex items-center gap-1 mb-4"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -54,7 +54,7 @@ export default async function MyListingsPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-white mb-1">
               My <span className="text-gold">Listings</span>
             </h1>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               Manage everything you&apos;ve posted. {listings.length} total.
             </p>
           </div>
@@ -67,8 +67,8 @@ export default async function MyListingsPage() {
         </div>
 
         {listings.length === 0 ? (
-          <div className="border border-dark-border rounded-xl p-12 text-center bg-dark-card/40">
-            <p className="text-gray-400 mb-4">
+          <div className="border border-white/10 rounded-xl p-12 text-center bg-white/[0.04]/40">
+            <p className="text-gray-300 mb-4">
               You haven&apos;t posted any listings yet.
             </p>
             <Link
@@ -83,7 +83,7 @@ export default async function MyListingsPage() {
             {listings.map((l) => (
               <div
                 key={l.id}
-                className="border border-dark-border rounded-xl p-5 bg-dark-card/40 flex flex-col sm:flex-row gap-4"
+                className="border border-white/10 rounded-xl p-5 bg-white/[0.04]/40 flex flex-col sm:flex-row gap-4"
               >
                 {/* Thumb */}
                 <div className="sm:w-32 flex-shrink-0">
@@ -92,10 +92,10 @@ export default async function MyListingsPage() {
                     <img
                       src={l.photo_urls[0]}
                       alt={l.title}
-                      className="w-full sm:w-32 h-24 object-cover rounded-md border border-dark-border"
+                      className="w-full sm:w-32 h-24 object-cover rounded-md border border-white/10"
                     />
                   ) : (
-                    <div className="w-full sm:w-32 h-24 rounded-md border border-dark-border bg-gradient-to-br from-gold/10 to-navy-dark/40 flex items-center justify-center">
+                    <div className="w-full sm:w-32 h-24 rounded-md border border-white/10 bg-gradient-to-br from-gold/10 to-navy-dark/40 flex items-center justify-center">
                       <svg className="w-6 h-6 text-gold/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11" />
                       </svg>
@@ -109,7 +109,7 @@ export default async function MyListingsPage() {
                     <span className="text-gold font-semibold uppercase tracking-wider bg-gold/10 px-2 py-0.5 rounded">
                       {PROPERTY_TYPE_LABELS[l.property_type]}
                     </span>
-                    <span className="text-gray-400 border border-dark-border px-2 py-0.5 rounded">
+                    <span className="text-gray-300 border border-white/10 px-2 py-0.5 rounded">
                       {STATUS_LABELS[l.status]}
                     </span>
                     <span className="text-gray-600">

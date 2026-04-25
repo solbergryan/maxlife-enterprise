@@ -129,7 +129,7 @@ export default function LeadCaptureForm({
   }
 
   const inputClass =
-    "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
+    "w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
 
   if (submitted) {
     return (
@@ -152,7 +152,7 @@ export default function LeadCaptureForm({
         <h3 className="text-white text-xl font-semibold mb-2">
           {successHeading}
         </h3>
-        <p className="text-gray-400 mb-4">{successMessage}</p>
+        <p className="text-gray-300 mb-4">{successMessage}</p>
         <button
           onClick={() => setSubmitted(false)}
           className="text-gold hover:underline text-sm"
@@ -190,7 +190,7 @@ export default function LeadCaptureForm({
         type="button"
         onClick={() => setShowOptional((s) => !s)}
         aria-expanded={showOptional}
-        className="text-sm text-gray-400 hover:text-gold transition-colors flex items-center gap-1.5"
+        className="text-sm text-gray-300 hover:text-gold transition-colors flex items-center gap-1.5"
       >
         <svg
           className={`w-4 h-4 transition-transform ${showOptional ? "rotate-90" : ""}`}
@@ -231,7 +231,7 @@ export default function LeadCaptureForm({
 
           {/* Property Type Interests */}
           <div>
-            <p className="text-gray-400 text-sm mb-2">
+            <p className="text-gray-300 text-sm mb-2">
               Property types of interest
             </p>
             <div className="flex flex-wrap gap-2">
@@ -243,7 +243,7 @@ export default function LeadCaptureForm({
                   className={`text-sm px-3 py-1.5 rounded-full border transition-colors ${
                     form.interests.includes(type)
                       ? "bg-gold/20 border-gold/50 text-gold"
-                      : "bg-dark border-dark-border text-gray-400 hover:border-gray-500"
+                      : "bg-dark border-white/10 text-gray-300 hover:border-gray-500"
                   }`}
                 >
                   {type}
@@ -269,7 +269,7 @@ export default function LeadCaptureForm({
 
           {showExchangeDeadline && (
             <div>
-              <label className="text-gray-400 text-sm mb-1 block">
+              <label className="text-gray-300 text-sm mb-1 block">
                 1031 Exchange Deadline (if applicable)
               </label>
               <input

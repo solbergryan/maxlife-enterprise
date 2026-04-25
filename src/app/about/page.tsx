@@ -98,7 +98,7 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={personSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
@@ -111,7 +111,7 @@ export default function AboutPage() {
         >
           <source src="/videos/about/about-hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/80 to-navy-dark/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-dark/55 to-dark/20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             About
@@ -119,7 +119,7 @@ export default function AboutPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Meet <span className="text-gold">Ryan Solberg</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Commercial Real Estate Professional &amp; Regional Administrator
             serving Central Florida and the Space Coast.
           </p>
@@ -127,13 +127,13 @@ export default function AboutPage() {
       </section>
 
       {/* Commercial Services Banner */}
-      <section className="border-b border-dark-border bg-dark-card/50">
+      <section className="border-b border-white/10 bg-white/[0.03]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="text-center mb-6">
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-wide">
               COMMERCIAL
             </h2>
-            <p className="text-gray-400 text-xs sm:text-sm mt-3 tracking-[0.2em] uppercase">
+            <p className="text-gray-300 text-xs sm:text-sm mt-3 tracking-[0.2em] uppercase">
               Tenant Rep <span className="text-gold/60 mx-2">|</span> Apartments{" "}
               <span className="text-gold/60 mx-2">|</span> Cash Flow{" "}
               <span className="text-gold/60 mx-2">|</span> Investments
@@ -160,7 +160,7 @@ export default function AboutPage() {
             ].map((img) => (
               <div
                 key={img.src}
-                className="relative aspect-[4/3] rounded-lg overflow-hidden border border-dark-border"
+                className="relative aspect-[4/3] rounded-lg overflow-hidden border border-white/10"
               >
                 <Image
                   src={img.src}
@@ -180,7 +180,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Sidebar Card */}
           <div className="lg:col-span-1">
-            <div className="bg-dark-card border border-dark-border rounded-xl p-8 text-center sticky top-24">
+            <div className="bg-white/[0.04] border border-white/10 rounded-xl p-8 text-center sticky top-24">
               <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-5 ring-2 ring-gold/30">
                 <Image
                   src="/ryan-solberg.jpg"
@@ -200,7 +200,7 @@ export default function AboutPage() {
               <p className="text-gray-500 text-xs mt-1">
                 Mortgage Loan Officer
               </p>
-              <div className="border-t border-dark-border mt-6 pt-6 space-y-3 text-sm text-gray-400">
+              <div className="border-t border-white/10 mt-6 pt-6 space-y-3 text-sm text-gray-300">
                 <div className="flex items-center gap-2 justify-center">
                   <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -228,14 +228,14 @@ export default function AboutPage() {
               </div>
 
               {/* Service Area */}
-              <div className="border-t border-dark-border mt-6 pt-6">
+              <div className="border-t border-white/10 mt-6 pt-6">
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-3">Service Areas</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {["Orange", "Seminole", "Osceola", "Lake", "Polk", "Brevard"].map(
                     (county) => (
                       <span
                         key={county}
-                        className="text-xs bg-dark-hover border border-dark-border rounded-full px-3 py-1 text-gray-400"
+                        className="text-xs bg-white/10 border border-white/10 rounded-full px-3 py-1 text-gray-300"
                       >
                         {county} County
                       </span>
@@ -253,7 +253,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-white mb-4">
                 Commercial Real Estate Professional
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-4">
+              <p className="text-gray-300 leading-relaxed mb-4">
                 Ryan Solberg is a Florida-based Commercial Real Estate
                 Professional and Regional Administrator specializing in
                 commercial real estate sales, leasing, and investment properties
@@ -262,7 +262,7 @@ export default function AboutPage() {
                 and developers identify, acquire, and maximize high-performing
                 commercial real estate assets.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 His expertise spans a wide range of commercial property types,
                 including retail shopping centers, office buildings, industrial
                 properties, multifamily investments, mixed-use developments, and
@@ -299,12 +299,12 @@ export default function AboutPage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="bg-dark-card border border-dark-border rounded-lg p-5"
+                    className="bg-white/[0.04] border border-white/10 rounded-lg p-5"
                   >
                     <h3 className="text-gold font-semibold mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                    <p className="text-gray-300 text-sm">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -315,7 +315,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-white mb-4">
                 A Results-Oriented Approach
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-4">
+              <p className="text-gray-300 leading-relaxed mb-4">
                 With a strong foundation in real estate operations and financial
                 analysis, Ryan brings a data-driven, results-oriented approach to
                 every transaction. He is known for helping clients uncover
@@ -326,7 +326,7 @@ export default function AboutPage() {
                 him a valuable partner for both new and experienced commercial
                 real estate investors.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 Ryan stays ahead of market trends, population growth patterns,
                 and development activity across Central Florida and Brevard
                 County, giving his clients a competitive advantage in identifying
@@ -352,7 +352,7 @@ export default function AboutPage() {
                 ].map((type) => (
                   <div
                     key={type}
-                    className="bg-dark-card border border-dark-border rounded-lg px-4 py-3 text-center"
+                    className="bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3 text-center"
                   >
                     <p className="text-gray-300 text-sm">{type}</p>
                   </div>
@@ -361,7 +361,7 @@ export default function AboutPage() {
             </div>
 
             {/* Mission */}
-            <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+            <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">
                 Our Mission
               </h2>
@@ -376,12 +376,12 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Let&apos;s Work Together
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Ready to discuss your next commercial real estate opportunity? Get in
             touch — Ryan would love to hear about your goals.
           </p>

@@ -18,7 +18,7 @@ export default function NetSheetsHubPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/net-sheets/maxlife-net-sheets-money-bills-calculator-to-save-savings-taxes-business-money--256312.webp"
           alt="Seller net sheet calculator with receipts and calculator"
@@ -35,7 +35,7 @@ export default function NetSheetsHubPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Net Sheet <span className="text-gold">Calculator</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             Instant Florida closing cost estimates for sellers and buyers —
             with county-specific defaults for Orange (Orlando), Brevard (Space
             Coast), Lake, Seminole, Osceola, Volusia, and Polk. Branded PDF
@@ -54,7 +54,7 @@ export default function NetSheetsHubPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <Link
             href="/net-sheets/seller"
-            className="group bg-dark-card border border-dark-border rounded-2xl p-8 hover:border-gold transition-colors"
+            className="group bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-gold transition-colors"
           >
             <div className="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
               <svg
@@ -75,7 +75,7 @@ export default function NetSheetsHubPage() {
             <h2 className="text-2xl font-bold text-white mb-2">
               Seller Net Sheet
             </h2>
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+            <p className="text-gray-300 text-sm mb-4 leading-relaxed">
               Calculate net proceeds after commissions, title fees, doc stamps,
               mortgage payoff, and tax proration. Perfect for listing
               presentations and counter-offer analysis.
@@ -91,7 +91,7 @@ export default function NetSheetsHubPage() {
 
           <Link
             href="/net-sheets/buyer"
-            className="group bg-dark-card border border-dark-border rounded-2xl p-8 hover:border-gold transition-colors"
+            className="group bg-white/[0.04] border border-white/10 rounded-2xl p-8 hover:border-gold transition-colors"
           >
             <div className="w-14 h-14 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
               <svg
@@ -112,7 +112,7 @@ export default function NetSheetsHubPage() {
             <h2 className="text-2xl font-bold text-white mb-2">
               Buyer Estimate
             </h2>
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+            <p className="text-gray-300 text-sm mb-4 leading-relaxed">
               See a full cash-to-close breakdown including prepaids, title and
               lender fees, doc stamps, intangible tax, and monthly PITI
               payment. Supports Conventional, FHA, VA, USDA, and All-Cash.
@@ -161,12 +161,12 @@ export default function NetSheetsHubPage() {
             ].map((f) => (
               <div
                 key={f.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-5"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
               >
                 <h3 className="text-gold font-semibold mb-2 text-sm">
                   {f.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{f.body}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{f.body}</p>
               </div>
             ))}
           </div>
@@ -174,12 +174,12 @@ export default function NetSheetsHubPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Need a Deeper Underwrite?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Run cap rate, DSCR, and IRR on any commercial deal with the Deal
             Analyzer, or request a full property review from our team.
           </p>

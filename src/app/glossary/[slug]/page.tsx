@@ -70,11 +70,11 @@ export default async function GlossaryTermPage({
       />
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <Link
             href="/glossary"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -113,7 +113,7 @@ export default async function GlossaryTermPage({
         </section>
 
         {t.example && (
-          <section className="bg-dark-card border border-dark-border rounded-xl p-6">
+          <section className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
             <h2 className="text-xl font-bold text-white mb-3">
               <span className="text-gold">Example</span>
             </h2>
@@ -141,7 +141,7 @@ export default async function GlossaryTermPage({
                   <Link
                     key={rt.slug}
                     href={`/glossary/${rt.slug}`}
-                    className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors group block"
+                    className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors group block"
                   >
                     <p className="text-white font-medium text-sm group-hover:text-gold transition-colors">
                       {rt.term}
@@ -158,12 +158,12 @@ export default async function GlossaryTermPage({
       </article>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Apply <span className="text-gold">{t.term}</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             We can help you understand how this concept applies to your
             specific commercial real estate investment or transaction.
           </p>
@@ -176,7 +176,7 @@ export default async function GlossaryTermPage({
             </Link>
             <Link
               href="/glossary"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               All Glossary Terms
             </Link>

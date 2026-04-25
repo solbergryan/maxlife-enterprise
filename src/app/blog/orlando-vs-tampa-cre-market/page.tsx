@@ -24,9 +24,9 @@ export default function OrlandoVsTampa() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <Link href="/blog" className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6">
+          <Link href="/blog" className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -40,7 +40,7 @@ export default function OrlandoVsTampa() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Orlando vs Tampa CRE Market: Which Should You Invest In?
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Florida&apos;s two largest metros outside South Florida — both
             growing fast, both attracting institutional capital, but with
             meaningfully different profiles.
@@ -66,7 +66,7 @@ export default function OrlandoVsTampa() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-dark-border">
+                <tr className="border-b border-white/10">
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Metric</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Orlando</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3">Tampa</th>
@@ -83,7 +83,7 @@ export default function OrlandoVsTampa() {
                   ["Major Universities", "UCF (largest US)", "USF, UT"],
                   ["International Airport", "MCO (2nd busiest in FL)", "TPA"],
                 ].map(([m, o, t]) => (
-                  <tr key={m} className="border-b border-dark-border/50">
+                  <tr key={m} className="border-b border-white/10/50">
                     <td className="py-3 pr-4 text-white font-medium">{m}</td>
                     <td className="py-3 pr-4 text-gray-300">{o}</td>
                     <td className="py-3 text-gray-300">{t}</td>
@@ -99,7 +99,7 @@ export default function OrlandoVsTampa() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-dark-border">
+                <tr className="border-b border-white/10">
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Asset Class</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">Orlando</th>
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3">Tampa</th>
@@ -114,7 +114,7 @@ export default function OrlandoVsTampa() {
                   ["Suburban Office", "7.0–8.5%", "7.0–8.0%"],
                   ["Medical Office", "6.0–6.75%", "6.0–7.0%"],
                 ].map(([a, o, t]) => (
-                  <tr key={a} className="border-b border-dark-border/50">
+                  <tr key={a} className="border-b border-white/10/50">
                     <td className="py-3 pr-4 text-white font-medium">{a}</td>
                     <td className="py-3 pr-4 text-gray-300">{o}</td>
                     <td className="py-3 text-gray-300">{t}</td>
@@ -150,27 +150,27 @@ export default function OrlandoVsTampa() {
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">Where to Invest by Strategy</h2>
           <div className="space-y-4">
-            <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
               <p className="text-gold font-semibold text-sm mb-1">NNN Investors</p>
               <p className="text-gray-300 text-sm">Roughly equal — both markets have strong tenant expansion and similar cap rates. Orlando slightly edges out for population growth; Tampa for industrial/logistics NNN.</p>
             </div>
-            <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
               <p className="text-gold font-semibold text-sm mb-1">Multifamily Investors</p>
               <p className="text-gray-300 text-sm">Tampa currently trades at tighter cap rates but Orlando has stronger rent growth. Tampa submarkets (Brandon, New Tampa, Wesley Chapel) offer good value-add plays.</p>
             </div>
-            <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
               <p className="text-gold font-semibold text-sm mb-1">Industrial Investors</p>
               <p className="text-gray-300 text-sm">Tampa wins — Port of Tampa + I-4/I-75 crossroads = strongest industrial market in Florida outside Miami. Orlando is growing but smaller in terms of institutional-quality inventory.</p>
             </div>
-            <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
               <p className="text-gold font-semibold text-sm mb-1">Retail &amp; Hospitality</p>
               <p className="text-gray-300 text-sm">Orlando wins — tourism drives unmatched retail sales volumes. Hospitality recovery and Epic Universe open in 2025 provide strong tailwinds.</p>
             </div>
-            <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
               <p className="text-gold font-semibold text-sm mb-1">Office Investors</p>
               <p className="text-gray-300 text-sm">Both markets face office headwinds. Tampa&apos;s downtown CBD is in better shape due to the Water Street redevelopment. Suburban office struggles in both metros.</p>
             </div>
-            <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+            <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
               <p className="text-gold font-semibold text-sm mb-1">Development / Land</p>
               <p className="text-gray-300 text-sm">Orlando offers more opportunities in growing submarkets (Lake Nona, east Orange County, Brevard County). Tampa is more built-out near the urban core but has strong opportunities in Pasco and Hillsborough fringe.</p>
             </div>
@@ -198,7 +198,7 @@ export default function OrlandoVsTampa() {
               { slug: "orlando-entertainment-district-investment-guide", title: "Orlando Entertainment District Guide" },
               { slug: "central-florida-commercial-real-estate-submarkets", title: "Central Florida CRE Submarkets" },
             ].map((r) => (
-              <Link key={r.slug} href={`/blog/${r.slug}`} className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold">
+              <Link key={r.slug} href={`/blog/${r.slug}`} className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold">
                 {r.title} &rarr;
               </Link>
             ))}

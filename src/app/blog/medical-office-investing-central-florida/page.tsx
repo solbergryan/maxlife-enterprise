@@ -42,7 +42,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
-      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+      <section className="relative overflow-hidden border-b border-white/10 aspect-[21/6]">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscraper-glass-facades-modern-facade-2256489.webp"
           alt="Central Florida medical office building"
@@ -90,7 +90,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
             Medical Office Investing in Central Florida: A Comprehensive Guide
             for CRE Investors
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Medical office buildings are one of the most resilient and
             recession-resistant property types in commercial real estate. In
             Central Florida, the convergence of aging demographics, healthcare
@@ -145,7 +145,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold font-bold text-xl mb-1">
                     {item.metric}
@@ -194,7 +194,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Age Cohort</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">2020 Population</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">2035 Projected</th>
@@ -203,35 +203,35 @@ export default function MedicalOfficeInvestingCentralFlorida() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Under 18</td>
                     <td className="py-3 pr-4">580,000</td>
                     <td className="py-3 pr-4">670,000</td>
                     <td className="py-3 pr-4">+15.5%</td>
                     <td className="py-3">$3,700</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">18 - 44</td>
                     <td className="py-3 pr-4">920,000</td>
                     <td className="py-3 pr-4">1,050,000</td>
                     <td className="py-3 pr-4">+14.1%</td>
                     <td className="py-3">$4,500</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">45 - 64</td>
                     <td className="py-3 pr-4">610,000</td>
                     <td className="py-3 pr-4">720,000</td>
                     <td className="py-3 pr-4">+18.0%</td>
                     <td className="py-3">$8,200</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">65 - 74</td>
                     <td className="py-3 pr-4">230,000</td>
                     <td className="py-3 pr-4">340,000</td>
                     <td className="py-3 pr-4">+47.8%</td>
                     <td className="py-3">$12,800</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">75+</td>
                     <td className="py-3 pr-4">140,000</td>
                     <td className="py-3 pr-4">225,000</td>
@@ -335,7 +335,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Health System</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Hospitals</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Expansion Focus</th>
@@ -343,25 +343,25 @@ export default function MedicalOfficeInvestingCentralFlorida() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">AdventHealth</td>
                     <td className="py-3 pr-4">12+ in Central FL</td>
                     <td className="py-3 pr-4">Lake County, Horizon West, US 192</td>
                     <td className="py-3">10-15 yr NNN, 2-3% annual escalations</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Orlando Health</td>
                     <td className="py-3 pr-4">8+ in Central FL</td>
                     <td className="py-3 pr-4">Downtown Orlando, I-4 corridor, Seminole</td>
                     <td className="py-3">10-12 yr Modified Gross, CPI escalations</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">HCA / UCF Health</td>
                     <td className="py-3 pr-4">5+ in Central FL</td>
                     <td className="py-3 pr-4">Osceola County, Lake Nona, Melbourne</td>
                     <td className="py-3">7-10 yr NNN, fixed escalations</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Nemours</td>
                     <td className="py-3 pr-4">1 (Lake Nona)</td>
                     <td className="py-3 pr-4">Pediatric specialty, Lake Nona campus</td>
@@ -420,7 +420,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold font-bold text-lg mb-1">
                     {item.metric}
@@ -498,39 +498,39 @@ export default function MedicalOfficeInvestingCentralFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Feature</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">NNN Lease</th>
                     <th className="text-left text-gold font-semibold py-3">Modified Gross</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Expense Responsibility</td>
                     <td className="py-3 pr-4">Tenant pays all (taxes, insurance, CAM)</td>
                     <td className="py-3">Shared — tenant pays pro rata above base year</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Typical Term</td>
                     <td className="py-3 pr-4">10-15 years initial</td>
                     <td className="py-3">7-10 years initial</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Management Intensity</td>
                     <td className="py-3 pr-4">Low — near passive</td>
                     <td className="py-3">Moderate — active management needed</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Base Rent Range</td>
                     <td className="py-3 pr-4">$24 - $45/SF</td>
                     <td className="py-3">$28 - $48/SF (higher to offset landlord expenses)</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Typical Tenant</td>
                     <td className="py-3 pr-4">Health system, large group practice</td>
                     <td className="py-3">Multi-tenant building, smaller practices</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Cap Rate Impact</td>
                     <td className="py-3 pr-4">Lower (6.0 - 6.5%) — reflects lower risk</td>
                     <td className="py-3">Higher (6.5 - 7.5%) — reflects mgmt burden</td>
@@ -607,7 +607,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
               ].map((item) => (
                 <div
                   key={item.strategy}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-2">
                     {item.strategy}
@@ -640,7 +640,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">MOB Type</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Cap Rate Range</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Typical Tenant</th>
@@ -648,31 +648,31 @@ export default function MedicalOfficeInvestingCentralFlorida() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Single-Tenant, Health System</td>
                     <td className="py-3 pr-4">5.5% - 6.5%</td>
                     <td className="py-3 pr-4">AdventHealth, Orlando Health</td>
                     <td className="py-3">Corporate credit guarantee, long term</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Single-Tenant, Large Practice</td>
                     <td className="py-3 pr-4">6.0% - 7.0%</td>
                     <td className="py-3 pr-4">Multi-physician group, dental chain</td>
                     <td className="py-3">Lease term, practice financial strength</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Multi-Tenant MOB (Class A)</td>
                     <td className="py-3 pr-4">6.5% - 7.0%</td>
                     <td className="py-3 pr-4">Mix of specialties</td>
                     <td className="py-3">Occupancy, lease rollover schedule, location</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Multi-Tenant MOB (Class B)</td>
                     <td className="py-3 pr-4">7.0% - 7.5%</td>
                     <td className="py-3 pr-4">Smaller practices, local tenants</td>
                     <td className="py-3">Value-add potential, management upside</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">BTS Development (yield on cost)</td>
                     <td className="py-3 pr-4">7.5% - 9.0%</td>
                     <td className="py-3 pr-4">Preleased to health system or group</td>
@@ -761,7 +761,7 @@ export default function MedicalOfficeInvestingCentralFlorida() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Submarket</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">MOB Cap Rate</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Avg Lease Rate</th>
@@ -770,28 +770,28 @@ export default function MedicalOfficeInvestingCentralFlorida() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Lake Nona</td>
                     <td className="py-3 pr-4">5.5% - 6.5%</td>
                     <td className="py-3 pr-4">$32 - $45/SF NNN</td>
                     <td className="py-3 pr-4">2.8%</td>
                     <td className="py-3">Medical City, Nemours, VA</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Dr. Phillips</td>
                     <td className="py-3 pr-4">6.0% - 6.8%</td>
                     <td className="py-3 pr-4">$30 - $40/SF NNN</td>
                     <td className="py-3 pr-4">3.5%</td>
                     <td className="py-3">Sand Lake Hospital, Dr. P. Hospital</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Altamonte Springs</td>
                     <td className="py-3 pr-4">6.5% - 7.5%</td>
                     <td className="py-3 pr-4">$26 - $34/SF NNN</td>
                     <td className="py-3 pr-4">5.1%</td>
                     <td className="py-3">AdventHealth Altamonte</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Melbourne</td>
                     <td className="py-3 pr-4">6.5% - 7.5%</td>
                     <td className="py-3 pr-4">$24 - $32/SF NNN</td>
@@ -836,12 +836,12 @@ export default function MedicalOfficeInvestingCentralFlorida() {
               ].map((item) => (
                 <div
                   key={item.consideration}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.consideration}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.detail}</p>
+                  <p className="text-gray-300 text-xs">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -896,11 +896,11 @@ export default function MedicalOfficeInvestingCentralFlorida() {
           </section>
 
           {/* ── CTA ── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-8">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-8">
             <h2 className="text-2xl font-bold text-white mb-3">
               Explore Medical Office Opportunities
             </h2>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team specializes in medical office investment across Central
               Florida. Whether you are evaluating an acquisition or exploring
               build-to-suit development, we can help.
@@ -922,18 +922,18 @@ export default function MedicalOfficeInvestingCentralFlorida() {
           </div>
 
           {/* ── Related Reading ── */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Cap Rates: Investor Guide</h3>
                 <p className="text-gray-500 text-xs">Cap rate analysis across all commercial property types in the Orlando metro area.</p>
               </Link>
-              <Link href="/blog/orlando-nnn-properties-for-sale" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-nnn-properties-for-sale" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando NNN Properties for Sale</h3>
                 <p className="text-gray-500 text-xs">Guide to finding and evaluating triple net lease properties in Central Florida.</p>
               </Link>
-              <Link href="/markets/orlando-commercial-real-estate" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/markets/orlando-commercial-real-estate" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Commercial Real Estate Market</h3>
                 <p className="text-gray-500 text-xs">Comprehensive overview of the Orlando metro commercial real estate market.</p>
               </Link>

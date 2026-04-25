@@ -104,12 +104,12 @@ export default async function JobPage({ params }: { params: Params }) {
       />
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative">
           <Link
             href="/careers"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -146,7 +146,7 @@ export default async function JobPage({ params }: { params: Params }) {
             {job.title}
           </h1>
 
-          <div className="flex flex-wrap gap-6 text-sm text-gray-400 mb-6">
+          <div className="flex flex-wrap gap-6 text-sm text-gray-300 mb-6">
             <span className="flex items-center gap-2">
               <svg
                 className="w-4 h-4 text-gold"
@@ -274,7 +274,7 @@ export default async function JobPage({ params }: { params: Params }) {
               {job.niceToHaves.map((item) => (
                 <li
                   key={item}
-                  className="bg-dark-card border border-dark-border rounded-lg p-3 text-sm text-gray-400"
+                  className="bg-white/[0.04] border border-white/10 rounded-lg p-3 text-sm text-gray-300"
                 >
                   {item}
                 </li>
@@ -284,7 +284,7 @@ export default async function JobPage({ params }: { params: Params }) {
         )}
 
         {/* Ideal Candidate */}
-        <section className="bg-dark-card border border-dark-border rounded-xl p-6">
+        <section className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
           <h2 className="text-xl font-bold text-white mb-3">
             The Ideal <span className="text-gold">Candidate</span>
           </h2>
@@ -302,7 +302,7 @@ export default async function JobPage({ params }: { params: Params }) {
             {job.whatWeOffer.map((item) => (
               <div
                 key={item}
-                className="bg-dark-card border border-dark-border rounded-lg p-4"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-4"
               >
                 <p className="text-gray-300 text-sm leading-relaxed">{item}</p>
               </div>
@@ -320,12 +320,12 @@ export default async function JobPage({ params }: { params: Params }) {
       </article>
 
       {/* Apply CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to <span className="text-gold">Apply</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Send us a note introducing yourself and attach your resume. Tell us
             what draws you to this role and what you&apos;d bring to MaxLife.
           </p>
@@ -338,7 +338,7 @@ export default async function JobPage({ params }: { params: Params }) {
             </Link>
             <Link
               href="/careers"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               All Open Roles
             </Link>

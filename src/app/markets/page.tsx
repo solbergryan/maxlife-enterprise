@@ -39,7 +39,7 @@ export default function MarketsPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/mixed-commercial/maxlife-mixed-commercial-city-buildings-houston-texas-office-business-3779038.webp"
           alt="Florida commercial real estate markets"
@@ -57,7 +57,7 @@ export default function MarketsPage() {
             Florida{" "}
             <span className="text-gold">Commercial Real Estate Markets</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl text-lg">
+          <p className="text-gray-300 max-w-2xl text-lg">
             In-depth market intelligence across Orlando, Tampa Bay, Jacksonville,
             Miami, Fort Lauderdale, West Palm Beach, Naples, Sarasota,
             Gainesville, Tallahassee, Pensacola, and the Space Coast.
@@ -68,7 +68,7 @@ export default function MarketsPage() {
 
       {/* Coverage map */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="rounded-xl overflow-hidden border border-dark-border bg-dark">
+        <div className="rounded-xl overflow-hidden border border-white/10 bg-dark">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/florida-coverage-map.svg"
@@ -91,12 +91,12 @@ export default function MarketsPage() {
             <Link
               key={market.slug}
               href={`/markets/${market.slug}`}
-              className="group bg-dark-card border border-dark-border rounded-xl p-8 hover:border-gold/30 transition-colors"
+              className="group bg-white/[0.04] border border-white/10 rounded-xl p-8 hover:border-gold/40 transition-colors"
             >
               <h2 className="text-xl font-bold text-white group-hover:text-gold transition-colors mb-2">
                 {market.heroHeading}
               </h2>
-              <p className="text-gray-400 text-sm mb-6 line-clamp-2">
+              <p className="text-gray-300 text-sm mb-6 line-clamp-2">
                 {market.heroSubheading}
               </p>
 
@@ -117,7 +117,7 @@ export default function MarketsPage() {
                 {market.propertyTypes.slice(0, 4).map((type) => (
                   <span
                     key={type}
-                    className="text-xs bg-dark-hover border border-dark-border rounded-full px-2.5 py-1 text-gray-400"
+                    className="text-xs bg-white/10 border border-white/10 rounded-full px-2.5 py-1 text-gray-300"
                   >
                     {type}
                   </span>
@@ -129,12 +129,12 @@ export default function MarketsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Invest Anywhere in Florida?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Let&apos;s discuss which market is the best fit for your investment
             strategy.
           </p>

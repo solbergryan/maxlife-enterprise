@@ -73,7 +73,7 @@ export default function InvestorSignupForm() {
   }
 
   const inputClass =
-    "w-full bg-dark border border-dark-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
+    "w-full bg-dark border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:border-gold focus:outline-none transition-colors";
 
   if (submitted) {
     return (
@@ -86,7 +86,7 @@ export default function InvestorSignupForm() {
         <h3 className="text-white text-xl font-semibold mb-2">
           You&apos;re on the List
         </h3>
-        <p className="text-gray-400 mb-4">
+        <p className="text-gray-300 mb-4">
           We&apos;ve received your information and will be in touch with
           off-market opportunities that match your criteria.
         </p>
@@ -142,7 +142,7 @@ export default function InvestorSignupForm() {
 
       {/* Property Type Interests */}
       <div>
-        <p className="text-gray-400 text-sm mb-2">
+        <p className="text-gray-300 text-sm mb-2">
           What types of properties interest you?
         </p>
         <div className="flex flex-wrap gap-2">
@@ -154,7 +154,7 @@ export default function InvestorSignupForm() {
               className={`text-sm px-3 py-1.5 rounded-full border transition-colors ${
                 form.interests.includes(type)
                   ? "bg-gold/20 border-gold/50 text-gold"
-                  : "bg-dark border-dark-border text-gray-400 hover:border-gray-500"
+                  : "bg-dark border-white/10 text-gray-300 hover:border-gray-500"
               }`}
             >
               {type}

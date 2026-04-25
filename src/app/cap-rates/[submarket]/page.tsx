@@ -74,7 +74,7 @@ export default async function CapRatesPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border py-16 sm:py-20">
+      <section className="relative overflow-hidden border-b border-white/10 py-16 sm:py-20">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-architecture-building-glass-windows-business-blue-1508086.webp"
           alt="Central Florida commercial real estate cap rates analysis"
@@ -96,7 +96,7 @@ export default async function CapRatesPage({ params }: PageProps) {
       </section>
 
       {/* Cap rate table */}
-      <section className="border-b border-dark-border bg-dark-card py-14">
+      <section className="border-b border-white/10 bg-white/[0.04] py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
             {data.name} Cap Rates by Asset Class
@@ -104,11 +104,11 @@ export default async function CapRatesPage({ params }: PageProps) {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-left text-sm">
               <thead>
-                <tr className="border-b border-dark-border">
-                  <th className="py-3 pr-4 font-semibold text-gray-400 uppercase text-xs tracking-wider">Asset Class</th>
-                  <th className="py-3 px-4 font-semibold text-gray-400 uppercase text-xs tracking-wider">Cap Rate Range</th>
-                  <th className="py-3 px-4 font-semibold text-gray-400 uppercase text-xs tracking-wider">Trend</th>
-                  <th className="py-3 pl-4 font-semibold text-gray-400 uppercase text-xs tracking-wider">Notes</th>
+                <tr className="border-b border-white/10">
+                  <th className="py-3 pr-4 font-semibold text-gray-300 uppercase text-xs tracking-wider">Asset Class</th>
+                  <th className="py-3 px-4 font-semibold text-gray-300 uppercase text-xs tracking-wider">Cap Rate Range</th>
+                  <th className="py-3 px-4 font-semibold text-gray-300 uppercase text-xs tracking-wider">Trend</th>
+                  <th className="py-3 pl-4 font-semibold text-gray-300 uppercase text-xs tracking-wider">Notes</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-dark-border">
@@ -117,7 +117,7 @@ export default async function CapRatesPage({ params }: PageProps) {
                     <td className="py-4 pr-4 font-semibold text-white">{row.assetClass}</td>
                     <td className="py-4 px-4 text-gold font-semibold whitespace-nowrap">{row.range}</td>
                     <td className="py-4 px-4"><TrendBadge trend={row.trend} /></td>
-                    <td className="py-4 pl-4 text-gray-400">{row.notes}</td>
+                    <td className="py-4 pl-4 text-gray-300">{row.notes}</td>
                   </tr>
                 ))}
               </tbody>
@@ -132,14 +132,14 @@ export default async function CapRatesPage({ params }: PageProps) {
       </section>
 
       {/* Demand drivers */}
-      <section className="border-b border-dark-border bg-dark py-14">
+      <section className="border-b border-white/10 bg-dark py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
             What Drives Demand in {data.name}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {data.demandDrivers.map((d, i) => (
-              <li key={i} className="flex items-start gap-3 rounded-xl border border-dark-border bg-dark-card p-4 text-gray-300">
+              <li key={i} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4 text-gray-300">
                 <span className="mt-0.5 text-gold">•</span>
                 <span>{d}</span>
               </li>
@@ -149,7 +149,7 @@ export default async function CapRatesPage({ params }: PageProps) {
       </section>
 
       {/* Outlook */}
-      <section className="border-b border-dark-border bg-dark-card py-14">
+      <section className="border-b border-white/10 bg-white/[0.04] py-14">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
             {data.name} Cap Rate Outlook
@@ -159,7 +159,7 @@ export default async function CapRatesPage({ params }: PageProps) {
       </section>
 
       {/* Other submarkets */}
-      <section className="border-b border-dark-border bg-dark py-14">
+      <section className="border-b border-white/10 bg-dark py-14">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-xl font-bold text-white">Other Central Florida Submarkets</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -169,10 +169,10 @@ export default async function CapRatesPage({ params }: PageProps) {
                 <Link
                   key={s.slug}
                   href={`/cap-rates/${s.slug}`}
-                  className="rounded-xl border border-dark-border bg-dark-card p-4 transition-colors hover:border-gold/60"
+                  className="rounded-xl border border-white/10 bg-white/[0.04] p-4 transition-colors hover:border-gold/60"
                 >
                   <div className="font-semibold text-white">{s.name}</div>
-                  <div className="mt-1 text-xs text-gray-400">View cap rates →</div>
+                  <div className="mt-1 text-xs text-gray-300">View cap rates →</div>
                 </Link>
               ))}
           </div>
@@ -180,12 +180,12 @@ export default async function CapRatesPage({ params }: PageProps) {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card py-14">
+      <section className="bg-white/[0.04] py-14">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl">
             Looking to buy or sell in {data.name}?
           </h2>
-          <p className="mb-6 text-gray-400">
+          <p className="mb-6 text-gray-300">
             We work {data.name} and the surrounding Central Florida submarkets every day. Get a
             current valuation or view available opportunities in the submarket.
           </p>

@@ -23,7 +23,7 @@ export default function PropertyTypeHeroVisual({
   const silhouette = getSilhouette(categorySlug);
 
   return (
-    <div className="relative rounded-2xl overflow-hidden border border-dark-border shadow-2xl aspect-[3/2] lg:aspect-[4/3] bg-dark-card">
+    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/2] lg:aspect-[4/3] bg-white/[0.04]">
       {/* Base gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#141414] to-[#0a1929]" />
 

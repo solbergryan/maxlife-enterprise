@@ -25,7 +25,7 @@ export default function NNNTenantsHubPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-apple-inc-mac-store-macintosh-technology-508812.webp"
           alt="National NNN retail tenant storefront"
@@ -43,7 +43,7 @@ export default function NNNTenantsHubPage() {
             NNN Properties by{" "}
             <span className="text-gold">Tenant</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Browse single-tenant net lease investment opportunities by brand.
             Each tenant profile covers credit rating, typical cap rates, lease
             structures, investment considerations, and Florida-specific market
@@ -60,7 +60,7 @@ export default function NNNTenantsHubPage() {
         return (
           <section
             key={category}
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10"
           >
             <h2 className="text-2xl font-bold text-white mb-6">
               <span className="text-gold">{category}</span> Tenants
@@ -70,7 +70,7 @@ export default function NNNTenantsHubPage() {
                 <Link
                   key={t.slug}
                   href={`/nnn-tenants/${t.slug}`}
-                  className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-xl p-6 transition-colors group block"
+                  className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-xl p-6 transition-colors group block"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-white text-lg font-bold group-hover:text-gold transition-colors">
@@ -80,7 +80,7 @@ export default function NNNTenantsHubPage() {
                       {t.creditRating.replace("S&P: ", "")}
                     </span>
                   </div>
-                  <div className="space-y-2 text-xs text-gray-400 mb-4">
+                  <div className="space-y-2 text-xs text-gray-300 mb-4">
                     <div className="flex justify-between">
                       <span>Cap Rate:</span>
                       <span className="text-gold font-medium">
@@ -109,12 +109,12 @@ export default function NNNTenantsHubPage() {
       })}
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Looking for a Specific <span className="text-gold">Tenant</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             We source on- and off-market NNN properties across all major
             tenants. Tell us your criteria and we&apos;ll send matching
             opportunities.

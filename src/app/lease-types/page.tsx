@@ -14,7 +14,7 @@ export default function LeaseTypesHubPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/lease-types/maxlife-lease-types-contract-agreement-signing-a-contract-document-signature-bus-6951993.webp"
           alt="Commercial lease agreement being signed"
@@ -32,7 +32,7 @@ export default function LeaseTypesHubPage() {
             Commercial Real Estate{" "}
             <span className="text-gold">Lease Types</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Understanding lease structures is fundamental to commercial real
             estate investing. Different lease types allocate operating costs
             and risk between landlord and tenant in radically different ways —
@@ -51,7 +51,7 @@ export default function LeaseTypesHubPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
-              <tr className="border-b border-dark-border">
+              <tr className="border-b border-white/10">
                 <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">
                   Lease Type
                 </th>
@@ -76,7 +76,7 @@ export default function LeaseTypesHubPage() {
                 ["Full-Service Gross", "Everything", "6.0% - 8.0%", "Class A office"],
                 ["Percentage Rent", "Retail-focused", "Varies", "Anchor/mall tenants"],
               ].map(([lease, landlord, cap, best]) => (
-                <tr key={lease} className="border-b border-dark-border/50">
+                <tr key={lease} className="border-b border-white/10/50">
                   <td className="py-3 pr-4 text-white font-medium">{lease}</td>
                   <td className="py-3 pr-4 text-gray-300">{landlord}</td>
                   <td className="py-3 pr-4 text-gold">{cap}</td>
@@ -95,20 +95,20 @@ export default function LeaseTypesHubPage() {
             <Link
               key={l.slug}
               href={`/lease-types/${l.slug}`}
-              className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-xl p-6 transition-colors group block"
+              className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-xl p-6 transition-colors group block"
             >
               <h2 className="text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors">
                 {l.name}
               </h2>
               <p className="text-gold text-sm italic mb-3">{l.tagline}</p>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                 {l.definition}
               </p>
               <div className="flex flex-wrap gap-2 text-xs">
-                <span className="bg-dark border border-dark-border rounded px-2 py-1 text-gray-400">
+                <span className="bg-dark border border-white/10 rounded px-2 py-1 text-gray-300">
                   {l.typicalTerms.capRate}
                 </span>
-                <span className="bg-dark border border-dark-border rounded px-2 py-1 text-gray-400">
+                <span className="bg-dark border border-white/10 rounded px-2 py-1 text-gray-300">
                   {l.typicalTerms.term.split(" ")[0]} yr term
                 </span>
               </div>
@@ -121,13 +121,13 @@ export default function LeaseTypesHubPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Need Help Choosing a{" "}
             <span className="text-gold">Lease Structure</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             The right lease structure depends on your specific goals — passive
             income, value-add upside, or long-term reversion. Let&apos;s talk
             through your situation.

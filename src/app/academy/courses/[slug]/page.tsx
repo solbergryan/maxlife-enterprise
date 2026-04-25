@@ -75,7 +75,7 @@ export default async function CoursePage({ params }: PageProps) {
         const theme = TIER_THEMES[course.tier];
         const iconPath = COURSE_ICONS[course.slug];
         return (
-      <section className={`border-b border-dark-border bg-gradient-to-br ${theme.gradient} to-dark py-14 sm:py-20`}>
+      <section className={`border-b border-white/10 bg-gradient-to-br ${theme.gradient} to-dark py-14 sm:py-20`}>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/academy"
@@ -103,7 +103,7 @@ export default async function CoursePage({ params }: PageProps) {
                 <span className={`rounded-full ${theme.bg} ${theme.border} border px-3 py-1 text-xs font-semibold uppercase tracking-wider ${theme.text}`}>
                   Tier {course.tier} — {course.tierTitle}
                 </span>
-                <span className="text-xs text-gray-400">
+                <span className="text-xs text-gray-300">
                   Course {course.order.toString().padStart(2, "0")}
                 </span>
                 {course.cireLevel && (
@@ -142,7 +142,7 @@ export default async function CoursePage({ params }: PageProps) {
               </svg>
               {course.lessons.length > 0 ? `${course.lessons.length} lessons` : "Coming soon"}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-dark-border bg-dark px-3 py-1.5 text-gray-400">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-dark px-3 py-1.5 text-gray-300">
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V7m0 10v1" />
               </svg>
@@ -152,7 +152,7 @@ export default async function CoursePage({ params }: PageProps) {
 
           {user && hasContent && (
             <div className="mt-8 space-y-2">
-              <div className="flex justify-between text-sm text-gray-400">
+              <div className="flex justify-between text-sm text-gray-300">
                 <span>
                   Your progress: {completedCount} / {course.lessons.length} lessons
                 </span>
@@ -192,7 +192,7 @@ export default async function CoursePage({ params }: PageProps) {
 
       {/* Workbook lead magnet */}
       {course.hasWorkbook && (
-        <section className="border-b border-dark-border bg-dark py-12">
+        <section className="border-b border-white/10 bg-dark py-12">
           <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
             <div className="mb-6 text-center">
               <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gold">
@@ -201,7 +201,7 @@ export default async function CoursePage({ params }: PageProps) {
               <h2 className="mb-2 text-2xl font-bold text-white sm:text-3xl">
                 Download the {course.title} Workbook
               </h2>
-              <p className="text-gray-400">
+              <p className="text-gray-300">
                 Printable PDF with exercises, worksheets, and fill-in notes
                 designed to go alongside every lesson in this course.
               </p>
@@ -240,7 +240,7 @@ export default async function CoursePage({ params }: PageProps) {
       )}
 
       {/* Outcomes */}
-      <section className="border-b border-dark-border bg-dark-card py-14">
+      <section className="border-b border-white/10 bg-white/[0.04] py-14">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-6 text-2xl font-bold text-white">What you'll learn</h2>
           <ul className="grid gap-3 sm:grid-cols-2">
@@ -277,7 +277,7 @@ export default async function CoursePage({ params }: PageProps) {
                   <li key={lesson.slug}>
                     <Link
                       href={`/academy/courses/${course.slug}/lessons/${lesson.slug}`}
-                      className="group flex items-center gap-4 rounded-xl border border-dark-border bg-dark-card p-5 transition-all hover:border-gold/60"
+                      className="group flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.04] p-5 transition-all hover:border-gold/60"
                     >
                       <div
                         className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 font-bold ${
@@ -298,7 +298,7 @@ export default async function CoursePage({ params }: PageProps) {
                         <h3 className="font-semibold text-white group-hover:text-gold">
                           {lesson.title}
                         </h3>
-                        <p className="mt-1 text-sm text-gray-400 line-clamp-1">
+                        <p className="mt-1 text-sm text-gray-300 line-clamp-1">
                           {lesson.description}
                         </p>
                       </div>
@@ -311,12 +311,12 @@ export default async function CoursePage({ params }: PageProps) {
               })}
             </ol>
           ) : (
-            <div className="rounded-2xl border border-dashed border-dark-border bg-dark-card p-10 text-center">
+            <div className="rounded-2xl border border-dashed border-white/10 bg-white/[0.04] p-10 text-center">
               <div className="mb-4 text-5xl">🚧</div>
               <h3 className="mb-3 text-xl font-bold text-white">
                 Full lesson content is coming soon
               </h3>
-              <p className="mx-auto mb-6 max-w-md text-gray-400">
+              <p className="mx-auto mb-6 max-w-md text-gray-300">
                 We've published the course outline and learning outcomes above.
                 The full lessons are on the writing roadmap — sign up free to
                 get notified when they launch.
@@ -341,7 +341,7 @@ export default async function CoursePage({ params }: PageProps) {
         const nextTheme = TIER_THEMES[nextCourse.tier];
         const nextIcon = COURSE_ICONS[nextCourse.slug];
         return (
-        <section className={`border-t border-dark-border bg-gradient-to-r ${nextTheme.gradient} to-dark-card py-12`}>
+        <section className={`border-t border-white/10 bg-gradient-to-r ${nextTheme.gradient} to-dark-card py-12`}>
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-4">
@@ -361,7 +361,7 @@ export default async function CoursePage({ params }: PageProps) {
                     Up next — Course {nextCourse.order.toString().padStart(2, "0")}
                   </p>
                   <h3 className="text-xl font-bold text-white">{nextCourse.title}</h3>
-                  <p className="text-sm text-gray-400">{nextCourse.subtitle}</p>
+                  <p className="text-sm text-gray-300">{nextCourse.subtitle}</p>
                 </div>
               </div>
               <Link

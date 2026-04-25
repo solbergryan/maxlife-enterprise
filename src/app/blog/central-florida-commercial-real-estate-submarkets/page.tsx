@@ -43,7 +43,7 @@ export default function CentralFloridaSubmarketsArticle() {
       <JsonLd data={articleSchema} />
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/office-buildings/maxlife-office-buildings-architecture-skyscrapers-buildings-skyline-city-real-5999913.webp"
           alt="Central Florida commercial real estate submarkets skyline"
@@ -56,7 +56,7 @@ export default function CentralFloridaSubmarketsArticle() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -83,7 +83,7 @@ export default function CentralFloridaSubmarketsArticle() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Central Florida&apos;s Top Commercial Real Estate Submarkets
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             A tour of the submarkets that define Central Florida commercial
             real estate — Orlando, Lake Nona, I-Drive, the Space Coast, Lake
             County, and Polk County — and what they mean for investors,
@@ -98,7 +98,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Why Central Florida Is a Submarket Story
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Central Florida commercial real estate isn&apos;t a single
               market — it&apos;s a dozen distinct submarkets with different
               tenants, different rent dynamics, different growth drivers,
@@ -109,7 +109,7 @@ export default function CentralFloridaSubmarketsArticle() {
               the right investment thesis for one is the wrong thesis for
               the other.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The same goes for tenants. A retail concept that thrives on
               I-Drive may fail in Winter Park. An office user that needs
               Class A and amenities will be miserable in a Polk County
@@ -124,7 +124,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Downtown Orlando &amp; the CBD
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Orlando Central Business District is the financial and
               legal core of the metro, anchored by Orange County government,
               federal courts, and the region&apos;s largest concentration of
@@ -134,7 +134,7 @@ export default function CentralFloridaSubmarketsArticle() {
               also has a growing residential and entertainment base that is
               slowly transforming the after-hours economy.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For investors, Downtown is a tale of two markets: newer Class
               A product is performing well, while older Class B office
               continues to work through a structural repricing that
@@ -148,7 +148,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Lake Nona &amp; Medical City
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lake Nona is arguably Central Florida&apos;s most important
               commercial real estate story of the last 15 years. Anchored
               by Medical City — a 650-acre medical and life-sciences campus
@@ -158,7 +158,7 @@ export default function CentralFloridaSubmarketsArticle() {
               transformed from greenfield land to one of the most
               valuable submarkets in the region.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Demand is strongest for medical office, life-science research
               space, Class A multifamily, and the retail and hospitality
               that supports the workforce. Lake Nona land values have
@@ -173,7 +173,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               International Drive &amp; the Tourism Corridor
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               International Drive (I-Drive) is the spine of Orlando&apos;s
               tourism economy — the corridor between Universal Studios,
               SeaWorld, and the Orange County Convention Center, serving
@@ -182,7 +182,7 @@ export default function CentralFloridaSubmarketsArticle() {
               experiential entertainment, and the commercial infrastructure
               that supports the tourism industry.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For retail and hospitality investors, I-Drive offers high
               foot traffic and tourism-driven revenue that is resilient
               through most economic cycles. The tradeoff is that cap rates
@@ -196,7 +196,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Brevard County &amp; the Space Coast
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Brevard County is Central Florida&apos;s fastest-growing
               commercial real estate market that most investors are still
               sleeping on. The resurgence of the space industry — led by
@@ -205,7 +205,7 @@ export default function CentralFloridaSubmarketsArticle() {
               demand across the I-95 corridor from Titusville through
               Melbourne and Palm Bay.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The Space Coast offers a lower cost basis than Orlando with
               strong growth fundamentals, making it attractive for
               value-add and development strategies. Industrial demand
@@ -225,7 +225,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Maitland, Winter Park &amp; the Northeast Suburbs
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The northeast suburban submarkets — Maitland, Winter Park,
               Altamonte Springs, and Longwood — are Orlando&apos;s mature
               suburban office and retail markets. Tenant retention is
@@ -234,7 +234,7 @@ export default function CentralFloridaSubmarketsArticle() {
               medical practices, and tenants that serve affluent residential
               communities.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               These submarkets are less volatile than core Orlando and offer
               steady cash flow for investors focused on stability over
               growth. Class B office can be particularly attractive for
@@ -246,7 +246,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Lake County &amp; the Western Growth Corridor
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Lake County — including Clermont, Leesburg, and Mount Dora —
               is one of the fastest-growing counties in Florida by
               population. Residential development has exploded along the
@@ -263,7 +263,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Polk County &amp; the I-4 Industrial Corridor
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Polk County — anchored by Lakeland and Winter Haven — has
               become one of the most important industrial submarkets in
               Florida. Its midway location between Orlando and Tampa makes
@@ -273,7 +273,7 @@ export default function CentralFloridaSubmarketsArticle() {
               outperformed most other Florida submarkets over the past
               five years.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For industrial investors and users, Polk County is often
               the right answer when Orlando proper is too expensive or
               too supply-constrained. See our{" "}
@@ -291,7 +291,7 @@ export default function CentralFloridaSubmarketsArticle() {
             <h2 className="text-2xl font-bold text-white mb-4">
               How to Choose the Right Submarket
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The right submarket depends entirely on your strategy. Core
               stability investors should focus on Lake Nona, Downtown Class
               A, and the mature northeast suburbs. Growth investors should
@@ -301,7 +301,7 @@ export default function CentralFloridaSubmarketsArticle() {
               suburban retail, and older multifamily where repositioning
               can unlock significant upside.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For tenants, the decision is simpler: pick the submarket
               where your customers already are, where your employees want
               to work, and where the physical inventory matches your
@@ -314,14 +314,14 @@ export default function CentralFloridaSubmarketsArticle() {
           </section>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">
               Related Reading
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href="/markets/orlando-commercial-real-estate"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Orlando Commercial Real Estate Market
@@ -333,7 +333,7 @@ export default function CentralFloridaSubmarketsArticle() {
               </Link>
               <Link
                 href="/blog/orlando-commercial-real-estate-trends-2026"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Orlando CRE Market Report 2026
@@ -345,7 +345,7 @@ export default function CentralFloridaSubmarketsArticle() {
               </Link>
               <Link
                 href="/blog/brevard-county-investment-property-outlook"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Brevard County Investment Outlook
@@ -357,7 +357,7 @@ export default function CentralFloridaSubmarketsArticle() {
               </Link>
               <Link
                 href="/orlando-commercial-real-estate-deals"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Off-Market Commercial Deals in Orlando
@@ -371,11 +371,11 @@ export default function CentralFloridaSubmarketsArticle() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Investing or Leasing Across Central Florida?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               MaxLife Realty covers the full Central Florida region —
               Orlando, the Space Coast, Lake County, and Polk County. Tell
               us your strategy and we&apos;ll find the right submarket and

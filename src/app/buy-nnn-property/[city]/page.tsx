@@ -51,11 +51,11 @@ export default async function BuyNNNCityPage({
           Buy NNN Property
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-400">{c.name}</span>
+        <span className="text-gray-300">{c.name}</span>
       </nav>
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
             Buy NNN Real Estate
@@ -64,7 +64,7 @@ export default async function BuyNNNCityPage({
             Buy NNN Properties in{" "}
             <span className="text-gold">{c.name}, Florida</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed mb-6">
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
             Access on- and off-market single-tenant net lease investment
             opportunities in {c.name}. MaxLife Development sources NNN
             properties with investment-grade tenants — Walgreens, CVS,
@@ -87,13 +87,13 @@ export default async function BuyNNNCityPage({
         </h2>
         <p className="text-gray-300 leading-relaxed mb-4">{c.description}</p>
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               Population
             </p>
             <p className="text-white font-semibold">{c.population}</p>
           </div>
-          <div className="bg-dark-card border border-dark-border rounded-lg p-4">
+          <div className="bg-white/[0.04] border border-white/10 rounded-lg p-4">
             <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">
               County
             </p>
@@ -149,10 +149,10 @@ export default async function BuyNNNCityPage({
           ].map((cat) => (
             <div
               key={cat.title}
-              className="bg-dark-card border border-dark-border rounded-xl p-5"
+              className="bg-white/[0.04] border border-white/10 rounded-xl p-5"
             >
               <h3 className="text-gold font-semibold mb-2">{cat.title}</h3>
-              <p className="text-gray-400 text-sm mb-3">{cat.tenants}</p>
+              <p className="text-gray-300 text-sm mb-3">{cat.tenants}</p>
               <div className="flex gap-4 text-xs">
                 <span className="text-gray-500">
                   Cap: <span className="text-white">{cat.capRate}</span>
@@ -206,11 +206,11 @@ export default async function BuyNNNCityPage({
 
       {/* Nearby Cities */}
       {nearby.length > 0 && (
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
           <h2 className="text-2xl font-bold text-white mb-2">
             Nearby <span className="text-gold">{region} NNN Markets</span>
           </h2>
-          <p className="text-gray-400 text-sm mb-6">
+          <p className="text-gray-300 text-sm mb-6">
             We also source NNN inventory in these nearby cities.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -218,7 +218,7 @@ export default async function BuyNNNCityPage({
               <Link
                 key={n.slug}
                 href={`/buy-nnn-property/${n.slug}`}
-                className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
+                className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg px-3 py-2 text-sm text-gray-300 hover:text-gold transition-colors"
               >
                 NNN in {n.name}
               </Link>
@@ -236,41 +236,41 @@ export default async function BuyNNNCityPage({
       )}
 
       {/* Related Research */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10">
         <h2 className="text-2xl font-bold text-white mb-6">
           Related <span className="text-gold">Research</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/investment-outlook/nnn/2026"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-1 text-sm">
               NNN Sector Outlook 2026
             </h3>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-300 text-xs">
               Cap rate trends, tenant demand, and forward view.
             </p>
           </Link>
           <Link
             href="/cap-rates"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-1 text-sm">
               Cap Rates by Submarket
             </h3>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-300 text-xs">
               Submarket-level cap rate ranges across Central Florida.
             </p>
           </Link>
           <Link
             href="/1031-exchange-florida"
-            className="block bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors"
+            className="block bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors"
           >
             <h3 className="text-gold font-semibold mb-1 text-sm">
               1031 Exchange Guide
             </h3>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-300 text-xs">
               Timelines, rules, and replacement property strategy.
             </p>
           </Link>
@@ -278,12 +278,12 @@ export default async function BuyNNNCityPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Request <span className="text-gold">{c.name}</span> NNN Inventory
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Tell us your criteria — tenant type, cap rate, price range — and
             we&apos;ll send matching NNN opportunities in {c.name} and
             surrounding {c.county} within 48 hours.
@@ -297,7 +297,7 @@ export default async function BuyNNNCityPage({
             </Link>
             <Link
               href="/nnn-tenants"
-              className="inline-block border border-dark-border hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
             >
               Browse Tenants
             </Link>

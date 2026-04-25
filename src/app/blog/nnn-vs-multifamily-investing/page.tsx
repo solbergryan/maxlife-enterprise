@@ -38,11 +38,11 @@ export default function NNNvsMultifamily() {
       />
 
       {/* Header */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -69,7 +69,7 @@ export default function NNNvsMultifamily() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             NNN vs Multifamily Investing: Which Is Better for CRE Investors?
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Two of the most popular commercial real estate asset classes — but
             they couldn&apos;t be more different. Here&apos;s how to decide
             which fits your investment goals.
@@ -114,7 +114,7 @@ export default function NNNvsMultifamily() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b border-dark-border">
+                <tr className="border-b border-white/10">
                   <th className="text-left text-gold text-xs uppercase tracking-wider py-3 pr-4">
                     Factor
                   </th>
@@ -175,7 +175,7 @@ export default function NNNvsMultifamily() {
                     "$500K (duplex) to $50M+ (apt complex)",
                   ],
                 ].map(([factor, nnn, mf]) => (
-                  <tr key={factor} className="border-b border-dark-border/50">
+                  <tr key={factor} className="border-b border-white/10/50">
                     <td className="py-3 pr-4 text-white font-medium">
                       {factor}
                     </td>
@@ -321,7 +321,7 @@ export default function NNNvsMultifamily() {
               <Link
                 key={r.slug}
                 href={`/blog/${r.slug}`}
-                className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold"
+                className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg p-4 transition-colors text-sm text-gray-300 hover:text-gold"
               >
                 {r.title} &rarr;
               </Link>
@@ -329,11 +329,11 @@ export default function NNNvsMultifamily() {
           </div>
         </section>
 
-        <section className="bg-dark-card border border-dark-border rounded-xl p-6 text-center">
+        <section className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center">
           <h2 className="text-xl font-bold text-white mb-3">
             Ready to Invest?
           </h2>
-          <p className="text-gray-400 text-sm mb-5">
+          <p className="text-gray-300 text-sm mb-5">
             Whether you&apos;re looking at NNN, multifamily, or both — we can
             source the right opportunities in Florida&apos;s fastest-growing
             markets.

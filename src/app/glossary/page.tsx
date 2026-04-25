@@ -25,7 +25,7 @@ export default function GlossaryPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/glossary/maxlife-glossary-old-books-book-old-library-education-archive-book-shelf-anti-436498.webp"
           alt="Commercial real estate glossary reference books"
@@ -43,7 +43,7 @@ export default function GlossaryPage() {
             Commercial Real Estate{" "}
             <span className="text-gold">Glossary</span>
           </h1>
-          <p className="text-gray-400 max-w-3xl text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-3xl text-lg leading-relaxed">
             Clear, plain-English definitions for {glossaryTerms.length} key
             commercial real estate terms — investment metrics, lease
             structures, transaction processes, financing concepts, and tax
@@ -53,14 +53,14 @@ export default function GlossaryPage() {
       </section>
 
       {/* Alphabetical Quick Jump */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 border-b border-dark-border">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 border-b border-white/10">
         <div className="flex items-center gap-3 flex-wrap">
           <span className="text-gray-500 text-sm">Jump to category:</span>
           {glossaryCategories.map((cat) => (
             <a
               key={cat}
               href={`#${cat.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              className="text-gray-300 hover:text-gold text-xs bg-dark border border-dark-border rounded-md px-3 py-1.5 transition-colors"
+              className="text-gray-300 hover:text-gold text-xs bg-dark border border-white/10 rounded-md px-3 py-1.5 transition-colors"
             >
               {cat}
             </a>
@@ -76,7 +76,7 @@ export default function GlossaryPage() {
           <section
             key={cat}
             id={cat.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}
-            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-dark-border scroll-mt-24"
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t border-white/10 scroll-mt-24"
           >
             <h2 className="text-2xl font-bold text-white mb-2">
               <span className="text-gold">{cat}</span>
@@ -89,12 +89,12 @@ export default function GlossaryPage() {
                 <Link
                   key={t.slug}
                   href={`/glossary/${t.slug}`}
-                  className="bg-dark-card border border-dark-border hover:border-gold/40 rounded-xl p-5 transition-colors group block"
+                  className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-xl p-5 transition-colors group block"
                 >
                   <h3 className="text-white font-semibold mb-2 group-hover:text-gold transition-colors">
                     {t.term}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
                     {t.shortDefinition}
                   </p>
                 </Link>
@@ -105,13 +105,13 @@ export default function GlossaryPage() {
       })}
 
       {/* CTA */}
-      <section className="bg-dark-card/50 border-t border-dark-border">
+      <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-4">
             Need Help Applying These{" "}
             <span className="text-gold">Concepts</span>?
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Understanding the terminology is step one. Let&apos;s talk about
             how to apply these concepts to your specific deal or investment
             strategy.

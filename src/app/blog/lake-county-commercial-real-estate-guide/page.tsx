@@ -43,7 +43,7 @@ export default function LakeCountyCommercialRealEstateGuide() {
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
-      <section className="relative overflow-hidden border-b border-dark-border aspect-[21/6]">
+      <section className="relative overflow-hidden border-b border-white/10 aspect-[21/6]">
         <Image
           src="/images/commercial-stock/real-estate-development/maxlife-real-estate-development-building-to-build-framework-construction-site-1210677.webp"
           alt="Lake County Florida commercial development framework"
@@ -91,7 +91,7 @@ export default function LakeCountyCommercialRealEstateGuide() {
             Lake County FL Commercial Real Estate: The Growth Corridor Investors
             Are Missing
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             While Orlando grabs the headlines, Lake County is quietly becoming
             Central Florida&apos;s most compelling commercial real estate growth
             story. From the Wellness Way corridor to the Florida Turnpike
@@ -155,7 +155,7 @@ export default function LakeCountyCommercialRealEstateGuide() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold font-bold text-xl mb-1">
                     {item.metric}
@@ -280,7 +280,7 @@ export default function LakeCountyCommercialRealEstateGuide() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Infrastructure Project</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Status</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">CRE Impact</th>
@@ -288,31 +288,31 @@ export default function LakeCountyCommercialRealEstateGuide() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Turnpike Widening (4 to 8 lanes)</td>
                     <td className="py-3 pr-4">Under Construction</td>
                     <td className="py-3 pr-4">Reduced commute times, higher traffic counts</td>
                     <td className="py-3">2027</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Hancock Rd Interchange</td>
                     <td className="py-3 pr-4">Design Phase</td>
                     <td className="py-3 pr-4">New commercial node, 500+ acres activated</td>
                     <td className="py-3">2028</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Wellness Way Extension</td>
                     <td className="py-3 pr-4">Partially Complete</td>
                     <td className="py-3 pr-4">Connects residential to commercial corridors</td>
                     <td className="py-3">2026-2028</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">US 27 Widening (Clermont)</td>
                     <td className="py-3 pr-4">Planning</td>
                     <td className="py-3 pr-4">Enhanced retail corridor capacity</td>
                     <td className="py-3">2029</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Minneola Interchange Improvements</td>
                     <td className="py-3 pr-4">Complete</td>
                     <td className="py-3 pr-4">Unlocked 1,200+ acres for development</td>
@@ -359,7 +359,7 @@ export default function LakeCountyCommercialRealEstateGuide() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Year</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Population (est.)</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Growth from 2020</th>
@@ -367,25 +367,25 @@ export default function LakeCountyCommercialRealEstateGuide() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">2020</td>
                     <td className="py-3 pr-4">365,000</td>
                     <td className="py-3 pr-4">Baseline</td>
                     <td className="py-3">Baseline</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">2025</td>
                     <td className="py-3 pr-4">420,000</td>
                     <td className="py-3 pr-4">+15.1%</td>
                     <td className="py-3">~22,000</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">2030</td>
                     <td className="py-3 pr-4">470,000</td>
                     <td className="py-3 pr-4">+28.8%</td>
                     <td className="py-3">~42,000</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">2035</td>
                     <td className="py-3 pr-4">510,000</td>
                     <td className="py-3 pr-4">+39.7%</td>
@@ -461,39 +461,39 @@ export default function LakeCountyCommercialRealEstateGuide() {
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-dark-border">
+                  <tr className="border-b border-white/10">
                     <th className="text-left text-gold font-semibold py-3 pr-4">Metric</th>
                     <th className="text-left text-gold font-semibold py-3 pr-4">Clermont / Minneola</th>
                     <th className="text-left text-gold font-semibold py-3">West Orange County</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Retail Cap Rate</td>
                     <td className="py-3 pr-4">6.5% - 7.5%</td>
                     <td className="py-3">5.5% - 6.5%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Retail Lease Rate (NNN)</td>
                     <td className="py-3 pr-4">$22 - $35/SF</td>
                     <td className="py-3">$30 - $50/SF</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Commercial Land (per SF)</td>
                     <td className="py-3 pr-4">$8 - $18</td>
                     <td className="py-3">$25 - $55</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Median HH Income</td>
                     <td className="py-3 pr-4">$82,000</td>
                     <td className="py-3">$95,000</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Population Growth (5yr)</td>
                     <td className="py-3 pr-4">+28%</td>
                     <td className="py-3">+22%</td>
                   </tr>
-                  <tr className="border-b border-dark-border/50">
+                  <tr className="border-b border-white/10/50">
                     <td className="py-3 pr-4">Vacancy Rate (Retail)</td>
                     <td className="py-3 pr-4">4.2%</td>
                     <td className="py-3">3.1%</td>
@@ -567,12 +567,12 @@ export default function LakeCountyCommercialRealEstateGuide() {
               ].map((item) => (
                 <div
                   key={item.opportunity}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.opportunity}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.detail}</p>
+                  <p className="text-gray-300 text-xs">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -640,7 +640,7 @@ export default function LakeCountyCommercialRealEstateGuide() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6 text-center"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6 text-center"
                 >
                   <p className="text-gold font-bold text-lg mb-1">
                     {item.metric}
@@ -779,12 +779,12 @@ export default function LakeCountyCommercialRealEstateGuide() {
               ].map((item) => (
                 <div
                   key={item.item}
-                  className="bg-dark-card border border-dark-border rounded-xl p-6"
+                  className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
                 >
                   <h4 className="text-gold font-semibold text-sm mb-1">
                     {item.item}
                   </h4>
-                  <p className="text-gray-400 text-xs">{item.detail}</p>
+                  <p className="text-gray-300 text-xs">{item.detail}</p>
                 </div>
               ))}
             </div>
@@ -902,11 +902,11 @@ export default function LakeCountyCommercialRealEstateGuide() {
           </section>
 
           {/* ── CTA ── */}
-          <div className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-8">
+          <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-8">
             <h2 className="text-2xl font-bold text-white mb-3">
               Ready to Explore Lake County Opportunities?
             </h2>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team specializes in Lake County commercial real estate and can
               help you identify, evaluate, and execute on the best opportunities
               in this high-growth market.
@@ -928,18 +928,18 @@ export default function LakeCountyCommercialRealEstateGuide() {
           </div>
 
           {/* ── Related Reading ── */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">Related Reading</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/central-florida-land-development" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/central-florida-land-development" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Central Florida Land Development Guide</h3>
                 <p className="text-gray-500 text-xs">Comprehensive guide to land development opportunities across the Central Florida region.</p>
               </Link>
-              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/blog/orlando-cap-rates-investor-guide" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Orlando Cap Rates: Investor Guide</h3>
                 <p className="text-gray-500 text-xs">Understanding cap rates across property types and submarkets in the Orlando metro area.</p>
               </Link>
-              <Link href="/markets/lake-county-commercial-land" className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group">
+              <Link href="/markets/lake-county-commercial-land" className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group">
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">Lake County Commercial Land Listings</h3>
                 <p className="text-gray-500 text-xs">Browse current commercial land opportunities in Clermont, Minneola, and the Wellness Way corridor.</p>
               </Link>

@@ -166,7 +166,7 @@ export default function RetailSpaceForRentOrlandoPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/retail-storefronts/maxlife-retail-storefronts-building-business-design-display-interior-light-1867350.webp"
           alt="Orlando retail space for rent with display window"
@@ -188,7 +188,7 @@ export default function RetailSpaceForRentOrlandoPage() {
             Endcap, inline, freestanding, and anchored retail space across
             Orlando&apos;s top submarkets
           </p>
-          <p className="text-gray-400 max-w-3xl leading-relaxed">
+          <p className="text-gray-300 max-w-3xl leading-relaxed">
             MaxLife Realty represents retail tenants across Orlando and
             Central Florida — from local restaurants and service businesses to
             regional and national chains. We find the right space, negotiate
@@ -206,12 +206,12 @@ export default function RetailSpaceForRentOrlandoPage() {
       </section>
 
       {/* Submarkets */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Best Orlando Submarkets for Retail Space for Rent
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             The right submarket depends on your concept, customer, and
             operating model. These are the Orlando areas where we place the
             most retail tenants.
@@ -220,12 +220,12 @@ export default function RetailSpaceForRentOrlandoPage() {
             {submarkets.map((s) => (
               <div
                 key={s.name}
-                className="bg-dark-card border border-dark-border rounded-xl p-6 hover:border-gold/30 transition-colors"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {s.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {s.desc}
                 </p>
               </div>
@@ -235,12 +235,12 @@ export default function RetailSpaceForRentOrlandoPage() {
       </section>
 
       {/* Retail Types */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Types of Retail Space We Lease
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             Orlando&apos;s retail inventory ranges from anchored shopping
             centers to freestanding pad sites. Each configuration has its own
             economics.
@@ -249,10 +249,10 @@ export default function RetailSpaceForRentOrlandoPage() {
             {retailTypes.map((t) => (
               <div
                 key={t.title}
-                className="bg-dark border border-dark-border rounded-xl p-6"
+                className="bg-dark border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-gold font-semibold mb-2">{t.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {t.desc}
                 </p>
               </div>
@@ -262,22 +262,22 @@ export default function RetailSpaceForRentOrlandoPage() {
       </section>
 
       {/* What Tenants Should Know */}
-      <section className="border-b border-dark-border">
+      <section className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             What Retail Tenants Should Know
           </h2>
-          <p className="text-gray-400 max-w-2xl mb-12">
+          <p className="text-gray-300 max-w-2xl mb-12">
             The lease terms that matter most — beyond the base rent.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {thingsToKnow.map((item) => (
               <div
                 key={item.title}
-                className="bg-dark-card border border-dark-border rounded-xl p-6"
+                className="bg-white/[0.04] border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -287,7 +287,7 @@ export default function RetailSpaceForRentOrlandoPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-dark-card/50 border-b border-dark-border">
+      <section className="bg-white/[0.03] border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Orlando Retail Space FAQ
@@ -296,10 +296,10 @@ export default function RetailSpaceForRentOrlandoPage() {
             {faqs.map((f) => (
               <div
                 key={f.q}
-                className="bg-dark border border-dark-border rounded-xl p-6"
+                className="bg-dark border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-white font-semibold mb-2">{f.q}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{f.a}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
@@ -309,18 +309,18 @@ export default function RetailSpaceForRentOrlandoPage() {
       {/* Lead Capture */}
       <section
         id="retail-space-request"
-        className="bg-dark-card/50 border-b border-dark-border"
+        className="bg-white/[0.03] border-b border-white/10"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
               Find Your Retail Space
             </h2>
-            <p className="text-gray-400 text-center mb-8">
+            <p className="text-gray-300 text-center mb-8">
               Tell us your concept, target submarket, and size — we&apos;ll
               build a shortlist and schedule tours.
             </p>
-            <div className="bg-dark-card border border-gold/20 rounded-xl p-8">
+            <div className="bg-white/[0.04] border border-gold/20 rounded-xl p-8">
               <LeadCaptureForm
                 buttonText="Start My Search"
                 subjectPrefix="Retail Space for Rent Orlando"

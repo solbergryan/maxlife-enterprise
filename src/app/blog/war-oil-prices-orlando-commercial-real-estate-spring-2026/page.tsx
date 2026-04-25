@@ -47,7 +47,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
       <JsonLd data={articleSchema} />
 
       {/* Header */}
-      <section className="relative overflow-hidden border-b border-dark-border">
+      <section className="relative overflow-hidden border-b border-white/10">
         <Image
           src="/images/commercial-stock/commercial-business/maxlife-commercial-business-bridge-business-future-training-skyline-development-1916757.webp"
           alt="Orlando commercial real estate amid global economic shifts"
@@ -60,7 +60,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative">
           <Link
             href="/blog"
-            className="text-gray-400 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
+            className="text-gray-300 hover:text-gold text-sm transition-colors inline-flex items-center gap-1 mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -88,7 +88,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             How War and Oil Prices May Affect Orlando Commercial Real Estate
             This Spring
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Ongoing geopolitical tensions and oil price volatility rarely
             show up on a retail center&apos;s rent roll the next morning —
             but they flow through the commercial real estate market in
@@ -105,7 +105,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Setup: Why This Matters Now
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Geopolitical conflict and the energy market are tightly
               linked, and both filter into commercial real estate through
               a handful of well-understood channels. When war disrupts
@@ -116,7 +116,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               cap rates, debt availability, construction costs, and
               tenant demand all respond — not immediately, but reliably.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               That transmission mechanism has been unusually active over
               the past several years. Investors who lived through the
               2022&ndash;2024 rate cycle already know how quickly a
@@ -133,7 +133,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Channel 1: Construction Costs and Development Timelines
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The most immediate CRE impact of higher oil prices is on
               construction costs. Diesel fuel powers the equipment on
               every job site. Petrochemicals are embedded in asphalt,
@@ -145,7 +145,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               estimates for projects that haven&apos;t locked in
               contracts start to drift higher within weeks.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For active development projects in Central Florida — and
               there are a lot of them, particularly along the I-4
               corridor, in Lake Nona, and across the growing Lake and
@@ -158,7 +158,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               2025 are better positioned than those still negotiating
               this spring.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Tenants pursuing a{" "}
               <Link
                 href="/build-to-suit-orlando"
@@ -176,7 +176,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Channel 2: Inflation, Interest Rates, and Cap Rates
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The second channel runs through monetary policy. Oil is
               one of the most visible inputs into headline inflation,
               and sustained price spikes tend to keep central banks
@@ -187,7 +187,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               hold where they are or drift higher, and values soften on
               the margin.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The flip side, which matters for disciplined buyers, is
               that cap rate expansion creates entry opportunities.
               Investors who waited on the sidelines through the last
@@ -199,7 +199,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               pricing than on-market inventory during periods of
               macro volatility.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               If you&apos;re sitting on capital looking for a better
               entry, our{" "}
               <Link
@@ -217,7 +217,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Channel 3: Debt Markets and Refinancing
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Debt capital markets react to the same macro signals.
               Spreads widen when volatility rises, and lenders get
               tougher on structure — lower proceeds, tighter DSCR
@@ -227,7 +227,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               make refinancing meaningfully more expensive than the
               base case assumed when the original loan was closed.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Orlando-specific owners should take a hard look at any
               loan maturing in the next 12 to 18 months. Running a
               realistic refinance scenario now — at current rates,
@@ -244,7 +244,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Channel 4: Tourism and Orlando&apos;s Hospitality-Retail Complex
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               This is where Orlando diverges from most other major CRE
               markets. Orlando&apos;s retail, hospitality, and
               experiential real estate are tied to the roughly 75
@@ -255,7 +255,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               sticky inflation, the tourism economy is the first
               place you&apos;d expect a pullback.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The counterpoint is that Orlando has historically been
               more resilient than tourism-dependent markets that rely on
               a single customer segment. The Orlando visitor base is
@@ -270,7 +270,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               but shouldn&apos;t assume a 2008-style collapse — that
               playbook has rarely held in Orlando.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For more on the tourism corridor specifically, see our{" "}
               <Link
                 href="/blog/orlando-entertainment-district-investment-guide"
@@ -286,7 +286,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Channel 5: Industrial and Logistics — A Mixed Picture
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               Industrial and logistics real estate has a more
               complicated relationship with oil prices. On one hand,
               higher fuel costs make last-mile distribution more
@@ -297,7 +297,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               more inventory closer to end markets rather than relying
               on just-in-time imports.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For Central Florida industrial — particularly the I-4
               corridor, the Space Coast, and Polk County — the
               near-term outlook is still constructive. Demand drivers
@@ -321,7 +321,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               By the Numbers
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The five channels above are qualitative — here&apos;s what
               the same story looks like in charts. The data is illustrative
               and directional: construction-cost exposure is based on
@@ -339,7 +339,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               How Central Florida Is Positioned
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               A few factors work in Central Florida&apos;s favor in
               this type of environment. Florida has no state income
               tax, which insulates household purchasing power relative
@@ -352,7 +352,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               launch operators tend to see increased order flow in
               periods of heightened global risk.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               The markets within Central Florida that are most
               exposed to a spring oil shock are hospitality-dependent
               submarkets, over-leveraged owners with near-term debt
@@ -368,7 +368,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               What Investors and Tenants Should Do This Spring
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For investors: stress-test any active acquisition for a
               100-150 basis point move in exit cap rates and a modest
               increase in debt costs. If the deal still pencils, it&apos;s
@@ -379,7 +379,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               necessity retail, strong medical office, NNN with credit
               tenants, and well-located industrial.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               For tenants: if you&apos;re considering a{" "}
               <Link
                 href="/build-to-suit-orlando"
@@ -407,7 +407,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               be in a tightening market — TI packages and free rent
               are negotiable.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               For owners with near-term debt maturities: start the
               refinance conversation now. If the gap is too large,
               consider a{" "}
@@ -426,7 +426,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
             <h2 className="text-2xl font-bold text-white mb-4">
               The Bottom Line
             </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
               War and oil price volatility are real risks for
               commercial real estate this spring, but they don&apos;t
               affect every asset class, submarket, or owner the same
@@ -438,7 +438,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               channels — construction, debt, tourism, industrial —
               where the impact actually shows up.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               If you want to talk through how current market
               conditions affect a specific property or strategy,{" "}
               <Link
@@ -452,14 +452,14 @@ export default function WarOilPricesOrlandoCRESpring2026() {
           </section>
 
           {/* Related Reading */}
-          <section className="mt-12 border-t border-dark-border pt-8">
+          <section className="mt-12 border-t border-white/10 pt-8">
             <h2 className="text-xl font-bold text-white mb-6">
               Related Reading
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href="/blog/orlando-commercial-real-estate-trends-2026"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Orlando CRE Market Report 2026
@@ -472,7 +472,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               </Link>
               <Link
                 href="/blog/orlando-cap-rates-investor-guide"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Orlando Cap Rates Investor Guide
@@ -484,7 +484,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               </Link>
               <Link
                 href="/orlando-commercial-real-estate-deals"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   Off-Market Commercial Deals in Orlando
@@ -496,7 +496,7 @@ export default function WarOilPricesOrlandoCRESpring2026() {
               </Link>
               <Link
                 href="/blog/how-to-evaluate-commercial-real-estate-deal"
-                className="bg-dark-card border border-dark-border rounded-lg p-5 hover:border-gold/30 transition-colors group"
+                className="bg-white/[0.04] border border-white/10 rounded-lg p-5 hover:border-gold/40 transition-colors group"
               >
                 <h3 className="text-white font-semibold mb-1 group-hover:text-gold transition-colors text-sm">
                   How to Evaluate a CRE Deal
@@ -511,11 +511,11 @@ export default function WarOilPricesOrlandoCRESpring2026() {
           </section>
 
           {/* CTA */}
-          <section className="bg-dark-card border border-gold/20 rounded-xl p-8 text-center mt-12">
+          <section className="bg-white/[0.04] border border-gold/20 rounded-xl p-8 text-center mt-12">
             <h3 className="text-xl font-bold text-white mb-3">
               Want to Stress-Test Your Orlando CRE Strategy?
             </h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-300 mb-6">
               Whether you&apos;re buying, selling, refinancing, or
               leasing, we can help you pressure-test your plan
               against the current macro backdrop — and find the

@@ -3,14 +3,14 @@ export default function MarketplaceLoading() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header skeleton */}
       <div className="mb-8 space-y-3">
-        <div className="h-9 w-64 rounded bg-dark-card animate-pulse" />
-        <div className="h-5 w-96 max-w-full rounded bg-dark-card animate-pulse" />
+        <div className="h-9 w-64 rounded bg-white/[0.04] animate-pulse" />
+        <div className="h-5 w-96 max-w-full rounded bg-white/[0.04] animate-pulse" />
       </div>
 
       {/* Search bar skeleton */}
       <div className="mb-6 flex flex-col gap-3 sm:flex-row">
-        <div className="h-11 flex-1 rounded-lg bg-dark-card animate-pulse" />
-        <div className="h-11 w-full sm:w-40 rounded-lg bg-dark-card animate-pulse" />
+        <div className="h-11 flex-1 rounded-lg bg-white/[0.04] animate-pulse" />
+        <div className="h-11 w-full sm:w-40 rounded-lg bg-white/[0.04] animate-pulse" />
       </div>
 
       {/* Card grid skeleton — mirrors real grid breakpoints */}
@@ -18,7 +18,7 @@ export default function MarketplaceLoading() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="overflow-hidden rounded-xl border border-dark-border bg-dark-card"
+            className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]"
           >
             <div className="h-44 w-full bg-dark animate-pulse" />
             <div className="space-y-3 p-5">

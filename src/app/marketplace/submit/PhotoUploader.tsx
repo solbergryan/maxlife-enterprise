@@ -70,7 +70,7 @@ export function PhotoUploader({ files, onChange, error }: PhotoUploaderProps) {
         className={`border-2 border-dashed rounded-xl px-6 py-10 text-center cursor-pointer transition-colors ${
           dragOver
             ? "border-gold bg-gold/5"
-            : "border-dark-border hover:border-gold/50 bg-dark/30"
+            : "border-white/10 hover:border-gold/50 bg-dark/30"
         }`}
       >
         <svg
@@ -113,7 +113,7 @@ export function PhotoUploader({ files, onChange, error }: PhotoUploaderProps) {
             return (
               <div
                 key={`${f.name}-${i}`}
-                className="relative group border border-dark-border rounded-lg overflow-hidden bg-dark-card"
+                className="relative group border border-white/10 rounded-lg overflow-hidden bg-white/[0.04]"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -133,7 +133,7 @@ export function PhotoUploader({ files, onChange, error }: PhotoUploaderProps) {
                       type="button"
                       onClick={() => move(i, -1)}
                       disabled={i === 0}
-                      className="bg-dark-card/90 hover:bg-dark text-white rounded w-6 h-6 flex items-center justify-center disabled:opacity-40"
+                      className="bg-white/[0.04]/90 hover:bg-dark text-white rounded w-6 h-6 flex items-center justify-center disabled:opacity-40"
                       aria-label="Move earlier"
                     >
                       ←
@@ -142,7 +142,7 @@ export function PhotoUploader({ files, onChange, error }: PhotoUploaderProps) {
                       type="button"
                       onClick={() => move(i, 1)}
                       disabled={i === files.length - 1}
-                      className="bg-dark-card/90 hover:bg-dark text-white rounded w-6 h-6 flex items-center justify-center disabled:opacity-40"
+                      className="bg-white/[0.04]/90 hover:bg-dark text-white rounded w-6 h-6 flex items-center justify-center disabled:opacity-40"
                       aria-label="Move later"
                     >
                       →
