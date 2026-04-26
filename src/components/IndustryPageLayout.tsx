@@ -281,6 +281,64 @@ export default function IndustryPageLayout({
         </div>
       </section>
 
+      {/* Broker Profile */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-square overflow-hidden rounded-xl">
+            <Image
+              src="/ryan-solberg.jpg"
+              alt="Ryan Solberg — Commercial Real Estate Broker"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div>
+            <p className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
+              Meet Your Broker
+            </p>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ryan Solberg
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              Florida Real Estate Broker & Mortgage Loan Officer specializing in industrial and logistics real estate across Central Florida and the Space Coast.
+            </p>
+            <div className="space-y-4 mb-8">
+              <div className="flex gap-3 text-gray-300">
+                <span className="text-gold font-bold">📞</span>
+                <div>
+                  <p className="text-sm text-gray-400">Direct</p>
+                  <a href="tel:3215862121" className="text-white font-semibold hover:text-gold transition-colors">
+                    (321) 586-2121
+                  </a>
+                </div>
+              </div>
+              <div className="flex gap-3 text-gray-300">
+                <span className="text-gold font-bold">✉️</span>
+                <div>
+                  <p className="text-sm text-gray-400">Email</p>
+                  <a href="mailto:Ryan@MaxLifeRealty.com" className="text-white font-semibold hover:text-gold transition-colors">
+                    Ryan@MaxLifeRealty.com
+                  </a>
+                </div>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm mb-6">
+              Licensed Florida Broker (BK3354351) | NMLS Mortgage Loan Officer (1784218)
+            </p>
+            <p className="text-gray-300 mb-6">
+              If you&apos;re a 3PL, last-mile operator, or logistics company looking for space — or an investor sourcing industrial deals — let&apos;s talk about what you need.
+            </p>
+            <Link
+              href="#tenant-lead"
+              className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-6 py-3 rounded-lg transition-colors"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="bg-white/[0.03] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
