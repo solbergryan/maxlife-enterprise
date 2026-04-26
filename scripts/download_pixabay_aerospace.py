@@ -1,4 +1,4 @@
-"""Download Pixabay images for the Healthcare industry vertical landing page."""
+"""Download Pixabay images for the Aerospace industry vertical landing page."""
 import json
 import os
 import re
@@ -11,14 +11,14 @@ API_KEY = os.getenv("PIXABAY_API_KEY", "")
 ROOT = Path(__file__).resolve().parent.parent / "public" / "images" / "commercial-stock"
 USER_AGENT = "Mozilla/5.0 (commercial-stock-downloader)"
 
-FOLDER = "healthcare"
+FOLDER = "aerospace"
 
 # (query, pixabay_category)
 QUERIES = [
-    ("medical office building exterior", "buildings"),
-    ("hospital building", "buildings"),
-    ("modern medical clinic exterior", "health"),
-    ("ambulatory surgery center", "health"),
+    ("aerospace facility building", "buildings"),
+    ("tech industrial facility", "buildings"),
+    ("modern research facility", "buildings"),
+    ("advanced manufacturing plant", "buildings"),
 ]
 
 PER_TARGET = 6
