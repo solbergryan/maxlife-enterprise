@@ -14,8 +14,10 @@ import { CONSENT_EVENT, readConsent } from "@/lib/consent";
  */
 export default function GoogleAnalytics() {
   const [analyticsAllowed, setAnalyticsAllowed] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const sync = () => {
       const consent = readConsent();
       const allowed = !!consent?.analytics;
@@ -34,7 +36,7 @@ export default function GoogleAnalytics() {
     return () => window.removeEventListener(CONSENT_EVENT, handler);
   }, []);
 
-  if (!GA_MEASUREMENT_ID) return null;
+  if (!GA_MEASUREMENT_ID || !mounted || !analyticsAllowed) return null;
 
   return (
     <>
@@ -47,7 +49,7 @@ export default function GoogleAnalytics() {
             ad_storage: 'denied',
             ad_user_data: 'denied',
             ad_personalization: 'denied',
-            analytics_storage: '${analyticsAllowed ? "granted" : "denied"}',
+            analytics_storage: 'granted',
             wait_for_update: 500
           });
         `}
