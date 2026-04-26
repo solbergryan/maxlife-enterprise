@@ -16,6 +16,7 @@ import { glossaryTerms } from "@/data/glossary";
 import { investorPersonas } from "@/data/investor-personas";
 import { leaseTypes } from "@/data/lease-types";
 import { industries } from "@/data/industries";
+import { allSpaceCoastSlugs } from "@/data/space-coast/page-configs";
 import { cities as seoCities } from "@/data/seo/cities";
 import { createClient } from "@/lib/supabase/server";
 
@@ -233,6 +234,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    // Space Coast (Brevard County) buyer + tenant marketing pages
+    ...allSpaceCoastSlugs.map((slug) => ({
+      url: `${BASE_URL}/${slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: slug === "space-coast-commercial-real-estate" ? 0.95 : 0.85,
+    })),
     // Academy
     {
       url: `${BASE_URL}/academy`,

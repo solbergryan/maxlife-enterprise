@@ -33,6 +33,10 @@ export const mainNav: NavLink[] = [
       { label: "Brevard County", href: "/markets/brevard-county-commercial-real-estate" },
       { label: "Lake County", href: "/markets/lake-county-commercial-land" },
       { label: "Central Florida", href: "/markets/central-florida-investment-properties" },
+      { label: "Space Coast — Buy", href: "/space-coast-commercial-real-estate" },
+      { label: "Space Coast — Lease", href: "/space-coast-commercial-space-for-lease" },
+      { label: "Melbourne FL", href: "/melbourne-commercial-real-estate" },
+      { label: "Cocoa Beach FL", href: "/cocoa-beach-commercial-real-estate" },
     ],
   },
   {
@@ -148,6 +152,8 @@ export const footerResourceLinks: NavLink[] = [
   { label: "Academy (Free CRE Courses)", href: "/academy" },
   { label: "CRE Professionals Guide", href: "/professionals" },
   { label: "Orlando Market", href: "/markets/orlando-commercial-real-estate" },
+  { label: "Space Coast (Brevard) CRE", href: "/space-coast-commercial-real-estate" },
+  { label: "Space Coast — Lease", href: "/space-coast-commercial-space-for-lease" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
   });
 
   // Trigger nurture sequence (non-blocking)
-  void enqueueNurtureSequence({ email, name, source });
+  void enqueueNurtureSequence({ email, name, source, sourceRef: sourcePage });
 
   return NextResponse.json({ ok: true });
 }
