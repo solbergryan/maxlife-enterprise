@@ -65,7 +65,7 @@ export default function CostSegPage() {
             Estimate your first-year tax savings from accelerated depreciation
             on commercial real estate. Cost segregation studies reclassify
             building components into 5-year and 15-year depreciation
-            schedules — often delivering six-figure first-year tax savings.
+            schedules — which may deliver significant first-year tax savings depending on property-specific factors and tax situation.
           </p>
         </div>
       </section>

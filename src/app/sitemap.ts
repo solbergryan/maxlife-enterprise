@@ -15,6 +15,7 @@ import { nnnTenants } from "@/data/nnn-tenants";
 import { glossaryTerms } from "@/data/glossary";
 import { investorPersonas } from "@/data/investor-personas";
 import { leaseTypes } from "@/data/lease-types";
+import { industries } from "@/data/industries";
 import { cities as seoCities } from "@/data/seo/cities";
 import { createClient } from "@/lib/supabase/server";
 
@@ -344,6 +345,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  // Industry vertical landing pages
+  const industriesHub: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/industries`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+  ];
+  const industryPages: MetadataRoute.Sitemap = industries.map((i) => ({
+    url: `${BASE_URL}/industries/${i.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
   // /properties hub — index + 13 top-level categories + 126 subtypes
   const propertiesIndex: MetadataRoute.Sitemap = [
     {
@@ -427,6 +444,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...propertyTypeCityPages,
     ...capRatePages,
     ...outlookPages,
+    ...industriesHub,
+    ...industryPages,
     ...propertiesIndex,
     ...propertyTypePages,
     ...professionalsHub,

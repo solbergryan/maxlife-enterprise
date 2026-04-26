@@ -64,6 +64,13 @@ export default function DealAnalyzerPage() {
       {/* Calculator */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <DealAnalyzer />
+        <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+          Estimates only — for informational and educational use. Not investment,
+          tax, legal, or accounting advice. Outputs depend entirely on the inputs
+          you provide and are not a guarantee of future performance. Verify any
+          deal with your CPA, attorney, and lender. See our{" "}
+          <Link href="/terms" className="text-gold hover:underline">Terms of Service</Link>.
+        </p>
       </section>
 
       {/* How It Works */}

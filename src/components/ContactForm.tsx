@@ -10,12 +10,17 @@ export default function ContactForm() {
     service: "",
     message: "",
   });
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consent) {
+      setError("Please review and check the contact-consent box to submit.");
+      return;
+    }
     setLoading(true);
     setError("");
 
@@ -29,6 +34,8 @@ export default function ContactForm() {
           phone: formData.phone,
           service: formData.service,
           message: formData.message,
+          contactConsent: "Yes",
+          consentTimestamp: new Date().toISOString(),
           _subject: `MaxLife Inquiry — ${formData.service || "General"}`,
         }),
       });
@@ -151,13 +158,29 @@ export default function ContactForm() {
         />
       </div>
 
+      <label className="flex items-start gap-3 text-xs text-gray-400 leading-relaxed cursor-pointer">
+        <input
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 w-4 h-4 rounded border-white/10 bg-dark text-gold focus:ring-gold focus:ring-offset-0 shrink-0"
+        />
+        <span>
+          By checking this box and submitting, I consent to MaxLife Realty contacting me
+          by phone, text (SMS), or email at the number and address I provided, including
+          via automated means. Consent is not a condition of any service. Message and
+          data rates may apply. Reply STOP to opt out at any time. I have read the{" "}
+          <a href="/privacy" className="text-gold hover:underline">Privacy Policy</a>.
+        </span>
+      </label>
+
       {error && (
         <p className="text-red-400 text-sm">{error}</p>
       )}
 
       <button
         type="submit"
-        disabled={loading}
+        disabled={loading || !consent}
         className="w-full bg-gold hover:bg-gold-dark text-dark font-semibold py-3 rounded-lg transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? "Sending..." : "Send Message"}

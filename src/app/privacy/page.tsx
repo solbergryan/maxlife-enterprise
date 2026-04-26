@@ -104,13 +104,76 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="mb-2 text-xl font-semibold text-white">
+              Data processors and vendors
+            </h2>
+            <p className="mb-3">
+              We share data only with vendors who help run the site under
+              contracts that restrict how they can use it:
+            </p>
+            <ul className="ml-6 list-disc space-y-1">
+              <li>
+                <strong className="text-white">Email delivery</strong> —{" "}
+                Resend (transactional and newsletter emails)
+              </li>
+              <li>
+                <strong className="text-white">Data storage</strong> — Supabase
+                (course and academy data)
+              </li>
+              <li>
+                <strong className="text-white">Form processing</strong> —
+                Formspree (contact forms)
+              </li>
+              <li>
+                <strong className="text-white">Analytics</strong> — Google
+                Analytics 4, Vercel Analytics
+              </li>
+              <li>
+                <strong className="text-white">Advertising</strong> — Meta
+                Pixel, LinkedIn Insight Tag, RB2B
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="mb-2 text-xl font-semibold text-white">
+              Do Not Call and TCPA Compliance
+            </h2>
+            <p>
+              By submitting your phone number through our contact forms, you
+              consent to MaxLife Realty contacting you by phone or text (SMS)
+              regarding real estate services and inquiries. We comply with the
+              Telephone Consumer Protection Act (TCPA) and the National Do Not
+              Call Registry. To opt out of future communications, reply STOP to
+              any SMS or contact us directly.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-2 text-xl font-semibold text-white">
+              Florida Digital Bill of Rights
+            </h2>
+            <p>
+              For residents subject to Florida's Digital Bill of Rights (FDBR),
+              you may have additional rights regarding your personal information.
+              Contact us at{" "}
+              <a
+                href="mailto:Ryan@MaxLifeRealty.com"
+                className="text-gold underline underline-offset-4 hover:text-gold-light"
+              >
+                Ryan@MaxLifeRealty.com
+              </a>{" "}
+              to exercise any rights you believe you have under applicable law.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-2 text-xl font-semibold text-white">
               Sharing your information
             </h2>
             <p>
-              We do not sell your personal information. We share data only with
-              vendors who help run the site (e.g., Google Analytics, Resend
-              for email delivery, Supabase for data storage) under contracts
-              that restrict how they can use it.
+              We do not sell your personal information in the CCPA sense. We
+              share data only with vendors listed above under contracts that
+              restrict how they can use it.
             </p>
           </section>
 

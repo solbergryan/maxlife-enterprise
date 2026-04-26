@@ -85,12 +85,17 @@ export default function SellerValuationForm() {
     reason: "",
     notes: "",
   });
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!consent) {
+      setError("Please review and check the contact-consent box to submit.");
+      return;
+    }
     setLoading(true);
     setError("");
 
@@ -123,6 +128,8 @@ export default function SellerValuationForm() {
           openToOffMarket: form.openOffMarket ? "Yes" : "No",
           reasonForSelling: form.reason,
           additionalNotes: form.notes,
+          contactConsent: "Yes",
+          consentTimestamp: new Date().toISOString(),
         }),
       });
 
@@ -519,9 +526,26 @@ export default function SellerValuationForm() {
       )}
 
       <div className="flex flex-col gap-4">
+        <label className="flex items-start gap-3 text-xs text-gray-400 leading-relaxed cursor-pointer max-w-2xl">
+          <input
+            type="checkbox"
+            checked={consent}
+            onChange={(e) => setConsent(e.target.checked)}
+            className="mt-0.5 w-4 h-4 rounded border-white/10 bg-dark text-gold focus:ring-gold focus:ring-offset-0 shrink-0"
+          />
+          <span>
+            By checking this box and submitting, I consent to MaxLife Realty
+            contacting me by phone, text (SMS), or email at the number and address
+            I provided, including via automated means, regarding the property and
+            related real-estate services. Consent is not a condition of any
+            service. Message and data rates may apply. Reply STOP to opt out at
+            any time. I have read the{" "}
+            <a href="/privacy" className="text-gold hover:underline">Privacy Policy</a>.
+          </span>
+        </label>
         <button
           type="submit"
-          disabled={loading}
+          disabled={loading || !consent}
           className="w-full sm:w-auto sm:px-10 bg-gold hover:bg-gold-dark text-dark font-bold py-3.5 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? "Submitting\u2026" : "Request My Valuation"}

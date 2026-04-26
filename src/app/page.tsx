@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
               { value: "Statewide", label: "Florida Coverage" },
-              { value: "$10M+", label: "Transaction Volume" },
+              { value: "$100M+", label: "Career Sales Since 2015" },
               { value: "20", label: "Free CRE Courses" },
               { value: "0%", label: "Florida Income Tax" },
             ].map((stat) => (
@@ -417,6 +417,11 @@ export default function HomePage() {
                 title: "Acquisitions & Dispositions",
                 desc: "Buy-side and sell-side representation for commercial properties across Orlando and the Space Coast.",
                 href: "/services/commercial-real-estate",
+              },
+              {
+                title: "Healthcare & Medical Office",
+                desc: "Industry-vertical CRE for hospital systems, ASCs, and medical groups — plus net-leased medical office for investors statewide.",
+                href: "/industries/healthcare-medical-office",
               },
             ].map((service) => (
               <Link

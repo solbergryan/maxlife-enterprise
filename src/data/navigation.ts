@@ -36,6 +36,16 @@ export const mainNav: NavLink[] = [
     ],
   },
   {
+    label: "Industries",
+    href: "/industries",
+    children: [
+      { label: "Healthcare & Medical Office", href: "/industries/healthcare-medical-office" },
+      { label: "Financial Services — South Florida", href: "/industries/financial-services-south-florida" },
+      { label: "Logistics & Distribution", href: "/industries/logistics-distribution" },
+      { label: "Aerospace — Space Coast", href: "/industries/aerospace-space-coast" },
+    ],
+  },
+  {
     label: "For Investors",
     href: "/investors",
     children: [
@@ -127,6 +137,7 @@ export const footerServiceLinks: NavLink[] = [
   { label: "Land Development", href: "/services/land-development" },
   { label: "Development Services", href: "/services/development" },
   { label: "Residential", href: "/services/residential-real-estate" },
+  { label: "Healthcare & Medical Office", href: "/industries/healthcare-medical-office" },
 ];
 
 export const footerResourceLinks: NavLink[] = [

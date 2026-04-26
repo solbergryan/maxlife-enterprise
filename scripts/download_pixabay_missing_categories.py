@@ -5,12 +5,13 @@ several horizontal photo candidates per topic. Preserves SEO-friendly filenames.
 After running, pick a favorite candidate and update the matching .tsx data file.
 """
 import json
+import os
 import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
-API_KEY = "15048425-6a1865e8ee64622e4da7809e5"
+API_KEY = os.environ.get("PIXABAY_API_KEY", "")
 ROOT = Path(__file__).resolve().parent.parent / "public" / "images" / "commercial-stock"
 USER_AGENT = "Mozilla/5.0 (commercial-stock-downloader)"
 

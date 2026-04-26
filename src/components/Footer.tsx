@@ -148,11 +148,30 @@ export default function Footer() {
             &middot;{" "}
             <Link href="/terms" className="hover:text-gold">
               Terms of Service
+            </Link>{" "}
+            &middot;{" "}
+            <Link href="/fair-housing" className="hover:text-gold">
+              Fair Housing
+            </Link>{" "}
+            &middot;{" "}
+            <Link href="/dmca" className="hover:text-gold">
+              DMCA
+            </Link>{" "}
+            &middot;{" "}
+            <Link href="/accessibility" className="hover:text-gold">
+              Accessibility
             </Link>
           </p>
           <p>
             MaxLife Realty LLC &middot; Florida Licensed Real Estate Brokerage
             &middot; FL Broker License #3354351
+          </p>
+          <p className="text-xs text-gray-600">
+            Mortgage origination services provided by MortgageInc (NMLS #2028516).
+            MaxLife Realty loan officers are licensed under MortgageInc, NMLS #2028516.{" "}
+            <Link href="https://nmlsconsumeraccess.org" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
+              NMLS Consumer Access
+            </Link>
           </p>
           <p className="max-w-3xl mx-auto text-gray-600">
             Some property listings displayed on this site are syndicated from
