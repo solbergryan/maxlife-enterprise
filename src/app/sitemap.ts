@@ -369,6 +369,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
+  // Logistics lead-gen pages
+  const logisticsLeadPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/find-logistics-space-florida`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.85 },
+    { url: `${BASE_URL}/florida-industrial-market-report`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE_URL}/blog/industrial-space-for-lease-jacksonville-florida`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE_URL}/blog/lakeland-florida-warehouse-space-i4-corridor`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${BASE_URL}/blog/last-mile-warehouse-space-orlando-florida`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+  ];
+
   // /properties hub — index + 13 top-level categories + 126 subtypes
   const propertiesIndex: MetadataRoute.Sitemap = [
     {
@@ -454,6 +463,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...outlookPages,
     ...industriesHub,
     ...industryPages,
+    ...logisticsLeadPages,
     ...propertiesIndex,
     ...propertyTypePages,
     ...professionalsHub,
