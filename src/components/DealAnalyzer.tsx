@@ -38,12 +38,42 @@ interface Inputs {
   exitCapSpread: string;
 }
 
+const DEMO_INPUTS: Record<AssetType, Partial<Inputs>> = {
+  NNN: {
+    purchasePrice: "1000000",
+    buildingSF: "7000",
+    annualRent: "80000",
+    monthlyRentPerUnit: "",
+    units: "1",
+    vacancyRate: "0",
+    opexRatio: "",
+  },
+  Multifamily: {
+    purchasePrice: "1000000",
+    buildingSF: "",
+    annualRent: "",
+    units: "10",
+    monthlyRentPerUnit: "1500",
+    vacancyRate: "5",
+    opexRatio: "40",
+  },
+  SFR: {
+    purchasePrice: "350000",
+    buildingSF: "",
+    annualRent: "",
+    units: "1",
+    monthlyRentPerUnit: "2200",
+    vacancyRate: "5",
+    opexRatio: "40",
+  },
+};
+
 const DEFAULT_INPUTS: Inputs = {
   assetType: "NNN",
-  purchasePrice: "",
-  buildingSF: "",
+  purchasePrice: "1000000",
+  buildingSF: "7000",
   units: "1",
-  annualRent: "",
+  annualRent: "80000",
   monthlyRentPerUnit: "",
   rentGrowth: "2.0",
   vacancyRate: "0",
@@ -420,8 +450,8 @@ export default function DealAnalyzer({ initialInputs }: DealAnalyzerProps = {}) 
               key={type}
               onClick={() => setInputs(prev => ({
                 ...prev,
+                ...DEMO_INPUTS[type],
                 assetType: type,
-                vacancyRate: type === "NNN" ? "0" : "5",
               }))}
               className={`py-3 px-4 rounded-lg border text-sm font-medium transition-all ${
                 inputs.assetType === type
