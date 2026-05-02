@@ -4,6 +4,7 @@ import { caseStudies } from "@/data/case-studies";
 import { markets } from "@/data/markets";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import InvestorSignupForm from "@/components/InvestorSignupForm";
+import MarketNotesSignup from "@/components/MarketNotesSignup";
 import Testimonials from "@/components/Testimonials";
 import Reveal from "@/components/Reveal";
 import StatCounter from "@/components/StatCounter";
@@ -249,6 +250,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Market Notes Signup */}
+      <MarketNotesSignup />
 
       {/* Off-Market Signup */}
       <section id="investor-signup" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
