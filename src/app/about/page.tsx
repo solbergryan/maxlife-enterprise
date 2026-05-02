@@ -385,13 +385,22 @@ export default function AboutPage() {
             Ready to discuss your next commercial real estate opportunity? Get in
             touch — Ryan would love to hear about your goals.
           </p>
-          <Link
-            href="/contact"
-            data-track="about-get-in-touch"
-            className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors"
-          >
-            Get in Touch
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              data-track="about-get-in-touch"
+              className="inline-block bg-gold hover:bg-gold-dark text-dark font-semibold px-10 py-4 rounded-lg transition-colors"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/team"
+              data-track="about-meet-the-team"
+              className="inline-block border border-white/10 hover:border-gold/40 text-white font-medium px-10 py-4 rounded-lg transition-colors"
+            >
+              Meet the Team
+            </Link>
+          </div>
         </div>
       </section>
     </>

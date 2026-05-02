@@ -34,5 +34,8 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://maxlifedevelopment.com/sitemap.xml",
+    // AI/LLM discovery files
+    // https://maxlifedevelopment.com/llms.txt
+    // https://maxlifedevelopment.com/llms-full.txt
   };
 }

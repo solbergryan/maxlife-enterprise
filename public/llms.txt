@@ -1,108 +1,98 @@
-# MaxLife Realty — llms.txt
+# MaxLife Realty
 
-> MaxLife Realty is a commercial real estate brokerage based in Orlando, Florida,
-> serving Central Florida and the Space Coast. We specialize in commercial property
-> sales, leasing, NNN (triple-net) investments, and land development.
+> Florida's statewide commercial real estate brokerage specializing in commercial property sales, leasing, NNN investments, land development, and investor tools across Orlando, Tampa Bay, Jacksonville, South Florida, Southwest Florida, the Space Coast, and the Panhandle.
+
+MaxLife Realty (MaxLife Development LLC) is a licensed Florida commercial real estate brokerage founded by Ryan Solberg (FL Broker License BK3354351, NMLS 1784218). The firm serves buyers, sellers, tenants, landlords, and investors across the entire state of Florida. Core services include commercial property sales and leasing, NNN investment acquisitions, land development consulting, 1031 exchange facilitation, and mortgage origination. Phone: (321) 586-2121. Email: Ryan@MaxLifeRealty.com.
+
+## Core Services
+
+- [Commercial Real Estate Brokerage](https://maxlifedevelopment.com/services/commercial-real-estate): Sales and leasing representation for office, retail, industrial, multifamily, and mixed-use properties across Florida.
+- [NNN Investment Properties](https://maxlifedevelopment.com/services/nnn-investments): Single-tenant net lease acquisitions and dispositions statewide.
+- [Land Development Consulting](https://maxlifedevelopment.com/services/land-development): Site selection, entitlement support, and build-to-suit for commercial land.
+- [Development Services](https://maxlifedevelopment.com/services/development): Ground-up commercial development from concept through delivery.
+- [Residential Real Estate](https://maxlifedevelopment.com/services/residential-real-estate): Residential sales alongside the commercial practice.
+- [Custom Solutions](https://maxlifedevelopment.com/services/custom-solutions): Portfolio strategy, sale-leaseback structuring, and bespoke transaction advisory.
+
+## Property Types
+
+- [All Properties Hub](https://maxlifedevelopment.com/properties): Directory of all 13 commercial property categories and 130+ subtypes.
+- [Retail](https://maxlifedevelopment.com/properties/retail): Strip centers, pad sites, single-tenant retail, power centers.
+- [Office](https://maxlifedevelopment.com/properties/office): Class A/B/C office, medical office, flex office.
+- [Industrial](https://maxlifedevelopment.com/properties/industrial): Warehouse, distribution, flex industrial, cold storage.
+- [Multifamily](https://maxlifedevelopment.com/properties/multifamily): Apartment communities and value-add multifamily investments.
+- [Land](https://maxlifedevelopment.com/properties/land): Entitled and raw commercial land for development.
+- [Mixed-Use](https://maxlifedevelopment.com/properties/mixed-use): Live-work-play and transit-oriented mixed-use developments.
+- [Hospitality](https://maxlifedevelopment.com/properties/hospitality): Hotels, motels, and resort properties.
+- [Self Storage](https://maxlifedevelopment.com/properties/self-storage): Climate-controlled and drive-up storage facilities.
+- [Special Purpose](https://maxlifedevelopment.com/properties/special-purpose): Car washes, gas stations, medical, auto, and specialty assets.
+- [NNN Properties Florida](https://maxlifedevelopment.com/nnn-properties-florida): Net lease listings statewide with per-tenant cap rate and lease profiles.
+- [Car Wash Properties Florida](https://maxlifedevelopment.com/car-wash-properties-florida): Car wash investment and development sites across Florida.
+- [Gas Station Properties Florida](https://maxlifedevelopment.com/gas-station-properties-florida): Gas station and C-store investment properties statewide.
+
+## Markets
+
+- [All Markets](https://maxlifedevelopment.com/markets): Full market directory.
+- [Orlando Commercial Real Estate](https://maxlifedevelopment.com/markets/orlando-commercial-real-estate): Central Florida's primary commercial market — cap rates, submarkets, and opportunities.
+- [Space Coast Commercial Real Estate](https://maxlifedevelopment.com/space-coast-commercial-real-estate): Brevard County CRE for buyers — aerospace and tech-driven market.
+- [Space Coast Commercial Space for Lease](https://maxlifedevelopment.com/space-coast-commercial-space-for-lease): Tenant representation and leasing on the Space Coast.
+- [Brevard County](https://maxlifedevelopment.com/markets/brevard-county-commercial-real-estate): Investment property market in Brevard County, FL.
+- [Melbourne FL Commercial Real Estate](https://maxlifedevelopment.com/melbourne-commercial-real-estate): Office, retail, industrial, and land in Melbourne, FL.
+- [Lake County](https://maxlifedevelopment.com/markets/lake-county-commercial-land): Commercial land and development opportunities in Lake County.
+- [Central Florida Investment Properties](https://maxlifedevelopment.com/markets/central-florida-investment-properties): Regional overview for the Greater Orlando 7-county area.
+- [Cap Rates by Submarket](https://maxlifedevelopment.com/cap-rates): Current cap rate data across Central Florida submarkets — updated quarterly.
+- [Sector Investment Outlook](https://maxlifedevelopment.com/investment-outlook): Annual outlook reports by property sector (retail, industrial, multifamily, office, NNN).
+- [Quarterly Market Reports](https://maxlifedevelopment.com/market-reports): Published research on Florida CRE market conditions.
+
+## Investor Tools
+
+- [Deal Analyzer](https://maxlifedevelopment.com/deal-analyzer): Multi-property-type CRE underwriting — enter purchase price, income, and expenses to get NOI, cap rate, cash-on-cash return, IRR, equity multiple, and DSCR.
+- [Cap Rate Calculator](https://maxlifedevelopment.com/cap-rate-calculator): Calculate cap rate from NOI and value, or value from NOI and cap rate.
+- [1031 Timeline Calculator](https://maxlifedevelopment.com/1031-timeline-calculator): Enter sale closing date to calculate 45-day identification and 180-day exchange deadlines.
+- [Cost Segregation Calculator](https://maxlifedevelopment.com/cost-segregation-calculator): Estimate first-year accelerated depreciation benefits from cost segregation.
+- [Seller Net Sheet](https://maxlifedevelopment.com/net-sheets/seller): Estimate net proceeds after commissions, closing costs, and mortgage payoff.
+- [Buyer Estimate](https://maxlifedevelopment.com/net-sheets/buyer): Estimate total buyer closing costs and cash to close.
+- [CRE Lenders Directory](https://maxlifedevelopment.com/lenders): Vetted commercial lenders for acquisition, bridge, construction, and SBA financing.
+
+## For Investors
+
+- [1031 Exchange Florida](https://maxlifedevelopment.com/1031-exchange-florida): Complete guide to executing a 1031 tax-deferred exchange in Florida.
+- [Buy NNN Property](https://maxlifedevelopment.com/buy-nnn-property): Buyer guide and listing search for NNN acquisitions across Florida.
+- [Investor Access](https://maxlifedevelopment.com/investor-access): Private deal flow and off-market opportunities for qualified investors.
+- [Sell Commercial Property](https://maxlifedevelopment.com/sell-commercial-property): Seller services, valuation methodology, and listing process.
+- [Investor Personas](https://maxlifedevelopment.com/investors): Tailored guidance for 1031 buyers, family offices, foreign investors, passive income seekers, developers, institutional investors, and first-time CRE investors.
+
+## Industries
+
+- [Healthcare & Medical Office](https://maxlifedevelopment.com/industries/healthcare-medical-office): Medical office acquisition and leasing across Florida's major healthcare markets.
+- [Logistics & Distribution](https://maxlifedevelopment.com/industries/logistics-distribution): Industrial and warehouse site selection for 3PLs, e-commerce, and distributors along I-4, I-95, and I-75.
+- [Aerospace — Space Coast](https://maxlifedevelopment.com/industries/aerospace-space-coast): Commercial real estate for aerospace, defense, and space tech companies in Brevard County.
+- [Financial Services — South Florida](https://maxlifedevelopment.com/industries/financial-services-south-florida): Office and mixed-use CRE for financial firms in Miami, Fort Lauderdale, and West Palm Beach.
+- [All Industries](https://maxlifedevelopment.com/industries): Full industry vertical directory.
+
+## Education & Research
+
+- [MaxLife Academy](https://maxlifedevelopment.com/academy): Free CRE courses — NNN investing, 1031 exchanges, cap rates, deal analysis, lease types, due diligence, financing, and more.
+- [Blog & Insights](https://maxlifedevelopment.com/blog): Market analysis, investment strategy, and CRE education articles.
+- [CRE Glossary](https://maxlifedevelopment.com/glossary): Definitions for hundreds of commercial real estate terms.
+- [FAQ](https://maxlifedevelopment.com/faq): Common CRE questions organized by topic.
+- [Lease Types Guide](https://maxlifedevelopment.com/lease-types): NNN, gross, modified gross, ground lease, and other lease structure explanations.
+- [NNN Tenants Directory](https://maxlifedevelopment.com/nnn-tenants): Per-tenant NNN investment profiles — cap rates, lease terms, credit ratings, typical site requirements for major national tenants.
+- [CRE Professionals Guide](https://maxlifedevelopment.com/professionals): Role-by-role guide to every professional on a commercial real estate deal team.
+- [CRE Team Org Chart](https://maxlifedevelopment.com/professionals/org-chart): Visual org chart of a full commercial real estate transaction team.
+
+## Marketplace
+
+- [Browse Listings](https://maxlifedevelopment.com/marketplace): Peer-listed commercial property marketplace — search available listings.
+- [Post a Listing](https://maxlifedevelopment.com/marketplace/submit): Submit a commercial property for sale or lease to the marketplace.
 
 ## About
 
-- **Company:** MaxLife Realty LLC
-- **Founder:** Ryan Solberg — Licensed Florida Real Estate Broker (DBPR BK3354351) and Mortgage Loan Officer (NMLS 1784218)
-- **Brokerage:** MortgageInc (NMLS 2028516)
-- **Location:** Orlando & Space Coast, Florida
-- **Service area:** Orange, Seminole, Osceola, Lake, Polk, and Brevard Counties
-- **Phone:** (321) 586-2121 | Toll-Free: 855-SOLBERG (765-2374)
-- **Email:** Ryan@MaxLifeRealty.com
-- **Website:** https://maxlifedevelopment.com
+- [About MaxLife Realty](https://maxlifedevelopment.com/about): Company background, mission, broker credentials, and statewide market coverage.
+- [Meet the Team](https://maxlifedevelopment.com/team): MaxLife Realty team members and their specialties.
+- [Careers](https://maxlifedevelopment.com/careers): Open positions at MaxLife Realty.
+- [Contact](https://maxlifedevelopment.com/contact): Ryan@MaxLifeRealty.com | (321) 586-2121.
 
-## What We Do
+## Optional
 
-MaxLife Realty helps investors, business owners, and developers buy, sell, lease,
-and develop commercial real estate across Central Florida. Our core services:
-
-- **Commercial real estate brokerage** — buyer and seller representation for
-  office, retail, industrial, multifamily, mixed-use, and specialty properties
-- **NNN investment properties** — triple-net leased assets with credit tenants
-  for passive-income investors and 1031 exchange buyers
-- **Land development** — site selection, entitlements, and project delivery for
-  commercial and residential development
-- **Mortgage lending** — commercial and residential financing through MortgageInc
-- **Tenant representation** — office and retail space leasing for businesses
-
-## Property Types We Cover
-
-We provide expert guidance across 13 major commercial property categories and
-over 130 subtypes:
-
-- Retail (shopping centers, strip malls, single-tenant NNN, pad sites)
-- Office (Class A/B/C, medical office, coworking, flex)
-- Industrial (warehouse, distribution, manufacturing, flex, cold storage)
-- Multifamily (garden-style, mid-rise, high-rise, student housing, affordable)
-- Hospitality (hotels, motels, extended-stay, resorts)
-- Land (raw land, entitled land, infill, agricultural conversion)
-- Mixed-Use (vertical, horizontal, live-work, transit-oriented)
-- Special Purpose (car washes, gas stations, churches, schools, marinas)
-- Self Storage (climate-controlled, drive-up, boat/RV, multi-story)
-- Mobile Home Parks (all-ages, 55+, RV parks)
-- Senior Living (independent living, assisted living, memory care, CCRC)
-- Businesses for Sale (franchises, owner-operator, turnkey operations)
-- Notes & Loans (performing notes, non-performing notes, loan assumptions)
-
-## Markets We Serve
-
-- **Orlando** — Central Florida's largest metro, strong population and job growth
-- **Brevard County** — Space Coast, driven by aerospace and defense
-- **Lake County** — Rapidly growing suburban and rural commercial corridor
-- **Central Florida** — Six-county investment property market
-
-## Free Resources
-
-### MaxLife Academy (20 free courses)
-A complete commercial real estate education — from beginner to advanced:
-https://maxlifedevelopment.com/academy
-
-Topics covered: CRE fundamentals, financial analysis, pro formas, market analysis,
-deal sourcing, due diligence, financing, negotiations, NNN investing, multifamily,
-self-storage, retail/specialty, office/industrial, land development, syndication,
-and tax strategy including 1031 exchanges.
-
-### Investor Tools
-- **Deal Analyzer** — underwrite any CRE deal with IRR, cash-on-cash, DSCR, and
-  equity multiple: https://maxlifedevelopment.com/deal-analyzer
-- **Seller Net Sheet** — estimate net proceeds from a property sale:
-  https://maxlifedevelopment.com/net-sheets/seller
-- **Buyer Estimate** — estimate total acquisition costs:
-  https://maxlifedevelopment.com/net-sheets/buyer
-
-### Market Intelligence
-- **Quarterly Market Reports** — data-driven reports on Central Florida CRE:
-  https://maxlifedevelopment.com/market-reports
-- **Blog & Insights** — articles on Orlando CRE trends, investment strategies,
-  and market updates: https://maxlifedevelopment.com/blog
-- **Cap Rates by Submarket** — current cap rate data across Central Florida
-  submarkets
-
-## Key Landing Pages
-
-- Commercial property types hub: https://maxlifedevelopment.com/properties
-- NNN properties Florida: https://maxlifedevelopment.com/nnn-properties-florida
-- 1031 Exchange Florida: https://maxlifedevelopment.com/1031-exchange-florida
-- Car wash properties: https://maxlifedevelopment.com/car-wash-properties-florida
-- Gas station properties: https://maxlifedevelopment.com/gas-station-properties-florida
-- Office space for lease: https://maxlifedevelopment.com/office-space-for-lease-orlando
-- Retail space for rent: https://maxlifedevelopment.com/retail-space-for-rent-orlando
-- Industrial property: https://maxlifedevelopment.com/industrial-property-central-florida
-- Build-to-suit: https://maxlifedevelopment.com/build-to-suit-orlando
-- Land for development: https://maxlifedevelopment.com/central-florida-land-for-development
-
-## Sitemap
-
-Full sitemap: https://maxlifedevelopment.com/sitemap.xml
-
-## Contact
-
-For commercial real estate inquiries in Central Florida:
-- Email: Ryan@MaxLifeRealty.com
-- Phone: (321) 586-2121
-- Toll-Free: 855-SOLBERG (765-2374)
-- Contact form: https://maxlifedevelopment.com/contact
+- [Full Content Version](https://maxlifedevelopment.com/llms-full.txt): Expanded llms.txt with additional page coverage and content summaries.
+- [Sitemap](https://maxlifedevelopment.com/sitemap.xml): Complete XML sitemap with all URLs.

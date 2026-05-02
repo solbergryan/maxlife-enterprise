@@ -1,0 +1,202 @@
+# MaxLife Realty — Full Content Index
+
+> Florida's statewide commercial real estate brokerage. This document provides an expanded index of all major pages, tools, and content on maxlifedevelopment.com for AI systems and LLM indexing.
+
+See /llms.txt for the curated summary. This file adds programmatic page coverage and secondary content.
+
+---
+
+## Company
+
+MaxLife Realty (MaxLife Development LLC) is a licensed Florida commercial real estate brokerage. Founder Ryan Solberg holds FL Broker License BK3354351 and NMLS 1784218. The firm operates statewide across all Florida markets.
+
+- Phone: (321) 586-2121
+- Email: Ryan@MaxLifeRealty.com
+- Website: https://maxlifedevelopment.com
+- Contact: https://maxlifedevelopment.com/contact
+- About: https://maxlifedevelopment.com/about
+- Team: https://maxlifedevelopment.com/team
+- Careers: https://maxlifedevelopment.com/careers
+
+---
+
+## Services
+
+- [Commercial Real Estate Brokerage](https://maxlifedevelopment.com/services/commercial-real-estate)
+- [NNN Investments](https://maxlifedevelopment.com/services/nnn-investments)
+- [Land Development](https://maxlifedevelopment.com/services/land-development)
+- [Development Services](https://maxlifedevelopment.com/services/development)
+- [Residential Real Estate](https://maxlifedevelopment.com/services/residential-real-estate)
+- [Property Services](https://maxlifedevelopment.com/services/property-services)
+- [Custom Solutions](https://maxlifedevelopment.com/services/custom-solutions)
+
+---
+
+## Markets
+
+### Market Overview Pages
+- [Markets Hub](https://maxlifedevelopment.com/markets)
+- [Orlando Commercial Real Estate](https://maxlifedevelopment.com/markets/orlando-commercial-real-estate)
+- [Brevard County Commercial Real Estate](https://maxlifedevelopment.com/markets/brevard-county-commercial-real-estate)
+- [Lake County Commercial Land](https://maxlifedevelopment.com/markets/lake-county-commercial-land)
+- [Central Florida Investment Properties](https://maxlifedevelopment.com/markets/central-florida-investment-properties)
+
+### Space Coast (Brevard County)
+- [Space Coast Commercial Real Estate — Buy](https://maxlifedevelopment.com/space-coast-commercial-real-estate)
+- [Space Coast Commercial Space for Lease](https://maxlifedevelopment.com/space-coast-commercial-space-for-lease)
+- [Melbourne FL Commercial Real Estate](https://maxlifedevelopment.com/melbourne-commercial-real-estate)
+- [Cocoa Beach FL Commercial Real Estate](https://maxlifedevelopment.com/cocoa-beach-commercial-real-estate)
+- [Brevard County Investment Property](https://maxlifedevelopment.com/brevard-county-investment-property)
+- [Commercial Space for Lease Brevard County](https://maxlifedevelopment.com/commercial-space-for-lease-brevard-county)
+- [Office Space for Lease Melbourne FL](https://maxlifedevelopment.com/office-space-for-lease-melbourne-fl)
+- [Warehouse for Lease Brevard County](https://maxlifedevelopment.com/warehouse-for-lease-brevard-county)
+- [Retail Space for Rent Space Coast](https://maxlifedevelopment.com/retail-space-for-rent-space-coast)
+
+### Cap Rates Research
+- [Cap Rates Hub](https://maxlifedevelopment.com/cap-rates)
+- Cap rates by submarket (Central Florida, Orlando submarkets, Brevard, Lake County, and more at /cap-rates/[submarket])
+
+### Investment Outlook
+- [Investment Outlook Hub](https://maxlifedevelopment.com/investment-outlook)
+- Sector + year outlook reports at /investment-outlook/[sector]/[year] for retail, industrial, multifamily, office, and NNN
+
+---
+
+## Property Type × City Pages
+
+Programmatic pages exist at /{property-type}/{city} for major Florida cities and property types including:
+- NNN properties: /nnn-properties/[city]
+- Industrial: /industrial/[city]
+- Buy NNN property: /buy-nnn-property/[city]
+- Buy commercial land: /buy-commercial-land/[city]
+- Buy retail property: /buy-retail-property/[city]
+- Sell commercial property: /sell-commercial-property/[city]
+
+---
+
+## Landing Pages
+
+- [Orlando Commercial Real Estate Deals](https://maxlifedevelopment.com/orlando-commercial-real-estate-deals)
+- [NNN Properties Florida](https://maxlifedevelopment.com/nnn-properties-florida)
+- [1031 Exchange Florida](https://maxlifedevelopment.com/1031-exchange-florida)
+- [Car Wash Properties Florida](https://maxlifedevelopment.com/car-wash-properties-florida)
+- [Gas Station Properties Florida](https://maxlifedevelopment.com/gas-station-properties-florida)
+- [Central Florida Land for Development](https://maxlifedevelopment.com/central-florida-land-for-development)
+- [Office Space for Lease Orlando](https://maxlifedevelopment.com/office-space-for-lease-orlando)
+- [Retail Space for Rent Orlando](https://maxlifedevelopment.com/retail-space-for-rent-orlando)
+- [Industrial Property Central Florida](https://maxlifedevelopment.com/industrial-property-central-florida)
+- [Build-to-Suit Orlando](https://maxlifedevelopment.com/build-to-suit-orlando)
+- [Find Logistics Space Florida](https://maxlifedevelopment.com/find-logistics-space-florida)
+- [Florida Industrial Market Report](https://maxlifedevelopment.com/florida-industrial-market-report)
+- [Start Here](https://maxlifedevelopment.com/start-here)
+
+---
+
+## Investor Tools
+
+- [Investor Tools Hub](https://maxlifedevelopment.com/investor-tools)
+- [Deal Analyzer](https://maxlifedevelopment.com/deal-analyzer): Full CRE underwriting for NNN, multifamily, office, retail, and industrial
+- [Cap Rate Calculator](https://maxlifedevelopment.com/cap-rate-calculator)
+- [1031 Timeline Calculator](https://maxlifedevelopment.com/1031-timeline-calculator)
+- [Cost Segregation Calculator](https://maxlifedevelopment.com/cost-segregation-calculator)
+- [Seller Net Sheet](https://maxlifedevelopment.com/net-sheets/seller)
+- [Buyer Closing Cost Estimate](https://maxlifedevelopment.com/net-sheets/buyer)
+- [Net Sheets Hub](https://maxlifedevelopment.com/net-sheets)
+- [CRE Lenders Directory](https://maxlifedevelopment.com/lenders)
+- [Investor Access (Private Deals)](https://maxlifedevelopment.com/investor-access)
+
+---
+
+## For Investors — Persona Pages
+
+- [Investors Hub](https://maxlifedevelopment.com/investors)
+- [1031 Exchange Buyers](https://maxlifedevelopment.com/investors/1031-exchange-buyers)
+- [Family Offices](https://maxlifedevelopment.com/investors/family-offices)
+- [Foreign Investors](https://maxlifedevelopment.com/investors/foreign-investors)
+- [Passive Income Investors](https://maxlifedevelopment.com/investors/passive-income-investors)
+- [CRE Developers](https://maxlifedevelopment.com/investors/real-estate-developers)
+- [Institutional Investors](https://maxlifedevelopment.com/investors/institutional-investors)
+- [First-Time CRE Investors](https://maxlifedevelopment.com/investors/first-time-cre-investors)
+
+---
+
+## Industries
+
+- [Industries Hub](https://maxlifedevelopment.com/industries)
+- [Healthcare & Medical Office](https://maxlifedevelopment.com/industries/healthcare-medical-office)
+- [Logistics & Distribution](https://maxlifedevelopment.com/industries/logistics-distribution)
+- [Aerospace — Space Coast](https://maxlifedevelopment.com/industries/aerospace-space-coast)
+- [Financial Services — South Florida](https://maxlifedevelopment.com/industries/financial-services-south-florida)
+
+---
+
+## Education
+
+### Academy (Free CRE Courses)
+- [Academy Hub](https://maxlifedevelopment.com/academy)
+- Individual course pages at /academy/courses/[slug]
+- Individual lesson pages at /academy/courses/[slug]/lessons/[lesson-slug]
+
+### Blog Articles
+- [Blog Hub](https://maxlifedevelopment.com/blog)
+- [Orlando CRE Trends 2026](https://maxlifedevelopment.com/blog/orlando-commercial-real-estate-trends-2026)
+- [Brevard County Investment Property Outlook](https://maxlifedevelopment.com/blog/brevard-county-investment-property-outlook)
+- [Central Florida Land Development](https://maxlifedevelopment.com/blog/central-florida-land-development)
+- [Orlando Entertainment District Investment Guide](https://maxlifedevelopment.com/blog/orlando-entertainment-district-investment-guide)
+- [What Is a NNN Lease](https://maxlifedevelopment.com/blog/what-is-nnn-lease)
+- [Orlando Industrial Real Estate Guide](https://maxlifedevelopment.com/blog/orlando-industrial-real-estate-guide)
+- [Orlando Multifamily Investment Guide](https://maxlifedevelopment.com/blog/orlando-multifamily-investment-guide)
+- [Orlando Retail Commercial Real Estate](https://maxlifedevelopment.com/blog/orlando-retail-commercial-real-estate)
+- [Orlando NNN Properties for Sale](https://maxlifedevelopment.com/blog/orlando-nnn-properties-for-sale)
+- [How to Buy Commercial Property in Orlando](https://maxlifedevelopment.com/blog/how-to-buy-commercial-property-orlando)
+- [Orlando Cap Rates Investor Guide](https://maxlifedevelopment.com/blog/orlando-cap-rates-investor-guide)
+- [1031 Exchange Orlando Guide](https://maxlifedevelopment.com/blog/1031-exchange-orlando-guide)
+- [Lake County CRE Guide](https://maxlifedevelopment.com/blog/lake-county-commercial-real-estate-guide)
+- [How to Evaluate a CRE Deal](https://maxlifedevelopment.com/blog/how-to-evaluate-commercial-real-estate-deal)
+- [Medical Office Investing Central Florida](https://maxlifedevelopment.com/blog/medical-office-investing-central-florida)
+- [Why Invest in CRE Florida](https://maxlifedevelopment.com/blog/why-invest-commercial-real-estate-florida)
+- [Office Space for Lease Orlando Guide](https://maxlifedevelopment.com/blog/office-space-for-lease-orlando-guide)
+- [Build-to-Suit vs Existing Commercial Orlando](https://maxlifedevelopment.com/blog/build-to-suit-vs-existing-commercial-orlando)
+- [Central Florida CRE Submarkets](https://maxlifedevelopment.com/blog/central-florida-commercial-real-estate-submarkets)
+- [War, Oil Prices & Orlando CRE Spring 2026](https://maxlifedevelopment.com/blog/war-oil-prices-orlando-commercial-real-estate-spring-2026)
+- [NNN vs Multifamily Investing](https://maxlifedevelopment.com/blog/nnn-vs-multifamily-investing)
+- [Build-to-Suit vs Value-Add](https://maxlifedevelopment.com/blog/build-to-suit-vs-value-add)
+- [1031 Exchange vs Opportunity Zone](https://maxlifedevelopment.com/blog/1031-exchange-vs-opportunity-zone)
+- [Cap Rate vs Cash-on-Cash Return](https://maxlifedevelopment.com/blog/cap-rate-vs-cash-on-cash-return)
+- [Ground Lease vs Fee Simple](https://maxlifedevelopment.com/blog/ground-lease-vs-fee-simple)
+- [Orlando vs Tampa CRE Market](https://maxlifedevelopment.com/blog/orlando-vs-tampa-cre-market)
+- [Ultimate Guide to NNN Investing](https://maxlifedevelopment.com/blog/ultimate-guide-nnn-investing)
+- [Florida CRE Investor Guide](https://maxlifedevelopment.com/blog/florida-cre-investor-guide)
+- [Industrial Space Jacksonville](https://maxlifedevelopment.com/blog/industrial-space-for-lease-jacksonville-florida)
+- [Lakeland Warehouse Space I-4 Corridor](https://maxlifedevelopment.com/blog/lakeland-florida-warehouse-space-i4-corridor)
+- [Last-Mile Warehouse Orlando](https://maxlifedevelopment.com/blog/last-mile-warehouse-space-orlando-florida)
+
+### Reference Resources
+- [CRE Glossary](https://maxlifedevelopment.com/glossary): Individual term pages at /glossary/[slug]
+- [FAQ Hub](https://maxlifedevelopment.com/faq): Topic pages at /faq/[slug]
+- [Lease Types Guide](https://maxlifedevelopment.com/lease-types): Individual lease type pages at /lease-types/[slug]
+- [NNN Tenants Directory](https://maxlifedevelopment.com/nnn-tenants): Individual tenant pages at /nnn-tenants/[slug]
+- [Quarterly Market Reports](https://maxlifedevelopment.com/market-reports): Individual report pages at /market-reports/[slug]
+- [CRE Professionals Guide](https://maxlifedevelopment.com/professionals)
+- [CRE Team Org Chart](https://maxlifedevelopment.com/professionals/org-chart)
+
+---
+
+## Marketplace
+
+- [Marketplace — Browse Listings](https://maxlifedevelopment.com/marketplace)
+- [Post a Listing](https://maxlifedevelopment.com/marketplace/submit)
+
+---
+
+## Portfolio & Case Studies
+
+- [Portfolio](https://maxlifedevelopment.com/portfolio)
+- [Case Studies](https://maxlifedevelopment.com/case-studies)
+
+---
+
+## Sitemap
+
+Full XML sitemap: https://maxlifedevelopment.com/sitemap.xml
+Summary (llms.txt): https://maxlifedevelopment.com/llms.txt
