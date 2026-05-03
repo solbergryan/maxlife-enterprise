@@ -293,16 +293,48 @@ async function notifyRyan(args: {
 
   const propertyName = extracted.propertyName ?? "Untitled deal";
   const location = [extracted.city, extracted.state].filter(Boolean).join(", ");
-  const subject = `[Deal Analyzer] ${propertyName}${location ? ` — ${location}` : ""} · Grade ${analysis.grade}`;
+
+  // Clean subject — no brackets, no special chars (those trigger spam filters)
+  const subject = `Deal submission: ${propertyName}${location ? ` in ${location}` : ""} (Grade ${analysis.grade})`;
 
   const safeName = filename.replace(/[^a-zA-Z0-9._-]/g, "_") || "deal.pdf";
 
-  const html = `
-    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:640px;line-height:1.5;color:#1a1a1a">
-      <h2 style="margin:0 0 16px;font-size:20px">New Deal Analyzer Submission</h2>
+  // Decide whether to attach the PDF. Big attachments are the #1 spam trigger.
+  // Cap at 1.5 MB so most of the time we deliver to the inbox.
+  const ATTACH_MAX = 1.5 * 1024 * 1024;
+  const tooBigToAttach = buffer.length > ATTACH_MAX;
+  const sizeMB = (buffer.length / 1024 / 1024).toFixed(2);
 
-      <table style="width:100%;border-collapse:collapse;margin-bottom:16px">
-        <tr><td style="padding:6px 0;color:#666">Property</td><td style="padding:6px 0"><strong>${escapeHtml(propertyName)}</strong></td></tr>
+  // Plain-text body (Gmail prefers having both — multipart messages score lower)
+  const text = `New deal analyzer submission
+
+Property: ${propertyName}${extracted.address ? `, ${extracted.address}` : ""}${location ? `, ${location}` : ""}
+${extracted.tenant ? `Tenant: ${extracted.tenant}\n` : ""}${extracted.leaseType ? `Lease: ${extracted.leaseType}\n` : ""}
+Grade: ${analysis.grade}
+Purchase price: ${fmt(a.purchasePrice)}
+NOI: ${fmt(a.noi)}
+Entrance cap: ${pct(a.entranceCap)}
+IRR: ${pct(a.irr)}
+DSCR: ${a.dscr.toFixed(2)}x
+Cash-on-cash: ${pct(a.avgCashOnCash)}
+Equity multiple: ${a.equityMultiple.toFixed(2)}x
+Year 1 cash flow: ${fmt(a.yearOneCashFlow)}
+
+${uploaderName || uploaderEmail ? `Uploader: ${uploaderName ?? "(no name)"} ${uploaderEmail ? `<${uploaderEmail}>` : ""}` : "Uploader chose to stay anonymous."}
+
+Summary: ${extracted.summary ?? ""}
+
+PDF: ${tooBigToAttach ? `${sizeMB} MB — too large to attach. Reply to this email to request the original.` : "attached"}
+
+Submitted via maxlifedevelopment.com/pdf-analyzer
+`;
+
+  const html = `
+    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:640px;line-height:1.55;color:#1a1a1a">
+      <p style="margin:0 0 16px;font-size:16px">Hi Ryan — a new deal came through your PDF analyzer.</p>
+
+      <table style="width:100%;border-collapse:collapse;margin-bottom:16px;font-size:14px">
+        <tr><td style="padding:6px 0;color:#666;width:130px">Property</td><td style="padding:6px 0"><strong>${escapeHtml(propertyName)}</strong></td></tr>
         ${extracted.address ? `<tr><td style="padding:6px 0;color:#666">Address</td><td style="padding:6px 0">${escapeHtml(extracted.address)}${location ? `, ${escapeHtml(location)}` : ""}</td></tr>` : ""}
         ${extracted.tenant ? `<tr><td style="padding:6px 0;color:#666">Tenant</td><td style="padding:6px 0">${escapeHtml(extracted.tenant)}</td></tr>` : ""}
         ${extracted.assetType ? `<tr><td style="padding:6px 0;color:#666">Asset type</td><td style="padding:6px 0">${escapeHtml(extracted.assetType)}</td></tr>` : ""}
@@ -312,51 +344,66 @@ async function notifyRyan(args: {
       <div style="background:#f4f4f4;border-radius:8px;padding:16px;margin-bottom:16px">
         <div style="font-size:36px;font-weight:600;margin-bottom:8px">Grade: ${analysis.grade}</div>
         <table style="width:100%;border-collapse:collapse;font-size:14px">
-          <tr><td style="padding:4px 0;color:#666">Purchase Price</td><td style="padding:4px 0;text-align:right"><strong>${fmt(a.purchasePrice)}</strong></td></tr>
+          <tr><td style="padding:4px 0;color:#666">Purchase price</td><td style="padding:4px 0;text-align:right"><strong>${fmt(a.purchasePrice)}</strong></td></tr>
           <tr><td style="padding:4px 0;color:#666">NOI</td><td style="padding:4px 0;text-align:right">${fmt(a.noi)}</td></tr>
-          <tr><td style="padding:4px 0;color:#666">Entrance Cap</td><td style="padding:4px 0;text-align:right">${pct(a.entranceCap)}</td></tr>
+          <tr><td style="padding:4px 0;color:#666">Entrance cap</td><td style="padding:4px 0;text-align:right">${pct(a.entranceCap)}</td></tr>
           <tr><td style="padding:4px 0;color:#666">IRR</td><td style="padding:4px 0;text-align:right"><strong>${pct(a.irr)}</strong></td></tr>
           <tr><td style="padding:4px 0;color:#666">DSCR</td><td style="padding:4px 0;text-align:right">${a.dscr.toFixed(2)}x</td></tr>
-          <tr><td style="padding:4px 0;color:#666">Avg Cash-on-Cash</td><td style="padding:4px 0;text-align:right">${pct(a.avgCashOnCash)}</td></tr>
-          <tr><td style="padding:4px 0;color:#666">Equity Multiple</td><td style="padding:4px 0;text-align:right">${a.equityMultiple.toFixed(2)}x</td></tr>
-          <tr><td style="padding:4px 0;color:#666">Year 1 Cash Flow</td><td style="padding:4px 0;text-align:right">${fmt(a.yearOneCashFlow)}</td></tr>
+          <tr><td style="padding:4px 0;color:#666">Cash-on-cash</td><td style="padding:4px 0;text-align:right">${pct(a.avgCashOnCash)}</td></tr>
+          <tr><td style="padding:4px 0;color:#666">Equity multiple</td><td style="padding:4px 0;text-align:right">${a.equityMultiple.toFixed(2)}x</td></tr>
+          <tr><td style="padding:4px 0;color:#666">Year 1 cash flow</td><td style="padding:4px 0;text-align:right">${fmt(a.yearOneCashFlow)}</td></tr>
         </table>
       </div>
 
       ${
         uploaderEmail || uploaderName
           ? `<div style="background:#fff8e6;border:1px solid #f5d68a;border-radius:8px;padding:12px;margin-bottom:16px">
-              <div style="font-size:12px;color:#8a6d1a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Uploader contact</div>
-              ${uploaderName ? `<div style="margin-top:6px"><strong>${escapeHtml(uploaderName)}</strong></div>` : ""}
-              ${uploaderEmail ? `<div style="margin-top:2px"><a href="mailto:${escapeHtml(uploaderEmail)}">${escapeHtml(uploaderEmail)}</a></div>` : ""}
+              <div style="font-size:12px;color:#8a6d1a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Uploader wants follow-up</div>
+              ${uploaderName ? `<div style="margin-top:6px;font-size:14px"><strong>${escapeHtml(uploaderName)}</strong></div>` : ""}
+              ${uploaderEmail ? `<div style="margin-top:2px;font-size:14px"><a href="mailto:${escapeHtml(uploaderEmail)}">${escapeHtml(uploaderEmail)}</a> — just hit reply, this email&rsquo;s reply-to is set to them.</div>` : ""}
             </div>`
-          : `<div style="color:#888;font-size:13px;margin-bottom:16px;font-style:italic">No uploader contact info provided.</div>`
+          : `<div style="color:#888;font-size:13px;margin-bottom:16px;font-style:italic">Uploader chose to stay anonymous (no contact info provided).</div>`
       }
 
       <div style="background:#f9f9f9;border-radius:8px;padding:12px;font-size:13px;color:#555">
-        <div style="font-weight:600;margin-bottom:6px">Claude's summary</div>
+        <div style="font-weight:600;margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:#888">Summary from the OM</div>
         ${escapeHtml(extracted.summary ?? "")}
       </div>
 
-      <p style="margin-top:24px;font-size:12px;color:#888">
-        Original PDF attached. Submitted via maxlifedevelopment.com/pdf-analyzer.
+      <p style="margin-top:20px;font-size:13px;color:#666">
+        ${tooBigToAttach
+          ? `<strong>PDF:</strong> ${sizeMB} MB — too large to attach safely. Reply to this email if you need the original file.`
+          : `<strong>PDF:</strong> attached (${sizeMB} MB).`}
+      </p>
+
+      <hr style="margin:24px 0;border:0;border-top:1px solid #eee" />
+      <p style="font-size:11px;color:#999;line-height:1.4">
+        This email was sent because someone used the deal analyzer at maxlifedevelopment.com/pdf-analyzer. You set this up yourself — it&rsquo;s a transactional notification, not marketing.
       </p>
     </div>
   `;
 
   const resend = new Resend(process.env.RESEND_API_KEY);
+
+  type Attachment = { filename: string; content: string };
+  const attachments: Attachment[] = tooBigToAttach
+    ? []
+    : [{ filename: safeName, content: buffer.toString("base64") }];
+
   await resend.emails.send({
     from: NOTIFY_FROM,
     to: NOTIFY_TO,
     replyTo: uploaderEmail ?? undefined,
     subject,
+    text,
     html,
-    attachments: [
-      {
-        filename: safeName,
-        content: buffer.toString("base64"),
-      },
-    ],
+    attachments,
+    headers: {
+      // Mark as transactional — Gmail uses this signal
+      "X-Entity-Ref-ID": `pdf-analyzer-${Date.now()}`,
+      // Helps Gmail group/thread these correctly
+      "List-Id": "MaxLife Deal Analyzer Submissions <pdf-analyzer.maxlifedevelopment.com>",
+    },
   });
 }
 
