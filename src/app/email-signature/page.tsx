@@ -123,10 +123,17 @@ function SignatureV1() {
           </td>
         </tr>
         <tr>
+          <td style={{ paddingBottom: "4px", fontSize: "13px" }}>
+            <span style={{ color: "#888", fontSize: "11px", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.5px", marginRight: "6px" }}>O</span>
+            <a href="tel:+13213733536" style={{ color: "#002E62", textDecoration: "none" }}>321-373-3536</a>
+            <span style={{ color: "#999", margin: "0 8px" }}>·</span>
+            <span style={{ color: "#888", fontSize: "11px", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.5px", marginRight: "6px" }}>M</span>
+            <a href="tel:+14077483436" style={{ color: "#002E62", textDecoration: "none" }}>407-748-3436</a>
+          </td>
+        </tr>
+        <tr>
           <td style={{ paddingBottom: "10px", fontSize: "13px" }}>
-            <a href="tel:+18557652374" style={{ color: "#002E62", textDecoration: "none" }}>(855) 765-2374</a>
-            <span style={{ color: "#999", margin: "0 6px" }}>·</span>
-            <a href="mailto:ryan@maxliferealty.com" style={{ color: "#002E62", textDecoration: "none" }}>ryan@maxliferealty.com</a>
+            <a href="mailto:Ryan@MaxLifeRealty.com" style={{ color: "#002E62", textDecoration: "none" }}>Ryan@MaxLifeRealty.com</a>
           </td>
         </tr>
         <tr>
@@ -165,10 +172,17 @@ function SignatureV2() {
           </td>
         </tr>
         <tr>
+          <td style={{ paddingBottom: "4px", fontSize: "13px" }}>
+            <span style={{ color: "#888", fontSize: "11px", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.5px", marginRight: "6px" }}>O</span>
+            <a href="tel:+13213733536" style={{ color: "#002E62", textDecoration: "none" }}>321-373-3536</a>
+            <span style={{ color: "#999", margin: "0 8px" }}>·</span>
+            <span style={{ color: "#888", fontSize: "11px", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.5px", marginRight: "6px" }}>M</span>
+            <a href="tel:+14077483436" style={{ color: "#002E62", textDecoration: "none" }}>407-748-3436</a>
+          </td>
+        </tr>
+        <tr>
           <td style={{ paddingBottom: "12px", fontSize: "13px" }}>
-            <a href="tel:+18557652374" style={{ color: "#002E62", textDecoration: "none" }}>(855) 765-2374</a>
-            <span style={{ color: "#999", margin: "0 6px" }}>·</span>
-            <a href="mailto:ryan@maxliferealty.com" style={{ color: "#002E62", textDecoration: "none" }}>ryan@maxliferealty.com</a>
+            <a href="mailto:Ryan@MaxLifeRealty.com" style={{ color: "#002E62", textDecoration: "none" }}>Ryan@MaxLifeRealty.com</a>
           </td>
         </tr>
         <tr>
