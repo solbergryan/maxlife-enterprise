@@ -114,7 +114,7 @@ function SignatureV1() {
         </tr>
         <tr>
           <td style={{ paddingBottom: "2px", color: "#555", fontSize: "13px" }}>
-            Broker · Florida Licensed MLO
+            Real Estate Broker · Florida Licensed MLO
           </td>
         </tr>
         <tr>
@@ -163,7 +163,7 @@ function SignatureV2() {
         </tr>
         <tr>
           <td style={{ paddingBottom: "2px", color: "#555", fontSize: "13px" }}>
-            Broker · Florida Licensed MLO
+            Real Estate Broker · Florida Licensed MLO
           </td>
         </tr>
         <tr>
