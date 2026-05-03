@@ -429,7 +429,7 @@ export async function GET() {
   }, { headers: CORS });
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest): Promise<Response> {
   let body: Record<string, unknown>;
   try {
     body = await req.json();
