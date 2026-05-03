@@ -9,11 +9,10 @@ import { orlandoAgent } from "@/data/orlando/agent";
 
 const SLUG = "i4-corridor-commercial-real-estate";
 const SITE_URL = "https://maxlifedevelopment.com";
-const BILLBOARD_IMG = `${SITE_URL}/images/i4-king-of-i4-billboard.png`;
-
+const OG_IMG = `${SITE_URL}/images/i4-king-of-i4-billboard-og.jpg`;
 
 export const metadata: Metadata = {
-  title: "I-4 Corridor Commercial Real Estate | Tampa to Daytona | MaxLife Realty",
+  title: "I-4 Corridor Commercial Real Estate | Tampa to Daytona",
   description:
     "Commercial real estate along Interstate 4 — investment property, industrial, retail, office, and land from Tampa through Orlando to Daytona Beach. MaxLife Realty covers the full I-4 corridor across 6 Florida counties.",
   alternates: { canonical: `/${SLUG}` },
@@ -26,9 +25,9 @@ export const metadata: Metadata = {
     siteName: "MaxLife Realty",
     images: [
       {
-        url: BILLBOARD_IMG,
+        url: OG_IMG,
         width: 1200,
-        height: 800,
+        height: 630,
         alt: "MaxLife Realty — Commercial Real Estate King of I-4 · Ryan Solberg, 855-SOLBERG",
       },
     ],
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     title: "I-4 Corridor Commercial Real Estate | King of I-4",
     description:
       "Florida's commercial spine — 132 miles, 6 counties, every commercial exit. MaxLife Realty owns the I-4 corridor.",
-    images: [BILLBOARD_IMG],
+    images: [OG_IMG],
   },
 };
 
