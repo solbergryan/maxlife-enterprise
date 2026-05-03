@@ -1,3 +1,4 @@
+import { preload } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
@@ -27,6 +28,7 @@ const blogImages: Record<string, string> = {
 };
 
 export default function HomePage() {
+  preload("/videos/hero/home-hero-poster.jpg", { as: "image", fetchPriority: "high" });
   const featuredStudy = caseStudies[0];
 
   return (
@@ -39,7 +41,7 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="none"
           poster="/videos/hero/home-hero-poster.jpg"
           aria-hidden="true"
         >
@@ -86,6 +88,49 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* I-4 Corridor Featured Banner */}
+      <section className="border-b border-white/10 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #001a0d 0%, #0a1628 50%, #001a0d 100%)' }}>
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(90deg, transparent 0px, transparent 60px, rgba(255,209,0,0.4) 60px, rgba(255,209,0,0.4) 90px)',
+        }} aria-hidden="true" />
+        <Link
+          href="/i4-corridor-commercial-real-estate"
+          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 flex flex-col sm:flex-row items-center gap-6 group"
+        >
+          {/* I-4 Interstate Shield */}
+          <svg width="64" height="70" viewBox="0 0 100 110" className="shrink-0 drop-shadow-lg">
+            <path d="M 50,108 C 28,96 2,80 0,62 L 0,24 C 0,8 14,2 28,4 C 37,5 44,10 50,10 C 56,10 63,5 72,4 C 86,2 100,8 100,24 L 100,62 C 98,80 72,96 50,108 Z" fill="#003087" />
+            <clipPath id="home-shield-clip">
+              <path d="M 50,108 C 28,96 2,80 0,62 L 0,24 C 0,8 14,2 28,4 C 37,5 44,10 50,10 C 56,10 63,5 72,4 C 86,2 100,8 100,24 L 100,62 C 98,80 72,96 50,108 Z" />
+            </clipPath>
+            <rect x="0" y="79" width="100" height="35" fill="#BF0D3E" clipPath="url(#home-shield-clip)" />
+            <text x="50" y="34" textAnchor="middle" fontSize="18" fill="white" fontWeight="800" fontFamily="Arial Narrow, Arial, sans-serif" letterSpacing="0.4">INTERSTATE</text>
+            <text x="50" y="76" textAnchor="middle" fontSize="40" fill="white" fontWeight="900" fontFamily="Arial Narrow, Arial, sans-serif">4</text>
+          </svg>
+
+          {/* Headline + body */}
+          <div className="flex-1 text-center sm:text-left">
+            <p className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: '#A7F3D0', fontFamily: 'Arial Narrow, Arial, sans-serif' }}>
+              New · Interactive Map
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-1">
+              Explore the <span style={{ color: '#FFD100' }}>I-4 Corridor</span> — Tampa to Daytona
+            </h2>
+            <p className="text-gray-300 text-sm sm:text-base">
+              132 miles · 6 counties · every commercial exit. Click any sign to see the deals.
+            </p>
+          </div>
+
+          {/* CTA */}
+          <span
+            className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-lg transition-all text-sm shrink-0 group-hover:translate-x-1"
+            style={{ background: '#FFD100', color: '#111111', fontFamily: 'Arial Narrow, Arial, sans-serif', letterSpacing: '0.05em' }}
+          >
+            VIEW I-4 EXIT MAP →
+          </span>
+        </Link>
       </section>
 
       {/* Why MaxLife */}

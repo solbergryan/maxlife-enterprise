@@ -29,6 +29,7 @@ export const mainNav: NavLink[] = [
     label: "Markets",
     href: "/markets",
     children: [
+      { label: "I-4 Corridor (Tampa → Daytona)", href: "/i4-corridor-commercial-real-estate" },
       { label: "Orlando", href: "/markets/orlando-commercial-real-estate" },
       { label: "Brevard County", href: "/markets/brevard-county-commercial-real-estate" },
       { label: "Lake County", href: "/markets/lake-county-commercial-land" },
@@ -167,6 +168,7 @@ export const footerResourceLinks: NavLink[] = [
   { label: "Market Insights (Blog)", href: "/blog" },
   { label: "Academy (Free CRE Courses)", href: "/academy" },
   { label: "CRE Professionals Guide", href: "/professionals" },
+  { label: "I-4 Corridor (Tampa → Daytona)", href: "/i4-corridor-commercial-real-estate" },
   { label: "Orlando Metro CRE Hub", href: "/orlando-commercial-real-estate-deals" },
   { label: "Winter Park CRE", href: "/winter-park-commercial-real-estate" },
   { label: "Kissimmee CRE", href: "/kissimmee-commercial-real-estate" },
