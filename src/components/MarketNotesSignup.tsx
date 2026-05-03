@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function MarketNotesSignup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const mountedAtRef = useRef<number>(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,6 +23,7 @@ export default function MarketNotesSignup() {
           body: JSON.stringify({
             name,
             email,
+            _gotcha: website,
             _subject: "MaxLife Market Notes Signup",
             source: "market-notes-homepage",
           }),
@@ -28,7 +31,7 @@ export default function MarketNotesSignup() {
         fetch("/api/leads/subscribe", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, source: "market-notes-homepage" }),
+          body: JSON.stringify({ name, email, website, _t: mountedAtRef.current, source: "market-notes-homepage" }),
         }),
       ]);
       setStatus("success");
@@ -69,6 +72,16 @@ export default function MarketNotesSignup() {
               onSubmit={handleSubmit}
               className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto"
             >
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                aria-hidden="true"
+                className="absolute left-[-9999px] h-0 w-0 opacity-0"
+              />
               <input
                 type="text"
                 value={name}

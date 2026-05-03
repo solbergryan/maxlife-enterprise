@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { trackFormSubmit } from "@/lib/analytics";
 
 interface BlogLeadCaptureProps {
@@ -23,7 +23,9 @@ export default function BlogLeadCapture({
 }: BlogLeadCaptureProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const mountedAtRef = useRef<number>(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,6 +40,7 @@ export default function BlogLeadCapture({
           body: JSON.stringify({
             email,
             name: name || undefined,
+            _gotcha: website,
             _subject: "MaxLife Blog — New Investor Signup",
             source: "blog-inline",
             source_page: sourcePage,
@@ -46,7 +49,7 @@ export default function BlogLeadCapture({
         fetch("/api/leads/subscribe", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, name: name || undefined, source: "blog-inline", source_page: sourcePage }),
+          body: JSON.stringify({ email, name: name || undefined, website, _t: mountedAtRef.current, source: "blog-inline", source_page: sourcePage }),
         }),
       ]);
 
@@ -86,6 +89,16 @@ export default function BlogLeadCapture({
         <h3 className="text-xl font-bold text-white mb-2">{heading}</h3>
         <p className="text-gray-300 text-sm mb-6">{description}</p>
         <form onSubmit={handleSubmit} className="space-y-3">
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+            aria-hidden="true"
+            className="absolute left-[-9999px] h-0 w-0 opacity-0"
+          />
           <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="text"

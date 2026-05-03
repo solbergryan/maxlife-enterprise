@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { trackFormSubmit, trackEvent } from "@/lib/analytics";
 
 /**
@@ -11,12 +11,15 @@ import { trackFormSubmit, trackEvent } from "@/lib/analytics";
 export default function ExitIntentPopup() {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const shownAtRef = useRef<number>(0);
 
   const trigger = useCallback(() => {
     if (typeof window === "undefined") return;
     if (sessionStorage.getItem("exit-popup-shown")) return;
     sessionStorage.setItem("exit-popup-shown", "1");
+    shownAtRef.current = Date.now();
     setShow(true);
     trackEvent("exit_intent_shown", { page_path: window.location.pathname });
   }, []);
@@ -50,6 +53,7 @@ export default function ExitIntentPopup() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             email,
+            _gotcha: website,
             _subject: "MaxLife — Exit Intent Signup",
             source: "exit-intent",
             source_page: sourcePage,
@@ -58,7 +62,7 @@ export default function ExitIntentPopup() {
         fetch("/api/leads/subscribe", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, source: "exit-intent", source_page: sourcePage }),
+          body: JSON.stringify({ email, website, _t: shownAtRef.current, source: "exit-intent", source_page: sourcePage }),
         }),
       ]);
 
@@ -137,6 +141,16 @@ export default function ExitIntentPopup() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-3">
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                aria-hidden="true"
+                className="absolute left-[-9999px] h-0 w-0 opacity-0"
+              />
               <input
                 type="email"
                 value={email}

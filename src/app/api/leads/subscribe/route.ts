@@ -29,11 +29,22 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: { email?: string; name?: string; source?: string; source_page?: string };
+  let body: { email?: string; name?: string; source?: string; source_page?: string; website?: string; _t?: number };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  // Honeypot: real users can't see or tab to the hidden "website" field.
+  // Silent 200 so bots don't retry with a different pattern.
+  if ((body.website || "").trim()) {
+    return NextResponse.json({ ok: true });
+  }
+
+  // Timing check: humans take at least 1.5s to fill a form.
+  if (typeof body._t === "number" && Date.now() - body._t < 1500) {
+    return NextResponse.json({ ok: true });
   }
 
   const email = (body.email || "").trim();

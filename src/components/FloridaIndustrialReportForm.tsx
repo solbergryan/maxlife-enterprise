@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { trackFormSubmit } from "@/lib/analytics";
 
 export default function FloridaIndustrialReportForm() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const mountedAtRef = useRef<number>(Date.now());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +22,8 @@ export default function FloridaIndustrialReportForm() {
         body: JSON.stringify({
           email,
           name: name || undefined,
+          website,
+          _t: mountedAtRef.current,
           source: "lead-magnet",
           source_page: "/florida-industrial-market-report",
         }),
@@ -53,6 +57,16 @@ export default function FloridaIndustrialReportForm() {
       <h2 className="text-white font-bold text-xl mb-2">Get the Free Report</h2>
       <p className="text-gray-400 text-sm mb-6">Delivered to your inbox instantly.</p>
       <form onSubmit={handleSubmit} className="space-y-3">
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+          aria-hidden="true"
+          className="absolute left-[-9999px] h-0 w-0 opacity-0"
+        />
         <input
           type="text"
           value={name}
