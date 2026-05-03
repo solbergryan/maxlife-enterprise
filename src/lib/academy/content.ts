@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -63,7 +64,7 @@ async function readDirSorted(dir: string): Promise<string[]> {
 // Course loaders
 // ============================================================
 
-export async function getAllCourses(): Promise<Course[]> {
+export const getAllCourses = cache(async function getAllCourses(): Promise<Course[]> {
   const slugs = await readDirSorted(CONTENT_ROOT);
   const courses = await Promise.all(
     slugs
@@ -73,7 +74,7 @@ export async function getAllCourses(): Promise<Course[]> {
   return courses
     .filter((c): c is Course => c !== null)
     .sort((a, b) => a.order - b.order);
-}
+});
 
 export async function getCourse(slug: string): Promise<Course | null> {
   const coursePath = path.join(CONTENT_ROOT, slug, "course.json");

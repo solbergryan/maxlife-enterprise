@@ -43,6 +43,8 @@ const nextConfig: NextConfig = {
     root: path.resolve(__dirname),
   },
   images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       // Supabase Storage (marketplace listing photos)
       { protocol: "https", hostname: "*.supabase.co" },
