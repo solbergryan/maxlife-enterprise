@@ -118,6 +118,16 @@ const articleImages: Record<string, { src: string; alt: string }> = {
 
 const articles = [
   {
+    slug: "ai-cre-deal-analyzer-autozone-case-study",
+    title: "I Built an AI to Underwrite CRE Deals in 10 Seconds. Here's What It Caught on a Real AutoZone OM",
+    excerpt:
+      "A real walkthrough: dropping a $1.2M Orlando AutoZone OM into our new AI deal analyzer. The tool flagged a 0.86x DSCR negative-leverage problem most first-time investors would miss. Try it on your own deal.",
+    category: "Case Study",
+    date: "May 2026",
+    readTime: "6 min read",
+    featured: true,
+  },
+  {
     slug: "orlando-commercial-real-estate-trends-2026",
     title: "Orlando Commercial Real Estate Market Trends 2026",
     excerpt:

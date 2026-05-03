@@ -81,6 +81,16 @@ export default function HomePage() {
               Run a Seller Net Sheet
             </Link>
             <Link
+              href="/pdf-analyzer"
+              data-track="hero-pdf-analyzer"
+              className="relative inline-flex items-center justify-center gap-2 bg-gold/10 border border-gold/40 text-gold hover:bg-gold/20 hover:border-gold font-semibold px-8 py-4 rounded-lg transition-all text-center"
+            >
+              <span className="absolute -top-2 -right-2 bg-gold text-dark text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded">
+                New · AI
+              </span>
+              Drop a PDF · AI Analyzer
+            </Link>
+            <Link
               href="/deal-analyzer"
               className="inline-block border border-white/10 text-gray-300 hover:border-gray-500 font-semibold px-8 py-4 rounded-lg transition-colors text-center"
             >
@@ -153,6 +163,11 @@ export default function HomePage() {
         </Reveal>
         <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
+            {
+              title: "Drop a PDF — get the underwriting in 10 seconds",
+              body: "Our new <strong>AI Deal Analyzer</strong> reads any offering memorandum and returns IRR, DSCR, cash-on-cash, equity multiple, and a letter-grade deal score. Free, no signup.",
+              cta: { label: "Try the AI PDF Analyzer →", href: "/pdf-analyzer" },
+            },
             {
               title: "Honest valuations, not sales pitches",
               body: "Cap-rate and DSCR-based underwriting using our in-house Deal Analyzer. You see the math before you list.",

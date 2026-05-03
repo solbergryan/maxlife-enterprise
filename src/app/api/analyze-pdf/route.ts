@@ -25,6 +25,7 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { del, get } from "@vercel/blob";
+import { createClient } from "@supabase/supabase-js";
 import { NextRequest } from "next/server";
 import { Resend } from "resend";
 
@@ -266,6 +267,72 @@ async function extractDealFromPdf(pdfBuffer: Buffer): Promise<ExtractedDeal> {
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("No JSON found in Claude response");
   return JSON.parse(jsonMatch[0]);
+}
+
+// ── Supabase analytics logging ─────────────────────────────────────────────────
+
+async function logSubmission(args: {
+  filename: string | null;
+  pdfSizeBytes: number;
+  extracted: ExtractedDeal;
+  analysis: ReturnType<typeof analyzeDeal>;
+  params: DealParams;
+  uploaderEmail: string | null;
+  uploaderName: string | null;
+  userAgent: string | null;
+  referer: string | null;
+  ip: string | null;
+}) {
+  // Need server-side Supabase access. Skip silently if not configured.
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL ?? process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) return;
+
+  // analyzeDeal can return { error } on bad inputs — bail silently
+  const a = "rawNumbers" in args.analysis ? args.analysis.rawNumbers : null;
+  if (!a) return;
+
+  const e = args.extracted;
+  const supabase = createClient(url, key);
+  const { error } = await supabase.from("pdf_analyzer_submissions").insert({
+    filename: args.filename,
+    pdf_size_bytes: args.pdfSizeBytes,
+    property_name: e.propertyName,
+    address: e.address,
+    city: e.city,
+    state: e.state,
+    asset_type: e.assetType,
+    tenant: e.tenant,
+    lease_type: e.leaseType,
+    building_sqft: e.buildingSqft,
+    units: e.units,
+    year_built: e.yearBuilt,
+    purchase_price: e.purchasePrice,
+    annual_rent: e.annualRent,
+    noi: e.noi,
+    stated_cap_rate: e.capRate,
+    grade: args.analysis.grade,
+    irr: a.irr,
+    dscr: a.dscr,
+    avg_coc: a.avgCashOnCash,
+    equity_multiple: a.equityMultiple,
+    yr1_cashflow: a.yearOneCashFlow,
+    exit_value: a.exitValue,
+    total_return: a.totalReturn,
+    down_payment_pct: args.params.downPaymentPct,
+    interest_rate: args.params.interestRate,
+    hold_period: args.params.holdPeriod,
+    uploader_name: args.uploaderName,
+    uploader_email: args.uploaderEmail,
+    user_agent: args.userAgent,
+    referer: args.referer,
+    ip: args.ip,
+  });
+
+  // Swallow "table doesn't exist" until the migration is run
+  if (error && !error.message.includes("does not exist")) {
+    console.error("logSubmission insert failed:", error.message);
+  }
 }
 
 // ── Email notification ─────────────────────────────────────────────────────────
@@ -516,6 +583,20 @@ export async function POST(req: NextRequest) {
       extracted,
       analysis,
     }).catch((e) => console.error("notifyRyan failed:", e));
+
+    // Log submission to Supabase for analytics (best-effort, never block the response)
+    logSubmission({
+      filename: typeof body.filename === "string" ? body.filename : null,
+      pdfSizeBytes: buffer.length,
+      extracted,
+      analysis,
+      params,
+      uploaderEmail: typeof body.uploaderEmail === "string" ? body.uploaderEmail : null,
+      uploaderName: typeof body.uploaderName === "string" ? body.uploaderName : null,
+      userAgent: req.headers.get("user-agent") ?? null,
+      referer: req.headers.get("referer") ?? null,
+      ip: req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? null,
+    }).catch((e) => console.error("logSubmission failed:", e));
 
     return Response.json({ extracted, params, analysis }, { headers: CORS });
   } catch (err) {
