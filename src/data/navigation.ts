@@ -75,6 +75,7 @@ export const mainNav: NavLink[] = [
     label: "Tools",
     href: "/investor-tools",
     children: [
+      { label: "PDF Deal Analyzer (AI)", href: "/pdf-analyzer" },
       { label: "Deal Analyzer", href: "/deal-analyzer" },
       { label: "Cap Rate Calculator", href: "/cap-rate-calculator" },
       { label: "1031 Timeline Calculator", href: "/1031-timeline-calculator" },
@@ -142,10 +143,11 @@ export const mainNav: NavLink[] = [
 ];
 
 export const footerInvestorLinks: NavLink[] = [
+  { label: "PDF Deal Analyzer (AI)", href: "/pdf-analyzer" },
+  { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "Sell Commercial Property", href: "/sell-commercial-property" },
   { label: "Buy NNN Property", href: "/buy-nnn-property" },
   { label: "Seller Net Sheet", href: "/net-sheets/seller" },
-  { label: "Deal Analyzer", href: "/deal-analyzer" },
   { label: "CRE Lenders Directory", href: "/lenders" },
   { label: "1031 Exchange", href: "/1031-exchange-florida" },
   { label: "NNN Properties", href: "/nnn-properties-florida" },

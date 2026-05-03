@@ -42,8 +42,72 @@ export default function InvestorToolsPage() {
         </div>
       </section>
 
-      {/* ROI Calculator */}
+      {/* Featured Tools — quick links to analyzers */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-gold font-medium text-sm tracking-widest uppercase mb-3">
+          Featured Tools
+        </h2>
+        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
+          Analyze a Deal in Seconds
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <Link
+            href="/pdf-analyzer"
+            className="group block bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 hover:bg-white/[0.06] transition-all"
+          >
+            <div className="flex items-start justify-between gap-3 mb-3">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gold/15 text-gold">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </span>
+              <span className="text-[10px] font-semibold tracking-widest uppercase text-gold bg-gold/10 px-2 py-1 rounded">
+                New · AI
+              </span>
+            </div>
+            <h4 className="text-white font-semibold text-lg mb-2 group-hover:text-gold transition-colors">
+              PDF Deal Analyzer
+            </h4>
+            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+              Drop any commercial offering memorandum. Claude reads it, extracts
+              the numbers, and runs full underwriting — IRR, DSCR, cash-on-cash,
+              equity multiple — in under a minute.
+            </p>
+            <span className="text-gold font-medium text-sm group-hover:translate-x-1 inline-block transition-transform">
+              Upload a PDF →
+            </span>
+          </Link>
+
+          <Link
+            href="/deal-analyzer"
+            className="group block bg-white/[0.04] border border-white/10 rounded-xl p-6 hover:border-gold/40 hover:bg-white/[0.06] transition-all"
+          >
+            <div className="flex items-start justify-between gap-3 mb-3">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gold/15 text-gold">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M9 19V6l12 2v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-2c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+                </svg>
+              </span>
+            </div>
+            <h4 className="text-white font-semibold text-lg mb-2 group-hover:text-gold transition-colors">
+              Manual Deal Analyzer
+            </h4>
+            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+              Type in your own numbers for full control. Live IRR, DSCR,
+              cash-on-cash, equity multiple, sensitivity matrix — same engine
+              the institutional buyers use.
+            </p>
+            <span className="text-gold font-medium text-sm group-hover:translate-x-1 inline-block transition-transform">
+              Enter your deal →
+            </span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ROI Calculator */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-white/5">
         <ROICalculator />
       </section>
 

@@ -63,6 +63,38 @@ export default function DealAnalyzerPage() {
 
       {/* Calculator */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        {/* PDF Analyzer cross-promotion */}
+        <Link
+          href="/pdf-analyzer"
+          className="group block mb-8 rounded-xl bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/30 p-5 hover:border-gold/60 hover:from-gold/30 transition-all"
+        >
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+            <div className="flex items-start gap-3">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gold/20 text-gold flex-shrink-0">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </span>
+              <div>
+                <p className="text-gold text-[11px] font-semibold tracking-widest uppercase mb-1">
+                  New · AI-Powered
+                </p>
+                <p className="text-white font-semibold">
+                  Have an OM PDF? Skip the manual entry.
+                </p>
+                <p className="text-gray-300 text-sm mt-1">
+                  Drop any offering memorandum into our PDF Deal Analyzer — Claude
+                  extracts the numbers and runs the same underwriting in ~10 seconds.
+                </p>
+              </div>
+            </div>
+            <span className="text-gold font-semibold text-sm whitespace-nowrap group-hover:translate-x-1 transition-transform">
+              Try it →
+            </span>
+          </div>
+        </Link>
+
         <DealAnalyzer />
         <p className="mt-4 text-xs text-gray-500 leading-relaxed">
           Estimates only — for informational and educational use. Not investment,
