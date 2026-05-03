@@ -421,6 +421,54 @@ export default function OrlandoCommercialRealEstateDealsPage() {
         </div>
       </section>
 
+      {/* Orlando Metro Cities We Cover */}
+      <section className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 text-center">
+            Orlando Metro Cities We Cover
+          </h2>
+          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
+            MaxLife Realty works every submarket within the Greater Orlando metro — from the I-4 urban core to the high-growth suburban corridors within an hour of downtown.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              { label: "Winter Park", slug: "winter-park-commercial-real-estate" },
+              { label: "Lake Mary", slug: "lake-mary-commercial-real-estate" },
+              { label: "Lake Nona", slug: "lake-nona-commercial-real-estate" },
+              { label: "Kissimmee", slug: "kissimmee-commercial-real-estate" },
+              { label: "Sanford", slug: "sanford-commercial-real-estate" },
+              { label: "Altamonte Springs", slug: "altamonte-springs-commercial-real-estate" },
+              { label: "Winter Garden", slug: "winter-garden-commercial-real-estate" },
+              { label: "Apopka", slug: "apopka-commercial-real-estate" },
+              { label: "Oviedo", slug: "oviedo-commercial-real-estate" },
+              { label: "Maitland", slug: "maitland-commercial-real-estate" },
+              { label: "Clermont", slug: "clermont-commercial-real-estate" },
+              { label: "Davenport", slug: "davenport-commercial-real-estate" },
+              { label: "St. Cloud", slug: "st-cloud-commercial-real-estate" },
+              { label: "Windermere", slug: "windermere-commercial-real-estate" },
+              { label: "Celebration", slug: "celebration-commercial-real-estate" },
+              { label: "Ocoee", slug: "ocoee-commercial-real-estate" },
+              { label: "Winter Springs", slug: "winter-springs-commercial-real-estate" },
+              { label: "Longwood", slug: "longwood-commercial-real-estate" },
+              { label: "Casselberry", slug: "casselberry-commercial-real-estate" },
+              { label: "Deltona", slug: "deltona-commercial-real-estate" },
+              { label: "Poinciana", slug: "poinciana-commercial-real-estate" },
+              { label: "Mount Dora", slug: "mount-dora-commercial-real-estate" },
+              { label: "Leesburg", slug: "leesburg-commercial-real-estate" },
+              { label: "Minneola", slug: "minneola-commercial-real-estate" },
+            ].map((city) => (
+              <Link
+                key={city.slug}
+                href={`/${city.slug}`}
+                className="bg-white/[0.04] border border-white/10 hover:border-gold/40 rounded-lg px-4 py-3 text-gray-300 hover:text-gold text-sm font-medium transition-colors text-center"
+              >
+                {city.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA / Internal Links */}
       <section className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">

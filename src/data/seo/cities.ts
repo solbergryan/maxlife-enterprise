@@ -489,6 +489,109 @@ export const cities: CityData[] = [
     topEmployers: ["AdventHealth St. Cloud", "Osceola County School District", "National retailers"],
     demographics: "Median household income ~$60,000 with a young, growing family demographic driving services and retail demand.",
   },
+  // ── Additional Seminole / Orange / Volusia / Osceola suburbs ──
+  {
+    slug: "longwood",
+    name: "Longwood",
+    county: "Seminole County",
+    population: "15,000",
+    distanceFromOrlando: "18 miles N of Orlando",
+    description:
+      "Longwood is a mature Seminole County suburb anchored by the SR-434 and US-17-92 commercial corridors. Medical office, neighborhood retail, and small professional-services buildings make up the bulk of commercial inventory, with steady owner-user demand from a stable, high-income residential base.",
+    highlights: [
+      "SR-434 and US-17-92 high-traffic commercial corridors",
+      "Strong medical office demand near AdventHealth facilities",
+      "Mature residential base with high homeownership rates",
+      "Proximity to Altamonte Springs and Lake Mary office markets",
+    ],
+    topEmployers: ["AdventHealth (regional)", "Seminole County government", "Professional services"],
+    demographics: "Median household income ~$72,000 with a stable, owner-occupied suburban community driving professional-services and medical demand.",
+  },
+  {
+    slug: "winter-springs",
+    name: "Winter Springs",
+    county: "Seminole County",
+    population: "37,000",
+    distanceFromOrlando: "14 miles NE of Orlando",
+    description:
+      "Winter Springs is a well-established Seminole County suburb adjacent to Oviedo with a growing Town Center mixed-use district and strong demand for neighborhood retail, medical office, and service-tenant space. The SR-434 corridor and Town Center district are the primary commercial nodes.",
+    highlights: [
+      "Winter Springs Town Center — walkable mixed-use district",
+      "SR-434 corridor with strong retail and service-tenant demand",
+      "Adjacent to UCF and Oviedo's growth trajectory",
+      "Top-rated Seminole County public schools",
+    ],
+    topEmployers: ["Seminole County School District", "Healthcare providers", "Retail and service operators"],
+    demographics: "Median household income ~$80,000 with a family-oriented, education-driven demographic supporting neighborhood retail and medical demand.",
+  },
+  {
+    slug: "casselberry",
+    name: "Casselberry",
+    county: "Seminole County",
+    population: "29,000",
+    distanceFromOrlando: "12 miles NE of Orlando",
+    description:
+      "Casselberry is an established Seminole County suburb along US-17-92 with affordable commercial space, strong service-retail demand, and proximity to the larger Altamonte Springs and Winter Park employment corridors. Value-add retail and owner-user office buildings are the primary CRE opportunities.",
+    highlights: [
+      "US-17-92 commercial corridor with high traffic counts",
+      "Affordable entry pricing for owner-user commercial buildings",
+      "Proximity to Altamonte Springs and Winter Park corridors",
+      "Dense residential base driving service-retail demand",
+    ],
+    topEmployers: ["Healthcare and professional services", "Retail operators", "Seminole County government"],
+    demographics: "Median household income ~$55,000 with a dense, diverse suburban residential base driving neighborhood-serving commercial demand.",
+  },
+  {
+    slug: "ocoee",
+    name: "Ocoee",
+    county: "Orange County",
+    population: "51,000",
+    distanceFromOrlando: "12 miles W of Orlando",
+    description:
+      "Ocoee is a rapidly growing Orange County suburb on the SR-50 and SR-429 corridors, attracting national retailers, medical users, and logistics operators. The Ocoee Crown Point development and Clarke Road commercial district are driving significant new commercial investment.",
+    highlights: [
+      "SR-50 (Colonial Drive) — one of Orlando's busiest commercial corridors",
+      "SR-429 Western Beltway access to I-4 and Florida Turnpike",
+      "Ocoee Crown Point master-planned mixed-use development",
+      "National retailer and QSR expansion corridor",
+    ],
+    topEmployers: ["Health Central Hospital (Ocoee)", "National retailers along SR-50", "Distribution operators"],
+    demographics: "Median household income ~$65,000 with strong population growth and new residential construction driving services and retail demand.",
+  },
+  {
+    slug: "deltona",
+    name: "Deltona",
+    county: "Volusia County",
+    population: "98,000",
+    distanceFromOrlando: "30 miles NE of Orlando",
+    description:
+      "Deltona is one of the largest cities in Volusia County and a fast-growing bedroom community for the Orlando metro, with major commercial growth along the Saxon Boulevard and Howland Boulevard corridors. Retail, medical, and industrial development are expanding to serve the rapidly growing residential base.",
+    highlights: [
+      "Saxon Boulevard and Howland Boulevard — primary commercial corridors",
+      "Major I-4 bedroom community driving services and retail demand",
+      "Significant undeveloped commercial land inventory",
+      "Strong industrial growth with DeBary intermodal proximity",
+    ],
+    topEmployers: ["AdventHealth Fish Memorial (nearby)", "Volusia County government", "National retailers"],
+    demographics: "Median household income ~$56,000 with one of Central Florida's fastest-growing residential populations driving new commercial development.",
+  },
+  {
+    slug: "poinciana",
+    name: "Poinciana",
+    county: "Osceola / Polk County",
+    population: "82,000",
+    distanceFromOrlando: "25 miles SW of Orlando",
+    description:
+      "Poinciana is one of the fastest-growing communities in Central Florida, straddling Osceola and Polk counties along US-17-92 and the Poinciana Parkway. National retailers, QSR chains, and medical users are expanding rapidly to serve the exploding residential base, making it one of the highest-growth commercial corridors in the metro.",
+    highlights: [
+      "One of the fastest-growing zip codes in Florida",
+      "Poinciana Parkway connecting to Kissimmee and I-4",
+      "High demand for new national retail and QSR",
+      "Significant commercial land supply for development",
+    ],
+    topEmployers: ["Poinciana Medical Center", "National retailers and QSR chains", "Logistics operators"],
+    demographics: "Median household income ~$55,000 with explosive population growth — one of the youngest and fastest-growing demographics in the Orlando metro.",
+  },
   // ── Brevard County / Space Coast ──────────────────────────────
   {
     slug: "melbourne",

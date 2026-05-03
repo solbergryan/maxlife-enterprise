@@ -17,6 +17,7 @@ import { investorPersonas } from "@/data/investor-personas";
 import { leaseTypes } from "@/data/lease-types";
 import { industries } from "@/data/industries";
 import { allSpaceCoastSlugs } from "@/data/space-coast/page-configs";
+import { allOrlandoCitySlugs } from "@/data/orlando/page-configs";
 import { cities as seoCities } from "@/data/seo/cities";
 import { createClient } from "@/lib/supabase/server";
 
@@ -240,6 +241,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: slug === "space-coast-commercial-real-estate" ? 0.95 : 0.85,
+    })),
+    // Orlando metro city pages
+    ...allOrlandoCitySlugs.map((slug) => ({
+      url: `${BASE_URL}/${slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
     })),
     // Academy
     {
