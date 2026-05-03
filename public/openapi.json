@@ -1,0 +1,334 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "MaxLife Realty API",
+    "description": "Public API for MaxLife Realty — Florida's statewide commercial real estate brokerage. Endpoints for investor tools (deal analysis, net sheets), lead capture, marketplace inquiries, and semantic listing search. Base URL: https://maxlifedevelopment.com",
+    "version": "1.0.0",
+    "contact": {
+      "name": "MaxLife Realty",
+      "email": "Ryan@MaxLifeRealty.com",
+      "url": "https://maxlifedevelopment.com/contact"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://maxlifedevelopment.com",
+      "description": "Production"
+    }
+  ],
+  "tags": [
+    { "name": "tools", "description": "Investor tools — deal analyzer, net sheets, workbooks" },
+    { "name": "leads", "description": "Lead capture and newsletter subscription" },
+    { "name": "marketplace", "description": "Commercial property marketplace" },
+    { "name": "search", "description": "Semantic listing search" }
+  ],
+  "paths": {
+    "/api/leads/deal-analyzer": {
+      "post": {
+        "tags": ["tools"],
+        "summary": "Email a deal analysis report",
+        "description": "Accepts a completed CRE deal analysis (purchase price, NOI, cap rate, IRR, DSCR, cash-on-cash, equity multiple) and emails a formatted HTML summary report to the provided address. Also logs a lead for follow-up.",
+        "operationId": "emailDealAnalysis",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/DealAnalyzerRequest" },
+              "example": {
+                "email": "investor@example.com",
+                "name": "Jane Investor",
+                "summary": {
+                  "propertyName": "Dollar General — Kissimmee, FL",
+                  "purchasePrice": 2100000,
+                  "noi": 126000,
+                  "capRate": 6.0,
+                  "cashOnCash": 7.2,
+                  "irr": 9.1,
+                  "dscr": 1.28,
+                  "equityMultiple": 1.85,
+                  "dealScore": "B+"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Report emailed successfully", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/OkResponse" } } } },
+          "400": { "description": "Validation error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "429": { "description": "Rate limit exceeded", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "502": { "description": "Email delivery failure", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    },
+    "/api/leads/net-sheet": {
+      "post": {
+        "tags": ["tools"],
+        "summary": "Email a seller net sheet or buyer estimate",
+        "description": "Accepts a rendered net sheet image (base64 PNG from the on-page calculator) and emails it as an attachment. Supports both seller net proceeds and buyer closing cost estimates.",
+        "operationId": "emailNetSheet",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/NetSheetRequest" },
+              "example": {
+                "email": "seller@example.com",
+                "name": "John Seller",
+                "side": "seller",
+                "salesPrice": 1500000,
+                "imageBase64": "data:image/png;base64,iVBORw0KGgo..."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Net sheet emailed successfully", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/OkResponse" } } } },
+          "400": { "description": "Validation error — missing email, image, or invalid base64", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "429": { "description": "Rate limit exceeded", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "502": { "description": "Email delivery failure", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    },
+    "/api/leads/workbook": {
+      "post": {
+        "tags": ["tools"],
+        "summary": "Email an academy course workbook PDF",
+        "description": "Looks up a MaxLife Academy course by slug and emails its companion workbook PDF to the provided address. Returns 404 if the course or workbook does not exist.",
+        "operationId": "emailWorkbook",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/WorkbookRequest" },
+              "example": {
+                "email": "student@example.com",
+                "name": "CRE Student",
+                "courseSlug": "nnn-investing-fundamentals"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Workbook emailed successfully", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/OkResponse" } } } },
+          "400": { "description": "Missing email or courseSlug", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "404": { "description": "Course or workbook not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "429": { "description": "Rate limit exceeded", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "502": { "description": "Email delivery failure", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    },
+    "/api/leads/subscribe": {
+      "post": {
+        "tags": ["leads"],
+        "summary": "Subscribe to the MaxLife newsletter",
+        "description": "Adds an email address to the newsletter list and triggers a 3-part automated CRE education nurture sequence. Source context is recorded for analytics.",
+        "operationId": "subscribe",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/SubscribeRequest" },
+              "example": {
+                "email": "investor@example.com",
+                "name": "Sam Investor",
+                "source": "newsletter",
+                "source_page": "/blog/what-is-nnn-lease"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Subscribed successfully", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/OkResponse" } } } },
+          "400": { "description": "Invalid email", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "429": { "description": "Rate limit exceeded", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    },
+    "/api/marketplace/inquire": {
+      "post": {
+        "tags": ["marketplace"],
+        "summary": "Send an inquiry about a marketplace listing",
+        "description": "Sends an email inquiry to the listing owner/broker and CC's MaxLife Realty. The listing contact is resolved server-side from the listingId — the caller cannot inject arbitrary recipient addresses. Includes honeypot spam protection.",
+        "operationId": "inquireListing",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/InquiryRequest" },
+              "example": {
+                "listingId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+                "name": "Interested Buyer",
+                "email": "buyer@example.com",
+                "phone": "407-555-1234",
+                "message": "I'm interested in learning more about this property. Is the cap rate negotiable?"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Inquiry sent successfully", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/OkResponse" } } } },
+          "400": { "description": "Missing required fields", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "404": { "description": "Listing not found or withdrawn", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "429": { "description": "Rate limit exceeded", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "502": { "description": "Email delivery failure", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    },
+    "/api/search/listings": {
+      "post": {
+        "tags": ["search"],
+        "summary": "Semantic natural-language listing search",
+        "description": "Accepts a natural-language query (e.g. 'passive NNN property near airport under $3M') and returns ranked marketplace listings using vector similarity search (pgvector). Requires OPENAI_API_KEY or VOYAGE_API_KEY to be configured on the server. Falls back to full-text search if embeddings are unavailable.",
+        "operationId": "semanticSearchListings",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/SemanticSearchRequest" },
+              "example": {
+                "query": "passive NNN investment near airport under $3M with long lease term",
+                "limit": 10
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ranked listing results",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/SemanticSearchResponse" }
+              }
+            }
+          },
+          "400": { "description": "Missing or empty query", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "429": { "description": "Rate limit exceeded", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "OkResponse": {
+        "type": "object",
+        "properties": { "ok": { "type": "boolean", "example": true } },
+        "required": ["ok"]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": { "error": { "type": "string", "example": "Valid email required" } },
+        "required": ["error"]
+      },
+      "DealAnalyzerSummary": {
+        "type": "object",
+        "description": "Computed outputs from the deal analyzer calculator",
+        "required": ["purchasePrice"],
+        "properties": {
+          "propertyName": { "type": "string", "description": "Optional label for the property", "example": "Dollar General — Kissimmee, FL" },
+          "purchasePrice": { "type": "number", "description": "Total acquisition price in USD", "example": 2100000 },
+          "noi": { "type": "number", "description": "Net Operating Income (annual, USD)", "example": 126000 },
+          "capRate": { "type": "number", "description": "Capitalization rate as a percentage", "example": 6.0 },
+          "cashOnCash": { "type": "number", "description": "Cash-on-cash return as a percentage", "example": 7.2 },
+          "irr": { "type": "number", "description": "5-year Internal Rate of Return as a percentage", "example": 9.1 },
+          "dscr": { "type": "number", "description": "Debt Service Coverage Ratio", "example": 1.28 },
+          "equityMultiple": { "type": "number", "description": "Equity multiple over hold period", "example": 1.85 },
+          "dealScore": { "type": "string", "description": "Letter grade assigned by the analyzer", "example": "B+" }
+        }
+      },
+      "DealAnalyzerRequest": {
+        "type": "object",
+        "required": ["email", "summary"],
+        "properties": {
+          "email": { "type": "string", "format": "email", "description": "Recipient email address" },
+          "name": { "type": "string", "description": "Recipient name (optional)" },
+          "summary": { "$ref": "#/components/schemas/DealAnalyzerSummary" },
+          "inputs": { "type": "object", "description": "Raw calculator inputs for reference", "additionalProperties": true }
+        }
+      },
+      "NetSheetRequest": {
+        "type": "object",
+        "required": ["email", "side", "salesPrice", "imageBase64"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "name": { "type": "string" },
+          "side": { "type": "string", "enum": ["seller", "buyer"], "description": "Which net sheet type to email" },
+          "salesPrice": { "type": "number", "description": "Property sale price in USD", "example": 1500000 },
+          "imageBase64": { "type": "string", "description": "Base64-encoded PNG of the rendered net sheet (with or without data: prefix). Must be 1 KB–5 MB." },
+          "metadata": { "type": "object", "additionalProperties": true }
+        }
+      },
+      "WorkbookRequest": {
+        "type": "object",
+        "required": ["email", "courseSlug"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "name": { "type": "string" },
+          "courseSlug": { "type": "string", "description": "Slug of the MaxLife Academy course whose workbook PDF to send", "example": "nnn-investing-fundamentals" }
+        }
+      },
+      "SubscribeRequest": {
+        "type": "object",
+        "required": ["email"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "name": { "type": "string" },
+          "source": {
+            "type": "string",
+            "description": "Lead source identifier",
+            "enum": ["newsletter", "blog", "exit-intent", "deal-analyzer", "net-sheet-seller", "net-sheet-buyer", "workbook", "marketplace-inquiry"],
+            "default": "newsletter"
+          },
+          "source_page": { "type": "string", "description": "Page path where the signup occurred", "example": "/blog/what-is-nnn-lease" }
+        }
+      },
+      "InquiryRequest": {
+        "type": "object",
+        "required": ["listingId", "name", "email", "message"],
+        "properties": {
+          "listingId": { "type": "string", "format": "uuid", "description": "UUID of the marketplace listing" },
+          "name": { "type": "string", "description": "Inquirer full name" },
+          "email": { "type": "string", "format": "email", "description": "Inquirer email (used as reply-to)" },
+          "phone": { "type": "string", "description": "Inquirer phone number (optional)" },
+          "message": { "type": "string", "maxLength": 4000, "description": "Inquiry message body" }
+        }
+      },
+      "SemanticSearchRequest": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+          "query": { "type": "string", "minLength": 2, "description": "Natural-language description of what you're looking for", "example": "passive NNN investment near airport under $3M with long lease term" },
+          "limit": { "type": "integer", "minimum": 1, "maximum": 50, "default": 10 }
+        }
+      },
+      "ListingSummary": {
+        "type": "object",
+        "description": "Marketplace listing summary returned by search",
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "slug": { "type": "string" },
+          "title": { "type": "string" },
+          "property_type": { "type": "string" },
+          "transaction_type": { "type": "string", "enum": ["sale", "lease", "both"] },
+          "city": { "type": "string" },
+          "state": { "type": "string" },
+          "price": { "type": "number", "nullable": true },
+          "cap_rate": { "type": "number", "nullable": true },
+          "building_sqft": { "type": "integer", "nullable": true },
+          "tenant": { "type": "string", "nullable": true },
+          "lease_type": { "type": "string", "nullable": true },
+          "status": { "type": "string", "enum": ["active", "under_contract", "sold"] },
+          "similarity": { "type": "number", "description": "Cosine similarity score (0–1). Only present for vector search results.", "nullable": true },
+          "url": { "type": "string", "description": "Full URL to the listing detail page", "example": "https://maxlifedevelopment.com/marketplace/dollar-general-kissimmee-fl" }
+        }
+      },
+      "SemanticSearchResponse": {
+        "type": "object",
+        "properties": {
+          "results": { "type": "array", "items": { "$ref": "#/components/schemas/ListingSummary" } },
+          "total": { "type": "integer" },
+          "mode": { "type": "string", "enum": ["vector", "fulltext"], "description": "Whether vector similarity or full-text search was used" }
+        }
+      }
+    }
+  }
+}

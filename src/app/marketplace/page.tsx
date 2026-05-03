@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { listListings, formatPrice, formatPercent } from "@/lib/listings";
+import SemanticSearchBar from "@/components/marketplace/SemanticSearchBar";
 import {
   PROPERTY_TYPE_LABELS,
   TRANSACTION_TYPE_LABELS,
@@ -143,6 +144,16 @@ export default async function MarketplacePage({ searchParams }: PageProps) {
               Post a Listing →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* AI Semantic Search */}
+      <section className="border-b border-white/10 bg-dark/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <p className="text-gold text-xs font-semibold uppercase tracking-wider mb-2">
+            ✦ Natural Language Search
+          </p>
+          <SemanticSearchBar />
         </div>
       </section>
 

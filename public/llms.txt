@@ -95,4 +95,5 @@ MaxLife Realty (MaxLife Development LLC) is a licensed Florida commercial real e
 ## Optional
 
 - [Full Content Version](https://maxlifedevelopment.com/llms-full.txt): Expanded llms.txt with additional page coverage and content summaries.
+- [OpenAPI Spec](https://maxlifedevelopment.com/openapi.json): OpenAPI 3.1 spec for all public API endpoints — deal analyzer, net sheets, workbook delivery, newsletter subscribe, marketplace inquiry, and semantic listing search.
 - [Sitemap](https://maxlifedevelopment.com/sitemap.xml): Complete XML sitemap with all URLs.

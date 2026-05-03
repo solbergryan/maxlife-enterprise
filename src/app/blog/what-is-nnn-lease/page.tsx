@@ -7,11 +7,25 @@ export const metadata: Metadata = {
   title: "What Is a Triple Net (NNN) Lease? | MaxLife Realty",
   description:
     "A comprehensive guide to triple net lease investments. Learn how NNN leases work, their benefits and risks, and why investors love them for passive income.",
+  alternates: { canonical: "/blog/what-is-nnn-lease" },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "What Is a Triple Net (NNN) Lease? A Guide for Investors",
+  description:
+    "A comprehensive guide to triple net lease investments — how NNN leases work, their benefits and risks, and why investors love them for passive income.",
+  datePublished: "2026-04-01",
+  author: { "@type": "Person", name: "Ryan Solberg", url: "https://maxlifedevelopment.com/about" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty", url: "https://maxlifedevelopment.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://maxlifedevelopment.com/blog/what-is-nnn-lease" },
 };
 
 export default function NNNLeaseArticle() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Header */}
       <section className="relative overflow-hidden border-b border-white/10">
         <Image

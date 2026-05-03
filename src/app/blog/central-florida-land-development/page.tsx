@@ -7,11 +7,25 @@ export const metadata: Metadata = {
   title: "Why Central Florida Is Hot for Land Development | MaxLife Realty",
   description:
     "Central Florida land development trends: population growth, infrastructure investment, and rising demand across the Orlando and Space Coast corridors.",
+  alternates: { canonical: "/blog/central-florida-land-development" },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Why Central Florida Is Hot for Land Development",
+  description:
+    "Central Florida land development trends: population growth, infrastructure investment, and rising demand across the Orlando and Space Coast corridors.",
+  datePublished: "2026-03-01",
+  author: { "@type": "Person", name: "Ryan Solberg", url: "https://maxlifedevelopment.com/about" },
+  publisher: { "@type": "Organization", name: "MaxLife Realty", url: "https://maxlifedevelopment.com" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://maxlifedevelopment.com/blog/central-florida-land-development" },
 };
 
 export default function CentralFloridaLandArticle() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* Header */}
       <section className="relative overflow-hidden border-b border-white/10">
         <Image
